@@ -1,0 +1,354 @@
+
+header.main {
+	
+	position: relative;
+	z-index: 100;
+	background: @blue;
+	
+	.container {
+		max-width: 87.50rem;
+		margin: 0 auto;
+	}
+	
+	.logo {
+		width: 15.875rem;
+		height: 12.688rem;
+		padding: 1.250rem 3.375rem 0 0;
+		background: @dark-blue;
+		display: block;
+		position: absolute;
+		.boxsizing;
+		text-align: right;
+		margin: 0;
+		z-index: 100;
+		
+		a {
+			display: block;
+		}
+		
+		img {
+			width: 6.000rem;
+		}
+		
+		
+	}
+	
+	nav {
+		background: @blue;
+		height: 10.625rem;
+		padding-left: 19.125rem;
+		padding-right: 2rem;
+		position: relative;
+		.boxsizing;
+		
+		a {
+			color: @white;
+			text-decoration: none;
+			display: inline-block;
+			.transition;
+		}
+		
+		ul {
+			.list-reset;
+			max-width: 81.000rem;
+			overflow: hidden;
+			
+			li {
+				float: left;
+			}
+		}
+		
+		.hamburger {
+			display: none;
+			font-size: 2rem;
+			right: 2rem;
+			top: 1rem;
+		  	position: absolute;
+			.transition;
+			
+			
+			@media screen and (max-width: 900px){
+				display: block;
+				
+				&:hover {
+					color: @lighter-blue;
+				};
+			}
+		}
+		
+		
+		
+		// level one
+		.level-1 {
+			
+			.list-reset;
+			max-width: 82.5rem;
+			padding-bottom: 2.625rem;
+			font-size: 0.750rem;
+			
+			
+			@media screen and (max-width: 900px){
+				display: none;
+			}
+			
+			li {
+				
+				
+				margin-right: 1.625rem;
+				text-transform: uppercase;
+				
+				&.right {
+					float: right;
+					margin-right: 0;
+					margin-left: 1.625rem;
+				}
+				
+				a {
+					border-bottom: 1px solid transparent;
+					height: 2.5rem;
+					line-height: 2.5rem;
+					opacity: 0.6;
+					 
+					&.active,
+					&:hover {
+						border-color: @green;
+						opacity: 1;
+					}
+				}
+				
+				form {
+					
+					margin: 0;
+					padding: 0;
+					display: block;
+				
+					input, 
+					button {
+						height: 2.5rem;
+						line-height: 2.5rem;
+						background: transparent;
+						border: 0;
+					  	color: @white;
+					  	margin: 0;
+					  	padding: 0;
+					  	float: left;
+						text-transform: uppercase;
+						.transition;
+						
+						&::-webkit-input-placeholder,
+						&:-moz-placeholder,
+						&::-moz-placeholder,
+						&:-ms-input-placeholder {
+						   color: @white;
+						}
+					}
+					
+					button {
+						width: 1.125rem;
+						
+						&:hover {
+							color: @green;
+						};
+					}
+					
+					input {
+						border-bottom: 1px solid transparent;
+						margin-right: 0.625rem;
+						opacity: 0.6;
+						
+						&:hover {
+							opacity: 1;
+						};
+						
+						&:focus {
+							border-color: @green;
+							opacity: 1;
+						}
+					}
+				
+				}
+				
+			}
+			
+		}
+		
+		// level two
+		.level-2 {
+			
+			height: 5.438rem;
+			
+			@media screen and (max-width: 900px){
+				display: none;
+			}
+			
+			li {
+				margin-right: 1.75rem;
+				height: 5.438rem;
+				position: relative;
+				
+				a {
+					height: 3.125rem;
+					display: inline-block;
+					line-height: 3.125rem;
+					.transition;
+					font-size: 1.125rem;
+					
+					
+					&:hover {
+						opacity: 0.6;
+					}
+					
+					&.button {
+						opacity: 0.8;
+						padding: 0 1.375rem;
+						background: rgba(255, 255, 255, 0.1);
+					};
+					
+				}
+				
+				@media screen and (max-width: 1280px){
+					a {
+						font-size: 0.875rem;
+					}
+				}
+				
+				@media screen and (max-width: 985px){
+					margin-right: 0.75rem;
+					a {
+						padding: 0;
+					}
+				}
+				
+				span {
+					cursor: pointer;
+					display: none;
+					position: absolute;
+				  	bottom: 0;
+				  	height: 1.125rem;
+				  	background: @white;
+				  	width: 100%;
+					.transition;
+					
+					img {
+						position: relative;
+						bottom: 0;
+						left: 50%;
+						margin-left: -8px;
+					}
+					
+					&.active {
+						display: block;
+					  	background: @ash;
+					}
+					
+				}
+				
+				&:hover {
+					span {
+						display: block;
+					}
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+	
+	@media screen and (max-width: 900px){
+		&.opened {
+			
+			nav {
+				
+				height: auto;
+				padding: 0;
+				
+				.level-1 {
+					display: block;
+					position: relative;
+					background: @blue;
+					padding-top: 13.125rem;
+					padding-bottom: 0;
+					clear: both;
+					
+					li {
+						float: none;
+						overflow: hidden;
+						width: 100%;
+						.boxsizing;
+						margin: 0;
+						padding: 0 1.75rem;
+						font-size: 1.1250rem;
+					  	height: 3.125rem;
+					  	line-height: 3.125rem;
+						
+						.right {
+							float: none;
+						}
+						
+						a {
+							display: block;
+							width: 100%;
+						  	line-height: 3.125rem;
+							opacity: 1;
+						}
+						
+						form {
+							width: 100%;
+							position: relative;
+							
+							input {
+								width: 100%;
+							}
+							
+							button {
+								position: absolute;
+								top: 0;
+								right: 0;
+							}
+						}
+					}
+				}
+				
+				
+				.level-2 {
+					display: block;
+					float: none;
+					position: relative;
+					height: auto;
+					padding-bottom: 2rem;
+					
+					li {
+						float: none;
+						height: auto;
+						margin: 0;
+						padding: 0 1.75rem;
+						.boxsizing;
+						
+						a {
+							font-size: 1.1250rem;
+							display: block;
+							width: 100%;
+							.boxsizing;
+							
+							&:hover, .active {
+								border-bottom: 1px solid @green;
+							};
+							
+						}
+						
+						span {
+							width: 100%;
+							.boxsizing;
+							position: relative;
+						}
+					}
+				}
+				
+			}
+			
+		}
+	}
+	
+}

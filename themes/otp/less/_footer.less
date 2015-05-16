@@ -1,0 +1,215 @@
+footer.main {
+	
+	background: @blue;
+	padding: 3.5rem 0 2.25rem;
+	color: @white;
+	position: relative;
+	z-index: 50;
+	
+	h2, h3 {
+		margin: 0;
+	}
+	
+	h2 {
+		font-size: 2.50rem;
+		line-height: 2.50rem;
+		font-weight: 300;
+	}
+	
+	a {
+		color: @white;
+		text-decoration: none;
+		.transition;
+		
+		&:hover {
+			opacity: 0.6
+		};
+	}
+	
+	p {
+		margin: 0;
+	}
+	
+	ul {
+		.list-reset;
+		margin-bottom: 1.375rem;
+		
+		li {
+			line-height: 1.125rem;
+			
+			h3 {
+				font-size: 1rem;
+				line-height: 1.125rem;
+				font-weight: normal;
+				padding-bottom: .5rem;
+			}
+			
+			a {
+				opacity: 0.6;
+				font-size: 0.875rem;
+				font-weight: normal;
+				
+				&:hover {
+					opacity: 1;
+				};
+			}
+			
+		}
+	}
+	
+	.bottom {		
+		border-top: 1px solid @white;
+		margin-top: 2rem;
+	}
+	
+	.container {
+		
+		width: 100%;
+		max-width: 62.5rem;
+		overflow: hidden;
+		margin: 0 auto;
+		padding: 0 1.75rem;
+		.boxsizing;
+		
+		.col {
+			float: left;
+			width: 24%;
+			padding-right: 1.25rem;
+			.boxsizing;
+			
+			&.large-col {
+				width: 30%;
+			}
+			
+			&.last-col {
+				width: 16%;
+				padding-right: 0;
+			}
+		}
+		
+		
+		
+		
+		&.addresses {
+			padding-top: 1.625rem;
+			padding-bottom: 0;
+			
+			.col { 
+				width: 18.6%;
+				
+				&.large-col {
+					width: 30%;
+				}
+				
+				&.middle {
+					width: 20.4%;
+				}
+			}
+			
+			address {
+				font-style: normal;
+				font-size: 0.875rem;
+				line-height: 1.125rem;
+				
+				&.middle {
+					width: 14%;
+				}
+			}
+		}
+		
+		@media screen and (max-width: 980px){ 
+			.col {
+				width: 25%;
+				word-wrap: break-word;
+				
+				&.large-col {
+					width: 25%;
+				}
+
+				&.last-col {
+					width: 25%;
+				}
+			}
+			
+			&.addresses {
+				.col { 
+					width: 25%;
+					
+					&.large-col {
+						width: 25%;
+					}
+
+					&.middle {
+						width: 25%;
+					}
+				}
+			
+			}
+		}
+		
+		@media screen and (max-width: 906px){ 
+			.col {
+				width: 50%;
+				word-wrap: break-word;
+				
+				&.large-col {
+					width: 50%;
+				}
+
+				&.last-col {
+					width: 50%;
+				}
+			}
+			
+			&.addresses {
+				.col { 
+					width: 50%;
+					margin-bottom: 1rem;
+					
+					&.large-col {
+						width: 50%;
+					}
+
+					&.middle {
+						width: 50%;
+					}
+				}
+			
+			}
+		}
+		
+		@media screen and (max-width: 540px){ 
+			.col {
+				width: 100%;
+				margin-bottom: 1rem;
+				
+				&.large-col {
+					width: 100%;
+				}
+
+				&.last-col {
+					width: 100%;
+				}
+			}
+			
+			&.addresses {
+				.col { 
+					width: 100%;
+					
+					&.large-col {
+						width: 100%;
+					}
+
+					&.middle {
+						width: 100%;
+					}
+				}
+			
+			}
+		}
+		
+	}
+	
+	
+	
+}

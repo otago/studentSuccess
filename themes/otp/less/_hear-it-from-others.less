@@ -1,0 +1,138 @@
+.hear-from-others {
+	
+	width: 100%;
+	max-width: 87.5rem;
+	padding: 0 6.25rem;
+	margin: 0 auto 7.625rem;
+	.boxsizing;
+	
+	h2 {
+		color: @red;
+		text-align: center;
+		font-size: 3.125rem;
+		line-height: 3.125rem;
+		font-weight: 100;
+		margin: 0;
+		margin-bottom: 3.375rem;
+	}
+	
+	section {
+		
+		background: @lighter-blue;
+		color: @white;
+		overflow: hidden;
+		
+		.image {
+			font-size: 0;
+			line-height: 0;
+			float: right;
+			width: 66.6666666667%;
+			position: relative;
+			
+			img {
+				width: 100%;
+			}
+
+            .video-image {
+                display: block;
+                font-size: 0;
+                line-height: 0;
+
+                img {
+                    .transition;
+                }
+
+                &:hover {
+                    img {
+                        opacity: 0.6;
+                    }
+                }
+
+            }
+
+			a.icon {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				font-size: 9.375rem;
+				width: 9.375rem;
+				height: 9.375rem;
+				display: block;
+				border: 4px solid @white;
+				color: @white;
+				margin: -4.688rem 0 0 -4.688rem;
+				.rounded;
+				.transition;
+				
+				&:hover {
+					color: @blue;
+					border-color: @blue;
+				};
+
+			}
+		}
+		
+		article {
+			float: left;
+			width: 33.3333333333%;
+			.boxsizing;
+			padding: 2.5rem 2.125rem 2.5rem 1.75rem;
+			
+			span.icon {
+				font-size: 0;
+				line-height: 0;
+				display: block;
+			}
+			
+			p.text {
+				font-size: 2.25rem;
+				line-height: 2.375rem;
+				font-weight: 300;
+				margin-bottom: 1.75rem 0;
+			}
+		}
+		
+		
+	}
+	
+	&.red {
+		section {
+			background: @red;
+		}
+	}
+	
+	
+	&.green {
+		section {
+			background: @light-green;
+		}
+	}
+	
+	
+	&.yellow {
+		section {
+			background: @yellow;
+		}
+	}
+	
+	@media screen and (max-width: 980px){ 
+		padding: 0 1.75rem;
+		
+		section {
+
+			.image {
+				width: 100%;
+			}
+			
+			article {
+				width: 100%;
+			}
+			
+		}
+		
+		
+		
+		
+	}
+	
+}

@@ -1,0 +1,170 @@
+.checklist {
+	
+	background: @ash;
+	
+	.container {
+		max-width: 87.50rem;
+		margin: 0 auto;
+		padding: 2.25rem 12.8571428571% 3.5rem;
+		margin-bottom: 2.625rem;
+		
+		
+		.icon-info {
+			display: block;
+			font-size: 2rem;
+			margin-bottom: 2rem;
+		}
+		
+		.intro {
+			width: 70%;
+			font-size: 1.125rem;
+			
+			h3 {
+				margin: 0;
+				font-size: 1.250rem;
+			}
+		}
+		
+		
+		.items {
+			
+			overflow: hidden;
+			font-size: 1.1250rem;
+			
+			ul {
+				.list-reset;
+			}
+			
+			.index {
+				width: 27.5%;
+				float: left;
+				margin-right: 5%;
+				
+				ul {
+					
+					li {
+						height: 2.875rem;
+						line-height: 2.875rem;
+						overflow: hidden;
+						padding: 0 0.625rem;
+						cursor: pointer;
+						
+						span {
+							margin-top: 0.5rem;
+							float: left;
+							width: 1.875rem;
+							height: 1.875rem;
+							line-height: 1.875rem;
+							text-align: center;
+							background: @white;
+							color: @white;
+							border: 1px solid @white;
+							.rounded;
+							margin-right: 0.625rem;
+							font-size: 0.75rem;
+							
+							&.icon-dot {
+								border: 0;
+								background: transparent;
+							}
+							
+						}
+						
+						&.active {
+							background: @drak-grey;
+							color: @white;
+							
+							span {
+								background: @light-green;
+								
+								&.icon-dot {
+									border: 0;
+									background: transparent;
+									color: @light-green;
+								}
+							}
+							
+						}
+					}
+					
+				}
+				
+				
+			}
+			
+			.desc {
+				float: left;
+				width: 50%;
+				display: none;
+				
+				&.active {
+					display: block;
+				}
+				
+				ul {
+				
+					li {
+						
+						position: relative;
+						padding-left: 1.625rem;
+						padding-bottom: 1.5rem;
+						
+						span.icon {
+							left: 0;
+							position: absolute;
+							float: left;
+							width: 1.250rem;
+							height: 1.250rem;
+							line-height: 1.250rem;
+							text-align: center;
+							font-size: 0.438rem;
+							
+							&.icon-dot {
+								font-size: 0.438rem;
+							}
+							
+							&.icon-tick {
+								border: 1px solid @white;
+								background: @light-green;
+								.rounded;
+								color: @white;
+								
+							}
+							
+						}
+						
+					}
+					
+				}
+			}
+		
+		}
+		
+		
+		@media screen and (max-width: 980px) {
+			padding-left: 1.75rem;
+		  	padding-right: 1.75rem;
+		
+			.items {
+				.intro {
+					width: 100%;
+				}
+
+				.index {
+					float: none;
+					width: 100%;
+					margin-bottom: 2rem;
+				}
+
+				.desc {
+					float: none;
+					width: 100%;
+				}
+			}
+		}
+		
+		
+	}
+	
+	
+}

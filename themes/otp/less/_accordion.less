@@ -1,0 +1,74 @@
+.accordion-c {
+	
+	background: @light-brown;
+	background: @light-brown-rgba;
+    clear: both;
+	
+	.title-c { 
+		 
+		border-top: 2px solid transparent;
+		margin-bottom: 0;
+        margin-top: 0;
+		
+		
+		a {
+			.boxsizing;
+			display: block;
+			background: url('../images/accordion-left.svg') top left no-repeat;
+			padding: 1.5rem 12%;
+			color: @light-brown;
+			position: relative;
+			
+			
+			
+			&:after {
+				.icon-font;
+				content: "\e60c";
+				font-size: 0.750rem;
+				position: absolute;
+				right: 12%;
+				line-height: 36px;
+				color: @brown;
+			}; 
+		}
+		
+		&.active {
+			border-top: 2px solid @light-brown;
+			background: @white;
+			
+			a {
+				color: @drak-grey;
+				&:after {
+					content: "\e60d";
+				};
+			}
+		}
+	}
+	
+	.accordion-item {
+		.boxsizing;
+		display: none;
+		border-bottom: 2px solid @light-brown;
+		padding: 1rem 12% 3.125rem;
+		
+		&.active {
+			background: @white;
+			border-bottom: 2px solid @light-brown;	
+		}
+		
+		h3, h4, h5, h6 {
+			color: @blue;
+		}
+		
+	}
+	
+}
+
+.page-contents .content .article {
+	
+	.accordion-c { 
+		.title-c {
+			margin-bottom: 0;
+		}
+	}
+}

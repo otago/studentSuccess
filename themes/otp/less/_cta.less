@@ -1,0 +1,88 @@
+.cta {
+	
+	overflow: hidden;
+	margin-bottom: 2.625rem;
+	background: @yellow;
+	
+	&.black {
+		background: @drak-grey;
+		color: @white;
+	}
+	
+	picture {
+		display: block;
+		float: right;
+		width: 28.5714285714%;
+		position: relative;
+		overflow: hidden;
+		height: 24.125rem;
+		
+		img {
+			position: absolute;
+		}
+	}
+	
+	article {
+		padding: 2.5rem 0 3.875rem;
+		width: 71.4285714286%;
+		font-size: 1.125rem;
+		
+		.icon {
+			font-size: 2rem;
+			display: block;
+			margin-bottom: 1.625rem;
+		}
+		
+		.wrapper {
+			.boxsizing;
+			padding: 0 15% 0 17.9%;
+		}
+		
+		h3 {
+			margin: 0;
+			font-size: 1.25rem;
+			padding-bottom: 1.625rem;
+		}
+		
+		p {
+			margin: 0 0 2rem;
+		}
+		
+		a {
+			background: @red;
+			color: @white;
+			height: 3.125rem;
+			line-height: 3.125rem;
+			display: inline-block;
+			padding: 0 1.5rem;
+            .transition;
+
+            &:hover {
+                background: @green;
+            }
+		}
+		
+	}
+	
+	@media screen and (max-width: 980px) {
+		picture {
+			width: 100%;
+			float: none;
+		}
+		
+		article {
+			width: 100%;
+			float: none;
+			padding-left: 1.75rem;
+		  	padding-right: 1.75rem;
+		
+			.wrapper {
+				padding: 0;
+			}
+		}
+		
+	}
+	
+	
+	
+}

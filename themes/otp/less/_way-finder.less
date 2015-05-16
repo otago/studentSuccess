@@ -1,0 +1,186 @@
+.way-finder {
+	
+	
+	position: relative;
+	overflow: hidden;
+	z-index: 50;
+	padding-bottom: 5.25rem;
+	margin: 0 auto;
+	max-width: 87.50rem;
+	
+	.col {
+		float: left;
+		width: 14.2857142857%;
+		.boxsizing;
+		padding: 1.75rem 2rem 2.625rem;
+	}
+	
+	
+	nav.col, .col-3 {
+		width: 35.7142857143%;
+		background: @grey;
+	}
+	
+	.col-2 {
+		width: 28.5714285714%;
+	}
+	
+	.light-green {
+		color: @white;
+		background: @light-green;
+	}
+	
+	.lighter-blue {
+		color: @white;
+		background: @lighter-blue;
+	}
+	
+	nav.col {
+		padding: 3.625rem 6.375rem 5.125rem;
+		color: @dark-blue;
+		
+		h3 {
+			font-size: 1.125rem;
+			font-weight: ;
+		}
+		
+		ul {
+			.list-reset;
+			
+			li {
+				
+				border-bottom: 1px solid @blue;
+				overflow: hidden;
+				position: relative;
+				
+				&:last-child {
+					border-bottom: 0;
+				};
+				
+				a {
+					display: block;
+					//min-height: 4rem;
+					line-height: 2rem;
+					padding: 1rem 1rem 1rem 0;
+					font-size: 1.875rem;
+					color: @dark-blue;
+					
+					&:hover {
+						color: @blue;
+					};
+				}
+				
+				span {
+					display: block;
+					height: 4rem;
+					line-height: 4rem;
+					position: absolute;
+					right: 0;
+					top: 0;
+					background: url('../images/icons/goto.svg') center no-repeat;
+					.transition;
+				}
+				
+				&:hover {
+					span {
+						opacity: 0.6;
+					}
+				}
+				
+			}
+		}
+	}
+	
+	
+	.career-handbook {
+		position: relative;
+		overflow: hidden;
+		font-size: 0;
+		line-height: 0;
+		padding: 0;
+		
+		img {
+			position: relative;
+			z-index: 2;
+			width: 100%;
+		}
+		
+		.icon {
+			font-size: 2.375rem;
+			display: block;
+			top: 0;
+			margin: 1.625rem 0 4.625rem 1.875rem;
+			z-index: 5;
+			position: absolute;
+			color: @white;
+		}
+		
+		article {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			left: 100;
+			z-index: 5;
+			background: rgba(0,0,0,0.4);
+			color: @white;
+			padding: 2.25rem;
+			.boxsizing;
+			
+			h3, p {
+				margin: 0;
+				font-size: 1rem;
+				line-height: 1.125rem;
+				max-width: 19.5rem;
+			}
+			
+			h3 {
+				font-size: 1.875rem;
+				line-height: 2rem;
+				margin-bottom: 2.5rem;
+			}
+			
+		}
+		
+	}
+	
+	.getting-started {
+		
+		background: @yellow;
+		padding: 1.625rem 1.75rem 3.125rem;
+		
+		.icon {
+			font-size: 2.375rem;
+			display: block;
+			margin-bottom: 4.625rem;
+		}
+		
+		p, h2 {
+			max-width: 20.5rem;
+			margin: 0;
+		}
+		
+		h2 {
+			margin-bottom: 1.875rem;
+			line-height: 2rem;
+		}
+		
+	}
+	
+	@media screen and (max-width: 1200px){
+		.col {
+			width: 28.5714285714%;
+		}
+	}
+	
+	@media screen and (max-width: 980px){
+		.col, nav.col, .col-3, .col-2 {
+			width: 100%;
+		}
+		
+		nav.col {
+			padding: 1.625rem 1.75rem 3.125rem;
+		}
+	}
+	
+	
+}

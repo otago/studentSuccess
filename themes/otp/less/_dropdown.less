@@ -1,0 +1,104 @@
+.drop-menu {
+	
+	background: @ash;
+	padding: 4.5rem 0 6.875rem;
+	display: none;
+	
+	@media screen and (max-width: 640px){
+		padding: 4.5rem 1.75rem 6.875rem;
+	}
+	
+	.container {
+		width: 100%;
+		max-width: 87.50rem;
+		overflow: hidden;
+		
+	  	padding: 0 6.875rem;
+
+        @media screen and (max-width: 980px) {
+            padding: 0 1.75rem;
+        }
+
+	  	margin: 0 auto;
+		.boxsizing;
+		
+		.left {
+			float: left;
+			width: 69.5%;
+			overflow: hidden;
+			
+			h3 {
+				font-size: 2.5rem;
+				line-height: 2.75rem;
+				color: @blue;
+				font-weight: 100;
+				margin: 0 0 4.25rem 0;
+			}
+			
+			.col {
+				width: 33.33333333%;
+				float: left;
+				padding-right: 3.75rem;
+				.boxsizing;
+				
+				&:last-child {
+					padding-right: 0;
+				};
+				
+				h4 {
+					font-size: 1.25rem;
+					margin: 0 0 0.625rem 0;
+					color: @blue;
+					font-weight: 400;
+				}
+				
+				p {
+					margin: 0 0 2.5rem 0;
+				}
+				
+				
+				@media screen and (max-width: 1100px){
+					width: 100%;
+					padding-right: 0;
+					padding-bottom: 2.5rem;
+				}
+			}
+			
+			
+			
+		}
+		
+		.right {
+			float: right;
+			width: 25%;
+			font-size: 0;
+			line-height: 0;
+			
+			a {
+				display: block;
+				font-size: 0;
+				line-height: 0;
+			}
+			
+			
+			img {
+				width: 100%;
+			}
+			
+			
+		}
+		
+		@media screen and (max-width: 1100px){
+			.left {
+				width: 100%;
+			}
+			
+			.right {
+				width: 100%;
+			}
+		}
+		
+	}
+	
+	
+}

@@ -1,0 +1,14 @@
+/assets
+/vendor/
+/framework
+node_modules
+/addressable
+/betterbuttons
+/cms
+/elemental
+/gridfieldextensions
+/silverstripe-core
+/silverstripe-versioneddataobjects
+/sortablegridfield
+/userforms
+/widgets

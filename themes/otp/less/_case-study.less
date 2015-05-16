@@ -1,0 +1,126 @@
+.case-study-holder {
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 5.5rem;
+}
+.case-study {
+	
+	background: @light-green;
+	color: @white;
+	margin-bottom: 10rem;
+    padding: 0 12.8571428571%;
+
+    @media screen and (max-width: 980px) {
+       padding: 0 1.75rem;
+    }
+
+    .component-alignment {
+      .boxsizing;
+      padding: 0 0 7.5rem;
+    }
+
+
+	&.red {
+		background: @red;
+		color: @white;
+	}
+	
+	&.blue {
+		background: @blue;
+		color: @white; 
+	}
+	
+	.left {
+		float: left;
+		width: 35%;
+		margin-top: -2.750rem;
+
+        &.no-image {
+            margin-top: 0;
+            padding-top: 3rem;
+        }
+		
+		picture {
+			font-size: 0;
+			line-height: 0;
+			padding-bottom: 1.750rem;
+			margin-bottom: 1.875rem;
+			border-bottom: 1px solid @white;
+			display: block;
+			
+			img {
+				width: 100%;
+			}
+		}
+		
+		.icon {
+			display: block;
+			font-size: 3rem;
+			margin-bottom: 2rem;
+		}
+		
+		p {
+			font-size: 2.5rem;
+			line-height: 3rem;
+		}
+	}
+	
+	.right {
+		float: right;
+		width: 50%;
+		padding-top: 7.5rem;
+		font-size: 1.125rem;
+		
+		h3 {
+			font-size: 1.250rem;
+		}
+	}
+	
+	@media screen and (max-width: 680px){
+		.left {
+			width: 100%;
+		}
+		.right {
+			float: none;
+			clear: both;
+			width: 100%;
+			padding-top: 2rem;
+		}
+	}
+	
+} 
+
+
+.page-contents .content .article {
+
+	.case-study {
+
+		background: @light-green;
+		color: @white;
+
+		&.red {
+			background: @red;
+			color: @white;
+		}
+
+		&.blue {
+			background: @blue;
+			color: @white; 
+		}
+		
+		.left {
+			.icon {
+				display: block;
+				font-size: 3rem;
+				margin-bottom: 2rem;
+			}
+
+			p {
+				font-size: 1.5rem;
+				line-height: 2rem;
+			}
+		}
+
+	}
+	
+}

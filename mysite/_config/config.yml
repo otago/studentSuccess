@@ -1,0 +1,79 @@
+---
+Name: mysite
+After: 'framework/*','cms/*'
+---
+# YAML configuration for SilverStripe
+# See http://doc.silverstripe.org/framework/en/topics/configuration
+# Caution: Indentation through two spaces, not tabs
+SiteConfig:
+    extensions:
+      - OTPConfigs
+    Icons:
+      icon-head-arrow : 'Arrow'
+      icon-arrow-down : 'Arrow Down'
+      icon-external-link : 'External Link'
+      icon-apostrophe : 'Apostrophe'
+      icon-twitter: 'Twitter'
+      icon-facebook: 'Facebook'
+      icon-link: 'Link'
+      icon-dot: 'Dot'
+      icon-tick: 'Tick'
+      icon-mail: 'Mail'
+      icon-phone: 'Phone'
+      icon-play: 'Play Button'
+      icon-info: 'Info List'
+      icon-cta: 'File List'
+      icon-download: 'Download'
+      icon-search: 'Search'
+SSViewer:
+  theme: 'otp'
+Page:
+  extensions:
+    - ElementPageExtension
+    - PageExtension
+  allowed_elements:
+    - WayFinder
+    - HearFromOthers
+    - ElementContent
+    - Carousel
+    - CTAElement
+    - Accordion
+    - WasThisHelpful
+    - SidebarTestimony
+    - SidebarShareElement
+    - ElementImage
+    - ElementFile
+    - ElementInternalLink
+Controller:
+  extensions:
+    - ControllerExtension
+FooterLinkBlock:
+  extensions:
+    - Linkable
+FooterLink:
+  extensions:
+    - Linkable
+WayFinderFilter:
+  extensions:
+    - Linkable
+WayFinderItem:
+  extensions:
+    - Linkable
+CTAElement:
+  extensions:
+    - Linkable
+RelatedPage:
+  extensions:
+    - Linkable
+RelatedPageBox:
+  extensions:
+    - Linkable
+MasonryTile:
+  extensions:
+    - Linkable
+ElementContent:
+  extensions:
+    - ElementContentExtension
+BaseElement:
+  extensions:
+    - BaseElementExtension

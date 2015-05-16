@@ -1,0 +1,92 @@
+.hero {
+	
+	position: relative;
+	top: 0;
+	background: @blue;
+	height: 35.5rem;
+	overflow: hidden;
+	
+	&.fixed {
+		position: fixed;
+	}
+	
+	&.mini {
+		height: 15.188rem;
+	}
+	
+	img {
+		position: absolute;
+		z-index: 1;
+	}
+	
+	.contents {
+		position: relative;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		color: @white;
+		padding: 8.750rem 6.375rem 0;
+		margin: 0 auto;
+		max-width: 87.50rem;
+		
+		h2, p {
+			margin: 0;
+		}
+		
+		h2 {
+			font-weight: 300;
+			font-size: 4.375rem;
+			line-height: 4.3750rem;
+			padding-bottom: 1.875rem;
+		}
+		
+		p {
+			font-size: 1.5rem;
+			line-height: 1.5rem;
+			margin-bottom: 3.875rem;
+		}
+		
+		a {
+			color: @white;
+			text-decoration: none;
+			height: 3.125rem;
+			line-height: 3.125rem;
+			background: @red;
+			display: inline-block;
+			font-size: 1.125rem;
+			padding: 0 1.875rem;
+			.transition;
+			
+			&:hover {
+				color: @red;
+				background: @white;
+			};
+		}
+		
+		@media screen and (max-width: 980px){
+			padding: 8.750rem 1.75rem 0;
+			
+			h2 {
+				font-weight: 300;
+				font-size: 2.375rem;
+				line-height: 2.3750rem;
+				padding-bottom: 1.875rem;
+			}
+
+			p {
+				font-size: 1.2rem;
+				line-height: 1.5rem;
+				margin-bottom: 3.875rem;
+				
+				br {
+					display: none;
+				}
+			}
+		}
+		
+	}
+	
+	
+	
+	
+}
