@@ -54,5 +54,5 @@ class ElementContentExtension extends DataExtension {
 
 		return $strRet;
 	}
-
-} 
+	
+}

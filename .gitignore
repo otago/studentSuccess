@@ -7,7 +7,6 @@ node_modules
 /cms
 /elemental
 /gridfieldextensions
-/silverstripe-core
 /silverstripe-versioneddataobjects
 /sortablegridfield
 /userforms

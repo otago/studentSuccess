@@ -15,7 +15,10 @@ app.Modules = [
 	'squareblocks',
 	'tabbedcontent',
     'social',
-    'fancybox'
+    'fancybox',
+    'helpful',
+    'glossary',
+	'leftrightcont'
 ];
 
 

@@ -10,7 +10,6 @@
 class CheckListItem extends DataObject {
 
 	private static $db = array(
-		'Icon'			=> 'Varchar',
 		'Title'			=> 'Varchar',
 		'Content'		=> 'HTMLText',
 		'SortOrder'		=> 'Int'
@@ -30,11 +29,6 @@ class CheckListItem extends DataObject {
 			'CheckList',
 			'CheckListID'
 		));
-
-		$fields->replaceField('Icon', DropdownField::create('Icon')->setSource(array(
-			'icon-tick'		=> 'Tick',
-			'icon-dot'		=> 'Dot'
-		)));
 
 		return $fields;
 	}

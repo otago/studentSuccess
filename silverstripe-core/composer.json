@@ -1,0 +1,17 @@
+{
+    "name": "silverstripers/silverstripe-core",
+    "description": "Core Module for SilverStripe projects developed by SilverStripers",
+    "type": "silverstripe-module",
+    "keywords": ["silverstripe", "core"],
+    "authors": [
+    {
+        "name": "Nivanka Fonseka",
+        "email": "nivanka@silverstripers.com"
+    }],
+    "require": {
+        "silverstripe/framework": "~3.1"
+    }
+    
+}
+
+

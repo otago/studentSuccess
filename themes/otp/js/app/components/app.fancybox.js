@@ -1,4 +1,4 @@
-if(typeof app === 'undefined') var app = {};
+if(typeof app === 'undefined') { var app = {}; }
 
 (function($){
 
@@ -20,22 +20,22 @@ if(typeof app === 'undefined') var app = {};
                 }
             });
 
-        }
+        };
 
         var can = function(){
             return items.length > 0;
-        }
+        };
 
         var init = function (){
             $(document).ready(function(){
                 initFancyBox();
             });
-        }
+        };
 
         return {
             'init'			: init,
             'can'			: can
-        }
+        };
 
     })();
 

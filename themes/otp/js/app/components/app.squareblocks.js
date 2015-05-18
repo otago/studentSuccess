@@ -1,4 +1,4 @@
-if(typeof app === 'undefined') var app = {};
+if(typeof app === 'undefined') { var app = {}; }
 
 (function($){
 	
@@ -16,7 +16,7 @@ if(typeof app === 'undefined') var app = {};
 			
 			$('.titles.left-titles').width(rowWidth - 62);
 			return false;
-		}
+		};
 		
 		var showHideOverlay = function(){
 			
@@ -29,11 +29,11 @@ if(typeof app === 'undefined') var app = {};
 				$(this).parent().fadeOut('slow');
 				return false;
 			});
-		}
+		};
 		
 		var can = function(){
 			return items.length > 0;
-		}
+		};
 		
 		var init = function (){
 			setBlockHeight();
@@ -45,12 +45,12 @@ if(typeof app === 'undefined') var app = {};
 			});
 			
 			$(window).resize(setBlockHeight);
-		}
+		};
 		
 		return {
 			'init'			: init,
 			'can'			: can
-		}
+		};
 		
 	})();
 	

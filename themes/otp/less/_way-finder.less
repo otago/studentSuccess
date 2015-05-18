@@ -28,11 +28,13 @@
 	.light-green {
 		color: @white;
 		background: @light-green;
+		.transition;
 	}
 	
 	.lighter-blue {
 		color: @white;
 		background: @lighter-blue;
+		.transition;
 	}
 	
 	nav.col {
@@ -142,11 +144,22 @@
 		}
 		
 	}
+	a.career-handbook:hover {
+		.icon {
+			color: @lighter-blue;
+			.transition;
+		}
+		article {
+			background: @lighter-blue;
+			.transition;
+		}
+	}
 	
 	.getting-started {
 		
 		background: @yellow;
 		padding: 1.625rem 1.75rem 3.125rem;
+		color: @drak-grey;
 		
 		.icon {
 			font-size: 2.375rem;
@@ -166,6 +179,11 @@
 		
 	}
 	
+	a.getting-started:hover {
+		background: @lighter-blue;
+		.transition;
+	}
+	
 	@media screen and (max-width: 1200px){
 		.col {
 			width: 28.5714285714%;
@@ -183,4 +201,12 @@
 	}
 	
 	
+}
+
+.way-finder a.light-green:hover {
+	background: @yellow;
+}
+
+.way-finder a.lighter-blue:hover {
+	background: @red;
 }

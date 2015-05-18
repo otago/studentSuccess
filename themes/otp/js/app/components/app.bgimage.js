@@ -1,4 +1,5 @@
-if(typeof app === 'undefined') var app = {};
+if(typeof app === 'undefined') { var app = {}; }
+if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 
 (function($){
 	
@@ -21,15 +22,15 @@ if(typeof app === 'undefined') var app = {};
 			images.each(function(){
 				var img = $(this);
 				var ratio = img.data('ratio');
-				var bgCSS = {left: 0, top: 0}
+				var bgCSS = {left: 0, top: 0};
 				
 				if(!ratio){
 					ratio = img.width() / img.height();
 					img.data('ratio', ratio);
 				} 
 				
-				imgWidth = rootWidth;
-				imgHeight = rootWidth / ratio;
+				var imgWidth = rootWidth;
+				var imgHeight = rootWidth / ratio;
 				
 				if(imgHeight > rootHeight){
 					var topPos = (-1 * ((imgHeight - rootHeight) / 2)) + topMargin;
@@ -51,35 +52,35 @@ if(typeof app === 'undefined') var app = {};
 			holder.addClass('loaded');
 				
 			
-		}
+		};
 		
 		var setSizeAll = function(){
 			items.each(function(){
-				setSize($(this))
+				setSize($(this));
 			});
-		}
+		};
 		
 		var can = function(){
 			return items.length > 0;
-		}
+		};
 		
 		var init = function (){
 			
 			items.each(function(){
 				var item = this;
 				imagesLoaded(item, function(){
-					setSize($(item))
-				})
+					setSize($(item));
+				});
 			});
 			
 			$(window).resize(setSizeAll);
-		}
+		};
 		
 		return {
 			'init'			: init,
 			'can'			: can,
 			'setSize'		: setSize
-		}
+		};
 		
 	})();
 	

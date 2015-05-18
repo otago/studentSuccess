@@ -1,5 +1,5 @@
 <% if $HeroImage %>
-<section class='hero bg-image' data-top='header.main'>
+<section class='hero bg-image clear-this' data-top='header.main'>
     <div class='contents'>
         <% if $HeroTitle %><h2>{$HeroTitleHTML}</h2><% end_if %>
         <% if $HeroContent %><p>{$HeroContentHTML}</p><% end_if %>

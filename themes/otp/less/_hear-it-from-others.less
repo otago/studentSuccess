@@ -1,10 +1,8 @@
 .hear-from-others {
 	
 	width: 100%;
-	max-width: 87.5rem;
-	padding: 0 6.25rem;
+	padding: 0;
 	margin: 0 auto 7.625rem;
-	.boxsizing;
 	
 	h2 {
 		color: @red;
@@ -98,6 +96,15 @@
 	&.red {
 		section {
 			background: @red;
+
+            a.icon {
+
+                &:hover {
+                    color: @red;
+                    border-color: @red;
+                };
+
+            }
 		}
 	}
 	
@@ -105,6 +112,16 @@
 	&.green {
 		section {
 			background: @light-green;
+
+
+            a.icon {
+
+                &:hover {
+                    color: @light-green;
+                    border-color: @light-green;
+                };
+
+            }
 		}
 	}
 	
@@ -112,11 +129,20 @@
 	&.yellow {
 		section {
 			background: @yellow;
+
+            a.icon {
+
+                &:hover {
+                    color: @yellow;
+                    border-color: @yellow;
+                };
+
+            }
 		}
 	}
 	
-	@media screen and (max-width: 980px){ 
-		padding: 0 1.75rem;
+	@media screen and (max-width: 1130px){ 
+		padding: 0;
 		
 		section {
 
@@ -129,10 +155,14 @@
 			}
 			
 		}
-		
-		
-		
-		
 	}
-	
+	@media screen and (max-width: 980px){
+        h2  {
+            font-size: 1.875rem;
+        }
+		section article p.text {
+			font-size: 1.875rem;
+		}
+	}
+		
 }

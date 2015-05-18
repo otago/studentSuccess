@@ -1,5 +1,5 @@
-
-if(typeof app === 'undefined') var app = {};
+if(typeof app === 'undefined') { var app = {}; }
+if(typeof FB === 'undefined') { var FB = 'NULL'; }
 
 (function($){
 
@@ -16,9 +16,10 @@ if(typeof app === 'undefined') var app = {};
                     link: window.location,
                     href: window.location
                 };
-                if(typeof FB != 'undefined'){
-                    function callback(response){}
-                    FB.ui(obj, callback);
+                if(FB !== 'NULL'){
+                    FB.ui(obj, function(response){
+
+                    });
                 }
                 return false;
             });
@@ -32,20 +33,20 @@ if(typeof app === 'undefined') var app = {};
                 return false;
             });
 
-        }
+        };
 
         var can = function(){
             return items.length > 0;
-        }
+        };
 
         var init = function (){
             initButtons();
-        }
+        };
 
         return {
             'init'			: init,
             'can'			: can
-        }
+        };
 
     })();
 

@@ -1,4 +1,4 @@
-if(typeof app === 'undefined') var app = {};
+if(typeof app === 'undefined') { var app = {}; }
 
 (function($){
 	
@@ -17,23 +17,22 @@ if(typeof app === 'undefined') var app = {};
                 $(this).addClass('active');
                 $('section'+"."+tab_id).addClass('active');
 
-                vivid.utils.StopAllVideos();
-            })
+            });
 
-		}
+		};
 		
 		var can = function(){
 			return items.length > 0;
-		}
+		};
 		
 		var init = function (){
 			tabbedContent();
-		}
+		};
 		
 		return {
 			'init'			: init,
 			'can'			: can
-		}
+		};
 		
 	})();
 	

@@ -1,4 +1,4 @@
-if(typeof app === 'undefined') var app = {};
+if(typeof app === 'undefined') { var app = {}; }
 
 (function($){
 	
@@ -11,8 +11,9 @@ if(typeof app === 'undefined') var app = {};
 			
 			items.each(function(){
 				$(this).attr('style', '');
-				if(windowWidth <= 980)
+				if(windowWidth <= 980){
 					return;
+                }
 				
 				var parent = $(this).parent();
 				$(this).css('min-height', parent.height() + 'px');
@@ -25,11 +26,11 @@ if(typeof app === 'undefined') var app = {};
 				}
 				
 			});
-		}
+		};
 		
 		var can = function(){
 			return items.length > 0;
-		}
+		};
 		
 		var init = function (){
 			fixHeights();
@@ -42,12 +43,12 @@ if(typeof app === 'undefined') var app = {};
 			$(window).resize(fixHeights);
 			
 			
-		}
+		};
 		
 		return {
 			'init'			: init,
 			'can'			: can
-		}
+		};
 		
 	})();
 	

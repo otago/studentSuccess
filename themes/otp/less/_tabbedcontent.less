@@ -1,4 +1,6 @@
 .tabbed-content {
+
+    margin-bottom: 3.5rem;
 	
 	.container {
 		max-width: 75rem;
@@ -9,11 +11,17 @@
 		.title {
 			margin: 1.875rem 0 2rem;
 			padding: 0 4.375rem;
-			
-			font-size: 2rem;
-			line-height: 2.375rem;
-			color: @white;
-			font-weight: 100;
+            font-size: 2rem;
+            line-height: 2.375rem;
+            color: @white;
+            font-weight: 100;
+
+            @media screen and (max-width: 980px){
+                padding: 0 1.75rem;
+                font-size: 1.5rem;
+                line-height: 1.875rem;
+            }
+
 		}
 	}
 	.tab-index {
@@ -23,7 +31,11 @@
 			margin: 0;
 			padding: 0 4.375rem;
 			list-style-type: none;
-			
+
+            @media screen and (max-width: 980px){
+                padding: 0 1.75rem;
+
+            }
 			
 			li {
 				display: inline-block;
@@ -50,12 +62,20 @@
 		&.active { display: block; }
 		
 		.content-block {
+
+            background: @red;
 			
-			&.block1 { background: @red; }
+			&.blue {
+                background: @lighter-blue;
+            }
 			
-			&.block2 { background: @lighter-blue; }
-			
-			&.block3 { background: @yellow; }
+			&.yellow {
+                background: @yellow;
+            }
+
+            &.green {
+                background: @light-green;
+            }
 			
 			.itemList {
 				margin: 0;
@@ -77,6 +97,11 @@
 						background: @ttl-gray;
 						font-size: 1.688rem;
 						line-height: 2rem;
+
+                        @media screen and (max-width: 980px){
+                            font-size: 1.5rem;
+                            line-height: 1.875rem;
+                        }
 						
 						&.active {
 							background: @white;
@@ -155,7 +180,7 @@
 							line-height: 1.75rem;
 						}
 						
-						p.smallTxt {
+						p.small-text {
 							font-size: 0.875rem;
 							line-height: 1.25rem;
 						}
@@ -185,9 +210,11 @@
 					}
 				}
 			}
-			&.block1 .itemList li h2 { border-left: 0.813rem solid @red; }
-			&.block2 .itemList li h2 { border-left: 0.813rem solid @lighter-blue; }
-			&.block3 .itemList li h2 { border-left: 0.813rem solid @yellow; }
+
+            .itemList li h2 { border-left: 0.813rem solid @red; }
+			&.blue .itemList li h2 { border-left: 0.813rem solid @lighter-blue; }
+			&.yellow .itemList li h2 { border-left: 0.813rem solid @yellow; }
+            &.green .itemList li h2 { border-left: 0.813rem solid @light-green; }
 		}
 	}
 	

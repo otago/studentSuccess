@@ -10,5 +10,34 @@
 class BaseElementExtension extends DataExtension {
 
 
+	function HasSidebar(){
+		$bRet = false;
+
+		$arrSidebarClasses = array(
+			'SidebarShareElement',
+			'SidebarTestimony',
+			'SidebarImageElement'
+		);
+
+		$before = BaseElement::get()->filter(array(
+			'ParentID'				=> $this->owner->ParentID,
+			'ID:not'				=> $this->owner->ID,
+			'Sort:LessThanOrEqual'	=> $this->owner->Sort
+		))->first();
+
+		$after = BaseElement::get()->filter(array(
+			'ParentID'				=> $this->owner->ParentID,
+			'ID:not'				=> $this->owner->ID,
+			'Sort:GreaterThanOrEqual'	=> $this->owner->Sort
+		))->first();
+
+
+		if(($before && in_array($before->ClassName, $arrSidebarClasses)) || ($after && in_array($after->ClassName, $arrSidebarClasses))){
+			$bRet = true;
+		}
+
+		return $bRet;
+	}
+
 
 } 

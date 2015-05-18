@@ -1,5 +1,5 @@
-<% if $HeroImage %>
-    <section class='hero bg-image mini'>
+<section class='hero bg-image mini <% if not $HeroImage %> no-hero<% end_if %>'>
+	<% if $HeroImage %>
         {$HeroImage}
-    </section>
-<% end_if %>
+	<% end_if %>
+</section>

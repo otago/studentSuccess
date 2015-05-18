@@ -15,9 +15,9 @@ class CaseStudy extends BaseElement {
 
 	private static $db = array(
 		'DisplayTitle'		=> 'Varchar',
+		'Color'				=> 'Varchar',
 		'Summary'			=> 'Text',
-		'CaseStudyContent'	=> 'HTMLText',
-		'Color'				=> 'Varchar'
+		'CaseStudyContent'	=> 'HTMLText'
 	);
 
 	private static $has_one = array(

@@ -12,7 +12,7 @@ $project = 'opt';
 
 
 global $database;
-$database = SS_DATABASE_NAME;
+$database = (defined('SS_DATABASE_NAME')) ? SS_DATABASE_NAME : 'op3';
 
 require_once("conf/ConfigureFromEnv.php");
 
@@ -38,5 +38,3 @@ $strItems = substr($strItems, 0, -1);
 
 HtmlEditorConfig::get('cms')->setOption('theme_advanced_styles', $strItems);
 
-
-SSViewer::set_theme('otp');

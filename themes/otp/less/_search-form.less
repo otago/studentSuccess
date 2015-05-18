@@ -11,17 +11,26 @@
 		  	-moz-border-radius: 0.125rem;
 			border-radius: 0.125rem;
 			font-size: 1.125rem;
-			width: 94%;
-			max-width: 39.75rem;
+			width: 100%;
 				
 		}
+
+        .middleColumn {
+            position: relative;
+            max-width: 39.75rem;
+            width: 100%;
+
+            input {
+                .boxsizing;
+            }
+        }
 		
 		.middleColumn::after {
 			.icon-font;
 			content: "\e600";
-			position: relative;
-			left: -2.188rem;
-			top: 0;
+			position: absolute;
+			right: 0.5rem;
+			top: 1rem;
 			font-weight: bold;
 			color: @icon-grey;
 		}
@@ -32,4 +41,32 @@
 		display: none;
 	}
 	
+}
+
+@media screen and (max-width: 768px){
+	.search-form #Search .middleColumn {
+		position: relative;
+	}
+	.search-form fieldset input {
+		max-width: 90%;
+		width: 90%;
+		padding-right: 10%;
+	}
+	.search-form fieldset .middleColumn::after {
+		position: absolute;
+		left: 95%;
+		top: 50%;
+		margin-top: -8px;
+	}
+}
+
+@media screen and (max-width: 480px){
+	.search-form fieldset input {
+		max-width: 80%;
+		width: 80%;
+		padding-right: 20%;
+	}
+	.search-form fieldset .middleColumn::after {
+		left: 90%;	
+	}
 }

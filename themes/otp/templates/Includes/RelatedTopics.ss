@@ -1,5 +1,5 @@
 <% if $HasRelatedTopics %>
-    <div class='related-topics'>
+    <div class='related-topics clear-this'>
 
 
         <div class='masonry-content'>

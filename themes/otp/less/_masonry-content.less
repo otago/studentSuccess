@@ -1,9 +1,11 @@
 .masonry-content {
 	.boxsizing;
-	padding: 0 6.375rem 12rem;
+	padding: 0 6.375rem 2rem;
 	max-width: 87.75rem;
 	margin: 0 auto;
 	position: relative;
+
+
 	
 	.tile-c {
 		//
@@ -16,7 +18,14 @@
 		.boxsizing;
 		padding: 1.875rem 6.125rem 1.875rem 2.000rem;
 		word-wrap: break-word;
-		
+        display: block;
+
+        @media screen and (max-width: 980px) {
+            width: 50%;
+            padding: 1.875rem 2rem 1.875rem 2.000rem;
+        }
+
+
 		a {
 			color: @white;
 
@@ -29,24 +38,17 @@
 			
 			margin: 0;
 			position: relative;
-			
-			a {
-				color: @white;
-				
-				span {
-					display: block;
-					height: 2rem;
-					line-height: 2.250rem;
-					font-size: 1rem;
-					position: absolute;
-					right: 0;
-					top: 0;
-				}
-				
-				&:hover {
-					color: @blue;
-				}
-			}
+
+            span {
+                display: block;
+                height: 2rem;
+                line-height: 2.250rem;
+                font-size: 1rem;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
 		}
 		
 		p {
@@ -69,20 +71,46 @@
 		//
 		// end content tile
 		//
-		
-		&:nth-child(2n + 2){
+
+        &:nth-child(5n + 1){
+            background: @light-green;
+            &a:hover {
+                background: @lighter-blue;
+            }
+        }
+		&:nth-child(5n + 2){
 			background: @lighter-blue;
+            &a:hover {
+              background: @light-green;
+            }
 		}
-		&:nth-child(3n + 3){
+		&:nth-child(5n + 3){
 			background: @yellow;
+            &a:hover {
+                background: @lighter-blue;
+            }
 		}
-		&:nth-child(4n + 4){
+		&:nth-child(5n + 4){
 			background: @red;
+            &a:hover {
+                background: @yellow;
+            }
 		}
 		&:nth-child(5n + 5){
 			background: @darker-grey;
+            &a:hover {
+                background: @red;
+            }
 		}
-		
+
+
+        //
+        // width holder
+        //
+        &.width-c {
+            padding: 0 !important;
+            min-height: 0 !important;
+        }
 		
 		//
 		// contact tile
@@ -97,12 +125,20 @@
 			top: 0;
 			right: 0;
 			position: absolute;
+
+            @media screen and (max-width: 980px) {
+                width: 50%;
+                padding: 1.875rem 2rem 1.875rem 2.000rem;
+            }
+
+            @media screen and (max-width: 640px) {
+                width: 100%;
+            }
 			
 			&.left {
 				right: auto;
 				left: 0;
 				top: 500px;
-				//top: auto;
 			}
 			
 			h3 {
@@ -110,6 +146,11 @@
 				line-height: 3rem;
 				font-weight: 100;
 				color: @red;
+
+                @media screen and (max-width: 980px) {
+                    font-size: 1.875rem;
+                    line-height: 2.5rem;
+                }
 			}
 			
 			a {
@@ -120,6 +161,10 @@
 				
 				&.contact {
 					margin-top: 4.375rem;
+
+                    @media screen and (max-width: 980px) {
+                        margin-top: 2rem;
+                    }
 				}
 				
 				&.lines {
@@ -152,7 +197,6 @@
 			width: 16.6666666667%;
 			padding: 2.625rem 2.125rem;
 			min-height: 6.25rem;
-			background: @red;
 			
 			a {
 				svg {
@@ -172,24 +216,7 @@
 					}
 				}
 			}
-			
-			
-			
-			&:nth-child(2n + 2){
-				background: @yellow;
-			}
-			&:nth-child(3n + 3){
-				background: @darker-grey;
-			}
-			&:nth-child(4n + 4){
-				background: @light-green;
-			}
-			&:nth-child(5n + 5){
-				background: @lighter-blue;
-			}
-			
-			
-			
+
 		}
 		
 		&.list-menu {
@@ -291,6 +318,11 @@
 					background: rgba(0,0,0,0.4);
 					padding: 2.75rem 6.5rem 2.5rem 3rem;
 					.boxsizing;
+
+                    @media screen and (max-width: 980px) {
+                        position: relative;
+                        background: @darker-grey;
+                    }
 					
 					h3 {
 						font-size: 1.875rem;
@@ -311,7 +343,32 @@
 		}
 		
 	}
-	
+
+
+    a.tile-c {
+        .transition-background;
+
+        &:hover {
+            background: @lighter-blue;
+
+            &:nth-child(5n + 1){
+                background: @lighter-blue;
+            }
+            &:nth-child(5n + 2){
+                background: @light-green;
+            }
+            &:nth-child(5n + 3){
+                background: @lighter-blue;
+            }
+            &:nth-child(5n + 4){
+                background: @yellow;
+            }
+            &:nth-child(5n + 5){
+                background: @red;
+            }
+        }
+    }
+
 	@media screen and (max-width: 1400px) {
 		padding: 0 1.75rem 12rem;
 		max-width: 78.5rem;
@@ -329,7 +386,7 @@
 		
 		padding: 0 1.75rem 12rem;
 		
-		.tile {
+		.tile-c {
 			width: 50%;
 			
 			&.half {
@@ -341,7 +398,7 @@
 	
 	@media screen and (max-width: 640px) {
 		
-		.tile {
+		.tile-c {
 			width: 100%;
 			
 			&.half {

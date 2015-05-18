@@ -1,5 +1,6 @@
 
-if(typeof app === 'undefined') var app = {};
+if(typeof app === 'undefined') { var app = {}; }
+if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 
 (function($){
 	
@@ -8,6 +9,41 @@ if(typeof app === 'undefined') var app = {};
 		var items = $('.carousel-items');
 		
 		
+		var smartItems = $('.smart-slider');
+		
+		
+		var  initSmartSlider = function(holder){
+            var holderRef = holder;
+            var top = holder.closest('.smart-slide');
+            var letters = top.find('.slide-letters li');
+            top.find('.slide-letters li:first-child').addClass('active');
+			
+			var slider = holder.flexslider({
+				animation 	    : 'slide',
+				smoothHeight	: false,
+				prevText		: "",
+			    nextText		: "",
+				after: function(slider){
+
+                    var current = slider.currentSlide + 1;
+                    letters.removeClass('active');
+                    top.find('li.letter-' + current).addClass('active');
+				}
+			});
+
+            letters.click(function(){
+                var index = $(this).data('count');
+                index -= 1;
+                if(index < 0){
+                    index = 0;
+                }
+                holder.flexslider(index);
+                return false;
+            });
+			
+			
+		};
+		
 		var initSlider = function(holder){
 			
 			holder.flexslider({
@@ -15,30 +51,28 @@ if(typeof app === 'undefined') var app = {};
 				'smoothHeight'	: false,
 				prevText		: "",
 			    nextText		: ""
-			
-			/*
-				before: function(){
-					var active_block = $(this).find('.flex-active-slide').attr('id');
-					$('body').find('.slide-letters li' + '.' +active_block).addClass('active');
-				},*/
 			});
 			
-		}
+		};
 		
 		var can = function(){
-			return items.length > 0;
-		}
+			return items.length > 0 || smartItems.length > 0;
+		};
 		
 		var init = function (){
 			items.each(function(){
 				initSlider($(this));
 			});
-		}
+			
+			smartItems.each(function(){
+				initSmartSlider($(this));
+			});
+		};
 		
 		return {
 			'init'			: init,
 			'can'			: can
-		}
+		};
 		
 	})();
 	

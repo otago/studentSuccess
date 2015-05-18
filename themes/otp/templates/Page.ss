@@ -9,10 +9,10 @@
         <meta http-equiv="x-ua-compatible" content="IE=10"/>
         $MetaTags(false)
 
-        <script src="//use.typekit.net/xhb6imc.js"></script>
+        <script src="//use.typekit.net/jyv7peg.js"></script>
         <script>try{Typekit.load();}catch(e){}</script>
 
-        <link rel='stylesheet' type='text/css' href='{$ThemeDir}/css/otp.css'>
+        <link rel='stylesheet' type='text/css' href='{$ThemeDir}/static/otp.min.css'>
         <script type='{$ThemeDir}/js/thirdparty/modernizr.js'></script>
     </head>
 <body>

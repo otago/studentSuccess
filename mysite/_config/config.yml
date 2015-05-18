@@ -25,6 +25,9 @@ SiteConfig:
       icon-cta: 'File List'
       icon-download: 'Download'
       icon-search: 'Search'
+Director:
+  rules:
+    'tile//$Action/$ID': 'FilterableTile_Counter'
 SSViewer:
   theme: 'otp'
 Page:
@@ -44,6 +47,16 @@ Page:
     - ElementImage
     - ElementFile
     - ElementInternalLink
+    - MasonryContentsWithFilters
+    - MasonryContent
+    - LinksComponent
+    - PageHeader
+    - TabbedCheckList
+    - CaseStudy
+    - VideoComponent
+    - CheckList
+    - CarouselWithUpperLetter
+    - MatrixElement
 Controller:
   extensions:
     - ControllerExtension
@@ -71,6 +84,24 @@ RelatedPageBox:
 MasonryTile:
   extensions:
     - Linkable
+MasonryTileLink:
+  extensions:
+    - Linkable
+LinkElement:
+  extensions:
+    - Linkable
+LinksComponent:
+  extensions:
+    - Linkable
+FilterableMasonryTile:
+  extensions:
+    - FilterableTile
+FilterableMasonryImageTile:
+  extensions:
+    - FilterableTile
+FilterableSmallMasonryTile:
+  extensions:
+    - FilterableTile
 ElementContent:
   extensions:
     - ElementContentExtension

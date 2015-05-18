@@ -1,4 +1,4 @@
-if(typeof app === 'undefined') var app = {};
+if(typeof app === 'undefined') { var app = {}; }
 
 (function($){
 	
@@ -10,6 +10,10 @@ if(typeof app === 'undefined') var app = {};
 			var holder = container;
 			holder.find('.title-c a').click(function(){
 				var title = $(this).parent();
+
+                // if there is a checkable then check it
+                $(this).closest('.checkable').addClass('checked');
+
 				
 				if(!title.hasClass('active')){
 					title.addClass('active');
@@ -26,11 +30,11 @@ if(typeof app === 'undefined') var app = {};
 				
 				return false;
 			});
-		}
+		};
 		
 		var can = function(){
 			return items.length > 0;
-		}
+		};
 		
 		var init = function (){
 			
@@ -38,12 +42,12 @@ if(typeof app === 'undefined') var app = {};
 				initItem($(this));
 			});
 			
-		}
+		};
 		
 		return {
 			'init'			: init,
 			'can'			: can
-		}
+		};
 		
 	})();
 	

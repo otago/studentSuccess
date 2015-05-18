@@ -4,7 +4,9 @@
 	color: @white;
 	position: relative;
 	overflow: hidden;
+    margin-bottom: 2rem;
 
+    .component-alignment.carousel-items,
     .carousel-items {
         padding: 0 4.25rem;
         .boxsizing;
@@ -108,6 +110,17 @@
 			-webkit-hyphens: auto;
 			-moz-hyphens: auto;
 			hyphens: auto;
+
+            >* {
+                .transition-opacity;
+                opacity: 0.3;
+            }
+
+            &.flex-active-slide {
+                >* {
+                    opacity: 1;
+                }
+            }
 			
 			&.title {
 				
@@ -125,8 +138,8 @@
 							margin: 0;
 							
 							@media screen and (max-width: 980px) { 
-								font-size: 4rem;
-								line-height: 4rem;
+								font-size: 1.875rem;
+								line-height: 1.875rem;
 							}
 							
 						}
@@ -145,9 +158,9 @@
 						line-height: 5rem;
 						
 						
-						@media screen and (max-width: 980px) { 
-							font-size: 3rem;
-							line-height: 3rem;
+						@media screen and (max-width: 980px) {
+                            font-size: 1.875rem;
+                            line-height: 1.875rem;
 						}
 					}
 				}
@@ -157,6 +170,12 @@
 			
 			
 			&.title-content-compact {
+
+                overflow: hidden;
+
+                >* {
+                  opacity: 1;
+                }
 				
 				article {
 					overflow: hidden;
@@ -164,13 +183,22 @@
 				
 				.wrapper {
 					padding: 0;
+                    display: block;
 				}
+
+                .holder {
+                    overflow: hidden;
+                    display: block !important;
+                    position: relative;
+                }
 				
 				.left {
 					width: 47.6323119777%;
 					height: 100%;
-					display: table-cell;
+					display: block;
 					padding: 4.875rem 10.5849582173% 5.125rem 0;
+                    position: relative;
+                    top: 0;
 					
 					h3 {
 						margin: 0;
@@ -187,9 +215,9 @@
 						line-height: 3.75rem;
 						padding-bottom: 2rem;
 						
-						@media screen and (max-width: 980px) { 
-							font-size: 2rem;
-							line-height: 2rem;
+						@media screen and (max-width: 980px) {
+                            font-size: 1.875rem;
+                            line-height: 1.875rem;
 						}
 					}
 					
@@ -203,12 +231,19 @@
 				.right {
 					width: 41.782729805%;
 					height: 100%;
-					display: table-cell;
+					display: block;
 					background: @white;
 					background: rgba(255, 255, 255, 0.2);
 					padding: 4.875rem 3rem 5.125rem;
 					.boxsizing;
-					
+                    float: left;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    opacity: 0;
+                    .transition;
+
+
 					h3 {
 						
 						font-size: 1.125rem;
@@ -235,9 +270,21 @@
 					.left, .right {
 						display: block;
 						width: 100%;
+                        position: relative;
+                        left: 0;
 					}
 				}
-				
+
+                &.title-content-compact.flex-active-slide {
+                    .right {
+                        left: 58.5%;
+                        opacity: 1;
+                        @media screen and (max-width: 980px) {
+                            left: 0;
+                        }
+                    }
+
+                }
 			}
 			
 		}
@@ -261,6 +308,10 @@
 
 				content: "\e610";
 			};
+
+            &:hover {
+                opacity: 0.6;
+            }
 		}
 		
 		.flex-next {
@@ -274,6 +325,10 @@
 
 				content: "\e60f";
 			};
+
+            &:hover {
+                opacity: 0.6;
+            }
 		}
 	}
 	
@@ -285,19 +340,33 @@
 //
 .smart-slide {
 	margin-top: 2rem;
+
+    @media screen and (max-width: 980px){
+        .component-alignment.boxed-element {
+            padding-left: 4.25rem;
+            padding-right: 4.25rem;
+        }
+    }
 	
 	.slide-letters {
 		max-width: 56.25rem;
 		width: auto;
 		margin: 0 auto;
-		padding: 0;
+        padding: 0;
 		list-style-type: none;
 		overflow: hidden;
-		
+
+        @media  screen and (max-width: 980px) {
+            padding: 0 4.25rem;
+            .boxsizing;
+        }
+
 		li {
 			width: 20%;
 			float: left;
-			
+            border-bottom: 0.75rem solid @white;
+            .transition;
+
 			h1 {
 				font-size: 6.25rem;
 				line-height: 1.2;
@@ -305,21 +374,51 @@
 				color: @drak-grey;
 			  	text-align: center;
 				margin: 0;
+                cursor: pointer;
+
+                @media  screen and (max-width: 980px) {
+                    font-size: 3rem;
+                }
 			}
 			&.active {
-				border-bottom: 11px solid @lighter-blue;
 				
-				 h1 {
-					color: @lighter-blue;
-				}
+                h1 {
+                    color: @lighter-blue;
+                }
 			}
 		}	
 	}
+
+    .carousel {
+        overflow: visible;
+
+        .slides li.title-content-compact {
+            overflow: visible;
+
+            .holder {
+                overflow: visible;
+            }
+        }
+    }
+
+    .smart-slider {
+        padding: 0 4.25rem;
+        .boxsizing;
+
+        @media screen and (max-width: 980px){
+        }
+
+        .flex-viewport {
+            padding-top: 12px;
+            top: -12px;
+        }
+    }
 	
 	.slide-title {
 		max-width: 56.25rem;
 		width: auto;
 		margin: 0 auto 1.5rem;
+        position: relative;
 		
 		h3 {
 			font-size: 1.125rem;
@@ -329,25 +428,41 @@
 			text-align: center;
 			margin-top: 0.75rem;
 			width: 20%;
+            position: relative;
+
+            span.bar {
+                height: 0.75rem;
+                background: @lighter-blue;
+                position: absolute;
+                width: 100%;
+                left: 0;
+                top: -1.5rem;
+                z-index: 10000;
+
+            }
 			
 			span.icon {
 				font-size: 0.75rem;
 				margin-right: 0.938rem;
 			}
 		}
+
+
 	}
-	#Let2 .slide-title h3 {
-		margin-left: 20%;
-	}
-	#Let3 .slide-title h3 {
-		margin-left: 40%;
-	}
-	#Let4 .slide-title h3 {
-		margin-left: 60%;
-	}
-	#Let5 .slide-title h3 {
-		margin-left: 80%;
-	}
+
+    #letter-2 h3 {
+      left: 20%;
+    }
+    #letter-3 .slide-title h3 {
+      left: 40%;
+    }
+    #letter-4 .slide-title h3 {
+      left: 60%;
+    }
+    #letter-5 .slide-title h3 {
+      left: 80%;
+    }
+
 	
 	p {
 		line-height: 1.75rem;

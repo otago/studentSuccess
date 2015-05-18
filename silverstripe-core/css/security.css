@@ -1,0 +1,187 @@
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-smooth: always;
+}
+body {
+    background: #d0d9df;
+}
+.security {
+    font-family: Arial, sans-serif;
+    color: #555;
+    font-size: 12px;
+}
+.SecurityHolder {
+    width: 300px;
+    background-color: #e6eaed;
+    margin: 0 auto 25px;
+    -webkit-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    margin-top: 10%;
+}
+
+.SecurityHolder h1 {
+    height: 47px;
+    background: #2a4675;
+    color: #FFF;
+    -webkit-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+    line-height: 47px;
+    font-size: 15px;
+    padding: 0px 15px;
+    font-weight: bold;
+    overflow: hidden;
+}
+.SecurityHolder h1 img {
+    display: inline-block;
+    top: 7px;
+    position: relative;
+    margin-right: 10px;
+}
+
+.SecurityHolder h1 span {
+    color: #55cdef;
+}
+
+.SecurityHolder a {
+    color: #bcbcbc;
+    text-decoration: none;
+}
+
+.SecurityHolder form {
+}
+.SecurityHolder form p.message.bad {
+    padding: 15px 15px 0 15px;
+    color: red;
+}
+.SecurityHolder fieldset {
+    border: 0;
+    border-bottom: 1px solid #d0d3d5;
+    -webkit-box-shadow: 0 1px 0 rgba(245, 245, 245, 0.8);
+    -moz-box-shadow: 0 1px 0 rgba(245, 245, 245, 0.8);
+    -o-box-shadow: 0 1px 0 rgba(245, 245, 245, 0.8);
+    box-shadow: 0 1px 0 rgba(245, 245, 245, 0.8);
+    padding: 15px;
+}
+
+.SecurityHolder fieldset div.text {
+    padding: 10px 0px;
+}
+
+.SecurityHolder fieldset div.text label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.SecurityHolder fieldset div.text input {
+    background: #fff;
+    border: 1px solid #b3b3b3;
+    padding: 7px 7px;
+    line-height: 16px;
+    margin: 0;
+    outline: none;
+    -moz-transition: 0.2s box-shadow ease-in;
+    -webkit-transition: 0.2s box-shadow ease-in;
+    -o-transition: 0.2s box-shadow ease-in;
+    transition: 0.2s box-shadow ease-in;
+    -moz-transition: 0.2s border ease-in;
+    -webkit-transition: 0.2s border ease-in;
+    -o-transition: 0.2s border ease-in;
+    transition: 0.2s border ease-in;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgi…gd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eaeaea), color-stop(10%, #ffffff));
+    background-image: -webkit-linear-gradient(#eaeaea, #ffffff 10%);
+    background-image: -moz-linear-gradient(#eaeaea, #ffffff 10%);
+    background-image: -o-linear-gradient(#eaeaea, #ffffff 10%);
+    background-image: linear-gradient(#eaeaea, #ffffff 10%);
+    width: 254px;
+}
+
+.Actions {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.Actions input {
+    margin-top: 0px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 16px;
+    color: #393939;
+    border: 1px solid #c0c0c2;
+    border-bottom: 1px solid #a6a6a9;
+    cursor: pointer;
+    background-color: #e6e6e6;
+    white-space: nowrap;
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgi…pZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #d9d9d9));
+    background: -webkit-linear-gradient(#ffffff, #d9d9d9);
+    background: -moz-linear-gradient(#ffffff, #d9d9d9);
+    background: -o-linear-gradient(#ffffff, #d9d9d9);
+    background: linear-gradient(#ffffff, #d9d9d9);
+    text-shadow: white 0 1px 1px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    margin-left: 15px;
+    padding: 3px 5px;
+    display: inline-block;
+}
+
+#ForgotPassword {
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-top: 1px solid #d0d3d5;
+    -webkit-box-shadow: 0 -1px 0 rgba(245, 245, 245, 0.8);
+    -moz-box-shadow: 0 -1px 0 rgba(245, 245, 245, 0.8);
+    -o-box-shadow: 0 -1px 0 rgba(245, 245, 245, 0.8);
+    box-shadow: 0 -1px 0 rgba(245, 245, 245, 0.8);
+}
+
+.SecurityHolder .error-message {
+    padding: 20px 15px;
+}

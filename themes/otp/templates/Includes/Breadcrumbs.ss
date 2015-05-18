@@ -1,5 +1,5 @@
 <% if $BreadCrumbPages %>
-<div class='breadcrumbs'>
+<div class='breadcrumbs component-alignment boxed-element clear-this'>
     <ul>
         <% loop $BreadCrumbPages %>
             <% if $Last %>

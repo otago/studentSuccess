@@ -2,7 +2,7 @@
 header.main {
 	
 	position: relative;
-	z-index: 100;
+	z-index: 200;
 	background: @blue;
 	
 	.container {
@@ -30,6 +30,31 @@ header.main {
 			width: 6.000rem;
 		}
 		
+		@media screen and (max-width: 1400px){
+			width: auto;
+			padding-right: 1.75rem;
+			padding-left: 1.75rem;
+			
+			a {
+				width: 100%;
+				height: auto;
+				line-height: 0;
+				
+				img {
+					width: auto;
+				}
+			}
+		}
+		@media screen and (max-width: 900px){
+			height: auto;
+			padding-bottom: 1.875rem;
+			
+			a {
+				img {
+					width: 3.75rem;
+				}
+			}
+		}
 		
 	}
 	
@@ -40,7 +65,14 @@ header.main {
 		padding-right: 2rem;
 		position: relative;
 		.boxsizing;
+
+        @media screen and (max-width: 1400px){
+             padding-left: 12.5rem;
+        }
 		
+		@media screen and (max-width: 900px){
+			height: 112px;
+		}
 		a {
 			color: @white;
 			text-decoration: none;
@@ -58,7 +90,8 @@ header.main {
 			}
 		}
 		
-		.hamburger {
+		.hamburger,
+		.close {
 			display: none;
 			font-size: 2rem;
 			right: 2rem;
@@ -141,6 +174,21 @@ header.main {
 						&:-ms-input-placeholder {
 						   color: @white;
 						}
+					}
+					
+					::-webkit-input-placeholder { /* WebKit browsers */
+					    color: @white;
+					}
+					:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+					   color: @white;
+					   opacity:  1;
+					}
+					::-moz-placeholder { /* Mozilla Firefox 19+ */
+					   color: @white;
+					   opacity:  1;
+					}
+					:-ms-input-placeholder { /* Internet Explorer 10+ */
+					   color: @white;
 					}
 					
 					button {
@@ -279,7 +327,7 @@ header.main {
 						.boxsizing;
 						margin: 0;
 						padding: 0 1.75rem;
-						font-size: 1.1250rem;
+						font-size: 0.875rem;
 					  	height: 3.125rem;
 					  	line-height: 3.125rem;
 						
@@ -327,7 +375,7 @@ header.main {
 						.boxsizing;
 						
 						a {
-							font-size: 1.1250rem;
+							font-size: 0.875rem;
 							display: block;
 							width: 100%;
 							.boxsizing;
@@ -351,4 +399,15 @@ header.main {
 		}
 	}
 	
+}
+
+@media screen and (max-width: 900px){
+	header.main.opened {
+		nav {
+			.icon-hamburger:before {
+				content: "\e615";
+			}
+		
+		}
+	}
 }

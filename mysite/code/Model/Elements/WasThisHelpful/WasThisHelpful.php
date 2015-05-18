@@ -25,6 +25,10 @@ class WasThisHelpful extends BaseElement {
 		return $this->getController()->Link('no');
 	}
 
+	public function Page(){
+		return Director::get_current_page();
+	}
+
 }
 
 class WasThisHelpful_Controller extends BaseElement_Controller {

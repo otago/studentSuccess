@@ -1,22 +1,19 @@
 .links-content {
-	max-width: 87.50rem;
 	margin: 0 auto;
+	background: @lighter-blue;
 
-
+	&.green {
+		background: @light-green;
+	}
+	&.red {
+		background: @red;
+	}
+	
 	.links-block {
 		overflow: hidden;
 		width: 100%;
 		margin-bottom: 1.875rem;
 		color: @white;
-		background: @lighter-blue;
-
-
-		&.green {
-			background: @light-green;
-		}
-		&.red {
-			background: @red;
-		}
 		
 		span.icon-external-link {
 			font-size: 2rem;
@@ -26,13 +23,9 @@
 		.left {
 			float: left;
 			width: 50%;
-			padding: 2.250rem 6.25rem 2.250rem 10.625rem;
+			padding: 2.250rem 6.25rem 2.250rem 0;
 			.boxsizing;
-			
-			@media screen and (max-width: 1248px){ 
-				padding: 2.250rem 6.25rem 2.250rem 6.25rem;
-				
-			}
+
 			
 			h3 {
 				font-size: 1.25rem;
@@ -87,14 +80,18 @@
 		
 	}
 	
-	@media screen and (max-width: 740px){ 
-		padding: 0 1.75rem;
+	@media screen and (max-width: 980px){
+
+        .component-alignment.boxed-element {
+            padding-left: 0;
+            padding-right: 0;
+        }
 		
 		.links-block {
 			.left {
 				float: none;
 				width: 100%;
-				padding: 2.250rem;
+				padding: 2.250rem 1.75rem;
 			}
 
 			.image {

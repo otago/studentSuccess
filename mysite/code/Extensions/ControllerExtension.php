@@ -13,4 +13,8 @@ class ControllerExtension extends Extension {
 		return Page::get()->filter('ShowInTopMenu', 1);
 	}
 
+	public function IsDev(){
+		return Director::isDev();
+	}
+
 } 

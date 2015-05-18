@@ -1,0 +1,28 @@
+---
+Name: core
+After: 'framework/*','cms/*'
+---
+
+DateUtils:
+  PublicDateTimeFormat: 'd F Y H:i'
+  PublicDateFormat: 'd F Y'
+  PublicTimeFormat: 'H:i a'
+DateField:
+  default_config:
+    showcalendar: true
+    dateformat: 'dd/MM/yyyy'
+Image:
+  extensions:
+    - ImageExtension
+ImageExtension:
+  sizes:
+  exclude_classes:
+SiteConfig:
+  extensions:
+    - CoreConfigs
+Controller:
+  extensions:
+    - SS_MinifiedResponseExtension
+Director:
+  rules:
+    'search': 'SearchPage'

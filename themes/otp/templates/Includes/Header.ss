@@ -9,7 +9,7 @@
             <% if $TopMenu %>
             <ul class='level-1'>
                 <li class='right'>
-                    <form>
+                    <form action="{$BaseHref}search">
                         <input type='text' name='Search' placeholder='Search'>
                         <button class='icon icon-search'></button>
                     </form>

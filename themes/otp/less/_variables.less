@@ -67,6 +67,15 @@
 	-webkit-transition: opacity 0.5s ease-in-out;
 }
 
+
+.transition-background {
+  transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s ease-in-out;
+  -webkit-transition: background-color 0.5s ease-in-out;
+}
+
+
 .text-shadow {
 	text-shadow: none;
 	-webkit-text-shadow: none;
@@ -112,6 +121,9 @@ input {
 }
 
 .packery {
+
+    opacity: 0;
+    .transition-opacity;
 	
 	.tile {
 		opacity: 0;
@@ -119,6 +131,8 @@ input {
 	}
 	
 	&.loaded {
+        opacity: 1;
+
 		.tile {
 			opacity: 1;
 		}

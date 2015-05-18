@@ -35,7 +35,7 @@
 		
 		.wrapper {
 			.boxsizing;
-			padding: 0 15% 0 17.9%;
+			padding: 0 15% 0 0;
 		}
 		
 		h3 {
@@ -65,16 +65,20 @@
 	}
 	
 	@media screen and (max-width: 980px) {
+        .component-alignment.boxed-element {
+            padding-left: 0;
+            padding-right: 0;
+        }
 		picture {
 			width: 100%;
 			float: none;
 		}
 		
 		article {
+            padding-left: 1.75rem;
+            padding-right: 1.75rem;
 			width: 100%;
 			float: none;
-			padding-left: 1.75rem;
-		  	padding-right: 1.75rem;
 		
 			.wrapper {
 				padding: 0;

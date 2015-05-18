@@ -13,8 +13,9 @@ class WayFinder extends BaseElement {
 
 	private static $description = "Way finder element section";
 
+	protected $enable_title_in_template = true;
+
 	private static $db = array(
-		'FiltersTitle'		=> 'Varchar'
 	);
 
 	private static $many_many = array(

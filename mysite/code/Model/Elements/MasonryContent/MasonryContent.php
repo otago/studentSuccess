@@ -28,14 +28,16 @@ class MasonryContent extends BaseElement {
 		$fields->removeByName('Tiles');
 
 		$fields->addFieldsToTab('Root.Main', array(
-			$grid = FormUtils::MakeDragAndDropGridField('Tiles', 'Tiles', $this->Tiles(), 'SortOrder')
+			$grid = FormUtils::MakeDragAndDropGridField('Tiles', 'Tiles', $this->Tiles(), 'SortOrder', 'RecordEditor')
 		));
 
 		$configs = $grid->getConfig();
 		$adder = new GridFieldAddNewMultiClass();
 		$adder->setClasses(array(
 			'MasonryTile'			=> 'Tile',
-			'MasonryImageTile'	=> 'Image Tile'
+			'MasonryImageTile'		=> 'Image Tile',
+			'LinkListMasonryTile'	=> 'Links List',
+			'SmallMasonryTile'		=> 'Small Tile With Title'
 		));
 		$configs->removeComponentsByType('GridFieldAddNewButton');
 		$configs->removeComponentsByType('GridFieldAddExistingAutocompleter');

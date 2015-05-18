@@ -1,6 +1,21 @@
+.component-alignment {
+    /*
+    .page-intro {
+        margin: 0 6.25rem;
+
+        @media screen and (max-width: 980px){
+            margin: 0;
+        }
+
+    }*/
+}
+
 .page-intro {
-	
+	max-width: 75.000rem;
+	margin: 0 auto;
 	padding: 3.125rem 1.75rem 1.375rem;
+    background: @white;
+    .boxsizing;
 	
 	article {
 		max-width: 49.75rem;
@@ -16,6 +31,11 @@
 		
 		p {
 			margin-top: 0;
+
+            @media screen and (max-width: 1200px){
+                font-size: 1rem;
+            }
+
 		}
 		
 		
@@ -23,12 +43,19 @@
 	
 	
 	.filter-form {
-		width: 100%;
-		max-width: 75rem;
-		padding: 0 6.125rem;
-		margin: 0 auto;
-		.boxsizing;
-		position: relative;
+        .filters {
+            width: 100%;
+            max-width: 75rem;
+            padding: 0 6.125rem;
+            margin: 0 auto;
+            .boxsizing;
+            position: relative;
+
+			@media screen and (max-width: 768px){
+				padding: 0;
+			}
+			
+        }
 		
 		fieldset {
 			border: 0;
@@ -39,7 +66,11 @@
 				float: left;
 				width: 30%;
 				
-				
+				@media screen and (max-width: 980px){
+					float: none;
+					width: 100%;
+					margin-bottom: 1rem;
+				}
 			}
 			
 			.input {
@@ -47,15 +78,40 @@
 				width: 68%;
 				
 				input {
-					height: 3.125rem;
-					line-height: 3.125rem;
-					font-size: 1.250rem;
+					height: 2.5rem;
+					line-height: 2.5rem;
+					font-size: 0.75rem;
 					width: 100%;
 					.border-radius;
 					display: block;
 					.boxsizing;
 					border: 1px solid @grey;
-					padding: 0 1.375rem;
+					padding: 0 2.5rem 0 1rem;
+					
+				}
+				
+				::-webkit-input-placeholder { /* WebKit browsers */
+				    color: @drak-grey;
+				}
+				:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+				   color: @drak-grey;
+				   opacity:  1;
+				}
+				::-moz-placeholder { /* Mozilla Firefox 19+ */
+				   color: @drak-grey;
+				   opacity:  1;
+				}
+				:-ms-input-placeholder { /* Internet Explorer 10+ */
+				   color: @drak-grey;
+				}
+				
+				@media screen and (max-width: 980px){
+					float: none;
+					width: 100%;
+					
+					input {
+						padding-right: 10%;
+					}
 				}
 			}
 		}
@@ -63,10 +119,14 @@
 		.actions {
 			float: right;
 			
+			@media screen and (max-width: 980px){
+				float: none;
+			}
+			
 			button {
 				border: 0;
 			  	background: transparent;
-			  	height: 3.125rem;
+			  	height: 2.5rem;
 			  	width: 3.125rem;
 			  	top: 0px;
 			  	position: absolute;
@@ -78,9 +138,24 @@
 				&:hover {
 					opacity: 1;
 				};
+				
+				@media screen and (max-width: 980px){
+					top: 3.65rem;
+				}
+				@media screen and (max-width: 769px){
+					right: 0;
+				}
 			}
 		}
 		
+		.chosen-container .chosen-results li {
+			font-size: 0.75rem;
+			min-height: 1rem;
+			padding: .5rem .375rem;
+		}
+		.chosen-container-single .chosen-single {
+			font-size: 0.75rem;
+		}
 	}
 	
 	.sort-by {
@@ -96,8 +171,8 @@
 			
 			label {
 				float: left;
-				height: 3.125rem;
-				line-height: 3.125rem;
+				height: 2.5rem;
+				line-height: 2.5rem;
 				margin-right: 1rem;
 			}
 			
@@ -106,7 +181,7 @@
 				width: 12.5rem;
 				
 				.chosen-container-single .chosen-single {
-					font-size: 0.875rem;
+					font-size: 0.75rem;
 				}
 			}
 		}
@@ -116,9 +191,22 @@
 		padding-right: 4.375rem;
 		padding-left: 4.375rem;
 
-		h1 {
-			color: @blue;
-		  	font-weight: 400;
-		}
+        @media screen and (max-width: 980px){
+            padding-left: 1.75rem;
+            padding-right: 1.75rem;
+
+        }
+
+        article {
+
+            text-align: left;
+            width: 100%;
+            max-width: none;
+
+            h1 {
+                color: @blue;
+                font-weight: 400;
+            }
+        }
 	}
 }

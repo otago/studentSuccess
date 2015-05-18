@@ -1,4 +1,11 @@
 <?php
+/**
+ * Created by Nivanka Fonseka (nivanka@silverstripers.com).
+ * User: nivankafonseka
+ * Date: 5/14/15
+ * Time: 9:16 AM
+ * To change this template use File | Settings | File Templates.
+ */
 
 class PageExtension extends DataExtension {
 
@@ -24,11 +31,6 @@ class PageExtension extends DataExtension {
 	private static $has_one = array(
 		'DropDownImage'			=> 'Image',
 		'HeroImage'				=> 'Image',
-
-		// content areas
-		'BeforeElementArea' 	=> 'ElementalArea',
-		'AfterElementArea' 		=> 'ElementalArea',
-		'SidebarElementArea' 	=> 'ElementalArea'
 	);
 
 
@@ -77,7 +79,7 @@ class PageExtension extends DataExtension {
 			$configs->removeComponentsByType('GridFieldDeleteAction');
 		}
 
-		$this->AddElementalAreas($fields);
+		
 
 		$this->AddRelatedTopicsFields($fields);
 	}
@@ -91,82 +93,10 @@ class PageExtension extends DataExtension {
 			FormUtils::MakeDragAndDropGridField('RelatedBoxes', 'RelatedBoxes', $this->owner->RelatedBoxes(), 'SortOrder')
 		));
 
-	}
-
-
-	/**
-	 * @param FieldList $fields
-	 */
-	function AddElementalAreas(FieldList $fields){
-
-		foreach(array('BeforeElementArea', 'AfterElementArea', 'SidebarElementArea') as $strArea){
-
-			if(is_array($this->owner->config()->get('allowed_elements'))) {
-				$list = $this->owner->config()->get('allowed_elements');
-			} else {
-				$classes = ClassInfo::subclassesFor('BaseElement');
-				$list = array();
-				unset($classes['BaseElement']);
-
-				foreach($classes as $class) {
-					$list[$class] = singleton($class)->i18n_singular_name();
-				}
-			}
-
-			asort($list);
-
-			$area = $this->owner->$strArea();
-
-			if($area->isInDB()){
-
-				$strTitle = 'Above content area';
-				if($strArea == 'AfterElementArea')
-					$strTitle = 'Below Content Area';
-				if($strArea == 'SidebarElementArea')
-					$strTitle = 'Side bar';
-
-				$adder = new GridFieldAddNewMultiClass();
-
-				$header = HeaderField::create('Header_' . $strArea);
-				$header->setTitle($strTitle);
-				$header->setHeadingLevel(3);
-				$fields->addFieldToTab('Root.Main', $header);
-
-				$gridField = GridField::create($strArea,
-					Config::inst()->get("ElementPageExtension",'elements_title'),
-					$this->owner->$strArea()->Elements(),
-					GridFieldConfig_RelationEditor::create()
-						->removeComponentsByType('GridFieldAddNewButton')
-						->removeComponentsByType('GridFieldAddExistingAutocompleter')
-						->removeComponentsByType('GridFieldDeleteAction')
-						->addComponent($adder)
-						->addComponent(new GridFieldOrderableRows())
-				);
-
-				$config = $gridField->getConfig();
-				$paginator = $config->getComponentByType('GridFieldPaginator');
-				$paginator->setItemsPerPage(100);
-
-				$config->removeComponentsByType('GridFieldDetailForm');
-				$config->addComponent(new VersionedDataObjectDetailsForm());
-
-				$fields->addFieldToTab('Root.Main', $gridField);
-			}
-
-		}
-
-	}
+	}	
 
 
 	public function onBeforeWrite() {
-
-		foreach(array('BeforeElementArea', 'AfterElementArea', 'SidebarElementArea') as $strArea){
-			$elements = $this->owner->$strArea();
-			if(!$elements->isInDB()) {
-				$elements->write();
-				$this->owner->setField($strArea . 'ID', $elements->ID);
-			}
-		}
 
 		parent::onBeforeWrite();
 	}
@@ -223,6 +153,12 @@ class PageExtension extends DataExtension {
 		}
 
 		return implode(' ', $classes);
+	}
+
+
+	function HelpfulCounterPercentage(){
+		$iTotal = $this->owner->HelpfulCounterYes + $this->owner->HelpfulCounterNo;
+		return $iTotal == 0 ? 'N/A' : intval(($this->owner->HelpfulCounterYes / $iTotal) * 100) . ' %';
 	}
 
 } 

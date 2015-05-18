@@ -7,12 +7,6 @@
 	
 	background: @light-green;
 	color: @white;
-	margin-bottom: 10rem;
-    padding: 0 12.8571428571%;
-
-    @media screen and (max-width: 980px) {
-       padding: 0 1.75rem;
-    }
 
     .component-alignment {
       .boxsizing;
@@ -75,10 +69,24 @@
 			font-size: 1.250rem;
 		}
 	}
-	
+
+    @media screen and (max-width: 980px){
+        .left {
+            p {
+                font-size: 1.875rem;
+                line-height: 2rem;
+            }
+        }
+    }
+
+
 	@media screen and (max-width: 680px){
 		.left {
 			width: 100%;
+
+            p {
+                margin-bottom: 0;
+            }
 		}
 		.right {
 			float: none;
