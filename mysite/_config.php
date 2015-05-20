@@ -16,8 +16,6 @@ $database = (defined('SS_DATABASE_NAME')) ? SS_DATABASE_NAME : 'op3';
 
 require_once("conf/ConfigureFromEnv.php");
 
-Security::setDefaultAdmin('admin', 'p0pc0rn!!');
-
 FulltextSearchable::enable();
 
 //

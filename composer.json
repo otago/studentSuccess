@@ -1,15 +1,27 @@
 {
     "require": {
+        "cwp/cwp-recipe-basic": "1.0.7",
         "silverstripe/framework": "3.1.12",
         "silverstripe/cms": "3.1.12",
         "undefinedoffset/sortablegridfield": "0.3.1",
         "unclecheese/betterbuttons": "dev-master",
         "silverstripe/userforms": "2.0.*@dev",
-
+        "undefinedoffset/sortablegridfield": "1.0.6",
         "heyday/silverstripe-versioneddataobjects" : "dev-master",
         "silverstripe-australia/gridfieldextensions": "1.0.3",
         "silverstripe-australia/addressable" : "dev-master",
         "silverstripe/widgets": "1.1.x-dev",
         "dnadesign/silverstripe-elemental" : "dev-master"
-    }
+    },
+    "require-dev": {
+        "cwp/cwp-recipe-basic-dev": "1.0.2",
+        "silverstripe/fulltextsearch-localsolr": "dev-master"
+    },
+    "config": {
+        "process-timeout": 900
+    },
+    "repositories": [{
+        "type": "composer",
+        "url": "https://packages.cwp.govt.nz/"
+    }]
 }
