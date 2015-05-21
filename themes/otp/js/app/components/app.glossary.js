@@ -11,29 +11,28 @@ if(typeof app === 'undefined') { var app = {}; }
         var keyword = $('#glossary-keyword');
 
         var searchGlossary = function(){
-
+			
             var searchTerm = keyword.val();
-            searchTerm.toLowerCase();
+            searchTerm = searchTerm.toLowerCase();
             letters.show();
             entries.show();
-
+			
             if(searchTerm){
 
 
                 var words = searchTerm.split(" ");
-
                 letters.each(function(){
                     var letter = $(this);
                     var terms = letter.find('.glossary-item');
                     var bFound = false;
 
                     terms.each(function(){
-                        var title = $(this).find('h4.title');
+                        var title = $(this).find('h4 a');
                         var text = title.text().toLowerCase();
                         var bWordMatched = false;
-
+						
                         for(var i in words){
-                            if(text.indexOf(words[i]) >= 0){
+                            if(words[i] !== '' && text.indexOf(words[i]) >= 0){
                                 bWordMatched = true;
                                 break;
                             }

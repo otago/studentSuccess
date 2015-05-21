@@ -45,6 +45,9 @@ if(typeof app === 'undefined') { var app = {}; }
 			});
 			
 			$(window).resize(setBlockHeight);
+
+            $('.priority-tasks').addClass('init');
+
 		};
 		
 		return {

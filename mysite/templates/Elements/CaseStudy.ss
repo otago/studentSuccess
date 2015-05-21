@@ -1,4 +1,4 @@
-<section class='case-study-holder clearThis'>
+<section class='case-study-holder clear-this'>
     <div class='case-study {$Color}'>
         <div class="component-alignment boxed-element">
             <div class='left<% if not $Image %> no-image<% end_if %>'>

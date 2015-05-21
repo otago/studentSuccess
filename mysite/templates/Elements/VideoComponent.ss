@@ -1,4 +1,4 @@
-<div class='hear-from-others clearThis {$Color}'>
+<div class='hear-from-others clear-this {$Color}'>
 	<div class="component-alignment boxed-element">
     	<section>
 

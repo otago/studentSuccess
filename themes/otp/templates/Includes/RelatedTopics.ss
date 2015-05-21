@@ -34,7 +34,7 @@
                             <% if $Link %></a><% end_if %>
                             <% if $Link && $LinkButton%>
                                 <p class='separator-link'>
-                                    <a href='$Link'><% include PencilIcon %> $LinkButton</a>
+                                    <a href='$Link' target="{$Target}"><% include PencilIcon %> $LinkButton</a>
                                 </p>
                             <% end_if %>
                         </div>

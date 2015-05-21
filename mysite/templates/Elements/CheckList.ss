@@ -12,7 +12,7 @@
             <aside class='index'>
                 <ul>
                     <% loop $Items %>
-                        <li class='' data-for='desc-{$ID}'><span class='icon icon-dot'></span> {$Title}</li>
+                        <li class='' data-for='desc-{$ID}'><span class='icon'></span> {$Title}</li>
 						<input class = 'desc-{$ID}' type="checkbox" name="Items[{$ID}]" value="1" style='Display:none'>
                     <% end_loop %>
                 </ul>

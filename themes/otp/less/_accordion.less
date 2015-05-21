@@ -1,11 +1,10 @@
 .accordion-c {
-	
 	background: @light-brown;
 	background: @light-brown-rgba;
     clear: both;
 	
 	.title-c { 
-		 
+		background: url('../images/accordion-left.svg') top left no-repeat;
 		border-top: 2px solid transparent;
 		margin-bottom: 0;
         margin-top: 0;
@@ -14,27 +13,30 @@
 		a {
 			.boxsizing;
 			display: block;
-			background: url('../images/accordion-left.svg') top left no-repeat;
-			padding: 1.5rem 12%;
+			padding: 1.5rem 2.813rem;
 			color: @light-brown;
 			position: relative;
-			
-			
+			max-width: 75rem;
+			margin: 0 auto;
 			
 			&:after {
 				.icon-font;
 				content: "\e60c";
 				font-size: 0.750rem;
 				position: absolute;
-				right: 12%;
+				right: 0;
 				line-height: 36px;
 				color: @brown;
-			}; 
+				
+				@media screen and (max-width: 980px){
+					right: 1rem;
+				}
+			}
 		}
 		
 		&.active {
 			border-top: 2px solid @light-brown;
-			background: @white;
+			background: url('../images/accordion-left.svg') top left no-repeat @white;
 			
 			a {
 				color: @drak-grey;
@@ -49,8 +51,15 @@
 		.boxsizing;
 		display: none;
 		border-bottom: 2px solid @light-brown;
-		padding: 1rem 12% 3.125rem;
+		padding: 1rem 0 3.125rem;
 		
+		.accordion-item-content {
+			max-width: 75rem;
+			padding-right: 2.813rem;
+			padding-left: 2.813rem;
+			margin: 0 auto;
+			.boxsizing;
+		}
 		&.active {
 			background: @white;
 			border-bottom: 2px solid @light-brown;	

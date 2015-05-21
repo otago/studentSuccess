@@ -9,8 +9,10 @@
     <script type='text/javascript' src='{$ThemeDir}/js/thirdparty/fancybox/source/jquery.fancybox.pack.js'></script>
     <script type='text/javascript' src='{$ThemeDir}/js/thirdparty/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6'></script>
     <script type='text/javascript' src='{$ThemeDir}/js/thirdparty/cookie/jquery.cookie.js'></script>
+	<script type='text/javascript' src='{$ThemeDir}/js/thirdparty/picturefill.min.js'></script>
 
 
+    <script type='text/javascript' src='{$ThemeDir}/js/app/components/app.svgpng.js'></script>
     <script type='text/javascript' src='{$ThemeDir}/js/app/components/app.accordion.js'></script>
     <script type='text/javascript' src='{$ThemeDir}/js/app/components/app.bgimage.js'></script>
     <script type='text/javascript' src='{$ThemeDir}/js/app/components/app.carousel.js'></script>

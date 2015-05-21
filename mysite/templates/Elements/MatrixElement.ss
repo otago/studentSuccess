@@ -1,4 +1,4 @@
-<section class="priority-tasks clearThis">
+<section class="priority-tasks clear-this">
     <div class="titles left-titles row hideInMobile">
         <span class="col left">{$LabelLeftBottom}</span>
         <span class="col">{$LabelLeftTop}</span>

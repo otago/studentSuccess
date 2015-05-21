@@ -409,29 +409,28 @@ if(typeof app === 'undefined') { var app = {}; }
         var keyword = $('#glossary-keyword');
 
         var searchGlossary = function(){
-
+			
             var searchTerm = keyword.val();
-            searchTerm.toLowerCase();
+            searchTerm = searchTerm.toLowerCase();
             letters.show();
             entries.show();
-
+			
             if(searchTerm){
 
 
                 var words = searchTerm.split(" ");
-
                 letters.each(function(){
                     var letter = $(this);
                     var terms = letter.find('.glossary-item');
                     var bFound = false;
 
                     terms.each(function(){
-                        var title = $(this).find('h4.title');
+                        var title = $(this).find('h4 a');
                         var text = title.text().toLowerCase();
                         var bWordMatched = false;
-
+						
                         for(var i in words){
-                            if(text.indexOf(words[i]) >= 0){
+                            if(words[i] !== '' && text.indexOf(words[i]) >= 0){
                                 bWordMatched = true;
                                 break;
                             }
@@ -595,24 +594,28 @@ if(typeof app === 'undefined') { var app = {}; }
 			item.find('.icon').removeClass('icon-tick');
 			var holder = item.closest('.checklist');
 			var desc = holder.find('.' + item.data('for'));
+			item.parent().find('input').prop('checked', false);
 			
 			holder.find('.desc').not(desc).removeClass('active');
+			holder.find('.desc').find('input').prop('checked', false);
 			holder.find('.index li').not(item).removeClass('active');
 			
 			holder.find('.desc').find('.icon').removeClass('icon-tick');
 			holder.find('.desc').find('.icon').addClass('icon-dot');
 			
-			if(desc.hasClass('active')){
+			if(item.hasClass('active')){
 				desc.removeClass('active');
 				item.removeClass('active');
 				item.find('.icon').removeClass('icon-select');
-				item.find('.icon').addClass('icon-dot');
+				
 			}
 			else{
 				desc.addClass('active');
 				item.addClass('active');
 				item.find('.icon').removeClass('icon-dot');
 				item.find('.icon').addClass('icon-select');
+				
+				
 			}
 			
 		};
@@ -620,8 +623,10 @@ if(typeof app === 'undefined') { var app = {}; }
 		var toggleSecondLevels = function(item){
 			if(item.hasClass('active')){
 				item.removeClass('active');
+				item.parent().find('input.'+item.data('input')).prop('checked', false);
 			}else{
 				item.addClass('active');
+				item.parent().find('input.'+item.data('input')).prop('checked', true);
 			}
 			
 			
@@ -655,9 +660,11 @@ if(typeof app === 'undefined') { var app = {}; }
             var indexli = holder.find(".index li[data-for ='"+parentSelector+"']");
 			if(allselected){
 				indexli.find('.icon').addClass('icon-tick');
+				indexli.parent().find('input.'+indexli.data('for')).prop('checked', true);
 			}else{
 				indexli.find('.icon').removeClass('icon-tick');
 				indexli.find('.icon').addClass('icon-select');
+				indexli.parent().find('input.'+indexli.data('for')).prop('checked', false);
 			}
 			
 			
@@ -850,6 +857,12 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
             form.find('select.sort-filter').change(function(){
                 doIsotopeFilters(item, form);
             });
+			
+			form.find('input.keywords').keyup(function(){
+				if(!$(this).val()){
+					doIsotopeFilters(item, form);
+				}
+			});
 
 
             var images = item.find('img');
@@ -1020,6 +1033,9 @@ if(typeof FB === 'undefined') { var FB = 'NULL'; }
 			});
 			
 			$(window).resize(setBlockHeight);
+
+            $('.priority-tasks').addClass('init');
+
 		};
 		
 		return {
@@ -1030,6 +1046,38 @@ if(typeof FB === 'undefined') { var FB = 'NULL'; }
 	})();
 	
 	
+})(jQuery);;if(typeof app === 'undefined') { var app = {}; }
+
+(function($){
+
+    app.svgpng = (function(){
+
+        var can = function(){
+            return !Modernizr.svg;
+        };
+
+        var init = function (){
+            $('img').each(function(){
+                var img = $(this);
+                var src = img.attr('src');
+                if(src){
+                    if(src.indexOf('.svg', src.length - 4) !== -1){
+                        src = src.replace('.svg', '.png');
+                        img.attr('src', src);
+                    }
+                }
+
+            });
+        };
+
+        return {
+            'init'			: init,
+            'can'			: can
+        };
+
+    })();
+
+
 })(jQuery);;if(typeof app === 'undefined') { var app = {}; }
 
 (function($){
@@ -1076,6 +1124,7 @@ if(typeof FB === 'undefined') { var FB = 'NULL'; }
 app.MobileSize = 640;
 
 app.Modules = [
+    'svgpng',
 	'hamburger',
 	'bgimage',
 	'packery',
@@ -1103,8 +1152,7 @@ app.Modules = [
 		
 		var moduleKey = app.Modules[key];
 		var module = app[moduleKey]
-		
-		
+
 		if(typeof module.init !== 'undefined' && typeof module.can !== 'undefined'){			
 			if(module.can()){
 				module.init();

@@ -10,24 +10,28 @@ if(typeof app === 'undefined') { var app = {}; }
 			item.find('.icon').removeClass('icon-tick');
 			var holder = item.closest('.checklist');
 			var desc = holder.find('.' + item.data('for'));
+			item.parent().find('input').prop('checked', false);
 			
 			holder.find('.desc').not(desc).removeClass('active');
+			holder.find('.desc').find('input').prop('checked', false);
 			holder.find('.index li').not(item).removeClass('active');
 			
 			holder.find('.desc').find('.icon').removeClass('icon-tick');
 			holder.find('.desc').find('.icon').addClass('icon-dot');
 			
-			if(desc.hasClass('active')){
+			if(item.hasClass('active')){
 				desc.removeClass('active');
 				item.removeClass('active');
 				item.find('.icon').removeClass('icon-select');
-				item.find('.icon').addClass('icon-dot');
+				
 			}
 			else{
 				desc.addClass('active');
 				item.addClass('active');
 				item.find('.icon').removeClass('icon-dot');
 				item.find('.icon').addClass('icon-select');
+				
+				
 			}
 			
 		};
@@ -35,8 +39,10 @@ if(typeof app === 'undefined') { var app = {}; }
 		var toggleSecondLevels = function(item){
 			if(item.hasClass('active')){
 				item.removeClass('active');
+				item.parent().find('input.'+item.data('input')).prop('checked', false);
 			}else{
 				item.addClass('active');
+				item.parent().find('input.'+item.data('input')).prop('checked', true);
 			}
 			
 			
@@ -70,9 +76,11 @@ if(typeof app === 'undefined') { var app = {}; }
             var indexli = holder.find(".index li[data-for ='"+parentSelector+"']");
 			if(allselected){
 				indexli.find('.icon').addClass('icon-tick');
+				indexli.parent().find('input.'+indexli.data('for')).prop('checked', true);
 			}else{
 				indexli.find('.icon').removeClass('icon-tick');
 				indexli.find('.icon').addClass('icon-select');
+				indexli.parent().find('input.'+indexli.data('for')).prop('checked', false);
 			}
 			
 			

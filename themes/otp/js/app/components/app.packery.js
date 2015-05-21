@@ -98,6 +98,12 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
             form.find('select.sort-filter').change(function(){
                 doIsotopeFilters(item, form);
             });
+			
+			form.find('input.keywords').keyup(function(){
+				if(!$(this).val()){
+					doIsotopeFilters(item, form);
+				}
+			});
 
 
             var images = item.find('img');

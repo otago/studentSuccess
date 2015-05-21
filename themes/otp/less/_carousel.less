@@ -341,12 +341,10 @@
 .smart-slide {
 	margin-top: 2rem;
 
-    @media screen and (max-width: 980px){
-        .component-alignment.boxed-element {
-            padding-left: 4.25rem;
-            padding-right: 4.25rem;
-        }
-    }
+	.component-alignment.boxed-element {
+		padding-left: 4.25rem;
+		padding-right: 4.25rem;
+	}
 	
 	.slide-letters {
 		max-width: 56.25rem;
@@ -421,33 +419,47 @@
         position: relative;
 		
 		h3 {
-			font-size: 1.125rem;
-			line-height: 1.2;
-			font-weight: 600;
-			text-transform: uppercase;
-			text-align: center;
-			margin-top: 0.75rem;
-			width: 20%;
-            position: relative;
-
-            span.bar {
-                height: 0.75rem;
-                background: @lighter-blue;
-                position: absolute;
-                width: 100%;
-                left: 0;
-                top: -1.5rem;
-                z-index: 10000;
-
-            }
 			
-			span.icon {
-				font-size: 0.75rem;
-				margin-right: 0.938rem;
-			}
+            span.bar {
+	            height: 0.75rem;
+	            background: @lighter-blue;
+	            position: absolute;
+	            width: 100%;
+	            left: 0;
+	            top: -1.5rem;
+	            z-index: 10000;
+
+	        }
+			
 		}
 
 
+	}
+	.title.showInMobile {
+		display: none;
+	}
+	h3.title {
+		font-size: 1.125rem;
+		line-height: 1.2;
+		font-weight: 600;
+		text-transform: uppercase;
+		text-align: center;
+		margin-top: 0.75rem;
+		width: 20%;
+        position: relative;
+		
+		span.icon {
+			font-size: 0.75rem;
+			margin-right: 0.938rem;
+		}
+		
+	}
+	
+	.slide-intro {
+		h3.title {
+			width: 100%;
+			text-align: left;
+		}
 	}
 
     #letter-2 h3 {
@@ -463,6 +475,16 @@
       left: 80%;
     }
 
+	#letter-2,
+	#letter-3,
+	#letter-4,
+	#letter-5 {
+		.slide-intro {
+			h3 {
+				left: 0;
+			}
+		}
+	}
 	
 	p {
 		line-height: 1.75rem;
@@ -472,9 +494,22 @@
 	}
 	
 	@media screen and (max-width: 1024px) { 
+		.slide-title {
+			margin: 0;
+		}
+		.slide-title .title {
+			margin-bottom: 0;
+			line-height: 0;
+		}
+		.slide-title .title > * {
+			color: transparent;
+		}
 		.slide-title h3 {
 			width: auto;
 			text-align: left;
+		}
+		.title.showInMobile {
+			display: block;
 		}
 	}
 }

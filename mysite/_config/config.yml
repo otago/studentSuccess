@@ -44,6 +44,7 @@ Page:
     - WasThisHelpful
     - SidebarTestimony
     - SidebarShareElement
+    - SidebarImageElement
     - ElementImage
     - ElementFile
     - ElementInternalLink
@@ -108,3 +109,15 @@ ElementContent:
 BaseElement:
   extensions:
     - BaseElementExtension
+GlossaryItem:
+  extensions:
+    - Contactable
+CheckListBlockItem:
+  extensions:
+    - Contactable
+MasonryContent:
+  extensions:
+    - Contactable
+SiteTree:
+  extensions:
+    - Contactable

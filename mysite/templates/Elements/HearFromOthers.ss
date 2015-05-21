@@ -1,4 +1,4 @@
-<div class='hear-from-others clearThis'>
+<div class='hear-from-others clear-this'>
 	<div class="component-alignment boxed-element">
     	<h2>{$DisplayTitle}</h2>
 	</div>

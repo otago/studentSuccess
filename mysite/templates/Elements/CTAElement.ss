@@ -1,4 +1,4 @@
-<section class='cta {$Color} clearThis'>
+<section class='cta {$Color} clear-this'>
     <div class="component-alignment boxed-element">
         <% if $Image %>
         <picture class='bg-image full-height'>
@@ -19,7 +19,7 @@
                     </p>
                 <% end_if %>
                 <% if $Link && $ButtonText%>
-                <a href='{$Link}'>{$ButtonText}</a>
+                <a href='{$Link}' target={$Target}>{$ButtonText}</a>
                 <% end_if %>
             </div>
         </article>

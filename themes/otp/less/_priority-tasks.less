@@ -2,8 +2,13 @@
 	width: 41.375rem;
 	position: relative;
 	padding-left: 4.813rem;
-	//margin: 16.125rem auto 16.875rem;
     margin: 1.25rem auto;
+    opacity: 0;
+    .transition-opacity;
+
+    &.init {
+        opacity: 1;
+    }
 	
 	.row.showInMobile {
 		display: none;
@@ -34,6 +39,7 @@
 			display: table-cell;
 			width: 40%;
 			padding: 1.438rem 5%;
+			vertical-align: top;
 			
 			&.left {
 				border-right: 0.125rem solid @white;
@@ -73,6 +79,7 @@
 			> span.text {
 				display: table-cell;
 				vertical-align: middle;
+				width: 100%;
 			}
 		}
 		.topLine {

@@ -4,14 +4,12 @@
     <div class='tile tile-c half '>
 <% end_if %>
 
-
     <h3>{$Title}</h3>
     <% if $Link && $LinkButton %>
         <p class='separator-link'>
             <% include PencilIcon %> $LinkButton
         </p>
     <% end_if %>
-</div>
 
 <% if $Link %>
     </a>

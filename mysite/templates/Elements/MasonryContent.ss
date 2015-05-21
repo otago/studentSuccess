@@ -1,4 +1,4 @@
-<section class='page-intro clearThis'>
+<section class='page-intro clear-this'>
     <article>
         <h1 class='title'>{$DisplayTitle}</h1>
         <% if $Intro %>

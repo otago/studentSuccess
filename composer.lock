@@ -182,12 +182,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dnadesign/silverstripe-elemental.git",
-                "reference": "c18d6299dda27ec5c189931493e02ff04ce069f5"
+                "reference": "7ae0f330c76c8acda556c92988262873955c8a64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dnadesign/silverstripe-elemental/zipball/c18d6299dda27ec5c189931493e02ff04ce069f5",
-                "reference": "c18d6299dda27ec5c189931493e02ff04ce069f5",
+                "url": "https://api.github.com/repos/dnadesign/silverstripe-elemental/zipball/7ae0f330c76c8acda556c92988262873955c8a64",
+                "reference": "7ae0f330c76c8acda556c92988262873955c8a64",
                 "shasum": ""
             },
             "require": {
@@ -196,7 +196,8 @@
                 "silverstripe-australia/gridfieldextensions": "~1.0.0",
                 "silverstripe/cms": "~3.1",
                 "silverstripe/framework": "~3.1",
-                "silverstripe/widgets": "~1.1.0"
+                "silverstripe/widgets": "~1.1.0",
+                "undefinedoffset/sortablegridfield": "1.0.6"
             },
             "type": "silverstripe-module",
             "extra": {
@@ -218,7 +219,7 @@
                 "silverstripe",
                 "widget"
             ],
-            "time": "2015-05-04 03:46:26"
+            "time": "2015-05-20 21:40:29"
         },
         {
             "name": "heyday/silverstripe-versioneddataobjects",

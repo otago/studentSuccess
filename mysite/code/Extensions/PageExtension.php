@@ -61,7 +61,7 @@ class PageExtension extends DataExtension {
 		$fields->addFieldToTab('Root.Hero', UploadField::create('HeroImage'));
 
 		$fields->addFieldsToTab('Root.Main', array(
-			LiteralField::create('WasThisHelpful', "<p>Was this help ful ? {$this->owner->HelpfulCounterYes} - YES | {$this->owner->HelpfulCounterNo} - NO</p>")
+			LiteralField::create('WasThisHelpful', "<h4>Was this help ful ? {$this->owner->HelpfulCounterYes} - YES | {$this->owner->HelpfulCounterNo} - NO</h4>")
 		));
 
 		$fields->addFieldsToTab('Root.Dropdown', array(
@@ -72,6 +72,9 @@ class PageExtension extends DataExtension {
 			UploadField::create('DropDownImage'),
 			TextField::create('DropDownLink')
 		));
+
+
+
 
 
 		if($elementalGridField = $fields->dataFieldByName('ElementArea')){
@@ -86,11 +89,18 @@ class PageExtension extends DataExtension {
 
 	function AddRelatedTopicsFields(FieldList $fields){
 
+		$fields->removeByName('Contacts');
+
 		$fields->addFieldsToTab('Root.RelatedTopics', array(
 			TextField::create('RelatedTopicsTitle'),
 			CheckboxField::create('ShowRelatedTopicsContacts')->setTitle('Show contacts'),
 			FormUtils::MakeDragAndDropGridField('RelatedPages', 'RelatedPages', $this->owner->RelatedPages(), 'SortOrder'),
-			FormUtils::MakeDragAndDropGridField('RelatedBoxes', 'RelatedBoxes', $this->owner->RelatedBoxes(), 'SortOrder')
+			FormUtils::MakeDragAndDropGridField('RelatedBoxes', 'RelatedBoxes', $this->owner->RelatedBoxes(), 'SortOrder'),
+			HeaderField::create('ContactBox')->setTitle('Contact element details, if you dont wish to override these from the global settings, leave blank')->setHeadingLevel(4),
+			TextField::create('ContactBoxTitle')->setTitle('Title'),
+			TextareaField::create('ContactBoxContent')->setTitle('Content'),
+			TextField::create('ContactBoxPhone')->setTitle('Phone'),
+			TextField::create('ContactBoxEmail')->setTitle('Email'),
 		));
 
 	}	

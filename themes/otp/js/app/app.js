@@ -3,6 +3,7 @@ if(typeof app === 'undefined') var app = {};
 app.MobileSize = 640;
 
 app.Modules = [
+    'svgpng',
 	'hamburger',
 	'bgimage',
 	'packery',
@@ -30,8 +31,7 @@ app.Modules = [
 		
 		var moduleKey = app.Modules[key];
 		var module = app[moduleKey]
-		
-		
+
 		if(typeof module.init !== 'undefined' && typeof module.can !== 'undefined'){			
 			if(module.can()){
 				module.init();

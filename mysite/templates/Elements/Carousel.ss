@@ -1,5 +1,5 @@
 <% if $Slides %>
-<div class='carousel content-slide {$Background} clearThis'>
+<div class='carousel content-slide {$Background} clear-this'>
     <div class="component-alignment carousel-items boxed-element">
         <ul class='slides'>
             <% loop $Slides %>
