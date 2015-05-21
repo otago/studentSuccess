@@ -1,16 +1,10 @@
 <?php
-/**
- * Created by Nivanka Fonseka (nivanka@silverstripers.com).
- * User: nivankafonseka
- * Date: 5/14/15
- * Time: 5:16 PM
- * To change this template use File | Settings | File Templates.
- */
 
 class CTAElement extends BaseElement {
 
-	private static $title = "CTA Element";
-	private static $description = "CTA elements";
+	private static $title = "Call To Action Element";
+
+	private static $description = "Call To Action Element";
 
 	private static $db = array(
 		'DisplayTitle'		=> 'Varchar',

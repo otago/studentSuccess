@@ -61,7 +61,7 @@ class PageExtension extends DataExtension {
 		$fields->addFieldToTab('Root.Hero', UploadField::create('HeroImage'));
 
 		$fields->addFieldsToTab('Root.Main', array(
-			LiteralField::create('WasThisHelpful', "<h4>Was this help ful ? {$this->owner->HelpfulCounterYes} - YES | {$this->owner->HelpfulCounterNo} - NO</h4>")
+			LiteralField::create('WasThisHelpful', "<h4>Was this helpful ? {$this->owner->HelpfulCounterYes} - YES | {$this->owner->HelpfulCounterNo} - NO</h4>")
 		));
 
 		$fields->addFieldsToTab('Root.Dropdown', array(

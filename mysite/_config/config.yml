@@ -2,6 +2,9 @@
 Name: mysite
 After: 'framework/*','cms/*'
 ---
+LeftAndMain:
+  extra_requirements_css:
+    - themes/otp/css/editor.css
 # YAML configuration for SilverStripe
 # See http://doc.silverstripe.org/framework/en/topics/configuration
 # Caution: Indentation through two spaces, not tabs
@@ -51,7 +54,6 @@ Page:
     - MasonryContentsWithFilters
     - MasonryContent
     - LinksComponent
-    - PageHeader
     - TabbedCheckList
     - CaseStudy
     - VideoComponent

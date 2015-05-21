@@ -10,7 +10,8 @@
 class WasThisHelpful extends BaseElement {
 
 	private static $title = "Was this helpful Element";
-	private static $description = "Show a was this help ful YES and NO options on a page";
+	
+	private static $description = "Show a was this helpful YES and NO options on a page";
 
 	private static $db = array(
 		'Text'		=> 'Varchar(300)'

@@ -1,0 +1,8 @@
+#Form_AddForm_PageType .valEventHolder,
+#Form_AddForm_PageType .valFooterHolder,
+#Form_AddForm_PageType .valNewsHolder,
+#Form_AddForm_PageType .valNewsPage,
+#Form_AddForm_PageType .valRegistryPage,
+#Form_AddForm_PageType .valSitemapPage {
+	display: none;
+}

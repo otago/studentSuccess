@@ -5304,7 +5304,7 @@ footer.main .container.addresses address.middle {
   font-weight: 400;
 }
 .drop-menu .container .left .col p {
-  margin: 0 0 2.5rem 0;
+  margin: 0 0 .5rem 0;
 }
 @media screen and (max-width: 1100px) {
   .drop-menu .container .left .col {

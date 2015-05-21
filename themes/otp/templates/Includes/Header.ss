@@ -24,7 +24,7 @@
 
             <ul class='level-2'>
                 <% loop $Menu(1) %>
-                <li>
+                <li <% if $HasDropdownContents %>class="has_dropdown"<% end_if %>>
                     <a href='{$Link}' class='{$NavigationClass}'>{$MenuTitle.XML}</a>
                     <% if $HasDropdownContents %>
                         <span class='drop-down-span' data-target='.info-{$ID}'>

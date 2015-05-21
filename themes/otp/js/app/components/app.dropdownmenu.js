@@ -4,15 +4,14 @@ if(typeof app === 'undefined') { var app = {}; }
 	
 	app.dropdownmenu = (function(){
 		
-		var items = $('.drop-down-span');
+		var items = $('.has_dropdown a');
 		
-		var openDropdown = function(){
-			items.click(function(){
-				var span = $(this);
+		var openDropdown = function() {
+			items.click(function(e) {
+				var span = $(this).siblings('.drop-down-span');
 				var target = $(span.data('target'));
 				
-				
-				if(target.length){
+				if(target.length) {
 					if(span.hasClass('active')){
 						$('.drop-menu').slideUp();
 						span.removeClass('active');
@@ -24,7 +23,7 @@ if(typeof app === 'undefined') { var app = {}; }
 					}
 				}
 				
-				return;
+				return false;
 			});
 		};
 		

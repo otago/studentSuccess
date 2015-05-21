@@ -1,9 +1,10 @@
 <?php
 
-class CarouselWithUpperLetter extends Carousel{
+class CarouselWithUpperLetter extends Carousel {
 	
-	private static $title = "Carousel Element with upper letter";
-	private static $description = "Carousel Element with upper letter";
+	private static $title = "Acronym Carousel";
+
+	private static $description = "Carousel Element with upper letter to cycle";
 	
 	function getCMSFields() {
 		$fields = parent::getCMSFields();

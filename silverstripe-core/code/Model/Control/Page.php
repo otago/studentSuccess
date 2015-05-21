@@ -11,11 +11,14 @@ class Page extends SiteTree {
 
 	private static $db = array(
 		'MetaTitle'		=> 'Varchar(255)',
+		'Intro'				=> 'Text',
 	);
 
-	function canView($member = null){
-		if($this->URLSegment == 'SearchPage')
+	public function canView($member = null) {
+		if($this->URLSegment == 'SearchPage') {
 			return true;
+		}
+
 		return parent::canView($member);
 	}
 
@@ -26,14 +29,19 @@ class Page extends SiteTree {
 		return parent::canViewStage($stage, $member);
 	}
 
-	function getCMSFields(){
+	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
 		$metaData = $fields->fieldByName('Root.Main.Metadata');
-		if($metaData)
+
+		if($metaData) {
 			$metaData->push(new TextField('MetaTitle', 'Meta title'));
-		else
+		}
+		else{
 			$fields->addFieldToTab("Root.Main", new TextField('MetaTitle', 'Meta title'));
+		}
+
+		$fields->insertAfter(new TextField('Intro', 'Page Intro'), 'URLSegment');
 
 		$this->extend('updateCMSFieldsForImages', $fields);
 

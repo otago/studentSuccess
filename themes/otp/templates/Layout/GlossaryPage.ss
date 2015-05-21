@@ -6,7 +6,11 @@
 
         <div class='page-intro main glossary'>
             <h1>$Title</h1>
-            $GlossaryContent
+
+            <% if $Intro %>
+                <p>{$Intro}</p>
+            <% end_if %>
+
             <div class="search-form">
                 <form class="glossary-search">
                     <fieldset>
@@ -19,10 +23,9 @@
                     </fieldset>
                 </form>
             </div>
-
         </div>
-
     </div>
+    
     <% if $GlossaryTypes %>
     <div class='tabbed-content clear-this'>
         <section class="tab-index container">
