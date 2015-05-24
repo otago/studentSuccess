@@ -86,3 +86,5 @@
     </div>
     <% end_if %>
 </div>
+
+<% include WasThisHelpful %>

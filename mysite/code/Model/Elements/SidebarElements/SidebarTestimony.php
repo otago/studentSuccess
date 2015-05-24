@@ -16,7 +16,7 @@ class SidebarTestimony extends BaseElement {
 
 	private static $db = array(
 		'TestimonyContent'		=> 'Text',
-		'TestimonyName'			=> 'Varchar'
+		'TestimonyName'			=> 'Varchar(255)'
 	);
 
 } 

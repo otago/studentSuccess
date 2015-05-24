@@ -2,75 +2,55 @@ if(typeof app === 'undefined') { var app = {}; }
 
 (function($){
 
-    app.helpful = (function(){
+	app.helpful = (function(){
 
-        var items = $('.was-this-helpful');
+		var items = $('.was-this-helpful');
 
-        var can = function(){
-            return items.length > 0;
-        };
+		var can = function(){
+			return items.length > 0;
+		};
 
-        var SetCookieVal = function(id, type ){
-            var strCookie = GetCookieVal();
-            var pageID = id;
-            var strKey = "_" + pageID + type + "_";
-            if(strCookie.indexOf(strKey) == -1){
-                strCookie.replace("_" + pageID + "yes_", "");
-                strCookie.replace("_" + pageID + "no_", "");
-                strCookie += strKey;
-            }
-            $.cookie('helpful', strCookie, { expires: 7, path: '/' });
-        };
+		var SetCookieVal = function(id, type ) {
+			$.cookie('helpful'+id, type, { expires: 7, path: '/' });
+		};
 
-        var GetCookieVal = function(){
-            var strCookie = $.cookie('helpful');
-            if(!strCookie){
-                strCookie = "";
-                $.cookie('helpful', strCookie, { expires: 7, path: '/' });
-            }
-            return strCookie;
-        };
+		var init = function (){
 
+			$(document).ready(function(){
+				items.find('a').click(function() {
+					var button = $(this);
+					
+					$('.was-this-helpful a').removeClass('active');
+					SetCookieVal(button.data('id'), button.attr('class'));
 
+					$.ajax({
+						url: button.attr('href')
+					});
 
-        var init = function (){
+					button.addClass('active');
+					button.siblings('.active').removeClass('active');
 
-            $(document).ready(function(){
-                items.find('a').click(function(){
-                    var button = $(this);
-                    $('.was-this-helpful a').removeClass('active');
-                    SetCookieVal(button.data('id'), button.attr('class'));
-                    $.ajax({
-                        url: button.attr('href')
-                    });
+					return false;
+				});
+			});
 
-                    button.addClass('active');
+			items.each(function(){
+				var id = $(this).data('id');
+				var cookieVal  = $.cookie('helpful'+id);
 
-                    return false;
-                });
-            });
+				if(cookieVal == "yes") {
+					$(this).find('a.yes').addClass('active');
+				}
+				else if(cookieVal == "no") {
+					$(this).find('a.no').addClass('active');
+				}
+			});
+		};
 
-            var cookie = GetCookieVal();
-            items.each(function(){
-                var id = $(this).data('id');
-                if(cookie.indexOf("_" + id + "yes_", "") >= 0){
-                    $(this).find('a.yes').addClass('active');
-                }
-                if(cookie.indexOf("_" + id + "no_", "") >= 0){
-                    $(this).find('a.no').addClass('active');
-                }
-
-            });
-
-        };
-
-        return {
-            'init'			: init,
-            'can'			: can
-        };
-
-    })();
-
-
+		return {
+			'init'			: init,
+			'can'			: can
+		};
+	})();
 })(jQuery);
 // 

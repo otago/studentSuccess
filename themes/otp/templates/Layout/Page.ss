@@ -18,3 +18,5 @@
 
     $ElementArea
 </div>
+
+<% include WasThisHelpful %>

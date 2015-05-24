@@ -1,8 +1,24 @@
+.highlightBlue {
+	background: rgba(0, 116, 198, 0.3);
+	padding: 1px;
+}
+
+.highlightYellow {
+	background: #ffd100;
+	padding: 1px;
+}
+
+.highlightRed {
+	background: #ff3d1b;
+	padding: 1px;
+}
+
 #Form_AddForm_PageType .valEventHolder,
 #Form_AddForm_PageType .valFooterHolder,
 #Form_AddForm_PageType .valNewsHolder,
 #Form_AddForm_PageType .valNewsPage,
 #Form_AddForm_PageType .valRegistryPage,
-#Form_AddForm_PageType .valSitemapPage {
+#Form_AddForm_PageType .valSitemapPage,
+#Form_AddForm_PageType .valEventPage {
 	display: none;
 }

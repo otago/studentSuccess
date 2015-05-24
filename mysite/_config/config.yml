@@ -36,7 +36,6 @@ SSViewer:
 Page:
   extensions:
     - ElementPageExtension
-    - PageExtension
   allowed_elements:
     - WayFinder
     - HearFromOthers
@@ -51,6 +50,7 @@ Page:
     - ElementImage
     - ElementFile
     - ElementInternalLink
+    - ElementExternalLink
     - MasonryContentsWithFilters
     - MasonryContent
     - LinksComponent

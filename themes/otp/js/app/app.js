@@ -19,7 +19,8 @@ app.Modules = [
     'fancybox',
     'helpful',
     'glossary',
-	'leftrightcont'
+	'leftrightcont',
+	'tests'
 ];
 
 

@@ -14,9 +14,9 @@ class HearFromOthers extends BaseElement {
 	private static $description = "Hear from others section";
 
 	private static $db = array(
-		'DisplayTitle'		=> 'Varchar',
+		'DisplayTitle'		=> 'Varchar(255)',
 		'TestimonyContent'	=> 'Text',
-		'Testimony'			=> 'Varchar',
+		'Testimony'			=> 'Varchar(255)',
 		'YoutubeVideo'		=> 'Varchar(300)'
 	);
 

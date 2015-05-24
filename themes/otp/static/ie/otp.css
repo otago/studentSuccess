@@ -273,128 +273,125 @@ h3 {
     padding: 36px 28px;
   }
 }
-header.main .container {
-  max-width: 1400px;
-}
-header.main .logo {
+.logo {
   width: 254px;
-  height: 203px;
-  padding: 20px 54px 0 0;
+  height: 184px;
+  padding: 13px 54px 0 0;
 }
-header.main .logo img {
+.logo img {
   width: 96px;
   max-width: 96px;
 }
-@media screen and (max-width: 1400px) {
-  header.main .logo {
+@media screen and (max-width: 1100px) {
+  .logo {
     padding-right: 28px;
     padding-left: 28px;
   }
 }
-@media screen and (max-width: 900px) {
-  header.main .logo {
+@media screen and (max-width: 660px) {
+  .logo {
     padding-bottom: 30px;
   }
-  header.main .logo a img {
+  .logo a img {
     width: 60px;
   }
 }
-header.main nav {
-  height: 170px;
+.main .container {
+  max-width: 1400px;
+}
+.main nav {
+  height: 138px;
   padding-left: 306px;
   padding-right: 32px;
 }
-@media screen and (max-width: 1400px) {
-  header.main nav {
+@media screen and (max-width: 1100px) {
+  .main nav {
     padding-left: 200px;
   }
 }
-header.main nav ul {
+.main nav ul {
   max-width: 1296px;
 }
-header.main nav .hamburger,
-header.main nav .close {
+.main nav .hamburger,
+.main nav .close {
   font-size: 32px;
   right: 32px;
   top: 16px;
 }
-header.main nav .level-1 {
+.main nav .level-1 {
   max-width: 1320px;
-  padding-bottom: 42px;
+  margin-bottom: 29px;
   font-size: 12px;
 }
-header.main nav .level-1 li {
+.main nav .level-1 li {
   margin-right: 26px;
 }
-header.main nav .level-1 li.right {
+.main nav .level-1 li.right {
   margin-left: 26px;
 }
-header.main nav .level-1 li a {
+.main nav .level-1 li a {
   height: 40px;
   line-height: 40px;
 }
-header.main nav .level-1 li form input,
-header.main nav .level-1 li form button {
+.main nav .level-1 li form input,
+.main nav .level-1 li form button {
   height: 40px;
   line-height: 40px;
 }
-header.main nav .level-1 li form button {
+.main nav .level-1 li form button {
   width: 18px;
 }
-header.main nav .level-1 li form input {
+.main nav .level-1 li form input {
   margin-right: 10px;
 }
-header.main nav .level-2 {
-  height: 87px;
+.main nav .level-2 {
+  height: 67px;
 }
-header.main nav .level-2 li {
+.main nav .level-2 li {
   margin-right: 28px;
-  height: 87px;
+  height: 67px;
 }
-header.main nav .level-2 li a {
-  height: 50px;
+.main nav .level-2 li a {
   line-height: 50px;
   font-size: 18px;
 }
-header.main nav .level-2 li a.button {
+.main nav .level-2 li a.button {
   padding: 0 22px;
 }
-@media screen and (max-width: 1280px) {
-  header.main nav .level-2 li a {
+@media screen and (max-width: 985px) {
+  .main nav .level-2 li {
+    margin-right: 12px;
+  }
+  .main nav .level-2 li a {
     font-size: 14px;
   }
 }
-@media screen and (max-width: 985px) {
-  header.main nav .level-2 li {
-    margin-right: 12px;
-  }
-}
-header.main nav .level-2 li span {
+.main nav .level-2 li span {
   height: 18px;
 }
-header.main nav .level-2 li span img {
+.main nav .level-2 li span img {
   width: 16px;
 }
-@media screen and (max-width: 900px) {
-  header.main.opened nav .level-1 {
+@media screen and (max-width: 660px) {
+  .main.opened nav .level-1 {
     padding-top: 210px;
   }
-  header.main.opened nav .level-1 li {
+  .main.opened nav .level-1 li {
     padding: 0 28px;
     font-size: 14px;
     height: 50px;
     line-height: 50px;
   }
-  header.main.opened nav .level-1 li a {
+  .main.opened nav .level-1 li a {
     line-height: 50px;
   }
-  header.main.opened nav .level-2 {
+  .main.opened nav .level-2 {
     padding-bottom: 32px;
   }
-  header.main.opened nav .level-2 li {
+  .main.opened nav .level-2 li {
     padding: 0 28px;
   }
-  header.main.opened nav .level-2 li a {
+  .main.opened nav .level-2 li a {
     font-size: 14px;
   }
 }
@@ -943,7 +940,7 @@ header.main nav .level-2 li span img {
 }
 .page-intro {
   max-width: 1200px;
-  padding: 50px 28px 22px;
+  padding: 34px 28px 22px;
 }
 .page-intro article {
   max-width: 796px;
@@ -1155,6 +1152,10 @@ header.main nav .level-2 li span img {
     padding-left: 28px;
     padding-right: 28px;
   }
+}
+.container {
+  max-width: 1000px;
+  padding: 0 28px;
 }
 .button-link {
   line-height: 24px;
@@ -1412,7 +1413,7 @@ footer.main .container.addresses address {
 .drop-menu .container .left h3 {
   font-size: 40px;
   line-height: 44px;
-  margin: 0 0 68px 0;
+  margin: 0 0 36px 0;
 }
 .drop-menu .container .left .col {
   padding-right: 60px;
@@ -1422,7 +1423,7 @@ footer.main .container.addresses address {
   margin: 0 0 10px 0;
 }
 .drop-menu .container .left .col p {
-  margin: 0 0 40px 0;
+  margin: 0 0 8px 0;
 }
 @media screen and (max-width: 1100px) {
   .drop-menu .container .left .col {
