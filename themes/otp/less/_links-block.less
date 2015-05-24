@@ -6,6 +6,7 @@
 	&.green {
 		background: @light-green;
 	}
+
 	&.red {
 		background: @red;
 	}
@@ -52,8 +53,9 @@
 						color: @white;
 						overflow: hidden;
 
-						&:hover {
-							color: @dark-blue; 
+						&:hover,
+						&:focus {
+							opacity: 0.5;
 						}
 
 						span {

@@ -70,8 +70,8 @@ class WayFinder extends BaseElement {
 			$configs = $items->getConfig();
 			$adder = new GridFieldAddNewMultiClass();
 			$adder->setClasses(array(
-				'WayFinderItem'			=> 'Text time',
-				'WayFinderImageItem'	=> 'Image Item'
+				'WayFinderItem'			=> 'Text Link',
+				'WayFinderImageItem'	=> 'Image Link'
 			));
 			$configs->removeComponentsByType('GridFieldAddNewButton');
 			$configs->addComponent($adder);

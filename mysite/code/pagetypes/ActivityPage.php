@@ -73,6 +73,10 @@ class ActivityPage_Activity extends DataObject {
 		'Activity' => 'ActivityPage'
 	);
 
+	public function i18n_singular_name() {
+		return 'Step';
+	}
+
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		$fields->removeByName('Sort');
