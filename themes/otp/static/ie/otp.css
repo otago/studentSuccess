@@ -203,10 +203,6 @@ h3 {
 .smart-slide {
   margin-top: 32px;
 }
-.smart-slide .component-alignment.boxed-element {
-  padding-left: 68px;
-  padding-right: 68px;
-}
 .smart-slide .slide-letters {
   max-width: 900px;
 }
@@ -352,6 +348,7 @@ h3 {
   height: 67px;
 }
 .main nav .level-2 li a {
+  height: 67px;
   line-height: 50px;
   font-size: 18px;
 }
@@ -412,7 +409,7 @@ h3 {
 }
 .hero .contents p {
   font-size: 24px;
-  line-height: 24px;
+  line-height: 35px;
   margin-bottom: 62px;
 }
 .hero .contents a {
@@ -1144,14 +1141,8 @@ h3 {
   max-width: 1400px;
 }
 .component-alignment.boxed-element {
-  padding-left: 100px;
-  padding-right: 100px;
-}
-@media screen and (max-width: 1400px) {
-  .component-alignment.boxed-element {
-    padding-left: 28px;
-    padding-right: 28px;
-  }
+  max-width: 1200px;
+  padding: 34px 28px 22px;
 }
 .container {
   max-width: 1000px;

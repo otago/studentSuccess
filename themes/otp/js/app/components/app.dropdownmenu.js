@@ -25,6 +25,11 @@ if(typeof app === 'undefined') { var app = {}; }
 				
 				return false;
 			});
+
+			// clicking the arrow should trigger the link
+			$(".drop-down-span").click(function() {
+				$(this).siblings('a').trigger('click');
+			});
 		};
 		
 		var can = function(){

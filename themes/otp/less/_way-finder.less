@@ -1,6 +1,6 @@
-.way-finder {
-	
-	
+@import "elements.less";
+
+.way-finder {	
 	position: relative;
 	overflow: hidden;
 	z-index: 50;
@@ -129,6 +129,7 @@
 			background: rgba(0,0,0,0.4);
 			color: @white;
 			padding: 2.25rem;
+			.transition;
 			.boxsizing;
 			
 			h3, p {
@@ -136,6 +137,7 @@
 				font-size: 1rem;
 				line-height: 1.125rem;
 				max-width: 19.5rem;
+				color: #fff;
 			}
 			
 			h3 {
@@ -145,16 +147,15 @@
 			}
 			
 		}
-		
-	}
-	a.career-handbook:hover {
-		.icon {
-			color: @lighter-blue;
-			.transition;
-		}
-		article {
-			background: @lighter-blue;
-			.transition;
+
+		&:hover {
+			.icon {
+				color: @lighter-blue;
+			}
+
+			article {
+				background: @lighter-blue;
+			}
 		}
 	}
 	
@@ -163,6 +164,7 @@
 		background: @yellow;
 		padding: 1.625rem 1.75rem 3.125rem;
 		color: @drak-grey;
+		.transition;
 		
 		.icon {
 			font-size: 2.375rem;
@@ -183,12 +185,10 @@
 			margin-bottom: 1.875rem;
 			line-height: 2rem;
 		}
-		
-	}
 	
-	a.getting-started:hover {
-		background: @lighter-blue;
-		.transition;
+		&:hover {
+			background: darken(@yellow, 5%);
+		}
 	}
 	
 	@media screen and (max-width: 1200px){

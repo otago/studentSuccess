@@ -1,4 +1,4 @@
-<div class="component-alignment">
+<div class="component-alignment boxed-element">
     <div class='was-this-helpful' data-id="{$Top.ID}">
         <div class='widget'>
             <p>

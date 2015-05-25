@@ -26,19 +26,15 @@ app.Modules = [
 
 
 
-(function($){
-	
-	for(key in app.Modules){
-		
+(function($) {
+	for(key in app.Modules) {
 		var moduleKey = app.Modules[key];
 		var module = app[moduleKey]
 
-		if(typeof module.init !== 'undefined' && typeof module.can !== 'undefined'){			
-			if(module.can()){
+		if(module && typeof module.init !== 'undefined' && typeof module.can !== 'undefined'){			
+			if(module.can()) {
 				module.init();
 			}
 		}
-		
 	}
-	
 })(jQuery);
