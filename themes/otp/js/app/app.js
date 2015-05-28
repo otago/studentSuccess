@@ -4,6 +4,7 @@ app.MobileSize = 640;
 
 app.Modules = [
     'svgpng',
+    'activities',
 	'hamburger',
 	'bgimage',
 	'packery',

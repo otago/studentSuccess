@@ -106,4 +106,21 @@ class ActivityPage_Activity extends DataObject {
 
 		return $output;
 	}
+
+		public function getAnswers() {
+		$options = explode("\n", $this->CorrectAnswers);
+		$output = new ArrayList();
+
+		foreach($options as $o) {
+			$o = trim($o);
+
+			if($o) {
+				$output->push(new ArrayData(array(
+					'Title' => $o
+				)));
+			}
+		}
+
+		return $output;
+	}
 }

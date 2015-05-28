@@ -29,6 +29,7 @@
     <script type='text/javascript' src='{$ThemeDir}/js/app/components/app.helpful.js'></script>
     <script type='text/javascript' src='{$ThemeDir}/js/app/components/app.glossary.js'></script>
 	<script type='text/javascript' src='{$ThemeDir}/js/app/components/app.leftrightcont.js'></script>
+    <script type='text/javascript' src='{$ThemeDir}/js/app/components/app.activities.js'></script>
 
     <script type="text/javascript" src="{$ThemeDir}/js/app/app.js"></script>
 

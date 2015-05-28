@@ -44,17 +44,44 @@
                         <div class="activity_text activity_text__{$Presentation}">
                             <ul>
                              <% loop ActivityOptions %>
-                                 <li>$Title</li>
+                                 <li <% if Up.Presentation == Replace %>contenteditable=true<% end_if %>>$Title</li>
                              <% end_loop %>
                             </ul>
                         </div>
                     <% end_if %>
+
+                    <div class="activity_success">
+                        $RightAnswerContent
+                    </div>
+
+                    <div class="activity_fail_warning">
+                        <p>That is not quite the correct answer please try again.</p>
+                    </div>
+
+                    <div class="activity_fail">
+                        $WrongAnswerContent
+                    </div>
+
+                    <div class="activity_answers">
+                        <ul>
+                            <% loop Answers %>
+                                <li>$Title</li>
+                            <% end_loop %>
+                        </ul>
+                    </div>
                 </article>
             <% end_loop %>
 
+            <% if Validation == OnComplete %>
+                <article class="activity_individual activity_results">
+                    <p class="correct"></p>
+                    <p class="incorrect"></p>
+                </article>
+            <% end_if %>
+
             <footer class="activity_navigation">
-                <span class="btn hidden">&larr;</span>
-                <span class="btn">Start &rarr;</span>
+                <span class="btn next">Start &rarr;</span>
+                <span class="btn hidden back">&larr;</span>
             </footer>
         </section>
     </div>
