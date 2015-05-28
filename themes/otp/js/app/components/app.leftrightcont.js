@@ -8,7 +8,9 @@ if(typeof app === 'undefined') { var app = {}; }
 		var rightBlock = $('.right-content');
 		
 		var sideGaps = function(){
-			
+/*
+
+
 			var sideGap = $(window).width();
 			
 			if( sideGap >= 1200) {
@@ -18,7 +20,7 @@ if(typeof app === 'undefined') { var app = {}; }
 			}else{
 				$(leftBlock).css('margin-left', 0);
 				$(rightBlock).css('margin-right', 0);
-			}
+			}*/
 
             leftBlock.addClass('init');
             rightBlock.addClass('init');

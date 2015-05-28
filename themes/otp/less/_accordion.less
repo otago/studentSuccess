@@ -14,7 +14,7 @@
 			.boxsizing;
 			display: block;
 			padding: 1.5rem 2.813rem;
-			color: @light-brown;
+			color: #8C8E90;
 			position: relative;
 			max-width: 75rem;
 			margin: 0 auto;
@@ -26,11 +26,17 @@
 				position: absolute;
 				right: 0;
 				line-height: 36px;
-				color: @brown;
+				color: #8C8E90;
 				
-				@media screen and (max-width: 980px){
+				@media screen and (max-width: 980px) {
 					right: 1rem;
 				}
+			}
+
+			&:hover,
+			&:focus {
+				background-color: #fff;
+				color: darken(#8C8E90, 10%);
 			}
 		}
 		
@@ -51,7 +57,7 @@
 		.boxsizing;
 		display: none;
 		border-bottom: 2px solid @light-brown;
-		padding: 1rem 0 3.125rem;
+		padding: 1rem 0 2rem;
 		
 		.accordion-item-content {
 			max-width: 75rem;
@@ -79,5 +85,12 @@
 		.title-c {
 			margin-bottom: 0;
 		}
+	}
+}
+
+.glossary-letter {
+	&:hover,
+	&:focus {
+
 	}
 }

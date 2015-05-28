@@ -58,7 +58,7 @@ h3 {
   }
 }
 .accordion-c .accordion-item {
-  padding: 16px 0 50px;
+  padding: 16px 0 32px;
 }
 .accordion-c .accordion-item .accordion-item-content {
   max-width: 1200px;
@@ -270,8 +270,8 @@ h3 {
   }
 }
 .logo {
-  width: 254px;
-  height: 184px;
+  width: 142px;
+  height: 190px;
   padding: 13px 54px 0 0;
 }
 .logo img {
@@ -293,12 +293,11 @@ h3 {
   }
 }
 .main .container {
-  max-width: 1400px;
+  max-width: 1064px;
 }
 .main nav {
   height: 138px;
-  padding-left: 306px;
-  padding-right: 32px;
+  padding-left: 178px;
 }
 @media screen and (max-width: 1100px) {
   .main nav {
@@ -354,7 +353,7 @@ h3 {
 .main nav .level-2 li a.button {
   padding: 0 22px;
 }
-@media screen and (max-width: 985px) {
+@media screen and (max-width: 685px) {
   .main nav .level-2 li {
     margin-right: 12px;
   }
@@ -396,6 +395,9 @@ h3 {
 }
 .hero.mini {
   height: 243px;
+}
+.hero.no-hero {
+  height: 192px;
 }
 .hero .contents {
   padding: 140px 102px 0;
@@ -815,47 +817,44 @@ h3 {
     line-height: 30px;
   }
 }
-.tabbed-content .tab-index ul {
-  padding: 0 70px;
-}
 @media screen and (max-width: 980px) {
-  .tabbed-content .tab-index ul {
+  .tab-index ul {
     padding: 0 28px;
   }
 }
-.tabbed-content .tab-index ul li {
+.tab-index ul li {
   padding: 0 8px;
   margin: 0 20px;
   font-size: 16px;
   line-height: 38px;
   border-bottom: 2px solid #ffffff;
 }
-.tabbed-content .tab-index ul li.active {
+.tab-index ul li.active {
   border-bottom: 2px solid #0c79c3;
 }
-.tabbed-content .tab-section .content-block .itemList {
+.tab-section .content-block .itemList {
   border-top: 1px solid #d7d7d6;
 }
-.tabbed-content .tab-section .content-block .itemList li {
+.tab-section .content-block .itemList .glossary-letter {
   border-bottom: 1px solid #d7d7d6;
 }
-.tabbed-content .tab-section .content-block .itemList li h2 {
+.tab-section .content-block .itemList h2 {
   border-left: 13px solid #ef563c;
   font-size: 27px;
   line-height: 32px;
 }
 @media screen and (max-width: 980px) {
-  .tabbed-content .tab-section .content-block .itemList li h2 {
+  .tab-section .content-block .itemList h2 {
     font-size: 24px;
     line-height: 30px;
   }
 }
-.tabbed-content .tab-section .content-block .itemList li h2 a {
+.tab-section .content-block .itemList h2 a {
   max-width: 1060px;
-  padding: 24px 0 24px 60px;
+  padding: 24px 0 24px;
   left: -6px;
 }
-.tabbed-content .tab-section .content-block .itemList li h2 a .icon-tick {
+.tab-section .content-block .itemList h2 a .icon-tick {
   top: 22px;
   width: 31px;
   height: 31px;
@@ -864,46 +863,46 @@ h3 {
   line-height: 30px;
 }
 @media screen and (max-width: 1200px) {
-  .tabbed-content .tab-section .content-block .itemList li h2 a .icon-tick {
+  .tab-section .content-block .itemList h2 a .icon-tick {
     left: 15px;
   }
 }
-.tabbed-content .tab-section .content-block .itemList li.checked span.icon-tick {
+.tab-section .content-block .itemList.checked span.icon-tick {
   border: 1px solid #ffffff;
 }
-.tabbed-content .tab-section .content-block .itemList li .accordion-item {
+.tab-section .content-block .itemList .accordion-item {
   max-width: 1060px;
-  padding: 0 0 50px 60px;
+  padding: 0 0 32px;
 }
-.tabbed-content .tab-section .content-block .itemList li .accordion-item p {
+.tab-section .content-block .itemList .accordion-item p {
   line-height: 28px;
 }
-.tabbed-content .tab-section .content-block .itemList li .accordion-item p.small-text {
+.tab-section .content-block .itemList .accordion-item p.small-text {
   font-size: 14px;
   line-height: 20px;
 }
-.tabbed-content .tab-section .content-block .itemList li .accordion-item h4 {
+.tab-section .content-block .itemList .accordion-item h4 {
   font-size: 22px;
   line-height: 26px;
   margin: 10px 0 15px;
 }
-.tabbed-content .tab-section .content-block .itemList li .accordion-item span.icon-phone,
-.tabbed-content .tab-section .content-block .itemList li .accordion-item span.icon-mail {
+.tab-section .content-block .itemList .accordion-item span.icon-phone,
+.tab-section .content-block .itemList .accordion-item span.icon-mail {
   margin: 0 5px 10px 0;
 }
-.tabbed-content .tab-section .content-block .itemList li .accordion-item span.icon-mail {
+.tab-section .content-block .itemList .accordion-item span.icon-mail {
   font-size: 12px;
 }
-.tabbed-content .tab-section .content-block .itemList li h2 {
+.tab-section .content-block .itemList li h2 {
   border-left: 13px solid #ef563c;
 }
-.tabbed-content .tab-section .content-block.blue .itemList li h2 {
+.tab-section .content-block.blue .itemList li h2 {
   border-left: 13px solid #00bad6;
 }
-.tabbed-content .tab-section .content-block.yellow .itemList li h2 {
+.tab-section .content-block.yellow .itemList li h2 {
   border-left: 13px solid #ffcd00;
 }
-.tabbed-content .tab-section .content-block.green .itemList li h2 {
+.tab-section .content-block.green .itemList li h2 {
   border-left: 13px solid #79c8bb;
 }
 @media screen and (max-width: 1200px) {
@@ -935,7 +934,7 @@ h3 {
   top: 16px;
 }
 .page-intro {
-  max-width: 1200px;
+  max-width: 1064px;
   padding: 34px 28px 22px;
 }
 .page-intro article {
@@ -944,9 +943,9 @@ h3 {
   line-height: 28px;
 }
 .page-intro article .title {
-  margin-bottom: 36px;
+  margin-bottom: 20px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 700px) {
   .page-intro article p {
     font-size: 16px;
   }
@@ -1140,12 +1139,11 @@ h3 {
   max-width: 1400px;
 }
 .component-alignment.boxed-element {
-  max-width: 1200px;
-  padding: 34px 28px 22px;
+  max-width: 1000px;
+  padding: 34px 0 22px;
 }
 .container {
   max-width: 1000px;
-  padding: 0 28px;
 }
 .button-link {
   line-height: 24px;
@@ -1157,6 +1155,9 @@ h3 {
 }
 .page-contents .breadcrumbs {
   padding-bottom: 22px;
+}
+.page-contents .breadcrumbs a {
+  font-size: 13px;
 }
 .page-contents .breadcrumbs a span {
   font-size: 9px;
@@ -1186,25 +1187,7 @@ h3 {
   font-size: 18px;
 }
 .left-content.full-width {
-  max-width: 1200px;
-}
-@media screen and (min-width: 1200px) {
-  .left-content {
-    width: 840px;
-  }
-  .left-content.full-width {
-    width: 1200px;
-  }
-}
-.left-content > * {
-  padding-left: 45px;
-  padding-right: 45px;
-}
-@media screen and (max-width: 1200px) {
-  .left-content > * {
-    padding-left: 28px;
-    padding-right: 28px;
-  }
+  max-width: 1000px;
 }
 .left-content h1 {
   margin-bottom: 22px;
@@ -1314,12 +1297,9 @@ figure.element figcaption {
   line-height: 54px;
 }
 .was-this-helpful {
-  padding: 0 102px 0px;
-  max-width: 1404px;
   margin: 0 auto 32px;
 }
 .was-this-helpful .widget {
-  max-width: 1000px;
   line-height: 50px;
 }
 .was-this-helpful .widget a {
@@ -1328,12 +1308,6 @@ figure.element figcaption {
 }
 .was-this-helpful .widget a.yes {
   margin-left: 22px;
-}
-@media screen and (max-width: 1400px) {
-  .was-this-helpful {
-    padding: 0 28px 0px;
-    max-width: 1400px;
-  }
 }
 footer.main {
   padding: 56px 0 36px;
@@ -1361,7 +1335,6 @@ footer.main .bottom {
 }
 footer.main .container {
   max-width: 1000px;
-  padding: 0 28px;
 }
 footer.main .container .col {
   padding-right: 20px;
