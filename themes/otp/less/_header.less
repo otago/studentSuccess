@@ -311,11 +311,9 @@
 	}
 	
 	
-	@media screen and (max-width: 660px){
+	@media screen and (max-width: 660px) {
 		&.opened {
-			
 			nav {
-				
 				height: auto;
 				padding: 0;
 				
@@ -323,7 +321,7 @@
 					display: block;
 					position: relative;
 					background: @blue;
-					padding-top: 13.125rem;
+					padding-top: 10.125rem;
 					padding-bottom: 0;
 					clear: both;
 					
@@ -348,6 +346,11 @@
 							font-weight: bold;
 						  	line-height: 3.125rem;
 							opacity: 1;
+
+							&:hover,
+							&:focus {
+								border: none;
+							}
 						}
 						
 						form {
@@ -355,7 +358,7 @@
 							position: relative;
 						}
 						input {
-							width: 50px;
+							width: 100%;
 						}
 							
 						button {
@@ -387,29 +390,20 @@
 							display: block;
 							width: 100%;
 							.boxsizing;
-							
-							&:hover, .active {
-								border-bottom: 1px solid @green;
-							};
-							
 						}
 						
 						span {
-							width: 100%;
-							.boxsizing;
-							position: relative;
+							display: none;
 						}
 					}
 				}
-				
 			}
-			
 		}
 	}
 	
 }
 
-@media screen and (max-width: 660px){
+@media screen and (max-width: 660px) {
 	header.main.opened {
 		nav {
 			.icon-hamburger:before {

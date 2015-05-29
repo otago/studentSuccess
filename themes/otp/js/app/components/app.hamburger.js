@@ -8,6 +8,10 @@ if(typeof app === 'undefined') { var app = {}; }
 		
 		var openOrCloseMenu = function(){
 			$('header.main').toggleClass('opened');
+
+			if(!$('header.main').hasClass('opened')) {
+				$(".drop-menu").hide();
+			}
 			return false;
 		};
 		

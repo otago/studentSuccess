@@ -6,8 +6,10 @@ if(typeof app === 'undefined') { var app = {}; }
 		
 		var items = $('select');
 		
-		var openDropdown = function(){
-			items.chosen();
+		var openDropdown = function() {
+			items.chosen({
+				disable_search: true
+			});
 		};
 		
 		var can = function(){

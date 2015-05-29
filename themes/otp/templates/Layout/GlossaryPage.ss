@@ -4,25 +4,18 @@
     <div class='page-contents'>
         <% include Breadcrumbs %>
 
-        <div class='page-intro main glossary'>
-            <h1>$Title</h1>
-
-            <% if $Intro %>
-                <p>{$Intro}</p>
-            <% end_if %>
-
-            <div class="search-form">
-                <form class="glossary-search">
-                    <fieldset>
-                        <div id="Search" class="field text">
-                            <div class="middleColumn">
-                                <input type="text" name="search" class="text" id="glossary-keyword" placeholder="Search by keyword">
-                            </div>
+         <% include PageIntro %>
+        <div class="search-form">
+            <form class="glossary-search">
+                <fieldset>
+                    <div id="Search" class="field text">
+                        <div class="middleColumn">
+                            <input type="text" name="search" class="text" id="glossary-keyword" placeholder="Search by keyword">
                         </div>
-                        <input type="submit" name="" value="search" class="submit">
-                    </fieldset>
-                </form>
-            </div>
+                    </div>
+                    <input type="submit" name="" value="search" class="submit">
+                </fieldset>
+            </form>
         </div>
     </div>
     

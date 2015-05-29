@@ -47,12 +47,13 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
             var keyword = form.find('.keywords').val().toLowerCase();
             var sort = form.find('select.sort-filter').val();
             var sortAscending = true;
-            if(sort == 'views'){
+
+            if(sort == 'views') {
                 sortAscending = false;
             }
 
             configs.filter = function(){
-                if(subject === '' && keyword === ''){
+                if(subject === '' && keyword === '') {
                     return true;
                 }
 
@@ -60,13 +61,14 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
                 var bKeyword = false;
                 var tile = $(this);
 
-                if(subject && subject === tile.data('subject')){
+                if(subject && subject === tile.data('subject')) {
                     bSubject = true;
                 }
 
-                if(keyword){
+                if(keyword) {
                     var html = tile.text().toLowerCase();
-                    if(html.indexOf(keyword) >= 0){
+                    
+                    if(html.indexOf(keyword) >= 0) {
                         bKeyword = true;
                     }
                 }

@@ -10,13 +10,13 @@
 		</clipPath>
 
 			<rect x="12.777" y="2.471" transform="matrix(0.7072 0.707 -0.707 0.7072 7.3276 -10.0409)" clip-path="url(#SVGID_2_)" fill="none" stroke="#333437" stroke-miterlimit="10" width="6.018" height="2.71"/>
-		<polyline clip-path="url(#SVGID_2_)" fill="none" stroke="#333437" stroke-miterlimit="10" points="11.255,4.103 3.404,11.955
+		<polyline clip-path="url(#SVGID_2_)" fill="none" stroke-miterlimit="10" points="11.255,4.103 3.404,11.955
 			7.66,16.209 15.511,8.357 		"/>
-		<polyline clip-path="url(#SVGID_2_)" fill="none" stroke="#333437" stroke-miterlimit="10" points="11.255,4.103 3.404,11.955
+		<polyline clip-path="url(#SVGID_2_)" fill="none" stroke-miterlimit="10" points="11.255,4.103 3.404,11.955
 			0.872,18.721 7.66,16.209 15.511,8.357 		"/>
 
-			<line clip-path="url(#SVGID_2_)" fill="none" stroke="#333437" stroke-miterlimit="10" x1="5.573" y1="14.123" x2="13.425" y2="6.271"/>
-		<circle clip-path="url(#SVGID_2_)" fill="none" stroke="#333437" stroke-miterlimit="10" cx="2.021" cy="17.596" r="0.914"/>
+			<line clip-path="url(#SVGID_2_)" fill="none" stroke-miterlimit="10" x1="5.573" y1="14.123" x2="13.425" y2="6.271"/>
+		<circle clip-path="url(#SVGID_2_)" fill="none" stroke-miterlimit="10" cx="2.021" cy="17.596" r="0.914"/>
 	</g>
 </g>
 </svg>

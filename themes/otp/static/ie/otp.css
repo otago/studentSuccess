@@ -369,7 +369,7 @@ h3 {
 }
 @media screen and (max-width: 660px) {
   .main.opened nav .level-1 {
-    padding-top: 210px;
+    padding-top: 162px;
   }
   .main.opened nav .level-1 li {
     padding: 0 28px;
@@ -947,62 +947,8 @@ h3 {
 }
 @media screen and (max-width: 700px) {
   .page-intro article p {
-    font-size: 16px;
+    font-size: 18px;
   }
-}
-.page-intro .filter-form .filters {
-  max-width: 1200px;
-  padding: 0 98px;
-}
-.page-intro .filter-form fieldset {
-  padding: 0 0 22px 0;
-}
-@media screen and (max-width: 980px) {
-  .page-intro .filter-form fieldset .subject {
-    margin-bottom: 16px;
-  }
-}
-.page-intro .filter-form fieldset .input input {
-  height: 40px;
-  line-height: 40px;
-  font-size: 12px;
-  padding: 0 40px 0 16px;
-}
-.page-intro .filter-form .actions button {
-  height: 40px;
-  width: 50px;
-  right: 98px;
-}
-@media screen and (max-width: 980px) {
-  .page-intro .filter-form .actions button {
-    top: 58px;
-  }
-}
-.page-intro .filter-form .chosen-container .chosen-results li {
-  font-size: 12px;
-  min-height: 16px;
-  padding: 8px 6px;
-}
-.page-intro .filter-form .chosen-container-single .chosen-single {
-  font-size: 12px;
-}
-.page-intro .sort-by {
-  max-width: 1200px;
-  padding-top: 16px;
-}
-.page-intro .sort-by .options {
-  font-size: 14px;
-}
-.page-intro .sort-by .options label {
-  height: 40px;
-  line-height: 40px;
-  margin-right: 16px;
-}
-.page-intro .sort-by .options .option-holder {
-  width: 200px;
-}
-.page-intro .sort-by .options .option-holder .chosen-container-single .chosen-single {
-  font-size: 12px;
 }
 .page-intro.main {
   padding-right: 70px;
@@ -1014,12 +960,63 @@ h3 {
     padding-right: 28px;
   }
 }
+.filter-form .filters {
+  max-width: 1200px;
+  padding: 0 98px;
+}
+.filter-form fieldset {
+  padding: 0 0 22px 0;
+}
+@media screen and (max-width: 980px) {
+  .filter-form .subject {
+    margin-bottom: 16px;
+  }
+}
+.filter-form .input input {
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  padding: 0 40px 0 16px;
+}
+.filter-form .actions button {
+  height: 40px;
+  width: 50px;
+  right: 98px;
+}
+@media screen and (max-width: 980px) {
+  .filter-form .actions button {
+    top: 58px;
+  }
+}
+.filter-form .chosen-container .chosen-results li {
+  padding: 8px 6px 8px 16px;
+}
+.filter-form .chosen-container-single .chosen-single {
+  font-size: 16px;
+}
+.sort-by {
+  max-width: 1000px;
+  padding: 16px 0;
+}
+.sort-by .options {
+  font-size: 16px;
+}
+.sort-by .options label {
+  height: 40px;
+  line-height: 40px;
+  margin-right: 16px;
+}
+.sort-by .options .option-holder {
+  width: 200px;
+}
+.sort-by .options .option-holder .chosen-container-single .chosen-single {
+  font-size: 16px;
+}
 .masonry-content {
-  padding: 0 102px 32px;
-  max-width: 1404px;
+  padding: 0 0 32px;
 }
 .masonry-content .tile-c {
-  padding: 30px 98px 30px 32px;
+  padding: 30px 35px 30px 32px;
 }
 @media screen and (max-width: 980px) {
   .masonry-content .tile-c {
@@ -1037,12 +1034,11 @@ h3 {
 .masonry-content .tile-c .separator-link {
   padding-top: 12px;
   font-size: 14px;
-  margin-top: 48px;
 }
 .masonry-content .tile-c.contact-tile {
   font-size: 18px;
   line-height: 24px;
-  padding: 80px 78px 92px 48px;
+  padding: 30px 46px 44px 46px;
 }
 @media screen and (max-width: 980px) {
   .masonry-content .tile-c.contact-tile {
@@ -1050,8 +1046,8 @@ h3 {
   }
 }
 .masonry-content .tile-c.contact-tile h3 {
-  font-size: 46px;
-  line-height: 48px;
+  font-size: 30px;
+  line-height: 32px;
 }
 @media screen and (max-width: 980px) {
   .masonry-content .tile-c.contact-tile h3 {
@@ -1060,7 +1056,7 @@ h3 {
   }
 }
 .masonry-content .tile-c.contact-tile p.contact {
-  margin-top: 70px;
+  margin-top: 38px;
 }
 @media screen and (max-width: 980px) {
   .masonry-content .tile-c.contact-tile p.contact {
@@ -1078,52 +1074,60 @@ h3 {
 }
 .masonry-content .tile-c.half {
   padding: 42px 34px;
-  min-height: 100px;
+}
+.masonry-content .tile-c.half h3 {
+  font-size: 16px;
 }
 .masonry-content .tile-c.list-menu {
-  padding: 42px 32px 76px;
+  padding: 42px 32px 44px;
 }
 .masonry-content .tile-c.list-menu h3 {
   font-size: 18px;
   line-height: 20px;
-  padding-bottom: 50px;
+  padding-bottom: 18px;
 }
-.masonry-content .tile-c.list-menu ul li a {
+.masonry-content .tile-c.list-menu li a {
   line-height: 28px;
-  padding: 21px 0;
-  font-size: 24px;
+  padding: 16px 25px 16px 0px;
+  font-size: 19px;
 }
 @media screen and (max-width: 980px) {
-  .masonry-content .tile-c.list-menu ul li a {
-    font-size: 20px;
+  .masonry-content .tile-c.list-menu li a {
+    font-size: 16px;
     line-height: 24px;
     padding: 16px 0;
   }
 }
-.masonry-content .tile-c.image-tile.overflow-content article {
-  padding: 44px 104px 40px 48px;
+.masonry-content .tile-c.overflow-content article {
+  margin-top: 192px;
+  padding: 44px 34px 40px 34px;
 }
-.masonry-content .tile-c.image-tile.overflow-content article h3 {
+.masonry-content .tile-c.overflow-content article h3 {
   font-size: 30px;
   line-height: 32px;
 }
-.masonry-content .tile-c.image-tile.overflow-content article h3 a {
+.masonry-content .tile-c.overflow-content article h3 a {
   font-size: 30px;
   line-height: 32px;
 }
-.masonry-content .tile-c.image-tile.overflow-content article p {
+.masonry-content .tile-c.overflow-content article p {
   font-size: 14px;
   line-height: 16px;
 }
-@media screen and (max-width: 1400px) {
-  .masonry-content {
-    padding: 0 28px 192px;
-    max-width: 1256px;
-  }
-}
 @media screen and (max-width: 980px) {
-  .masonry-content {
-    padding: 0 28px 192px;
+  .masonry-content .tile-c {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .masonry-content .tile-c.list-menu,
+  .masonry-content .tile-c.half,
+  .masonry-content .tile-c.contact-tile {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .masonry-content .tile-c .overflow-content article {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 .chosen-container-single .chosen-single {
@@ -1361,7 +1365,7 @@ footer.main .container.addresses address {
 }
 @media screen and (max-width: 640px) {
   .drop-menu {
-    padding: 72px 28px 110px;
+    padding: 24px 0 30px;
   }
 }
 .drop-menu .container {

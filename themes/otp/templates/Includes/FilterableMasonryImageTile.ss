@@ -1,6 +1,5 @@
-<div class='tile tile-c image-tile overflow-content' data-subject="{$Subject}" data-sort="{$SortOrder}" data-views="{$Views}" data-title="{$Title}">
+<div class='tile tile-c image-tile overflow-content' data-subject="{$Subject}" data-sort="{$SortOrder}" data-views="{$Views}" data-title="{$Title}" style="background: url($Image.Filename)">
     <% if $Link %><a href='{$CounterLink}' target="{$Target}" class="image-link"><% end_if %>
-    {$Image}
     <% if $Link %></a><% end_if %>
     <% if $HideTitle == 0 || $Content %>
         <article>

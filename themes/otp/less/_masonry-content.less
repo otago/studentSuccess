@@ -1,11 +1,8 @@
 .masonry-content {
 	.boxsizing;
-	padding: 0 6.375rem 2rem;
-	max-width: 87.75rem;
+	padding: 0 0 2rem;
 	margin: 0 auto;
 	position: relative;
-
-
 	
 	.tile-c {
 		//
@@ -16,7 +13,7 @@
 		color: @white;
 		background: @light-green;
 		.boxsizing;
-		padding: 1.875rem 6.125rem 1.875rem 2.000rem;
+		padding: 1.875rem 2.2rem 1.875rem 2.000rem;
 		word-wrap: break-word;
         display: block;
 
@@ -57,13 +54,20 @@
 		
 		.separator-link {
 			padding-top: 0.75rem;
-			border-top: 1px solid @white;
+			border-top: 1px solid rgba(255, 255, 255, 0.4);
 			font-size: 0.875rem;
-			margin-top: 3rem;
+			margin-top: 2em;
 			
 			svg {
 				position: relative;
 				top: 6px;
+
+				line,
+				polyline,
+				circle,
+				rect {
+					stroke: #fff;
+				}
 			}
 		}
 		
@@ -71,35 +75,90 @@
 		//
 		// end content tile
 		//
-
-        &:nth-child(5n + 1){
+		h3 {
+			color: #fff;
+		}
+		
+        &:nth-child(6n + 1) {
             background: @light-green;
-            &a:hover {
-                background: @lighter-blue;
+
+            &:hover,
+            &:focus {
+                background: darken(@light-green, 5%);
             }
         }
-		&:nth-child(5n + 2){
+		&:nth-child(6n + 2){
 			background: @lighter-blue;
-            &a:hover {
-              background: @light-green;
-            }
+
+			&:hover,
+			&:focus {
+				background: darken(@lighter-blue, 10%);
+			}
 		}
-		&:nth-child(5n + 3){
+
+		&:nth-child(6n + 3) {
 			background: @yellow;
-            &a:hover {
-                background: @lighter-blue;
+
+			h3, p {
+				color: #444449;
+			}
+
+			.separator-link {
+				svg {
+					line,
+					polyline,
+					circle,
+					rect {
+						stroke: #444449;
+					}
+				}
+			}
+
+            &:hover,
+            &:focus {
+                background: darken(@yellow, 5%);
             }
 		}
-		&:nth-child(5n + 4){
+
+		&:nth-child(6n + 4) {
 			background: @red;
-            &a:hover {
-                background: @yellow;
+
+            &:hover,
+            &:focus {
+                background: darken(@red, 5%);
             }
 		}
-		&:nth-child(5n + 5){
+
+		&:nth-child(6n + 5) {
 			background: @darker-grey;
-            &a:hover {
-                background: @red;
+
+            &:hover,
+            &:focus {
+                 background: darken(@darker-grey, 5%);
+            }
+		}
+
+		&:nth-child(6n + 6) {
+			background: @ash;
+
+			h3, p {
+				color: #444449;
+			}
+
+			.separator-link {
+				svg {
+					line,
+					polyline,
+					circle,
+					rect {
+						stroke: #444449;
+					}
+				}
+			}
+
+            &:hover,
+            &:focus {
+                 background: darken(@ash, 5%);
             }
 		}
 
@@ -120,11 +179,16 @@
 			color: @drak-grey;
 			font-size: 1.125rem;
 			line-height: 1.5rem;
-			padding: 5rem 4.875rem 5.75rem 3.000rem;
+			padding: 1.875rem 2.875rem 2.75rem 2.875rem;
 			float: right;
 			top: 0;
 			right: 0;
 			position: absolute;
+
+			&:hover,
+			&:focus {
+				background: @ash;
+			}
 
             @media screen and (max-width: 980px) {
                 width: 50%;
@@ -142,8 +206,8 @@
 			}
 			
 			h3 {
-				font-size: 2.875rem;
-				line-height: 3rem;
+				font-size: 1.875rem;
+				line-height: 2rem;
 				font-weight: 100;
 				color: @red;
 
@@ -160,7 +224,7 @@
 			p {
 				
 				&.contact {
-					margin-top: 4.375rem;
+					margin-top: 2.375rem;
 
                     @media screen and (max-width: 980px) {
                         margin-top: 2rem;
@@ -196,8 +260,11 @@
 		&.half {
 			width: 16.6666666667%;
 			padding: 2.625rem 2.125rem;
-			min-height: 6.25rem;
 			
+			h3 {
+				font-size: 1rem;
+			}
+
 			a {
 				svg {
 					rect, polyline, line, circle {
@@ -221,13 +288,20 @@
 		
 		&.list-menu {
 			background: @lighter-blue;
-			padding: 2.625rem 2rem 4.75rem;
+			padding: 2.625rem 2rem 2.75rem;
+
+			&:hover,
+			&:focus {
+				background: @lighter-blue;
+				cursor: normal;
+			}
 			
 			h3 {
 				font-size: 1.125rem;
 				line-height: 1.25rem;
 				font-weight: 600;
-				padding-bottom: 3.125rem;
+				color: #fff;
+				padding-bottom: 1.125rem;
 			}
 			
 			a {
@@ -236,39 +310,38 @@
 			
 			ul {
 				.list-reset;
+			}
+
+			li {
+				border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 				
-				li {
-					border-bottom: 1px solid @ash;
+				a {
+					display: block;
+					line-height: 1.750rem;
+					padding: 1rem 25px 1rem 0rem;
+					font-size: 1.2rem;
+					position: relative;
+
+					.transition;
 					
-					a {
-						display: block;
-						line-height: 1.750rem;
-						padding: 1.3125rem 0;
-						font-size: 1.5rem;
-						position: relative;
-						.transition;
-						
-						@media screen and (max-width: 980px) {
-							font-size: 1.25rem;
-							line-height: 1.50rem;
-							padding: 1rem 0;
-						}
-						
-						span {
-							position: absolute;
-						  	margin-top: 5px;
-						  	font-size: 16px;
-							right: 0;
-						}
-						
-						&:hover {
-							opacity: 0.6;
-						}
+					@media screen and (max-width: 980px) {
+						font-size: 1rem;
+						line-height: 1.50rem;
+						padding: 1rem 0;
 					}
 					
+					span {
+						position: absolute;
+					  	margin-top: 5px;
+					  	font-size: 16px;
+					  	top: 17px;
+						right: 0;
+					}
 					
+					&:hover {
+						opacity: 0.6;
+					}
 				}
-				
 			}  
 			
 		}
@@ -302,83 +375,47 @@
 			line-height: 0;
 			padding: 0;
 			position: relative;
+			background-size: cover;
 
 			a {
 				font-size: 0;
 				line-height: 0;
 				display: block;
 			}
-			
-			img {
-				width: 100%;
-			}
-			
-			&.overflow-content {
-				
-				article {
-					position: absolute;
-					left: 0;
-					bottom: 0;
-					width: 100%;
-					background: rgba(0,0,0,0.4);
-					padding: 2.75rem 6.5rem 2.5rem 3rem;
-					.boxsizing;
+		}
 
-                    @media screen and (max-width: 980px) {
-                        position: relative;
-                        background: @darker-grey;
-                    }
+		&.overflow-content {
+			position: relative;
+
+			article {
+				width: 100%;
+				margin-top: 12rem;
+				background: rgba(0,0,0,0.4);
+				padding: 2.75rem 2.1rem 2.5rem 2.1rem;
+				.boxsizing;
+				
+				h3 {
+					font-size: 1.875rem;
+					line-height: 2rem;
 					
-					h3 {
+					a {
 						font-size: 1.875rem;
 						line-height: 2rem;
-						
-						a {
-							font-size: 1.875rem;
-							line-height: 2rem;
-						}
-					}
-					
-					p {
-						font-size: 0.875rem;
-						line-height: 1rem;
 					}
 				}
+				
+				p {
+					font-size: 0.875rem;
+					line-height: 1rem;
+				}
 			}
-		}
-		
+		}		
 	}
 
-
-    a.tile-c {
-        .transition-background;
-
-        &:hover {
-            background: @lighter-blue;
-
-            &:nth-child(5n + 1){
-                background: @lighter-blue;
-            }
-            &:nth-child(5n + 2){
-                background: @light-green;
-            }
-            &:nth-child(5n + 3){
-                background: @lighter-blue;
-            }
-            &:nth-child(5n + 4){
-                background: @yellow;
-            }
-            &:nth-child(5n + 5){
-                background: @red;
-            }
-        }
-    }
-
-	@media screen and (max-width: 1400px) {
-		padding: 0 1.75rem 12rem;
-		max-width: 78.5rem;
+	a.tile-c {
+		.transition-background;
 	}
-	
+
 	@media screen and (max-width: 1024px) {
 		.tile-c {
 			&.half {
@@ -388,21 +425,35 @@
 	}
 	
 	@media screen and (max-width: 980px) {
-		
-		padding: 0 1.75rem 12rem;
-		
 		.tile-c {
 			width: 50%;
-			
+			padding-left: 1rem;
+			padding-right: 1rem;
+
 			&.half {
 				width: 25%;
 			}
+
+			&.list-menu,
+			&.half,
+			&.contact-tile {
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
+
+			&.image-tile {
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+			.overflow-content article {
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
 		}
-		
 	}
 	
 	@media screen and (max-width: 640px) {
-		
 		.tile-c {
 			width: 100%;
 			
@@ -410,7 +461,5 @@
 				width: 100%;
 			}
 		}
-		
 	}
-	
 }
