@@ -11,9 +11,8 @@
 		            <% end_if %>
 		        </div>
 		        <article>
-		            <span class='icon'>
-		                <img src='{$ThemeDir}/images/apostrophe.png'>
-		            </span>
+					<span class="quotemark">&quot;</span>
+
 		            <% if $TestimonyContent %>
 		            <p class='text'>
 		                {$TestimonyContent}

@@ -13,7 +13,7 @@ h3 {
   font-size: 30px;
   line-height: 32px;
 }
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 640px) {
   h1 {
     font-size: 30px;
   }
@@ -1185,13 +1185,13 @@ h3 {
 }
 .left-content,
 .right-content {
-  padding: 30px 0;
+  max-width: 1000px;
+}
+.right-content {
+  max-width: 1000px;
 }
 .left-content {
   font-size: 18px;
-}
-.left-content.full-width {
-  max-width: 1000px;
 }
 .left-content h1 {
   margin-bottom: 22px;
@@ -1215,7 +1215,7 @@ h3 {
   font-size: 18px;
 }
 .left-content p {
-  margin-bottom: 44px;
+  margin-bottom: 22px;
 }
 .left-content .large {
   font-size: 20px;
@@ -1233,16 +1233,26 @@ h3 {
 }
 .left-content ul,
 .left-content ol {
-  margin-left: 36px;
+  margin-bottom: 32px;
 }
 .left-content ul li,
 .left-content ol li {
   padding-left: 5px;
-  margin-bottom: 42px;
+  margin-bottom: 10px;
+}
+.left-content ul li:before,
+.left-content ol li:before {
+  font-size: 19px;
 }
 .left-content ul li h4,
 .left-content ol li h4 {
   margin: 0 0 8px 0;
+}
+.left-content ul ul,
+.left-content ol ul,
+.left-content ul ol,
+.left-content ol ol {
+  padding-top: 16px;
 }
 .left-content .feature-link:before,
 .left-content .feature-download:before,
@@ -1250,14 +1260,6 @@ h3 {
 .left-content .feature-external-link:before {
   top: 2px;
   margin-right: 18px;
-}
-.right-content {
-  padding: 78px 0 0;
-}
-@media screen and (min-width: 1200px) {
-  .right-content {
-    width: 332px;
-  }
 }
 @media screen and (max-width: 1200px) {
   .social.right-content,
@@ -1392,7 +1394,7 @@ footer.main .container.addresses address {
 .drop-menu .container .left .col p {
   margin: 0 0 8px 0;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 720px) {
   .drop-menu .container .left .col {
     padding-bottom: 40px;
   }

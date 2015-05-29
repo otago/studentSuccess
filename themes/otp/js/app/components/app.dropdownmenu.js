@@ -36,8 +36,16 @@ if(typeof app === 'undefined') { var app = {}; }
 			return items.length > 0;
 		};
 		
-		var init = function (){
+		var init = function () {
 			openDropdown();
+
+			$(".level-1 input").on('focus', function() {
+				$(this).addClass('wide');
+			});
+
+			$(".level-1 input").on('blur', function() {
+				$(this).removeClass('wide');
+			});
 		};
 		
 		return {

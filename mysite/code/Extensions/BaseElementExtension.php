@@ -9,6 +9,7 @@
 
 class BaseElementExtension extends DataExtension {
 
+	public static $has_open_wrapper = false;
 
 	function HasSidebar() {
 		$bRet = false;
@@ -25,19 +26,28 @@ class BaseElementExtension extends DataExtension {
 			'Sort:LessThanOrEqual'	=> $this->owner->Sort
 		))->sort('Sort', 'DESC')->first();
 
-		$after = BaseElement::get()->filter(array(
-			'ParentID'				=> $this->owner->ParentID,
-			'ID:not'				=> $this->owner->ID,
-			'Sort:GreaterThanOrEqual'	=> $this->owner->Sort
-		))->sort('Sort', 'ASC')->first();
-
-
-		if(($before && in_array($before->ClassName, $arrSidebarClasses)) || ($after && in_array($after->ClassName, $arrSidebarClasses))){
+		if(($before && in_array($before->ClassName, $arrSidebarClasses))) {
 			$bRet = true;
 		}
 
 		return $bRet;
 	}
 
+	function ShouldHaveWrapper() {
+		$should = strpos($this->owner->ClassName, 'Sidebar') !== false;
 
+		if($should && !self::$has_open_wrapper) {
+			self::$has_open_wrapper = true;
+
+			return true;
+		}
+
+		return false;
+	}
+
+	function ShouldCloseWrapper() {
+		$should = strpos($this->owner->ClassName, 'Sidebar') === false;
+
+		return ($should && self::$has_open_wrapper);
+	}
 } 

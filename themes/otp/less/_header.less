@@ -215,6 +215,7 @@
 						margin-right: 0.625rem;
 						opacity: 0.6;
 						width: 50px;
+						.transition(0.2s);
 						
 						&:hover {
 							opacity: 1;
@@ -223,6 +224,10 @@
 						&:focus {
 							border-color: @green;
 							opacity: 1;
+						}
+
+						&.wide {
+							width: 200px;
 						}
 					}
 				
