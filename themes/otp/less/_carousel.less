@@ -110,13 +110,16 @@
 			-webkit-hyphens: auto;
 			-moz-hyphens: auto;
 			hyphens: auto;
+			opacity: 0;
+			.transition-opacity;
 
             >* {
-                .transition-opacity;
                 opacity: 0.3;
             }
 
             &.flex-active-slide {
+            	opacity: 1;
+
                 >* {
                     opacity: 1;
                 }
