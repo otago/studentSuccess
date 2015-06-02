@@ -163,7 +163,7 @@ module.exports = function(grunt) {
                     '<%= assetPath %>/app/components/*.js',
                     '<%= assetPath %>/app/app.js'
                 ],
-                tasks: [ 'build:js' ]
+                tasks: [ 'build:js', 'uglify' ]
             },
             less: {
                 files: [ '<%= cssPath %>/*.less' ],
