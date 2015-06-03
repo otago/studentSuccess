@@ -801,7 +801,7 @@ h3 {
   margin-bottom: 56px;
 }
 .tabbed-content .container {
-  max-width: 1200px;
+  max-width: 1000px;
 }
 .tabbed-content .container .title {
   margin: 30px 0 32px;
@@ -849,9 +849,8 @@ h3 {
   }
 }
 .tab-section .content-block .itemList h2 a {
-  max-width: 1060px;
+  max-width: 1000px;
   padding: 24px 0 24px;
-  left: -6px;
 }
 .tab-section .content-block .itemList h2 a .icon-tick {
   top: 22px;
@@ -870,7 +869,7 @@ h3 {
   border: 1px solid #ffffff;
 }
 .tab-section .content-block .itemList .accordion-item {
-  max-width: 1060px;
+  max-width: 1000px;
   padding: 0 0 32px;
 }
 .tab-section .content-block .itemList .accordion-item p {
