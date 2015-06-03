@@ -4,10 +4,7 @@
             <div class='left'>
                 <% if $TitlePrefix %><h3>{$TitlePrefix}</h3><% end_if %>
                 <% if $Title %><h2>{$Title}</h2><% end_if %>
-                <% if $Content %><p>
-                    {$Content}
-                </p>
-                <% end_if %>
+                <% if $Content %>$Content<% end_if %>
             </div>
             <div class='right'>
                 <% if $RightColTitle %>

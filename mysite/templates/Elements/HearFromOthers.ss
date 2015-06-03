@@ -14,7 +14,7 @@
 		            <% end_if %>
 		        </div>
 		        <article>
-		        	<span class="quotemark">&quot;</span>
+		        	<span class="quotemark">“</span>
 		            <% if $TestimonyContent %>
 		            <p class='text'>
 		                {$TestimonyContent}
