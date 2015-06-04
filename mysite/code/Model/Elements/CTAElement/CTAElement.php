@@ -2,9 +2,9 @@
 
 class CTAElement extends BaseElement {
 
-	private static $title = "Call To Action Element";
+	private static $title = "Call To Action";
 
-	private static $description = "Call To Action Element";
+	private static $description = "Call To Action";
 
 	private static $db = array(
 		'DisplayTitle'		=> 'Varchar',
@@ -25,6 +25,7 @@ class CTAElement extends BaseElement {
 			'orange'		=> 'Orange (Default)',
 			'black'			=> 'Black'
 		)));
+		
 		$fields->replaceField('Icon', DropdownField::create('Icon')->setSource(Config::inst()->get('SiteConfig', 'Icons')));
 
 		$fields->dataFieldByName('CTAContent')->setTitle('Content');

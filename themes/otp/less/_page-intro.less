@@ -13,7 +13,7 @@
 .page-intro {
 	max-width: 66.5rem;
 	width: 100%;
-	margin: 0 auto;
+	margin: 0 auto 2rem;
 	padding: 2.125rem 1.75rem 1.375rem;
     background: @white;
     box-shadow: 0 -5px 15px -5px rgba(0, 0, 0, 0.2);
@@ -26,7 +26,7 @@
 		margin: 0 auto;
 		text-align: center;
 		font-size: 1.25rem;
-		line-height: 1.75rem;
+		line-height: 1.95rem;
 		
 		.title {
 			color: @blue;
@@ -187,7 +187,7 @@
 
 .sort-by {
 	border-top: 1px solid @grey;
-	width: 96%;
+	width: 90%;
 	max-width: 62.5rem;
 	margin: 0 auto;
 	padding: 1rem 0;
@@ -220,6 +220,7 @@
 //
 .social-blocks {
 	position: absolute;
+	overflow: hidden;
 	top: 1rem;
 	right: 1rem;
 
@@ -257,14 +258,14 @@
 			}
 		}
 	}
-}
 
-@media screen and (max-width: 600px) {
-	.social-blocks {
+	@media screen and (max-width: 600px) {
 		position: relative;
 		width: 100%;
-	}
 
-	float: left;
-	margin-right: 1px;
+		li {
+			float: left;
+			margin-right: 1px;
+		}
+	}
 }

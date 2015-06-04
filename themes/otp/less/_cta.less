@@ -1,7 +1,6 @@
 .cta {
-	
 	overflow: hidden;
-	margin-bottom: 2.625rem;
+	margin-bottom: 0;
 	background: @yellow;
 	
 	&.black {
@@ -58,6 +57,7 @@
 			margin: 0;
 			font-size: 1.25rem;
 			color: @dark-grey;
+			font-weight: bold;
 			padding-bottom: 1.625rem;
 		}
 		
@@ -75,7 +75,7 @@
             .transition;
 
             &:hover {
-                background: @green;
+                background: darken(@red, 10%);
             }
 		}
 		
@@ -93,18 +93,14 @@
 		}
 		
 		article {
-            padding-left: 1.75rem;
-            padding-right: 1.75rem;
-			width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+			width: auto;
 			float: none;
 		
 			.wrapper {
 				padding: 0;
 			}
 		}
-		
 	}
-	
-	
-	
 }

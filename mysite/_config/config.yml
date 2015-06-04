@@ -44,7 +44,6 @@ Page:
     - CTAElement
     - Accordion
     - SidebarTestimony
-    - SidebarShareElement
     - SidebarImageElement
     - ElementImage
     - ElementFile
@@ -124,3 +123,9 @@ SiteTree:
     - Contactable
 ElementFile:
   title: "CTA to Download File"
+ElementExternalLink:
+  title: "Featured external link"
+ElementInternalLink:
+  title: "Featured internal link"
+ElementImage:
+  title: "Inline image"

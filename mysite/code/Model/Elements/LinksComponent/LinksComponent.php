@@ -1,16 +1,10 @@
 <?php
-/**
- * Created by Nivanka Fonseka (nivanka@silverstripers.com).
- * User: nivankafonseka
- * Date: 5/16/15
- * Time: 1:41 PM
- * To change this template use File | Settings | File Templates.
- */
 
 class LinksComponent extends BaseElement {
 
-	private static $title = "Links Component";
-	private static $description = "Shows a list of linkst";
+	private static $title = "Group of links";
+	
+	private static $description = "Shows a list of links";
 
 	private static $db = array(
 		'DisplayTitle'		=> 'Varchar(300)',

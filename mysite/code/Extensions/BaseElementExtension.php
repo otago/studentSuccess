@@ -21,7 +21,6 @@ class BaseElementExtension extends DataExtension {
 	);
 
 	private $sidebarClasses = array(
-		'SidebarShareElement',
 		'SidebarTestimony',
 		'SidebarImageElement'
 	);
