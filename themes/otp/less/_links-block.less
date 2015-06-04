@@ -6,6 +6,7 @@
 	&.green {
 		background: @light-green;
 
+		h3,
 		article h3 {
 			color: #fff;
 		}
@@ -14,12 +15,14 @@
 	&.red {
 		background: @red;
 
+		h3,
 		article h3 {
 			color: #fff;
 		}
 	}
 
 	&.blue {
+		h3,
 		article h3 {
 			color: #fff;
 		}
@@ -56,7 +59,7 @@
 				li {
 					padding: 0.625rem 0;
 					border-bottom: @white; 
-					border-bottom: 1px solid rgba(255,255,255,.5);
+					border-bottom: 1px solid rgba(255,255,255,.2);
 
 					&:last-child {
 						border-bottom: 0;
@@ -97,7 +100,7 @@
 		
 	}
 	
-	@media screen and (max-width: 980px){
+	@media screen and (max-width: 980px) {
 
         .component-alignment.boxed-element {
             padding-left: 0;
@@ -115,11 +118,6 @@
 				float: none;
 				width: 100%;
 			}
-		
-		}
-		
-		
+		}	
 	}
-	
-
 }

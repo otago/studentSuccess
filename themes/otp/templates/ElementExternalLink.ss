@@ -1,0 +1,5 @@
+<div class="component-alignment boxed-element left-content external_link ">
+	<a class="feature-link" href="$LinkURL" <% if NewWindow %>target="_blank"<% end_if %>><strong><% if LinkText %>$LinkText<% else %>$LinkURL<% end_if %></strong>
+	$LinkDescription
+	</a>
+</div>

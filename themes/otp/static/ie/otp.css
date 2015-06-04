@@ -1010,6 +1010,22 @@ h3 {
 .sort-by .options .option-holder .chosen-container-single .chosen-single {
   font-size: 16px;
 }
+.social-blocks {
+  top: 16px;
+  right: 16px;
+}
+.social-blocks ul li a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+}
+.social-blocks ul li a.facebook {
+  font-size: 19px;
+}
+.social-blocks ul li a .icon {
+  line-height: 40px;
+}
 .masonry-content {
   padding: 0 0 32px;
 }
@@ -1233,31 +1249,37 @@ h3 {
 .left-content ol {
   margin-bottom: 32px;
 }
-.left-content ul li,
-.left-content ol li {
-  padding-left: 5px;
-  margin-bottom: 10px;
-}
-.left-content ul li:before,
-.left-content ol li:before {
-  font-size: 19px;
-}
-.left-content ul li h4,
-.left-content ol li h4 {
-  margin: 0 0 8px 0;
-}
 .left-content ul ul,
 .left-content ol ul,
 .left-content ul ol,
 .left-content ol ol {
   padding-top: 16px;
 }
-.left-content .feature-link:before,
-.left-content .feature-download:before,
-.left-content .feature-mail:before,
-.left-content .feature-external-link:before {
+.left-content li {
+  padding-left: 5px;
+  margin-bottom: 10px;
+}
+.left-content li:before {
+  font-size: 19px;
+  left: -10px;
+}
+.left-content li h4 {
+  margin: 0 0 8px 0;
+}
+.feature-link,
+.feature-download,
+.feature-mail,
+.feature-external-link {
+  padding-left: 24px;
+}
+.feature-link:before,
+.feature-download:before,
+.feature-mail:before,
+.feature-external-link:before {
   top: 2px;
-  margin-right: 18px;
+}
+.feature-link {
+  padding-left: 32px;
 }
 @media screen and (max-width: 1200px) {
   .social.right-content,
@@ -1267,15 +1289,11 @@ h3 {
     padding-right: 28px;
   }
 }
-.social.right-content {
-  margin-bottom: 80px;
-  padding-right: 50px;
-}
-.social.right-content ul li a {
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  font-size: 24px;
+@media screen and (max-width: 640px) {
+  .left-content ul,
+  .left-content ol {
+    padding-left: 16px;
+  }
 }
 .testimony-content.right-content {
   padding-top: 16px;

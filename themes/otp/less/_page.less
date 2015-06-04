@@ -52,7 +52,7 @@
 }
 .red {
 	.button-link {
-		background: @drak-grey;
+		background: @dark-grey;
 		
 		&:hover {
 			background: @blue;
@@ -235,107 +235,126 @@
 		list-style-position: outside;
 		margin-bottom: 2rem;
 
-		li {
-			padding-left: 0.325rem;
-			margin-bottom: 0.625rem;
-			list-style: none;
-
-			&:before {
-    			content: "• ";
-    			font-size: 1.2rem;
-    			color: @blue;
-			}
-
-			h4 {
-				font-weight: 400;
-				margin: 0 0 0.5rem 0;
-			}
-			
-			p {
-				color: @darker-grey;
-				margin: 0;
-			}
-		}
-
 		ul, ol {
 			padding-top: 1rem;
 		}
 	}
-	
+
+	li {
+		padding-left: 0.325rem;
+		margin-bottom: 0.625rem;
+		list-style: none;
+		position: relative;
+
+		&:before {
+			content: "• ";
+			font-size: 1.2rem;
+			position: absolute;
+			left: -0.6rem;
+			color: @blue;
+		}
+
+		h4 {
+			font-weight: 400;
+			margin: 0 0 0.5rem 0;
+		}
+		
+		p {
+			color: @darker-grey;
+			margin: 0;
+		}
+	}
+
 	ol {
 		list-style: decimal-leading-zero;
 		list-style-type: decimal-leading-zero;
 	}
+}
+
+.feature-link, 
+.feature-download, 
+.feature-mail,
+.feature-external-link {
+	text-decoration: none;
+	color: @dark-grey;
+	padding-left: 1.5rem;
+	position: relative;
+	display: block;
 	
-	.feature-link, 
-	.feature-download, 
-	.feature-mail,
-	.feature-external-link {
+	a {
+		color: @dark-grey;
 		text-decoration: none;
-		color: @drak-grey;
+		.transition;
 		
-		a {
-			color: @drak-grey;
-			text-decoration: none;
-			.transition;
-			
-			&:hover {
-				color: @blue;
-			}
+		&:hover {
+			color: @blue;
 		}
+	}
+
+	strong {
+		display: block;
+	}
+	
+	&:hover {
+		color: @blue;
+	}
+	
+	&a {
+		display: inline-block;
+		
+		&:hover {
+			color: @blue;
+		}
+	}
+	
+	&:before {
+		font-family: 'iconmoon';
+	  	speak: none;
+	  	font-style: normal;
+	  	font-weight: normal;
+	  	font-variant: normal;
+	  	text-transform: none;
+	  	line-height: 1;
+	  	-webkit-font-smoothing: antialiased;
+	  	-moz-osx-font-smoothing: grayscale;
+		top: 0.125rem;
+		position: absolute;
+		left: 0;
+		.transition;
 		
 		&:hover {
 			color: @blue;
 		}
 		
-		&a {
-			display: inline-block;
-			
-			&:hover {
-				color: @blue;
-			}
-		}
-		
-		&:before {
-			font-family: 'iconmoon';
-		  	speak: none;
-		  	font-style: normal;
-		  	font-weight: normal;
-		  	font-variant: normal;
-		  	text-transform: none;
-		  	line-height: 1;
-		  	-webkit-font-smoothing: antialiased;
-		  	-moz-osx-font-smoothing: grayscale;
-			position: relative;
-			top: 0.125rem;
-			margin-right: 1.125rem;
-			.transition;
-			
-			&:hover {
-				color: @blue;
-			}
-			
-		}
-		
-	}
-
-	.feature-link:before {
-		content: "\e607";
 	}
 	
-	.feature-mail:before {
-		content: "\e605";
-	}
-	
-	.feature-external-link:before {
-		content: "\e60b";
-	}
-	
-	.feature-download:before {
-		content: "\e602";
-	}
 }
 
+.feature-link {
+	padding-left: 2rem;
+}
+
+.feature-link:before {
+	content: "\e607";
+}
+
+.feature-mail:before {
+	content: "\e605";
+}
+
+.feature-external-link:before {
+	content: "\e60b";
+}
+
+.feature-download:before {
+	content: "\e602";
+}
+
+.ElementFile {
+	.component-alignment.boxed-element {
+		padding: 0;
+	}
+}
 
 .social.right-content,
 .testimony-content.right-content,
@@ -345,44 +364,6 @@ figure.right-content {
 		clear: both;
 		padding-left: 1.75rem;
 		padding-right: 1.75rem;
-	}
-}
-//
-// Social
-//
-.social.right-content {
-	margin-bottom: 5rem;
-	padding-right: 3.125rem;
-	.boxsizing;
-	
-	ul {
-		.list-reset;
-		li {
-			overflow: hidden;
-			margin-bottom: 1px;
-			
-			a {
-				float: right;
-				width: 3.75rem;
-				height: 3.75rem;
-				color: @white;
-				background: @drak-grey;
-				text-align: center;
-				line-height: 3.75rem;
-				.transition;
-				font-size: 1.500rem;
-				
-				&:hover {
-					background: @blue;
-				};
-			}
-			
-			@media screen and (max-width: 1200px){
-				float: left;
-				margin-right: 1px;
-			}
-			
-		}
 	}
 }
 
@@ -407,6 +388,16 @@ figure.right-content {
 		}
 	}
 }
+
+
+@media screen and (max-width: 640px) {
+	.left-content {
+		ul, ol {
+			padding-left: 1rem;
+		}
+	}
+}
+
 //
 // testimony-content
 //

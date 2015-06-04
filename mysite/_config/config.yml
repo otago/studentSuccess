@@ -122,3 +122,5 @@ MasonryContent:
 SiteTree:
   extensions:
     - Contactable
+ElementFile:
+  title: "CTA to Download File"

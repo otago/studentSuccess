@@ -16,7 +16,6 @@ app.Modules = [
 	'itemlist',
 	'squareblocks',
 	'tabbedcontent',
-    'social',
     'fancybox',
     'helpful',
     'glossary',

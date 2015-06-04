@@ -11,22 +11,51 @@ class BaseElementExtension extends DataExtension {
 
 	public static $has_open_wrapper = false;
 
+	public static $sidebar_first = null;
+
+	private $allowed = array(
+		'ElementContent',
+		'ElementFile',
+		'ElementExternalLink',
+		'ElementInternalLink'
+	);
+
+	private $sidebarClasses = array(
+		'SidebarShareElement',
+		'SidebarTestimony',
+		'SidebarImageElement'
+	);
+
 	function HasSidebar() {
 		$bRet = false;
 
-		$arrSidebarClasses = array(
-			'SidebarShareElement',
-			'SidebarTestimony',
-			'SidebarImageElement'
-		);
+		$arrSidebarClasses = $this->sidebarClasses;
 
-		$before = BaseElement::get()->filter(array(
+		$after = BaseElement::get()->filter(array(
 			'ParentID'				=> $this->owner->ParentID,
 			'ID:not'				=> $this->owner->ID,
-			'Sort:LessThanOrEqual'	=> $this->owner->Sort
-		))->sort('Sort', 'DESC')->first();
+			'Sort:GreaterThan'	=> $this->owner->Sort
+		))->sort('Sort', 'ASC')->first();
 
-		if(($before && in_array($before->ClassName, $arrSidebarClasses))) {
+		if(($after && in_array($after->ClassName, $arrSidebarClasses))) {
+			$bRet = true;
+		}
+
+		return $bRet;
+	}
+
+	function NextIsMoreContent() {
+		$bRet = false;
+
+		$arrSidebarClasses = $this->allowed;
+
+		$after = BaseElement::get()->filter(array(
+			'ParentID'				=> $this->owner->ParentID,
+			'ID:not'				=> $this->owner->ID,
+			'Sort:GreaterThan'	=> $this->owner->Sort
+		))->sort('Sort', 'ASC')->first();
+
+		if(($after && in_array($after->ClassName, $arrSidebarClasses))) {
 			$bRet = true;
 		}
 
@@ -36,18 +65,48 @@ class BaseElementExtension extends DataExtension {
 	function ShouldHaveWrapper() {
 		$should = strpos($this->owner->ClassName, 'Sidebar') !== false;
 
-		if($should && !self::$has_open_wrapper) {
-			self::$has_open_wrapper = true;
+		if(!self::$has_open_wrapper) {
+			if($should) {
+				self::$has_open_wrapper = true;
+				self::$sidebar_first = true;
 
-			return true;
+				return true;
+			} else {
+				// or if this is a generic content component and the next one contains 
+				// a side element then we should
+				if(in_array($this->owner->ClassName, $this->allowed) && $this->HasSidebar()) {
+					self::$has_open_wrapper = true;
+					self::$sidebar_first = false;
+
+					return true;
+				}
+			}
 		}
 
 		return false;
 	}
 
 	function ShouldCloseWrapper() {
-		$should = strpos($this->owner->ClassName, 'Sidebar') === false;
+		if(!self::$has_open_wrapper) {
+			return false;
+		}
 
-		return ($should && self::$has_open_wrapper);
+		$sidebar = strpos($this->owner->ClassName, 'Sidebar') !== false;
+
+		if(self::$sidebar_first && !$sidebar && !$this->NextIsMoreContent()) {
+			self::$has_open_wrapper = false;
+			self::$sidebar_first = null;
+
+			return true;
+		}
+
+		if(!self::$sidebar_first && !$this->HasSidebar()) {
+			self::$has_open_wrapper = false;
+			self::$sidebar_first = null;
+
+			return true;
+		}
+
+		return false;
 	}
 } 
