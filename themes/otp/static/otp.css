@@ -5620,14 +5620,33 @@ figure.element figcaption p {
 .activity_results {
   width: 100%;
   text-align: center;
+  padding: 2rem 0;
 }
 .activity_results span {
-  font-size: 5rem;
+  font-size: 8rem;
   color: #0c79c3;
   font-weight: bold;
   position: relative;
+  padding-right: 3.5rem;
 }
 .activity_results span:after {
+  display: block;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem;
+  width: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  height: 2rem;
+  border-radius: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.activity_results span.right {
+  margin-right: 3rem;
+}
+.activity_results span.right:after {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -5639,18 +5658,11 @@ figure.element figcaption p {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #fff;
-  font-size: 2rem;
-  padding: 5px;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 1rem;
-}
-.activity_results span.right:after {
   background: #9aca3c;
   content: "\e613";
 }
 .activity_results span.wrong:after {
+  font-size: 3rem;
   background: #ef563c;
   content: "x";
 }

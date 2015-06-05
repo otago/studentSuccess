@@ -24,12 +24,13 @@ if(typeof app === 'undefined') { var app = {}; }
 					btn = $(this),
 					activity = $(this).parents('.activity'),
 					step = activity.find('.activity_individual.current'),
+					steps = activity.find('.activity_individual'),
 					text = step.find('.activity_text'),
 					nextStep = step.next('.activity_individual'),
 					options = text.find('li'),
 					canProgress = true;
 
-				if($(this).hasClass('back')) {
+				if($(this).hasClass('back') && !$(this).hasClass('review')) {
 					nextStep = step.prev('.activity_individual');
 
 					//
@@ -77,11 +78,94 @@ if(typeof app === 'undefined') { var app = {}; }
 					return;
 				}
 
+				if($(this).hasClass('review')) {
+					// review. If button has review class then we're going back
+					// in each step in read only mode.
+
+					// special case for on the results slide, go back to the 
+					// first non text slide
+					if(step.hasClass('activity_ResultsSlide')) {
+						// take the user back to the first slide
+						steps.each(function(i, elem) {
+							if($(elem).hasClass('activity_TextSlide')) {
+								return;
+							}
+
+							step.animate({
+								left: '-20px',
+								opacity: 0
+							}).removeClass('current');
+
+							$(elem).css({
+								opacity: 0,
+								left: '20px'
+							}).addClass('current').animate({
+								opacity: 1,
+								left: 0
+							}, function() {
+								// go through each of the steps and make sure they have been displaying results
+								steps.each(function(i, s) {
+									if($(s).hasClass('activity_ResultsSlide') || $(s).hasClass('.activity_TextSlide')) {
+										return;
+									}
+
+									$(s).find('[data-validation=correct]').addClass('correct');
+									$(s).find('[data-validation=wrong]').addClass('wrong');
+
+									if($(s).data('valid')) {
+										$(s).find('.activity_fail_warning').hide();
+										$(s).find('.activity_fail').hide();
+										$(s).find('.activity_success').show();
+									} else {
+										$(s).find('.activity_fail_warning').hide();
+										$(s).find('.activity_fail').show();
+										$(s).find('.activity_success').hide();
+									}
+								});
+
+								btn.removeClass('loading');
+
+								if($(elem).hasClass('activity_ResultsSlide')) {
+									btn.text('See correct answers');
+								} else {
+									btn.text('Next');
+								}
+							});
+
+							return false;
+						});
+					} else {
+						if($(this).hasClass('back')) {
+							nextStep = step.prev('.activity_individual');
+						}
+						
+						step.animate({
+							left: '20px',
+							opacity: 0
+						}).removeClass('current');
+
+						nextStep.css({
+							opacity: 0,
+							left: '-20px'
+						}).addClass('current').animate({
+							opacity: 1,
+							left: 0
+						}, function() {
+							$('html, body').animate({
+								'scrollTop': nextStep.offset().top
+							});
+						});
+
+					}
+
+					return;
+				}
+
 				// we need to know whether this is valid on each step or at
 				// the end. If this is the last stop then we need to populate
 				// the 
 				var validationModel = activity.data('validation-method');
-				var showResults = validationModel == "OnEachStep";
+				var showResults = (validationModel == "OnEachStep");
 
 				// validate the users current step first. Ensure that 
 				// options exist.
@@ -114,15 +198,23 @@ if(typeof app === 'undefined') { var app = {}; }
 								valid = false;
 
 								// if this is on the 3rd attempt then show the user the error messages
-								if(attempt > 2 && showResults) {
-									$(check).removeClass('correct');
-									$(check).addClass('wrong');
+								if(attempt > 2) {
+									if(showResults) {
+										$(check).removeClass('correct');
+										$(check).addClass('wrong');
+									}
 								}
+
+								$(check).attr('data-validation', 'wrong');
 							} else {
-								if(attempt > 2 && showResults) {
-									$(check).removeClass('wrong');
-									$(check).addClass('correct');
+								if(attempt > 2) {
+									if(showResults) {
+										$(check).removeClass('wrong');
+										$(check).addClass('correct');
+									}
 								}
+
+								$(check).attr('data-validation', 'correct');
 							}
 						});
 
@@ -133,10 +225,14 @@ if(typeof app === 'undefined') { var app = {}; }
 									isValidAnswer = false;
 									valid = false;
 
-									if(attempt > 2 && showResults) {
-										$(opt).removeClass('correct');
-										$(opt).addClass('wrong');
+									if(attempt > 2) {
+										if(showResults) {
+											$(opt).removeClass('correct');
+											$(opt).addClass('wrong');
+										}
 									}
+
+									$(opt).attr('data-validation', 'wrong');
 								}
 							});
 						});
@@ -145,15 +241,23 @@ if(typeof app === 'undefined') { var app = {}; }
 							if($(answers.get(i)).text() != $(elem).text()) {
 								valid = false;
 
-								if(attempt > 2 && showResults) {
-									$(elem).removeClass('correct');
-									$(elem).addClass('wrong');
+								if(attempt > 2) {
+									if(showResults) {
+										$(elem).removeClass('correct');
+										$(elem).addClass('wrong');
+									}
 								}
+
+								$(elem).attr('data-validation', 'wrong');
 							} else {
-								if(attempt > 2 && showResults) {
-									$(elem).addClass('correct');
-									$(elem).removeClass('wrong');
+								if(attempt > 2) {
+									if(showResults) {
+										$(elem).addClass('correct');
+										$(elem).removeClass('wrong');
+									}
 								}
+
+								$(elem).attr('data-validation', 'correct');
 							}
 						});
 					}
@@ -252,11 +356,16 @@ if(typeof app === 'undefined') { var app = {}; }
 
 						var remaining = nextStep.nextAll('.activity_individual').length;
 						if(remaining < 1) {
-							if(validationModel == "OnComplete") {
-								// @todo
-							}
+							activity.addClass('readonly');
+							markReadonly();
 
-							btn.addClass('hidden');
+							if(validationModel == "OnComplete") {
+								// add a button to see your results
+								btn.text('See correct answers').addClass('review');
+								btn.siblings('.back').addClass('review').addClass('hidden');
+							} else {
+								btn.addClass('hidden');
+							}
 						} else if(remaining == 1) {
 							btn.html('Finish');
 						} else {
@@ -274,12 +383,22 @@ if(typeof app === 'undefined') { var app = {}; }
 				}
 			});
 			
+			var markReadonly = function() {
+				$(".activity_text__DragAndDrop").each(function(i, elem) {
+					$('ul', elem).sortable('disable');
+				});
+			};
+
 			$(".activity_text__DragAndDrop").each(function(i, elem) {
 				$('ul', elem).sortable();
 			});
 
 			$(".activity_text__Paragraph, .activity_text__MultiChoice").each(function(i, elem) {
 				$('li', elem).click(function() {
+					if($(this).parents('.activity').hasClass('readonly')) {
+						return false;
+					}
+
 					$(this).toggleClass('selected');
 				});
 			});

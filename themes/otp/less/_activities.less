@@ -186,26 +186,36 @@
 .activity_results {
 	width: 100%;
 	text-align: center;
+	padding: 2rem 0;
 
 	span {
-		font-size: 5rem;
+		font-size: 8rem;
 		color: @blue;
 		font-weight: bold;
 		position: relative;
+		padding-right: 3.5rem;
 
 		&:after {
-			.icon-font();
-
+			display: block;
 			color: #fff;
 			font-size: 2rem;
-			padding: 5px;
+			padding: 0.5rem;
 			width: 2rem;
+			text-align: center;
+			line-height: 2rem;
 			height: 2rem;
-			border-radius: 1rem;
+			border-radius: 2rem;
+			position: absolute;
+			top: 0;
+			right: 0;
 		}
 
 		&.right {
+			margin-right: 3rem;
+
 			&:after {
+				.icon-font();
+
 				background: @green;
 				content: "\e613";
 			}
@@ -213,6 +223,7 @@
 
 		&.wrong {
 			&:after {
+				font-size: 3rem;
 				background: @red;
 				content: "x";
 			}
