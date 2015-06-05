@@ -35,7 +35,7 @@
             </header>
 
             <% loop Activities %>
-                <article class="activity_individual <% if First %>current<% end_if %>" data-activity-id="$ID">
+                <article class="activity_individual  activity_{$Presentation} <% if First %>current<% end_if %>" data-activity-id="$ID">
                     <h3>$Title</h3>
 
                     $Description
@@ -71,13 +71,6 @@
                     </div>
                 </article>
             <% end_loop %>
-
-            <% if Validation == OnComplete %>
-                <article class="activity_individual activity_results">
-                    <p class="correct"></p>
-                    <p class="incorrect"></p>
-                </article>
-            <% end_if %>
 
             <footer class="activity_navigation">
                 <span class="btn next">Start &rarr;</span>

@@ -1,9 +1,12 @@
 <div class='checklist'>
     <div class='container boxed-element component-alignment'>
-
-        <span class='icon {$Icon}'></span>
+        <span class='icon icon-cta'></span>
+        
         <article class='intro'>
-            <h3>{$DisplayTitle}</h3>
+            <% if not HideTitle %>
+                <h3>{$Title}</h3>
+            <% end_if %>
+
             <% if $Summary %><p>{$Summary}</p><% end_if %>
         </article>
 

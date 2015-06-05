@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by Nivanka Fonseka (nivanka@silverstripers.com).
- * User: nivankafonseka
- * Date: 5/14/15
- * Time: 1:44 PM
- * To change this template use File | Settings | File Templates.
- */
 
 class CaseStudy extends BaseElement {
 
@@ -14,7 +7,6 @@ class CaseStudy extends BaseElement {
 	private static $description = "Case Study";
 
 	private static $db = array(
-		'DisplayTitle'		=> 'Varchar',
 		'Color'				=> 'Varchar',
 		'Summary'			=> 'Text',
 		'CaseStudyContent'	=> 'HTMLText'
@@ -24,10 +16,17 @@ class CaseStudy extends BaseElement {
 		'Image'				=> 'Image'
 	);
 
-	function getCMSFields(){
+	private static $field_labels = array(
+		'Summary' => 'Pull quote'
+	);
+
+	protected $enable_title_in_template = true;
+	
+	function getCMSFields() {
 		$fields = parent::getCMSFields();
 
 		$fields->removeByName('Color');
+
 		$fields->addFieldToTab('Root.Main', DropdownField::create('Color')->setSource(array(
 			'green'		=> 'Green',
 			'red'		=> 'Red',

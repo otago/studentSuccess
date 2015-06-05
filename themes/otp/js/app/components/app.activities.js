@@ -26,7 +26,8 @@ if(typeof app === 'undefined') { var app = {}; }
 					step = activity.find('.activity_individual.current'),
 					text = step.find('.activity_text'),
 					nextStep = step.next('.activity_individual'),
-					options = text.find('li');
+					options = text.find('li'),
+					canProgress = true;
 
 				if($(this).hasClass('back')) {
 					nextStep = step.prev('.activity_individual');
@@ -80,86 +81,87 @@ if(typeof app === 'undefined') { var app = {}; }
 				// the end. If this is the last stop then we need to populate
 				// the 
 				var validationModel = activity.data('validation-method');
+				var showResults = validationModel == "OnEachStep";
 
-				if(validationModel == "OnComplete") {
-
-				} else if(validationModel == "OnEachStep") {
-					// validate the users current step first. Ensure that 
-					// options exist.
-					var attempt = step.data('attempt');
-					
-					if(!attempt) attempt = 0;
-					attempt++;
-
-					step.data('attempt', attempt);
-
-					if(options.length > 1) {
+				// validate the users current step first. Ensure that 
+				// options exist.
+				var attempt = step.data('attempt');
 				
-						var answers = step.find('.activity_answers li');
-					
-						// validate the options based on the the type of field
-						// the user has created
-						if(step.find('.activity_text__MultiChoice').length > 0 || step.find('.activity_text__Paragraph').length > 0) {
-							var selected = options.find('.selected');
+				if(!attempt) attempt = 0;
+				attempt++;
 
-							selected.each(function(i,  check) {
-								var isValidAnswer = false;
+				step.data('attempt', attempt);
 
-								answers.each(function(x, answer) {
-									if($(answer).text() == $(check).text()) {
-										isValidAnswer = true;
-									}
-								});
+				if(options.length > 1) {
+			
+					var answers = step.find('.activity_answers li');
+				
+					// validate the options based on the the type of field
+					// the user has created
+					if(step.find('.activity_text__MultiChoice').length > 0 || step.find('.activity_text__Paragraph').length > 0) {
+						var selected = options.find('.selected');
 
-								if(!isValidAnswer) {
-									valid = false;
+						selected.each(function(i,  check) {
+							var isValidAnswer = false;
 
-									// if this is on the 3rd attempt then show the user the error messages
-									if(attempt > 2) {
-										$(check).removeClass('correct');
-										$(check).addClass('wrong');
-									}
-								} else {
-									if(attempt > 2) {
-										$(check).removeClass('wrong');
-										$(check).addClass('correct');
-									}
-								}
-							});
-
-							// if this is on the 3rd attempt then show the user the error messages
 							answers.each(function(x, answer) {
-								options.each(function(o, opt) {
-									if(($(opt).text() == $(answer).text()) && !$(opt).hasClass('selected')) {
-										isValidAnswer = false;
-										valid = false;
-
-										if(attempt > 2) {
-											$(opt).removeClass('correct');
-											$(opt).addClass('wrong');
-										}
-									}
-								});
+								if($(answer).text() == $(check).text()) {
+									isValidAnswer = true;
+								}
 							});
-						} else if(step.find('.activity_text__DragAndDrop').length > 0 || step.find('.activity_text__Replace').length > 0) {
-							options.each(function(i, elem) {
-								if($(answers.get(i)).text() != $(elem).text()) {
+
+							if(!isValidAnswer) {
+								valid = false;
+
+								// if this is on the 3rd attempt then show the user the error messages
+								if(attempt > 2 && showResults) {
+									$(check).removeClass('correct');
+									$(check).addClass('wrong');
+								}
+							} else {
+								if(attempt > 2 && showResults) {
+									$(check).removeClass('wrong');
+									$(check).addClass('correct');
+								}
+							}
+						});
+
+						// if this is on the 3rd attempt then show the user the error messages
+						answers.each(function(x, answer) {
+							options.each(function(o, opt) {
+								if(($(opt).text() == $(answer).text()) && !$(opt).hasClass('selected')) {
+									isValidAnswer = false;
 									valid = false;
 
-									if(attempt > 2) {
-										$(elem).removeClass('correct');
-										$(elem).addClass('wrong');
-									}
-								} else {
-									if(attempt > 2) {
-										$(elem).addClass('correct');
-										$(elem).removeClass('wrong');
+									if(attempt > 2 && showResults) {
+										$(opt).removeClass('correct');
+										$(opt).addClass('wrong');
 									}
 								}
 							});
-						}
+						});
+					} else if(step.find('.activity_text__DragAndDrop').length > 0 || step.find('.activity_text__Replace').length > 0) {
+						options.each(function(i, elem) {
+							if($(answers.get(i)).text() != $(elem).text()) {
+								valid = false;
 
-						if(!valid) {
+								if(attempt > 2 && showResults) {
+									$(elem).removeClass('correct');
+									$(elem).addClass('wrong');
+								}
+							} else {
+								if(attempt > 2 && showResults) {
+									$(elem).addClass('correct');
+									$(elem).removeClass('wrong');
+								}
+							}
+						});
+					}
+
+					if(!valid) {
+						step.data('valid', false);
+
+						if(showResults) {
 							step.find('.activity_success').hide();
 
 							if(attempt > 2) {
@@ -177,7 +179,11 @@ if(typeof app === 'undefined') { var app = {}; }
 
 								canProgress = false;
 							}
-						} else {
+						}
+					} else {
+						step.data('valid', true);
+
+						if(showResults) {
 							step.find('.activity_fail_warning').hide();
 							step.find('.activity_fail').hide();
 
@@ -200,6 +206,33 @@ if(typeof app === 'undefined') { var app = {}; }
 						.removeClass('current').parents('li').next('li').find('a')
 						.addClass('current');
 
+					if(nextStep.hasClass('activity_ResultsSlide')) {
+						// this slide is a results slide so go through each of the previous steps and get the count of
+						// valid and invalid results.
+
+						var existing = nextStep.find('.results');
+
+						if(existing.length < 1) {
+							existing = $("<div class='activity_results'><span class='right'></span><span class='wrong'></span></div>");
+
+							nextStep.find('h3').after(existing);
+						}
+
+						var steps = activity.find('.activity_individual'),
+							right = 0,
+							wrong = 0;
+
+						steps.each(function(i, elem) {
+							if($(elem).data('valid') === false) {
+								wrong++;
+							} else if($(elem).data('valid') === true) {
+								right++;
+							}
+						});
+
+						nextStep.find('.right').text(right);
+						nextStep.find('.wrong').text(wrong);
+					}
 					// progress the next button
 					step.animate({
 						left: '-20px',
@@ -219,6 +252,10 @@ if(typeof app === 'undefined') { var app = {}; }
 
 						var remaining = nextStep.nextAll('.activity_individual').length;
 						if(remaining < 1) {
+							if(validationModel == "OnComplete") {
+								// @todo
+							}
+
 							btn.addClass('hidden');
 						} else if(remaining == 1) {
 							btn.html('Finish');

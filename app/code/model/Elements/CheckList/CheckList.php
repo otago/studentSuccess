@@ -1,20 +1,12 @@
 <?php
-/**
- * Created by Nivanka Fonseka (nivanka@silverstripers.com).
- * User: nivankafonseka
- * Date: 5/14/15
- * Time: 2:20 PM
- * To change this template use File | Settings | File Templates.
- */
 
 class CheckList extends BaseElement {
 
-	private static $title = "Check List";
-	private static $description = "Check Lists Study";
+	private static $title = "Interactive checklist";
+
+	private static $description = "Interactive checklist";
 
 	private static $db = array(
-		'DisplayTitle'		=> 'Varchar',
-		'Icon'				=> 'Varchar',
 		'Summary'			=> 'Text'
 	);
 
@@ -22,15 +14,19 @@ class CheckList extends BaseElement {
 		'Items'				=> 'CheckListItem'
 	);
 
-	public function getCMSFields(){
+	protected $enable_title_in_template = true;
+
+	private static $field_labels = array(
+		'Summary' => 'Intro'
+	);
+
+	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
 		$fields->removeByName(array(
 			'Items',
 			'Settings'
 		));
-
-		$fields->replaceField('Icon', DropdownField::create('Icon')->setSource(Config::inst()->get('SiteConfig', 'Icons')));
 
 		$fields->addFieldsToTab('Root.Items', array(
 			$gridField = FormUtils::MakeDragAndDropGridField('Items', 'Items', $this->Items(), 'SortOrder')

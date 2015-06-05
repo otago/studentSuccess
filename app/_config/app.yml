@@ -37,8 +37,6 @@ Page:
   extensions:
     - ElementPageExtension
   allowed_elements:
-    - WayFinder
-    - HearFromOthers
     - ElementContent
     - Carousel
     - CTAElement
@@ -49,8 +47,6 @@ Page:
     - ElementFile
     - ElementInternalLink
     - ElementExternalLink
-    - MasonryContentsWithFilters
-    - MasonryContent
     - LinksComponent
     - TabbedCheckList
     - CaseStudy
@@ -58,6 +54,15 @@ Page:
     - CheckList
     - CarouselWithUpperLetter
     - MatrixElement
+HomePage:
+  allowed_elements:
+    - HearFromOthers
+LandingPage:
+  allowed_elements:
+    - MasonryContent
+LandingSearchPage:
+  allowed_elements:
+    - MasonryContentsWithFilters
 Controller:
   extensions:
     - ControllerExtension

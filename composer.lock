@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7f707244a4c16db3b010cf9e2106b12c",
+    "hash": "fa7c6d13da7e6a78ce2938822fff5f0f",
     "packages": [
         {
             "name": "composer/installers",
@@ -182,12 +182,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dnadesign/silverstripe-elemental.git",
-                "reference": "f39551d6eefc2039d5e3ddb4e16adbc80085595f"
+                "reference": "05e1ca854f0d5b44f9904b927b41f5b346ae735e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dnadesign/silverstripe-elemental/zipball/f39551d6eefc2039d5e3ddb4e16adbc80085595f",
-                "reference": "f39551d6eefc2039d5e3ddb4e16adbc80085595f",
+                "url": "https://api.github.com/repos/dnadesign/silverstripe-elemental/zipball/05e1ca854f0d5b44f9904b927b41f5b346ae735e",
+                "reference": "05e1ca854f0d5b44f9904b927b41f5b346ae735e",
                 "shasum": ""
             },
             "require": {
@@ -219,7 +219,7 @@
                 "silverstripe",
                 "widget"
             ],
-            "time": "2015-05-20 21:40:29"
+            "time": "2015-05-24 08:57:41"
         },
         {
             "name": "heyday/silverstripe-versioneddataobjects",
@@ -1355,6 +1355,50 @@
                 "silverstripe"
             ],
             "time": "2015-05-12 10:54:06"
+        },
+        {
+            "name": "unclecheese/display-logic",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/unclecheese/silverstripe-display-logic.git",
+                "reference": "7f186c1405172958b2e8ed5e4322a04d8133ca69"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/unclecheese/silverstripe-display-logic/zipball/7f186c1405172958b2e8ed5e4322a04d8133ca69",
+                "reference": "7f186c1405172958b2e8ed5e4322a04d8133ca69",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "3.*"
+            },
+            "replace": {
+                "silverstripe/display-logic": "*"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "display_logic"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Uncle Cheese",
+                    "email": "unclecheese@leftandmain.com"
+                }
+            ],
+            "description": "Allows assignment of conditions for display and hide of specific form fields based on client side behavior.",
+            "keywords": [
+                "Forms",
+                "cms",
+                "display",
+                "logic",
+                "silverstripe"
+            ],
+            "time": "2015-01-29 23:35:48"
         },
         {
             "name": "undefinedoffset/sortablegridfield",

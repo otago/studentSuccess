@@ -64,18 +64,22 @@ h3 {
   margin: 0 auto 32px;
   padding-top: 88px;
 }
+.case-study {
+  margin-top: 48px;
+  padding-bottom: 24px;
+}
 .case-study .component-alignment {
   padding: 0 0 120px;
 }
 .case-study .left {
-  margin-top: -44px;
+  margin-top: -60px;
 }
 .case-study .left.no-image {
   padding-top: 48px;
 }
 .case-study .left picture {
   padding-bottom: 28px;
-  margin-bottom: 30px;
+  margin-bottom: 14px;
 }
 .case-study .left .icon {
   font-size: 48px;
@@ -84,9 +88,10 @@ h3 {
 .case-study .left p {
   font-size: 40px;
   line-height: 48px;
+  margin-top: 88px;
 }
 .case-study .right {
-  padding-top: 120px;
+  padding-top: 24px;
   font-size: 18px;
 }
 .case-study .right h3 {
@@ -786,17 +791,13 @@ h3 {
 .tabbed-content {
   margin-bottom: 56px;
 }
-.tabbed-content .container {
-  max-width: 1000px;
-}
-.tabbed-content .container .title {
+.tabbed-content .title {
   margin: 30px 0 32px;
-  padding: 0 70px;
   font-size: 32px;
   line-height: 38px;
 }
 @media screen and (max-width: 980px) {
-  .tabbed-content .container .title {
+  .tabbed-content .title {
     padding: 0 28px;
     font-size: 24px;
     line-height: 30px;
@@ -823,6 +824,9 @@ h3 {
 .tab-section .content-block .itemList .glossary-letter {
   border-bottom: 1px solid #d7d7d6;
 }
+.tab-section .content-block .itemList .checkable h2 a {
+  padding-left: 48px;
+}
 .tab-section .content-block .itemList h2 {
   border-left: 13px solid #ef563c;
   font-size: 27px;
@@ -846,12 +850,7 @@ h3 {
   font-size: 12px;
   line-height: 30px;
 }
-@media screen and (max-width: 1200px) {
-  .tab-section .content-block .itemList h2 a .icon-tick {
-    left: 15px;
-  }
-}
-.tab-section .content-block .itemList.checked span.icon-tick {
+.tab-section .content-block .itemList .checked span.icon-tick {
   border: 1px solid #ffffff;
 }
 .tab-section .content-block .itemList .accordion-item {
@@ -889,9 +888,6 @@ h3 {
   border-left: 13px solid #79c8bb;
 }
 @media screen and (max-width: 1200px) {
-  .tabbed-content .tab-section .content-block .itemList li .accordion-item {
-    padding-right: 60px;
-  }
   .tabbed-content .tab-section .content-block .itemList li h2 a:after {
     right: 32px;
   }
@@ -1192,7 +1188,7 @@ h3 {
 }
 .right-content {
   max-width: 1000px;
-  margin: 32px 0 3px;
+  margin: 32px auto 3px;
 }
 .left-content {
   font-size: 18px;
@@ -1319,6 +1315,15 @@ figure.element figcaption {
 }
 .was-this-helpful .widget a.yes {
   margin-left: 22px;
+}
+.activity_results span {
+  font-size: 80px;
+}
+.activity_results span:after {
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
 }
 footer.main {
   padding: 56px 0 36px;

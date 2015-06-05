@@ -183,6 +183,43 @@
 	}
 }
 
+.activity_results {
+	width: 100%;
+	text-align: center;
+
+	span {
+		font-size: 5rem;
+		color: @blue;
+		font-weight: bold;
+		position: relative;
+
+		&:after {
+			.icon-font();
+
+			color: #fff;
+			font-size: 2rem;
+			padding: 5px;
+			width: 2rem;
+			height: 2rem;
+			border-radius: 1rem;
+		}
+
+		&.right {
+			&:after {
+				background: @green;
+				content: "\e613";
+			}
+		}
+
+		&.wrong {
+			&:after {
+				background: @red;
+				content: "x";
+			}
+		}
+	}
+}
+
 .activity_success,
 .activity_fail,
 .activity_fail_warning,

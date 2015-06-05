@@ -48,7 +48,7 @@
 								<div class="left-content-wrapper">
 									<div class="element-content-generic left-content">
 										<article class="glossary-item">
-											<h4 class="title"><a href="#">{$Title}</a></h4>
+											<h4>{$Title}</h4>
 											
 											<div class="small-text">
 												{$Content}

@@ -55,7 +55,7 @@ class ActivityPage_Activity extends DataObject {
 	private static $db = array(
 		'Title' => 'Varchar(200)',
 		'Description' => 'HTMLText',
-		'Presentation' => "Enum('DragAndDrop, Paragraph, MultiChoice, Replace', 'MultiChoice')",
+		'Presentation' => "Enum('TextSlide, DragAndDrop, Paragraph, MultiChoice, Replace, ResultsSlide', 'TextSlide')",
 		'PresentedOptions' => 'Text',
 		'CorrectAnswers' => 'Text',
 		'RightAnswerContent' => 'HTMLText',
@@ -82,11 +82,37 @@ class ActivityPage_Activity extends DataObject {
 		$fields->removeByName('Sort');
 
 		$presented = $fields->dataFieldByName('PresentedOptions');
+		$presented
+			->displayIf('Presentation')->isEqualTo('DragAndDrop')
+			->orIf('Presentation')->isEqualTo('Paragraph')
+			->orIf('Presentation')->isEqualTo('MultiChoice')
+			->orIf('Presentation')->isEqualTo('Replace');
+
 		$presented->setDescription('List the items you want to show the user, separated by new lines');
 
 		$correct = $fields->dataFieldByName('CorrectAnswers');
+		$correct
+			->displayIf('Presentation')->isEqualTo('DragAndDrop')
+			->orIf('Presentation')->isEqualTo('Paragraph')
+			->orIf('Presentation')->isEqualTo('MultiChoice')
+			->orIf('Presentation')->isEqualTo('Replace');
+
 		$correct->setDescription('List the correct order of the items, separated by new lines');
 
+		$rightContent = $fields->dataFieldByName('RightAnswerContent');
+		$rightContent
+			->displayIf('Presentation')->isEqualTo('DragAndDrop')
+			->orIf('Presentation')->isEqualTo('Paragraph')
+			->orIf('Presentation')->isEqualTo('MultiChoice')
+			->orIf('Presentation')->isEqualTo('Replace');
+
+		$wrongContent = $fields->dataFieldByName('WrongAnswerContent');
+		$wrongContent
+			->displayIf('Presentation')->isEqualTo('DragAndDrop')
+			->orIf('Presentation')->isEqualTo('Paragraph')
+			->orIf('Presentation')->isEqualTo('MultiChoice')
+			->orIf('Presentation')->isEqualTo('Replace');
+			
 		return $fields;
 	}
 

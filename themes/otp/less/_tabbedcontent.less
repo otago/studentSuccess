@@ -1,28 +1,22 @@
 .tabbed-content {
 	clear: both;
-    margin-bottom: 3.5rem;
+	margin-bottom: 3.5rem;
 	
-	.container {
-		max-width: 62.5rem;
-		width: 90%;
-		margin: 0 auto;
-	 	overflow: hidden;
-	
-		.title {
-			margin: 1.875rem 0 2rem;
-			padding: 0 4.375rem;
-            font-size: 2rem;
-            line-height: 2.375rem;
-            color: @white;
-            font-weight: 100;
 
-            @media screen and (max-width: 980px){
-                padding: 0 1.75rem;
-                font-size: 1.5rem;
-                line-height: 1.875rem;
-            }
+	.title {
+		margin: 1.875rem 0 2rem;
+		font-size: 2rem;
+		line-height: 2.375rem;
+		color: @white;
+		font-weight: 100;
+		float: left;
 
+		@media screen and (max-width: 980px){
+			padding: 0 1.75rem;
+			font-size: 1.5rem;
+			line-height: 1.875rem;
 		}
+
 	}
 }
 
@@ -34,10 +28,10 @@
 		padding: 0;
 		list-style-type: none;
 
-        @media screen and (max-width: 980px){
-            padding: 0 1.75rem;
+		@media screen and (max-width: 980px) {
+			padding: 0 1.75rem;
 
-        }
+		}
 		
 		li {
 			display: inline-block;
@@ -65,19 +59,19 @@
 	
 	.content-block {
 
-        background: @red;
+		background: @red;
 		
 		&.blue {
-            background: @lighter-blue;
-        }
+			background: @lighter-blue;
+		}
 		
 		&.yellow {
-            background: @yellow;
-        }
+			background: @yellow;
+		}
 
-        &.green {
-            background: @light-green;
-        }
+		&.green {
+			background: @light-green;
+		}
 		
 		.itemList {
 			margin: 0;
@@ -98,6 +92,10 @@
 				}
 			}
 
+			.checkable h2 a {
+				padding-left: 3rem;
+			}
+
 			h2 {
 				border: none;
 				border-left: 0.813rem solid @red;
@@ -109,10 +107,10 @@
 				line-height: 2rem;
 				.transition-property(background, 0.2s);
 
-                @media screen and (max-width: 980px){
-                    font-size: 1.5rem;
-                    line-height: 1.875rem;
-                }
+				@media screen and (max-width: 980px){
+					font-size: 1.5rem;
+					line-height: 1.875rem;
+				}
 				
 				&.active {
 					background: @white;
@@ -142,10 +140,6 @@
 						text-align: center;
 						color: @white;
 						
-						@media screen and (max-width: 1200px) { 
-							left: 0.938rem;
-						}
-						
 						&:before {
 							content:"";
 						}
@@ -153,7 +147,7 @@
 				}
 			}
 			
-			&.checked {
+			.checked {
 				span.icon-tick {
 					background: @light-green;
 					border: 0.063rem solid @white;
@@ -169,19 +163,6 @@
 				border: none;
 				overflow: hidden;
 				
-				.col {
-					float: left;
-					
-					&.left {
-						width: 70%;
-						margin-right: 7.5%;
-					}
-					&.right {
-						width: 22.5%;
-					}
-					
-				}
-				
 				p {
 					line-height: 1.75rem;
 				}
@@ -189,6 +170,10 @@
 				p.small-text {
 					font-size: 0.875rem;
 					line-height: 1.25rem;
+
+					a {
+						display: block;
+					}
 				}
 				
 				h4 {
@@ -217,9 +202,9 @@
 			}
 		}
 
-        .itemList li h2 { 
-        	border-left: 0.813rem solid @red; 
-        }
+		.itemList li h2 { 
+			border-left: 0.813rem solid @red; 
+		}
 
 		&.blue .itemList li h2 { 
 			border-left: 0.813rem solid @lighter-blue; 
@@ -228,28 +213,15 @@
 		&.yellow .itemList li h2 { 
 			border-left: 0.813rem solid @yellow; 
 		}
-        
-        &.green .itemList li h2 { 
-        	border-left: 0.813rem solid @light-green; 
-        }
+		
+		&.green .itemList li h2 { 
+			border-left: 0.813rem solid @light-green; 
+		}
 	}
 }
 
 @media screen and (max-width: 1200px) { 
-	.tabbed-content .tab-section .content-block .itemList li .accordion-item {
-		padding-right: 3.75rem;
-		
-		.col {
-			float: none;
-			
-			&.left,
-			&.right {
-				width: auto;
-				margin-right: 0;
-			}
-			
-		}
-	}
+
 	.tabbed-content .tab-section .content-block .itemList li h2 a:after {
 		right: 2rem;
 	}

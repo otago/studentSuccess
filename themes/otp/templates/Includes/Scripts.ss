@@ -24,7 +24,6 @@
 <script type='text/javascript' src='{$ThemeDir}/js/app/components/app.packery.js'></script>
 <script type='text/javascript' src='{$ThemeDir}/js/app/components/app.squareblocks.js'></script>
 <script type='text/javascript' src='{$ThemeDir}/js/app/components/app.tabbedcontent.js'></script>
-<script type='text/javascript' src='{$ThemeDir}/js/app/components/app.social.js'></script>
 <script type='text/javascript' src='{$ThemeDir}/js/app/components/app.fancybox.js'></script>
 <script type='text/javascript' src='{$ThemeDir}/js/app/components/app.helpful.js'></script>
 <script type='text/javascript' src='{$ThemeDir}/js/app/components/app.glossary.js'></script>
