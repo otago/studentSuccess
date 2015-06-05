@@ -1,22 +1,46 @@
 .accordion-c {
-	background: @light-brown;
-	background: @light-brown-rgba;
     clear: both;
 	
 	.title-c { 
-		background: url('../images/accordion-left.svg') top left no-repeat;
-		border-top: 2px solid transparent;
+		border-top: 1px solid transparent;
 		margin-bottom: 0;
         margin-top: 0;
-		
+		border-left: 15px solid transparent;
+		border-bottom: 1px solid #ddd;
+		background: @light-brown;
+		background: @light-brown-rgba;
+
+		.transition();
+
+		&:first-child {
+			border-top: 1px solid #ddd;
+		}
+
+		&.title-color-Yellow {
+			border-left: 15px solid @yellow;
+		}
+
+		&.title-color-Blue {
+			border-left: 15px solid @blue;
+		}
+
+		&.title-color-Black {
+			border-left: 15px solid @dark-grey;
+		}
+
+		&.title-color-Red {
+			border-left: 15px solid @red;
+		}
 		
 		a {
 			.boxsizing;
 			display: block;
-			padding: 1.5rem 2.813rem;
+			padding: 1.5rem 0;
 			color: #8C8E90;
 			position: relative;
-			max-width: 75rem;
+			width: 90%;
+			max-width: 62.5rem;
+			left: -10px;
 			margin: 0 auto;
 			
 			&:after {
@@ -27,22 +51,26 @@
 				right: 0;
 				line-height: 36px;
 				color: #8C8E90;
+				opacity: 0.4;
 				
 				@media screen and (max-width: 980px) {
 					right: 1rem;
 				}
 			}
+		}
 
-			&:hover,
-			&:focus {
-				background-color: #fff;
-				color: darken(#8C8E90, 10%);
-			}
+
+		&:hover,
+		&:focus {
+			background-color: rgba(255, 255, 255, 0.3);
+			opacity: 0.8;
+			color: darken(#8C8E90, 10%);
 		}
 		
 		&.active {
-			border-top: 2px solid @light-brown;
-			background: url('../images/accordion-left.svg') top left no-repeat @white;
+			background-color: rgba(255, 255, 255, 0.3);
+			opacity: 0.8;
+			color: darken(#8C8E90, 10%);
 			
 			a {
 				color: @dark-grey;
@@ -56,31 +84,29 @@
 	.accordion-item {
 		.boxsizing;
 		display: none;
-		border-bottom: 2px solid @light-brown;
-		padding: 1rem 0 2rem;
+		border-bottom: 1px solid @light-brown;
+		padding: 0;
 		
 		.accordion-item-content {
-			max-width: 75rem;
-			padding-right: 2.813rem;
-			padding-left: 2.813rem;
+			max-width: 62.5rem;
+			width: 90%;
 			margin: 0 auto;
 			.boxsizing;
 		}
+
 		&.active {
 			background: @white;
-			border-bottom: 2px solid @light-brown;	
+			border-bottom: 1px solid @light-brown;	
 		}
-		
-		h3, h4, h5, h6 {
-			color: @blue;
-		}
-		
 	}
-	
+}
+
+.accordion-item-children {
+	margin: 0;
+	padding: 0;
 }
 
 .page-contents .content .article {
-	
 	.accordion-c { 
 		.title-c {
 			margin-bottom: 0;

@@ -1,18 +1,16 @@
 <?php
-/**
- * Created by Nivanka Fonseka (nivanka@silverstripers.com).
- * User: nivankafonseka
- * Date: 5/14/15
- * Time: 5:49 PM
- * To change this template use File | Settings | File Templates.
- */
 
 class ElementContentExtension extends DataExtension {
 
+	private static $db = array(
+		'ReadMoreTitle' => 'Varchar(200)',
+		'ReadMoreContent' => 'HTMLText'
+	);
 
 	function updateCMSFields(FieldList $fields){
 		$contentField = $fields->dataFieldByName('HTML');
-		if($contentField){
+
+		if($contentField) {
 			$contentField->setRightTitle('<p>
 				To add images with captions use the folloding short codes
 				[Figure]<br>

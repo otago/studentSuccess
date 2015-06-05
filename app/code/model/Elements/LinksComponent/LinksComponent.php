@@ -8,6 +8,7 @@ class LinksComponent extends BaseElement {
 
 	private static $db = array(
 		'DisplayTitle'		=> 'Varchar(300)',
+		'DisplayContent'	=> 'HTMLText',
 		'Icon'				=> 'Varchar',
 		'Color'				=> 'Varchar'
 	);

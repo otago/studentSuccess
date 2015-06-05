@@ -10,6 +10,10 @@ class Accordion extends BaseElement {
 		'Items'			=> 'AccordionItem'
 	);
 
+	private static $extensions = array(
+		'ElementPublishChildren'
+	);
+
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
@@ -17,12 +21,14 @@ class Accordion extends BaseElement {
 
 		if($this->ID){
 			$fields->addFieldToTab('Root.Main',
-				FormUtils::MakeDragAndDropGridField('Items', 'Items', $this->Items(), 'SortOrder')
+				FormUtils::MakeDragAndDropGridField('Items', 'Items', $this->Items(), 'Sort')
 			);
 		}
 
 		return $fields;
 	}
 
-
+	public function Elements() {
+		return $this->Items();
+	}
 } 

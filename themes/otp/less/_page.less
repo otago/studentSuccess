@@ -26,11 +26,6 @@
 	box-sizing: border-box;
 }
 
-.accordion-c {
-	.component-alignment {
-		max-width: 100%;
-	}
-}
 .clear-this {
 	clear: both;
 }
@@ -359,7 +354,7 @@
 .social.right-content,
 .testimony-content.right-content,
 figure.right-content {
-	@media screen and (max-width: 1200px){
+	@media screen and (max-width: 1200px) {
 		float: none;
 		clear: both;
 		padding-left: 1.75rem;
@@ -425,8 +420,9 @@ figure.right-content {
 
 .quotemark {
 	font-weight: 100;
-	font-size: 5em;
+	font-size: 10em;
 	line-height: 1;
+	position: absolute;
 }
 
 //
@@ -495,4 +491,34 @@ figure.element {
     &.init {
         opacity: 1;
     }
+}
+
+.element-content-generic {
+	padding: 2rem 25% 2rem 0;
+
+	@media screen and (max-width: 780px) {
+		padding-right: 0;
+	}
+
+	+ .element-content-generic {
+		padding-top: 0;
+	}
+}
+
+.left-content-wrapper {
+	.element-content-generic {
+		padding-right: 0;
+	}
+}
+
+.js .hide-js {
+	display: none;
+}
+
+.hide-nojs {
+	display: none;
+}
+
+.js .hide-nojs {
+	display: block;
 }

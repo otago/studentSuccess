@@ -1,5 +1,5 @@
 ---
-Name: mysite
+Name: app
 After: 'framework/*','cms/*'
 ---
 LeftAndMain:
@@ -129,3 +129,6 @@ ElementInternalLink:
   title: "Featured internal link"
 ElementImage:
   title: "Inline image"
+ElementExternalLink:
+  defaults:
+    NewWindow: 1

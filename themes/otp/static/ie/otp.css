@@ -46,8 +46,8 @@ h3 {
   font-size: 20px;
 }
 .accordion-c .title-c a {
-  padding: 24px 45px;
-  max-width: 1200px;
+  padding: 24px 0;
+  max-width: 1000px;
 }
 .accordion-c .title-c a:after {
   font-size: 12px;
@@ -57,13 +57,8 @@ h3 {
     right: 16px;
   }
 }
-.accordion-c .accordion-item {
-  padding: 16px 0 32px;
-}
 .accordion-c .accordion-item .accordion-item-content {
-  max-width: 1200px;
-  padding-right: 45px;
-  padding-left: 45px;
+  max-width: 1000px;
 }
 .case-study-holder {
   margin: 0 auto 32px;
@@ -564,7 +559,7 @@ h3 {
 .hear-from-others section article {
   padding: 40px 34px 40px 28px;
 }
-.hear-from-others section article p.text {
+.hear-from-others section article .text {
   font-size: 36px;
   line-height: 38px;
 }
@@ -925,7 +920,6 @@ h3 {
   padding: 34px 28px 22px;
 }
 .page-intro article {
-  max-width: 796px;
   font-size: 20px;
   line-height: 31px;
 }
@@ -946,6 +940,10 @@ h3 {
     padding-left: 28px;
     padding-right: 28px;
   }
+}
+.template_LandingPage .page-intro,
+.template_LandingSearchPage .page-intro {
+  max-width: 796px;
 }
 .filter-form .filters {
   max-width: 1200px;
@@ -1306,6 +1304,9 @@ figure.element figcaption {
 .related-topics .title {
   font-size: 50px;
   line-height: 54px;
+}
+.element-content-generic {
+  padding: 32px 25% 32px 0;
 }
 .was-this-helpful {
   margin: 0 auto 32px;

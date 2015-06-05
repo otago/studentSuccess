@@ -22,9 +22,6 @@
     .boxsizing;
 	
 	article {
-		max-width: 49.75rem;
-		margin: 0 auto;
-		text-align: center;
 		font-size: 1.25rem;
 		line-height: 1.95rem;
 		
@@ -66,6 +63,13 @@
             }
         }
 	}
+}
+
+.template_LandingPage .page-intro,
+.template_LandingSearchPage .page-intro {
+	max-width: 49.75rem;
+	margin: 0 auto;
+	text-align: center;
 }
 	
 .filter-form {
@@ -268,4 +272,10 @@
 			margin-right: 1px;
 		}
 	}
+}
+
+/* tighten up padding */
+.page-intro + .element-content-generic,
+.page-intro + .left-content-wrapper > .element-content-generic:first-child {
+	padding-top: 0;
 }

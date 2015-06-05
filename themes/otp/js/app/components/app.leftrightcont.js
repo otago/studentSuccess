@@ -39,6 +39,21 @@ if(typeof app === 'undefined') { var app = {}; }
 				sideGaps();
 			});
 			
+			$('.togglereadmore').click(function(e) {
+				e.preventDefault();
+				
+				var toggle = $(this);
+
+				$(this).parents('.element-content-generic').first().find('.readmore-content').slideToggle(function() {
+					if($(this).is(":visible")) {
+						toggle.data('text', toggle.text());
+						toggle.text('Hide');
+					} else {
+						toggle.text(toggle.data('text'));
+					}
+				});
+			});
+
 			$(window).resize(sideGaps);
 		};
 		

@@ -1,12 +1,19 @@
 <div class='accordion-c'>
-    <div class="component-alignment">
-    <% loop $Items %>
-        <h2 class='title-c'><a href='#'>{$Title}</a></h2>
-        <div class='accordion-item'>
-			<div class='accordion-item-content'>
-            	$Content
-			</div>	
-        </div>
-    <% end_loop %>
-    </div>
-</div>
+	<% loop $Widget.Elements %>
+		<h2 class='title-c title-color-{$AscentColour}'><a href='#'>{$Title}</a></h2>
+
+		<div class='accordion-item'>
+			<% if ListDescription %>
+				<div class='element-content-generic left-content accordion-item-content'>
+					$ListDescription
+				</div>
+			<% end_if %>
+
+			<% if $Widget.Elements %>
+				<% loop $Widget.Elements %>
+					$Me
+				<% end_loop %>
+			<% end_if %>
+		</div>
+	<% end_loop %>
+</div
