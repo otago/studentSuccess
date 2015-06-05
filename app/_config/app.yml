@@ -125,10 +125,9 @@ ElementFile:
   title: "CTA to Download File"
 ElementExternalLink:
   title: "Featured external link"
+  defaults:
+    NewWindow: 1
 ElementInternalLink:
   title: "Featured internal link"
 ElementImage:
   title: "Inline image"
-ElementExternalLink:
-  defaults:
-    NewWindow: 1

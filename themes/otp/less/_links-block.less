@@ -1,6 +1,7 @@
 .links-content {
 	margin: 0 auto;
 	clear: both; /* should always be on it's own */
+	overflow: hidden; /* crop image */
 	background: @lighter-blue;
 
 	&.green {
@@ -47,7 +48,7 @@
 		.left {
 			float: left;
 			width: 50%;
-			padding: 2.250rem 6.25rem 2.250rem 0;
+			padding: 4.25rem 2.25rem 4.25rem 0;
 			.boxsizing;
 
 			
@@ -69,32 +70,38 @@
 
 					&:last-child {
 						border-bottom: 0;
-					};
+					}
+				}
 
-					a {
-						display: block;
-						color: @white;
-						overflow: hidden;
+				a {
+					display: block;
+					color: @white;
+					overflow: hidden;
+					position: relative;
+					padding-right: 20px;
 
-						&:hover,
-						&:focus {
-							opacity: 0.5;
-						}
+					.transition-property(opacity, 0.5s);
 
-						span {
-							float: right;
-							font-size: 1rem;
-							line-height: 1.5rem;
-						}
+					&:hover,
+					&:focus {
+						opacity: 0.5;
+					}
+
+					span {
+						position: absolute;
+						right: 0;
+						top: 0.15rem;
+						font-size: 1rem;
+						line-height: 1.5rem;
 					}
 				}
 			}
-			
 		}
 		
 		.image {
-			float: right;
-			width: 50%;
+			position: absolute;
+			left: 50%;
+			width: 100%;
 			font-size: 0;
 			line-height: 0;
 			
@@ -102,11 +109,13 @@
 				width: 100%;
 			}
 		}
-		
-		
+	}
+
+	+ .left-content {
+		margin-top: 4rem;
 	}
 	
-	@media screen and (max-width: 980px) {
+	@media screen and (max-width: 780px) {
 
         .component-alignment.boxed-element {
             padding-left: 0;
@@ -117,12 +126,7 @@
 			.left {
 				float: none;
 				width: 100%;
-				padding: 2.250rem 1.75rem;
-			}
-
-			.image {
-				float: none;
-				width: 100%;
+				padding: 2.250rem 0;
 			}
 		}	
 	}

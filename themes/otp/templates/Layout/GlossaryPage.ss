@@ -42,36 +42,30 @@
 					<% loop $Letters %>
 					<li class="glossary-letter">
 						<h2 class='title-c'><a href='{$Letter}'>{$Letter}</a></h2>
+
 						<div class='accordion-item'>
 							<% loop $Items %>
-								<article class="glossary-item">
-									<% if $ShowContactInfo %>
-										<div class="col left">
+								<div class="left-content-wrapper">
+									<div class="element-content-generic left-content">
+										<article class="glossary-item">
 											<h4 class="title"><a href="#">{$Title}</a></h4>
+											
 											<div class="small-text">
 												{$Content}
-											</div>
-										</div>
-										<div class="col right">
+											</div>	
+										</article>
+									</div>
+
+									<% if $ShowContactInfo %>
+										<div class="right-content element">
 											<% include MiniContactBlock %>
 										</div>
-
-									<% else %>
-
-										<h4><a href="#">{$Title}</a></h4>
-										<div class="small-text">
-											{$Content}
-										</div>
-
 									<% end_if %>
-								</article>
+								</div>
 							<% end_loop %>
-
-
 						</div>
 					</li>
 					<% end_loop %>
-
 				</ul>
 			</div>
 			<% end_if %>

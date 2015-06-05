@@ -141,6 +141,7 @@
 .right-content {
 	width: 90%;
 	max-width: 62.5rem;
+	margin: 2rem 0 0.2rem;
 	float: none;
 	clear: both;
 }
@@ -182,11 +183,11 @@
 	p {
 		margin-top: 0;
 		margin-bottom: 1.4rem;
-		
-		a {
-			text-decoration: underline;
-		}	
 	}
+
+	a {
+		text-decoration: underline;
+	}	
 	
 	.large {
 		font-size: 1.25rem;
@@ -235,9 +236,7 @@
 		}
 	}
 
-	li {
-		padding-left: 0.325rem;
-		margin-bottom: 0.625rem;
+	ul li {
 		list-style: none;
 		position: relative;
 
@@ -248,6 +247,11 @@
 			left: -0.6rem;
 			color: @blue;
 		}
+	}
+
+	li {
+		padding-left: 0.325rem;
+		margin-bottom: 0.625rem;
 
 		h4 {
 			font-weight: 400;
@@ -272,7 +276,7 @@
 .feature-external-link {
 	text-decoration: none;
 	color: @dark-grey;
-	padding-left: 1.5rem;
+	padding-left: 3.5rem;
 	position: relative;
 	display: block;
 	
@@ -303,34 +307,31 @@
 	}
 	
 	&:before {
-		font-family: 'iconmoon';
-	  	speak: none;
-	  	font-style: normal;
-	  	font-weight: normal;
-	  	font-variant: normal;
-	  	text-transform: none;
-	  	line-height: 1;
-	  	-webkit-font-smoothing: antialiased;
-	  	-moz-osx-font-smoothing: grayscale;
+		.icon-font;
 		top: 0.125rem;
 		position: absolute;
+		color: @blue;
 		left: 0;
+		font-size: 2rem;
+
 		.transition;
 		
 		&:hover {
 			color: @blue;
 		}
 		
-	}
-	
+	}	
 }
 
-.feature-link {
-	padding-left: 2rem;
+.internal_link,
+.external_link {
+	a {
+		text-decoration: none;
+	}
 }
 
 .feature-link:before {
-	content: "\e607";
+	content: "\e60c";
 }
 
 .feature-mail:before {
@@ -338,11 +339,11 @@
 }
 
 .feature-external-link:before {
-	content: "\e60b";
+	content: "\e608";
 }
 
 .feature-download:before {
-	content: "\e602";
+	content: "\e607";
 }
 
 .ElementFile {
@@ -354,11 +355,11 @@
 .social.right-content,
 .testimony-content.right-content,
 figure.right-content {
-	@media screen and (max-width: 1200px) {
+	@media screen and (max-width: 640px) {
 		float: none;
 		clear: both;
-		padding-left: 1.75rem;
-		padding-right: 1.75rem;
+		width: 90%;
+		margin: 1rem auto;
 	}
 }
 
@@ -373,13 +374,35 @@ figure.right-content {
 		.left-content {
 			float: left;
 			clear: none;
-			width: 60%;
+			width: 55%;
 		}
 
 		.right-content {
 			float: right;
 			clear: none;
-			width: 35%;
+			width: 40%;
+		}
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.left-content-wrapper {
+		width: 90%;
+		max-width: 62.5em;
+		clear: both;
+		margin: 0 auto;
+		overflow: hidden;
+
+		.left-content {
+			float: left;
+			clear: none;
+			width: 65%;
+		}
+
+		.right-content {
+			float: right;
+			clear: none;
+			width: 30%;
 		}
 	}
 }
@@ -429,19 +452,18 @@ figure.right-content {
 // figure
 //
 figure.element {
-	margin: 0;
     .boxsizing;
-
-
 
 	img {
 		width: 100%;
         height: auto;
+        border: 2px solid #ddd;
 	}
 
     &.full-width {
         width: 100%;
         clear: both;
+        margin: 0;
 
         img {
             width: 100%;
@@ -466,8 +488,11 @@ figure.element {
 	figcaption {
 		display: block;
 		border-top: 1px solid @green;
-		padding-top: 1.375rem;
-		font-size: 0.875rem;
+		padding-top: 1rem;
+
+		p {
+			margin: 0;
+		}
 	}
 }
 
@@ -494,19 +519,29 @@ figure.element {
 }
 
 .element-content-generic {
-	padding: 2rem 25% 2rem 0;
+	.content-padder {
+		padding: 2rem 35% 2rem 0;
 
-	@media screen and (max-width: 780px) {
-		padding-right: 0;
+		@media screen and (max-width: 780px) {
+			padding-right: 0;
+		}
 	}
 
 	+ .element-content-generic {
+		.content-padder {
+			padding-top: 0;
+		}
+	}
+}
+
+.element_image .element-content-generic {
+	.content-padder {
 		padding-top: 0;
 	}
 }
 
 .left-content-wrapper {
-	.element-content-generic {
+	.element-content-generic .content-padder {
 		padding-right: 0;
 	}
 }
@@ -521,4 +556,14 @@ figure.element {
 
 .js .hide-nojs {
 	display: block;
+}
+
+.element_image {
+
+}
+
+@media screen and (max-width: 780px) {
+	.hide_on_mobile {
+		display: none;
+	}
 }

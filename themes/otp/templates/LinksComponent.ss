@@ -1,15 +1,9 @@
 <section class="links-content {$Color}">
 	<div class="component-alignment boxed-element">
 		<div class='links-block'>
-			<% if $Image %>
-			<div class="col image">
-				   $Image.Pure
-			</div>
-			<% end_if %>
-
 			<div class="col left">
-				<span class="icon {$Icon}"></span>
-				<h3>{$DisplayTitle}</h3>
+				<span class="icon icon-external-link"></span>
+				<h3>{$Title}</h3>
 
 				$DisplayContent
 
@@ -23,9 +17,15 @@
 					</ul>
 				<% end_if %>
 				<% if $Link %>
-					<a class="button-link" href='{$Link}' target="{$Target}" >{$DisplayTitle}</a>
+					<a class="button-link" href='{$Link}' target="{$Target}" >{$Title}</a>
 				<% end_if %>
 			</div>
+
+			<% if $Image %>
+				<div class="col image hide_on_mobile">
+					$Image
+				</div>
+			<% end_if %>
 		</div>
 	</div>
 </section>

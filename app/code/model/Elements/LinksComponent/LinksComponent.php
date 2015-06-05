@@ -7,9 +7,7 @@ class LinksComponent extends BaseElement {
 	private static $description = "Shows a list of links";
 
 	private static $db = array(
-		'DisplayTitle'		=> 'Varchar(300)',
 		'DisplayContent'	=> 'HTMLText',
-		'Icon'				=> 'Varchar',
 		'Color'				=> 'Varchar'
 	);
 
@@ -27,11 +25,12 @@ class LinksComponent extends BaseElement {
 		)
 	);
 
-	public function getCMSFields(){
+	protected $enable_title_in_template = true;
+
+	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		$fields->removeByName('Links');
 
-		$fields->replaceField('Icon', DropdownField::create('Icon')->setSource(Config::inst()->get('SiteConfig', 'Icons')));
 		$fields->replaceField('Color', DropdownField::create('Color')->setSource(array(
 			'blue'		=> 'Blue (Default)',
 			'red'		=> 'Red',

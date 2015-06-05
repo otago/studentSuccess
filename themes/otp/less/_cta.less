@@ -13,6 +13,26 @@
 		}
 	}
 
+
+	.left {
+		float: left;
+		width: 65%;
+		padding: 4.25rem 0;
+		.boxsizing;
+
+		@media screen and (max-width: 780px) {
+			width: auto;
+		}
+	}
+
+	.image {
+		position: absolute;
+		left: 70%;
+		width: 100%;
+		font-size: 0;
+		line-height: 0;
+	}
+
 	.component-alignment.boxed-element {
 		padding-top: 0;
 	}
@@ -37,48 +57,38 @@
 		}
 	}
 	
-	article {
-		padding: 2.5rem 0 3.875rem;
-		width: 71.4285714286%;
-		font-size: 1.125rem;
-		
-		.icon {
-			font-size: 2rem;
-			display: block;
-			margin-bottom: 1.625rem;
-		}
-		
-		.wrapper {
-			.boxsizing;
-			padding: 0 15% 0 0;
-		}
-		
-		h3 {
-			margin: 0;
-			font-size: 1.25rem;
-			color: @dark-grey;
-			font-weight: bold;
-			padding-bottom: 1.625rem;
-		}
-		
-		p {
-			margin: 0 0 2rem;
-		}
-		
-		a {
-			background: @red;
-			color: @white;
-			height: 3.125rem;
-			line-height: 3.125rem;
-			display: inline-block;
-			padding: 0 1.5rem;
-            .transition;
 
-            &:hover {
-                background: darken(@red, 10%);
-            }
-		}
-		
+	.icon {
+		font-size: 2rem;
+		display: block;
+		margin-bottom: 1.625rem;
+	}
+	
+
+	h3 {
+		margin: 0;
+		font-size: 1.25rem;
+		color: @dark-grey;
+		font-weight: bold;
+		padding-bottom: 1.625rem;
+	}
+	
+	p {
+		margin: 0 0 2rem;
+	}
+	
+	a {
+		background: @red;
+		color: @white;
+		height: 3.125rem;
+		line-height: 3.125rem;
+		display: inline-block;
+		padding: 0 1.5rem;
+        .transition;
+
+        &:hover {
+            background: darken(@red, 10%);
+        }
 	}
 
 	
@@ -87,6 +97,7 @@
             padding-left: 0;
             padding-right: 0;
         }
+
 		picture {
 			width: 100%;
 			float: none;
