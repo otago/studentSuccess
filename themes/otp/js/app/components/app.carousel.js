@@ -22,6 +22,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 				animation 	    : 'slide',
 				smoothHeight	: false,
 				prevText		: "",
+				slideshow: false,
 			    nextText		: "",
 				after: function(slider){
 
@@ -49,6 +50,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 			holder.flexslider({
 				'animation' 	: 'slide',
 				'smoothHeight'	: false,
+				slideshow		: false,
 				prevText		: "",
 			    nextText		: ""
 			});

@@ -60,6 +60,9 @@ h3 {
 .accordion-c .accordion-item .accordion-item-content {
   max-width: 1000px;
 }
+.accordion-c .accordion-item .accordion-item-content.element-content-generic {
+  padding-top: 32px;
+}
 .case-study-holder {
   margin: 0 auto 32px;
   padding-top: 88px;
@@ -119,10 +122,6 @@ h3 {
 .carousel {
   margin-bottom: 32px;
 }
-.carousel .component-alignment.carousel-items,
-.carousel .carousel-items {
-  padding: 0 68px;
-}
 .carousel .flex-control-nav {
   bottom: 36px;
 }
@@ -132,16 +131,14 @@ h3 {
 .carousel .flex-control-nav li a {
   width: 10px;
   height: 10px;
+  border-radius: 10px;
 }
 .carousel.content-slide .slides .wrapper {
   padding: 48px 0;
 }
-.carousel .slides li.title .wrapper {
-  min-height: 450px;
-}
 .carousel .slides li.title .wrapper article h2 {
   font-size: 120px;
-  line-height: 120px;
+  line-height: 112px;
 }
 @media screen and (max-width: 980px) {
   .carousel .slides li.title .wrapper article h2 {
@@ -149,12 +146,10 @@ h3 {
     line-height: 30px;
   }
 }
-.carousel .slides li.title-content .wrapper {
-  min-height: 450px;
-}
 .carousel .slides li.title-content .wrapper h2 {
   font-size: 80px;
   line-height: 80px;
+  margin-bottom: 16px;
 }
 @media screen and (max-width: 980px) {
   .carousel .slides li.title-content .wrapper h2 {
@@ -196,9 +191,6 @@ h3 {
 .carousel .slides li.title-content-compact .right h3 span {
   font-size: 14px;
   padding-right: 10px;
-}
-.carousel .flex-direction-nav {
-  font-size: 32px;
 }
 .smart-slide {
   margin-top: 32px;
@@ -294,7 +286,7 @@ h3 {
   }
 }
 .main .container {
-  max-width: 1064px;
+  max-width: 1140px;
 }
 .main nav {
   height: 138px;
@@ -540,26 +532,29 @@ h3 {
   line-height: 50px;
   margin-bottom: 54px;
 }
-.hear-from-others section .image a.icon {
+.hear-from-others section .image .icon {
   font-size: 150px;
   width: 150px;
   height: 150px;
+  border-radius: 150px;
   margin: -75px 0 0 -75px;
 }
 @media screen and (max-width: 1200px) {
-  .hear-from-others section .image a.icon {
+  .hear-from-others section .image .icon {
     font-size: 86px;
     width: 86px;
     height: 86px;
+    border-radius: 86px;
     margin-top: -43px;
     margin-left: -43px;
   }
 }
 @media screen and (max-width: 900px) {
-  .hear-from-others section .image a.icon {
+  .hear-from-others section .image .icon {
     font-size: 64px;
     width: 64px;
     height: 64px;
+    border-radius: 64px;
     margin-top: -32px;
     margin-left: -32px;
   }
@@ -646,7 +641,7 @@ h3 {
   border-right: 2px solid #ffffff;
 }
 .priority-tasks .titles span {
-  font-size: 30px;
+  font-size: 16px;
 }
 .priority-tasks .titles.left-titles.row span.col {
   padding: 23px 0;
@@ -656,14 +651,14 @@ h3 {
   padding: 0 45px;
 }
 .priority-tasks .block .topLine {
-  font-size: 26px;
-  line-height: 31px;
+  font-size: 16px;
+  line-height: 16px;
 }
 .priority-tasks .block .botLine {
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 16px;
 }
-.priority-tasks .block .botLine span.icon-dark-up-arrow {
+.priority-tasks .block .icon-dark-up-arrow {
   top: -13px;
   margin: 0 0 0 -14px;
   font-size: 14px;
@@ -913,18 +908,18 @@ h3 {
   top: 16px;
 }
 .page-intro {
-  max-width: 1064px;
+  max-width: 1140px;
   margin: 0 auto 32px;
-  padding: 34px 28px 22px;
+  padding: 16px 70px 22px;
 }
 .page-intro article {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 35px;
 }
 .page-intro article .title {
   margin-bottom: 20px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 880px) {
   .page-intro article p {
     font-size: 18px;
   }
@@ -1153,6 +1148,9 @@ h3 {
   padding: 13px 24px;
   margin-top: 32px;
 }
+hr {
+  margin: 16px 0 48px;
+}
 .page-contents {
   margin: -140px auto 0;
 }
@@ -1300,7 +1298,7 @@ figure.element figcaption {
   font-size: 50px;
   line-height: 54px;
 }
-.element-content-generic .content-padder {
+.content-padder {
   padding: 32px 35% 32px 0;
 }
 .was-this-helpful {

@@ -54,6 +54,7 @@ Page:
     - CheckList
     - CarouselWithUpperLetter
     - MatrixElement
+    - WayFinder
 HomePage:
   allowed_elements:
     - HearFromOthers

@@ -1,16 +1,10 @@
 <?php
-/**
- * Created by Nivanka Fonseka (nivanka@silverstripers.com).
- * User: nivankafonseka
- * Date: 5/14/15
- * Time: 3:56 PM
- * To change this template use File | Settings | File Templates.
- */
 
 class Carousel extends BaseElement {
 
-	private static $title = "Carousel Element";
-	private static $description = "Carousel elements";
+	private static $title = "Carousel";
+	
+	private static $description = "Carousel";
 
 	private static $db = array(
 		'Background'	=> 'Varchar'

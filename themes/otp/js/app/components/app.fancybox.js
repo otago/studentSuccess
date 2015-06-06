@@ -6,7 +6,7 @@ if(typeof app === 'undefined') { var app = {}; }
 
         var items = $('a.fancybox-link');
 
-        var initFancyBox = function(){
+        var initFancyBox = function() {
 
             items.fancybox({
                 openEffect : 'none',
@@ -27,7 +27,7 @@ if(typeof app === 'undefined') { var app = {}; }
         };
 
         var init = function (){
-            $(document).ready(function(){
+            $(document).ready(function() {
                 initFancyBox();
             });
         };

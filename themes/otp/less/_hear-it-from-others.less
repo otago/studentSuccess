@@ -15,40 +15,36 @@
 	}
 	
 	section {
-		
 		background: @lighter-blue;
 		color: @white;
+		position: relative;
 		overflow: hidden;
 		
 		.image {
 			font-size: 0;
 			line-height: 0;
-			float: right;
-			width: 66.6666666667%;
-			position: relative;
-			
+			left: 35%;
+			width: 65%;
+			position: absolute;
+			height: 100%;
+			top: 0;
+
 			img {
-				width: 100%;
+				min-width: 100%;
+				height: 100%;
 			}
 
-            .video-image {
-                display: block;
-                font-size: 0;
-                line-height: 0;
+			.video-image {
+				font-size: 0;
+				line-height: 0;
+				.transition;
 
-                img {
-                    .transition;
-                }
+				&:hover {
+					opacity: 0.6;
+				}
+			}
 
-                &:hover {
-                    img {
-                        opacity: 0.6;
-                    }
-                }
-
-            }
-
-			a.icon {
+			.icon {
 				position: absolute;
 				top: 50%;
 				left: 50%;
@@ -57,32 +53,28 @@
 				height: 9.375rem;
 				display: block;
 				border: 4px solid @white;
+				border-radius: 9.375rem;
 				color: @white;
 				margin: -4.688rem 0 0 -4.688rem;
-				.rounded;
 				.transition;
 				
-				@media screen and (max-width: 1200px){ 
+				@media screen and (max-width: 1200px) { 
 					font-size: 5.375rem;
 					width: 5.375rem;
 					height: 5.375rem;
+					border-radius: 5.375rem;
 					margin-top: -2.688rem;
 					margin-left: -2.688rem;
 				}
 				
-				@media screen and (max-width: 900px){ 
+				@media screen and (max-width: 900px) { 
 					font-size: 4rem;
 					width: 4rem;
 					height: 4rem;
+					border-radius: 4rem;
 					margin-top: -2rem;
 					margin-left: -2rem;
 				}
-				
-				&:hover {
-					color: @blue;
-					border-color: @blue;
-				};
-
 			}
 		}
 		
@@ -113,14 +105,14 @@
 		section {
 			background: @red;
 
-            a.icon {
+			a.icon {
 
-                &:hover {
-                    color: @red;
-                    border-color: @red;
-                };
+				&:hover {
+					color: @red;
+					border-color: @red;
+				};
 
-            }
+			}
 		}
 	}
 	
@@ -130,14 +122,14 @@
 			background: @light-green;
 
 
-            a.icon {
+			a.icon {
 
-                &:hover {
-                    color: @light-green;
-                    border-color: @light-green;
-                };
+				&:hover {
+					color: @light-green;
+					border-color: @light-green;
+				};
 
-            }
+			}
 		}
 	}
 	
@@ -146,24 +138,32 @@
 		section {
 			background: @yellow;
 
-            a.icon {
+			a.icon {
 
-                &:hover {
-                    color: @yellow;
-                    border-color: @yellow;
-                };
+				&:hover {
+					color: @yellow;
+					border-color: @yellow;
+				};
 
-            }
+			}
 		}
 	}
 	
-	@media screen and (max-width: 1130px){ 
+	@media screen and (max-width: 980px) { 
 		padding: 0;
 		
 		section {
-
 			.image {
+				position: relative;
 				width: 100%;
+				height: auto;
+				left: 0;
+
+				img {
+					height: auto;
+					min-height: 0;
+					max-width: 100%;
+				}
 			}
 			
 			article {
@@ -171,11 +171,11 @@
 			}
 			
 		}
-	}
-	@media screen and (max-width: 980px){
-        h2  {
-            font-size: 1.875rem;
-        }
+
+		h2  {
+			font-size: 1.875rem;
+		}
+
 		section article p.text {
 			font-size: 1.875rem;
 		}

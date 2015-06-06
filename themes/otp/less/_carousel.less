@@ -1,16 +1,9 @@
 .carousel {
-	
 	background: @lighter-blue;
 	color: @white;
 	position: relative;
 	overflow: hidden;
     margin-bottom: 2rem;
-
-    .component-alignment.carousel-items,
-    .carousel-items {
-        padding: 0 4.25rem;
-        .boxsizing;
-    }
 	
 	ul, ol, li {
 		.list-reset;
@@ -50,6 +43,7 @@
 				-moz-box-shadow: none;
 				-o-box-shadow: none;
 				box-shadow: none;
+				border-radius: 0.625rem;
 				opacity: 0.5;
 				
 				&.flex-active {
@@ -121,18 +115,13 @@
             }
 			
 			&.title {
-				
 				.wrapper {
-					
-					
-					min-height: 28.125rem;
 				
 					article {
-
-
 						h2 {
 							font-size: 7.5rem;
-							line-height: 7.5rem;
+							line-height: 7rem;
+							font-weight: 100;
 							margin: 0;
 							
 							@media screen and (max-width: 980px) { 
@@ -146,15 +135,13 @@
 			}
 			
 			&.title-content {
-				
 				.wrapper {
-					
-					min-height: 28.125rem;
 				
 					h2 {
 						font-size: 5rem;
 						line-height: 5rem;
-						
+						font-weight: 100;
+						margin-bottom: 1rem;
 						
 						@media screen and (max-width: 980px) {
                             font-size: 1.875rem;
@@ -290,50 +277,47 @@
 			padding: 0 50px;
 		}
 	}
+
+	.content {
+		max-width: 65%;
+	}
 	
 	// 
 	// slider navigation
 	// 
 	.flex-direction-nav {
-		
-		font-size: 2rem;
-		
-		.flex-prev {
+		a {
+			width: 60px;
+			height: 60px;
+		}
+		.flex-prev,
+		.flex-next {
 			text-align: center;
 			.icon-font;
-			left: 0;
-			opacity: 1;
+			.transition-property(opacity, 0.5s);
+			left: -70px;
+			opacity: 0.6;
+			font-size: 60px;
+
 			.text-shadow;
 
 			&:after {
-
-				content: "\e610";
-			};
+				content: "\e612";
+			}
 
             &:hover {
-                opacity: 0.6;
+                opacity: 0.8;
             }
 		}
 		
 		.flex-next {
-			text-align: center;
-			.icon-font;
-			right: 0;
-			opacity: 1;
-			.text-shadow;
-
+			right: -70px;
+			left: auto;
 			&:after {
-
-				content: "\e60f";
-			};
-
-            &:hover {
-                opacity: 0.6;
-            }
+				content: "\e611";
+			}
 		}
 	}
-	
-	
 }
 
 //
@@ -341,6 +325,7 @@
 //
 .smart-slide {
 	margin-top: 2rem;
+	overflow: hidden;
 	
 	.slide-letters {
 		max-width: 56.25rem;
@@ -434,10 +419,11 @@
 	.title.showInMobile {
 		display: none;
 	}
+
 	h3.title {
 		font-size: 1.125rem;
 		line-height: 1.2;
-		font-weight: 600;
+		font-weight: 100;
 		text-transform: uppercase;
 		text-align: center;
 		margin-top: 0.75rem;
