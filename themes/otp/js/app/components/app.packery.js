@@ -166,6 +166,9 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 			packIt();
 			$(window).load(packIt);
 
+            $(".image-tile").click(function(e) {
+                $(this).find('.image-link').trigger('click');
+            });
 		};
 		
 		return {

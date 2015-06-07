@@ -17,7 +17,6 @@
 
         @media screen and (max-width: 980px) {
             width: 50%;
-            padding: 1.875rem 2rem 1.875rem 2.000rem;
         }
 
 
@@ -40,7 +39,8 @@
                 line-height: 2.250rem;
                 font-size: 1rem;
                 position: absolute;
-                right: 0;
+                right: -10px;
+                opacity: 0.6;
                 top: 0;
             }
 
@@ -48,6 +48,8 @@
 		
 		p {
 			margin: 1.5rem 0 0;
+			font-size: 1rem;
+			line-height: 1.5rem;
 		}
 		
 		.separator-link {
@@ -123,7 +125,7 @@
 
             &:hover,
             &:focus {
-                background: darken(@red, 5%);
+                background: darken(@red, 10%);
             }
 		}
 
@@ -380,6 +382,21 @@
 				line-height: 0;
 				display: block;
 			}
+
+			p {
+				color: #fff;
+			}
+
+			&.has-link {
+				cursor: pointer;
+
+				&:hover,
+				&:focus {
+					article {
+						background: rgba(0, 0, 0, 0.8);
+					}
+				}
+			}
 		}
 
 		&.overflow-content {
@@ -389,7 +406,8 @@
 				width: 100%;
 				margin-top: 12rem;
 				background: rgba(0,0,0,0.4);
-				padding: 2.75rem 2.1rem 2.5rem 2.1rem;
+				.transition-property(background, 0.4s);
+				padding: 1.875rem 2.2rem 1.875rem 2.000rem;
 				
 				h3 {
 					font-size: 1.875rem;
@@ -399,11 +417,6 @@
 						font-size: 1.875rem;
 						line-height: 2rem;
 					}
-				}
-				
-				p {
-					font-size: 0.875rem;
-					line-height: 1rem;
 				}
 			}
 		}		
@@ -443,7 +456,7 @@
 				padding-right: 0;
 			}
 
-			.overflow-content article {
+			&.overflow-content article {
 				padding-left: 1rem;
 				padding-right: 1rem;
 			}

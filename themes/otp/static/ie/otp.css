@@ -169,9 +169,6 @@ h3 {
     line-height: 30px;
   }
 }
-.carousel .slides li.title-content-compact .left {
-  padding: 78px 10.5849582173% 82px 0;
-}
 @media screen and (max-width: 1140px) {
   .carousel .slides li.title-content-compact .left {
     padding-left: 16px;
@@ -196,14 +193,11 @@ h3 {
 .carousel .slides li.title-content-compact .left p {
   font-size: 18px;
 }
-.carousel .slides li.title-content-compact .right {
-  padding: 78px 48px 82px;
-}
 .carousel .slides li.title-content-compact .right h3 {
   font-size: 18px;
   line-height: 18px;
   padding-bottom: 16px;
-  margin: 0 0 42px 0;
+  margin: 16px 0 42px 0;
 }
 .carousel .slides li.title-content-compact .right h3 span {
   font-size: 14px;
@@ -1029,11 +1023,6 @@ h3 {
 .masonry-content .tile-c {
   padding: 30px 35px 30px 32px;
 }
-@media screen and (max-width: 980px) {
-  .masonry-content .tile-c {
-    padding: 30px 32px 30px 32px;
-  }
-}
 .masonry-content .tile-c h3 span {
   height: 32px;
   line-height: 36px;
@@ -1041,6 +1030,8 @@ h3 {
 }
 .masonry-content .tile-c p {
   margin: 24px 0 0;
+  font-size: 16px;
+  line-height: 24px;
 }
 .masonry-content .tile-c .separator-link {
   padding-top: 12px;
@@ -1111,7 +1102,7 @@ h3 {
 }
 .masonry-content .tile-c.overflow-content article {
   margin-top: 192px;
-  padding: 44px 34px 40px 34px;
+  padding: 30px 35px 30px 32px;
 }
 .masonry-content .tile-c.overflow-content article h3 {
   font-size: 30px;
@@ -1120,10 +1111,6 @@ h3 {
 .masonry-content .tile-c.overflow-content article h3 a {
   font-size: 30px;
   line-height: 32px;
-}
-.masonry-content .tile-c.overflow-content article p {
-  font-size: 14px;
-  line-height: 16px;
 }
 @media screen and (max-width: 980px) {
   .masonry-content .tile-c {
@@ -1136,7 +1123,7 @@ h3 {
     padding-left: 16px;
     padding-right: 16px;
   }
-  .masonry-content .tile-c .overflow-content article {
+  .masonry-content .tile-c.overflow-content article {
     padding-left: 16px;
     padding-right: 16px;
   }

@@ -1,4 +1,4 @@
-<div class='tile tile-c image-tile overflow-content' style="background: url($Image.Filename)">
+<div class='tile tile-c image-tile overflow-content  <% if $Link %>has-link<% end_if %>' style="background: url($Image.Filename)">
     <% if $Link %><a href='{$Link}' target="{$Target}" class="image-link"><% end_if %>
     <% if $Link %></a><% end_if %>
     <% if $HideTitle == 0 || $Content %>
