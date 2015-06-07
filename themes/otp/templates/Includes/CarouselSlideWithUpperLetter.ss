@@ -14,7 +14,10 @@
 				<h3 class='title showInMobile'>
                 	<span class='icon icon-head-arrow'></span>{$Title}
             	</h3>
-				$Content
+
+            	<div class="content">
+                	$Content
+                </div>
 			</div>
 		<% end_if %>
 	</div>

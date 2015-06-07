@@ -8,7 +8,7 @@ if(typeof app === 'undefined') { var app = {}; }
 		
 		var initItem = function(container){
 			var holder = container;
-			holder.find('.title-c a').click(function(){
+			holder.find('.title-c a').click(function() {
 				var title = $(this).parent();
 
                 // if there is a checkable then check it
@@ -21,7 +21,10 @@ if(typeof app === 'undefined') { var app = {}; }
 					holder.find('.accordion-item').not(nextItem).removeClass('active').slideUp();
 					holder.find('.title-c').not(title).removeClass('active');
 					
-					nextItem.addClass('active').slideDown();
+					nextItem.addClass('active').slideDown(function() {
+						// may contains carousels.
+						app.carousel.init();
+					});
 				}
 				else{
 					title.removeClass('active');

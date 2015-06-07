@@ -2,15 +2,10 @@
 if(typeof app === 'undefined') { var app = {}; }
 if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 
-(function($){
-	
-	app.carousel = (function(){
-		
+(function($) {
+	app.carousel = (function() {
 		var items = $('.carousel-items');
-		
-		
 		var smartItems = $('.smart-slider');
-		
 		
 		var  initSmartSlider = function(holder){
             var holderRef = holder;
@@ -19,7 +14,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
             top.find('.slide-letters li:first-child').addClass('active');
 			
 			var slider = holder.flexslider({
-				animation 	    : 'fade',
+				animation 	    : 'slide',
 				smoothHeight	: true,
 				prevText		: "",
 				slideshow		: false,
@@ -45,7 +40,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 			
 		};
 		
-		var initSlider = function(holder){
+		var initSlider = function(holder) {
 			
 			holder.flexslider({
 				'animation' 	: 'slide',
@@ -62,14 +57,24 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 			return items.length > 0 || smartItems.length > 0;
 		};
 		
-		var init = function (){
-			items.each(function(){
-				initSlider($(this));
+		var init = function () {
+			items.filter(":visible").each(function() {
+				if(!$(this).data('inited')) {
+					$(this).data('inited', true);
+
+					initSlider($(this));
+				}
 			});
 			
-			smartItems.each(function(){
-				initSmartSlider($(this));
+			smartItems.filter(":visible").each(function() {
+				if(!$(this).data('inited')) {
+					$(this).data('inited', true);
+
+					initSmartSlider($(this));
+				}
 			});
+
+
 		};
 		
 		return {
