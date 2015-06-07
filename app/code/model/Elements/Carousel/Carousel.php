@@ -25,7 +25,7 @@ class Carousel extends BaseElement {
 			'green'		=> 'Green'
 		)));
 
-		if($this->ID){
+		if($this->ID) {
 			$fields->addFieldsToTab('Root.Main', array(
 				$grid = FormUtils::MakeDragAndDropGridField('Slides', 'Slides', $this->Slides(), 'SortOrder')
 			));

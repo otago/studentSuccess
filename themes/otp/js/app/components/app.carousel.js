@@ -19,13 +19,13 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
             top.find('.slide-letters li:first-child').addClass('active');
 			
 			var slider = holder.flexslider({
-				animation 	    : 'slide',
-				smoothHeight	: false,
+				animation 	    : 'fade',
+				smoothHeight	: true,
 				prevText		: "",
-				slideshow: false,
+				slideshow		: false,
+				animationSpeed  : 200,
 			    nextText		: "",
-				after: function(slider){
-
+				after: function(slider) {
                     var current = slider.currentSlide + 1;
                     letters.removeClass('active');
                     top.find('li.letter-' + current).addClass('active');
@@ -49,8 +49,9 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 			
 			holder.flexslider({
 				'animation' 	: 'slide',
-				'smoothHeight'	: false,
+				'smoothHeight'	: true,
 				slideshow		: false,
+				animationSpeed  : 200,
 				prevText		: "",
 			    nextText		: ""
 			});
