@@ -43,6 +43,7 @@ Page:
     - Accordion
     - SidebarTestimony
     - SidebarImageElement
+    - SidebarHelp
     - ElementImage
     - ElementFile
     - ElementInternalLink

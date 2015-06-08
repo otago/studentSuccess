@@ -1021,7 +1021,7 @@ h3 {
   padding: 0 0 32px;
 }
 .masonry-content .tile-c {
-  padding: 30px 35px 30px 32px;
+  padding: 30px 32px 30px 32px;
 }
 .masonry-content .tile-c h3 span {
   height: 32px;
@@ -1304,6 +1304,35 @@ figure.element figcaption {
 }
 .content-padder {
   padding: 32px 35% 32px 0;
+}
+.sidebar-help {
+  font-size: 18px;
+  line-height: 24px;
+  padding: 30px 46px 44px 46px;
+}
+.sidebar-help h3 {
+  font-size: 30px;
+  line-height: 32px;
+}
+@media screen and (max-width: 980px) {
+  .sidebar-help h3 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+.sidebar-help p.contact {
+  margin-top: 38px;
+}
+@media screen and (max-width: 980px) {
+  .sidebar-help p.contact {
+    margin-top: 32px;
+  }
+}
+.sidebar-help p.lines {
+  margin-top: 22px;
+}
+.sidebar-help p.lines a {
+  margin-bottom: 22px;
 }
 .was-this-helpful {
   margin: 0 auto 32px;

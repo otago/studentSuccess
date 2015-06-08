@@ -1,14 +1,6 @@
 <?php
-/**
- * Created by Nivanka Fonseka (nivanka@silverstripers.com).
- * User: nivankafonseka
- * Date: 5/21/15
- * Time: 8:19 AM
- * To change this template use File | Settings | File Templates.
- */
 
 class Contactable extends DataExtension {
-
 
 	private static $db = array(
 		'ContactBoxTitle'				=> 'Varchar(70)',
