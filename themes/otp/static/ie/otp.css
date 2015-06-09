@@ -15,12 +15,15 @@ h3 {
 }
 @media screen and (max-width: 640px) {
   h1 {
-    font-size: 30px;
+    font-size: 35px;
   }
   h2,
   h3 {
-    font-size: 24px;
+    font-size: 29px;
     line-height: 28px;
+  }
+  .left-content {
+    font-size: 16px;
   }
 }
 .chosen-container .chosen-results li {
@@ -347,11 +350,11 @@ h3 {
 }
 .main nav .level-2 li {
   margin-right: 28px;
-  height: 67px;
+  height: 62px;
 }
 .main nav .level-2 li a {
   line-height: 50px;
-  font-size: 18px;
+  font-size: 16px;
 }
 .main nav .level-2 li a.button {
   padding: 0 22px;
@@ -396,7 +399,7 @@ h3 {
   height: 243px;
 }
 .hero.no-hero {
-  height: 192px;
+  height: 224px;
 }
 .hero .contents {
   padding: 140px 102px 0;
@@ -431,6 +434,11 @@ h3 {
     font-size: 19px;
     line-height: 24px;
     margin-bottom: 62px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero.mini {
+    height: 224px;
   }
 }
 .cta .left {
@@ -913,13 +921,16 @@ h3 {
   right: 8px;
   top: 16px;
 }
+.component-alignment.breadcrumbs.boxed-element {
+  max-width: 1140px;
+}
 .page-intro {
   max-width: 1140px;
   margin: 0 auto 32px;
   padding: 16px 70px 22px;
 }
 .page-intro article {
-  font-size: 20px;
+  font-size: 22px;
   line-height: 35px;
 }
 .page-intro article .title {
@@ -997,20 +1008,20 @@ h3 {
   font-size: 16px;
 }
 .social-blocks {
-  top: 16px;
-  right: 16px;
+  top: 48px;
+  right: 48px;
 }
 .social-blocks ul li a {
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  font-size: 16px;
-}
-.social-blocks ul li a.facebook {
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
   font-size: 19px;
 }
+.social-blocks ul li a.facebook {
+  font-size: 22px;
+}
 .social-blocks ul li a .icon {
-  line-height: 40px;
+  line-height: 48px;
 }
 .masonry-content {
   padding: 0 0 32px;
@@ -1151,7 +1162,7 @@ hr {
   margin: 16px 0 48px;
 }
 .page-contents {
-  margin: -140px auto 0;
+  margin: -172px auto 0;
 }
 .page-contents .breadcrumbs {
   padding-bottom: 22px;
@@ -1277,7 +1288,7 @@ hr {
 }
 .testimony-content.right-content {
   padding-top: 16px;
-  padding-bottom: 70px;
+  padding-bottom: 16px;
 }
 .testimony-content.right-content span.icon {
   font-size: 60px;
@@ -1450,5 +1461,7 @@ footer.main .container.addresses address {
 @media screen and (max-width: 720px) {
   .drop-menu .container .left h3 {
     font-size: 24px;
+    line-height: 32px;
+    margin: 16px 0;
   }
 }

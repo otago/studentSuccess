@@ -67,12 +67,13 @@ h2, h3, h4, h5 {
 
 .page-contents {
 	position: relative;
-	margin: -8.75rem auto 0;
+	margin: -10.75rem auto 0;
 	z-index: 100;
 	
 	.breadcrumbs {
 		color: @white;
 		padding-bottom: 1.375rem;
+		text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
 		
 		a {
 			color: @white;
@@ -334,7 +335,13 @@ h2, h3, h4, h5 {
 	a {
 		text-decoration: none;
 	}
+
+	.content-padder {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
 }
+
 
 .feature-link:before {
 	content: "\e60c";
@@ -429,7 +436,7 @@ figure.right-content {
 	color: @blue;
 	border-top: 1px solid @lighter-blue;
 	padding-top: 1rem;
-	padding-bottom: 4.375rem;
+	padding-bottom: 1rem;
 	
 	span.icon {
 		color: @blue;
@@ -439,6 +446,7 @@ figure.right-content {
 	.text {
 		font-size: 2.25rem;
 		line-height: 2.5rem;
+		font-weight: 100;
 		margin: 1rem 0;
 	}
 	
@@ -531,9 +539,16 @@ figure.element {
 	}
 }
 
-.element-content-generic + .element-content-generic {
-	.content-padder {
-		padding-top: 0;
+.element-content-generic {
+	+ .element-content-generic {
+		.content-padder {
+			padding-top: 0;
+		}
+	}
+
+	+ .external_link,
+	+ .internal_link {
+		padding-top: 0
 	}
 }
 

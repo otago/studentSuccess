@@ -8,6 +8,15 @@
         }
 
     }*/
+
+    &.breadcrumbs.boxed-element {
+    	max-width: 71.25rem;
+    	width: 98%;
+
+    	@media screen and (max-width: 1140px) {
+    		width: 90%;
+    	}
+    }
 }
 
 .page-intro {
@@ -16,7 +25,6 @@
 	margin: 0 auto 2rem;
 	padding: 1rem 4.375rem 1.375rem;
     background: url(../images/intro.png) repeat-x top left;
-    box-shadow: 0 -5px 15px -5px rgba(0, 0, 0, 0.2);
     position: relative;
 
     @media screen and (max-width: 1140px) {
@@ -26,8 +34,9 @@
     }
 	
 	article {
-		font-size: 1.25rem;
+		font-size: 1.375rem;
 		line-height: 2.2rem;
+		margin-top: 0.6em;
 		
 		.title {
 			color: @blue;
@@ -43,6 +52,12 @@
                 font-size: 1.15rem;
                 max-width: 90%;
             }
+		}
+	}
+
+	+ .left-content {
+		.content-padder {
+			padding-top: 0;
 		}
 	}
 
@@ -229,8 +244,8 @@
 .social-blocks {
 	position: absolute;
 	overflow: hidden;
-	top: 1rem;
-	right: 1rem;
+	top: 3rem;
+	right: 3rem;
 	
 	ul {
 		.list-reset;
@@ -239,28 +254,28 @@
 			margin-bottom: 1px;
 			
 			a {
-				width: 2.5rem;
-				height: 2.5rem;
+				width: 3rem;
+				height: 3rem;
 				display: block;
 				color: @white;
 				background: @dark-grey;
 				text-align: center;
-				line-height: 2.5rem;
+				line-height: 3rem;
 				margin: 0;
 				.transition;
-				font-size: 1rem;
+				font-size: 1.2rem;
 				
 				&:hover {
 					background: @blue;
 				}
 
 				&.facebook {
-					font-size: 1.2rem;
+					font-size: 1.4rem;
 				}
 
 				.icon {
-					line-height: 2.5rem;
-					font-size: 18px;
+					line-height: 3rem;
+					font-size: 22px;
 				}
 			}
 		}
@@ -268,12 +283,23 @@
 
 	@media screen and (max-width: 600px) {
 		position: relative;
+		top: auto;
+  		right: auto;
 		width: 100%;
 
 		li {
 			float: left;
 			margin-right: 1px;
 		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	float: none;
+	width: 100%;
+	
+	input {
+		padding-right: 10%;
 	}
 }
 

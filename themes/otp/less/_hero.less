@@ -17,7 +17,7 @@
 
 	&.no-hero {
 		background: #0c79c3;
-		height: 12rem;
+		height: 14rem;
 	}
 	
 	img {
@@ -92,7 +92,15 @@
 		
 	}
 	
-	
-	
-	
+
+	@media screen and (max-width: 480px) {
+		&.mini {
+			background: #0c79c3;
+			height: 14rem;
+
+			img {
+				display: none;
+			}
+		}
+	}
 }
