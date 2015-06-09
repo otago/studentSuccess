@@ -13,6 +13,11 @@
 		color: @white;
 	}
 
+	a:hover,
+	a:focus {
+		text-decoration: underline;
+	}
+
 	.component-alignment.boxed-element {
 		padding-top: 0;
 		padding-bottom: 0;
@@ -26,6 +31,35 @@
 		background: @light-green;
 	}
 	
+	&.gray {
+		background: @ash;
+		color: @dark-grey;
+
+		h2, h3, h4, h5, p {
+			color: @dark-grey;
+		}
+
+		a {
+			color: @dark-grey;
+		}
+
+		.flex-direction-nav {
+			.flex-next,
+			.flex-prev {
+				color: @dark-grey;
+			}
+		}
+
+		.flex-control-nav {
+			li a {
+				border-color: @dark-grey;
+			
+				&.flex-active {
+					background: @dark-grey;
+				}
+			}
+		}
+	}
 	
 	.flex-control-nav {
 		bottom: 1rem;
@@ -49,6 +83,7 @@
 				-webkit-box-shadow: none;
 				-moz-box-shadow: none;
 				-o-box-shadow: none;
+				text-decoration: none;
 				box-shadow: none;
 				border-radius: 0.625rem;
 				opacity: 0.5;
@@ -100,7 +135,7 @@
 	.slides {
 		.content {
 			background: transparent;
-			padding: 0 0 6rem 0.5rem;
+			padding: 0 0 4rem 0rem;
 		}
 
 		li {
@@ -334,7 +369,7 @@
 				left: -40px;
 			}
 
-			@media screen and (max-width: 600px) {
+			@media screen and (max-width: 820px) {
 				font-size: 20px;
 				left: -20px;
 			}
@@ -352,7 +387,7 @@
 				right: -40px;
 			}
 
-			@media screen and (max-width: 600px) {
+			@media screen and (max-width: 820px) {
 				right: -20px;
 			}
 		}

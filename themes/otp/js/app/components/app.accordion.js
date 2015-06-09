@@ -15,8 +15,15 @@ if(typeof app === 'undefined') { var app = {}; }
                 $(this).closest('.checkable').addClass('checked');
 
 				
-				if(!title.hasClass('active')){
+				if(!title.hasClass('active')){ 
 					title.addClass('active');
+
+					if(title.offset().top < $(window).scrollTop()) {
+						$('html, body').animate({
+							'scrollTop': title.offset().top
+						});
+					}
+					
 					var nextItem = title.next('.accordion-item');
 					holder.find('.accordion-item').not(nextItem).removeClass('active').slideUp();
 					holder.find('.title-c').not(title).removeClass('active');

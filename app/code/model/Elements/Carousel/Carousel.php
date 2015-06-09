@@ -22,7 +22,8 @@ class Carousel extends BaseElement {
 		$fields->replaceField('Background', DropdownField::create('Background')->setSource(array(
 			'blue'		=> 'Blue (Default)',
 			'red'		=> 'Red',
-			'green'		=> 'Green'
+			'green'		=> 'Green',
+			'gray'		=> 'Gray'
 		)));
 
 		if($this->ID) {

@@ -4,7 +4,7 @@ if(typeof app === 'undefined') { var app = {}; }
 	
 	app.hamburger = (function(){
 		
-		var items = $('.icon-hamburger');
+		var items = $('.hamburger');
 		
 		var openOrCloseMenu = function(){
 			$('header.main').toggleClass('opened');

@@ -81,6 +81,7 @@
 		article {
 			float: left;
 			width: 33.3333333333%;
+			min-height: 380px;
 			padding: 2.5rem 2.125rem 2.5rem 1.75rem;
 			
 			span.icon {
@@ -148,25 +149,16 @@
 		}
 	}
 	
-	@media screen and (max-width: 980px) { 
-		padding: 0;
+	@media screen and (max-width: 980px) {
 		
 		section {
 			.image {
-				position: relative;
-				width: 100%;
-				height: auto;
-				left: 0;
-
-				img {
-					height: auto;
-					min-height: 0;
-					max-width: 100%;
-				}
+				left: 50%;
+				width: 50%;
 			}
 			
 			article {
-				width: 100%;
+				width: 50%;
 			}
 			
 		}
@@ -177,6 +169,33 @@
 
 		section article p.text {
 			font-size: 1.875rem;
+		}
+	}
+
+	@media screen and (max-width: 720px) {
+		padding: 0;
+			
+		section {
+			.image {
+				position: relative;
+				width: 100%;
+				height: auto;
+				left: 0;
+
+				img {
+					height: auto;
+					max-width: 100%;
+				}
+			}
+
+			.text {
+				min-height: 0;
+			}
+
+			article {
+				width: 100%;
+				min-height: 0;
+			}
 		}
 	}
 		
