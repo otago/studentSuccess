@@ -6,48 +6,35 @@ if(typeof app === 'undefined') { var app = {}; }
 		
 		var items = $('.checklist');
 		
-		var toggleItems = function(item){
-			item.find('.icon').removeClass('icon-tick');
+		var toggleItems = function(item) {
 			var holder = item.closest('.checklist');
 			var desc = holder.find('.' + item.data('for'));
-			item.parent().find('input').prop('checked', false);
-			
+
 			holder.find('.desc').not(desc).removeClass('active');
-			holder.find('.desc').find('input').prop('checked', false);
 			holder.find('.index li').not(item).removeClass('active');
 			
-			holder.find('.desc').find('.icon').removeClass('icon-tick');
-			holder.find('.desc').find('.icon').addClass('icon-dot');
-			
-			if(item.hasClass('active')){
-				desc.removeClass('active');
-				item.removeClass('active');
-				item.find('.icon').removeClass('icon-select');
-				
+			if(item.hasClass('active')) {
+				return;
 			}
-			else{
+			else {
 				desc.addClass('active');
 				item.addClass('active');
-				item.find('.icon').removeClass('icon-dot');
-				item.find('.icon').addClass('icon-select');
-				
-				
 			}
-			
 		};
 		
-		var toggleSecondLevels = function(item){
-			if(item.hasClass('active')){
+		var toggleSecondLevels = function(item) {
+			if(item.hasClass('active')) {
 				item.removeClass('active');
+
 				item.parent().find('input.'+item.data('input')).prop('checked', false);
-			}else{
+			} else {
 				item.addClass('active');
 				item.parent().find('input.'+item.data('input')).prop('checked', true);
 			}
 			
 			
 			var icon =item.find('.icon');
-			if(icon.hasClass('icon-tick')){
+			if(icon.hasClass('icon-tick')) {
 				icon.removeClass('icon-tick');
 				icon.addClass('icon-dot');
 			}else{
@@ -58,7 +45,7 @@ if(typeof app === 'undefined') { var app = {}; }
 			CheckALLSelected(item.parents('.desc'),item.parents('.desc'));
 		};
 		
-		var CheckALLSelected = function(item,parent){
+		var CheckALLSelected = function(item,parent) {
 			var allselected = true;
 			var selector = item.data('parent');
 			$('.'+selector+' ul li').each(function( index ){
@@ -86,20 +73,86 @@ if(typeof app === 'undefined') { var app = {}; }
 			
 		};
 		
-		var initFirst = function(){
+		var initFirst = function() {
 			items.each(function(){
 				toggleItems($(this).find('.index li:first-child'));
 			});
 		};
 		
-		var initEvents = function(){
-			items.find('.index li').click(function(){
+		var initEvents = function() {
+			// load from 
+			items.find('.index .icon').each(function(i, elem) {
+				if($(elem).hasClass('arrow')) {
+					return;
+				}
+
+				if(window.localStorage !== "undefined") {
+					if(localStorage.getItem($(elem).data('for'))) {
+						$(this).removeClass('icon-select');
+						$(this).addClass('icon-tick');
+						$(this).parents('li').first().addClass('ticked');
+					} else {
+						$(this).addClass('icon-select');
+					}
+				}
+			});
+
+			items.find('.index li .icon').click(function(e) {
+				if($(this).hasClass('arrow')) {
+					return;
+				}
+
+				if($(this).hasClass('icon-select')) {
+					$(this).removeClass('icon-select');
+					$(this).addClass('icon-tick');
+					$(this).parents('li').first().addClass('ticked');
+
+					if(window.localStorage !== "undefined") {
+						localStorage.setItem($(this).data('for'), true);
+					}
+				} else {
+					$(this).removeClass('icon-tick');
+					$(this).addClass('icon-select');
+					$(this).parents('li').first().removeClass('ticked');
+
+					if(window.localStorage !== "undefined") {
+						localStorage.setItem($(this).data('for'), false);
+					}
+				}
+
+				return false;
+			});
+
+			items.find('.index li.main').click(function() {
 				toggleItems($(this));
+
+				// scroll the user 
+				if($(window).scrollTop() > $(this).offset().top) {
+					$("html, body").animate({
+						'scrollTop': $(this).offset().top
+					});
+				}
+
 				return false;
 			});
 			
-			items.find('.desc li').click(function(){
+			items.find('.desc li').each(function(i, elem) {
+				if(window.localStorage !== "undefined") {
+					if(localStorage.getItem($(elem).data('input')) == "true") {
+						toggleSecondLevels($(elem));
+					}
+				}
+			}).click(function() {
+				if(window.localStorage !== "undefined") {
+					if($(this).find('.icon-dot').length > 0) {
+						localStorage.setItem($(this).data('input'), "true");
+					} else {
+						localStorage.setItem($(this).data('input'), "false");
+					}
+				}
+
 				toggleSecondLevels($(this));
+
 				return false;
 			});
 		};

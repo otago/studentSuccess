@@ -2,9 +2,9 @@
 
 class CheckList extends BaseElement {
 
-	private static $title = "Interactive checklist";
+	private static $title = "Interactive List";
 
-	private static $description = "Interactive checklist";
+	private static $description = "Interactive List";
 
 	private static $db = array(
 		'Summary'			=> 'Text'

@@ -716,50 +716,75 @@ h3 {
   padding-bottom: 56px;
   margin-bottom: 42px;
 }
-.checklist .container .icon-info {
+.checklist .icon-info {
   font-size: 32px;
   margin-bottom: 32px;
 }
-.checklist .container .intro {
+.checklist .intro {
   font-size: 18px;
 }
-.checklist .container .intro h3 {
+.checklist .intro h3 {
   font-size: 20px;
 }
-.checklist .container .items {
+.checklist .items {
   font-size: 18px;
 }
-.checklist .container .items .index ul li {
+.checklist .items .index .main {
   height: 46px;
   line-height: 46px;
   padding: 0 10px;
 }
-.checklist .container .items .index ul li span {
+.checklist .items .index .main .icon {
   margin-top: 8px;
   width: 30px;
   height: 30px;
   line-height: 30px;
+  border-radius: 30px;
   margin-right: 10px;
   font-size: 12px;
 }
-.checklist .container .items .desc ul li {
+.checklist .items .desc p {
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
+.checklist .items .desc ul {
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
+.checklist .items .desc ul li {
   padding-left: 26px;
   padding-bottom: 24px;
 }
-.checklist .container .items .desc ul li span.icon {
+.checklist .items .desc ul li span.icon {
   width: 20px;
   height: 20px;
   line-height: 20px;
   font-size: 7px;
 }
-.checklist .container .items .desc ul li span.icon.icon-dot {
+.checklist .items .desc ul li span.icon.icon-dot {
   font-size: 7px;
   line-height: 26px;
   height: 26px;
 }
-@media screen and (max-width: 980px) {
-  .checklist .container .items .index {
+.checklist .items .desc ul li span.icon.icon-tick {
+  border-radius: 20px;
+}
+@media screen and (max-width: 820px) {
+  .checklist .intro {
     margin-bottom: 32px;
+  }
+  .checklist .items .index {
+    margin-bottom: 32px;
+  }
+  .checklist .items .index ul .main.active .total {
+    left: -10px;
+    padding-left: 10px;
+  }
+  .checklist .items .active + .accord {
+    padding: 16px 16px 0;
+  }
+  .checklist .items .active + .accord li {
+    font-size: 16px;
   }
 }
 .priority-tasks {
