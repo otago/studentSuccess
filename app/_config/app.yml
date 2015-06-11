@@ -40,7 +40,6 @@ Page:
     - ElementContent
     - Carousel
     - CTAElement
-    - Accordion
     - SidebarTestimony
     - SidebarImageElement
     - SidebarHelp
@@ -56,6 +55,9 @@ Page:
     - CarouselWithUpperLetter
     - MatrixElement
     - WayFinder
+AccordionPage:
+  allowed_elements:
+    - Accordion
 HomePage:
   allowed_elements:
     - HearFromOthers
