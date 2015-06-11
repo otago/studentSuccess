@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by Nivanka Fonseka (nivanka@silverstripers.com).
- * User: nivankafonseka
- * Date: 5/14/15
- * Time: 2:26 PM
- * To change this template use File | Settings | File Templates.
- */
 
 class CheckListItem extends DataObject {
 

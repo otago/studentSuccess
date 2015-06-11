@@ -5,6 +5,18 @@
 	border: 1px solid #eee;
 }
 
+@media screen and (min-width: 500px) {
+	.activity {
+		min-width: 480px;
+	}
+}
+
+@media screen and (min-width: 720px) {
+	.activity {
+		min-width: 660px;
+	}
+}
+
 .no-js .activity {
 	display: none;
 }
@@ -152,7 +164,6 @@
 		color: #fff;
 		text-decoration: none;
 		border: none;
-		cursor: pointer;
 		margin-left: 5px;
 		.transition(0.2s);
 
@@ -200,11 +211,11 @@
 			color: #fff;
 			font-size: 2rem;
 			padding: 0.5rem;
-			width: 2rem;
+			width: 3rem;
 			text-align: center;
-			line-height: 2rem;
-			height: 2rem;
-			border-radius: 2rem;
+			line-height: 3rem;
+			height: 3rem;
+			border-radius: 3rem;
 			position: absolute;
 			top: 0;
 			right: 0;
@@ -224,6 +235,7 @@
 		&.wrong {
 			&:after {
 				font-size: 3rem;
+				line-height: 1.8rem;
 				background: @red;
 				content: "x";
 			}

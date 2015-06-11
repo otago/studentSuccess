@@ -1,4 +1,4 @@
-<section class="links-content {$Color}">
+<section class="links-content {$Color} <% if $Image %>has-image<% end_if %>">
 	<div class="component-alignment boxed-element">
 		<div class='links-block'>
 			<div class="col left">

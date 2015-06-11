@@ -15,7 +15,7 @@ class CarouselTwoColumnSlide extends CarouselTextSlide {
 		$fields->insertAfter(
 			TextField::create('TitlePrefix')->setTitle('Prefix')->setDescription('Displays above the title'), 'Title'
 		);
-
+		/*
 		// if this is the second two column side in the list then remove the left content and title prefix as that's 
 		// fixed across all the data points
 		if($this->CarouselID) {
@@ -38,7 +38,7 @@ class CarouselTwoColumnSlide extends CarouselTextSlide {
 			$fields->makeFieldReadonly('Title');
 			$fields->makeFieldReadonly('TitlePrefix');
 		}
-
+		*/
 		return $fields;
 	}
 } 

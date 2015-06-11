@@ -1,7 +1,7 @@
 .priority-tasks {
 	width: 41.375rem;
 	position: relative;
-	padding-left: 4.813rem;
+	padding-left: 4.625rem;
     margin: 1.25rem auto;
     opacity: 0;
 
@@ -10,10 +10,6 @@
     &.init {
         opacity: 1;
     }
-	
-	.row.showInMobile {
-		display: none;
-	}
 	
 	.row {
 		display: table;
@@ -46,8 +42,10 @@
 				border-right: 0.125rem solid @white;
 			}
 		}
-
 	}
+
+
+
 	.titles {
 		
 		span {
@@ -58,22 +56,27 @@
 			text-transform: uppercase;
 			color: @darker-grey;
 		}
+
 		&.left-titles.row span.col {
 			padding: 1.438rem 0;
 		}
 	}
+
 	.block {
 		background: @ash;
 		position: relative;
-		
+		overflow: hidden;
+
 		&.col {
 			width: 50%;
 			padding: 0;
+			position: relative;
 		}
+
 		.topLine,
 		.botLine {
 			display: table;
-			height: 50%;
+			height: 80%;
 			text-align: center;
 			padding: 0 2.813rem;
 			
@@ -83,6 +86,7 @@
 				width: 100%;
 			}
 		}
+
 		.topLine {
 			font-size: 1rem;
 			line-height: 1rem;
@@ -91,28 +95,40 @@
 		.botLine {
 			font-size: 1rem;
 			line-height: 1rem;
+			height: 30%;
 			background: @darker-grey;
 			color: @white;
 			cursor: pointer;
-			position: relative;
+			position: absolute;
+			bottom: 0;
 		}
 
 		.icon-dark-up-arrow {
-			position: absolute;
-			left: 50%;
-			top: -0.813rem;
-			margin: 0 0 0 -0.875rem;
-			.icon-font;
-			font-size: 0.875rem;
-			color: @darker-grey;
-			content: "\e602";
+			background: #333338;
+			display: block;
+
+			&:after {
+				bottom: 100%;
+				left: 50%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+				border-color: rgba(51, 51, 56, 0);
+				border-bottom-color: #333338;
+				border-width: 10px;
+				margin-left: -10px;
+			}
 		}
+
 		.overlay {
 			position: absolute;	
 			left: 0;
 			top: 0;
 			width: 100%;
-			height: 99%;
+			height: 83%; /* magic number, fixed layout */
 			z-index: 1000;
 			background: @darker-grey;
 			display: none;
@@ -120,17 +136,23 @@
 			> * {
 				display: table-cell;
 				vertical-align: middle;
-				padding: 0 2.5rem 0 4.625rem; 
+				padding: 1rem 2.5rem 0 2.625rem; 
 				color: @white;
 			}
 			
 			li {
 				margin-bottom: 0.375rem;
+				line-height: 1.2;
 			}
+
 			span.close {
-				content: "x";
-				font-size: 1.188rem;
-				color: #fff;
+				&:after {
+					display: block;
+					color: #fff;
+					font-size: 1.188rem;
+					content: "x";
+				}
+
 				cursor: pointer;
 				display: block;
 				position: absolute;
@@ -140,76 +162,77 @@
 			}
 		}
 	}
-	
-	@media screen and (max-width: 1024px) { 
-		width: auto;
-		margin-right: 12.8571428571%;
-		margin-left: 12.8571428571%;
-		padding-left: 0;
-		
-		.row.showInMobile {
+
+	.block-row {
+		position: relative;
+		margin-top: 2px;
+		height: 260px;
+
+		.titles {
+			height: 100%;
 			display: block;
-		}
-		.row.hideInMobile {
-			display: none;
-		}
-		.titles.row {
-			background: @yellow;
-			
+			position: absolute;
+			left: -4.625rem;
+			background: #ffcd00;
+			line-height: 4.625rem;
+			width: 4.625rem;
+
 			span {
-				font-size: 1.5rem;
-			}
-			.col {	
-				float: left;
-				width: 49.75%;
-				padding: 1.438rem 0;
-			}
-			.col.middle {
-				width: 0.5%;
-				background: @white;
-			}
-		}
-		.block.col {
-			display: table;
-			width: 100%;
-			margin-bottom: 3rem;
-		}
-		.row .col.left {
-			border: none;
-		}
-		.block .topLine, 
-		.block .botLine {
-			width: 100%;
-			padding: 0;
-			
-			> * {
-				padding: 0 2.813rem;
-			}
-			span.icon-dark-up-arrow {
-				padding: 0;
+				transform-origin: 0 0%;
+				width: 200px;
+				position: relative;
+				top: 200px;
+				display: block;
+				.rotation(270deg);
 			}
 		}
 	}
+}
 
+@media screen and (max-width: 680px) {
+	.priority-tasks {
+		width: 100%;
+		padding: 0;
+		margin: 0;
 
-
-    @media screen and (max-width: 980px) {
-      width: auto;
-      margin-right: 1.75rem;
-      margin-left: 1.75rem;
-    }
-
-	@media screen and (max-width: 640px) { 
-		.titles.row .col {
-			float: none;
-			width: 100%;
-			display: block;
+		.titles {
+			display: none;
 		}
 
-		.titles.row .col.middle {
-			width: 100%;
-			height: 0.063rem;
-			padding: 0;
+		.block-row {
+			height: auto;
 		}
+
+		.block {
+			margin-bottom: 20px;
+		}
+	}
+
+	.priority-tasks .block .botLine,
+	.priority-tasks .block .topLine {
+		height: auto;
+		display: block;
+		position: relative;
+		top: 0;
+		bottom: auto;
+	}
+
+	.priority-tasks .block .botLine>span.text, 
+	.priority-tasks .block .topLine>span.text {
+		padding: 3rem 2rem;
+		display: block;
+		position: relative;
+		top: 0;
+		left: 0;
+		height: auto;
+	}
+
+	.priority-tasks .block-row .titles {
+		display: none;
+	}
+
+	.priority-tasks .block.col {
+		width: 100%;
+		display: block;
 	}
 }

@@ -3,6 +3,10 @@
 	clear: both; /* should always be on it's own */
 	overflow: hidden; /* crop image */
 	background: @lighter-blue;
+	
+	&.has-image {
+		min-height: 450px;
+	}
 
 	&.green {
 		background: @light-green;
@@ -122,6 +126,10 @@
 				width: 100%;
 				padding: 2.250rem 0;
 			}
+		}
+
+		&.has-image {
+			min-height: 0;
 		}	
 	}
 }

@@ -1,4 +1,4 @@
-<section class='cta {$Color} clear-this'>
+<section class='cta {$Color} clear-this <% if $Image %>has-image<% end_if %>'>
 	<div class="component-alignment boxed-element">
 		<div class="col left">
 			<% if $Icon %>

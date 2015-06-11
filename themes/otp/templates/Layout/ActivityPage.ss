@@ -14,7 +14,7 @@
 
 <div class="component-alignment">
     <div class="container">
-        <section id="activity" class="activity" data-validation-method="$Validation">
+        <section id="activity" class="activity modal-content" data-validation-method="$Validation">
             <header class="activity_header activity_scheme__{$ColorScheme}">
                 <h3>$Title</h3>
 

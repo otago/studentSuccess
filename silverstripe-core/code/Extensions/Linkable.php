@@ -37,8 +37,8 @@ class Linkable extends DataExtension {
 			TreeDropdownField::create('InternalLinkID')->setSourceObject('SiteTree'),
 			TextField::create('ExternalLink'),
 			DropdownField::create('Target')->setSource(array(
-				'_self' => '_self',
-				'_blank' => '_blank'
+				'_self' => 'Open in same window',
+				'_blank' => 'Open in a new window'
 			))
 		));
 
