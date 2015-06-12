@@ -3,7 +3,9 @@
 		<div class='links-block'>
 			<div class="col left">
 				<span class="icon icon-external-link"></span>
-				<h3>{$Title}</h3>
+				<% if not HideTitle %>
+					<h3>{$Title}</h3>
+				<% end_if %>
 
 				$DisplayContent
 

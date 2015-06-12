@@ -5161,6 +5161,7 @@ h5 a {
 .page-contents .breadcrumbs {
   color: #ffffff;
   padding-bottom: 1.375rem;
+  min-height: 70px;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
 }
 .page-contents .breadcrumbs a {
@@ -5267,6 +5268,7 @@ h5 a {
 }
 .left-content a {
   text-decoration: underline;
+  font-weight: bold;
 }
 .left-content .large {
   font-size: 1.25rem;
@@ -5350,6 +5352,7 @@ h5 a {
 .feature-external-link a {
   color: #404041;
   text-decoration: none;
+  font-weight: normal;
   transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -5425,6 +5428,7 @@ h5 a {
 .internal_link a,
 .external_link a {
   text-decoration: none;
+  font-weight: normal;
 }
 .internal_link .content-padder,
 .external_link .content-padder {
@@ -5524,6 +5528,10 @@ h5 a {
   font-size: 10em;
   line-height: 1;
   position: absolute;
+}
+.element-content-generic img {
+  border: 2px solid #ddd;
+  max-width: 100%;
 }
 figure.element img {
   width: 100%;

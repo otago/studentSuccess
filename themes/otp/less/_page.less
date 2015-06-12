@@ -73,6 +73,7 @@ h2, h3, h4, h5 {
 	.breadcrumbs {
 		color: @white;
 		padding-bottom: 1.375rem;
+		min-height: 70px;
 		text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
 		
 		a {
@@ -195,6 +196,7 @@ h2, h3, h4, h5 {
 
 	a {
 		text-decoration: underline;
+		font-weight: bold;
 	}	
 	
 	.large {
@@ -290,6 +292,8 @@ h2, h3, h4, h5 {
 	a {
 		color: @dark-grey;
 		text-decoration: none;
+		font-weight: normal;
+
 		.transition;
 		
 		&:hover {
@@ -334,6 +338,7 @@ h2, h3, h4, h5 {
 .external_link {
 	a {
 		text-decoration: none;
+		font-weight: normal;
 	}
 
 	.content-padder {
@@ -465,6 +470,11 @@ figure.right-content {
 //
 // figure
 //
+.element-content-generic img {
+	border: 2px solid #ddd;
+	max-width: 100%;
+}
+
 figure.element {
 
 	img {
