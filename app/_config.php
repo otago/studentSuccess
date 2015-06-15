@@ -36,3 +36,21 @@ $strItems = substr($strItems, 0, -1);
 
 HtmlEditorConfig::get('cms')->setOption('theme_advanced_styles', $strItems);
 
+Config::inst()->remove('LandingPage', 'allowed_elements');
+
+Config::inst()->update('LandingPage', 'allowed_elements', array(
+	'MasonryContent'
+));
+
+Config::inst()->remove('LandingSearchPage', 'allowed_elements');
+
+Config::inst()->update('LandingSearchPage', 'allowed_elements', array(
+	'MasonryContentsWithFilters'
+));
+
+Config::inst()->remove('HomePage', 'allowed_elements');
+
+Config::inst()->update('HomePage', 'allowed_elements', array(
+	'WayFinder',
+	'HearFromOthers'
+));

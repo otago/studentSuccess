@@ -1,4 +1,5 @@
 <?php
 
-class FilterableSmallMasonryImageTile extends FilterableMasonryImageTile{
+class FilterableSmallMasonryImageTile extends FilterableMasonryImageTile {
+
 }

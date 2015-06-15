@@ -77,6 +77,16 @@ class ActivityPage_Activity extends DataObject {
 		return 'Step';
 	}
 
+	public function onBeforeWrite() {
+		parent::onBeforeWrite();
+
+		if(!$this->Sort && $this->ActivityID) {
+			$parentID = $this->ActivityID;
+
+			$this->Sort = DB::query("SELECT MAX(\"Sort\") + 1 FROM \"ActivityPage_Activity\" WHERE \"ActivityID\" = $parentID")->value();
+		}
+	}
+
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		$fields->removeByName('Sort');

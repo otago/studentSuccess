@@ -3,6 +3,7 @@
 class MasonryContent extends BaseElement {
 
 	private static $title = "Masonry Element";
+
 	private static $description = "Masonry elements";
 
 	private static $db = array(
@@ -15,7 +16,7 @@ class MasonryContent extends BaseElement {
 		'Tiles'					=> 'MasonryTile'
 	);
 
-	public function getCMSFields(){
+	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
 		$fields->removeByName('Tiles');
@@ -30,7 +31,7 @@ class MasonryContent extends BaseElement {
 			'MasonryTile'			=> 'Tile',
 			'MasonryImageTile'		=> 'Image Tile',
 			'LinkListMasonryTile'	=> 'Links List',
-			'SmallMasonryTile'		=> 'Small Tile With Title'
+			'SmallMasonryTile'		=> 'Small text only title'
 		));
 		$configs->removeComponentsByType('GridFieldAddNewButton');
 		$configs->removeComponentsByType('GridFieldAddExistingAutocompleter');

@@ -7,7 +7,7 @@ h1 {
 }
 h2 {
   font-size: 30px;
-  line-height: 32px;
+  line-height: 35px;
 }
 h3 {
   font-size: 30px;
@@ -20,7 +20,7 @@ h3 {
   h2,
   h3 {
     font-size: 29px;
-    line-height: 28px;
+    line-height: 30px;
   }
   .left-content {
     font-size: 16px;
@@ -423,7 +423,7 @@ h3 {
   }
 }
 .main .container {
-  max-width: 1140px;
+  max-width: 1200px;
 }
 .main nav {
   height: 133px;
@@ -1055,7 +1055,7 @@ h3 {
   max-width: 1140px;
 }
 .page-intro {
-  max-width: 1140px;
+  max-width: 1200px;
   margin: 0 auto 16px;
   padding: 16px 70px 22px;
 }
@@ -1080,10 +1080,6 @@ h3 {
     padding-left: 28px;
     padding-right: 28px;
   }
-}
-.template_LandingPage .page-intro,
-.template_LandingSearchPage .page-intro {
-  max-width: 796px;
 }
 .filter-form .filters {
   max-width: 1200px;
@@ -1120,7 +1116,6 @@ h3 {
   font-size: 16px;
 }
 .sort-by {
-  max-width: 1000px;
   padding: 16px 0;
 }
 .sort-by .options {
@@ -1159,6 +1154,10 @@ h3 {
 .masonry-content .tile-c {
   padding: 30px 32px 30px 32px;
 }
+.masonry-content .tile-c h3 {
+  font-size: 20px;
+  line-height: 24px;
+}
 .masonry-content .tile-c h3 span {
   height: 32px;
   line-height: 36px;
@@ -1176,7 +1175,7 @@ h3 {
 .masonry-content .tile-c.contact-tile {
   font-size: 18px;
   line-height: 24px;
-  padding: 30px 46px 44px 46px;
+  padding: 32px 46px 44px 32px;
 }
 @media screen and (max-width: 980px) {
   .masonry-content .tile-c.contact-tile {
@@ -1184,8 +1183,8 @@ h3 {
   }
 }
 .masonry-content .tile-c.contact-tile h3 {
-  font-size: 30px;
-  line-height: 32px;
+  font-size: 40px;
+  line-height: 35px;
 }
 @media screen and (max-width: 980px) {
   .masonry-content .tile-c.contact-tile h3 {
@@ -1205,7 +1204,7 @@ h3 {
   margin-top: 22px;
 }
 .masonry-content .tile-c.contact-tile p.lines a {
-  margin-bottom: 22px;
+  margin-bottom: 11px;
 }
 .masonry-content .tile-c.contact-tile p.lines a span {
   margin-right: 16px;
@@ -1222,7 +1221,7 @@ h3 {
 .masonry-content .tile-c.list-menu h3 {
   font-size: 18px;
   line-height: 20px;
-  padding-bottom: 18px;
+  padding-bottom: 20px;
 }
 .masonry-content .tile-c.list-menu li a {
   line-height: 28px;
@@ -1241,11 +1240,11 @@ h3 {
   padding: 30px 35px 30px 32px;
 }
 .masonry-content .tile-c.overflow-content article h3 {
-  font-size: 30px;
+  font-size: 20px;
   line-height: 32px;
 }
 .masonry-content .tile-c.overflow-content article h3 a {
-  font-size: 30px;
+  font-size: 20px;
   line-height: 32px;
 }
 @media screen and (max-width: 980px) {
@@ -1278,6 +1277,10 @@ h3 {
 }
 .component-alignment.boxed-element {
   max-width: 1000px;
+  padding: 34px 0 22px;
+}
+.component-alignment.wide-boxed-element {
+  max-width: 1200px;
   padding: 34px 0 22px;
 }
 .container {
@@ -1335,16 +1338,16 @@ hr {
   margin-bottom: 22px;
 }
 .left-content h2 {
-  margin-bottom: 21px;
+  margin-bottom: 16px;
   font-size: 28px;
   line-height: 30px;
 }
 .left-content h3 {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   font-size: 22px;
 }
 .left-content h4 {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   font-size: 20px;
 }
 .left-content h5,
@@ -1372,6 +1375,7 @@ hr {
 .left-content ul,
 .left-content ol {
   margin-bottom: 32px;
+  padding-left: 24px;
 }
 .left-content ul ul,
 .left-content ol ul,
@@ -1427,6 +1431,7 @@ hr {
   font-size: 36px;
   line-height: 40px;
   margin: 16px 0;
+  padding-left: 48px;
 }
 figure.element picture {
   margin-bottom: 16px;

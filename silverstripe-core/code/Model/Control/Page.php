@@ -35,7 +35,6 @@ class Page extends SiteTree {
 		'RelatedBoxes'			=> 'RelatedPageBox'
 	);
 
-
 	public function updateSettingsFields() {
 		$fields = parent::updateSettingsFields();
 

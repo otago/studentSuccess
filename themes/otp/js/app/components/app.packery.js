@@ -167,7 +167,9 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 			$(window).load(packIt);
 
             $(".image-tile").click(function(e) {
-                $(this).find('.image-link').trigger('click');
+                if($(this).hasClass('has-link')) {
+                    window.location.href = $(this).find('a').attr('href');
+                }
             });
 		};
 		

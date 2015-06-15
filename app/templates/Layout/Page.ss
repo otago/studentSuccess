@@ -9,6 +9,9 @@
         $ElementArea
     </div>
 
-
-    <% include WasThisHelpful %>
+    <% if ClassName == "LandingPage" %>
+    <% else_if ClassName == "LandingSearchPage" %>
+    <% else %>
+    	<% include WasThisHelpful %>
+    <% end_if %>
 </div>

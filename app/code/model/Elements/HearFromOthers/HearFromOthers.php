@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by Nivanka Fonseka (nivanka@silverstripers.com).
- * User: nivankafonseka
- * Date: 5/14/15
- * Time: 12:16 PM
- * To change this template use File | Settings | File Templates.
- */
 
 class HearFromOthers extends BaseElement {
 
@@ -24,7 +17,13 @@ class HearFromOthers extends BaseElement {
 		'Image'				=> 'Image'
 	);
 
-	function VideoURL(){
+	private static $field_labels = array(
+		'DisplayTitle' => 'Heading',
+		'TestimonyContent' => 'Testimonial Content',
+		'Testimony' => 'Testimonial name'
+	);
+
+	function VideoURL() {
 		if($this->YoutubeVideo){
 			return 'http://www.youtube.com/watch?v=' . StringUtils::YouTubeVideoIDFromURL($this->YoutubeVideo);
 		}

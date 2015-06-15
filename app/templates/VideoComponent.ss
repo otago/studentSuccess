@@ -1,5 +1,5 @@
 <div class='hear-from-others clear-this {$Color}'>
-	<div class="component-alignment boxed-element">
+	<div class="component-alignment wide-boxed-element">
 		<section>
 			<div class='image'>
 				<% if $VideoURL %>

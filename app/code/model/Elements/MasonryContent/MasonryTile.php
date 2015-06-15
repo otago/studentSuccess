@@ -12,9 +12,13 @@ class MasonryTile extends DataObject {
 		'MasonryContent'	=> 'MasonryContent'
 	);
 
+	private static $field_labels = array(
+		'Title' => 'Heading'
+	);
+
 	private static $default_sort = 'SortOrder';
 
-	public function getCMSFields(){
+	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
 		$fields->removeByName(array(

@@ -29,7 +29,8 @@
 		}
 		
 		h3 {
-			
+			font-size: 1.25rem;
+			line-height: 1.5rem;
 			margin: 0;
 			position: relative;
 
@@ -43,7 +44,6 @@
                 opacity: 0.6;
                 top: 0;
             }
-
 		}
 		
 		p {
@@ -179,7 +179,7 @@
 			color: @dark-grey;
 			font-size: 1.125rem;
 			line-height: 1.5rem;
-			padding: 1.875rem 2.875rem 2.75rem 2.875rem;
+			padding: 2rem 2.875rem 2.75rem 2rem;
 			float: right;
 			top: 0;
 			right: 0;
@@ -206,8 +206,8 @@
 			}
 			
 			h3 {
-				font-size: 1.875rem;
-				line-height: 2rem;
+				font-size: 2.5rem;
+				line-height: 2.2rem;
 				font-weight: 100;
 				color: @red;
 
@@ -236,12 +236,13 @@
 					
 					a {
 						display: block;
-						margin-bottom: 1.375rem;
+						margin-bottom: 0.675rem;
 						
 						span {
 							margin-right: 1rem;
 							display: inline-block;
 							top: 3px;
+							font-size: 18px;
 							position: relative;
 						}
 						
@@ -301,7 +302,7 @@
 				line-height: 1.25rem;
 				font-weight: 600;
 				color: #fff;
-				padding-bottom: 1.125rem;
+				padding-bottom: 1.250rem;
 			}
 			
 			a {
@@ -333,8 +334,8 @@
 					span {
 						position: absolute;
 					  	margin-top: 5px;
-					  	font-size: 16px;
-					  	top: 17px;
+					  	font-size: 12px;
+					  	top: 20px;
 						right: 0;
 					}
 					
@@ -391,10 +392,26 @@
 			&.has-link {
 				cursor: pointer;
 
+				&:before {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+					content: " ";
+					display: block;
+					background: rgba(0, 0, 0, 0);
+					.transition-property(background, 0.2s);
+				}
+
 				&:hover,
 				&:focus {
+					&:before {
+						background: rgba(0, 0, 0, 0.5);
+					}
+
 					article {
-						background: rgba(0, 0, 0, 0.8);
+						background: rgba(0, 0, 0, 0);
 					}
 				}
 			}
@@ -404,18 +421,20 @@
 			position: relative;
 
 			article {
-				width: 100%;
+				width: 80%;
 				margin-top: 12rem;
-				background: rgba(0,0,0,0.4);
+				background: rgba(0,0,0,0.25);
+				float: right;
+
 				.transition-property(background, 0.4s);
 				padding: 1.875rem 2.2rem 1.875rem 2.000rem;
 				
 				h3 {
-					font-size: 1.875rem;
+					font-size: 1.25rem;
 					line-height: 2rem;
 					
 					a {
-						font-size: 1.875rem;
+						font-size: 1.25rem;
 						line-height: 2rem;
 					}
 				}

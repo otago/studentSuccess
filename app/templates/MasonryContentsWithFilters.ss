@@ -1,4 +1,4 @@
-<div class="component-alignment boxed-element">
+<div class="component-alignment wide-boxed-element">
 <form class='filter-form form-{$ID}'>
     <div class='filters'>
         <fieldset>
@@ -26,17 +26,17 @@
     <div class='sort-by'>
         <div class='options'>
             <label>Sort by:</label>
+
             <div class='option-holder'>
                 <select class="sort-filter">
-                    <option value='order'>Default</option>
                     <option value='views'>Most viewed</option>
                     <option value='title'>Title</option>
                 </select>
             </div>
         </div>
+
         <div class='clear'></div>
     </div>
-
 </form>
 
 

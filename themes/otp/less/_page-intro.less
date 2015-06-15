@@ -20,7 +20,7 @@
 }
 
 .page-intro {
-	max-width: 71.25rem;
+	max-width: 75rem;
 	width: 100%;
 	margin: 0 auto 1rem;
 	padding: 1rem 4.375rem 1.375rem;
@@ -87,10 +87,13 @@
 }
 
 .template_LandingPage .page-intro,
+.template_GlossaryPage .page-intro,
 .template_LandingSearchPage .page-intro {
-	max-width: 49.75rem;
-	margin: 0 auto;
 	text-align: center;
+
+	.social-blocks {
+		display: none;
+	}
 }
 	
 .filter-form {
@@ -181,6 +184,7 @@
 		  	right: 6.125rem;
 			color: @button-grey;
 			opacity: 0.2;
+			font-size: 18px;
 			.transition; 
 			
 			&:hover {
@@ -210,8 +214,7 @@
 
 .sort-by {
 	border-top: 1px solid @grey;
-	width: 90%;
-	max-width: 62.5rem;
+	width: 100%;
 	margin: 0 auto;
 	padding: 1rem 0;
 	

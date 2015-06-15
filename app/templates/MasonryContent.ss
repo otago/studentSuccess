@@ -1,4 +1,4 @@
-<div class="component-alignment boxed-element">
+<div class="component-alignment wide-boxed-element">
 	<div class='masonry-content'>
 		<div class='packery'>
 			<div class='tile tile-c half width-c'></div>

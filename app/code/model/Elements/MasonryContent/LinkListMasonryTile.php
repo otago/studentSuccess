@@ -6,8 +6,7 @@ class LinkListMasonryTile extends MasonryTile {
 		'Links'			=> 'MasonryTileLink'
 	);
 
-	public function getCMSFields(){
-
+	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
 		$fields->removeByName(array(
@@ -19,7 +18,4 @@ class LinkListMasonryTile extends MasonryTile {
 		return $fields;
 
 	}
-
-
-
 } 

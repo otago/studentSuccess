@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by Nivanka Fonseka (nivanka@silverstripers.com).
- * User: nivankafonseka
- * Date: 5/16/15
- * Time: 10:06 AM
- * To change this template use File | Settings | File Templates.
- */
 
 class MasonryContentsWithFilters extends MasonryContent {
 
@@ -26,9 +19,7 @@ class MasonryContentsWithFilters extends MasonryContent {
 			$adder = new GridFieldAddNewMultiClass();
 			$configs->removeComponentsByType('GridFieldAddNewMultiClass');
 			$adder->setClasses(array(
-				'FilterableSmallMasonryTile'	=> 'Small Filter Tile',
-				'FilterableMasonryTile'			=> 'Tile',
-				'FilterableMasonryImageTile'	=> 'Image Tile',
+				'FilterableSmallMasonryTile'	=> 'Text Tile',
 				'LinkListMasonryTile'			=> 'Links List',
 				'FilterableSmallMasonryImageTile'=> 'Small Image Tile'
 			));
