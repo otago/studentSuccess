@@ -22,6 +22,8 @@ class ActivityPage extends Page {
 			'blue' => 'Blue'
 		)));
 
+		$fields->removeByName('Content');
+
 		$fields->addFieldToTab('Root.Main', $validation = new DropdownField(
 			'Validation', 'Validation method', $this->dbObject('Validation')->enumValues()
 		));
@@ -53,9 +55,9 @@ class ActivityPage_Controller extends Page_Controller {
 class ActivityPage_Activity extends DataObject {
 
 	private static $db = array(
+		'Presentation' => "Enum('TextSlide, DragAndDrop, Paragraph, MultiChoice, Replace, ResultsSlide', 'TextSlide')",
 		'Title' => 'Varchar(200)',
 		'Description' => 'HTMLText',
-		'Presentation' => "Enum('TextSlide, DragAndDrop, Paragraph, MultiChoice, Replace, ResultsSlide', 'TextSlide')",
 		'PresentedOptions' => 'Text',
 		'CorrectAnswers' => 'Text',
 		'RightAnswerContent' => 'HTMLText',
@@ -71,6 +73,12 @@ class ActivityPage_Activity extends DataObject {
 
 	private static $has_one = array(
 		'Activity' => 'ActivityPage'
+	);
+
+	private static $field_labels = array(
+		'Title' => 'Slide title',
+		'Description' => 'Instructions',
+		'Presentation' => 'Slide type'
 	);
 
 	public function i18n_singular_name() {
@@ -91,6 +99,19 @@ class ActivityPage_Activity extends DataObject {
 		$fields = parent::getCMSFields();
 		$fields->removeByName('Sort');
 
+		$description = $fields->dataFieldByName('Description');
+		$description->setRows(4);
+
+		$presentation = $fields->dataFieldByName('Presentation');
+		$presentation->setSource(array(
+			'TextSlide' => 'Welcome/Instructions',
+			'DragAndDrop' => 'DragAndDrop',
+			'Paragraph' => 'Paragraph',
+			'MultiChoice' => 'MultiChoice',
+			'Replace' => 'Replace',
+			'ResultsSlide' => 'Results'
+		));
+
 		$presented = $fields->dataFieldByName('PresentedOptions');
 		$presented
 			->displayIf('Presentation')->isEqualTo('DragAndDrop')
@@ -101,6 +122,7 @@ class ActivityPage_Activity extends DataObject {
 		$presented->setDescription('List the items you want to show the user, separated by new lines');
 
 		$correct = $fields->dataFieldByName('CorrectAnswers');
+
 		$correct
 			->displayIf('Presentation')->isEqualTo('DragAndDrop')
 			->orIf('Presentation')->isEqualTo('Paragraph')
@@ -110,6 +132,7 @@ class ActivityPage_Activity extends DataObject {
 		$correct->setDescription('List the correct order of the items, separated by new lines');
 
 		$rightContent = $fields->dataFieldByName('RightAnswerContent');
+		$rightContent->setRows(4);
 		$rightContent
 			->displayIf('Presentation')->isEqualTo('DragAndDrop')
 			->orIf('Presentation')->isEqualTo('Paragraph')
@@ -117,6 +140,7 @@ class ActivityPage_Activity extends DataObject {
 			->orIf('Presentation')->isEqualTo('Replace');
 
 		$wrongContent = $fields->dataFieldByName('WrongAnswerContent');
+		$wrongContent->setRows(4);
 		$wrongContent
 			->displayIf('Presentation')->isEqualTo('DragAndDrop')
 			->orIf('Presentation')->isEqualTo('Paragraph')

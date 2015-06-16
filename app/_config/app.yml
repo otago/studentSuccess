@@ -33,6 +33,10 @@ Director:
     'tile//$Action/$ID': 'FilterableTile_Counter'
 SSViewer:
   theme: 'otp'
+
+ElementPageExtension:
+  ignored_classes:
+    - ActivityPage
 Page:
   extensions:
     - ElementPageExtension

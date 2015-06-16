@@ -31,7 +31,11 @@
                 <article class="activity_individual  activity_{$Presentation} <% if First %>current<% end_if %>" data-activity-id="$ID">
                     <h3>$Title</h3>
 
-                    $Description
+                    <% if Description %>
+                        <div class="activity_description">
+                            $Description
+                        </div>
+                    <% end_if %>
 
                     <% if ActivityOptions.Count > 0 %>
                         <div class="activity_text activity_text__{$Presentation}">
