@@ -3,7 +3,7 @@
 class MasonryTile extends DataObject {
 
 	private static $db = array(
-		'Title'				=> 'Varchar',
+		'Title'				=> 'Varchar(255)',
 		'Content'			=> 'Text',
 		'SortOrder'			=> 'Int',
 	);

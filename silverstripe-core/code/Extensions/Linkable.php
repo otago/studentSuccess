@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by Nivanka Fonseka (nivanka@silverstripers.com).
- * User: nivankafonseka
- * Date: 5/14/14
- * Time: 12:01 PM
- * To change this template use File | Settings | File Templates.
- */
 
 class Linkable extends DataExtension {
 
@@ -13,7 +6,7 @@ class Linkable extends DataExtension {
 		'LinkType'              => 'Enum("None, Internal, External", "None")',
 		'InternalLinkID'        => 'Int',
 		'ExternalLink'          => 'Varchar(300)',
-		'Target'				=> 'Enum("_self,_blank")'
+		'Target'				=> 'Enum("_self,_blank,_modal")'
 	);
 
 	public function updateCMSFields(FieldList $fields){
@@ -38,7 +31,8 @@ class Linkable extends DataExtension {
 			TextField::create('ExternalLink'),
 			DropdownField::create('Target')->setSource(array(
 				'_self' => 'Open in same window',
-				'_blank' => 'Open in a new window'
+				'_blank' => 'Open in a new window',
+				'_modal' => 'Modal Window'
 			))
 		));
 
@@ -51,6 +45,10 @@ class Linkable extends DataExtension {
 		}elseif($this->owner->LinkType == 'External' && $this->owner->ExternalLink){
 			return $this->owner->ExternalLink;
 		}
+	}
+
+	public function OpenInModal() {
+		return ($this->owner->Target == "_modal");
 	}
 
 

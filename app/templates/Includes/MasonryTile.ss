@@ -1,5 +1,5 @@
 <% if $Link %>
-    <a href='{$Link}' target="{$Target}" class='block-anchor tile tile-c content-tile'>
+    <a href='{$Link}' <% if not OpenInModal %>target="{$Target}"<% end_if %> class='block-anchor tile tile-c content-tile <% if OpenInModal %>fancybox-link<% end_if %>' data-fancybox-type="ajax">
 <% else %>
     <div class='tile tile-c content-tile'>
 <% end_if %>

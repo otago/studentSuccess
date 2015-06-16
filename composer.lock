@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fa7c6d13da7e6a78ce2938822fff5f0f",
+    "hash": "3213194db0ff610b5080b1ea5f26db13",
     "packages": [
         {
             "name": "composer/installers",
@@ -178,16 +178,16 @@
         },
         {
             "name": "dnadesign/silverstripe-elemental",
-            "version": "dev-master",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dnadesign/silverstripe-elemental.git",
-                "reference": "05e1ca854f0d5b44f9904b927b41f5b346ae735e"
+                "reference": "f39551d6eefc2039d5e3ddb4e16adbc80085595f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dnadesign/silverstripe-elemental/zipball/05e1ca854f0d5b44f9904b927b41f5b346ae735e",
-                "reference": "05e1ca854f0d5b44f9904b927b41f5b346ae735e",
+                "url": "https://api.github.com/repos/dnadesign/silverstripe-elemental/zipball/f39551d6eefc2039d5e3ddb4e16adbc80085595f",
+                "reference": "f39551d6eefc2039d5e3ddb4e16adbc80085595f",
                 "shasum": ""
             },
             "require": {
@@ -219,7 +219,7 @@
                 "silverstripe",
                 "widget"
             ],
-            "time": "2015-05-24 08:57:41"
+            "time": "2015-06-04 09:14:48"
         },
         {
             "name": "heyday/silverstripe-versioneddataobjects",
@@ -1326,12 +1326,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unclecheese/silverstripe-gridfield-betterbuttons.git",
-                "reference": "8d28b709cd12329a93c63db0ce17074faf5c397c"
+                "reference": "aaea9e42ad45baf6123547377247d4e7437bb546"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/unclecheese/silverstripe-gridfield-betterbuttons/zipball/8d28b709cd12329a93c63db0ce17074faf5c397c",
-                "reference": "8d28b709cd12329a93c63db0ce17074faf5c397c",
+                "url": "https://api.github.com/repos/unclecheese/silverstripe-gridfield-betterbuttons/zipball/aaea9e42ad45baf6123547377247d4e7437bb546",
+                "reference": "aaea9e42ad45baf6123547377247d4e7437bb546",
                 "shasum": ""
             },
             "require": {
@@ -1354,7 +1354,7 @@
                 "gridfield",
                 "silverstripe"
             ],
-            "time": "2015-05-12 10:54:06"
+            "time": "2015-05-25 04:18:57"
         },
         {
             "name": "unclecheese/display-logic",
@@ -1685,16 +1685,16 @@
         },
         {
             "name": "phpunit/php-timer",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-timer.git",
-                "reference": "19689d4354b295ee3d8c54b4f42c3efb69cbc17c"
+                "reference": "83fe1bdc5d47658b727595c14da140da92b3d66d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/19689d4354b295ee3d8c54b4f42c3efb69cbc17c",
-                "reference": "19689d4354b295ee3d8c54b4f42c3efb69cbc17c",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/83fe1bdc5d47658b727595c14da140da92b3d66d",
+                "reference": "83fe1bdc5d47658b727595c14da140da92b3d66d",
                 "shasum": ""
             },
             "require": {
@@ -1703,13 +1703,10 @@
             "type": "library",
             "autoload": {
                 "classmap": [
-                    "PHP/"
+                    "src/"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
-            "include-path": [
-                ""
-            ],
             "license": [
                 "BSD-3-Clause"
             ],
@@ -1725,7 +1722,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2013-08-02 07:42:54"
+            "time": "2015-06-13 07:35:30"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -1934,21 +1931,20 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.6.7",
-            "target-dir": "Symfony/Component/Yaml",
+            "version": "v2.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "f157ab074e453ecd4c0fa775f721f6e67a99d9e2"
+                "reference": "9808e75c609a14f6db02f70fccf4ca4aab53c160"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/f157ab074e453ecd4c0fa775f721f6e67a99d9e2",
-                "reference": "f157ab074e453ecd4c0fa775f721f6e67a99d9e2",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/9808e75c609a14f6db02f70fccf4ca4aab53c160",
+                "reference": "9808e75c609a14f6db02f70fccf4ca4aab53c160",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=5.3.9"
             },
             "require-dev": {
                 "symfony/phpunit-bridge": "~2.7"
@@ -1956,11 +1952,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6-dev"
+                    "dev-master": "2.7-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
+                "psr-4": {
                     "Symfony\\Component\\Yaml\\": ""
                 }
             },
@@ -1980,7 +1976,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2015-05-02 15:18:45"
+            "time": "2015-06-10 15:30:22"
         }
     ],
     "aliases": [],
@@ -1991,7 +1987,6 @@
         "heyday/silverstripe-versioneddataobjects": 20,
         "silverstripe-australia/addressable": 20,
         "silverstripe/widgets": 20,
-        "dnadesign/silverstripe-elemental": 20,
         "silverstripe/fulltextsearch-localsolr": 20
     },
     "prefer-stable": false,

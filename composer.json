@@ -11,7 +11,7 @@
         "silverstripe-australia/gridfieldextensions": "1.0.3",
         "silverstripe-australia/addressable" : "dev-master",
         "silverstripe/widgets": "1.1.x-dev",
-        "dnadesign/silverstripe-elemental" : "dev-master",
+        "dnadesign/silverstripe-elemental" : "1.0.0",
         "unclecheese/display-logic": "1.2.1"
     },
     "require-dev": {

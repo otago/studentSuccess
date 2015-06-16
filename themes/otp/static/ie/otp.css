@@ -1057,7 +1057,7 @@ h3 {
 .page-intro {
   max-width: 1200px;
   margin: 0 auto 16px;
-  padding: 16px 70px 22px;
+  padding: 16px 100px 22px;
 }
 .page-intro article {
   font-size: 22px;
@@ -1088,7 +1088,7 @@ h3 {
 .filter-form fieldset {
   padding: 0 0 22px 0;
 }
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 720px) {
   .filter-form .subject {
     margin-bottom: 16px;
   }
@@ -1104,9 +1104,14 @@ h3 {
   width: 50px;
   right: 98px;
 }
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 720px) {
   .filter-form .actions button {
     top: 58px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .filter-form .actions button {
+    right: 10px;
   }
 }
 .filter-form .chosen-container .chosen-results li {
@@ -1375,7 +1380,7 @@ hr {
 .left-content ul,
 .left-content ol {
   margin-bottom: 32px;
-  padding-left: 24px;
+  padding-left: 8px;
 }
 .left-content ul ul,
 .left-content ol ul,
@@ -1407,6 +1412,11 @@ hr {
   top: 2px;
   font-size: 32px;
 }
+.internal_link.component-alignment.boxed-element,
+.external_link.component-alignment.boxed-element {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
 @media screen and (max-width: 640px) {
   .social.right-content,
   .testimony-content.right-content,
@@ -1431,7 +1441,7 @@ hr {
   font-size: 36px;
   line-height: 40px;
   margin: 16px 0;
-  padding-left: 48px;
+  padding-left: 56px;
 }
 figure.element picture {
   margin-bottom: 16px;
