@@ -4,7 +4,7 @@ if(typeof app === 'undefined') { var app = {}; }
 
     app.fancybox = (function(){
 
-        var items = $('a.fancybox-link');
+        var items = $('.fancybox-link');
 
         var initFancyBox = function() {
 

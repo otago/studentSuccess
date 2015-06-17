@@ -7,6 +7,7 @@ class ActivityPage extends Page {
 	
 	private static $db = array(
 		'ColorScheme' => 'Varchar(200)',
+		'Icon' => 'Enum("pencil, question, none", "none")',
 		'Validation' => 'Enum("OnEachStep,OnComplete", "OnComplete")'
 	);
 
@@ -20,6 +21,12 @@ class ActivityPage extends Page {
 		$fields->addFieldToTab('Root.Main', new DropdownField('ColorScheme', 'Color Scheme', array(
 			'black' => 'Black',
 			'blue' => 'Blue'
+		)));
+
+		$fields->addFieldToTab('Root.Main', new DropdownField('Icon', 'Icon', array(
+			'none' => 'None',
+			'pencil' => 'Pencil',
+			'question' => 'Question'
 		)));
 
 		$fields->removeByName('Content');
@@ -36,6 +43,7 @@ class ActivityPage extends Page {
 		$steps = new GridField('Activities', 'Activities', $this->Activities(), $config);
 		
 		$fields->addFieldToTab('Root.Main', $steps);
+
 
 		return $fields;
 	}
@@ -55,7 +63,7 @@ class ActivityPage_Controller extends Page_Controller {
 class ActivityPage_Activity extends DataObject {
 
 	private static $db = array(
-		'Presentation' => "Enum('TextSlide, DragAndDrop, Paragraph, MultiChoice, Replace, ResultsSlide', 'TextSlide')",
+		'Presentation' => "Enum('TextSlide, SingleChoice, DragAndDrop, Paragraph, MultiChoice, Replace, ResultsSlide', 'TextSlide')",
 		'Title' => 'Varchar(200)',
 		'Description' => 'HTMLText',
 		'PresentedOptions' => 'Text',
@@ -64,6 +72,8 @@ class ActivityPage_Activity extends DataObject {
 		'WrongAnswerContent' => 'HTMLText',
 		'Sort' => 'Int'
 	);
+
+	private static $default_sort = "Sort";
 
 	private static $summary_fields = array(
 		'Title',
@@ -106,6 +116,7 @@ class ActivityPage_Activity extends DataObject {
 		$presentation->setSource(array(
 			'TextSlide' => 'Welcome/Instructions',
 			'DragAndDrop' => 'DragAndDrop',
+			'SingleChoice' => 'SingleChoice',
 			'Paragraph' => 'Paragraph',
 			'MultiChoice' => 'MultiChoice',
 			'Replace' => 'Replace',
@@ -116,6 +127,7 @@ class ActivityPage_Activity extends DataObject {
 		$presented
 			->displayIf('Presentation')->isEqualTo('DragAndDrop')
 			->orIf('Presentation')->isEqualTo('Paragraph')
+			->orIf('Presentation')->isEqualTo('SingleChoice')
 			->orIf('Presentation')->isEqualTo('MultiChoice')
 			->orIf('Presentation')->isEqualTo('Replace');
 
@@ -126,6 +138,7 @@ class ActivityPage_Activity extends DataObject {
 		$correct
 			->displayIf('Presentation')->isEqualTo('DragAndDrop')
 			->orIf('Presentation')->isEqualTo('Paragraph')
+			->orIf('Presentation')->isEqualTo('SingleChoice')
 			->orIf('Presentation')->isEqualTo('MultiChoice')
 			->orIf('Presentation')->isEqualTo('Replace');
 
@@ -136,6 +149,7 @@ class ActivityPage_Activity extends DataObject {
 		$rightContent
 			->displayIf('Presentation')->isEqualTo('DragAndDrop')
 			->orIf('Presentation')->isEqualTo('Paragraph')
+			->orIf('Presentation')->isEqualTo('SingleChoice')
 			->orIf('Presentation')->isEqualTo('MultiChoice')
 			->orIf('Presentation')->isEqualTo('Replace');
 
@@ -144,6 +158,7 @@ class ActivityPage_Activity extends DataObject {
 		$wrongContent
 			->displayIf('Presentation')->isEqualTo('DragAndDrop')
 			->orIf('Presentation')->isEqualTo('Paragraph')
+			->orIf('Presentation')->isEqualTo('SingleChoice')
 			->orIf('Presentation')->isEqualTo('MultiChoice')
 			->orIf('Presentation')->isEqualTo('Replace');
 			

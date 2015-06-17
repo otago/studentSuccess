@@ -14,8 +14,16 @@
 
 <div class="component-alignment">
     <div class="container">
+        <a class="fancybox-link activities-trigger" href="#activity"></a>
+
         <section id="activity" class="activity modal-content" data-validation-method="$Validation">
             <header class="activity_header activity_scheme__{$ColorScheme}">
+                <% if $Icon == "pencil" %>
+                    <div class="preicon"><% include PencilIcon %></div>
+                <% else_if $Icon == "question" %>
+                    <div class="preicon question">?</div>
+                <% end_if %>
+
                 <h3>$Title</h3>
 
                 <div class="progress">
@@ -70,7 +78,7 @@
             <% end_loop %>
 
             <footer class="activity_navigation">
-                <span class="btn next">Start &rarr;</span>
+                <span class="btn next"><% if Activities.First.ClassName == "TextSlide" %>Start<% else %>Next<% end_if %> &rarr;</span>
                 <span class="btn hidden back">&larr;</span>
             </footer>
         </section>

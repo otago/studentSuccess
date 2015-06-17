@@ -7,6 +7,10 @@ class ElementContentExtension extends DataExtension {
 		'ReadMoreContent' => 'HTMLText'
 	);
 
+	private static $casting = array(
+		'ProcessedHTML' => 'HTMLText'
+	);
+
 	function updateCMSFields(FieldList $fields){
 		$contentField = $fields->dataFieldByName('HTML');
 
@@ -21,8 +25,7 @@ class ElementContentExtension extends DataExtension {
 		}
 	}
 
-	function ProcessedHTML(){
-
+	function ProcessedHTML() {
 		$strRet = $this->owner->HTML;
 
 		// update tables
@@ -50,7 +53,6 @@ class ElementContentExtension extends DataExtension {
 			$strRet .= '</figure>' . $arrParts['After'];
 		}
 
-		return $strRet;
+		return ShortcodeParser::get_active()->parse($strRet);
 	}
-	
 }

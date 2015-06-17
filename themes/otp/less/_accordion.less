@@ -35,12 +35,12 @@
 		a {
 			display: block;
 			padding: 1.5rem 0;
-			color: #8C8E90;
+			color: lighten(#8C8E90, 5%);
 			position: relative;
 			width: 90%;
 			max-width: 62.5rem;
 			font-weight: 500;
-			left: -10px;
+			left: -15px;
 			margin: 0 auto;
 			
 			&:after {
@@ -71,12 +71,30 @@
 			background-color: rgba(255, 255, 255, 0.3);
 			opacity: 0.8;
 			color: darken(#8C8E90, 10%);
-			
+			border-bottom: none;
+
 			a {
 				color: @dark-grey;
+				
 				&:after {
 					content: "\e602";
-				};
+				}
+			}
+		}
+
+		@media screen and (max-width: 880px) {
+			font-size: 1.4rem;
+			line-height: 1.8rem;
+		}
+
+		@media screen and (max-width: 620px) {
+			font-size: 1.2rem;
+			line-height: 1.6rem;
+			border-left-width: 5px !important;
+
+			a {
+				width: 100%;
+				padding-left: 30px;
 			}
 		}
 	}

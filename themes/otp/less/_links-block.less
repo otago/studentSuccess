@@ -3,7 +3,8 @@
 	clear: both; /* should always be on it's own */
 	overflow: hidden; /* crop image */
 	background: @lighter-blue;
-	
+	max-height: 500px;
+
 	&.has-image {
 		min-height: 450px;
 	}
@@ -114,6 +115,7 @@
 	}
 	
 	@media screen and (max-width: 780px) {
+		max-height: auto;
 
         .component-alignment.boxed-element {
             padding-left: 0;

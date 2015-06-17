@@ -21,6 +21,7 @@
 	display: none;
 }
 
+
 .activity_text {
 	overflow: hidden;
 	margin-bottom: 20px;
@@ -30,7 +31,7 @@
 		padding: 1em;
 		background: #eee;
 		display: block;
-		font-size: 14px;
+		font-size: 20px;
 		margin-right: 5px;
 		margin-bottom: 5px;
 		cursor: pointer;
@@ -39,7 +40,7 @@
 		&:hover,
 		&:focus,
 		&:active {
-			background: #f4f4f4;
+			background: @yellow;
 			color: #000;
 		}
 
@@ -63,6 +64,19 @@
 			color: #fff;
 		}
 	}
+
+	&.activity_text__Replace {
+		li {
+			background: transparent;
+
+			&:focus,
+			&:active,
+			&:hover {
+				background: @yellow;
+				color: #000;
+			}
+		}
+	}
 }
 
 .activity_text__Paragraph,
@@ -81,11 +95,20 @@
 .activity_header {
 	background: #eee;
 	overflow: hidden;
+	height: 60px;
 	position: relative;
 
 	.progress {
 		float: right;
 		padding: 1em 0;
+	}
+
+	@media screen and (max-width: 620px) {
+		height: auto;
+
+		.progress {
+			float: none;
+		}
 	}
 
 	ul {
@@ -98,27 +121,28 @@
 
 		a {
 			text-indent: -9000px;
-			height: 8px;
-			width: 8px;
+			height: 4px;
+			width: 4px;
 			border-radius: 5px;
 			margin-right: 10px;
 			position: relative;
-			top: 8px;
+			top: 12px;
 			display: block;
+			cursor: default;
 			float: left;
-			background: #999;
+			background: #333;
 
 			&.current {
 				height: auto;
 				width: auto;
 				text-indent: 0;
-				border: 1px solid #aaa;
+				border: 1px solid #333;
 				top: 0;
 				font-size: 12px;
 				background: transparent;
 				border-radius: 13px;
 				height: 25px;
-				color: #999;
+				color: #333;
 				text-align: center;
 				line-height: 25px;
 				width: 25px;
@@ -128,17 +152,52 @@
 
 	h3 {
 		float: left;
-		padding: 1em 2em;
+		padding: 1em 2em 1em 88px;
 		position: absolute;
 		margin: 0;
 		top: 0;
 		left: 0;
 		font-size: 16px;
 	}
+
+
+	.preicon {
+		position: absolute;
+		top: 50%;
+		z-index: 3;
+		margin-left: 50px;
+		padding-right: 9px;
+		border-right: 1px solid rgba(255, 255, 255, 0.3);
+		margin-top: -8px;
+		height: 20px;
+		color: #fff;
+		font-size: 18px;
+		font-weight: bold;
+
+		svg {
+			height: 18px;
+			width: 18px;
+
+			path, rect, polyline, line, circle {
+				stroke: #fff;
+			}
+		}
+
+		&.question {
+			width: 18px;
+			padding-right: 15px;
+			text-align: center;
+			line-height: 1;
+		}
+	}
 }
 
 .activity_description {
 	max-width: 650px;
+
+	p {
+		font-size: 20px;
+	}
 }
 
 .activity_scheme__black {
@@ -155,7 +214,7 @@
 }
 
 .activity_scheme__blue {
-	h4 {
+	h3 {
 		background: #0C79C3;
 		color: #fff;
 	}
@@ -170,6 +229,7 @@
 		float: right;
 		padding: 0.6em 1.5em;
 		background: #0C79C3;
+		cursor: pointer;
 		color: #fff;
 		text-decoration: none;
 		border: none;
@@ -194,12 +254,17 @@
 
 .activity_individual {
 	display: none;
-	min-height: 200px;
+	overflow-x: auto;
+	height: 30rem;
 	padding: 2em;
 	position: relative;
 
 	&.current {
 		display: block;
+	}
+
+	@media screen and (min-width: 620px) {
+		padding-left: 70px;
 	}
 }
 

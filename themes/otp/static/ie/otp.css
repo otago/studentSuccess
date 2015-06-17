@@ -60,6 +60,18 @@ h3 {
     right: 16px;
   }
 }
+@media screen and (max-width: 880px) {
+  .accordion-c .title-c {
+    font-size: 22px;
+    line-height: 29px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .accordion-c .title-c {
+    font-size: 19px;
+    line-height: 26px;
+  }
+}
 .accordion-c .accordion-item .accordion-item-content {
   max-width: 1000px;
 }
@@ -1059,6 +1071,11 @@ h3 {
   margin: 0 auto 16px;
   padding: 16px 100px 22px;
 }
+@media screen and (min-width: 600px) {
+  .page-intro {
+    min-height: 200px;
+  }
+}
 .page-intro article {
   font-size: 22px;
   line-height: 35px;
@@ -1497,6 +1514,9 @@ figure.element figcaption {
 }
 .was-this-helpful .widget a.yes {
   margin-left: 22px;
+}
+.activity_individual {
+  height: 480px;
 }
 .activity_results {
   padding: 32px 0;

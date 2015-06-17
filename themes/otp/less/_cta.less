@@ -2,6 +2,7 @@
 	overflow: hidden;
 	margin-bottom: 0;
 	background: @yellow;
+	max-height: 500px;
 
 	&.has-image {
 		min-height: 450px;
@@ -98,6 +99,8 @@
 
 	
 	@media screen and (max-width: 980px) {
+		max-height: 0;
+		
         .component-alignment.boxed-element {
             padding-left: 0;
             padding-right: 0;

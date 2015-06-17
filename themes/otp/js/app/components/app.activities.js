@@ -8,6 +8,7 @@ if(typeof app === 'undefined') { var app = {}; }
 		};
 		
 		var init = function () {
+
 			$(".activity_navigation .btn").on('click', function(e) {
 				
 				e.preventDefault();
@@ -63,7 +64,9 @@ if(typeof app === 'undefined') { var app = {}; }
 
 						if(remaining < 1) {
 							btn.addClass('hidden');
-							btn.siblings('.next').html("Start &rarr;").removeClass('hidden');
+							var text = nextStep.prevAll('.activity_individual').first().hasClass('activity_TextSlide') ? 'Start' : 'Next';
+
+							btn.siblings('.next').html(text + " &rarr;").removeClass('hidden');
 						} else {
 							btn.siblings('.next').html("Next &rarr;").removeClass('hidden');
 						}
@@ -186,7 +189,7 @@ if(typeof app === 'undefined') { var app = {}; }
 				
 					// validate the options based on the the type of field
 					// the user has created
-					if(step.find('.activity_text__MultiChoice').length > 0 || step.find('.activity_text__Paragraph').length > 0) {
+					if(step.find('.activity_text__MultiChoice').length > 0 || step.find('.activity_text__SingleChoice').length || step.find('.activity_text__Paragraph').length > 0) {
 						var selected = options.find('.selected');
 
 						selected.each(function(i,  check) {
@@ -408,6 +411,19 @@ if(typeof app === 'undefined') { var app = {}; }
 					$(this).toggleClass('selected');
 				});
 			});
+
+			$(".activity_text__SingleChoice").each(function(i, elem) {
+				$('li', elem).click(function() {
+					if($(this).parents('.activity').hasClass('readonly')) {
+						return false;
+					}
+
+					$(this).toggleClass('selected');
+					$(this).siblings('.selected').removeClass('selected');
+				});
+			});
+
+			$(".activities-trigger").trigger('click');
 		};
 		
 		return {
