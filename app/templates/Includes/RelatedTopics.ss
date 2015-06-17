@@ -31,10 +31,10 @@
                                 <% if $Link %><a href='$Link' target="{$Target}" class="block-anchor"><% end_if %>
                                 <h3>{$Title}</h3>
                                 <% if $Link %></a><% end_if %>
-                                <% if $Link && $LinkButton%>
-                                    <p class='separator-link'>
-                                        <a href='$Link' target="{$Target}"><% include PencilIcon %> $LinkButton</a>
-                                    </p>
+                                
+                                $SecondaryPageLink.ID
+                                <% if $SecondaryPageLink && $LinkButton %>
+                                    <% include SecondaryLink %>
                                 <% end_if %>
                             </div>
                         <% end_loop %>

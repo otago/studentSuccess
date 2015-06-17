@@ -17,12 +17,6 @@ if(typeof app === 'undefined') { var app = {}; }
 				
 				if(!title.hasClass('active')){ 
 					title.addClass('active');
-
-					if(title.offset().top < $(window).scrollTop()) {
-						$('html, body').animate({
-							'scrollTop': title.offset().top
-						});
-					}
 					
 					var nextItem = title.next('.accordion-item');
 					holder.find('.accordion-item').not(nextItem).removeClass('active').slideUp();
@@ -31,6 +25,13 @@ if(typeof app === 'undefined') { var app = {}; }
 					nextItem.addClass('active').slideDown(function() {
 						// may contains carousels.
 						app.carousel.init();
+
+
+						if(title.offset().top < $(window).scrollTop()) {
+							$('html, body').animate({
+								'scrollTop': title.offset().top
+							});
+						}
 					});
 				}
 				else{

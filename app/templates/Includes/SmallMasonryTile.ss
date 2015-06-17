@@ -5,10 +5,9 @@
 <% end_if %>
 
     <h3>{$Title}</h3>
+
     <% if $Link && $LinkButton %>
-        <p class='separator-link'>
-            <% include PencilIcon %> $LinkButton
-        </p>
+        <% include SecondaryLink %>
     <% end_if %>
 
 <% if $Link %>

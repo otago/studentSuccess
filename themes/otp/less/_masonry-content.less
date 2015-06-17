@@ -268,21 +268,17 @@
 			}
 
 			a {
+				.transition;
+
 				svg {
 					rect, polyline, line, circle {
 						stroke: @white;
-						.transition;
 					}
 				}
 				
-				&:hover {
-					color: @blue;
-					svg {
-						rect, polyline, line, circle {
-							stroke: @blue;
-							.transition;
-						}
-					}
+				&:hover,
+				&:focus {
+					opacity: 0.8
 				}
 			}
 
