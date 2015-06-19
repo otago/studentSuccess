@@ -45,6 +45,9 @@ Page:
     - Carousel
     - CTAElement
     - SidebarTestimony
+    - InteractiveList
+    - SingleLevelCheckList
+    - SingleLevelList
     - SidebarImageElement
     - SidebarHelp
     - ElementImage

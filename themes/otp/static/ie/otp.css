@@ -738,17 +738,22 @@ h3 {
   font-size: 18px;
 }
 .checklist .intro h3 {
+  margin: 0 0 16px;
   font-size: 20px;
 }
+.checklist .intro p {
+  margin-bottom: 16px;
+}
 .checklist .items {
+  padding-top: 8px;
   font-size: 18px;
 }
-.checklist .items .index .main {
+.checklist .index .main {
   height: 46px;
   line-height: 46px;
   padding: 0 10px;
 }
-.checklist .items .index .main .icon {
+.checklist .index .main .icon {
   margin-top: 8px;
   width: 30px;
   height: 30px;
@@ -757,30 +762,30 @@ h3 {
   margin-right: 10px;
   font-size: 12px;
 }
-.checklist .items .desc p {
+.checklist .desc p {
   margin-top: 10px;
   margin-bottom: 16px;
 }
-.checklist .items .desc ul {
+.checklist .desc ul {
   margin-top: 10px;
   margin-bottom: 16px;
 }
-.checklist .items .desc ul li {
+.checklist .desc ul li {
   padding-left: 26px;
   padding-bottom: 24px;
 }
-.checklist .items .desc ul li span.icon {
+.checklist .desc ul li span.icon {
   width: 20px;
   height: 20px;
   line-height: 20px;
   font-size: 7px;
 }
-.checklist .items .desc ul li span.icon.icon-dot {
+.checklist .desc ul li span.icon.icon-dot {
   font-size: 7px;
   line-height: 26px;
   height: 26px;
 }
-.checklist .items .desc ul li span.icon.icon-tick {
+.checklist .desc ul li span.icon.icon-tick {
   border-radius: 20px;
 }
 @media screen and (max-width: 820px) {

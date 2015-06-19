@@ -19,157 +19,183 @@
 		font-size: 1.125rem;
 		
 		h3 {
-			margin: 0;
+			margin: 0 0 1rem;
 			font-weight: bold;
 			color: @dark-grey;
 			font-size: 1.250rem;
+		}
+
+		p {
+			margin-bottom: 1rem;
+			margin-top: 0;
 		}
 	}
 	
 	
 	.items {
-		
+		padding-top: 0.5rem;
 		overflow: hidden;
 		font-size: 1.1250rem;
 		
 		ul {
 			.list-reset;
 		}
+	}
 		
-		.index {
-			width: 27.5%;
-			float: left;
-			margin-right: 5%;
+	.index {
+		width: 37.5%;
+		float: left;
+		margin-right: 5%;
+		
+		.main {
+			height: 2.875rem;
+			line-height: 2.875rem;
+			overflow: hidden;
+			background: none;
+			padding: 0 0.625rem;
+			cursor: pointer;
 			
-			.main {
-				height: 2.875rem;
-				line-height: 2.875rem;
-				overflow: hidden;
-				background: none;
-				padding: 0 0.625rem;
-				cursor: pointer;
+			.icon {
+				margin-top: 0.5rem;
+				float: left;
+				width: 1.875rem;
+				height: 1.875rem;
+				line-height: 1.875rem;
+				text-align: center;
+				background: @white;
+				color: @white;
+				border: 1px solid @white;
+				border-radius: 1.875rem;
+				margin-right: 0.625rem;
+				font-size: 0.75rem;
 				
-				.icon {
-					margin-top: 0.5rem;
-					float: left;
-					width: 1.875rem;
-					height: 1.875rem;
-					line-height: 1.875rem;
-					text-align: center;
-					background: @white;
-					color: @white;
-					border: 1px solid @white;
-					border-radius: 1.875rem;
-					margin-right: 0.625rem;
-					font-size: 0.75rem;
-					
-					&.icon-dot {
-						border: 0;
-						background: transparent;
-					}
-
-					&.arrow {
-						position: relative;
-
-						&:after {
-							left: 50%;
-							margin-left: -3px;
-							top: 50%;
-							display: none;
-							border: solid transparent;
-							content: " ";
-							height: 0;
-							width: 0;
-							position: absolute;
-							pointer-events: none;
-							border-color: rgba(255, 255, 255, 0);
-							border-left-color: @light-green;
-							border-width: 10px;
-							margin-top: -10px;
-						}
-					}
-				}
-				
-				&.active {
-					background: @dark-grey;
-					color: @white;
-					
-					.icon {
-						
-						&.icon-dot {
-							border: 0;
-							background: transparent;
-						}
-
-						&.arrow {
-							&:after {
-								display: block;
-							}
-						}
-					}
+				&.icon-dot {
+					border: 0;
+					background: transparent;
 				}
 
-				&.ticked {
-					.icon {
-						color: #fff;
+				&.arrow {
+					border: none;
+					position: relative;
+					background: none;
+
+					&:after {
+						left: 50%;
+						display: block;
+						content: " ";
+						top: 50%;
+						height: 8px;
+						width: 8px;
+						border-radius: 8px;
+						position: absolute;
+						margin-top: -4px;
+						margin-left: -4px;
 						background: @light-green;
 					}
 				}
-			}	
+			}
+		}
+
+		.active {
+			background: @dark-grey;
+			color: @white;
+			
+			.icon {
+				
+				&.icon-dot {
+					border: 0;
+					background: transparent;
+				}
+
+				&.arrow {
+					&:after {
+						display: block;
+					}
+				}
+			}
+		}
+
+		.ticked {
+			.icon {
+				color: #fff;
+				background: @light-green;
+			}
+		}
+	}
+
+	&.SingleLevelCheckList,
+	&.SingleLevelList {
+		.index {
+			width: 100%;
+		}
+
+		.main {
+			padding-left: 0;
+		}
+
+		.active {
+			color: #404041;
+			background: transparent;
+		}
+	}
+
+	&.InteractiveList,
+	&.SingleLevelList {
+		
+	}
+
+	
+	.accord {
+		display: none;
+	}
+
+	.desc {
+		float: left;
+		width: 50%;
+		display: none;
+		
+		&.mainlist.active {
+			display: block;
+		}
+
+		p {
+			margin-top: 0.6rem;
+			margin-bottom: 1rem;
 		}
 		
-		.accord {
-			display: none;
-		}
+		ul {
+			margin-top: 0.6rem;
+			margin-bottom: 1rem;
 
-		.desc {
-			float: left;
-			width: 50%;
-			display: none;
-			
-			&.mainlist.active {
-				display: block;
-			}
-
-			p {
-				margin-top: 0.6rem;
-				margin-bottom: 1rem;
-			}
-			
-			ul {
-				margin-top: 0.6rem;
-				margin-bottom: 1rem;
-
-				li {
+			li {
+				
+				position: relative;
+				padding-left: 1.625rem;
+				padding-bottom: 1.5rem;
+				cursor: pointer;
+				
+				span.icon {
+					left: 0;
+					position: absolute;
+					float: left;
+					width: 1.250rem;
+					height: 1.250rem;
+					line-height: 1.250rem;
+					text-align: center;
+					font-size: 0.438rem;
+					top: 2px;
 					
-					position: relative;
-					padding-left: 1.625rem;
-					padding-bottom: 1.5rem;
-					cursor: pointer;
-					
-					span.icon {
-						left: 0;
-						position: absolute;
-						float: left;
-						width: 1.250rem;
-						height: 1.250rem;
-						line-height: 1.250rem;
-						text-align: center;
+					&.icon-dot {
 						font-size: 0.438rem;
-						top: 2px;
-						
-						&.icon-dot {
-							font-size: 0.438rem;
-							line-height: 1.625rem;
-							height: 1.625rem;
-						}
-						
-						&.icon-tick {
-							border: 1px solid @white;
-							background: @light-green;
-							border-radius: 1.250rem;
-							color: @white;
-						}
+						line-height: 1.625rem;
+						height: 1.625rem;
+					}
+					
+					&.icon-tick {
+						border: 1px solid @white;
+						background: @light-green;
+						border-radius: 1.250rem;
+						color: @white;
 					}
 				}
 			}

@@ -2,7 +2,7 @@ if(typeof app === 'undefined') { var app = {}; }
 
 (function($){
 	
-	app.itemlist = (function(){
+	app.itemlist = (function() {
 		
 		var items = $('.checklist');
 		

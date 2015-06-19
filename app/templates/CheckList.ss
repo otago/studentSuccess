@@ -1,6 +1,6 @@
-<div class='checklist'>
+<div class='checklist $ClassName'>
     <div class='container boxed-element component-alignment'>
-        <span class='icon icon-cta'></span>
+        <span class='icon icon-info'></span>
         
         <article class='intro'>
             <% if not HideTitle %>

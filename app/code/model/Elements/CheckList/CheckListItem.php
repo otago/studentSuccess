@@ -3,7 +3,7 @@
 class CheckListItem extends DataObject {
 
 	private static $db = array(
-		'Title'			=> 'Varchar',
+		'Title'			=> 'Varchar(255)',
 		'Content'		=> 'HTMLText',
 		'UseArrow'		=> 'Boolean',
 		'SortOrder'		=> 'Int'
@@ -21,10 +21,31 @@ class CheckListItem extends DataObject {
 		$fields->removeByName(array(
 			'SortOrder',
 			'CheckList',
-			'CheckListID'
+			'CheckListID',
+			'UseArrow'
 		));
+
+		$parent = $this->CheckList();
+
+		if($parent->exists()) {
+			if($parent instanceof SingleLevelChecklist || $parent instanceof SingleLevelList) {
+				$fields->removeByName('Content');
+			} 
+		} else {
+			$fields->removeByName('Content');
+		}
+
+		$fields->removeByName('UseArrow');
 
 		return $fields;
 	}
 
+
+	public function getUseArrow() {
+		if($parent = $this->CheckList()) {
+			return ($parent instanceof SingleLevelList || $parent instanceof InteractiveList);
+		}
+
+		return false;
+	}
 } 

@@ -2,9 +2,9 @@
 
 class CheckList extends BaseElement {
 
-	private static $title = "Interactive List";
+	private static $title = "Interactive Checklist";
 
-	private static $description = "Interactive List";
+	private static $description = "Interactive Checklist";
 
 	private static $db = array(
 		'Summary'			=> 'Text'
@@ -34,17 +34,26 @@ class CheckList extends BaseElement {
 
 		$configs = $gridField->getConfig();
 		$adder = new GridFieldAddNewMultiClass();
-		$adder->setClasses(array(
+
+		$classes = array(
 			'CheckListCollection'			=> 'List of items',
 			'CheckListItem'					=> 'Content Item'
-		));
+		);
+
+		if($this instanceof SingleLevelList || $this instanceof SingleLevelCheckList) {
+			unset($classes['CheckListCollection']);
+		}
+		
+		$adder->setClasses($classes);
+
 		$configs->removeComponentsByType('GridFieldAddNewButton');
 		$configs->addComponent($adder);
 
 
 		return $fields;
-
-
 	}
 
+	public function getFullWidth() {
+		return ($this instanceof SingleLevelCheckList || $this instanceof SingleLevelList);
+	}
 } 
