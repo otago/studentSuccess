@@ -3,10 +3,9 @@
 	clear: both; /* should always be on it's own */
 	overflow: hidden; /* crop image */
 	background: @lighter-blue;
-	max-height: 500px;
 
 	&.has-image {
-		min-height: 450px;
+		min-height: 300px;
 	}
 
 	&.green {
@@ -60,6 +59,11 @@
 				line-height: 1.5rem;
 				font-weight: bold;
 			}
+
+			p {
+				margin-top: 0;
+				margin-bottom: 1rem;
+			}
 			
 			ul {
 				margin: 0;
@@ -99,8 +103,8 @@
 		
 		.image {
 			position: absolute;
-			left: 50%;
-			width: 100%;
+			left: 70%;
+			width: 80%;
 			font-size: 0;
 			line-height: 0;
 			

@@ -12,11 +12,12 @@ if(typeof app === 'undefined') { var app = {}; }
 				var target = $(span.data('target'));
 				
 				if(target.length) {
-					if(span.hasClass('active')){
+					if(span.hasClass('active')) {
 						$('.drop-menu').slideUp();
-						span.removeClass('active');
+						$(".main nav .level-2 li span").removeClass('active');
 					}
-					else{
+					else {
+						$(".main nav .level-2 li span").removeClass('active');
 						$('.drop-menu').not(target).slideUp();
 						target.slideDown();
 						span.addClass('active');

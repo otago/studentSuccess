@@ -1,4 +1,4 @@
-<div class="component-alignment wide-boxed-element">
+<div class="component-alignment wide-boxed-element tightentop">
 <form class='filter-form form-{$ID}'>
     <div class='filters'>
         <fieldset>
@@ -40,14 +40,11 @@
 </form>
 
 
-<div class='masonry-content clear-this'>
+<div class='masonry-content masonry-filter clear-this'>
     <div class='packery filters' data-filterform="form-{$ID}">
         <div class='tile tile-c half width-c'></div>
         <% loop $Tiles %>
             $Render
         <% end_loop %>
-        <% if $ShowContacts %>
-            <% include ContactTile %>
-        <% end_if %>
     </div>
 </div>

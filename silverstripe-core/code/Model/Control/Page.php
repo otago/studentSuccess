@@ -162,8 +162,8 @@ class Page extends SiteTree {
 			'page'
 		);
 
-		if($this->HighlightInMenu){
-			$classes[] = 'button';
+		if($this->HighlightInMenu) {
+			// $classes[] = 'button';
 		}
 
 

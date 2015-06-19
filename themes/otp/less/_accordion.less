@@ -5,10 +5,20 @@
 		border-top: 1px solid transparent;
 		margin-bottom: 0;
         margin-top: 0;
-		border-left: 15px solid transparent;
 		border-bottom: 1px solid #ddd;
+		position: relative;
 		background: @light-brown;
 		background: @light-brown-rgba;
+
+		&:before {
+			content: " ";
+			width: 15px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			background-color: transparent;
+		}
 
 		.transition();
 
@@ -17,19 +27,27 @@
 		}
 
 		&.title-color-Yellow {
-			border-left: 15px solid @yellow;
+			&:before {
+				background-color: @yellow;
+			}
 		}
 
 		&.title-color-Blue {
-			border-left: 15px solid @blue;
+			&:before {
+				background-color: @blue;
+			}
 		}
 
 		&.title-color-Black {
-			border-left: 15px solid @dark-grey;
+			&:before {
+				background-color: @dark-grey;
+			}
 		}
 
 		&.title-color-Red {
-			border-left: 15px solid @red;
+			&:before {
+				background-color: @red;
+			}
 		}
 		
 		a {
@@ -39,8 +57,7 @@
 			position: relative;
 			width: 90%;
 			max-width: 62.5rem;
-			font-weight: 500;
-			left: -15px;
+			font-weight: 600;
 			margin: 0 auto;
 			
 			&:after {
@@ -69,7 +86,6 @@
 		
 		&.active {
 			background-color: rgba(255, 255, 255, 0.3);
-			opacity: 0.8;
 			color: darken(#8C8E90, 10%);
 			border-bottom: none;
 
@@ -90,7 +106,10 @@
 		@media screen and (max-width: 620px) {
 			font-size: 1.2rem;
 			line-height: 1.6rem;
-			border-left-width: 5px !important;
+			
+			&:before {
+				width: 5px;
+			}
 
 			a {
 				width: 100%;
@@ -117,6 +136,16 @@
 		&.active {
 			background: @white;
 			border-bottom: none;	
+
+
+			> .left-content-wrapper:first-child .content-padder,
+			> .element-content-generic:first-child .content-padder {
+				padding-top: 0;
+			}
+
+			+ .title-c {
+				border-top: 1px solid @light-brown-rgba;
+			}
 		}
 	}
 }

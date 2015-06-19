@@ -1,5 +1,5 @@
 <% if $HasContactableDetails %>
-    <div class='tile fixed fixed-right tile-c content-tile contact-tile right'>
+    <div class='tile fixed fixed-right tile-c content-tile contact-tile right $ExtraClass'>
         <% if $ContactBoxTitle %><h3>{$ContactBoxTitle}</h3><% end_if %>
         <% if $ContactBoxContent %><p class='contact'>{$ContactBoxContent}</p><% end_if %>
         <p class='lines'>
@@ -9,7 +9,7 @@
     </div>
 <% else %>
     <% with $SiteConfig %>
-        <div class='tile fixed fixed-right tile-c content-tile contact-tile right'>
+        <div class='tile fixed fixed-right tile-c content-tile contact-tile right $ExtraClass'>
             <% if $ContactBoxTitle %><h3>{$ContactBoxTitle}</h3><% end_if %>
             <% if $ContactBoxContent %><p class='contact'>{$ContactBoxContent}</p><% end_if %>
             <p class='lines'>

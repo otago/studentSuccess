@@ -12,6 +12,11 @@ class MasonryTile extends DataObject {
 		'MasonryContent'	=> 'MasonryContent'
 	);
 
+	private static $summary_fields = array(
+		'Title',
+		'ClassName'
+	);
+
 	private static $field_labels = array(
 		'Title' => 'Heading'
 	);

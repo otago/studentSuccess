@@ -1,5 +1,5 @@
 <div class="component-alignment wide-boxed-element">
-	<div class='masonry-content'>
+	<div class='masonry-content masonry-basic'>
 		<div class='packery'>
 			<div class='tile tile-c half width-c'></div>
 				<% loop $Tiles %>
@@ -7,7 +7,7 @@
 				<% end_loop %>
 				
 				<% if $ShowContacts %>
-					<% include ContactTile %>
+					<% include ContactTile ExtraClass="basic" %>
 				<% end_if %>
 			</div>
 		</div>

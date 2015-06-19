@@ -1,4 +1,4 @@
-<section class='page-intro'>
+<section class='page-intro <% if Intro %>has-intro<% else %>no-intro<% end_if %>'>
 	<article>
 		<h1 class='title'>{$Title}</h1>
 		<% if $Intro %>

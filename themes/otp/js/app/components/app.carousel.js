@@ -15,7 +15,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 			
 			var slider = holder.flexslider({
 				animation 	    : 'slide',
-				smoothHeight	: true,
+				smoothHeight	: false,
 				prevText		: "",
 				slideshow		: false,
 				animationSpeed  : 200,
@@ -44,7 +44,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 			
 			holder.flexslider({
 				'animation' 	: 'slide',
-				'smoothHeight'	: true,
+				'smoothHeight'	: false,
 				slideshow		: false,
 				animationSpeed  : 200,
 				prevText		: "",
