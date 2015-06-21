@@ -8,11 +8,16 @@ class ActivityPage extends Page {
 	private static $db = array(
 		'ColorScheme' => 'Varchar(200)',
 		'Icon' => 'Enum("pencil, question, none", "none")',
+		'MaxAttempts' => 'Int',
 		'Validation' => 'Enum("OnEachStep,OnComplete", "OnComplete")'
 	);
 
 	private static $has_many = array(
 		'Activities' => 'ActivityPage_Activity'
+	);
+
+	private static $defaults = array(
+		'MaxAttempts' => 3
 	);
 
 	public function getCMSFields() {
@@ -28,6 +33,12 @@ class ActivityPage extends Page {
 			'pencil' => 'Pencil',
 			'question' => 'Question'
 		)));
+
+		if(!$this->MaxAttempts) {
+			$this->MaxAttempts = 3;
+		}
+
+		$fields->addFieldToTab('Root.Main', new NumericField('MaxAttempts', 'Max attempts'));
 
 		$fields->removeByName('Content');
 

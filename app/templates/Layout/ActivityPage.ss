@@ -16,7 +16,7 @@
     <div class="container">
         <a class="fancybox-link activities-trigger" href="#activity"></a>
 
-        <section id="activity" class="activity modal-content" data-validation-method="$Validation">
+        <section id="activity" class="activity modal-content" data-validation-method="$Validation" data-max-attempts="$MaxAttempts">
             <header class="activity_header activity_scheme__{$ColorScheme}">
                 <% if $Icon == "pencil" %>
                     <div class="preicon"><% include PencilIcon %></div>

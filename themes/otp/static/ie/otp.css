@@ -991,7 +991,7 @@ h3 {
   font-size: 27px;
   line-height: 32px;
 }
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 660px) {
   .tab-section .content-block .itemList h2 {
     font-size: 24px;
     line-height: 30px;
@@ -1030,10 +1030,10 @@ h3 {
 .tab-section .content-block .itemList .accordion-item .right-content {
   margin-top: 16px;
 }
-.tab-section .content-block .itemList .accordion-item .left-content-wrapper .content-padder {
-  padding: 26px 0 0 48px;
+.tab-section .content-block .itemList .accordion-item .content-padder {
+  padding: 10px 0 0 48px;
 }
-.tab-section .content-block .itemList li h2 {
+.tab-section .content-block .itemList h2 {
   border-left: 13px solid #ef563c;
 }
 .tab-section .content-block.blue .itemList li h2 {
@@ -1447,6 +1447,11 @@ hr {
 .left-content {
   font-size: 18px;
 }
+@media screen and (max-width: 660px) {
+  .left-content {
+    font-size: 16px;
+  }
+}
 .left-content h1 {
   margin-bottom: 22px;
 }
@@ -1456,6 +1461,11 @@ hr {
 }
 .left-content h3 {
   font-size: 22px;
+}
+@media screen and (max-width: 660px) {
+  .left-content h3 {
+    font-size: 20px;
+  }
 }
 .left-content p + h3 {
   margin-top: 32px;

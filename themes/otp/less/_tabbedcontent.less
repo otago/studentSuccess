@@ -108,9 +108,10 @@
 				line-height: 2rem;
 				.transition-property(background, 0.2s);
 
-				@media screen and (max-width: 980px){
+				@media screen and (max-width: 660px) {
 					font-size: 1.5rem;
 					line-height: 1.875rem;
+					border-left-width: 4px;
 				}
 				
 				&.active {
@@ -156,6 +157,7 @@
 					background: @light-green;
 					border: 0.063rem solid @white;
 				}
+
 				span.icon-tick:before {
 					content: "\e613";
 				}
@@ -212,14 +214,18 @@
 					margin-top: 1rem;
 				}
 
-				.left-content-wrapper .content-padder {
-					padding: 1.625rem 0 0 3rem;
+				.content-padder {
+					padding: 0.625rem 0 0 3rem;
 				}
 			}
 		}
 
-		.itemList li h2 { 
+		.itemList h2 { 
 			border-left: 0.813rem solid @red; 
+
+			@media screen and (max-width: 660px) {
+				border-left-width: 4px;
+			}	
 		}
 
 		&.blue .itemList li h2 { 
@@ -237,7 +243,6 @@
 }
 
 @media screen and (max-width: 1200px) { 
-
 	.tabbed-content .tab-section .content-block .itemList li h2 a:after {
 		right: 2rem;
 	}

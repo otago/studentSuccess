@@ -177,7 +177,12 @@ if(typeof app === 'undefined') { var app = {}; }
 				// validate the users current step first. Ensure that 
 				// options exist.
 				var attempt = step.data('attempt');
-				
+				var allowedAttempts = activity.data('max-attempts');
+					
+				if(!allowedAttempts) {
+					allowedAttempts = 3;
+				}
+
 				if(!attempt) attempt = 0;
 				attempt++;
 
@@ -205,7 +210,7 @@ if(typeof app === 'undefined') { var app = {}; }
 								valid = false;
 
 								// if this is on the 3rd attempt then show the user the error messages
-								if(attempt > 2) {
+								if(attempt >= allowedAttempts) {
 									if(showResults) {
 										$(check).removeClass('correct');
 										$(check).addClass('wrong');
@@ -214,7 +219,7 @@ if(typeof app === 'undefined') { var app = {}; }
 
 								$(check).attr('data-validation', 'wrong');
 							} else {
-								if(attempt > 2) {
+								if(attempt >= allowedAttempts) {
 									if(showResults) {
 										$(check).removeClass('wrong');
 										$(check).addClass('correct');
@@ -232,7 +237,7 @@ if(typeof app === 'undefined') { var app = {}; }
 									isValidAnswer = false;
 									valid = false;
 
-									if(attempt > 2) {
+									if(attempt >= allowedAttempts) {
 										if(showResults) {
 											$(opt).removeClass('correct');
 											$(opt).addClass('wrong');
@@ -248,7 +253,7 @@ if(typeof app === 'undefined') { var app = {}; }
 							if($(answers.get(i)).text() != $(elem).text()) {
 								valid = false;
 
-								if(attempt > 2) {
+								if(attempt >= allowedAttempts) {
 									if(showResults) {
 										$(elem).removeClass('correct');
 										$(elem).addClass('wrong');
@@ -257,7 +262,7 @@ if(typeof app === 'undefined') { var app = {}; }
 
 								$(elem).attr('data-validation', 'wrong');
 							} else {
-								if(attempt > 2) {
+								if(attempt >= allowedAttempts) {
 									if(showResults) {
 										$(elem).addClass('correct');
 										$(elem).removeClass('wrong');
@@ -275,7 +280,7 @@ if(typeof app === 'undefined') { var app = {}; }
 						if(showResults) {
 							step.find('.activity_success').hide();
 
-							if(attempt > 2) {
+							if(attempt >= allowedAttempts) {
 								step.find('.activity_fail_warning').hide();
 
 								if(step.find(".activity_fail").is(":visible")) {
