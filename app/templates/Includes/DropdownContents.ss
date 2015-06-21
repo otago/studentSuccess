@@ -12,7 +12,7 @@
                 </div>
                 <% if $DropDownImage %>
                 <div class='right'>
-                    <% if $DropDownLink %><a href='#'><% end_if %>
+                    <% if $DropDownLink %><a href='$DropDownLink'><% end_if %>
                         {$DropDownImage.Add(298, 395)}
                     <% if $DropDownLink %></a><% end_if %>
                 </div>
