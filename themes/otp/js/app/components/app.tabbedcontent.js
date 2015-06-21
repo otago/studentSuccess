@@ -16,17 +16,77 @@ if(typeof app === 'undefined') { var app = {}; }
 
                 $(this).addClass('active');
                 $('section'+"."+tab_id).addClass('active');
-
             });
 
 		};
 		
 		var can = function(){
-			return items.length > 0;
+			return items.length > 0 || $('.template_FilterableCheckList').length > 0;
 		};
 		
-		var init = function (){
+		var init = function () {
 			tabbedContent();
+
+			$('.checkform').each(function(i, elem) {
+				$(elem).find('#moving').hide();
+				$(elem).find('#location').hide();
+				$(elem).find('#starting').hide();
+				$(elem).find('#study').hide();
+				$(elem).find('.action').attr('disabled', 'disabled');
+
+				$("#iam select").change(function(e) {
+					$("#moving").show();
+				});
+
+				$('#moving select').change(function(e) {
+					$("#study").show();
+				});
+
+				$("#study select").change(function(e) {
+					if($(this).val() == "campus") {
+						$("#location").show();
+					} else {
+						$("#location").hide();
+						$("#starting").show();
+
+
+						$(elem).find('.action').removeAttr('disabled');
+					}
+				});
+
+				$("#location select").change(function(e) {
+					$(elem).find('.action').removeAttr('disabled');
+					$("#starting").show();
+				});
+			});
+
+			$(".checkable .icon-tick").each(function(i, elem) {
+				if(window.localStorage !== "undefined") {
+					if(localStorage.getItem($(elem).data('item'))) {
+						$(elem).parents('.checkable').addClass('checked');
+					}
+				}
+
+				$(elem).click(function(e) {
+					checkable = $(this).parents('.checkable');
+
+					if(checkable.hasClass('checked')) {
+						checkable.removeClass('checked');
+
+						if(window.localStorage !== "undefined") {
+							localStorage.setItem($(this).data('item'), false);
+						}
+					} else {
+						checkable.addClass('checked');
+
+						if(window.localStorage !== "undefined") {
+							localStorage.setItem($(this).data('item'), true);
+						}
+					}
+					
+					return false;
+				});
+			});
 		};
 		
 		return {

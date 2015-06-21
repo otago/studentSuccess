@@ -5,34 +5,39 @@
 		<% include Breadcrumbs %>
 
 		<% include PageIntro %>
-
-		<div class="component-alignment boxed-element">
-			<div class="search-form">
-				<form class="glossary-search">
+		
+		<div class="component-alignment wide-boxed-element tightentop">
+			<form class='filter-form form-{$ID}'>
+				<div class='filters'>
 					<fieldset>
-						<div id="Search" class="field text">
-							<div class="middleColumn">
-								<input type="text" name="search" class="text" id="glossary-keyword" placeholder="Search by keyword">
-							</div>
+						<div class='input'>
+							<input class="keywords" placeholder='{$SearchFieldDefaultText}'>
 						</div>
-						<input type="submit" name="" value="search" class="submit">
+
+						<div class='clear'></div>
 					</fieldset>
-				</form>
-			</div>
+					
+					<div class='actions'>
+						<button class='search icon-search icon'></button>
+					</div>
+				</div>
+			</form>
 		</div>
 	</div>
-	
+
 	<% if $GlossaryTypes %>
 	<div class='tabbed-content clear-this'>
-		<section class="tab-index container">
-			<div class="container">
-				<ul>
-					<% loop $GlossaryTypes %>
-					<li<% if $First %> class="active"<% end_if %> data-for="tab-{$ID}">{$Title}</li>
-					<% end_loop %>
-				</ul>
-			</div>
-		</section>
+		<% if GlossaryTypes.Count > 1 %>
+			<section class="tab-index container">
+				<div class="container">
+					<ul>
+						<% loop $GlossaryTypes %>
+						<li<% if $First %> class="active"<% end_if %> data-for="tab-{$ID}">{$Title}</li>
+						<% end_loop %>
+					</ul>
+				</div>
+			</section>
+		<% end_if %>
 
 		<% loop $GlossaryTypes %>
 		<section class="tab-section tab-{$ID} <% if $First %>active<% end_if %>">
@@ -41,7 +46,7 @@
 				<ul class="itemList accordion-c">
 					<% loop $Letters %>
 					<li class="glossary-letter">
-						<h2 class='title-c'><a href='{$Letter}'>{$Letter}</a></h2>
+						<h2 class='title-c'><a href='{$Letter}'>$Title</a></h2>
 
 						<div class='accordion-item'>
 							<% loop $Items %>

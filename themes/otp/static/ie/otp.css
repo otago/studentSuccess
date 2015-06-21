@@ -947,6 +947,7 @@ h3 {
   }
 }
 .tabbed-content {
+  margin-top: 32px;
   margin-bottom: 56px;
 }
 .tabbed-content .title {
@@ -1026,12 +1027,11 @@ h3 {
   line-height: 26px;
   margin: 10px 0 15px;
 }
-.tab-section .content-block .itemList .accordion-item span.icon-phone,
-.tab-section .content-block .itemList .accordion-item span.icon-mail {
-  margin: 0 5px 10px 0;
+.tab-section .content-block .itemList .accordion-item .right-content {
+  margin-top: 16px;
 }
-.tab-section .content-block .itemList .accordion-item span.icon-mail {
-  font-size: 12px;
+.tab-section .content-block .itemList .accordion-item .left-content-wrapper .content-padder {
+  padding: 26px 0 0 48px;
 }
 .tab-section .content-block .itemList li h2 {
   border-left: 13px solid #ef563c;
@@ -1055,20 +1055,18 @@ h3 {
     padding-right: 48px;
   }
 }
-.search-form fieldset input {
-  padding: 14px 3.925% 14px 2.075%;
-  border: 1px solid #d8d5d0;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-  font-size: 18px;
+.checkform form {
+  padding-bottom: 48px;
 }
-.search-form fieldset .middleColumn {
-  max-width: 636px;
+.checkform fieldset {
+  max-width: 1000px;
 }
-.search-form fieldset .middleColumn::after {
-  right: 8px;
-  top: 16px;
+.checkform .field {
+  margin-bottom: 16px;
+}
+.checkform .action {
+  margin: 16px auto 32px;
+  padding: 8px 16px;
 }
 .component-alignment.breadcrumbs.boxed-element {
   max-width: 1200px;
@@ -1090,6 +1088,9 @@ h3 {
 .page-intro article .title {
   margin-bottom: 20px;
 }
+.page-intro article p {
+  margin: 8px 0 0;
+}
 @media screen and (max-width: 880px) {
   .page-intro article p {
     font-size: 18px;
@@ -1105,14 +1106,21 @@ h3 {
     padding-right: 28px;
   }
 }
+.template_LandingPage .page-intro p,
+.template_GlossaryPage .page-intro p,
+.template_LandingSearchPage .page-intro p {
+  margin: 8px auto 0;
+}
 .template_LandingPage .page-contents,
 .template_GlossaryPage .page-contents,
 .template_LandingSearchPage .page-contents {
   margin-top: -32px;
 }
+.template_FilterableCheckList .page-intro p {
+  margin: 8px auto 0;
+}
 .filter-form .filters {
   max-width: 1200px;
-  padding: 0 98px;
 }
 .filter-form fieldset {
   padding: 0 0 22px 0;
@@ -1129,19 +1137,8 @@ h3 {
   padding: 0 40px 0 16px;
 }
 .filter-form .actions button {
-  height: 40px;
+  height: 48px;
   width: 50px;
-  right: 98px;
-}
-@media screen and (max-width: 720px) {
-  .filter-form .actions button {
-    top: 58px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .filter-form .actions button {
-    right: 10px;
-  }
 }
 .filter-form .chosen-container .chosen-results li {
   padding: 8px 6px 8px 16px;
@@ -1229,7 +1226,7 @@ h3 {
 .masonry-content .list-menu h3 {
   font-size: 18px;
   line-height: 20px;
-  margin: 16px 0 8px;
+  margin: 16px 0 24px;
 }
 .masonry-content .list-menu li a {
   line-height: 28px;
@@ -1375,6 +1372,9 @@ h3 {
     padding-right: 16px;
   }
 }
+div.token-input-dropdown-mac {
+  max-width: 1200px;
+}
 .chosen-container-single .chosen-single {
   height: 40px;
   line-height: 40px;
@@ -1408,6 +1408,7 @@ hr {
 }
 .page-contents {
   margin: -172px auto 0;
+  padding-bottom: 16px;
 }
 .page-contents .breadcrumbs {
   padding-bottom: 22px;

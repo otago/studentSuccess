@@ -1,5 +1,6 @@
 .tabbed-content {
 	clear: both;
+	margin-top: 2rem;
 	margin-bottom: 3.5rem;
 	
 
@@ -8,7 +9,7 @@
 		font-size: 2rem;
 		line-height: 2.375rem;
 		color: @white;
-		font-weight: 100;
+		font-weight: 600;
 		float: left;
 
 		@media screen and (max-width: 980px){
@@ -119,8 +120,10 @@
 				a { 
 					max-width: 62.5rem;
 					width: 90%;
+					font-weight: 500;
 					margin: 0 auto;
-					color: @blue;
+					position: relative;
+					left: -15px;
 					padding: 1.5rem 0 1.5rem;
 					background: none; 
 					
@@ -187,19 +190,31 @@
 				span.icon-phone,
 				span.icon-mail {
 					display: inline-block;
-					margin: 0 0.313rem 0.625rem 0;
+					font-size: 16px;
+					position: relative;
+					top: 2px;
+					margin: 0 10px 14px 0;
 				}
-				span.icon-mail {
-					font-size: 0.75rem;
-				}
+				
 				a.email {
 					color: @dark-grey;
 					
 					&:hover { color: @blue; }
 				}
 			}
-			.accordion-item.active {
-				border: none;
+
+			.accordion-item {
+				.active {
+					border: none;
+				}
+
+				.right-content {
+					margin-top: 1rem;
+				}
+
+				.left-content-wrapper .content-padder {
+					padding: 1.625rem 0 0 3rem;
+				}
 			}
 		}
 
@@ -242,5 +257,53 @@
 	}
 	.tabbed-content .tab-section .content-block .itemList li h2 a {
 		padding-right: 3rem;
+	}
+}
+
+.checkform {
+	form {
+		padding-bottom: 3rem;
+	}
+
+	fieldset {
+		border: none;
+		max-width: 62.5rem;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.field {
+		margin-bottom: 1rem;
+	}
+
+	label {
+		display: inline-block;
+		margin-right: 10px;
+	}
+
+	.middleColumn {
+		display: inline-block;
+		min-width: 220px;
+	}
+
+	.action {
+		background: @red;
+		color: #fff;
+		margin: 1rem auto 2rem;
+		border: none;
+		display: block;
+		padding: 0.5rem 1rem;
+
+		&[disabled] {
+			background: #ddd;
+		}
+	}
+
+	.chosen-container .chosen-results li.result-selected {
+		display: none;
+	}
+
+	.chosen-container .chosen-results li {
+		font-size: 16px;
 	}
 }

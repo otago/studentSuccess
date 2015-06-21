@@ -96,7 +96,7 @@
 			}
 		}
 
-		.active {
+		li.active {
 			background: @dark-grey;
 			color: @white;
 			
@@ -115,6 +115,10 @@
 			}
 		}
 
+		.total {
+			font-weight: bold;
+		}
+
 		.ticked {
 			.icon {
 				color: #fff;
@@ -125,17 +129,23 @@
 
 	&.SingleLevelCheckList,
 	&.SingleLevelList {
+		.items {
+			padding-top: 0;
+		}
+		
 		.index {
 			width: 100%;
 		}
 
-		.main {
-			padding-left: 0;
-		}
-
-		.active {
+		li.active {
 			color: #404041;
 			background: transparent;
+			padding-left: 0;
+			cursor: default;
+
+			.total {
+				font-weight: normal;
+			}
 		}
 	}
 
@@ -249,6 +259,7 @@
 				li {
 					color: @dark-grey;
 					height: auto;
+					background: transparent;
 					line-height: 1.5;
 					font-size: 1rem;
 				}

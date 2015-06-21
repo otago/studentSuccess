@@ -47,3 +47,5 @@ Config::inst()->update('HomePage', 'allowed_elements', array(
 	'WayFinder',
 	'HearFromOthers'
 ));
+
+Config::inst()->remove('FilterableChecklist', 'allowed_elements');

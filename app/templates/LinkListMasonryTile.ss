@@ -1,10 +1,10 @@
-<div class='tile-c list-menu tile has-padder'>
+<div class='tile-c list-menu tile fixed has-padder'>
 	<div class="padder">
     	<article>
     	    <h3>{$Title}</h3>
     	    <ul>
     	        <% loop $Links %>
-    	            <li><a href='{$Link}' target="{$Target}">{$Title}<span class='icon icon-arrow'>&nbsp;</span></a></li>
+    	            <li><a <% if SearchFilter %>href='#' data-search="$Title.ATT" class="searchf" <% else %>href='{$Link}' target="{$Target}"<% end_if %>>{$Title}<span class='icon icon-arrow'>&nbsp;</span></a></li>
     	        <% end_loop %>
     	    </ul>
     	</article>

@@ -1,21 +1,19 @@
 <?php
-/**
- * Created by Nivanka Fonseka (nivanka@silverstripers.com).
- * User: nivankafonseka
- * Date: 5/16/15
- * Time: 10:11 AM
- * To change this template use File | Settings | File Templates.
- */
 
 class MasonryTileLink extends DataObject {
 
 	private static $db = array(
 		'Title'					=> 'Varchar',
+		'SearchFilter'			=> 'Boolean',
 		'SortOrder'				=> 'Int'
  	);
 
 	private static $has_one = array(
 		'LinkListMasonryTile'	=> 'LinkListMasonryTile'
+	);
+
+	private static $field_labels = array(
+		'SearchFilter' => 'If filtering the same page'
 	);
 
 	private static $default_sort = 'SortOrder';

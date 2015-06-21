@@ -3,57 +3,11 @@ if(typeof app === 'undefined') { var app = {}; }
 
 (function($){
 
-    app.glossary = (function(){
-
-        var items = $('.glossary-search');
-        var letters = $('.glossary-letter');
-        var entries = $('.glossary-item');
-        var keyword = $('#glossary-keyword');
+    app.glossary = (function() {
+        var items = $('.glossary-item');
 
         var searchGlossary = function(){
-			
-            var searchTerm = keyword.val();
-            searchTerm = searchTerm.toLowerCase();
-            letters.show();
-            entries.show();
-			
-            if(searchTerm){
-
-
-                var words = searchTerm.split(" ");
-                letters.each(function(){
-                    var letter = $(this);
-                    var terms = letter.find('.glossary-item');
-                    var bFound = false;
-
-                    terms.each(function(){
-                        var title = $(this).find('h4 a');
-                        var text = title.text().toLowerCase();
-                        var bWordMatched = false;
-						
-                        for(var i in words){
-                            if(words[i] !== '' && text.indexOf(words[i]) >= 0){
-                                bWordMatched = true;
-                                break;
-                            }
-                        }
-
-                        if(bWordMatched){
-                            bFound = true;
-                        }
-                        else{
-                            $(this).hide();
-                        }
-
-                    });
-
-                    if(!bFound){
-                        letter.hide();
-                    }
-
-                });
-
-            }
+		
 
         };
 
@@ -62,9 +16,61 @@ if(typeof app === 'undefined') { var app = {}; }
         };
 
         var init = function (){
-            items.submit(function(){
-                searchGlossary();
-                return false;
+            var list = [];
+            
+            items.each(function(i, elem) {
+                if($(elem).find('h4')) {
+                    list.push({
+                        "id": i,
+                        "name": $(elem).find('h4').text()
+                    });
+                }
+            });
+
+            $(".filter-form").on('submit', function(e) {
+                e.preventDefault();
+
+                var input = $(".token-input-input-token-mac input").val();
+
+                items.each(function(i, elem) {
+                    var matches = $(elem).text().toLowerCase().indexOf(input.toLowerCase());
+                    
+                    if(matches != -1) {
+                        $(elem).parents('.glossary-letter').show();
+                    } else {
+                        $(elem).parents('.glossary-letter').hide();
+                    }
+                });
+
+                $('.glossary-letter').filter(':visible').first().find('.title-c a').trigger('click');
+            });
+
+            $(".keywords").tokenInput(list, {
+                hintText: 'Search by keyword',
+                theme: 'mac',
+                tokenLimit: 1,
+                onAdd: function (item) {
+                    // take the user to that accordion item
+
+                    var heading = items.find('h4:contains('+ item.name+')');
+                    var container = heading.parents('.glossary-letter');
+                    container.siblings('.glossary-letter').hide();
+
+                    var toggle = container.find('.title-c');
+
+                    if(toggle.hasClass('active')) {
+                        $(document).scrollTop(heading.offset().top);  
+                    } else {
+                        toggle.find('a').trigger('click');
+
+                        setTimeout(function() {
+                            $(document).scrollTop(heading.offset().top);
+                        }, 500);
+                    }
+                },
+                onDelete: function (item) {
+                    $('.glossary-letter').siblings('.glossary-letter').show();
+                }
             });
         };
 

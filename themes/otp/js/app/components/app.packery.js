@@ -24,9 +24,8 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
         };
 
 
-        var packIt = function(){
-			
-			items.each(function(){
+        var packIt = function() {
+			items.each(function() {
 				var item = $(this);
 
                 if(item.hasClass('filters')){
@@ -36,44 +35,49 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
                     doMasonry(item);
                 }
 			});
-
 		};
 
 
-        var doIsotopeFilters = function(item, form){
+        var doIsotopeFilters = function(item, form) {
             var configs = isotopeconfigs;
 
-            var subject = form.find('select.subject-filter').val();
             var keyword = form.find('.keywords').val().toLowerCase();
             var sort = form.find('select.sort-filter').val();
             var sortAscending = true;
+
+            if($(".token-input-input-token-mac input").length > 0) {
+                keyword = $.trim($(".token-input-input-token-mac input").val() + ' '+ $(".token-input-token-mac p").map(function() {
+                    return $(this).text();
+                }).get().join());
+            }
 
             if(sort == 'views') {
                 sortAscending = false;
             }
 
-            configs.filter = function(){
-                if(subject === '' && keyword === '') {
+            configs.filter = function() {
+                if(keyword === '') {
                     return true;
                 }
 
-                var bSubject = false;
                 var bKeyword = false;
                 var tile = $(this);
 
-                if(subject && subject === tile.data('subject')) {
-                    bSubject = true;
-                }
-
                 if(keyword) {
-                    var html = tile.text().toLowerCase();
+                    var title = tile.data('title');
+
+                    if(title && title.toLowerCase().indexOf(keyword.toLowerCase()) >= 0) {
+                        return true;
+                    }
                     
-                    if(html.indexOf(keyword) >= 0) {
+                    var html = tile.text();
+
+                    if(html && html.indexOf(keyword.toLowerCase()) >= 0) {
                         bKeyword = true;
                     }
                 }
 
-                return bSubject || bKeyword;
+                return bKeyword;
             };
 
             configs.sortBy = sort;
@@ -85,16 +89,13 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
          *
          * @param item
          */
-        var doIsotope = function(item){
+        var doIsotope = function(item) {
             var form = $('.' + item.data('filterform'));
 
-            form.submit(function(){
+            form.submit(function() {
                 doIsotopeFilters(item, form);
-                return false;
-            });
 
-            form.find('select.subject-filter').change(function(){
-                doIsotopeFilters(item, form);
+                return false;
             });
 
             form.find('select.sort-filter').change(function(){
@@ -102,7 +103,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
             });
 			
 			form.find('input.keywords').keyup(function(){
-				if(!$(this).val()){
+				if(!$(this).val()) {
 					doIsotopeFilters(item, form);
 				}
 			});
@@ -170,6 +171,35 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
                 if($(this).hasClass('has-link')) {
                     window.location.href = $(this).find('a').attr('href');
                 }
+            });
+
+            var list = [];
+            
+            $(".tile").each(function(i, elem) {
+                if($(elem).data('title')) {
+                    list.push({
+                        "id": i,
+                        "name": $(elem).data('title')
+                    });
+                }
+            });
+
+            $(".keywords").tokenInput(list, {
+                hintText: 'Search by keyword',
+                theme: 'mac',
+                onAdd: function (item) {
+                    $(".filter-form").trigger('submit');
+                },
+                onDelete: function (item) {
+                    $(".filter-form").trigger('submit');
+                }
+            });
+
+            $('.searchf').click(function(e) {
+                e.preventDefault();
+
+                $(".token-input-input-token-mac input").val($(this).text());
+                $(".filter-form").submit();
             });
 		};
 		

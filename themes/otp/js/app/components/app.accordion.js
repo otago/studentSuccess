@@ -10,10 +10,6 @@ if(typeof app === 'undefined') { var app = {}; }
 			var holder = container;
 			holder.find('.title-c a').click(function() {
 				var title = $(this).parent();
-
-                // if there is a checkable then check it
-                $(this).closest('.checkable').addClass('checked');
-
 				
 				if(!title.hasClass('active')){ 
 					title.addClass('active');

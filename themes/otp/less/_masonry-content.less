@@ -213,12 +213,12 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+		padding: 2.625rem 2rem 2.75rem;
 
 		.padder {
 			height: 33.75rem;
 		}
 
-		padding: 2.625rem 2rem 2.75rem;
 
 		&.has-padder {
     		padding: 0;
@@ -239,10 +239,10 @@
 		h3 {
 			font-size: 1.125rem;
 			line-height: 1.25rem;
-			margin: 1rem 0 0.5rem;
+			margin: 1rem 0 1.5rem;
+			height: auto;
 			font-weight: 600;
 			color: #fff;
-			padding-bottom: 0;
 		}
 		
 		a {
@@ -311,7 +311,7 @@
 		}
 	}
 
-	.tile-c .contact-tile {
+	.tile-c.list-menu .contact-tile {
 		// nested
 		position: static;
 		top: auto;
@@ -573,4 +573,190 @@
 			}
 		}
 	}
+}
+
+/* Example tokeninput style #2: Mac Style */
+fieldset.token-input-mac {
+  position: relative;
+  padding: 0;
+  margin: 5px 0;
+  background: #fff;
+  width: 400px;
+  border: 1px solid #A4BDEC;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+
+fieldset.token-input-mac.token-input-dropdown-mac {
+  border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0;
+  box-shadow: 0 5px 20px 0 rgba(0,0,0,0.25);
+  -moz-box-shadow: 0 5px 20px 0 rgba(0,0,0,0.25);
+  -webkit-box-shadow: 0 5px 20px 0 rgba(0,0,0,0.25);
+}
+
+ul.token-input-list-mac {
+    overflow: hidden; 
+    height: auto !important; 
+    height: 1%;
+    cursor: text;
+    font-size: 12px;
+    font-family: Verdana;
+    min-height: 1px;
+    z-index: 999;
+    margin: 0;
+    padding: 3px;
+    background: transparent;
+}
+
+ul.token-input-list-mac.error {
+  border: 1px solid #C52020;
+}
+
+ul.token-input-list-mac li {
+    list-style-type: none;
+}
+
+li.token-input-token-mac p {
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+li.token-input-token-mac span {
+    color: #a6b3cf;
+    margin-left: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* TOKENS */
+
+li.token-input-token-mac {
+    margin: 5px 2px 0 3px;
+    padding: 0 10px;   
+    background: none; 
+    background-color: #dee7f8;
+    color: #000;
+    cursor: default;
+    border: 1px solid #a4bdec;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    float: left;
+}
+
+li.token-input-highlighted-token-mac {
+    background-color: #bbcef1;
+    border: 1px solid #598bec;
+    color: #000;
+}
+
+li.token-input-selected-token-mac {
+    background-color: #598bec;
+    border: 1px solid transparent;
+    color: #fff;
+}
+
+li.token-input-highlighted-token-mac span.token-input-delete-token-mac {
+    color: #000;
+}
+
+li.token-input-selected-token-mac span.token-input-delete-token-mac {
+    color: #fff;
+}
+
+li.token-input-input-token-mac {
+    border: none;
+    background: transparent;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+li.token-input-input-token-mac input {
+  border: 0;
+  width: 100px;
+  padding: 3px;
+  background-color: transparent;
+  margin: 0;
+}
+
+div.token-input-dropdown-mac {
+    position: absolute;
+    border: 1px solid #d8d5d0;
+    border-top: none;
+    z-index: 100;
+    left: -1px;
+    right: -1px;
+    background-color: #fff;
+    overflow: hidden;
+    cursor: default;
+    padding: 0;
+    max-width: 75rem;
+    clip:rect(0px, 1000px, 1000px, -10px);
+}
+
+div.token-input-dropdown-mac p {
+    display: none;
+}
+
+div.token-input-dropdown-mac h3.token-input-dropdown-category-mac {
+  font-size: 10pt;
+  font-weight: bold;
+  border: none;
+  padding: 0 5px;
+  margin: 0;
+}
+
+div.token-input-dropdown-mac ul {
+    margin: 0;
+    padding: 0;
+}
+
+div.token-input-dropdown-mac ul li {
+    list-style-type: none;
+    cursor: pointer;
+    background: none;
+    background-color: #fff;
+    margin: 0;
+    padding: 0 0 0 25px;
+}
+
+div.token-input-dropdown-mac ul li.token-input-dropdown-item-mac {
+    background-color: #fff;
+}
+
+div.token-input-dropdown-mac ul li.token-input-dropdown-item-mac.odd {
+    background-color: #ECF4F9;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+}
+
+div.token-input-dropdown-mac ul li.token-input-dropdown-item-mac span.token-input-dropdown-item-description-mac {
+    float: right;
+    font-size: 8pt;
+    font-style: italic;
+    padding: 0 10px 0 0;
+    color: #999;
+}
+
+div.token-input-dropdown-mac ul li strong {
+    font-weight: bold;
+    text-decoration: underline;
+    font-style: none;
+}
+
+div.token-input-dropdown-mac ul li.token-input-selected-dropdown-item-mac,
+div.token-input-dropdown-mac ul li.token-input-selected-dropdown-item-mac.odd {
+    background-color: @blue;
+    color: #fff;
+}
+
+div.token-input-dropdown-mac ul li.token-input-selected-dropdown-item-mac span.token-input-dropdown-item-description-mac,
+div.token-input-dropdown-mac ul li.token-input-selected-dropdown-item-mac.odd span.token-input-dropdown-item-description-mac {
+    color: #fff;
 }

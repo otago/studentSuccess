@@ -37,6 +37,7 @@ SSViewer:
 ElementPageExtension:
   ignored_classes:
     - ActivityPage
+    - FilterableCheckList
 Page:
   extensions:
     - ElementPageExtension
@@ -55,7 +56,6 @@ Page:
     - ElementInternalLink
     - ElementExternalLink
     - LinksComponent
-    - TabbedCheckList
     - CaseStudy
     - VideoComponent
     - CheckList

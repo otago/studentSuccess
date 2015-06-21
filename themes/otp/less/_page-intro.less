@@ -50,7 +50,7 @@
 		
 		p {
 			max-width: 65%;
-			margin: 0;
+			margin: 0.5rem 0 0;
 
             @media screen and (max-width: 880px) {
                 font-size: 1.15rem;
@@ -101,8 +101,8 @@
 		text-align: center;
 		min-height: 0;
 
-		article {
-			margin: 0 auto;
+		p {
+			margin: 0.5rem auto 0;
 		}
 	}
 
@@ -118,12 +118,27 @@
 		margin-top: -2rem;
 	}
 }
-	
+
+.template_FilterableCheckList {
+	.page-intro {
+		text-align: center;
+		min-height: 0;
+
+		p {
+			margin: 0.5rem auto 0;
+		}
+	}
+
+	.social-blocks {
+		display: none;
+	}
+}
+
 .filter-form {
     .filters {
         width: 100%;
         max-width: 75rem;
-        padding: 0 6.125rem;
+        padding: 0;
         margin: 0 auto;
         position: relative;
 
@@ -150,18 +165,22 @@
 	}
 	
 	.input {
-		float: right;
-		width: 68%;
-		
+		width: 100%;
+		border: 1px solid @grey;
+
 		input {
 			height: 2.5rem;
 			line-height: 2.5rem;
 			font-size: 1rem;
 			width: 100%;
+			min-width: 100%;
 			.border-radius;
 			display: block;
-			border: 1px solid @grey;
 			padding: 0 2.5rem 0 1rem;
+
+			&.no-placeholder {
+				min-width: 0;
+			}
 			
 		}
 		
@@ -191,35 +210,31 @@
 	}
 	
 	.actions {
-		float: right;
-		
-		@media screen and (max-width: 720px) {
-			float: none;
-		}
-		
+		position: absolute;
+		right: 0;
+		top: 0;
+
 		button {
 			border: 0;
 		  	background: transparent;
-		  	height: 2.5rem;
+		  	height: 3rem;
 		  	width: 3.125rem;
 		  	top: 0px;
 		  	position: absolute;
-		  	right: 6.125rem;
+		  	right: 0;
 			color: @button-grey;
 			opacity: 0.2;
 			font-size: 18px;
 			.transition; 
 			
-			&:hover {
+			&:hover,
+			&:focus {
 				opacity: 1;
+				outline: none;
 			}
 
 			@media screen and (max-width: 720px) {
-				top: 3.65rem;
-			}
-			
-			@media screen and (max-width: 768px) {
-				right: 0.65rem;
+				top: 0;
 			}
 		}
 	}
