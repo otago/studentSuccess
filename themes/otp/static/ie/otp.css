@@ -1,3 +1,10 @@
+table {
+  margin: 16px 0 32px 0;
+}
+td,
+th {
+  padding: 16px;
+}
 body {
   font: 16px/28px "proxima-nova", sans-serif;
 }
@@ -35,17 +42,13 @@ h3 {
 .table {
   margin-bottom: 50px;
 }
-.table table {
+table {
   max-wdith: 1110px;
 }
-.table table th,
-.table table td {
-  padding: 26px 8px;
-}
-.table table th {
+table th {
   font-size: 18px;
 }
-.table table th.main {
+table th.main {
   font-size: 20px;
 }
 .accordion-c .title-c a {

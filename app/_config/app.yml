@@ -52,6 +52,7 @@ Page:
     - SidebarImageElement
     - SidebarHelp
     - ElementImage
+    - ElementTable
     - ElementFile
     - ElementInternalLink
     - ElementExternalLink

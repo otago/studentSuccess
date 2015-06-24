@@ -11,12 +11,10 @@ if(typeof app === 'undefined') { var app = {}; }
 			holder.find('.title-c a').click(function() {
 				var title = $(this).parent();
 				
-				if(!title.hasClass('active')){ 
+				if(!title.hasClass('active')) { 
 					title.addClass('active');
 					
 					var nextItem = title.next('.accordion-item');
-					holder.find('.accordion-item').not(nextItem).removeClass('active').slideUp();
-					holder.find('.title-c').not(title).removeClass('active');
 					
 					nextItem.addClass('active').slideDown(function() {
 						// may contains carousels.
@@ -30,7 +28,7 @@ if(typeof app === 'undefined') { var app = {}; }
 						}
 					});
 				}
-				else{
+				else {
 					title.removeClass('active');
 					holder.find('.accordion-item').removeClass('active').slideUp();
 				}

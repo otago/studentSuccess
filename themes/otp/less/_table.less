@@ -1,39 +1,38 @@
 .table {
-	
 	background: @ash;
 	margin-bottom: 3.125rem;
+}
+
+table {
+	width: 100%;
+	max-wdith: 69.375rem;
+	margin: 0 auto;
 	
-	table {
-		
-		width: 100%;
-		max-wdith: 69.375rem;
-		margin: 0 auto;
-		
-		th, td {
-			text-align: left;
-			vertical-align: top;
-			padding: 1.625rem 0.5rem;
-			font-weight: 400;
-		}
-		
-		th {
-			
-			font-size: 1.125rem;
-			
-			&.main {
-				color: @blue;
-				font-size: 1.25rem;
-			}
-		}
-		
-		tr {
-			border-bottom: 1px solid @grey;
-			
-			&:last-child {
-				border-bottom: 0;
-			};
-		}
-		
+	th, td {
+		text-align: left;
+		vertical-align: top;
 	}
 	
+	th {
+		font-size: 1.125rem;
+		
+		&.main {
+			color: @blue;
+			font-size: 1.25rem;
+		}
+	}
+	
+	tr {
+		border-bottom: 1px solid @grey;
+		
+		&:last-child {
+			border-bottom: 0;
+		}
+	}	
+}
+
+.tableelement {
+	h2, h3 {
+		color: @blue;
+	}
 }
