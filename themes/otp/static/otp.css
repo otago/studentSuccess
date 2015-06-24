@@ -5817,8 +5817,9 @@ h5 a {
   margin: 0;
 }
 .left-content ol {
-  list-style: decimal;
   list-style-type: decimal;
+  list-style-position: outside;
+  padding-left: 1.6rem;
 }
 .feature-link,
 .feature-download,
@@ -5913,6 +5914,7 @@ h5 a {
 .external_link a {
   text-decoration: none;
   font-weight: normal;
+  padding-top: 3px;
 }
 .internal_link .content-padder,
 .external_link .content-padder {
@@ -6091,6 +6093,14 @@ figure.element figcaption p {
 .element-content-generic + .external_link,
 .element-content-generic + .internal_link {
   padding-top: 0;
+  margin-top: -1rem;
+}
+.element-content-generic + .external_link.component-alignment.boxed-element,
+.element-content-generic + .internal_link.component-alignment.boxed-element {
+  padding-top: 0;
+}
+.element-content-generic p:last-child {
+  margin-bottom: 0;
 }
 .element_image .element-content-generic .content-padder {
   padding-top: 0;

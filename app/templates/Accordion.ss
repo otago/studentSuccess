@@ -5,7 +5,9 @@
 		<div class='accordion-item'>
 			<% if ListDescription %>
 				<div class='element-content-generic left-content accordion-item-content'>
-					$ListDescription
+					<div class="content-padder">
+						$ListDescription
+					</div>
 				</div>
 			<% end_if %>
 

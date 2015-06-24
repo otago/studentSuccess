@@ -1520,6 +1520,9 @@ hr {
 .left-content li h4 {
   margin: 0 0 8px 0;
 }
+.left-content ol {
+  padding-left: 26px;
+}
 .feature-link,
 .feature-download,
 .feature-mail,
@@ -1576,6 +1579,10 @@ figure.element figcaption {
 }
 .content-padder {
   padding: 32px 35% 32px 0;
+}
+.element-content-generic + .external_link,
+.element-content-generic + .internal_link {
+  margin-top: -16px;
 }
 .sidebar-help {
   font-size: 18px;
