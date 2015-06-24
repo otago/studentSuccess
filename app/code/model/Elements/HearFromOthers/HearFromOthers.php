@@ -10,7 +10,8 @@ class HearFromOthers extends BaseElement {
 		'DisplayTitle'		=> 'Varchar(255)',
 		'TestimonyContent'	=> 'Text',
 		'Testimony'			=> 'Varchar(255)',
-		'YoutubeVideo'		=> 'Varchar(300)'
+		'YoutubeVideo'		=> 'Varchar(300)',
+		'VideoTime'			=> 'Varchar(200)',
 	);
 
 	private static $has_one = array(

@@ -23,6 +23,10 @@
 						{$Testimony}
 					</p>
 				<% end_if %>
+
+				<% if VideoTime %>
+					<span class="time">$VideoTime</span>
+				<% end_if %>
 			</article>
 	    </section>
 	</div>
