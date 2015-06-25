@@ -248,7 +248,7 @@ if(typeof app === 'undefined') { var app = {}; }
 								}
 							});
 						});
-					} else if(step.find('.activity_text__DragAndDrop').length > 0 || step.find('.activity_text__Replace').length > 0) {
+					} else if(step.find('.activity_text__DragAndDrop').length > 0 || step.find('.activity_text__DragAndDropToMatch').length > 0 || step.find('.activity_text__Replace').length > 0) {
 						options.each(function(i, elem) {
 							if($(answers.get(i)).text() != $(elem).text()) {
 								valid = false;
@@ -401,10 +401,18 @@ if(typeof app === 'undefined') { var app = {}; }
 				$(".activity_text__DragAndDrop").each(function(i, elem) {
 					$('ul', elem).sortable('disable');
 				});
+
+				$(".activity_text__DragAndDropToMatch").each(function(i, elem) {
+					$('ul', elem).sortable('disable');
+				});
 			};
 
 			$(".activity_text__DragAndDrop").each(function(i, elem) {
 				$('ul', elem).sortable();
+			});
+
+			$(".activity_text__DragAndDropToMatch").each(function(i, elem) {
+				$('ul:not(.labels)', elem).sortable();
 			});
 
 			$(".activity_text__Paragraph, .activity_text__MultiChoice").each(function(i, elem) {

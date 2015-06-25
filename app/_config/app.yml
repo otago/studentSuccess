@@ -62,7 +62,6 @@ Page:
     - CheckList
     - CarouselWithUpperLetter
     - MatrixElement
-    - WayFinder
 AccordionPage:
   allowed_elements:
     - Accordion

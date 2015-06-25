@@ -47,6 +47,13 @@
 
                     <% if ActivityOptions.Count > 0 %>
                         <div class="activity_text activity_text__{$Presentation}">
+                            <% if Presentation == "DragAndDropToMatch" %>
+                                <ul class="labels">
+                                    <% loop MatchLabels %>
+                                        <li>$Title</li>
+                                    <% end_loop %>
+                                </ul>
+                            <% end_if %>
                             <ul>
                              <% loop ActivityOptions %>
                                  <li <% if Up.Presentation == Replace %>contenteditable=true<% end_if %>>$Title</li>
@@ -60,7 +67,7 @@
                     </div>
 
                     <div class="activity_fail_warning">
-                        <p>That is not quite the correct answer please try again.</p>
+                        $WarningContent
                     </div>
 
                     <div class="activity_fail">

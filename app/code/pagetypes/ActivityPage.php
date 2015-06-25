@@ -74,13 +74,15 @@ class ActivityPage_Controller extends Page_Controller {
 class ActivityPage_Activity extends DataObject {
 
 	private static $db = array(
-		'Presentation' => "Enum('TextSlide, SingleChoice, DragAndDrop, Paragraph, MultiChoice, Replace, ResultsSlide', 'TextSlide')",
+		'Presentation' => "Enum('TextSlide, SingleChoice, DragAndDrop, DragAndDropToMatch, Paragraph, MultiChoice, Replace, ResultsSlide', 'TextSlide')",
 		'Title' => 'Varchar(200)',
 		'Description' => 'HTMLText',
 		'PresentedOptions' => 'Text',
+		'DragAndDropToMatchLabels' => 'Text',
 		'CorrectAnswers' => 'Text',
 		'RightAnswerContent' => 'HTMLText',
 		'WrongAnswerContent' => 'HTMLText',
+		'WarningContent' => 'HTMLText',
 		'Sort' => 'Int'
 	);
 
@@ -127,6 +129,7 @@ class ActivityPage_Activity extends DataObject {
 		$presentation->setSource(array(
 			'TextSlide' => 'Welcome/Instructions',
 			'DragAndDrop' => 'DragAndDrop',
+			'DragAndDropToMatch' => 'DragAndDropToMatch',
 			'SingleChoice' => 'SingleChoice',
 			'Paragraph' => 'Paragraph',
 			'MultiChoice' => 'MultiChoice',
@@ -137,6 +140,7 @@ class ActivityPage_Activity extends DataObject {
 		$presented = $fields->dataFieldByName('PresentedOptions');
 		$presented
 			->displayIf('Presentation')->isEqualTo('DragAndDrop')
+			->orIf('Presentation')->isEqualTo('DragAndDropToMatch')
 			->orIf('Presentation')->isEqualTo('Paragraph')
 			->orIf('Presentation')->isEqualTo('SingleChoice')
 			->orIf('Presentation')->isEqualTo('MultiChoice')
@@ -148,6 +152,7 @@ class ActivityPage_Activity extends DataObject {
 
 		$correct
 			->displayIf('Presentation')->isEqualTo('DragAndDrop')
+			->orIf('Presentation')->isEqualTo('DragAndDropToMatch')
 			->orIf('Presentation')->isEqualTo('Paragraph')
 			->orIf('Presentation')->isEqualTo('SingleChoice')
 			->orIf('Presentation')->isEqualTo('MultiChoice')
@@ -159,6 +164,7 @@ class ActivityPage_Activity extends DataObject {
 		$rightContent->setRows(4);
 		$rightContent
 			->displayIf('Presentation')->isEqualTo('DragAndDrop')
+			->orIf('Presentation')->isEqualTo('DragAndDropToMatch')
 			->orIf('Presentation')->isEqualTo('Paragraph')
 			->orIf('Presentation')->isEqualTo('SingleChoice')
 			->orIf('Presentation')->isEqualTo('MultiChoice')
@@ -168,11 +174,25 @@ class ActivityPage_Activity extends DataObject {
 		$wrongContent->setRows(4);
 		$wrongContent
 			->displayIf('Presentation')->isEqualTo('DragAndDrop')
+			->orIf('Presentation')->isEqualTo('DragAndDropToMatch')
 			->orIf('Presentation')->isEqualTo('Paragraph')
 			->orIf('Presentation')->isEqualTo('SingleChoice')
 			->orIf('Presentation')->isEqualTo('MultiChoice')
 			->orIf('Presentation')->isEqualTo('Replace');
-			
+
+		$warningContent = $fields->dataFieldByName('WarningContent');
+		$warningContent->setRows(4);
+		$warningContent
+			->displayIf('Presentation')->isEqualTo('DragAndDrop')
+			->orIf('Presentation')->isEqualTo('DragAndDropToMatch')
+			->orIf('Presentation')->isEqualTo('Paragraph')
+			->orIf('Presentation')->isEqualTo('SingleChoice')
+			->orIf('Presentation')->isEqualTo('MultiChoice')
+			->orIf('Presentation')->isEqualTo('Replace');
+		
+		$matchLabels = $fields->dataFieldByName('DragAndDropToMatchLabels');
+		$matchLabels->displayIf('Presentation')->isEqualTo('DragAndDropToMatch');
+
 		return $fields;
 	}
 
@@ -193,7 +213,24 @@ class ActivityPage_Activity extends DataObject {
 		return $output;
 	}
 
-		public function getAnswers() {
+	public function getMatchLabels() {
+		$options = explode("\n", $this->DragAndDropToMatchLabels);
+		$output = new ArrayList();
+
+		foreach($options as $o) {
+			$o = trim($o);
+
+			if($o) {
+				$output->push(new ArrayData(array(
+					'Title' => $o
+				)));
+			}
+		}
+
+		return $output;
+	}
+
+	public function getAnswers() {
 		$options = explode("\n", $this->CorrectAnswers);
 		$output = new ArrayList();
 

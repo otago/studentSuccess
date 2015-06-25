@@ -26,6 +26,12 @@
 	overflow: hidden;
 	margin-bottom: 20px;
 
+	@media screen and (max-width: 620px) {
+		ul {
+			padding-left: 0;
+		}
+	}
+
 	li {
 		list-style: none;
 		padding: 1em;
@@ -36,6 +42,10 @@
 		margin-bottom: 5px;
 		cursor: pointer;
 		.transition-property(background, 0.2s);
+
+		@media screen and (max-width: 620px) {
+			font-size: 16px;
+		}
 
 		&:hover,
 		&:focus,
@@ -92,6 +102,38 @@
 	}
 }
 
+.activity_text__DragAndDropToMatch {
+	ul {
+		float: left;
+
+		&.labels {
+			width: 200px;
+			overflow: hidden;
+			padding-left: 0;
+
+			li {
+				background: none;
+				padding-left: 0;
+
+				&:hover,
+				&:focus {
+					cursor: default;
+				}
+			}
+
+			@media screen and (max-width: 620px) {
+				width: 100%;
+				float: none;
+				padding-left: 0;
+
+				li {
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
 .activity_header {
 	background: #eee;
 	overflow: hidden;
@@ -101,13 +143,33 @@
 	.progress {
 		float: right;
 		padding: 1em 0;
+		overflow: hidden;
+	}
+
+
+	h3 {
+		float: left;
+		padding: 1em 2em 1em 88px;
+		position: absolute;
+		margin: 0;
+		top: 0;
+		left: 0;
+		font-size: 16px;
 	}
 
 	@media screen and (max-width: 620px) {
 		height: auto;
 
+		h3,
 		.progress {
+			width: 100%;
+			overflow: hidden;
 			float: none;
+			clear: both;
+		}
+
+		.progress {
+			margin-top: 3.8rem;
 		}
 	}
 
@@ -150,15 +212,6 @@
 		}
 	}
 
-	h3 {
-		float: left;
-		padding: 1em 2em 1em 88px;
-		position: absolute;
-		margin: 0;
-		top: 0;
-		left: 0;
-		font-size: 16px;
-	}
 
 
 	.preicon {
@@ -197,6 +250,10 @@
 
 	p {
 		font-size: 20px;
+
+		@media screen and (max-width: 620px) {
+			font-size: 16px;
+		}
 	}
 }
 
@@ -254,8 +311,6 @@
 
 .activity_individual {
 	display: none;
-	overflow-x: auto;
-	height: 30rem;
 	padding: 2em;
 	position: relative;
 

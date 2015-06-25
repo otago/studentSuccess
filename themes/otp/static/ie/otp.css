@@ -605,7 +605,6 @@ table th.main {
 }
 .way-finder {
   padding-bottom: 84px;
-  max-width: 1400px;
 }
 .way-finder .col {
   padding: 28px 32px 42px;
@@ -646,7 +645,7 @@ table th.main {
 .way-finder .career-handbook article h3 {
   font-size: 30px;
   line-height: 32px;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 .way-finder .getting-started {
   padding: 26px 28px 50px;
@@ -684,7 +683,6 @@ table th.main {
 .hear-from-others h2 {
   font-size: 50px;
   line-height: 50px;
-  margin-bottom: 54px;
 }
 .hear-from-others section .image .icon {
   font-size: 150px;
@@ -1626,8 +1624,10 @@ figure.element figcaption {
 .was-this-helpful .widget a.yes {
   margin-left: 22px;
 }
-.activity_individual {
-  height: 480px;
+@media screen and (max-width: 620px) {
+  .activity_header .progress {
+    margin-top: 61px;
+  }
 }
 .activity_results {
   padding: 32px 0;

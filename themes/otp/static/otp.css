@@ -3182,17 +3182,19 @@ table tr:last-child {
   z-index: 50;
   padding-bottom: 5.25rem;
   margin: 0 auto;
-  max-width: 87.50rem;
 }
 .way-finder .col {
   float: left;
   width: 14.2857142857%;
   padding: 1.75rem 2rem 2.625rem;
 }
+.way-finder h2 {
+  font-weight: 500;
+}
 .way-finder nav.col,
 .way-finder .col-3 {
   width: 35.7142857143%;
-  background: #d8d5d0;
+  background: #F7F7F6;
 }
 .way-finder .col-2 {
   width: 28.5714285714%;
@@ -3225,6 +3227,8 @@ table tr:last-child {
 }
 .way-finder nav.col h3 {
   font-size: 1.125rem;
+  font-weight: 600;
+  color: #004f8f;
 }
 .way-finder nav.col ul {
   list-style: none;
@@ -3233,7 +3237,7 @@ table tr:last-child {
   margin: 0;
 }
 .way-finder nav.col ul li {
-  border-bottom: 1px solid #0c79c3;
+  border-bottom: 1px solid rgba(0, 79, 143, 0.3);
   overflow: hidden;
   position: relative;
 }
@@ -3275,11 +3279,15 @@ table tr:last-child {
   font-size: 0;
   line-height: 0;
   padding: 0;
+  background: #000;
 }
 .way-finder .career-handbook img {
   position: relative;
   z-index: 2;
   width: 100%;
+  -webkit-transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
 }
 .way-finder .career-handbook .icon {
   font-size: 2.375rem;
@@ -3323,13 +3331,10 @@ table tr:last-child {
 .way-finder .career-handbook article h3 {
   font-size: 1.875rem;
   line-height: 2rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
-.way-finder .career-handbook:hover .icon {
-  color: #00bad6;
-}
-.way-finder .career-handbook:hover article {
-  background: #00bad6;
+.way-finder .career-handbook:hover img {
+  opacity: 0.6;
 }
 .way-finder .getting-started {
   background: #ffcd00;
@@ -3390,10 +3395,10 @@ table tr:last-child {
   }
 }
 .way-finder a.light-green:hover {
-  background: #ffcd00;
+  background: #58bbaa;
 }
 .way-finder a.lighter-blue:hover {
-  background: #ef563c;
+  background: #00a4bd;
 }
 .hear-from-others {
   width: 100%;
@@ -3407,7 +3412,6 @@ table tr:last-child {
   line-height: 3.125rem;
   font-weight: 100;
   margin: 0;
-  margin-bottom: 3.375rem;
 }
 .hear-from-others section {
   background: #00bad6;
@@ -6244,6 +6248,11 @@ figure.element figcaption p {
   overflow: hidden;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 620px) {
+  .activity_text ul {
+    padding-left: 0;
+  }
+}
 .activity_text li {
   list-style: none;
   padding: 1em;
@@ -6256,6 +6265,11 @@ figure.element figcaption p {
   -webkit-transition: background 0.2s ease-out;
   -moz-transition: background 0.2s ease-out;
   transition: background 0.2s ease-out;
+}
+@media screen and (max-width: 620px) {
+  .activity_text li {
+    font-size: 16px;
+  }
 }
 .activity_text li:hover,
 .activity_text li:focus,
@@ -6295,6 +6309,32 @@ figure.element figcaption p {
 .activity_text__DragAndDrop li {
   cursor: move;
 }
+.activity_text__DragAndDropToMatch ul {
+  float: left;
+}
+.activity_text__DragAndDropToMatch ul.labels {
+  width: 200px;
+  overflow: hidden;
+  padding-left: 0;
+}
+.activity_text__DragAndDropToMatch ul.labels li {
+  background: none;
+  padding-left: 0;
+}
+.activity_text__DragAndDropToMatch ul.labels li:hover,
+.activity_text__DragAndDropToMatch ul.labels li:focus {
+  cursor: default;
+}
+@media screen and (max-width: 620px) {
+  .activity_text__DragAndDropToMatch ul.labels {
+    width: 100%;
+    float: none;
+    padding-left: 0;
+  }
+  .activity_text__DragAndDropToMatch ul.labels li {
+    padding-bottom: 0;
+  }
+}
 .activity_header {
   background: #eee;
   overflow: hidden;
@@ -6304,13 +6344,30 @@ figure.element figcaption p {
 .activity_header .progress {
   float: right;
   padding: 1em 0;
+  overflow: hidden;
+}
+.activity_header h3 {
+  float: left;
+  padding: 1em 2em 1em 88px;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  left: 0;
+  font-size: 16px;
 }
 @media screen and (max-width: 620px) {
   .activity_header {
     height: auto;
   }
+  .activity_header h3,
   .activity_header .progress {
+    width: 100%;
+    overflow: hidden;
     float: none;
+    clear: both;
+  }
+  .activity_header .progress {
+    margin-top: 3.8rem;
   }
 }
 .activity_header ul {
@@ -6348,15 +6405,6 @@ figure.element figcaption p {
   line-height: 25px;
   width: 25px;
 }
-.activity_header h3 {
-  float: left;
-  padding: 1em 2em 1em 88px;
-  position: absolute;
-  margin: 0;
-  top: 0;
-  left: 0;
-  font-size: 16px;
-}
 .activity_header .preicon {
   position: absolute;
   top: 50%;
@@ -6392,6 +6440,11 @@ figure.element figcaption p {
 }
 .activity_description p {
   font-size: 20px;
+}
+@media screen and (max-width: 620px) {
+  .activity_description p {
+    font-size: 16px;
+  }
 }
 .activity_scheme__black h3 {
   background: #333;
@@ -6435,8 +6488,6 @@ figure.element figcaption p {
 }
 .activity_individual {
   display: none;
-  overflow-x: auto;
-  height: 30rem;
   padding: 2em;
   position: relative;
 }

@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by Nivanka Fonseka (nivanka@silverstripers.com).
- * User: nivankafonseka
- * Date: 5/13/15
- * Time: 7:28 PM
- * To change this template use File | Settings | File Templates.
- */
 
 class HomePage extends Page {
 
