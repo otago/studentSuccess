@@ -56,7 +56,7 @@
                             <% end_if %>
                             <ul>
                              <% loop ActivityOptions %>
-                                 <li <% if Up.Presentation == Replace %>contenteditable=true<% end_if %>>$Title</li>
+                                 <li <% if Up.Presentation == Replace && IsReplaceable %>class="replaceable" contenteditable=true<% end_if %>>$Title</li>
                              <% end_loop %>
                             </ul>
                         </div>

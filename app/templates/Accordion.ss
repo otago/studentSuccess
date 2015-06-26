@@ -1,6 +1,6 @@
 <div class='accordion-c'>
 	<% loop $Widget.Elements %>
-		<h2 class='title-c title-color-{$AscentColour}'><a href='#'>{$Title}</a></h2>
+		<h2 class='title-c title-color-{$AscentColour}'><a>{$Title}</a></h2>
 
 		<div class='accordion-item'>
 			<% if ListDescription %>
@@ -11,9 +11,11 @@
 				</div>
 			<% end_if %>
 
-			<% if $Widget.Elements %>
-				<% loop $Widget.Elements %>
-					$Me
+			<% if $Elements %>
+				<% loop $Elements %>
+					<% if ShouldHaveWrapper %><div class="left-content-wrapper"><% end_if %>
+						$Content
+					<% if ShouldCloseWrapper %></div><% end_if %>
 				<% end_loop %>
 			<% end_if %>
 		</div>

@@ -146,7 +146,7 @@ class ActivityPage_Activity extends DataObject {
 			->orIf('Presentation')->isEqualTo('MultiChoice')
 			->orIf('Presentation')->isEqualTo('Replace');
 
-		$presented->setDescription('List the items you want to show the user, separated by new lines');
+		$presented->setDescription('List the items you want to show the user, separated by new lines. If the user can replace the text on this word then include an * at the end of the word.');
 
 		$correct = $fields->dataFieldByName('CorrectAnswers');
 
@@ -204,8 +204,16 @@ class ActivityPage_Activity extends DataObject {
 			$o = trim($o);
 
 			if($o) {
+				$replacable = false;
+
+				if(substr($o, -1) == "*") {
+					$o = trim(substr($o, 0, strlen($o) -1));
+					$replacable = true;
+				}
+
 				$output->push(new ArrayData(array(
-					'Title' => $o
+					'Title' => $o,
+					'IsReplaceable' => $replacable
 				)));
 			}
 		}

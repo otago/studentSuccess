@@ -27,7 +27,8 @@ class BaseElementExtension extends DataExtension {
 		$after = BaseElement::get()->filter(array(
 			'ParentID'				=> $this->owner->ParentID,
 			'ID:not'				=> $this->owner->ID,
-			'Sort:GreaterThan'	=> $this->owner->Sort
+			'Sort:GreaterThan'	=> $this->owner->Sort,
+			'ListID'				=> $this->owner->ListID,
 		))->sort('Sort', 'ASC')->first();
 
 		if(($after && in_array($after->ClassName, $arrSidebarClasses))) {
@@ -45,7 +46,8 @@ class BaseElementExtension extends DataExtension {
 		$after = BaseElement::get()->filter(array(
 			'ParentID'				=> $this->owner->ParentID,
 			'ID:not'				=> $this->owner->ID,
-			'Sort:GreaterThan'	=> $this->owner->Sort
+			'Sort:GreaterThan'		=> $this->owner->Sort,
+			'ListID'				=> $this->owner->ListID
 		))->sort('Sort', 'ASC')->first();
 
 		if(($after && in_array($after->ClassName, $arrSidebarClasses))) {

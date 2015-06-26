@@ -212,6 +212,9 @@ if(typeof app === 'undefined') { var app = {}; }
 								// if this is on the 3rd attempt then show the user the error messages
 								if(attempt >= allowedAttempts) {
 									if(showResults) {
+										activity.addClass('readonly');
+										markReadonly(activity);
+
 										$(check).removeClass('correct');
 										$(check).addClass('wrong');
 									}
@@ -219,13 +222,14 @@ if(typeof app === 'undefined') { var app = {}; }
 
 								$(check).attr('data-validation', 'wrong');
 							} else {
-								if(attempt >= allowedAttempts) {
-									if(showResults) {
-										$(check).removeClass('wrong');
-										$(check).addClass('correct');
-									}
-								}
+								if(showResults) {
+									activity.addClass('readonly');
+									markReadonly(activity);
 
+									$(check).removeClass('wrong');
+									$(check).addClass('correct');
+								}
+								
 								$(check).attr('data-validation', 'correct');
 							}
 						});
@@ -239,6 +243,9 @@ if(typeof app === 'undefined') { var app = {}; }
 
 									if(attempt >= allowedAttempts) {
 										if(showResults) {
+											activity.addClass('readonly');
+											markReadonly(activity);
+
 											$(opt).removeClass('correct');
 											$(opt).addClass('wrong');
 										}
@@ -257,16 +264,20 @@ if(typeof app === 'undefined') { var app = {}; }
 									if(showResults) {
 										$(elem).removeClass('correct');
 										$(elem).addClass('wrong');
+
+										activity.addClass('readonly');
+										markReadonly(activity);
 									}
 								}
 
 								$(elem).attr('data-validation', 'wrong');
 							} else {
-								if(attempt >= allowedAttempts) {
-									if(showResults) {
-										$(elem).addClass('correct');
-										$(elem).removeClass('wrong');
-									}
+								if(showResults) {
+									$(elem).addClass('correct');
+									$(elem).removeClass('wrong');
+
+									activity.addClass('readonly');
+									markReadonly(activity);
 								}
 
 								$(elem).attr('data-validation', 'correct');
@@ -397,18 +408,26 @@ if(typeof app === 'undefined') { var app = {}; }
 				}
 			});
 			
-			var markReadonly = function() {
-				$(".activity_text__DragAndDrop").each(function(i, elem) {
-					$('ul', elem).sortable('disable');
+			var markReadonly = function(activity) {
+				if(!activity) {
+					activity = $("body");
+				}
+
+				activity.find(".activity_text__DragAndDrop").each(function(i, elem) {
+					$('ul.hassortable', elem).sortable('disable');
 				});
 
-				$(".activity_text__DragAndDropToMatch").each(function(i, elem) {
-					$('ul', elem).sortable('disable');
+				activity.find(".activity_text__DragAndDropToMatch").each(function(i, elem) {
+					$('ul.hassortable', elem).sortable('disable');
+				});
+
+				activity.find(".activity_text__Replace").each(function(i, elem) {
+					$('li', elem).attr('contenteditable', false);
 				});
 			};
 
 			$(".activity_text__DragAndDrop").each(function(i, elem) {
-				$('ul', elem).sortable();
+				$('ul', elem).addClass('hassortable').sortable();
 			});
 
 			$(".activity_text__DragAndDropToMatch").each(function(i, elem) {

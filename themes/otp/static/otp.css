@@ -1366,6 +1366,7 @@ table tr:last-child {
   position: relative;
   width: 90%;
   max-width: 62.5rem;
+  cursor: pointer;
   font-weight: 600;
   margin: 0 auto;
 }
@@ -5514,6 +5515,10 @@ div.token-input-dropdown-mac ul li.token-input-selected-dropdown-item-mac span.t
 div.token-input-dropdown-mac ul li.token-input-selected-dropdown-item-mac.odd span.token-input-dropdown-item-description-mac {
   color: #fff;
 }
+.related-topics .masonry-content .tile-c.half h3 {
+  font-size: 1.175rem;
+  line-height: 1.8rem;
+}
 .chosen-container-single {
   width: 100% !important;
 }
@@ -6293,14 +6298,35 @@ figure.element figcaption p {
   background-color: #08C04E;
   color: #fff;
 }
+.activity_text.activity_text__Replace li.correct,
+.activity_text.activity_text__Replace li.wrong {
+  color: #404041;
+}
 .activity_text.activity_text__Replace li {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   background: transparent;
 }
-.activity_text.activity_text__Replace li:focus,
-.activity_text.activity_text__Replace li:active,
-.activity_text.activity_text__Replace li:hover {
+.activity_text.activity_text__Replace li.replaceable {
+  background: #eee;
+}
+.activity_text.activity_text__Replace li.replaceable:focus,
+.activity_text.activity_text__Replace li.replaceable:active,
+.activity_text.activity_text__Replace li.replaceable:hover {
   background: #ffcd00;
   color: #000;
+}
+.activity_text.activity_text__Replace li.replaceable.correct,
+.activity_text.activity_text__Replace li.replaceable.correct:hover,
+.activity_text.activity_text__Replace li.replaceable.correct:focus {
+  background-color: #08C04E;
+  color: #fff;
+}
+.activity_text.activity_text__Replace li.replaceable.wrong,
+.activity_text.activity_text__Replace li.replaceable.wrong:hover,
+.activity_text.activity_text__Replace li.replaceable.wrong:focus {
+  background-color: #EF563C;
+  color: #fff;
 }
 .activity_text__Paragraph li,
 .activity_text__Replace li {

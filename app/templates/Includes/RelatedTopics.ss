@@ -32,7 +32,6 @@
                                 <h3>{$Title}</h3>
                                 <% if $Link %></a><% end_if %>
                                 
-                                $SecondaryPageLink.ID
                                 <% if $SecondaryPageLink && $LinkButton %>
                                     <% include SecondaryLink %>
                                 <% end_if %>

@@ -1376,6 +1376,10 @@ table th.main {
 div.token-input-dropdown-mac {
   max-width: 1200px;
 }
+.related-topics .masonry-content .tile-c.half h3 {
+  font-size: 19px;
+  line-height: 29px;
+}
 .chosen-container-single .chosen-single {
   height: 40px;
   line-height: 40px;

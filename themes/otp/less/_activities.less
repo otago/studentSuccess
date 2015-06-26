@@ -76,14 +76,39 @@
 	}
 
 	&.activity_text__Replace {
+		li.correct,
+		li.wrong {
+			color: #404041;
+		}
+
 		li {
+			padding-left: 0.5em;
+			padding-right: 0.5em;
 			background: transparent;
 
-			&:focus,
-			&:active,
-			&:hover {
-				background: @yellow;
-				color: #000;
+			&.replaceable {
+				background: #eee;
+
+				&:focus,
+				&:active,
+				&:hover {
+					background: @yellow;
+					color: #000;
+				}
+
+				&.correct,
+				&.correct:hover,
+				&.correct:focus {
+					background-color: #08C04E;
+					color: #fff;
+				}
+
+				&.wrong,
+				&.wrong:hover,
+				&.wrong:focus {
+					background-color: #EF563C;
+					color: #fff;
+				}
 			}
 		}
 	}
