@@ -224,6 +224,10 @@ table th.main {
 @media screen and (max-width: 980px) {
   .carousel .slides li.title-content-compact.title-content-compact.flex-active-slide .right {
     padding: 16px;
+    margin-top: 16px;
+  }
+  .carousel .slides li.title-content-compact.title-content-compact.flex-active-slide .right h3 {
+    margin-bottom: 8px;
   }
 }
 .smart-slide {

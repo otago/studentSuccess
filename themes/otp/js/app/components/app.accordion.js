@@ -6,7 +6,7 @@ if(typeof app === 'undefined') { var app = {}; }
 		
 		var items = $('.accordion-c');
 		
-		var initItem = function(container){
+		var initItem = function(container) {
 			var holder = container;
 			holder.find('.title-c a').click(function() {
 				var title = $(this).parent();
@@ -20,6 +20,8 @@ if(typeof app === 'undefined') { var app = {}; }
 						// may contains carousels.
 						app.carousel.init();
 
+						console.log('resize');
+						$(window).trigger('resize');
 
 						if(title.offset().top < $(window).scrollTop()) {
 							$('html, body').animate({
@@ -29,8 +31,7 @@ if(typeof app === 'undefined') { var app = {}; }
 					});
 				}
 				else {
-					title.removeClass('active');
-					holder.find('.accordion-item').removeClass('active').slideUp();
+					title.removeClass('active').next('.accordion-item').slideUp();
 				}
 				
 				return false;

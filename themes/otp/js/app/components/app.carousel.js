@@ -24,6 +24,9 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
                     var current = slider.currentSlide + 1;
                     letters.removeClass('active');
                     top.find('li.letter-' + current).addClass('active');
+				},
+				start: function() {
+					$(window).trigger('resize');
 				}
 			});
 
@@ -48,21 +51,51 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 				slideshow		: false,
 				animationSpeed  : 200,
 				prevText		: "",
-			    nextText		: ""
+			    nextText		: "",
+			    start: function(slider) {
+			    	$(window).trigger('resize');
+			    }
 			});
 			
 		};
+
 		
 		var can = function(){
 			return items.length > 0 || smartItems.length > 0;
 		};
 		
 		var init = function () {
+			function setEqualHeight(selector) {
+	      		var heights = new Array();
+
+	       		 $(selector).each(function() {
+					$(this).css('min-height', '0');
+					$(this).css('max-height', 'none');
+					$(this).css('height', 'auto');
+					heights.push($(this).height());
+				});
+
+				var max = Math.max.apply( Math, heights );
+				
+				$(selector).each(function() {
+					$(this).css('height', max + 'px');
+				}); 
+			}
+
+
+	        $(window).resize(function() {
+	            setTimeout(function() {
+	                setEqualHeight('.slides li');
+	            }, 120);
+	        });
+
 			items.filter(":visible").each(function() {
 				if(!$(this).data('inited')) {
 					$(this).data('inited', true);
 
 					initSlider($(this));
+
+	        		setEqualHeight('.slides li');
 				}
 			});
 			
@@ -71,10 +104,10 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 					$(this).data('inited', true);
 
 					initSmartSlider($(this));
+
+	       			setEqualHeight('.slides li');
 				}
 			});
-
-
 		};
 		
 		return {
