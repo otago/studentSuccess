@@ -3,7 +3,43 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 
 (function($){
 	
-	app.packery = (function(){
+	app.packery = (function() {
+
+        $(".separator-link").click(function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            if($(this).hasClass('fancybox-link')) {
+                 $(this).fancybox({
+                    openEffect : 'none',
+                    closeEffect : 'none',
+                    prevEffect : 'none',
+                    padding: 0,
+                    nextEffect : 'none',
+                    minWidth: 320,
+                    minHeight: 320,
+                    arrows : false,
+                    helpers : {
+                        media : {},
+                        buttons : {}
+                    },
+                    afterShow: function() {
+                        app.activities.init();
+                    },
+                    ajax: {
+                        dataFilter: function(data) {
+                            if($(data).find('.modal-content').length > 0) {
+                                return $(data).find('.modal-content').first();
+                            }
+
+                            return data;
+                        }
+                    }
+                });
+            } else {
+                window.location.href = $(this).attr('href');
+            }
+        });
 
 		var items = $('.packery');
 		
@@ -201,6 +237,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
                 $(".token-input-input-token-mac input").val($(this).text());
                 $(".filter-form").submit();
             });
+
 		};
 		
 		return {

@@ -6,12 +6,9 @@
     <% end_if %>
 
         <h3>{$Title}</h3>
-            <% if $Link && $LinkButton %>
-            <p class='separator-link'>
-                <% include PencilIcon %> $LinkButton
-            </p>
-            <% end_if %>
-
+        <% if $SecondaryPageLink %>
+            <% include SecondaryLink %>
+        <% end_if %>
 
     <% if $Link %>
         </a>
