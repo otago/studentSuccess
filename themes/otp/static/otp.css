@@ -1928,6 +1928,12 @@ table tr:last-child {
     left: -40px;
   }
 }
+@media screen and (max-width: 980px) {
+  .carousel .flex-direction-nav .flex-prev,
+  .carousel .flex-direction-nav .flex-next {
+    top: 65px;
+  }
+}
 @media screen and (max-width: 820px) {
   .carousel .flex-direction-nav .flex-prev,
   .carousel .flex-direction-nav .flex-next {
@@ -1945,6 +1951,11 @@ table tr:last-child {
 @media screen and (max-width: 1140px) {
   .carousel .flex-direction-nav .flex-next {
     right: -40px;
+  }
+}
+@media screen and (max-width: 980px) {
+  .carousel .flex-direction-nav .flex-next {
+    top: 65px;
   }
 }
 @media screen and (max-width: 820px) {

@@ -20,13 +20,14 @@ if(typeof app === 'undefined') { var app = {}; }
 						// may contains carousels.
 						app.carousel.init();
 
-						console.log('resize');
-						$(window).trigger('resize');
-
 						if(title.offset().top < $(window).scrollTop()) {
 							$('html, body').animate({
 								'scrollTop': title.offset().top
+							}, function() {
+								$(window).trigger('resize');
 							});
+						} else {
+							$(window).trigger('resize');
 						}
 					});
 				}
