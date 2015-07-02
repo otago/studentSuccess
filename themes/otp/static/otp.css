@@ -1440,9 +1440,6 @@ table tr:last-child {
   width: 90%;
   margin: 0 auto;
 }
-.accordion-c .accordion-item .accordion-item-content.element-content-generic {
-  padding-top: 2rem;
-}
 .accordion-c .accordion-item.active {
   background: #ffffff;
   border-bottom: none;
@@ -2987,6 +2984,26 @@ table tr:last-child {
   position: absolute;
   z-index: 1;
 }
+.hero .grad {
+  position: relative;
+  z-index: 2;
+  min-height: 100%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0.1+0,0.35+100 */
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.35) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, rgba(0, 0, 0, 0.35)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.35) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.35) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.35) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.35) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1a000000', endColorstr='#59000000', GradientType=0);
+  /* IE6-9 */
+}
 .hero .contents {
   position: relative;
   top: 0;
@@ -3000,6 +3017,7 @@ table tr:last-child {
 .hero .contents h2,
 .hero .contents p {
   margin: 0;
+  max-width: 500px;
 }
 .hero .contents h2 {
   font-weight: 300;
@@ -3193,7 +3211,7 @@ table tr:last-child {
   position: relative;
   overflow: hidden;
   z-index: 50;
-  padding-bottom: 5.25rem;
+  padding-bottom: 3.25rem;
   margin: 0 auto;
 }
 .way-finder .col {
@@ -3203,6 +3221,10 @@ table tr:last-child {
 }
 .way-finder h2 {
   font-weight: 500;
+}
+.way-finder p {
+  font-size: 1rem;
+  line-height: 1.375;
 }
 .way-finder nav.col,
 .way-finder .col-3 {
@@ -3373,7 +3395,6 @@ table tr:last-child {
 }
 .way-finder .getting-started p,
 .way-finder .getting-started h2 {
-  max-width: 20.5rem;
   margin: 0;
 }
 .way-finder .getting-started h2 {
@@ -3416,7 +3437,10 @@ table tr:last-child {
 .hear-from-others {
   width: 100%;
   padding: 0;
-  margin: 0 auto 1.625rem;
+  margin: 0 auto 4rem;
+}
+.hear-from-others .component-alignment.boxed-element {
+  padding-top: 1.8rem;
 }
 .hear-from-others h2 {
   color: #ef563c;
@@ -4803,11 +4827,29 @@ table tr:last-child {
   margin: 0 auto;
   position: relative;
 }
+.masonry-content.masonry-basic .tile-c h3 {
+  font-size: 1.875rem;
+  line-height: 1.1;
+  padding-top: 2rem;
+  font-weight: 600;
+}
+.masonry-content.masonry-basic .tile-c h3 span {
+  top: 2.2rem;
+}
+.masonry-content.masonry-basic .tile-c.overflow-content h3 {
+  padding-top: 0;
+}
+.masonry-content.masonry-basic .tile-c.overflow-content h3 span {
+  top: 3px;
+}
 .masonry-content .tile-c {
   width: 33.3333333%;
   float: left;
   color: #ffffff;
   background: #79c8bb;
+  -webkit-transition: background 0.2s ease-out;
+  -moz-transition: background 0.2s ease-out;
+  transition: background 0.2s ease-out;
   padding: 1.875rem 2rem 1.875rem 2.000rem;
   word-wrap: break-word;
   display: block;
@@ -4830,16 +4872,17 @@ table tr:last-child {
   display: block;
 }
 .masonry-content .tile-c h3 {
-  font-size: 1.875rem;
-  line-height: 1;
+  font-size: 1.275rem;
+  line-height: 0.9;
   margin: 0;
+  font-weight: 500;
   height: 21.25rem;
   position: relative;
 }
 .masonry-content .tile-c h3 span {
   display: block;
   height: 2rem;
-  line-height: 2.250rem;
+  line-height: 1.375rem;
   font-size: 1rem;
   position: absolute;
   line-height: 1.5;
@@ -4847,10 +4890,26 @@ table tr:last-child {
   opacity: 0.6;
   top: 0;
 }
+.masonry-content .tile-c .height {
+  height: 21.25rem;
+}
+.masonry-content .tile-c .height h3 {
+  height: auto;
+}
+.masonry-content .tile-c .height p {
+  font-size: 1.125rem;
+  line-height: 1.2222;
+  margin-top: 2.2rem;
+}
+@media screen and (max-width: 640px) {
+  .masonry-content .tile-c .height {
+    height: auto;
+  }
+}
 .masonry-content .tile-c p {
   margin: 1.5rem 0 0;
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 1.375;
 }
 .masonry-content .tile-c .separator-link {
   padding-top: 0.75rem;
@@ -4891,6 +4950,10 @@ table tr:last-child {
 }
 .masonry-content .tile-c:nth-child(6n + 3) h3,
 .masonry-content .tile-c:nth-child(6n + 3) p {
+  color: #444449;
+}
+.masonry-content .tile-c:nth-child(6n + 3) .separator-link {
+  border-color: rgba(0, 0, 0, 0.1);
   color: #444449;
 }
 .masonry-content .tile-c:nth-child(6n + 3) .separator-link svg line,
@@ -4940,12 +5003,17 @@ table tr:last-child {
 }
 .masonry-content .tile-c.half {
   width: 16.6666666667%;
-  padding: 2.225rem 2rem;
+  padding: 1.225rem 1rem;
 }
 .masonry-content .tile-c.half h3 {
-  font-size: 1.875rem;
-  line-height: 1.9rem;
-  height: 8.2rem;
+  line-height: 1.3;
+  height: 10.04rem;
+}
+.masonry-content .tile-c.half .height {
+  height: 10.04rem;
+}
+.masonry-content .tile-c.half .height h3 {
+  height: auto;
 }
 .masonry-content .tile-c.half a {
   transition: all 0.5s ease-in-out;
@@ -4966,30 +5034,30 @@ table tr:last-child {
 .masonry-content .tile-c.half a:focus {
   opacity: 0.8;
 }
-.masonry-content .list-menu {
+.masonry-content .tile-c.list-menu {
   background: #00bad6;
   position: absolute;
   top: 0;
   left: 0;
   padding: 2.625rem 2rem 2.75rem;
 }
-.masonry-content .list-menu .padder {
+.masonry-content .tile-c.list-menu .padder {
   height: 33.75rem;
 }
-.masonry-content .list-menu.has-padder {
+.masonry-content .tile-c.list-menu.has-padder {
   padding: 0;
 }
-.masonry-content .list-menu.has-padder .padder {
+.masonry-content .tile-c.list-menu.has-padder .padder {
   padding: 2.625rem 2rem 2.75rem;
 }
-.masonry-content .list-menu:hover,
-.masonry-content .list-menu:focus,
-.masonry-content .list-menu:nth-child(6n+2):hover,
-.masonry-content .list-menu:nth-child(6n+2):focus {
+.masonry-content .tile-c.list-menu:hover,
+.masonry-content .tile-c.list-menu:focus,
+.masonry-content .tile-c.list-menu:nth-child(6n+2):hover,
+.masonry-content .tile-c.list-menu:nth-child(6n+2):focus {
   background: #00bad6;
   cursor: normal;
 }
-.masonry-content .list-menu h3 {
+.masonry-content .tile-c.list-menu h3 {
   font-size: 1.125rem;
   line-height: 1.25rem;
   margin: 1rem 0 1.5rem;
@@ -4997,19 +5065,19 @@ table tr:last-child {
   font-weight: 600;
   color: #fff;
 }
-.masonry-content .list-menu a {
+.masonry-content .tile-c.list-menu a {
   color: #ffffff;
 }
-.masonry-content .list-menu ul {
+.masonry-content .tile-c.list-menu ul {
   list-style: none;
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-.masonry-content .list-menu li {
+.masonry-content .tile-c.list-menu li {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-.masonry-content .list-menu li a {
+.masonry-content .tile-c.list-menu li a {
   display: block;
   line-height: 1.750rem;
   padding: 1rem 25px 1rem 0rem;
@@ -5024,21 +5092,21 @@ table tr:last-child {
   transition: all 0.2s ease-out;
 }
 @media screen and (max-width: 980px) {
-  .masonry-content .list-menu li a {
+  .masonry-content .tile-c.list-menu li a {
     font-size: 1rem;
     line-height: 1.50rem;
     padding: 1rem 0;
   }
 }
-.masonry-content .list-menu li a span {
+.masonry-content .tile-c.list-menu li a span {
   position: absolute;
   margin-top: 5px;
   font-size: 12px;
   top: 20px;
   right: 0;
 }
-.masonry-content .list-menu li a:hover,
-.masonry-content .list-menu li a:focus {
+.masonry-content .tile-c.list-menu li a:hover,
+.masonry-content .tile-c.list-menu li a:focus {
   opacity: 0.6;
 }
 .masonry-content .contact-left {
@@ -5158,7 +5226,7 @@ table tr:last-child {
 .masonry-content .contact-tile:nth-child(6n+4) h3,
 .masonry-content .contact-tile:nth-child(6n+5) h3 {
   font-size: 2.5rem;
-  line-height: 2.2rem;
+  line-height: 1.15;
   font-weight: 100;
   height: auto;
   color: #ef563c;
@@ -5181,6 +5249,14 @@ table tr:last-child {
 .masonry-content .contact-tile:nth-child(6n+4) a,
 .masonry-content .contact-tile:nth-child(6n+5) a {
   color: #404041;
+}
+.masonry-content .contact-tile p,
+.masonry-content .contact-tile:nth-child(6n+1) p,
+.masonry-content .contact-tile:nth-child(6n+2) p,
+.masonry-content .contact-tile:nth-child(6n+3) p,
+.masonry-content .contact-tile:nth-child(6n+4) p,
+.masonry-content .contact-tile:nth-child(6n+5) p {
+  font-size: 1.125rem;
 }
 .masonry-content .contact-tile p.contact,
 .masonry-content .contact-tile:nth-child(6n+1) p.contact,
@@ -5252,6 +5328,8 @@ table tr:last-child {
 }
 .masonry-content .image-tile p {
   color: #fff;
+  margin-top: 0.5rem;
+  line-height: 1.375;
 }
 .masonry-content .image-tile.has-link {
   cursor: pointer;
@@ -5294,11 +5372,15 @@ table tr:last-child {
 .masonry-content .overflow-content article h3 {
   font-size: 1.25rem;
   height: auto;
+  font-weight: 600;
   line-height: 2rem;
 }
 .masonry-content .overflow-content article h3 a {
   font-size: 1.25rem;
   line-height: 2rem;
+}
+.masonry-content .overflow-content article h3 span {
+  top: 3px;
 }
 .masonry-content .no-secondary h3 {
   margin-bottom: 4.3rem;

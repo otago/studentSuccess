@@ -13,7 +13,7 @@
 					<ul>
 						<% loop $OrderedLinks %>
 							<li>
-								<a href="{$Link}" target="_blank">{$Title} <span class='icon icon-arrow'><span></a>
+								<a href="{$Link}" <% if Target %>target="{$Target}"<% end_if %>>{$Title} <span class='icon icon-arrow'><span></a>
 							</li>
 						<% end_loop %>
 					</ul>

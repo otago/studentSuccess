@@ -21,7 +21,7 @@
 				<div class='option-holder'>
 					<select class="sort-filter">
 						<option value='views'>Most viewed</option>
-						<option value='title'>Title</option>
+						<option value='title'>Alphabetical</option>
 					</select>
 				</div>
 			</div>

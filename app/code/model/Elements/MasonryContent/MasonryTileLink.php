@@ -4,7 +4,6 @@ class MasonryTileLink extends DataObject {
 
 	private static $db = array(
 		'Title'					=> 'Varchar',
-		'SearchFilter'			=> 'Boolean',
 		'SortOrder'				=> 'Int'
  	);
 
@@ -12,20 +11,28 @@ class MasonryTileLink extends DataObject {
 		'LinkListMasonryTile'	=> 'LinkListMasonryTile'
 	);
 
-	private static $field_labels = array(
-		'SearchFilter' => 'If filtering the same page'
+	private static $many_many = array(
+		'Elements' => 'FilterableSmallMasonryTile'
 	);
 
 	private static $default_sort = 'SortOrder';
 
-	public function getCMSFields(){
+	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
 		$fields->removeByName(array(
 			'LinkListMasonryTile',
 			'LinkListMasonryTileID',
-			'SortOrder'
+			'SortOrder',
+			'Elements'
 		));
+
+		if($this->LinkListMasonryTile()->exists()) {
+			$tiles = FilterableSmallMasonryTile::get()
+				->filter('MasonryContentID', $this->LinkListMasonryTile()->MasonryContentID);
+				
+			$fields->addFieldToTab('Root.Main', new CheckboxSetField('Elements', 'Elements', $tiles));
+		}
 
 		return $fields;
 	}

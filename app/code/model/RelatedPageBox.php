@@ -7,7 +7,8 @@ class RelatedPageBox extends DataObject {
 		'LinkButton'	=> 'Varchar(255)',
 		'Icon'			=> 'Varchar(255)',
 		'SortOrder'		=> 'Int',
-		'SecondaryTarget' => 'Enum("_self,_blank,_modal")'
+		'SecondaryTarget' => 'Enum("_self,_blank,_modal")',
+		'SecondaryLinkURL' => 'Varchar(255)'
 	);
 
 	private static $has_one = array(
@@ -24,7 +25,8 @@ class RelatedPageBox extends DataObject {
 			'SortOrder',
 			'Page',
 			'PageID',
-			'Icon'
+			'Icon',
+			'SecondaryLinkURL'
 		));
 
 		// $fields->replaceField('Icon', DropdownField::create('Icon')->setSource(Config::inst()->get('SiteConfig', 'Icons')));
@@ -36,7 +38,8 @@ class RelatedPageBox extends DataObject {
 			new HeaderField('SecondaryLinkHeading', 'Secondary Link'),
 			new TextField('LinkButton', 'Link Title'),
 			new DropdownField('SecondaryTarget', 'Target', $this->dbObject('SecondaryTarget')->enumValues()),
-			new TreeDropdownField('SecondaryPageLinkID', 'Link Page', 'SiteTree')
+			new TreeDropdownField('SecondaryPageLinkID', 'Link Page', 'SiteTree'),
+			new TextField('SecondaryLinkURL')
 		));
 
 		return $fields;

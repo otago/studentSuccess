@@ -78,9 +78,6 @@ table th.main {
 .accordion-c .accordion-item .accordion-item-content {
   max-width: 1000px;
 }
-.accordion-c .accordion-item .accordion-item-content.element-content-generic {
-  padding-top: 32px;
-}
 .case-study-holder {
   margin: 0 auto 32px;
   padding-top: 88px;
@@ -608,10 +605,13 @@ table th.main {
   padding: 0 24px;
 }
 .way-finder {
-  padding-bottom: 84px;
+  padding-bottom: 52px;
 }
 .way-finder .col {
   padding: 28px 32px 42px;
+}
+.way-finder p {
+  font-size: 16px;
 }
 .way-finder nav.col {
   padding: 58px 102px 82px;
@@ -663,10 +663,6 @@ table th.main {
     font-size: 24px;
   }
 }
-.way-finder .getting-started p,
-.way-finder .getting-started h2 {
-  max-width: 328px;
-}
 .way-finder .getting-started h2 {
   margin-bottom: 30px;
   line-height: 32px;
@@ -682,7 +678,10 @@ table th.main {
   }
 }
 .hear-from-others {
-  margin: 0 auto 26px;
+  margin: 0 auto 64px;
+}
+.hear-from-others .component-alignment.boxed-element {
+  padding-top: 29px;
 }
 .hear-from-others h2 {
   font-size: 50px;
@@ -1187,6 +1186,13 @@ table th.main {
 .masonry-content {
   padding: 0 0 32px;
 }
+.masonry-content.masonry-basic .tile-c h3 {
+  font-size: 30px;
+  padding-top: 32px;
+}
+.masonry-content.masonry-basic .tile-c h3 span {
+  top: 35px;
+}
 .masonry-content .tile-c {
   padding: 30px 32px 30px 32px;
 }
@@ -1194,52 +1200,59 @@ table th.main {
   padding: 30px 32px 30px 32px;
 }
 .masonry-content .tile-c h3 {
-  font-size: 30px;
+  font-size: 20px;
   height: 340px;
 }
 .masonry-content .tile-c h3 span {
   height: 32px;
-  line-height: 36px;
+  line-height: 22px;
   font-size: 16px;
+}
+.masonry-content .tile-c .height {
+  height: 340px;
+}
+.masonry-content .tile-c .height p {
+  font-size: 18px;
+  margin-top: 35px;
 }
 .masonry-content .tile-c p {
   margin: 24px 0 0;
   font-size: 16px;
-  line-height: 24px;
 }
 .masonry-content .tile-c .separator-link {
   padding-top: 12px;
   font-size: 14px;
 }
 .masonry-content .tile-c.half {
-  padding: 36px 32px;
+  padding: 20px 16px;
 }
 .masonry-content .tile-c.half h3 {
-  font-size: 30px;
-  line-height: 30px;
-  height: 131px;
+  height: 161px;
 }
-.masonry-content .list-menu {
+.masonry-content .tile-c.half .height {
+  height: 161px;
+}
+.masonry-content .tile-c.list-menu {
   padding: 42px 32px 44px;
 }
-.masonry-content .list-menu .padder {
+.masonry-content .tile-c.list-menu .padder {
   height: 540px;
 }
-.masonry-content .list-menu.has-padder .padder {
+.masonry-content .tile-c.list-menu.has-padder .padder {
   padding: 42px 32px 44px;
 }
-.masonry-content .list-menu h3 {
+.masonry-content .tile-c.list-menu h3 {
   font-size: 18px;
   line-height: 20px;
   margin: 16px 0 24px;
 }
-.masonry-content .list-menu li a {
+.masonry-content .tile-c.list-menu li a {
   line-height: 28px;
   padding: 16px 25px 16px 0px;
   font-size: 19px;
 }
 @media screen and (max-width: 980px) {
-  .masonry-content .list-menu li a {
+  .masonry-content .tile-c.list-menu li a {
     font-size: 16px;
     line-height: 24px;
     padding: 16px 0;
@@ -1281,7 +1294,6 @@ table th.main {
 .masonry-content .contact-tile:nth-child(6n+4) h3,
 .masonry-content .contact-tile:nth-child(6n+5) h3 {
   font-size: 40px;
-  line-height: 35px;
 }
 @media screen and (max-width: 980px) {
   .masonry-content .contact-tile h3,
@@ -1293,6 +1305,14 @@ table th.main {
     font-size: 30px;
     line-height: 40px;
   }
+}
+.masonry-content .contact-tile p,
+.masonry-content .contact-tile:nth-child(6n+1) p,
+.masonry-content .contact-tile:nth-child(6n+2) p,
+.masonry-content .contact-tile:nth-child(6n+3) p,
+.masonry-content .contact-tile:nth-child(6n+4) p,
+.masonry-content .contact-tile:nth-child(6n+5) p {
+  font-size: 18px;
 }
 .masonry-content .contact-tile p.contact,
 .masonry-content .contact-tile:nth-child(6n+1) p.contact,
@@ -1335,6 +1355,9 @@ table th.main {
 .masonry-content .contact-tile:nth-child(6n+4) p.lines a span,
 .masonry-content .contact-tile:nth-child(6n+5) p.lines a span {
   margin-right: 16px;
+}
+.masonry-content .image-tile p {
+  margin-top: 8px;
 }
 .masonry-content .overflow-content article {
   margin-top: 240px;

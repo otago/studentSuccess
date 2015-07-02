@@ -8,6 +8,7 @@ if(typeof app === 'undefined') { var app = {}; }
 		
 		var initItem = function(container) {
 			var holder = container;
+
 			holder.find('.title-c a').click(function() {
 				var title = $(this).parent();
 				
@@ -16,23 +17,24 @@ if(typeof app === 'undefined') { var app = {}; }
 					
 					var nextItem = title.next('.accordion-item');
 					
-					nextItem.addClass('active').slideDown(function() {
-						// may contains carousels.
-						app.carousel.init();
-
-						if(title.offset().top < $(window).scrollTop()) {
-							$('html, body').animate({
-								'scrollTop': title.offset().top
-							}, function() {
-								$(window).trigger('resize');
-							});
-						} else {
-							$(window).trigger('resize');
-						}
+					nextItem.addClass('active').show().siblings('.accordion-item').hide().each(function(i, elem) {
+						$(elem).prev('.title-c').removeClass('active');
 					});
+
+					app.carousel.init();
+
+					if(title.offset().top < $(window).scrollTop()) {
+						$('html, body').animate({
+							'scrollTop': title.offset().top
+						}, 0, function() {
+							$(window).trigger('resize');
+						});
+					} else {
+						$(window).trigger('resize');
+					}
 				}
 				else {
-					title.removeClass('active').next('.accordion-item').slideUp();
+					title.removeClass('active').next('.accordion-item').hide();
 				}
 				
 				return false;
@@ -44,7 +46,8 @@ if(typeof app === 'undefined') { var app = {}; }
 		};
 		
 		var init = function (){
-			
+			$(".accordion-c .accordion-item:not(.active)").hide();
+
 			items.each(function(){
 				initItem($(this));
 			});

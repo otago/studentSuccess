@@ -4,7 +4,8 @@ class SmallMasonryTile extends MasonryTile {
 
 	private static $db = array(
 		'LinkButton'		=> 'Varchar',
-		'SecondaryTarget' => 'Enum("_self,_blank,_modal")'
+		'SecondaryTarget' => 'Enum("_self,_blank,_modal")',
+		'SecondaryLinkURL' => 'Varchar(255)'
 	);
 
 	private static $field_labels = array(
@@ -28,7 +29,8 @@ class SmallMasonryTile extends MasonryTile {
 			new HeaderField('SecondaryLinkHeading', 'Secondary Link'),
 			new TextField('LinkButton', 'Link Title'),
 			new DropdownField('SecondaryTarget', 'Target', $this->dbObject('SecondaryTarget')->enumValues()),
-			new TreeDropdownField('SecondaryPageLinkID', 'Link Page', 'SiteTree')
+			new TreeDropdownField('SecondaryPageLinkID', 'Link Page', 'SiteTree'),
+			new TextField('SecondaryLinkURL')
 		));
 
 		return $fields;

@@ -13,7 +13,9 @@ class LinkListMasonryTile extends MasonryTile {
 			'Content'
 		));
 
-		$fields->addFieldToTab('Root.Main', FormUtils::MakeDragAndDropGridField('Links', 'Links', $this->Links(), 'SortOrder', 'RecordEditor'));
+		$fields->addFieldToTab('Root.Main', 
+			FormUtils::MakeDragAndDropGridField('Links', 'Links', $this->Links(), 'SortOrder', 'RecordEditor')
+		);
 
 		return $fields;
 

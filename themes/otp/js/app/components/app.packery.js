@@ -204,8 +204,18 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 			$(window).load(packIt);
 
             $(".image-tile").click(function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+
                 if($(this).hasClass('has-link')) {
-                    window.location.href = $(this).find('a').attr('href');
+                    var link = $(this).find('a').first().clone();
+                    link.css({
+                        'opacity': 0,
+                        'height': 0
+                    });
+
+                    link.first().trigger('click');
+                    link.get(0).click();
                 }
             });
 

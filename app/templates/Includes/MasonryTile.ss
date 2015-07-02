@@ -3,11 +3,13 @@
 <% else %>
     <div class='tile tile-c content-tile'>
 <% end_if %>
-    <h3>
-        {$Title}
-        <% if $Link %><span class='icon icon-arrow'></span><% end_if %>
-    </h3>
-    <% if $Content %><p>{$Content}</p><% end_if %>
+	<div class="height">
+    	<h3>
+        	{$Title}
+        	<% if $Link %><span class='icon icon-arrow'></span><% end_if %>
+    	</h3>
+    	<% if $Content %><p>{$Content}</p><% end_if %>
+    </div>
 <% if $Link %>
     </a>
 <% else %>

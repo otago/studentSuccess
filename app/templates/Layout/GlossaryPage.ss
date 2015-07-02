@@ -76,10 +76,6 @@
 			<% end_if %>
 		</section>
 		<% end_loop %>
-
-
 	</div>
 	<% end_if %>
 </div>
-
-<% include WasThisHelpful %>
