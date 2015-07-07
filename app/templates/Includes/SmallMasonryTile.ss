@@ -6,7 +6,7 @@
 
     <h3>{$Title}</h3>
 
-    <% if $SecondaryPageLink %>
+    <% if $LinkButton %>
         <% include SecondaryLink %>
     <% end_if %>
 

@@ -37,7 +37,11 @@ class RelatedPageBox extends DataObject {
 		$fields->addFieldsToTab('Root.Main', array(
 			new HeaderField('SecondaryLinkHeading', 'Secondary Link'),
 			new TextField('LinkButton', 'Link Title'),
-			new DropdownField('SecondaryTarget', 'Target', $this->dbObject('SecondaryTarget')->enumValues()),
+			new DropdownField('SecondaryTarget', 'Target', array(
+				'_self' => 'Open in same window',
+				'_blank' => 'Open in new window',
+				'_modal' => 'Modal Window'
+			)),
 			new TreeDropdownField('SecondaryPageLinkID', 'Link Page', 'SiteTree'),
 			new TextField('SecondaryLinkURL')
 		));

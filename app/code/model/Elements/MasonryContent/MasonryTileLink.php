@@ -29,7 +29,10 @@ class MasonryTileLink extends DataObject {
 
 		if($this->LinkListMasonryTile()->exists()) {
 			$tiles = FilterableSmallMasonryTile::get()
-				->filter('MasonryContentID', $this->LinkListMasonryTile()->MasonryContentID);
+				->filter(array(
+					'MasonryContentID' => $this->LinkListMasonryTile()->MasonryContentID
+				))
+				->sort('Title ASC');
 				
 			$fields->addFieldToTab('Root.Main', new CheckboxSetField('Elements', 'Elements', $tiles));
 		}

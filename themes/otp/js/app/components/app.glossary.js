@@ -37,8 +37,6 @@ if(typeof app === 'undefined') { var app = {}; }
                     
                     if(matches != -1) {
                         $(elem).parents('.glossary-letter').show();
-                    } else {
-                        $(elem).parents('.glossary-letter').hide();
                     }
                 });
 
@@ -54,7 +52,6 @@ if(typeof app === 'undefined') { var app = {}; }
 
                     var heading = items.find('h4:contains('+ item.name+')');
                     var container = heading.parents('.glossary-letter');
-                    container.siblings('.glossary-letter').hide();
 
                     var toggle = container.find('.title-c');
 

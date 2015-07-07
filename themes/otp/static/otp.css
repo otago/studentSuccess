@@ -4363,7 +4363,7 @@ table tr:last-child {
   font-size: 1.375rem;
   line-height: 1.625rem;
   font-weight: 500;
-  margin: 0.625rem 0 0.938rem;
+  margin: 1.6rem 0 0.2rem;
 }
 .tab-section .content-block .itemList .accordion-item span.icon-phone,
 .tab-section .content-block .itemList .accordion-item span.icon-mail {
@@ -4474,6 +4474,9 @@ table tr:last-child {
 }
 .glossary .glossary-item {
   clear: both;
+}
+.glossary .left-content h4 {
+  color: #0c79c3;
 }
 .component-alignment {
   /*

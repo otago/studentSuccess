@@ -4,7 +4,7 @@
     	    <h3>{$Title}</h3>
     	    <ul>
     	        <% loop $Links %>
-    	            <li><a <% if SearchFilter %>href='#' data-search="$Title.ATT" class="searchf" <% else %>href='{$Link}' target="{$Target}"<% end_if %>>{$Title}<span class='icon icon-arrow'>&nbsp;</span></a></li>
+    	            <li><a <% if Elements %>href='#' data-show-items="[<% loop Elements %>$ID<% if not Last %>,<% end_if %><% end_loop %>]" class="searchf" <% else %>href='{$Link}' target="{$Target}"<% end_if %>>{$Title}<span class='icon icon-arrow'>&nbsp;</span></a></li>
     	        <% end_loop %>
     	    </ul>
     	</article>

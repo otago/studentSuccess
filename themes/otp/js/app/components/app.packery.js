@@ -244,10 +244,30 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
             $('.searchf').click(function(e) {
                 e.preventDefault();
 
-                $(".token-input-input-token-mac input").val($(this).text());
-                $(".filter-form").submit();
-            });
+                var ids = $(this).data('show-items');
 
+                var configs = isotopeconfigs;
+                var sort = $('body').find('select.sort-filter').val();
+                var sortAscending = true;
+
+                if(sort == 'views') {
+                    sortAscending = false;
+                }
+
+                configs.filter = function() {
+                   var tile = $(this);
+
+                    if(ids.indexOf(tile.data('itemid')) > -1) {
+                       return true;
+                    } else {
+                       return false;
+                    }
+                };
+
+                configs.sortBy = sort;
+                configs.sortAscending = sortAscending;
+                $(this).parents('.packery').isotope(configs);
+            });
 		};
 		
 		return {

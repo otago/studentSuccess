@@ -27,18 +27,6 @@
 
 	<% if $GlossaryTypes %>
 	<div class='tabbed-content clear-this'>
-		<% if GlossaryTypes.Count > 1 %>
-			<section class="tab-index container">
-				<div class="container">
-					<ul>
-						<% loop $GlossaryTypes %>
-						<li<% if $First %> class="active"<% end_if %> data-for="tab-{$ID}">{$Title}</li>
-						<% end_loop %>
-					</ul>
-				</div>
-			</section>
-		<% end_if %>
-
 		<% loop $GlossaryTypes %>
 		<section class="tab-section tab-{$ID} <% if $First %>active<% end_if %>">
 			<% if $Letters %>
