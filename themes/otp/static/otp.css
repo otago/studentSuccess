@@ -6379,15 +6379,19 @@ figure.element figcaption p {
   background: #ffcd00;
   color: #000;
 }
-.activity_text li.selected {
+.activity_text li.selected,
+.activity_text li.changed {
   background: #FFCD00;
 }
 .activity_text li.selected:hover,
+.activity_text li.changed:hover,
 .activity_text li.selected:active,
-.activity_text li.selected:focus {
+.activity_text li.changed:active,
+.activity_text li.selected:focus,
+.activity_text li.changed:focus {
   background: #ffd733;
 }
-.activity_text li.wrong {
+.activity_text li.changed.wrong {
   background-color: #EF563C;
   color: #fff;
 }

@@ -427,11 +427,19 @@ if(typeof app === 'undefined') { var app = {}; }
 			};
 
 			$(".activity_text__DragAndDrop").each(function(i, elem) {
-				$('ul', elem).addClass('hassortable').sortable();
+				$('ul', elem).addClass('hassortable').sortable({
+					start: function(event, ui) {
+						$(ui.item).addClass('changed');
+					}
+				});
 			});
 
 			$(".activity_text__DragAndDropToMatch").each(function(i, elem) {
-				$('ul:not(.labels)', elem).sortable();
+				$('ul:not(.labels)', elem).sortable({
+					start: function(event, ui) {
+						$(ui.item).addClass('changed');
+					}
+				});
 			});
 
 			$(".activity_text__Paragraph, .activity_text__MultiChoice").each(function(i, elem) {
