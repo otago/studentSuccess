@@ -44,6 +44,7 @@ h3 {
 }
 table {
   max-wdith: 1110px;
+  margin: 0 auto 32px;
 }
 table th {
   font-size: 18px;
@@ -753,9 +754,7 @@ table th.main {
   font-size: 18px;
 }
 .checklist .index .main {
-  height: 46px;
-  line-height: 46px;
-  padding: 0 10px;
+  padding: 10px 10px 10px 52px;
 }
 .checklist .index .main .icon {
   margin-top: 8px;
@@ -765,6 +764,14 @@ table th.main {
   border-radius: 30px;
   margin-right: 10px;
   font-size: 12px;
+}
+.checklist.SingleLevelCheckList .main,
+.checklist.SingleLevelList .main {
+  padding: 10px 10px 10px 52px;
+}
+.checklist.InteractiveList .main,
+.checklist.SingleLevelList .main {
+  padding-left: 16px;
 }
 .checklist .desc p {
   margin-top: 10px;
@@ -798,10 +805,6 @@ table th.main {
   }
   .checklist .items .index {
     margin-bottom: 32px;
-  }
-  .checklist .items .index ul .main.active .total {
-    left: -10px;
-    padding-left: 10px;
   }
   .checklist .items .active + .accord {
     padding: 16px 16px 0;
@@ -1360,8 +1363,8 @@ table th.main {
   margin-top: 8px;
 }
 .masonry-content .overflow-content article {
-  margin-top: 240px;
-  height: 160px;
+  margin-top: 192px;
+  height: 208px;
   padding: 30px 35px 30px 32px;
 }
 .masonry-content .overflow-content article h3 {

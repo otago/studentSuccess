@@ -5,6 +5,8 @@
 	position: relative;
 
 	&.masonry-basic .tile-c {
+		min-height: 400px;
+
 		h3 {
 			font-size: 1.875rem;
 			line-height: 1.1;
@@ -22,6 +24,10 @@
 			span {
 				top: 3px;
 			}
+		}
+
+		@media screen and (max-width: 640px) {
+			min-height: auto;
 		}
 	}
 
@@ -89,7 +95,7 @@
 
 			p {
 				font-size: 1.125rem;
-				line-height: 1.2222;
+				line-height: 1.3322;
 				margin-top: 2.2rem;
 			}
 
@@ -488,7 +494,7 @@
 		}
 
 		p {
-			color: #fff;
+			color: #fff !important;
 			margin-top: 0.5rem;
 			line-height: 1.375;
 		}
@@ -526,9 +532,9 @@
 
 		article {
 			width: 80%;
-			margin-top: 15rem;
-			height: 10rem;
-			background: rgba(0,0,0,0.25);
+			margin-top: 12rem;
+  			height: 13rem;
+			background: rgba(0,0,0,0.55);
 			float: right;
 
 			.transition-property(background, 0.4s);

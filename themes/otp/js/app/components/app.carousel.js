@@ -82,10 +82,15 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 				}); 
 			}
 
+			var setHeights = function() {
+				$('.slides').each(function(i, elem) {
+					setEqualHeight($(elem).find('li'));
+	            });
+			};
 
 	        $(window).resize(function() {
 	            setTimeout(function() {
-	                setEqualHeight('.slides li');
+	            	setHeights();
 	            }, 120);
 	        });
 
@@ -95,7 +100,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 
 					initSlider($(this));
 
-	        		setEqualHeight('.slides li');
+	        		setHeights();
 				}
 			});
 			
@@ -105,7 +110,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 
 					initSmartSlider($(this));
 
-	       			setEqualHeight('.slides li');
+	       			setHeights();
 				}
 			});
 		};

@@ -48,26 +48,28 @@
 		margin-right: 5%;
 		
 		.main {
-			height: 2.875rem;
-			line-height: 2.875rem;
+			line-height: 1.2;
 			overflow: hidden;
 			background: none;
-			padding: 0 0.625rem;
+			padding: 10px 10px 10px 3.225rem;
 			cursor: pointer;
+			position: relative;
 			
 			.icon {
 				margin-top: 0.5rem;
-				float: left;
+				position: absolute;
+				left: 10px;
 				width: 1.875rem;
 				height: 1.875rem;
 				line-height: 1.875rem;
 				text-align: center;
 				background: @white;
 				color: @white;
-				border: 1px solid @white;
+				border: 1px solid #ccc;
 				border-radius: 1.875rem;
 				margin-right: 0.625rem;
 				font-size: 0.75rem;
+				top: 0;
 				
 				&.icon-dot {
 					border: 0;
@@ -117,6 +119,8 @@
 
 		.total {
 			font-weight: bold;
+			padding-top: 3px;
+			display: block;
 		}
 
 		.ticked {
@@ -137,10 +141,17 @@
 			width: 100%;
 		}
 
+		.main {
+			padding: 10px 10px 10px 3.225rem;
+
+			.total {
+				font-weight: normal;
+			}
+		}
+
 		li.active {
 			color: #404041;
 			background: transparent;
-			padding-left: 0;
 			cursor: default;
 
 			.total {
@@ -151,7 +162,20 @@
 
 	&.InteractiveList,
 	&.SingleLevelList {
-		
+		.main {
+			padding-left: 1rem;
+
+			.icon.arrow {
+				left: -2px;
+				top: -3px;
+			}
+		}
+	}
+
+	&.SingleLevelList {
+		.main {
+			cursor: default;
+		}
 	}
 
 	
@@ -236,16 +260,7 @@
 			}
 			
 			.index ul .main.active {
-				background: transparent;
 				height: auto;
-
-				.total {
-					display: block;
-					position: relative;
-					left: -.625rem;
-					padding-left: .625rem;
-					background: @dark-grey;
-				}
 			}
 
 			.mainlist {

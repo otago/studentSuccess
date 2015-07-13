@@ -123,7 +123,18 @@ if(typeof app === 'undefined') { var app = {}; }
 				return false;
 			});
 
+			var resizePaddingTop = function(self) {
+				// set the padding for the element
+				var $pt = $(self).offset().top - $(self).parents('.index').offset().top;
+		
+				$('.mainlist.'+ $(self).data('for')).css('padding-top', $pt);
+			};
+
 			items.find('.index li.main').click(function() {
+				resizePaddingTop($(this));
+				
+				$(this).addClass('changed');
+
 				toggleItems($(this));
 
 				// scroll the user 
@@ -134,6 +145,12 @@ if(typeof app === 'undefined') { var app = {}; }
 				}
 
 				return false;
+			});
+
+			$(window).resize(function() {
+				$(".index li.main.changed").each(function() {
+					resizePaddingTop($(this));
+				});
 			});
 			
 			items.find('.desc li').each(function(i, elem) {
