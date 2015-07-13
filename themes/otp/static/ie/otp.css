@@ -1138,7 +1138,7 @@ table th.main {
   height: 40px;
   line-height: 40px;
   font-size: 16px;
-  padding: 0 40px 0 16px;
+  padding: 0 40px 0 0px;
 }
 .filter-form .actions button {
   height: 48px;
@@ -1399,6 +1399,9 @@ table th.main {
     padding-left: 16px;
     padding-right: 16px;
   }
+}
+ul.token-input-list-mac {
+  padding: 3px 3px 3px 40px;
 }
 div.token-input-dropdown-mac {
   max-width: 1200px;

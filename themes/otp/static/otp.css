@@ -4312,7 +4312,7 @@ table tr:last-child {
   font-weight: 500;
   margin: 0 auto;
   position: relative;
-  left: -15px;
+  left: -5px;
   padding: 1.5rem 0 1.5rem;
   background: none;
 }
@@ -4657,7 +4657,7 @@ table tr:last-child {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   display: block;
-  padding: 0 2.5rem 0 1rem;
+  padding: 0 2.5rem 0 0rem;
 }
 .filter-form .input input.no-placeholder {
   min-width: 0;
@@ -4691,7 +4691,7 @@ table tr:last-child {
 }
 .filter-form .actions {
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
 }
 .filter-form .actions button {
@@ -4701,7 +4701,7 @@ table tr:last-child {
   width: 3.125rem;
   top: 0px;
   position: absolute;
-  right: 0;
+  left: 0;
   color: #313946;
   opacity: 0.2;
   font-size: 18px;
@@ -5482,7 +5482,7 @@ ul.token-input-list-mac {
   min-height: 1px;
   z-index: 999;
   margin: 0;
-  padding: 3px;
+  padding: 3px 3px 3px 2.5rem;
   background: transparent;
 }
 ul.token-input-list-mac.error {
@@ -5504,7 +5504,7 @@ li.token-input-token-mac span {
 }
 /* TOKENS */
 li.token-input-token-mac {
-  margin: 5px 2px 0 3px;
+  margin: 5px 2px 5px 3px;
   padding: 0 10px;
   background: none;
   background-color: #dee7f8;
@@ -6692,6 +6692,9 @@ figure.element figcaption p {
   padding: 5px 20px;
   background: #08C04E;
   color: #fff;
+}
+.activity_content__answer {
+  display: none;
 }
 footer.main {
   background: #0c79c3;

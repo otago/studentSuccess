@@ -74,7 +74,7 @@ class ActivityPage_Controller extends Page_Controller {
 class ActivityPage_Activity extends DataObject {
 
 	private static $db = array(
-		'Presentation' => "Enum('TextSlide, SingleChoice, DragAndDrop, DragAndDropToMatch, Paragraph, MultiChoice, Replace, ResultsSlide', 'TextSlide')",
+		'Presentation' => "Enum('TextSlide, SingleChoice, ShowContent, DragAndDrop, DragAndDropToMatch, Paragraph, MultiChoice, Replace, ResultsSlide', 'TextSlide')",
 		'Title' => 'Varchar(200)',
 		'Description' => 'HTMLText',
 		'PresentedOptions' => 'Text',
@@ -96,6 +96,10 @@ class ActivityPage_Activity extends DataObject {
 
 	private static $has_one = array(
 		'Activity' => 'ActivityPage'
+	);
+
+	private static $has_many = array(
+		'ContentItems' => 'ActivityPage_Activity_Content'
 	);
 
 	private static $field_labels = array(
@@ -127,14 +131,15 @@ class ActivityPage_Activity extends DataObject {
 
 		$presentation = $fields->dataFieldByName('Presentation');
 		$presentation->setSource(array(
-			'TextSlide' => 'Welcome/Instructions',
-			'DragAndDrop' => 'DragAndDrop',
-			'DragAndDropToMatch' => 'DragAndDropToMatch',
-			'SingleChoice' => 'SingleChoice',
+			'TextSlide' => 'Welcome / Instructions',
+			'DragAndDrop' => 'Drag & Drop',
+			'DragAndDropToMatch' => 'Drag & Drop to Match Text',
+			'SingleChoice' => 'Single Choice',
 			'Paragraph' => 'Paragraph',
-			'MultiChoice' => 'MultiChoice',
-			'Replace' => 'Replace',
-			'ResultsSlide' => 'Results'
+			'MultiChoice' => 'Multi choice list',
+			'Replace' => 'Replace words',
+			'ShowContent' => 'Show content based on selection',
+			'ResultsSlide' => 'Results Slide'
 		));
 
 		$presented = $fields->dataFieldByName('PresentedOptions');
@@ -193,12 +198,33 @@ class ActivityPage_Activity extends DataObject {
 		$matchLabels = $fields->dataFieldByName('DragAndDropToMatchLabels');
 		$matchLabels->displayIf('Presentation')->isEqualTo('DragAndDropToMatch');
 
+		$contentItems = $fields->dataFieldByName('ContentItems');
+		
+		if(!$contentItems) {
+			$fields->addFieldToTab('Root.Main', $contentItems = new DisplayLogicWrapper(
+				new ReadonlyField('ContentItems', 'You can add content options once you save.')
+			));
+
+			$contentItems->displayIf('Presentation')->isEqualTo('ShowContent');
+		} else {
+			$fields->removeByName('ContentItems');
+			$fields->addFieldToTab('Root.Main', $group = new DisplayLogicWrapper(
+				$contentItems
+			));
+
+			$group->displayIf('Presentation')->isEqualTo('ShowContent');
+		}
+
 		return $fields;
 	}
 
 	public function getActivityOptions() {
 		$options = explode("\n", $this->PresentedOptions);
 		$output = new ArrayList();
+
+		if($this->Presentation == "ShowContent") {
+			return $this->ContentItems();
+		}
 
 		foreach($options as $o) {
 			$o = trim($o);
@@ -254,4 +280,16 @@ class ActivityPage_Activity extends DataObject {
 
 		return $output;
 	}
+}
+
+class ActivityPage_Activity_Content	extends DataObject {
+
+	private static $db = array(
+		'Title' => 'Varchar(255)',
+		'Content' => 'HTMLText'
+	);
+
+	private static $has_one = array(
+		'ActivityStep' => 'ActivityPage_Activity'
+	);
 }

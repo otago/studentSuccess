@@ -3,7 +3,7 @@
 class GlossaryType extends DataObject {
 
 	private static $db = array(
-		'Title'			=> 'Varchar',
+		'Title'			=> 'Varchar(255)',
 		'SortOrder'		=> 'Int'
 	);
 

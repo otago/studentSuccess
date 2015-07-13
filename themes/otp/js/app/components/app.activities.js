@@ -8,6 +8,17 @@ if(typeof app === 'undefined') { var app = {}; }
 		};
 		
 		var init = function () {
+			$(".activity_text__ShowContent li").on('click', function(e) {
+				var id = $(this).data('activity-value');
+
+				$(this).parents('.activity_content').fadeOut(function() {
+					$('.activity_content__answer').each(function(i, elem) {
+						if($(elem).data('answer-id') == id) {
+							$(elem).fadeIn();
+						}
+					});
+				});
+			});
 
 			$(".activity_navigation .btn").on('click', function(e) {
 				
@@ -189,8 +200,6 @@ if(typeof app === 'undefined') { var app = {}; }
 				step.data('attempt', attempt);
 
 				if(options.length > 1) {
-			
-					var answers = step.find('.activity_answers li');
 				
 					// validate the options based on the the type of field
 					// the user has created

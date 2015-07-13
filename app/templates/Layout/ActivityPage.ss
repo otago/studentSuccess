@@ -39,27 +39,37 @@
                 <article class="activity_individual  activity_{$Presentation} <% if First %>current<% end_if %>" data-activity-id="$ID">
                     <h3>$Title</h3>
 
-                    <% if Description %>
-                        <div class="activity_description">
-                            $Description
-                        </div>
-                    <% end_if %>
+                    <div class="activity_content">
+                        <% if Description %>
+                            <div class="activity_description">
+                                $Description
+                            </div>
+                        <% end_if %>
 
-                    <% if ActivityOptions.Count > 0 %>
-                        <div class="activity_text activity_text__{$Presentation}">
-                            <% if Presentation == "DragAndDropToMatch" %>
-                                <ul class="labels">
-                                    <% loop MatchLabels %>
-                                        <li>$Title</li>
-                                    <% end_loop %>
+                        <% if ActivityOptions.Count > 0 %>
+                            <div class="activity_text activity_text__{$Presentation}">
+                                <% if Presentation == "DragAndDropToMatch" %>
+                                    <ul class="labels">
+                                        <% loop MatchLabels %>
+                                            <li>$Title</li>
+                                        <% end_loop %>
+                                    </ul>
+                                <% end_if %>
+                                <ul>
+                                 <% loop ActivityOptions %>
+                                     <li data-activity-value="$ID" <% if Up.Presentation == Replace && IsReplaceable %>class="replaceable" contenteditable=true<% end_if %>>$Title</li>
+                                 <% end_loop %>
                                 </ul>
-                            <% end_if %>
-                            <ul>
-                             <% loop ActivityOptions %>
-                                 <li <% if Up.Presentation == Replace && IsReplaceable %>class="replaceable" contenteditable=true<% end_if %>>$Title</li>
-                             <% end_loop %>
-                            </ul>
-                        </div>
+                            </div>
+                        <% end_if %>
+                    </div>
+
+                    <% if Presentation == "ShowContent" %>
+                        <% loop ActivityOptions %>
+                            <div class="activity_content__answer" data-answer-id="$ID">
+                                $Content
+                            </div>
+                        <% end_loop %>
                     <% end_if %>
 
                     <div class="activity_success">
@@ -92,4 +102,4 @@
     </div>
 </div>
 
-<% include WasThisHelpful %>
+<% include WasThisHelpful %>   

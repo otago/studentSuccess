@@ -3,7 +3,7 @@
 class GlossaryItem extends DataObject {
 
 	private static $db = array(
-		'Title'				=> 'Varchar',
+		'Title'				=> 'Varchar(255)',
 		'ShowContactInfo'	=> 'Boolean',
 		'Content'			=> 'HTMLText',
 		'SortOrder'			=> 'Int'
