@@ -686,6 +686,9 @@ table th.main {
 .hear-from-others .component-alignment.boxed-element {
   padding-top: 29px;
 }
+.hear-from-others .component-alignment.wide-boxed-element {
+  max-width: 1000px;
+}
 .hear-from-others h2 {
   font-size: 50px;
   line-height: 50px;

@@ -3444,6 +3444,9 @@ table tr:last-child {
 .hear-from-others .component-alignment.boxed-element {
   padding-top: 1.8rem;
 }
+.hear-from-others .component-alignment.wide-boxed-element {
+  max-width: 62.5rem;
+}
 .hear-from-others h2 {
   color: #ef563c;
   text-align: center;
