@@ -2489,7 +2489,7 @@ table tr:last-child {
 .links-content .links-block .left {
   float: left;
   width: 50%;
-  padding: 4.25rem 2.25rem 4.25rem 0;
+  padding: 2.5rem 2.25rem 2.5rem 0;
 }
 .links-content .links-block .left h3 {
   font-size: 1.25rem;
@@ -2543,8 +2543,10 @@ table tr:last-child {
   width: 100%;
   min-height: 100%;
 }
-.links-content + .left-content {
-  margin-top: 4rem;
+.links-content + .left-content,
+.links-content + .left-content-wrapper {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
 }
 @media screen and (max-width: 780px) {
   .links-content {
@@ -2812,7 +2814,7 @@ table tr:last-child {
 }
 .main nav .level-2 li {
   margin-right: 1.75rem;
-  height: 3.9rem;
+  height: 4rem;
   position: relative;
 }
 .main nav .level-2 li a {
@@ -3104,7 +3106,7 @@ table tr:last-child {
 .cta .left {
   float: left;
   width: 65%;
-  padding: 4.25rem 0;
+  padding: 2.5rem 0;
 }
 @media screen and (max-width: 780px) {
   .cta .left {
@@ -4852,7 +4854,7 @@ table tr:last-child {
   font-size: 1.875rem;
   line-height: 1.1;
   padding-top: 2rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 .masonry-content.masonry-basic .tile-c h3 span {
   top: 2.2rem;
@@ -5639,6 +5641,14 @@ div.token-input-dropdown-mac ul li.token-input-selected-dropdown-item-mac.odd sp
   font-size: 1.175rem;
   line-height: 1.8rem;
 }
+.related-topics .masonry-content .contact-tile,
+.related-topics .masonry-content .contact-tile:nth-child(6n+1),
+.related-topics .masonry-content .contact-tile:nth-child(6n+2),
+.related-topics .masonry-content .contact-tile:nth-child(6n+3),
+.related-topics .masonry-content .contact-tile:nth-child(6n+4),
+.related-topics .masonry-content .contact-tile:nth-child(6n+5) {
+  height: 400px;
+}
 .chosen-container-single {
   width: 100% !important;
 }
@@ -6306,6 +6316,11 @@ figure.element figcaption p {
 }
 .fancybox-outer .activity {
   margin-bottom: 0;
+}
+.carousel + .left-content,
+.carousel + .left-content-wrapper {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 @media screen and (max-width: 780px) {
   .hide_on_mobile {

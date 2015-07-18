@@ -394,7 +394,7 @@ table th.main {
   font-size: 32px;
 }
 .links-content .links-block .left {
-  padding: 68px 36px 68px 0;
+  padding: 40px 36px 40px 0;
 }
 .links-content .links-block .left h3 {
   font-size: 20px;
@@ -411,8 +411,10 @@ table th.main {
   font-size: 16px;
   line-height: 24px;
 }
-.links-content + .left-content {
-  margin-top: 64px;
+.links-content + .left-content,
+.links-content + .left-content-wrapper {
+  margin-top: 48px;
+  margin-bottom: 16px;
 }
 @media screen and (max-width: 780px) {
   .links-content .links-block .left {
@@ -492,7 +494,7 @@ table th.main {
 }
 .main nav .level-2 li {
   margin-right: 28px;
-  height: 62px;
+  height: 64px;
 }
 .main nav .level-2 li a {
   line-height: 34px;
@@ -584,7 +586,7 @@ table th.main {
   }
 }
 .cta .left {
-  padding: 68px 0;
+  padding: 40px 0;
 }
 .cta picture {
   height: 386px;
@@ -1647,6 +1649,11 @@ figure.element figcaption {
 }
 .sidebar-help p.lines a {
   margin-bottom: 22px;
+}
+.carousel + .left-content,
+.carousel + .left-content-wrapper {
+  margin-top: 32px;
+  margin-bottom: 16px;
 }
 .was-this-helpful {
   margin: 0 auto 32px;
