@@ -172,6 +172,26 @@
 		}
 	}
 
+	&.InteractiveList {
+		.active {
+			.total {
+				padding-right: 30px;
+				position: relative;
+
+				&:after {
+					content: " ";
+					background: url(../images/icons/head-arrow-green.svg) no-repeat;
+					width: 20px;
+					height: 14px;
+					background-size: 20px 14px;
+					position: absolute;
+					top: 8px;
+					right: 0;
+				}
+			}
+		}
+	}
+
 	&.SingleLevelList {
 		.main {
 			cursor: default;

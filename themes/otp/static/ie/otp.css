@@ -546,7 +546,7 @@ table th.main {
   height: 224px;
 }
 .hero .contents {
-  padding: 140px 102px 0;
+  padding: 172px 102px 0;
   max-width: 1400px;
 }
 .hero .contents h2 {
@@ -569,6 +569,8 @@ table th.main {
   .hero .contents {
     padding: 140px 28px 0;
   }
+}
+@media screen and (max-width: 680px) {
   .hero .contents h2 {
     font-size: 38px;
     line-height: 38px;
@@ -991,9 +993,6 @@ table th.main {
 }
 .tab-section .content-block .itemList {
   border-top: 1px solid #d7d7d6;
-}
-.tab-section .content-block .itemList .glossary-letter {
-  border-bottom: 1px solid #d7d7d6;
 }
 .tab-section .content-block .itemList .checkable h2 a {
   padding-left: 48px;

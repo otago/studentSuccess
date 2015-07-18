@@ -2989,21 +2989,22 @@ table tr:last-child {
 .hero .grad {
   position: relative;
   z-index: 2;
+  height: 100%;
   min-height: 100%;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0.1+0,0.35+100 */
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.35) 100%);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.5+0,0+100 */
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, rgba(0, 0, 0, 0.35)));
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, 0.5)), color-stop(100%, rgba(0, 0, 0, 0)));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.35) 100%);
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.35) 100%);
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.35) 100%);
+  background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
   /* IE10+ */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.35) 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1a000000', endColorstr='#59000000', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
   /* IE6-9 */
 }
 .hero .contents {
@@ -3012,7 +3013,7 @@ table tr:last-child {
   left: 0;
   z-index: 2;
   color: #ffffff;
-  padding: 8.750rem 6.375rem 0;
+  padding: 10.750rem 6.375rem 0;
   margin: 0 auto;
   max-width: 87.50rem;
 }
@@ -3020,6 +3021,7 @@ table tr:last-child {
 .hero .contents p {
   margin: 0;
   max-width: 500px;
+  text-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
 }
 .hero .contents h2 {
   font-weight: 300;
@@ -3057,6 +3059,8 @@ table tr:last-child {
   .hero .contents {
     padding: 8.750rem 1.75rem 0;
   }
+}
+@media screen and (max-width: 680px) {
   .hero .contents h2 {
     font-weight: 300;
     font-size: 2.375rem;
@@ -3070,6 +3074,11 @@ table tr:last-child {
   }
   .hero .contents p br {
     display: none;
+  }
+}
+@media screen and (max-width: 680px) {
+  .hero {
+    height: auto;
   }
 }
 @media screen and (max-width: 480px) {
@@ -3747,6 +3756,20 @@ table tr:last-child {
   left: -2px;
   top: -3px;
 }
+.checklist.InteractiveList .active .total {
+  padding-right: 30px;
+  position: relative;
+}
+.checklist.InteractiveList .active .total:after {
+  content: " ";
+  background: url(../images/icons/head-arrow-green.svg) no-repeat;
+  width: 20px;
+  height: 14px;
+  background-size: 20px 14px;
+  position: absolute;
+  top: 8px;
+  right: 0;
+}
 .checklist.SingleLevelList .main {
   cursor: default;
 }
@@ -4294,7 +4317,7 @@ table tr:last-child {
   border-top: 0.063rem solid #d7d7d6;
 }
 .tab-section .content-block .itemList .glossary-letter {
-  border-bottom: 0.063rem solid #d7d7d6;
+  border-bottom: 1px solid #d7d7d6;
 }
 .tab-section .content-block .itemList .glossary-letter:hover h2,
 .tab-section .content-block .itemList .glossary-letter:focus h2 {
@@ -6139,7 +6162,7 @@ h5 a {
 }
 .testimony-content.right-content {
   color: #0c79c3;
-  border-top: 1px solid #00bad6;
+  border-top: 1px solid #0c79c3;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }

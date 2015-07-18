@@ -5,7 +5,6 @@
 	background: @blue;
 	height: 35.5rem;
 	overflow: hidden;
-	
 
 	&.fixed {
 		position: fixed;
@@ -46,16 +45,16 @@
 	.grad {
 		position: relative;
 		z-index: 2;
+		height: 100%;
 		min-height: 100%;
-			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0.1+0,0.35+100 */
-		background: -moz-linear-gradient(top,  rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.1)), color-stop(100%,rgba(0,0,0,0.35))); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top,  rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.35) 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top,  rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.35) 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top,  rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.35) 100%); /* IE10+ */
-		background: linear-gradient(to bottom,  rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.35) 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a000000', endColorstr='#59000000',GradientType=0 ); /* IE6-9 */
-
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.5+0,0+100 */
+background: -moz-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.5)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+background: linear-gradient(to right, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
 	}
 
 	.contents {
@@ -64,13 +63,14 @@
 		left: 0;
 		z-index: 2;
 		color: @white;
-		padding: 8.750rem 6.375rem 0;
+		padding: 10.750rem 6.375rem 0;
 		margin: 0 auto;
 		max-width: 87.50rem;
 		
 		h2, p {
 			margin: 0;
 			max-width: 500px;
+			text-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
 		}
 		
 		h2 {
@@ -103,9 +103,11 @@
 			};
 		}
 		
-		@media screen and (max-width: 980px){
+		@media screen and (max-width: 980px) {
 			padding: 8.750rem 1.75rem 0;
-			
+		}
+
+		@media screen and (max-width: 680px) {	
 			h2 {
 				font-weight: 300;
 				font-size: 2.375rem;
@@ -123,9 +125,11 @@
 				}
 			}
 		}
-		
 	}
 	
+	@media screen and (max-width: 680px) {	
+		height: auto;
+	}
 
 	@media screen and (max-width: 480px) {
 		&.mini {
