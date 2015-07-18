@@ -37,7 +37,12 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
                     }
                 });
             } else {
-                window.location.href = $(this).attr('href');
+                if($(this).data('target') == '_blank') {
+                    var win = window.open($(this).attr('href'), '_blank');
+                    win.focus();
+                } else {
+                    window.location.href = $(this).attr('href');
+                }
             }
         });
 
