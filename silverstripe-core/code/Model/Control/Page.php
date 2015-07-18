@@ -15,7 +15,8 @@ class Page extends SiteTree {
 		'DropDownCol2'			=> 'HTMLText',
 		'DropDownCol3'			=> 'HTMLText',
 		'DropDownLink'			=> 'Varchar(200)',
-
+		'DropDownImageText'		=> 'Varchar(200)',
+		'DropDownTarget'		=> 'Varchar',
 		'HelpfulCounterYes'		=> 'Int',
 		'HelpfulCounterNo'		=> 'Int',
 
@@ -26,6 +27,7 @@ class Page extends SiteTree {
 
 	private static $has_one = array(
 		'DropDownImage'			=> 'Image',
+		'DropDownPage'			=> 'Page',
 		'HeroImage'				=> 'Image',
 	);
 
@@ -76,7 +78,13 @@ class Page extends SiteTree {
 			HtmlEditorField::create('DropDownCol2')->setTitle('Column 2 Content')->setRows(5),
 			HtmlEditorField::create('DropDownCol3')->setTitle('Column 3 Content')->setRows(5),
 			UploadField::create('DropDownImage'),
-			TextField::create('DropDownLink')
+			TextField::create('DropDownImageText'),
+			DropdownField::create('DropDownTarget')->setSource(array(
+				'_self' => 'Open in same window',
+				'_blank' => 'Open in a new window'
+			)),
+			TreeDropdownField::create('DropDownPageID', 'Link to page', 'Page'),
+			TextField::create('DropDownLink', '. or external link')
 		));
 
 		if($elementalGridField = $fields->dataFieldByName('ElementArea')){

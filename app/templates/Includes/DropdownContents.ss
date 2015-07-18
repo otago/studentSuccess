@@ -12,9 +12,13 @@
                 </div>
                 <% if $DropDownImage %>
                 <div class='right'>
-                    <% if $DropDownLink %><a href='$DropDownLink'><% end_if %>
+                    <% if $DropDownLink || DropDownPage %><a href='<% if DropDownPage %>$DropDownPage.Link<% else %>$DropDownLink<% end_if %>' <% if DropDownTarget %>target="$DropDownTarget"<% end_if %>><% end_if %>
                         {$DropDownImage.Add(298, 395)}
-                    <% if $DropDownLink %></a><% end_if %>
+                        <% if DropDownImageText %><span class="dropdowntext">
+                        $DropDownImageText
+                        </span>
+                        <% end_if %>
+                    <% if $DropDownLink || DropDownPage %></a><% end_if %>
                 </div>
                 <% end_if %>
 

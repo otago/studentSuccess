@@ -1,5 +1,5 @@
 <% if $Link %>
-	<a class='{$Size} col career-handbook tile' href='{$Link}' target="{$Target}" >
+	<a class='{$Size} col career-handbook tile' href='{$Link}' target="{$Target}" <% if ForceDownload %>download="$Link"<% end_if %>>
 <% else %>
 	<section class='{$Size} col career-handbook tile'>
 <% end_if %>

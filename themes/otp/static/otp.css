@@ -5375,6 +5375,9 @@ table tr:last-child {
   position: relative;
   background-size: cover;
 }
+.masonry-content .image-tile h3 {
+  color: #fff !important;
+}
 .masonry-content .image-tile a {
   font-size: 0;
   line-height: 0;
@@ -6936,6 +6939,30 @@ footer.main .container.addresses address.middle {
   .drop-menu {
     padding: 1.5rem 0 1.875rem;
   }
+}
+.drop-menu .right {
+  position: relative;
+}
+.drop-menu .right a:after {
+  content: " ";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 32px;
+  width: 32px;
+  background: url(../images/icons/external-link-white.svg) no-repeat;
+  background-size: 32px 32px;
+}
+.drop-menu .dropdowntext {
+  position: absolute;
+  font-size: 18px;
+  line-height: 25px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px 20px 20px;
+  bottom: 0;
+  width: 100%;
+  left: 0;
 }
 .drop-menu .container {
   width: 90%;

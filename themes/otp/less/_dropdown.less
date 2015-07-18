@@ -8,6 +8,32 @@
 		padding: 1.5rem 0 1.875rem;
 	}
 	
+	.right {
+		position: relative;
+
+		a:after {
+			content: " ";
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			height: 32px;
+			width: 32px;
+			background: url(../images/icons/external-link-white.svg) no-repeat;
+			background-size: 32px 32px;
+		}
+	}
+
+	.dropdowntext {
+		position: absolute;
+		font-size: 18px;
+		line-height: 25px;
+		color: #fff;
+		background: rgba(0, 0, 0, 0.5);
+		padding: 30px 20px 20px;
+		bottom: 0;
+		width: 100%;
+		left: 0;
+	}
 	.container {
 		width: 90%;
 		max-width: 75rem;
@@ -89,7 +115,7 @@
 			
 			
 		}
-		
+
 		@media screen and (max-width: 720px) {
 			.left {
 				width: 100%;

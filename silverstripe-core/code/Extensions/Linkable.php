@@ -6,7 +6,8 @@ class Linkable extends DataExtension {
 		'LinkType'              => 'Enum("None, Internal, External", "None")',
 		'InternalLinkID'        => 'Int',
 		'ExternalLink'          => 'Varchar(300)',
-		'Target'				=> 'Enum("_self,_blank,_modal")'
+		'Target'				=> 'Enum("_self,_blank,_modal")',
+		'ForceDownload' 		=> 'Boolean'
 	);
 
 	public function updateCMSFields(FieldList $fields){
@@ -17,7 +18,8 @@ class Linkable extends DataExtension {
 			'LinkType',
 			'InternalLinkID',
 			'ExternalLink',
-			'Target'
+			'Target',
+			'ForceDownload'
 		));
 
 		$fields->addFieldsToTab('Root.Main', array(
@@ -33,7 +35,8 @@ class Linkable extends DataExtension {
 				'_self' => 'Open in same window',
 				'_blank' => 'Open in a new window',
 				'_modal' => 'Modal Window'
-			))
+			)),
+			CheckboxField::create('ForceDownload')
 		));
 
 	}
