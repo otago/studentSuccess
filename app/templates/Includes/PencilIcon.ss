@@ -1,22 +1,9 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="19.6px" height="19.6px" viewBox="0 0 19.6 19.6" enable-background="new 0 0 19.6 19.6" xml:space="preserve">
-<g opacity="0.7">
-	<g>
-		<defs>
-			<rect id="SVGID_1_" x="0.021" y="0.035" width="19.558" height="19.529"/>
-		</defs>
-		<clipPath id="SVGID_2_">
-			<use xlink:href="#SVGID_1_"  overflow="visible"/>
-		</clipPath>
-
-			<rect x="12.777" y="2.471" transform="matrix(0.7072 0.707 -0.707 0.7072 7.3276 -10.0409)" clip-path="url(#SVGID_2_)" fill="none" stroke="#333437" stroke-miterlimit="10" width="6.018" height="2.71"/>
-		<polyline clip-path="url(#SVGID_2_)" fill="none" stroke-miterlimit="10" points="11.255,4.103 3.404,11.955
-			7.66,16.209 15.511,8.357 		"/>
-		<polyline clip-path="url(#SVGID_2_)" fill="none" stroke-miterlimit="10" points="11.255,4.103 3.404,11.955
-			0.872,18.721 7.66,16.209 15.511,8.357 		"/>
-
-			<line clip-path="url(#SVGID_2_)" fill="none" stroke-miterlimit="10" x1="5.573" y1="14.123" x2="13.425" y2="6.271"/>
-		<circle clip-path="url(#SVGID_2_)" fill="none" stroke-miterlimit="10" cx="2.021" cy="17.596" r="0.914"/>
-	</g>
-</g>
+	 viewBox="-255.1 441.4 100 99.6" enable-background="new -255.1 441.4 100 99.6" xml:space="preserve">
+<path fill="#ffffff" d="M-175,474.2c1.2,3.4,0.9,7-0.7,9.2l-49.5,49.5l-29.4,8c-0.4,0.1-0.6,0-0.4-0.4l8.3-29.1l49.5-49.5c2.2-1.8,5.8-1.9,9.2-0.6
+	l-54.2,54.2l-0.1,0.1l-3.4,10.9c0,0,1.6,0.6,3.1,2.1c1.5,1.5,1.9,3.3,1.9,3.3l11.2-3.4L-175,474.2z"/>
+<path fill="#ffffff" d="M-234,515.9l51.6-51.6c0.9,0.4,1.8,1.2,2.4,1.9c0.9,0.7,1.5,1.5,2.1,2.4l-51.7,51.6l-4.2-0.1L-234,515.9z"/>
+<path fill="#ffffff" d="M-160,467.6l-9.5,9.7c0,0,4.6-7.2-5.1-16.5c-8.5-8.5-16.5-4.8-16.5-4.8l9.7-9.7c6-6.1,15.6-6.9,21.9-0.7
+	C-153.1,452-154,461.8-160,467.6z"/>
 </svg>

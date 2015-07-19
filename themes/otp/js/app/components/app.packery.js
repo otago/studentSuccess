@@ -78,6 +78,57 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 			});
 		};
 
+        var scheme = [
+            'red',
+            'black',
+            'green',
+            'yellow',
+            'blue',
+            'white',
+            'mint'
+        ];
+
+        var resetColors = function() {
+            var v = 0;
+
+            $('.tile-c').each(function(i, elem) {
+                if($(elem).hasClass('image-tile') || $(elem).hasClass('list-menu')) {
+                    return;
+                }
+
+                $(elem)
+                    .removeClass('scheme_red scheme_black scheme_blue scheme_green scheme_yellow scheme_white scheme_mint');
+                
+                if($(elem).is(":visible")) {
+                    $(elem).attr('data-v', v);
+                    $(elem).addClass('scheme_'+ scheme[v % 7]);
+
+                    v++;
+                }
+            });
+        };
+
+        function onArrange( event, filteredItems) {
+            var v = 0;
+
+            $.each(filteredItems, function(i, elem) {
+                var element = $(elem).get(0).element;
+
+                if($(element).hasClass('list-menu') || $(element).hasClass('contact-tile') || $(element).hasClass('image-tile')) {
+                    return;
+                }
+
+                $(element)
+                    .removeClass('scheme_red scheme_black scheme_blue scheme_green scheme_yellow scheme_white scheme_mint');
+
+                $(element).addClass('scheme_'+ scheme[v % 7]);
+
+                v++;
+            });
+        }
+
+
+        resetColors();
 
         var doIsotopeFilters = function(item, form) {
             var configs = isotopeconfigs;
@@ -123,7 +174,10 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 
             configs.sortBy = sort;
             configs.sortAscending = sortAscending;
-            item.isotope(configs);
+            var $pack = item.isotope(configs);
+
+            // bind event listener
+            $pack.on( 'layoutComplete', onArrange );
         };
 
         /**
@@ -198,6 +252,8 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
             else{
                 item.packery(itemConfigs);
             }
+
+            resetColors();
         };
 		
 		var can = function(){
@@ -271,7 +327,11 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 
                 configs.sortBy = sort;
                 configs.sortAscending = sortAscending;
-                $(this).parents('.packery').isotope(configs);
+
+                var $pack = $(this).parents('.packery').isotope(configs);
+
+                // bind event listener
+                $pack.on( 'layoutComplete', onArrange );
             });
 		};
 		
@@ -283,4 +343,4 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 	})();
 	
 	
-})(jQuery);
+})(jQuery); 

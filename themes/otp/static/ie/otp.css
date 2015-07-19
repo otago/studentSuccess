@@ -1210,6 +1210,11 @@ table th.main {
   font-size: 20px;
   height: 340px;
 }
+@media screen and (min-width: 1120px) {
+  .masonry-content .tile-c h3 {
+    font-size: 22px;
+  }
+}
 .masonry-content .tile-c h3 span {
   height: 32px;
   line-height: 22px;
@@ -1229,138 +1234,84 @@ table th.main {
 .masonry-content .tile-c .separator-link {
   padding-top: 12px;
   font-size: 14px;
+  line-height: 16px;
 }
 .masonry-content .tile-c.half {
   padding: 20px 16px;
 }
 .masonry-content .tile-c.half h3 {
-  height: 161px;
+  height: 162px;
 }
 .masonry-content .tile-c.half .height {
-  height: 161px;
+  height: 162px;
 }
-.masonry-content .tile-c.list-menu {
+.masonry-content .list-menu {
   padding: 42px 32px 44px;
 }
-.masonry-content .tile-c.list-menu .padder {
+.masonry-content .list-menu .padder {
   height: 540px;
 }
-.masonry-content .tile-c.list-menu.has-padder .padder {
+.masonry-content .list-menu.has-padder .padder {
   padding: 42px 32px 44px;
 }
-.masonry-content .tile-c.list-menu h3 {
+.masonry-content .list-menu h3 {
   font-size: 18px;
   line-height: 20px;
   margin: 16px 0 24px;
 }
-.masonry-content .tile-c.list-menu li a {
+.masonry-content .list-menu li a {
   line-height: 28px;
   padding: 16px 25px 16px 0px;
   font-size: 19px;
 }
 @media screen and (max-width: 980px) {
-  .masonry-content .tile-c.list-menu li a {
+  .masonry-content .list-menu li a {
     font-size: 16px;
     line-height: 24px;
     padding: 16px 0;
   }
 }
-.masonry-content .contact-tile,
-.masonry-content .contact-tile:nth-child(6n+1),
-.masonry-content .contact-tile:nth-child(6n+2),
-.masonry-content .contact-tile:nth-child(6n+3),
-.masonry-content .contact-tile:nth-child(6n+4),
-.masonry-content .contact-tile:nth-child(6n+5) {
+.masonry-content .contact-tile {
   font-size: 18px;
   line-height: 24px;
   padding: 32px 46px 44px 32px;
   height: 540px;
 }
-.masonry-content .contact-tile.basic,
-.masonry-content .contact-tile:nth-child(6n+1).basic,
-.masonry-content .contact-tile:nth-child(6n+2).basic,
-.masonry-content .contact-tile:nth-child(6n+3).basic,
-.masonry-content .contact-tile:nth-child(6n+4).basic,
-.masonry-content .contact-tile:nth-child(6n+5).basic {
+.masonry-content .contact-tile.basic {
   height: 400px;
 }
 @media screen and (max-width: 980px) {
-  .masonry-content .contact-tile,
-  .masonry-content .contact-tile:nth-child(6n+1),
-  .masonry-content .contact-tile:nth-child(6n+2),
-  .masonry-content .contact-tile:nth-child(6n+3),
-  .masonry-content .contact-tile:nth-child(6n+4),
-  .masonry-content .contact-tile:nth-child(6n+5) {
+  .masonry-content .contact-tile {
     padding: 30px 32px 30px 32px;
   }
 }
-.masonry-content .contact-tile h3,
-.masonry-content .contact-tile:nth-child(6n+1) h3,
-.masonry-content .contact-tile:nth-child(6n+2) h3,
-.masonry-content .contact-tile:nth-child(6n+3) h3,
-.masonry-content .contact-tile:nth-child(6n+4) h3,
-.masonry-content .contact-tile:nth-child(6n+5) h3 {
+.masonry-content .contact-tile h3 {
   font-size: 40px;
 }
 @media screen and (max-width: 980px) {
-  .masonry-content .contact-tile h3,
-  .masonry-content .contact-tile:nth-child(6n+1) h3,
-  .masonry-content .contact-tile:nth-child(6n+2) h3,
-  .masonry-content .contact-tile:nth-child(6n+3) h3,
-  .masonry-content .contact-tile:nth-child(6n+4) h3,
-  .masonry-content .contact-tile:nth-child(6n+5) h3 {
+  .masonry-content .contact-tile h3 {
     font-size: 30px;
     line-height: 40px;
   }
 }
-.masonry-content .contact-tile p,
-.masonry-content .contact-tile:nth-child(6n+1) p,
-.masonry-content .contact-tile:nth-child(6n+2) p,
-.masonry-content .contact-tile:nth-child(6n+3) p,
-.masonry-content .contact-tile:nth-child(6n+4) p,
-.masonry-content .contact-tile:nth-child(6n+5) p {
+.masonry-content .contact-tile p {
   font-size: 18px;
 }
-.masonry-content .contact-tile p.contact,
-.masonry-content .contact-tile:nth-child(6n+1) p.contact,
-.masonry-content .contact-tile:nth-child(6n+2) p.contact,
-.masonry-content .contact-tile:nth-child(6n+3) p.contact,
-.masonry-content .contact-tile:nth-child(6n+4) p.contact,
-.masonry-content .contact-tile:nth-child(6n+5) p.contact {
+.masonry-content .contact-tile p.contact {
   margin-top: 38px;
 }
 @media screen and (max-width: 980px) {
-  .masonry-content .contact-tile p.contact,
-  .masonry-content .contact-tile:nth-child(6n+1) p.contact,
-  .masonry-content .contact-tile:nth-child(6n+2) p.contact,
-  .masonry-content .contact-tile:nth-child(6n+3) p.contact,
-  .masonry-content .contact-tile:nth-child(6n+4) p.contact,
-  .masonry-content .contact-tile:nth-child(6n+5) p.contact {
+  .masonry-content .contact-tile p.contact {
     margin-top: 32px;
   }
 }
-.masonry-content .contact-tile p.lines,
-.masonry-content .contact-tile:nth-child(6n+1) p.lines,
-.masonry-content .contact-tile:nth-child(6n+2) p.lines,
-.masonry-content .contact-tile:nth-child(6n+3) p.lines,
-.masonry-content .contact-tile:nth-child(6n+4) p.lines,
-.masonry-content .contact-tile:nth-child(6n+5) p.lines {
+.masonry-content .contact-tile p.lines {
   margin-top: 22px;
 }
-.masonry-content .contact-tile p.lines a,
-.masonry-content .contact-tile:nth-child(6n+1) p.lines a,
-.masonry-content .contact-tile:nth-child(6n+2) p.lines a,
-.masonry-content .contact-tile:nth-child(6n+3) p.lines a,
-.masonry-content .contact-tile:nth-child(6n+4) p.lines a,
-.masonry-content .contact-tile:nth-child(6n+5) p.lines a {
+.masonry-content .contact-tile p.lines a {
   margin-bottom: 11px;
 }
-.masonry-content .contact-tile p.lines a span,
-.masonry-content .contact-tile:nth-child(6n+1) p.lines a span,
-.masonry-content .contact-tile:nth-child(6n+2) p.lines a span,
-.masonry-content .contact-tile:nth-child(6n+3) p.lines a span,
-.masonry-content .contact-tile:nth-child(6n+4) p.lines a span,
-.masonry-content .contact-tile:nth-child(6n+5) p.lines a span {
+.masonry-content .contact-tile p.lines a span {
   margin-right: 16px;
 }
 .masonry-content .image-tile p {

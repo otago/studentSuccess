@@ -39,6 +39,7 @@
 		float: left;
 		color: @white;
 		background: @light-green;
+		min-height: 270px;
 		.transition-property(background, 0.2s);
 		padding: 1.875rem 2rem 1.875rem 2.000rem;
 		word-wrap: break-word;
@@ -72,6 +73,10 @@
 			font-weight: 500;
 			height: 21.25rem;
 			position: relative;
+
+			@media screen and (min-width: 1120px) {
+				font-size: 1.4rem;
+			}
 
             span {
                 display: block;
@@ -114,18 +119,15 @@
 			padding-top: 0.75rem;
 			border-top: 1px solid rgba(255, 255, 255, 0.4);
 			font-size: 0.875rem;
+			line-height: 1rem;
 			margin-top: 2em;
 			
 			svg {
 				position: relative;
 				top: 6px;
 				margin-right: 4px;
-				line,
-				polyline,
-				circle,
-				rect {
-					stroke: #fff;
-				}
+				width: 18px;
+				height: 18px;
 			}
 		}
 		
@@ -137,7 +139,7 @@
 			color: #fff;
 		}
 		
-        &:nth-child(6n + 1) {
+        &.scheme_green {
             background-color: @light-green;
 
             &:hover,
@@ -145,7 +147,17 @@
                 background-color: darken(@light-green, 5%);
             }
         }
-		&:nth-child(6n + 2){
+
+        &.scheme_mint {
+            background-color: #2ABB9B;
+
+            &:hover,
+            &:focus {
+                background-color: darken(#2ABB9B, 10%);
+            }
+        }
+
+		&.scheme_blue {
 			background-color: @lighter-blue;
 
 			&:hover,
@@ -154,7 +166,7 @@
 			}
 		}
 
-		&:nth-child(6n + 3) {
+		&.scheme_yellow {
 			background-color: @yellow;
 
 			h3, p {
@@ -181,7 +193,7 @@
             }
 		}
 
-		&:nth-child(6n + 4) {
+		&.scheme_red {
 			background-color: @red;
 
             &:hover,
@@ -190,7 +202,7 @@
             }
 		}
 
-		&:nth-child(6n + 5) {
+		&.scheme_black {
 			background-color: @darker-grey;
 
             &:hover,
@@ -199,7 +211,7 @@
             }
 		}
 
-		&:nth-child(6n + 6) {
+		&.scheme_white {
 			background-color: @ash;
 
 			h3, p {
@@ -222,7 +234,30 @@
                  background-color: darken(@ash, 5%);
             }
 		}
+		
+		&.scheme_mint {
+			background-color: #2ABB9B;
 
+            &:hover,
+            &:focus {
+                 background-color: darken(#2ABB9B, 10%);
+            }
+
+			h3, p {
+				color: #fff;
+			}
+
+			.separator-link {
+				svg {
+					line,
+					polyline,
+					circle,
+					rect {
+						stroke: #fff;
+					}
+				}
+			}
+		}
 
         //
         // width holder
@@ -238,11 +273,11 @@
 			
 			h3 {
 				line-height: 1.3;
-				height: 10.04rem;
+				height: 10.1rem;
 			}
 
 			.height {
-				height: 10.04rem;
+				height: 10.1rem;
 
 				h3 {
 					height: auto;
@@ -266,7 +301,7 @@
 		}
 	}
 
-	.tile-c.list-menu {
+	.list-menu {
 		background: @lighter-blue;
 		position: absolute;
 		top: 0;
@@ -380,12 +415,7 @@
 		}
 	}
 
-	.contact-tile,
-	.contact-tile:nth-child(6n+1),
-	.contact-tile:nth-child(6n+2),
-	.contact-tile:nth-child(6n+3),
-	.contact-tile:nth-child(6n+4),
-	.contact-tile:nth-child(6n+5) {
+	.contact-tile {
 		background: @ash;
 		color: @dark-grey;
 		font-size: 1.125rem;
@@ -459,14 +489,17 @@
 				
 				a {
 					display: block;
+					position: relative;
+					padding-left: 25px;
 					margin-bottom: 0.675rem;
 					
 					span {
 						margin-right: 1rem;
-						display: inline-block;
+						display: block;
 						top: 3px;
 						font-size: 18px;
-						position: relative;
+						position: absolute;
+						left: 0;
 					}
 					
 					&:hover {
@@ -490,7 +523,7 @@
 		h3 {
 			color: #fff !important;
 		}
-		
+
 		a {
 			font-size: 0;
 			line-height: 0;
@@ -838,12 +871,7 @@ div.token-input-dropdown-mac ul li.token-input-selected-dropdown-item-mac.odd sp
 }
 
 .related-topics .masonry-content {
-	.contact-tile,
-	.contact-tile:nth-child(6n+1),
-	.contact-tile:nth-child(6n+2),
-	.contact-tile:nth-child(6n+3),
-	.contact-tile:nth-child(6n+4),
-	.contact-tile:nth-child(6n+5) {
+	.contact-tile {
 		height: 400px;
 	}
 }
