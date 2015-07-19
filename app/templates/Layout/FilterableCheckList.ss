@@ -51,5 +51,11 @@
 				</section>
 			</div>
 		<% end_if %>
+
+		<% if not CheckForm %>
+			<div class="element-content-generic left-content">
+				<p><a href="$Link(reset)" class="backaction">Back</a></p>
+			</div>
+		<% end_if %>
 	</div>
 </div>

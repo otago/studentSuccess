@@ -88,7 +88,7 @@ class FilterableCheckList extends Page {
 			$blocks = $blocks->filter('AppliesToSecondTrimester', true);
 		}
 		else if($settings['starting'] == "Feb") {
-			$blocks = $block->filter('AppliesToFirstTrimester', true);
+			$blocks = $blocks->filter('AppliesToFirstTrimester', true);
 		}
 
 		return $blocks;
@@ -98,7 +98,8 @@ class FilterableCheckList extends Page {
 class FilterableCheckList_Controller extends Page_Controller {
 	
 	private static $allowed_actions = array(
-		'CheckForm'
+		'CheckForm',
+		'reset'
 	);
 
 	public function CheckForm() {
@@ -137,6 +138,12 @@ class FilterableCheckList_Controller extends Page_Controller {
 
 	public function doForm($data, $form) {
 		Cookie::set('Completed'. $this->ID, serialize($data));
+
+		return $this->redirect($this->Link());
+	}
+
+	public function reset() {
+		Cookie::force_expiry('Completed'. $this->ID);
 
 		return $this->redirect($this->Link());
 	}

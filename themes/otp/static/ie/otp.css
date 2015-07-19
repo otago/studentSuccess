@@ -1067,7 +1067,7 @@ table th.main {
   }
 }
 .checkform form {
-  padding-bottom: 48px;
+  padding-bottom: 112px;
 }
 .checkform fieldset {
   max-width: 1000px;
@@ -1076,6 +1076,10 @@ table th.main {
   margin-bottom: 16px;
 }
 .checkform .action {
+  margin: 16px auto 32px;
+  padding: 8px 16px;
+}
+.left-content .backaction {
   margin: 16px auto 32px;
   padding: 8px 16px;
 }
