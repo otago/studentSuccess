@@ -38,7 +38,6 @@
 		width: 33.3333333%;
 		float: left;
 		color: @white;
-		background: @light-green;
 		min-height: 270px;
 		.transition-property(background, 0.2s);
 		padding: 1.875rem 2rem 1.875rem 2.000rem;
@@ -865,9 +864,13 @@ div.token-input-dropdown-mac ul li.token-input-selected-dropdown-item-mac.odd sp
     color: #fff;
 }
 
-.related-topics .masonry-content .tile-c.half h3 {
-  font-size: 1.175rem;
-  line-height: 1.8rem;
+.related-topics .masonry-content .tile-c {
+	min-height: 200px;
+
+	&.half h3 {
+  		font-size: 1.175rem;
+  		line-height: 1.8rem;
+  	}
 }
 
 .related-topics .masonry-content {

@@ -4940,7 +4940,6 @@ table tr:last-child {
   width: 33.3333333%;
   float: left;
   color: #ffffff;
-  background: #79c8bb;
   min-height: 270px;
   -webkit-transition: background 0.2s ease-out;
   -moz-transition: background 0.2s ease-out;
@@ -5646,6 +5645,9 @@ div.token-input-dropdown-mac ul li.token-input-selected-dropdown-item-mac span.t
 div.token-input-dropdown-mac ul li.token-input-selected-dropdown-item-mac.odd span.token-input-dropdown-item-description-mac {
   color: #fff;
 }
+.related-topics .masonry-content .tile-c {
+  min-height: 200px;
+}
 .related-topics .masonry-content .tile-c.half h3 {
   font-size: 1.175rem;
   line-height: 1.8rem;
@@ -5918,6 +5920,9 @@ h5 a {
   border-top: 1px solid #9aca3c;
   padding-top: 1.5rem;
   font-size: 0.875rem;
+}
+.left-content figure.full-width figcaption {
+  max-width: 100%;
 }
 .left-content ul,
 .left-content ol {
