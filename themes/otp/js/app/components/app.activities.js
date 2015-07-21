@@ -194,6 +194,8 @@ if(typeof app === 'undefined') { var app = {}; }
 					allowedAttempts = 3;
 				}
 
+				var answers = step.find('.activity_answers li');
+
 				if(!attempt) attempt = 0;
 				attempt++;
 
@@ -223,9 +225,6 @@ if(typeof app === 'undefined') { var app = {}; }
 								// if this is on the 3rd attempt then show the user the error messages
 								if(attempt >= allowedAttempts) {
 									if(showResults) {
-										activity.addClass('readonly');
-										markReadonly(activity);
-
 										$(check).removeClass('correct');
 										$(check).addClass('wrong');
 									}
@@ -234,9 +233,6 @@ if(typeof app === 'undefined') { var app = {}; }
 								$(check).attr('data-validation', 'wrong');
 							} else {
 								if(showResults) {
-									activity.addClass('readonly');
-									markReadonly(activity);
-
 									$(check).removeClass('wrong');
 									$(check).addClass('correct');
 								}
@@ -254,9 +250,6 @@ if(typeof app === 'undefined') { var app = {}; }
 
 									if(attempt >= allowedAttempts) {
 										if(showResults) {
-											activity.addClass('readonly');
-											markReadonly(activity);
-
 											$(opt).removeClass('correct');
 											$(opt).addClass('wrong');
 										}
@@ -266,6 +259,11 @@ if(typeof app === 'undefined') { var app = {}; }
 								}
 							});
 						});
+
+						if(valid || attempt >= allowedAttempts) {						
+							activity.addClass('readonly');
+							markReadonly(activity);
+						}
 					} else if(step.find('.activity_text__DragAndDrop').length > 0 || step.find('.activity_text__DragAndDropToMatch').length > 0 || step.find('.activity_text__Replace').length > 0) {
 						options.each(function(i, elem) {
 							if($(answers.get(i)).text() != $(elem).text()) {
@@ -286,14 +284,16 @@ if(typeof app === 'undefined') { var app = {}; }
 								if(showResults) {
 									$(elem).addClass('correct');
 									$(elem).removeClass('wrong');
-
-									activity.addClass('readonly');
-									markReadonly(activity);
 								}
 
 								$(elem).attr('data-validation', 'correct');
 							}
 						});
+
+						if(valid || (attempt >= allowedAttempts)) {
+							activity.addClass('readonly');
+							markReadonly(activity);
+						}
 					}
 
 					if(!valid) {
