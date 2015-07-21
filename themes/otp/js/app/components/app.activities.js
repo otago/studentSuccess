@@ -200,10 +200,12 @@ if(typeof app === 'undefined') { var app = {}; }
 				step.data('attempt', attempt);
 
 				if(options.length > 1) {
-				
-					// validate the options based on the the type of field
-					// the user has created
-					if(step.find('.activity_text__MultiChoice').length > 0 || step.find('.activity_text__SingleChoice').length || step.find('.activity_text__Paragraph').length > 0) {
+					if(step.find('.activity_fail').length < 1) {
+						// has no wrong content so assume no validation.
+						valid = true;
+					}
+
+					else if(step.find('.activity_text__MultiChoice').length > 0 || step.find('.activity_text__SingleChoice').length || step.find('.activity_text__Paragraph').length > 0) {
 						var selected = options.find('.selected');
 
 						selected.each(function(i,  check) {
@@ -326,8 +328,12 @@ if(typeof app === 'undefined') { var app = {}; }
 							if(step.find('.activity_success').is(":visible")) {
 								canProgress = true;
 							} else {
-								canProgress = false;
-								step.find('.activity_success').show();
+								if(step.find('.activity_success').length > 0) {
+									canProgress = false;
+									step.find('.activity_success').show();
+								} else {
+									canProgress = true;
+								}
 							}
 						}
 					}

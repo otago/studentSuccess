@@ -72,18 +72,24 @@
                         <% end_loop %>
                     <% end_if %>
 
-                    <div class="activity_success">
-                        $RightAnswerContent
-                    </div>
+                    <% if RightAnswerContent %>
+                        <div class="activity_success">
+                            $RightAnswerContent
+                        </div>
+                    <% end_if %>
 
-                    <div class="activity_fail_warning">
-                        $WarningContent
-                    </div>
+                    <% if WarningContent %>
+                        <div class="activity_fail_warning">
+                            $WarningContent
+                        </div>
+                    <% end_if %>
 
-                    <div class="activity_fail">
-                        $WrongAnswerContent
-                    </div>
-
+                    <% if WrongAnswerContent %>
+                        <div class="activity_fail">
+                            $WrongAnswerContent
+                        </div>
+                    <% end_if %>
+                    
                     <div class="activity_answers">
                         <ul>
                             <% loop Answers %>
