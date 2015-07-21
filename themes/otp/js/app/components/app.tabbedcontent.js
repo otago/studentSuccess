@@ -31,7 +31,6 @@ if(typeof app === 'undefined') { var app = {}; }
 				$(elem).find('#moving').hide();
 				$(elem).find('#location').hide();
 				$(elem).find('#starting').hide();
-				$(elem).find('#study').hide();
 				$(elem).find('.action').attr('disabled', 'disabled');
 
 				$("#iam select").change(function(e) {
@@ -39,23 +38,12 @@ if(typeof app === 'undefined') { var app = {}; }
 				});
 
 				$('#moving select').change(function(e) {
-					$("#study").show();
-				});
-
-				$("#study select").change(function(e) {
-					if($(this).val() == "campus") {
-						$("#location").show();
-					} else {
-						$("#location").hide();
-						$("#starting").show();
-
-
-						$(elem).find('.action').removeAttr('disabled');
-					}
+					$("#location").show();
 				});
 
 				$("#location select").change(function(e) {
 					$(elem).find('.action').removeAttr('disabled');
+
 					$("#starting").show();
 				});
 			});

@@ -683,7 +683,7 @@ table th.main {
   }
 }
 .hear-from-others {
-  margin: 0 auto 64px;
+  margin: 0 auto 32px;
 }
 .hear-from-others .component-alignment.boxed-element {
   padding-top: 29px;
@@ -1572,7 +1572,7 @@ figure.element figcaption {
   line-height: 54px;
 }
 .content-padder {
-  padding: 32px 35% 32px 0;
+  padding: 32px 35% 16px 0;
 }
 .element-content-generic + .external_link,
 .element-content-generic + .internal_link {

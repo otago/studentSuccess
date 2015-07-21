@@ -15,6 +15,14 @@ class FilterableCheckListBlock extends CheckListBlock {
 		'FilterableCheckList' => 'FilterableCheckList'
 	);
 
+	private static $summary_fields = array(
+		'Title',
+		'AppliesToIam',
+		'AppliesToMoving',
+		'AppliesToLocations',
+		'AppliesToFirstTrimester'
+	);
+
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 

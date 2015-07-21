@@ -3448,7 +3448,7 @@ table tr:last-child {
 .hear-from-others {
   width: 100%;
   padding: 0;
-  margin: 0 auto 4rem;
+  margin: 0 auto 2rem;
 }
 .hear-from-others .component-alignment.boxed-element {
   padding-top: 1.8rem;
@@ -3677,6 +3677,7 @@ table tr:last-child {
   border-radius: 1.875rem;
   margin-right: 0.625rem;
   font-size: 0.75rem;
+  cursor: pointer;
   top: 0;
 }
 .checklist .index .main .icon.icon-dot {
@@ -4242,6 +4243,9 @@ table tr:last-child {
     background-position: 16% 0;
   }
 }
+/**
+ * Used on the checklist template
+ */
 .tabbed-content {
   clear: both;
   margin-top: 2rem;
@@ -4544,6 +4548,17 @@ table tr:last-child {
 }
 .left-content .backaction[disabled] {
   background: #ddd;
+}
+.template_FilterableCheckList .tab-section .content-block .itemList .accordion-item .right-content {
+  padding-top: 0;
+  margin-top: 0;
+}
+.template_FilterableCheckList .tab-section .content-block .itemList .accordion-item .right-content a {
+  color: #404041;
+}
+.template_FilterableCheckList .tab-section .content-block .itemList .accordion-item .right-content h4 {
+  margin-top: 0;
+  color: #0c79c3;
 }
 .glossary .page-intro.main.glossary h1 {
   color: #004f8f;
@@ -6228,7 +6243,7 @@ figure.element figcaption p {
   opacity: 1;
 }
 .content-padder {
-  padding: 2rem 35% 2rem 0;
+  padding: 2rem 35% 1rem 0;
 }
 @media screen and (max-width: 780px) {
   .content-padder {
@@ -6247,6 +6262,7 @@ figure.element figcaption p {
 .element-content-generic + .internal_link.component-alignment.boxed-element {
   padding-top: 0;
 }
+.element-content-generic .content-padder p:last-child,
 .element-content-generic p:last-child {
   margin-bottom: 0;
 }

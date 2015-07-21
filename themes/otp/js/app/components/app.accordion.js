@@ -13,13 +13,14 @@ if(typeof app === 'undefined') { var app = {}; }
 				var title = $(this).parent();
 				
 				if(!title.hasClass('active')) { 
-					title.addClass('active');
-					
 					var nextItem = title.next('.accordion-item');
-					
-					nextItem.addClass('active').show().siblings('.accordion-item').hide().each(function(i, elem) {
+
+					holder.find('.accordion-item').hide().each(function(i, elem) {
 						$(elem).prev('.title-c').removeClass('active');
 					});
+
+					title.addClass('active');
+					nextItem.addClass('active').show();
 
 					app.carousel.init();
 

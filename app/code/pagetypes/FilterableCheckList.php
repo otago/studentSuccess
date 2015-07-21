@@ -17,15 +17,11 @@ class FilterableCheckList extends Page {
 		'local' => 'not moving'
 	);
 
-	public static $study = array(
-		'campus' => 'on campus',
-		'online' => 'online'
-	);
-
 	public static $locations = array(
-		'Dunedin' => 'Dunedin',
-		'Central' => 'Central',
-		'Auckland' => 'Auckland'
+		'Dunedin' => 'in Dunedin',
+		'Central' => 'in Central',
+		'Auckland' => 'in Auckland',
+		'Online' => 'Online'
 	);
 
 	public  function getCMSFields(){
@@ -72,16 +68,13 @@ class FilterableCheckList extends Page {
 
 		$blocks = $this->Blocks()->filter(array(
 			'AppliesToIam:PartialMatch' => $settings['iam'],
-			'AppliesToMoving:PartialMatch' => $settings['moving'],
-			'AppliesToStudy:PartialMatch' => $settings['study'] 
+			'AppliesToMoving:PartialMatch' => $settings['moving']
 		));
 
-		if($settings['study'] !== "online") {
-			if(isset($settings['location'])) {
-				$blocks = $blocks->filter(array(
-					'AppliesToLocations:PartialMatch' => $settings['location']
-				));
-			}
+		if(isset($settings['location'])) {
+			$blocks = $blocks->filter(array(
+				'AppliesToLocations:PartialMatch' => $settings['location']
+			));
 		}
 
 		if($settings['starting'] == "Jul") {
@@ -112,8 +105,7 @@ class FilterableCheckList_Controller extends Page_Controller {
 		$fields = new FieldList(
 			$iam = new DropdownField('iam', 'I am', FilterableCheckList::$iam),
 			$moving = new DropdownField('moving', '', FilterableCheckList::$moving),
-			$study = new DropdownField('study', 'to study', FilterableCheckList::$study),
-			$location = new DropdownField('location', 'in', FilterableCheckList::$locations),
+			$location = new DropdownField('location', 'to study', FilterableCheckList::$locations),
 			$starting = new DropdownField('starting', 'starting', FilterableCheckList::get_starting_dates())
 		);
 
@@ -123,13 +115,11 @@ class FilterableCheckList_Controller extends Page_Controller {
 
 		$iam->setEmptyString('please select');
 		$moving->setEmptyString('please select');
-		$study->setEmptyString('please select');
 		$location->setEmptyString('please select');
 
 		$required = new RequiredFields(array(
 			'iam',
 			'moving',
-			'study',
 			'starting',
 		));
 

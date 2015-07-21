@@ -38,21 +38,21 @@
             </aside>
 
             <% loop $Items %>
-            <article class='mainlist desc desc-{$ID}' data-parent='desc-{$ID}'>
-                <% if $ClassName == 'CheckListCollection' %>
-                    <ul>
-                        <% loop $ListCollectionItems %>
-                        <li data-input = 'input-{$ID}-{$Up.ID}' ><span class='icon icon-dot'></span>{$Content}</li>
-						<input type="checkbox" class = 'input-{$ID}-{$Up.ID}' name="CollectionItems[{$ID}]" value="1" style='Display:none'>
-                        <% end_loop %>
-                    </ul>
-                <% else %>
-                    $Content
+                <% if Content || $ClassName == 'CheckListCollection' %>
+                    <article class='mainlist desc desc-{$ID}' data-parent='desc-{$ID}'>
+                        <% if $ClassName == 'CheckListCollection' %>
+                            <ul>
+                                <% loop $ListCollectionItems %>
+                                <li data-input = 'input-{$ID}-{$Up.ID}' ><span class='icon icon-dot'></span>{$Content}</li>
+        						<input type="checkbox" class = 'input-{$ID}-{$Up.ID}' name="CollectionItems[{$ID}]" value="1" style='Display:none'>
+                                <% end_loop %>
+                            </ul>
+                        <% else %>
+                            $Content
+                        <% end_if %>
+                    </article>
                 <% end_if %>
-            </article>
             <% end_loop %>
-
-
         </div>
         <% end_if %>
 
