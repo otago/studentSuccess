@@ -35,8 +35,9 @@ class Carousel extends BaseElement {
 			$adder = new GridFieldAddNewMultiClass();
 			$adder->setClasses(array(
 				'CarouselSlide'					=> 'Slide with only a title',
-				'CarouselTextSlide'				=> 'Slides with title and content',
-				'CarouselTwoColumnSlide'		=> 'Slides with two columns of content'
+				'CarouselTextSlide'				=> 'Slide with title and content',
+				'CarouselTextSlide_NoTitle'		=> 'Slide with just content',
+				'CarouselTwoColumnSlide'		=> 'Slide with two columns of content'
 			));
 			$configs->removeComponentsByType('GridFieldAddNewButton');
 			$configs->addComponent($adder);
