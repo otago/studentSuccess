@@ -1501,7 +1501,7 @@ hr {
 .left-content ol ul,
 .left-content ul ol,
 .left-content ol ol {
-  padding-top: 16px;
+  padding-left: 24px;
 }
 .left-content ul li:before {
   font-size: 19px;

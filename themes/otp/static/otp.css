@@ -5950,7 +5950,7 @@ h5 a {
 .left-content ol ul,
 .left-content ul ol,
 .left-content ol ol {
-  padding-top: 1rem;
+  padding-left: 1.5rem;
 }
 .left-content ul:last-child,
 .left-content ol:last-child {
@@ -5978,6 +5978,9 @@ h5 a {
 .left-content li p {
   color: #333337;
   margin: 0;
+}
+.left-content li ul {
+  margin: 0 0 0 20px;
 }
 .left-content ol {
   list-style-type: decimal;
@@ -6081,7 +6084,6 @@ h5 a {
 }
 .internal_link .content-padder,
 .external_link .content-padder {
-  padding-top: 0;
   padding-bottom: 0;
 }
 .internal_link.component-alignment.boxed-element,
@@ -7053,6 +7055,11 @@ footer.main .container.addresses address.middle {
 .highlightRed,
 .highlightred {
   background: #ff3d1b;
+  padding: 1px;
+}
+.highlightGreen,
+.highlightgreen {
+  background: #2ABB9B;
   padding: 1px;
 }
 @media print {
