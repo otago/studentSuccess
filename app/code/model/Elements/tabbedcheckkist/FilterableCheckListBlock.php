@@ -38,7 +38,6 @@ class FilterableCheckListBlock extends CheckListBlock {
 		$fields->addFieldsToTab('Root.Main', array(
 			new CheckboxSetField('AppliesToIam', 'Applies to the following selections', FilterableCheckList::$iam),
 			new CheckboxSetField('AppliesToMoving', '', FilterableCheckList::$moving),
-			new CheckboxSetField('AppliesToStudy', '', FilterableCheckList::$study),
 			new CheckboxSetField('AppliesToLocations', '', FilterableCheckList::$locations),
 			new CheckboxField('AppliesToFirstTrimester'),
 			new CheckboxField('AppliesToSecondTrimester'),

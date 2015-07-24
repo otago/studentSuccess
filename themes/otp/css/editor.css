@@ -13,6 +13,11 @@
 	padding: 1px;
 }
 
+.highlightGreen {
+	background: #2ABB9B;
+	padding: 1px;
+}
+
 #Form_AddForm_PageType .valEventHolder,
 #Form_AddForm_PageType .valFooterHolder,
 #Form_AddForm_PageType .valNewsHolder,
