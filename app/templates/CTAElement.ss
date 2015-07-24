@@ -12,8 +12,8 @@
 					{$CTAContent}
 				</p>
 			<% end_if %>
-			<% if $Link && $ButtonText%>
-			<a href='{$Link}' target={$Target}>{$ButtonText}</a>
+			<% if $Link && $ButtonText %>
+			<a href='{$Link}' target={$Target} <% if ForceDownload %>download="$Link"<% end_if %>>{$ButtonText}</a>
 			<% end_if %>
 		</div>
 

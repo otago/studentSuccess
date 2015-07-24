@@ -139,6 +139,8 @@ SiteTree:
     - Contactable
 ElementFile:
   title: "CTA to Download File"
+  extensions:
+    - ElementFileExtension
 ElementExternalLink:
   title: "Featured external link"
   defaults:
