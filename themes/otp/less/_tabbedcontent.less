@@ -206,15 +206,21 @@
 					
 					&:hover { color: @blue; }
 				}
-			}
-
-			.accordion-item {
+		
 				.active {
 					border: none;
 				}
 
 				.right-content {
 					margin-top: 1rem;
+
+					h4 {
+						color: @blue;
+					}
+
+					a {
+						color: rgb(64, 64, 65);
+					}
 				}
 
 				.content-padder {
@@ -375,6 +381,18 @@
 		h4 {
 			margin-top: 0;
 			color: @blue;
+		}
+	}
+
+	.tab-section .content-block .itemList {
+		border-top: 0;
+	}
+
+	.checkable {
+		border-top: 1px solid #ddd;
+
+		&:last-child {
+			border-bottom: 1px solid #ddd;
 		}
 	}
 }

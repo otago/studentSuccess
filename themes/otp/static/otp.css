@@ -2828,12 +2828,16 @@ table tr:last-child {
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 .main nav .level-2 li a:hover,
-.main nav .level-2 li a:focus,
 .main nav .level-2 li a.active {
   border-bottom: 1px solid #9aca3c;
+}
+.main nav .level-2 li a.open,
+.main nav .level-2 li a.open:hover,
+.main nav .level-2 li a.open:focus {
+  border-bottom: none;
 }
 .main nav .level-2 li a.button {
   opacity: 0.8;
@@ -2992,17 +2996,17 @@ table tr:last-child {
   height: 100%;
   min-height: 100%;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.5+0,0+100 */
-  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, 0.5)), color-stop(100%, rgba(0, 0, 0, 0)));
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, 0.7)), color-stop(100%, rgba(0, 0, 0, 0)));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+  background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
   /* IE10+ */
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
   /* IE6-9 */
@@ -4432,6 +4436,12 @@ table tr:last-child {
 .tab-section .content-block .itemList .accordion-item .right-content {
   margin-top: 1rem;
 }
+.tab-section .content-block .itemList .accordion-item .right-content h4 {
+  color: #0c79c3;
+}
+.tab-section .content-block .itemList .accordion-item .right-content a {
+  color: #404041;
+}
 .tab-section .content-block .itemList .accordion-item .content-padder {
   padding: 0.625rem 0 0 3rem;
 }
@@ -4560,6 +4570,15 @@ table tr:last-child {
   margin-top: 0;
   color: #0c79c3;
 }
+.template_FilterableCheckList .tab-section .content-block .itemList {
+  border-top: 0;
+}
+.template_FilterableCheckList .checkable {
+  border-top: 1px solid #ddd;
+}
+.template_FilterableCheckList .checkable:last-child {
+  border-bottom: 1px solid #ddd;
+}
 .glossary .page-intro.main.glossary h1 {
   color: #004f8f;
 }
@@ -4687,6 +4706,11 @@ table tr:last-child {
 .template_GlossaryPage .page-contents,
 .template_LandingSearchPage .page-contents {
   margin-top: -2rem;
+}
+.template_LandingPage .breadcrumbs,
+.template_GlossaryPage .breadcrumbs,
+.template_LandingSearchPage .breadcrumbs {
+  display: none;
 }
 .template_FilterableCheckList .page-intro {
   text-align: center;
@@ -4951,6 +4975,19 @@ table tr:last-child {
     min-height: auto;
   }
 }
+.masonry-content.masonry-basic .tile-c.contact-tile h3 {
+  font-size: 2.5rem;
+  line-height: 1.15;
+  font-weight: 100;
+  height: auto;
+  color: #ef563c;
+}
+@media screen and (max-width: 980px) {
+  .masonry-content.masonry-basic .tile-c.contact-tile h3 {
+    font-size: 1.875rem;
+    line-height: 2.5rem;
+  }
+}
 .masonry-content .tile-c {
   width: 33.3333333%;
   float: left;
@@ -5138,7 +5175,7 @@ table tr:last-child {
 }
 .masonry-content .tile-c.half {
   width: 16.6666666667%;
-  padding: 1.225rem 1rem;
+  padding: 1.025rem 1rem;
 }
 .masonry-content .tile-c.half h3 {
   line-height: 1.3;
@@ -5941,7 +5978,7 @@ h5 a {
 }
 .left-content ul,
 .left-content ol {
-  margin-left: 0;
+  margin-left: 1.5rem;
   list-style-position: outside;
   margin-bottom: 2rem;
   padding-left: 0.5rem;
@@ -5950,7 +5987,7 @@ h5 a {
 .left-content ol ul,
 .left-content ul ol,
 .left-content ol ol {
-  padding-left: 1.5rem;
+  padding-left: 3rem;
 }
 .left-content ul:last-child,
 .left-content ol:last-child {
@@ -7007,7 +7044,7 @@ footer.main .container.addresses address.middle {
   .drop-menu .container .left .col {
     width: 100%;
     padding-right: 0;
-    padding-bottom: 2.5rem;
+    padding-bottom: 0.5rem;
   }
 }
 .drop-menu .container .left a:hover,

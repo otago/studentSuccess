@@ -3,7 +3,7 @@
 		<section>
 			<div class='image'>
 				<% if $VideoURL %>
-					<a href="{$VideoURL}" class="video-image fancybox-link"><span class="icon icon-play"></span>$Image</a>
+					<a href="{$VideoURL}" class="video-image <% if not ExternalURL %>fancybox-link<% end_if %>"><span class="icon icon-play"></span>$Image</a>
 				<% else %>
 					$Image
 				<% end_if %>

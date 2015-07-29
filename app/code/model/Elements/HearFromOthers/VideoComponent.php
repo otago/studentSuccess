@@ -7,7 +7,7 @@ class VideoComponent extends HearFromOthers {
 	private static $description = "Video Component with modal player";
 	
 	private static $db = array(
-		'Color'	=> 'Varchar'
+		'Color'	=> 'Varchar',
 	);
 			
 	function getCMSFields() {

@@ -13,15 +13,26 @@ if(typeof app === 'undefined') { var app = {}; }
 				
 				if(target.length) {
 					if(span.hasClass('active')) {
+						$(this).removeClass('open');
+
 						$('.drop-menu').slideUp();
 						$(".main nav .level-2 li span").removeClass('active');
 					}
 					else {
+						$(this).addClass('open');
+
 						$(".main nav .level-2 li span").removeClass('active');
 						$('.drop-menu').not(target).slideUp();
 						target.slideDown();
 						span.addClass('active');
 					}
+				}
+
+				if($(document).width() <= 660) {
+
+					$('html, body').animate({
+						scrollTop: target.offset().top
+					});
 				}
 				
 				return false;

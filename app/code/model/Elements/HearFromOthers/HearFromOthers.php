@@ -12,6 +12,7 @@ class HearFromOthers extends BaseElement {
 		'Testimony'			=> 'Varchar(255)',
 		'YoutubeVideo'		=> 'Varchar(300)',
 		'VideoTime'			=> 'Varchar(200)',
+		'ExternalURL' => 'Varchar(200)'
 	);
 
 	private static $has_one = array(
@@ -21,11 +22,14 @@ class HearFromOthers extends BaseElement {
 	private static $field_labels = array(
 		'DisplayTitle' => 'Heading',
 		'TestimonyContent' => 'Testimonial Content',
-		'Testimony' => 'Testimonial name'
+		'Testimony' => 'Testimonial name',
+		'YoutubeVideo' => 'Youtube Video ID (e.g DgVmXfcVGxI)'
 	);
 
 	function VideoURL() {
-		if($this->YoutubeVideo){
+		if($this->ExternalURL) {
+			return $this->ExternalURL;
+		} else {
 			return 'http://www.youtube.com/watch?v=' . StringUtils::YouTubeVideoIDFromURL($this->YoutubeVideo);
 		}
 	}

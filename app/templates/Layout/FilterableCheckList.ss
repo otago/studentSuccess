@@ -6,6 +6,12 @@
     <div class="elements-holder modal-content">
         <% include PageIntro %>
 
+		<% if not CheckForm %>
+			<div class="element-content-generic left-content">
+				<p><a href="$Link(reset)" class="backaction">Reset original settings</a></p>
+			</div>
+		<% end_if %>
+		
         <% if CheckForm %>
         <div class="element-content-generic left-content checkform">
 			$CheckForm
@@ -49,12 +55,6 @@
 						</div>
 					<% end_loop %>
 				</section>
-			</div>
-		<% end_if %>
-
-		<% if not CheckForm %>
-			<div class="element-content-generic left-content">
-				<p><a href="$Link(reset)" class="backaction">Back</a></p>
 			</div>
 		<% end_if %>
 	</div>

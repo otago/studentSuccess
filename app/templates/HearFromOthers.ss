@@ -6,8 +6,8 @@
     	<section>
         	<div class='image'>
 	            <% if $VideoURL %>
-	                <a href="{$VideoURL}" class="video-image fancybox-link">{$Image.Pure}</a>
-	                <a href='{$VideoURL}' class='icon icon-play fancybox-link'></a>
+	                <a href="{$VideoURL}" class="video-image <% if not ExternalURL %>fancybox-link<% end_if %>">{$Image.Pure}</a>
+	                <a href='{$VideoURL}' class='icon icon-play <% if not ExternalURL %>fancybox-link<% end_if %>'></a>
 	            <% else %>
 	                {$Image.Pure}
 	            <% end_if %>

@@ -498,7 +498,7 @@ table th.main {
 }
 .main nav .level-2 li a {
   line-height: 34px;
-  font-size: 16px;
+  font-size: 18px;
 }
 .main nav .level-2 li a.button {
   padding: 0 22px;
@@ -1204,6 +1204,15 @@ table th.main {
 .masonry-content.masonry-basic .tile-c h3 span {
   top: 35px;
 }
+.masonry-content.masonry-basic .tile-c.contact-tile h3 {
+  font-size: 40px;
+}
+@media screen and (max-width: 980px) {
+  .masonry-content.masonry-basic .tile-c.contact-tile h3 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
 .masonry-content .tile-c {
   padding: 30px 32px 30px 32px;
 }
@@ -1241,7 +1250,7 @@ table th.main {
   line-height: 16px;
 }
 .masonry-content .tile-c.half {
-  padding: 20px 16px;
+  padding: 16px 16px;
 }
 .masonry-content .tile-c.half h3 {
   height: 162px;
@@ -1494,6 +1503,7 @@ hr {
 }
 .left-content ul,
 .left-content ol {
+  margin-left: 24px;
   margin-bottom: 32px;
   padding-left: 8px;
 }
@@ -1501,7 +1511,7 @@ hr {
 .left-content ol ul,
 .left-content ul ol,
 .left-content ol ol {
-  padding-left: 24px;
+  padding-left: 48px;
 }
 .left-content ul li:before {
   font-size: 19px;
@@ -1732,7 +1742,7 @@ footer.main .container.addresses address {
 }
 @media screen and (max-width: 720px) {
   .drop-menu .container .left .col {
-    padding-bottom: 40px;
+    padding-bottom: 8px;
   }
 }
 @media screen and (max-width: 720px) {

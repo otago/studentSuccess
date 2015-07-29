@@ -252,13 +252,18 @@
 					line-height: 2.125rem;
 					font-weight: normal;
 					.transition;
-					font-size: 1rem;
+					font-size: 1.125rem;
 					
 					
 					&:hover,
-					&:focus,
 					&.active {
 						border-bottom: 1px solid @green;
+					}
+
+					&.open,
+					&.open:hover,
+					&.open:focus {
+						border-bottom: none;
 					}
 					
 					&.button {
