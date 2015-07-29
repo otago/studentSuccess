@@ -208,7 +208,7 @@ if(typeof app === 'undefined') { var app = {}; }
 					}
 
 					else if(step.find('.activity_text__MultiChoice').length > 0 || step.find('.activity_text__SingleChoice').length || step.find('.activity_text__Paragraph').length > 0) {
-						var selected = options.find('.selected');
+						var selected = options.filter('.selected');
 
 						selected.each(function(i,  check) {
 							var isValidAnswer = false;
@@ -241,7 +241,6 @@ if(typeof app === 'undefined') { var app = {}; }
 							}
 						});
 
-						// if this is on the 3rd attempt then show the user the error messages
 						answers.each(function(x, answer) {
 							options.each(function(o, opt) {
 								if(($(opt).text() == $(answer).text()) && !$(opt).hasClass('selected')) {
@@ -261,11 +260,11 @@ if(typeof app === 'undefined') { var app = {}; }
 						});
 
 						if(valid || attempt >= allowedAttempts) {						
-							activity.addClass('readonly');
-							markReadonly(activity);
+							step.addClass('readonly');
+							markReadonly(step);
 						}
 					} else if(step.find('.activity_text__DragAndDrop').length > 0 || step.find('.activity_text__DragAndDropToMatch').length > 0 || step.find('.activity_text__Replace').length > 0) {
-						options.each(function(i, elem) {
+						options.filter('.replaceable').each(function(i, elem) {
 							if($(answers.get(i)).text() != $(elem).text()) {
 								valid = false;
 
@@ -274,8 +273,8 @@ if(typeof app === 'undefined') { var app = {}; }
 										$(elem).removeClass('correct');
 										$(elem).addClass('wrong');
 
-										activity.addClass('readonly');
-										markReadonly(activity);
+										step.addClass('readonly');
+										markReadonly(step);
 									}
 								}
 
@@ -291,8 +290,8 @@ if(typeof app === 'undefined') { var app = {}; }
 						});
 
 						if(valid || (attempt >= allowedAttempts)) {
-							activity.addClass('readonly');
-							markReadonly(activity);
+							step.addClass('readonly');
+							markReadonly(step);
 						}
 					}
 
@@ -407,7 +406,7 @@ if(typeof app === 'undefined') { var app = {}; }
 						} else if(remaining == 1) {
 							btn.html('Finish');
 						} else {
-							btn.html("Next &rarr;")
+							btn.html("Next <span class='arr'>&rsaquo;</span>");
 						}
 
 						btn.removeClass('loading');

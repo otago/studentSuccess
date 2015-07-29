@@ -5018,17 +5018,12 @@ table tr:last-child {
   display: block;
 }
 .masonry-content .tile-c h3 {
-  font-size: 1.275rem;
+  font-size: 1.4rem;
   line-height: 0.9;
   margin: 0;
   font-weight: 500;
   height: 21.25rem;
   position: relative;
-}
-@media screen and (min-width: 1120px) {
-  .masonry-content .tile-c h3 {
-    font-size: 1.4rem;
-  }
 }
 .masonry-content .tile-c h3 span {
   display: block;
@@ -6295,7 +6290,6 @@ figure.element figcaption p {
 .element-content-generic + .external_link,
 .element-content-generic + .internal_link {
   padding-top: 0;
-  margin-top: -1rem;
 }
 .element-content-generic + .external_link.component-alignment.boxed-element,
 .element-content-generic + .internal_link.component-alignment.boxed-element {
@@ -6450,6 +6444,7 @@ figure.element figcaption p {
 }
 .activity_text {
   overflow: hidden;
+  padding-top: 2rem;
   margin-bottom: 20px;
 }
 @media screen and (max-width: 620px) {
@@ -6466,6 +6461,7 @@ figure.element figcaption p {
   margin-right: 5px;
   margin-bottom: 5px;
   cursor: pointer;
+  max-width: 500px;
   -webkit-transition: background 0.2s ease-out;
   -moz-transition: background 0.2s ease-out;
   transition: background 0.2s ease-out;
@@ -6497,8 +6493,16 @@ figure.element figcaption p {
   background-color: #EF563C;
   color: #fff;
 }
+.activity_text li.wrong {
+  background-color: #EF563C;
+  color: #fff;
+}
 .activity_text li.correct {
-  background-color: #08C04E;
+  background-color: #9aca3c;
+  color: #fff;
+}
+.activity_text li.correct .changed {
+  background-color: #9aca3c;
   color: #fff;
 }
 .activity_text.activity_text__Replace li.correct,
@@ -6506,11 +6510,18 @@ figure.element figcaption p {
   color: #404041;
 }
 .activity_text.activity_text__Replace li {
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  padding-left: 0em;
+  padding-right: 0em;
   background: transparent;
 }
+.activity_text.activity_text__Replace li:hover,
+.activity_text.activity_text__Replace li:focus {
+  color: #404041;
+  cursor: default;
+}
 .activity_text.activity_text__Replace li.replaceable {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   background: #eee;
 }
 .activity_text.activity_text__Replace li.replaceable:focus,
@@ -6518,6 +6529,7 @@ figure.element figcaption p {
 .activity_text.activity_text__Replace li.replaceable:hover {
   background: #ffcd00;
   color: #000;
+  cursor: pointer;
 }
 .activity_text.activity_text__Replace li.replaceable.correct,
 .activity_text.activity_text__Replace li.replaceable.correct:hover,
@@ -6712,6 +6724,16 @@ figure.element figcaption p {
   background: #095b93 url;
   opacity: 0.2;
 }
+.activity_navigation .btn .arr {
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+  top: 0px;
+  right: -5px;
+}
+.activity_navigation .btn.back .arr {
+  left: -5px;
+}
 .activity_navigation .hidden {
   display: none;
 }
@@ -6792,11 +6814,85 @@ figure.element figcaption p {
 }
 .activity_success {
   padding: 5px 20px;
-  background: #08C04E;
+  background: #9aca3c;
   color: #fff;
 }
 .activity_content__answer {
   display: none;
+}
+.activity_text .correct,
+.activity_text .wrong {
+  position: relative;
+}
+.activity_text .correct:after,
+.activity_text .wrong:after {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 32px;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  height: 2rem;
+  border-radius: 2rem;
+  position: absolute;
+  top: 50%;
+  margin-top: -0.75rem;
+  width: 2rem;
+  line-height: 2rem;
+  right: -2rem;
+  background: #9aca3c;
+  content: "\e613";
+}
+.activity_text .wrong:after {
+  content: "x";
+  background: transparent;
+  border: 4px solid #ef563c;
+  color: #ef563c;
+  line-height: 1;
+  font-weight: bold;
+}
+.activity_text.activity_text__Paragraph .correct:after,
+.activity_text.activity_text__Replace .correct:after,
+.activity_text.activity_text__Paragraph .wrong:after,
+.activity_text.activity_text__Replace .wrong:after {
+  left: 50%;
+  top: -1.5rem;
+  margin-left: -0.75rem;
+}
+.activity_individual.readonly .activity_text li:hover,
+.activity_individual.readonly .activity_text li:focus {
+  cursor: default;
+  background: #eee;
+  color: #404041;
+}
+.activity_individual.readonly .activity_text li.wrong:hover,
+.activity_individual.readonly .activity_text li.wrong:focus,
+.activity_individual.readonly .activity_text li.changed.wrong:hover,
+.activity_individual.readonly .activity_text li.changed.wrong:focus {
+  background-color: #EF563C;
+  color: #fff;
+}
+.activity_individual.readonly .activity_text li.correct:hover,
+.activity_individual.readonly .activity_text li.correct:focus,
+.activity_individual.readonly .activity_text li.changed.correct:hover,
+.activity_individual.readonly .activity_text li.changed.correct:focus {
+  background-color: #9aca3c;
+  color: #fff;
+}
+.activity_individual.readonly .activity_text__Replace li:hover,
+.activity_individual.readonly .activity_text__Replace li:focus {
+  cursor: default;
+  background: transparent;
+  color: #404041;
 }
 footer.main {
   background: #0c79c3;

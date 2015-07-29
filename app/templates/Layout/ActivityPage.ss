@@ -101,8 +101,8 @@
             <% end_loop %>
 
             <footer class="activity_navigation">
-                <span class="btn next"><% if Activities.First.ClassName == "TextSlide" %>Start<% else %>Next<% end_if %> &rarr;</span>
-                <span class="btn hidden back">&larr;</span>
+                <span class="btn next"><% if Activities.First.ClassName == "TextSlide" %>Start<% else %>Next<% end_if %> <span class="arr">&rsaquo;</span></span>
+                <span class="btn hidden back"><span class="arr">&lsaquo;</span></span>
             </footer>
         </section>
     </div>
