@@ -202,11 +202,19 @@ if(typeof app === 'undefined') { var app = {}; }
 				step.data('attempt', attempt);
 
 				if(options.length > 1) {
-					if(step.find('.activity_fail').length < 1) {
+					if(step.find('.activity_text__SelectAny').length > 0) {
+						// user must select at least one option.
+						var selected = options.filter('.selected');
+
+						if(selected.length < 1) {
+							valid = false;
+							canProgress = false;
+						}
+					}
+					else if(step.find('.activity_fail').length < 1) {
 						// has no wrong content so assume no validation.
 						valid = true;
 					}
-
 					else if(step.find('.activity_text__MultiChoice').length > 0 || step.find('.activity_text__SingleChoice').length || step.find('.activity_text__Paragraph').length > 0) {
 						var selected = options.filter('.selected');
 
@@ -466,7 +474,7 @@ if(typeof app === 'undefined') { var app = {}; }
 				});
 			});
 
-			$(".activity_text__SingleChoice").each(function(i, elem) {
+			$(".activity_text__SingleChoice, .activity_text__SelectAny").each(function(i, elem) {
 				$('li', elem).click(function() {
 					if($(this).parents('.activity').hasClass('readonly')) {
 						return false;

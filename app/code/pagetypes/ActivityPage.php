@@ -74,7 +74,7 @@ class ActivityPage_Controller extends Page_Controller {
 class ActivityPage_Activity extends DataObject {
 
 	private static $db = array(
-		'Presentation' => "Enum('TextSlide, SingleChoice, ShowContent, DragAndDrop, DragAndDropToMatch, Paragraph, MultiChoice, Replace, ResultsSlide', 'TextSlide')",
+		'Presentation' => "Enum('TextSlide, SingleChoice, SelectAny, ShowContent, DragAndDrop, DragAndDropToMatch, Paragraph, MultiChoice, Replace, ResultsSlide', 'TextSlide')",
 		'Title' => 'Varchar(200)',
 		'Description' => 'HTMLText',
 		'PresentedOptions' => 'Text',
@@ -137,6 +137,7 @@ class ActivityPage_Activity extends DataObject {
 			'SingleChoice' => 'Single Choice',
 			'Paragraph' => 'Paragraph',
 			'MultiChoice' => 'Multi choice list',
+			'SelectAny' => 'Select any of the options',
 			'Replace' => 'Replace words',
 			'ShowContent' => 'Show content based on selection',
 			'ResultsSlide' => 'Results Slide'
@@ -149,6 +150,7 @@ class ActivityPage_Activity extends DataObject {
 			->orIf('Presentation')->isEqualTo('Paragraph')
 			->orIf('Presentation')->isEqualTo('SingleChoice')
 			->orIf('Presentation')->isEqualTo('MultiChoice')
+			->orIf('Presentation')->isEqualTo('SelectAny')
 			->orIf('Presentation')->isEqualTo('Replace');
 
 		$presented->setDescription('List the items you want to show the user, separated by new lines. If the user can replace the text on this word then include an * at the end of the word.');
@@ -182,6 +184,7 @@ class ActivityPage_Activity extends DataObject {
 			->orIf('Presentation')->isEqualTo('DragAndDropToMatch')
 			->orIf('Presentation')->isEqualTo('Paragraph')
 			->orIf('Presentation')->isEqualTo('SingleChoice')
+			->orIf('Presentation')->isEqualTo('SelectAny')
 			->orIf('Presentation')->isEqualTo('MultiChoice')
 			->orIf('Presentation')->isEqualTo('Replace');
 
