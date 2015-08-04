@@ -46,21 +46,24 @@
                             </div>
                         <% end_if %>
 
-                        <% if ActivityOptions.Count > 0 %>
-                            <div class="activity_text activity_text__{$Presentation}">
-                                <% if Presentation == "DragAndDropToMatch" %>
-                                    <ul class="labels">
-                                        <% loop MatchLabels %>
-                                            <li>$Title</li>
-                                        <% end_loop %>
+                        <% if Presentation == TextSlide %>
+                        <% else %>
+                            <% if ActivityOptions.Count > 0 %>
+                                <div class="activity_text activity_text__{$Presentation}">
+                                    <% if Presentation == "DragAndDropToMatch" %>
+                                        <ul class="labels">
+                                            <% loop MatchLabels %>
+                                                <li>$Title</li>
+                                            <% end_loop %>
+                                        </ul>
+                                    <% end_if %>
+                                    <ul>
+                                     <% loop ActivityOptions %>
+                                         <li data-activity-value="$ID" <% if Up.Presentation == Replace && IsReplaceable %>class="replaceable" contenteditable=true<% end_if %>>$Title</li>
+                                     <% end_loop %>
                                     </ul>
-                                <% end_if %>
-                                <ul>
-                                 <% loop ActivityOptions %>
-                                     <li data-activity-value="$ID" <% if Up.Presentation == Replace && IsReplaceable %>class="replaceable" contenteditable=true<% end_if %>>$Title</li>
-                                 <% end_loop %>
-                                </ul>
-                            </div>
+                                </div>
+                            <% end_if %>
                         <% end_if %>
                     </div>
 

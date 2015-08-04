@@ -1129,7 +1129,7 @@ table th.main {
 .template_LandingPage .page-contents,
 .template_GlossaryPage .page-contents,
 .template_LandingSearchPage .page-contents {
-  margin-top: -32px;
+  margin-top: 0px;
 }
 .template_FilterableCheckList .page-intro p {
   margin: 8px auto 0;
@@ -1249,6 +1249,16 @@ table th.main {
 }
 .masonry-content .tile-c.half h3 {
   height: 162px;
+}
+@media screen and (min-width: 1160px) {
+  .masonry-content .tile-c.half h3 {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .masonry-content .tile-c.half h3 {
+    font-size: 26px;
+  }
 }
 .masonry-content .tile-c.half .height {
   height: 162px;
