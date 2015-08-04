@@ -6822,14 +6822,26 @@ figure.element figcaption p {
 }
 .activity_fail_warning,
 .activity_fail {
-  padding: 5px 20px;
   background: #EF563C;
   color: #fff;
 }
 .activity_success {
-  padding: 5px 20px;
   background: #9aca3c;
   color: #fff;
+}
+.activity_fail,
+.activity_success,
+.activity_warning {
+  margin: 10px -2em 10px -70px;
+  padding: 5px 2em 5px 70px;
+}
+@media screen and (max-width: 620px) {
+  .activity_fail,
+  .activity_success,
+  .activity_warning {
+    margin-left: -2em;
+    padding-left: 2em;
+  }
 }
 .activity_content__answer {
   display: none;

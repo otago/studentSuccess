@@ -482,6 +482,8 @@ if(typeof app === 'undefined') { var app = {}; }
 
 					$(this).toggleClass('selected');
 					$(this).siblings('.selected').removeClass('selected');
+
+					$(this).parents('.activity').find(".activity_navigation .next").click();
 				});
 			});
 
