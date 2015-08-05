@@ -3,8 +3,9 @@
 class Linkable extends DataExtension {
 
 	private static $db = array(
-		'LinkType'              => 'Enum("None, Internal, External", "None")',
+		'LinkType'              => 'Enum("None, Internal, External, File", "None")',
 		'InternalLinkID'        => 'Int',
+		'InternalFileID'        => 'Int',
 		'ExternalLink'          => 'Varchar(300)',
 		'Target'				=> 'Enum("_self,_blank,_modal")',
 		'ForceDownload' 		=> 'Boolean'
@@ -17,6 +18,7 @@ class Linkable extends DataExtension {
 		$fields->removeByName(array(
 			'LinkType',
 			'InternalLinkID',
+			'InternalFileID',
 			'ExternalLink',
 			'Target',
 			'ForceDownload'
@@ -27,9 +29,11 @@ class Linkable extends DataExtension {
 			DropdownField::create('LinkType')->setSource(array(
 				'None'		=> 'None',
 				'Internal'	=> 'Internal',
-				'External'	=> 'External'
+				'External'	=> 'External',
+				'File' => 'File'
 			)),
 			TreeDropdownField::create('InternalLinkID')->setSourceObject('SiteTree'),
+			TreeDropdownField::create('InternalFileID')->setSourceObject('File'),
 			TextField::create('ExternalLink'),
 			DropdownField::create('Target')->setSource(array(
 				'_self' => 'Open in same window',
@@ -41,12 +45,17 @@ class Linkable extends DataExtension {
 
 	}
 
-	function Link(){
-		if($this->owner->LinkType == 'Internal' && $this->owner->InternalLinkID){
+	public function Link() {
+		if($this->owner->LinkType == 'Internal' && $this->owner->InternalLinkID) {
 			$siteTree = SiteTree::get()->byID($this->owner->InternalLinkID);
+
 			return $siteTree ? $siteTree->Link() : '';
-		}elseif($this->owner->LinkType == 'External' && $this->owner->ExternalLink){
+		} else if($this->owner->LinkType == 'External' && $this->owner->ExternalLink) {
 			return $this->owner->ExternalLink;
+		} else if($this->owner->LinkType == 'File' && $this->owner->InternalFileID) {
+			$file = File::get()->byID($this->owner->InternalFileID);
+
+			return $file ? $file->Link() : '';
 		}
 	}
 
