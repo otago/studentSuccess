@@ -77,9 +77,9 @@ if(typeof app === 'undefined') { var app = {}; }
 							btn.addClass('hidden');
 							var text = nextStep.prevAll('.activity_individual').first().hasClass('activity_TextSlide') ? 'Start' : 'Next';
 
-							btn.siblings('.next').html(text + " &rarr;").removeClass('hidden');
+							btn.siblings('.next').html(text).removeClass('hidden');
 						} else {
-							btn.siblings('.next').html("Next &rarr;").removeClass('hidden');
+							btn.siblings('.next').html("Next").removeClass('hidden');
 						}
 
 						btn.removeClass('loading');
@@ -271,7 +271,7 @@ if(typeof app === 'undefined') { var app = {}; }
 							step.addClass('readonly');
 							markReadonly(step);
 						}
-					} else if(step.find('.activity_text__DragAndDrop').length > 0 || step.find('.activity_text__DragAndDropToMatch').length > 0 || step.find('.activity_text__Replace').length > 0) {
+					} else if(step.find('.activity_text__Replace').length > 0) {
 						options.filter('.replaceable').each(function(i, elem) {
 							if($(answers.get(i)).text() != $(elem).text()) {
 								valid = false;
@@ -288,9 +288,43 @@ if(typeof app === 'undefined') { var app = {}; }
 
 								$(elem).attr('data-validation', 'wrong');
 							} else {
-								if(showResults) {
-									$(elem).addClass('correct');
-									$(elem).removeClass('wrong');
+								if(attempt >= allowedAttempts) {
+									if(showResults) {
+										$(elem).addClass('correct');
+										$(elem).removeClass('wrong');
+									}
+								}
+
+								$(elem).attr('data-validation', 'correct');
+							}
+						});
+
+						if(valid || (attempt >= allowedAttempts)) {
+							step.addClass('readonly');
+							markReadonly(step);
+						}
+					} else if(step.find('.activity_text__DragAndDrop').length > 0 || step.find('.activity_text__DragAndDropToMatch').length > 0) {
+						options.each(function(i, elem) {
+							if($(answers.get(i)).text() != $(elem).text()) {
+								valid = false;
+
+								if(attempt >= allowedAttempts) {
+									if(showResults) {
+										$(elem).removeClass('correct');
+										$(elem).addClass('wrong');
+
+										step.addClass('readonly');
+										markReadonly(step);
+									}
+								}
+
+								$(elem).attr('data-validation', 'wrong');
+							} else {
+								if(attempt >= allowedAttempts) {
+									if(showResults) {
+										$(elem).addClass('correct');
+										$(elem).removeClass('wrong');
+									}
 								}
 
 								$(elem).attr('data-validation', 'correct');
@@ -414,7 +448,7 @@ if(typeof app === 'undefined') { var app = {}; }
 						} else if(remaining == 1) {
 							btn.html('Finish');
 						} else {
-							btn.html("Next <span class='arr'>&rsaquo;</span>");
+							btn.html("Next");
 						}
 
 						btn.removeClass('loading');

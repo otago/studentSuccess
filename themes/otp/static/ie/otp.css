@@ -1654,30 +1654,6 @@ figure.element figcaption {
   font-size: 128px;
   padding-right: 56px;
 }
-.activity_results span:after {
-  font-size: 32px;
-  padding: 8px;
-  width: 48px;
-  line-height: 48px;
-  height: 48px;
-  border-radius: 48px;
-}
-.activity_results span.right {
-  margin-right: 48px;
-}
-.activity_results span.wrong:after {
-  font-size: 48px;
-  line-height: 29px;
-}
-.activity_text .correct:after,
-.activity_text .wrong:after {
-  height: 32px;
-  border-radius: 32px;
-  margin-top: -12px;
-  width: 32px;
-  line-height: 32px;
-  right: -32px;
-}
 .activity_text.activity_text__Paragraph .correct:after,
 .activity_text.activity_text__Replace .correct:after,
 .activity_text.activity_text__Paragraph .wrong:after,

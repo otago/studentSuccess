@@ -6507,20 +6507,16 @@ figure.element figcaption p {
   background-color: #EF563C;
   color: #fff;
 }
-.activity_text li.wrong {
-  background-color: #EF563C;
-  color: #fff;
-}
 .activity_text li.correct {
-  background-color: #9aca3c;
+  background-color: #08c04e;
   color: #fff;
 }
-.activity_text li.correct .changed {
-  background-color: #9aca3c;
+.activity_text li.correct.changed {
+  background-color: #08c04e;
   color: #fff;
 }
 .activity_text.activity_text__Replace li.correct,
-.activity_text.activity_text__Replace li.wrong {
+.activity_text.activity_text__Replace li.changed.wrong {
   color: #404041;
 }
 .activity_text.activity_text__Replace li {
@@ -6745,8 +6741,37 @@ figure.element figcaption p {
   top: 0px;
   right: -5px;
 }
-.activity_navigation .btn.back .arr {
-  left: -5px;
+.activity_navigation .btn.next {
+  position: relative;
+  padding-right: 35px;
+  min-height: 50px;
+}
+.activity_navigation .btn.next:after {
+  content: " ";
+  display: block;
+  width: 9px;
+  height: 14px;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -7px;
+  background: url(../images/activity_next.svg) no-repeat;
+}
+.activity_navigation .btn.back {
+  padding-left: 25px;
+  min-height: 50px;
+  position: relative;
+}
+.activity_navigation .btn.back:after {
+  content: " ";
+  display: block;
+  height: 14px;
+  margin-top: -7px;
+  width: 9px;
+  top: 50%;
+  position: absolute;
+  left: 20px;
+  background: url(../images/activity_prev.svg) no-repeat;
 }
 .activity_navigation .hidden {
   display: none;
@@ -6778,41 +6803,18 @@ figure.element figcaption p {
 }
 .activity_results span:after {
   display: block;
-  color: #fff;
-  font-size: 2rem;
-  padding: 0.5rem;
-  width: 3rem;
-  text-align: center;
-  line-height: 3rem;
-  height: 3rem;
-  border-radius: 3rem;
+  width: 30px;
+  height: 30px;
   position: absolute;
   top: 0;
   right: 0;
-}
-.activity_results span.right {
-  margin-right: 3rem;
+  content: " ";
 }
 .activity_results span.right:after {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  font-size: 32px;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: #9aca3c;
-  content: "\e613";
+  background: url(../../images/correct.svg);
 }
 .activity_results span.wrong:after {
-  font-size: 3rem;
-  line-height: 1.8rem;
-  background: #ef563c;
-  content: "x";
+  background: url(../../images/wrong.svg);
 }
 .activity_success,
 .activity_fail,
@@ -6831,14 +6833,16 @@ figure.element figcaption p {
 }
 .activity_fail,
 .activity_success,
-.activity_warning {
+.activity_warning,
+.activity_fail_warning {
   margin: 10px -2em 10px -70px;
   padding: 5px 2em 5px 70px;
 }
 @media screen and (max-width: 620px) {
   .activity_fail,
   .activity_success,
-  .activity_warning {
+  .activity_warning,
+  .activity_fail_warning {
     margin-left: -2em;
     padding-left: 2em;
   }
@@ -6847,44 +6851,24 @@ figure.element figcaption p {
   display: none;
 }
 .activity_text .correct,
-.activity_text .wrong {
+.activity_text .changed.wrong {
   position: relative;
 }
 .activity_text .correct:after,
-.activity_text .wrong:after {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  font-size: 32px;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.activity_text .changed.wrong:after {
   display: block;
-  color: #fff;
-  font-size: 18px;
-  text-align: center;
-  height: 2rem;
-  border-radius: 2rem;
   position: absolute;
   top: 50%;
-  margin-top: -0.75rem;
-  width: 2rem;
-  line-height: 2rem;
-  right: -2rem;
-  background: #9aca3c;
-  content: "\e613";
+  margin-top: -15px;
+  width: 30px;
+  height: 30px;
+  right: -40px;
+  content: " ";
+  background: url(../images/correct.svg) no-repeat;
+  background-size: 30px 30px;
 }
-.activity_text .wrong:after {
-  content: "x";
-  background: transparent;
-  border: 4px solid #ef563c;
-  color: #ef563c;
-  line-height: 1;
-  font-weight: bold;
+.activity_text .changed.wrong:after {
+  background: url(../images/wrong.svg) no-repeat;
 }
 .activity_text.activity_text__Paragraph .correct:after,
 .activity_text.activity_text__Replace .correct:after,
