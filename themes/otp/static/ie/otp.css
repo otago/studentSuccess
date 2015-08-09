@@ -1652,7 +1652,15 @@ figure.element figcaption {
 }
 .activity_results span {
   font-size: 128px;
-  padding-right: 56px;
+  padding-right: 104px;
+}
+.activity_results span:after {
+  width: 64px;
+  height: 64px;
+  right: 40px;
+}
+.activity_results span.wrong {
+  padding-left: 32px;
 }
 .activity_text.activity_text__Paragraph .correct:after,
 .activity_text.activity_text__Replace .correct:after,

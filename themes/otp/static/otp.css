@@ -6658,16 +6658,21 @@ figure.element figcaption p {
 }
 .activity_header .preicon {
   position: absolute;
-  top: 50%;
+  top: 1em;
   z-index: 3;
   margin-left: 50px;
   padding-right: 9px;
   border-right: 1px solid rgba(255, 255, 255, 0.3);
-  margin-top: -8px;
   height: 20px;
   color: #fff;
   font-size: 18px;
   font-weight: bold;
+}
+@media screen and (max-width: 620px) {
+  .activity_header .preicon {
+    margin-top: -8px;
+    top: 50%;
+  }
 }
 .activity_header .preicon svg {
   height: 18px;
@@ -6731,7 +6736,7 @@ figure.element figcaption p {
   background: #095b93;
 }
 .activity_navigation .btn.loading {
-  background: #095b93 url;
+  background: #095b93;
   opacity: 0.2;
 }
 .activity_navigation .btn .arr {
@@ -6799,22 +6804,25 @@ figure.element figcaption p {
   color: #0c79c3;
   font-weight: bold;
   position: relative;
-  padding-right: 3.5rem;
+  padding-right: 6.5rem;
 }
 .activity_results span:after {
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 4rem;
+  height: 4rem;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 2.5rem;
   content: " ";
 }
 .activity_results span.right:after {
-  background: url(../../images/correct.svg);
+  background: url(../images/correct.svg);
+}
+.activity_results span.wrong {
+  padding-left: 2rem;
 }
 .activity_results span.wrong:after {
-  background: url(../../images/wrong.svg);
+  background: url(../images/activity_wrong_results.svg);
 }
 .activity_success,
 .activity_fail,
@@ -6828,7 +6836,7 @@ figure.element figcaption p {
   color: #fff;
 }
 .activity_success {
-  background: #9aca3c;
+  background: #08c04e;
   color: #fff;
 }
 .activity_fail,
@@ -6895,7 +6903,7 @@ figure.element figcaption p {
 .activity_individual.readonly .activity_text li.correct:focus,
 .activity_individual.readonly .activity_text li.changed.correct:hover,
 .activity_individual.readonly .activity_text li.changed.correct:focus {
-  background-color: #9aca3c;
+  background-color: #08c04e;
   color: #fff;
 }
 .activity_individual.readonly .activity_text__Replace li:hover,

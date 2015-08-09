@@ -371,6 +371,10 @@ if(typeof app === 'undefined') { var app = {}; }
 							} else {
 								if(step.find('.activity_success').length > 0) {
 									canProgress = false;
+									
+									step.find('[data-validation=correct]').addClass('correct');
+									step.find('[data-validation=wrong]').addClass('wrong');
+
 									step.find('.activity_success').show();
 								} else {
 									canProgress = true;
