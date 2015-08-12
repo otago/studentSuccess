@@ -6515,6 +6515,10 @@ figure.element figcaption p {
   background-color: #08c04e;
   color: #fff;
 }
+.activity_text.activity_text__DragAndDropToMatch .wrong {
+  background-color: #EF563C;
+  color: #fff;
+}
 .activity_text.activity_text__Replace li.correct,
 .activity_text.activity_text__Replace li.changed.wrong {
   color: #404041;
@@ -6859,11 +6863,11 @@ figure.element figcaption p {
   display: none;
 }
 .activity_text .correct,
-.activity_text .changed.wrong {
+.activity_text .wrong {
   position: relative;
 }
 .activity_text .correct:after,
-.activity_text .changed.wrong:after {
+.activity_text .wrong:after {
   display: block;
   position: absolute;
   top: 50%;
@@ -6875,7 +6879,7 @@ figure.element figcaption p {
   background: url(../images/correct.svg) no-repeat;
   background-size: 30px 30px;
 }
-.activity_text .changed.wrong:after {
+.activity_text .wrong:after {
   background: url(../images/wrong.svg) no-repeat;
 }
 .activity_text.activity_text__Paragraph .correct:after,

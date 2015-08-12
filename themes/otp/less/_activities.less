@@ -87,6 +87,13 @@
 		}
 	}
 
+	&.activity_text__DragAndDropToMatch {
+		.wrong {
+			background-color: #EF563C;
+			color: #fff;
+		}
+	}
+
 	&.activity_text__Replace {
 		li.correct,
 		li.changed.wrong {
@@ -491,7 +498,7 @@
 
 .activity_text {
 	.correct,
-	.changed.wrong {
+	.wrong {
 		position: relative;
 
 		&:after {
@@ -508,7 +515,7 @@
 		}
 	}
 
-	.changed.wrong {
+	.wrong {
 		&:after {
 			background: url(../images/wrong.svg) no-repeat;
 		}

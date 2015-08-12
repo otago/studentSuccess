@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by Nivanka Fonseka (nivanka@silverstripers.com).
- * User: nivankafonseka
- * Date: 5/13/15
- * Time: 7:52 PM
- * To change this template use File | Settings | File Templates.
- */
 
 class OTPConfigs extends DataExtension {
 
@@ -47,9 +40,6 @@ class OTPConfigs extends DataExtension {
 			TextareaField::create('AddressCol2'),
 			TextareaField::create('AddressCol3')
 		));
-
-
-
 	}
 
 
