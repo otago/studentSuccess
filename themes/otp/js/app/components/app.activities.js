@@ -251,18 +251,22 @@ if(typeof app === 'undefined') { var app = {}; }
 
 						answers.each(function(x, answer) {
 							options.each(function(o, opt) {
-								if(($(opt).text() == $(answer).text()) && !$(opt).hasClass('selected')) {
-									isValidAnswer = false;
-									valid = false;
+								if(($(opt).text() == $(answer).text())) {
+									$(opt).addClass('correctAnswer');
+									
+									if(!$(opt).hasClass('selected')) {
+										isValidAnswer = false;
+										valid = false;
 
-									if(attempt >= allowedAttempts) {
-										if(showResults) {
-											$(opt).removeClass('correct');
-											$(opt).addClass('wrong');
+										if(attempt >= allowedAttempts) {
+											if(showResults) {
+												$(opt).removeClass('correct');
+												$(opt).addClass('wrong');
+											}
 										}
-									}
 
-									$(opt).attr('data-validation', 'wrong');
+										$(opt).attr('data-validation', 'wrong');
+									}
 								}
 							});
 						});
@@ -397,7 +401,7 @@ if(typeof app === 'undefined') { var app = {}; }
 						// this slide is a results slide so go through each of the previous steps and get the count of
 						// valid and invalid results.
 
-						var existing = nextStep.find('.results');
+						var existing = nextStep.find('.activity_results');
 
 						if(existing.length < 1) {
 							existing = $("<div class='activity_results'><span class='right'></span><span class='wrong'></span></div>");

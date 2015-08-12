@@ -6466,6 +6466,9 @@ figure.element figcaption p {
     padding-left: 0;
   }
 }
+.activity_text ul {
+  max-width: 80%;
+}
 .activity_text li {
   list-style: none;
   padding: 1em;
@@ -6862,10 +6865,12 @@ figure.element figcaption p {
 .activity_content__answer {
   display: none;
 }
+.activity_text .correctAnswer,
 .activity_text .correct,
 .activity_text .wrong {
   position: relative;
 }
+.activity_text .correctAnswer:after,
 .activity_text .correct:after,
 .activity_text .wrong:after {
   display: block;
@@ -6880,7 +6885,20 @@ figure.element figcaption p {
   background-size: 30px 30px;
 }
 .activity_text .wrong:after {
+  display: none;
   background: url(../images/wrong.svg) no-repeat;
+}
+.activity_text .correctAnswer:after {
+  display: none;
+  background: url(../images/correct.svg) no-repeat;
+}
+.activity_text .changed.wrong:after {
+  display: block;
+  background: url(../images/wrong.svg) no-repeat;
+}
+.activity_text .activity_text__DragAndDropToMatch .wrong:after,
+.activity_text .activity_text__DragAndDrop .wrong:after {
+  display: block;
 }
 .activity_text.activity_text__Paragraph .correct:after,
 .activity_text.activity_text__Replace .correct:after,
@@ -6889,6 +6907,15 @@ figure.element figcaption p {
   left: 50%;
   top: -1.5rem;
   margin-left: -0.75rem;
+}
+.activity_individual.readonly .activity_text__SingleChoice .correctAnswer,
+.activity_individual.readonly .activity_text__MultiChoice .correctAnswer {
+  background-color: #08c04e;
+  color: #fff;
+}
+.activity_individual.readonly .activity_text__SingleChoice .correctAnswer:after,
+.activity_individual.readonly .activity_text__MultiChoice .correctAnswer:after {
+  display: block;
 }
 .activity_individual.readonly .activity_text li:hover,
 .activity_individual.readonly .activity_text li:focus {

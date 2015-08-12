@@ -35,6 +35,10 @@
 		}
 	}
 
+	ul {
+		max-width: 80%;
+	}
+
 	li {
 		list-style: none;
 		padding: 1em;
@@ -497,6 +501,7 @@
 }
 
 .activity_text {
+	.correctAnswer,
 	.correct,
 	.wrong {
 		position: relative;
@@ -517,7 +522,31 @@
 
 	.wrong {
 		&:after {
+			display: none;
 			background: url(../images/wrong.svg) no-repeat;
+		}
+	}
+
+
+	.correctAnswer {
+		&:after {
+			display: none;
+			background: url(../images/correct.svg) no-repeat;
+		}
+	}
+
+
+	.changed.wrong {
+		&:after {
+			display: block;
+			background: url(../images/wrong.svg) no-repeat;
+		}
+	}
+
+	.activity_text__DragAndDropToMatch,
+	.activity_text__DragAndDrop {
+		.wrong:after {
+			display: block;
 		}
 	}
 
@@ -535,6 +564,18 @@
 }
 
 .activity_individual.readonly {
+	.activity_text__SingleChoice,
+	.activity_text__MultiChoice {
+		.correctAnswer {
+			background-color: @activitygreen;
+			color: #fff;
+
+			&:after {
+				display: block;	
+			}
+		}
+	}
+
 	.activity_text li {
 		&:hover,
 		&:focus {
