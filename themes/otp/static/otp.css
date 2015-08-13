@@ -7110,6 +7110,14 @@ footer.main .container.addresses address.middle {
     width: 100%;
   }
 }
+.creativecommons {
+  padding: 30px 0 30px;
+}
+.creativecommons p {
+  opacity: 0.7;
+  max-width: 300px;
+  font-size: 14px;
+}
 .drop-menu {
   background: #f7f7f6;
   padding: 5rem 0 5rem;

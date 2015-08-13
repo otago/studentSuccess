@@ -39,6 +39,12 @@
             <% if $AddressCol2 %><address class="col middle">{$AddressCol2HTML}</address><% end_if %>
             <% if $AddressCol3 %><address class="col">{$AddressCol3HTML}</address><% end_if %>
         </section>
+
+        <section class="container creativecommons">
+            <img src="themes/otp/images/cc.png" alt="Creative Commons" />
+            <p>Except where otherwise noted, content on this site is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license</a>.</p>
     </div>
+
+    <
     <% end_with %>
 </footer>
