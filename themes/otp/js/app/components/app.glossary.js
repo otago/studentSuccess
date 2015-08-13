@@ -20,9 +20,11 @@ if(typeof app === 'undefined') { var app = {}; }
             
             items.each(function(i, elem) {
                 if($(elem).find('h4')) {
+                    var itemName = $(elem).find('h4').text().replace('(', ' ').replace(')', ' ');
+                    console.log(itemName);
                     list.push({
                         "id": i,
-                        "name": $(elem).find('h4').text()
+                        "name": itemName
                     });
                 }
             });
@@ -42,6 +44,7 @@ if(typeof app === 'undefined') { var app = {}; }
 
                 $('.glossary-letter').filter(':visible').first().find('.title-c a').trigger('click');
             });
+
 
             $(".keywords").tokenInput(list, {
                 hintText: 'Search by keyword',
