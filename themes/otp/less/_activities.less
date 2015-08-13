@@ -29,6 +29,13 @@
 	padding-top: 2rem;
 	margin-bottom: 20px;
 
+	&.activity_text__Paragraph {
+		ul {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
 	@media screen and (max-width: 620px) {
 		ul {
 			padding-left: 0;
@@ -42,6 +49,7 @@
 	li {
 		list-style: none;
 		padding: 1em;
+		white-space: pre;
 		background: #eee;
 		display: block;
 		font-size: 20px;
@@ -564,18 +572,6 @@
 }
 
 .activity_individual.readonly {
-	.activity_text__SingleChoice,
-	.activity_text__MultiChoice {
-		.correctAnswer {
-			background-color: @activitygreen;
-			color: #fff;
-
-			&:after {
-				display: block;	
-			}
-		}
-	}
-
 	.activity_text li {
 		&:hover,
 		&:focus {
@@ -607,6 +603,31 @@
 			cursor: default;
 			background: transparent;
 			color: rgb(64, 64, 65);
+		}
+	}
+
+	.activity_text__SingleChoice,
+	.activity_text__MultiChoice,
+	.activity_text__Paragraph {
+		.correctAnswer {
+			background-color: @activitygreen;
+			color: #fff;
+
+			&:after {
+				display: block;	
+			}
+
+			&:hover,
+			&:focus {
+				background-color: @activitygreen;
+				color: #fff;
+			}
+		}
+
+		li.correctAnswer:hover,
+		li.correctAnswer:focus {
+			background-color: @activitygreen;
+			color: #fff;
 		}
 	}
 }

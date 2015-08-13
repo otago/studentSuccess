@@ -135,6 +135,9 @@ table th.main {
   font-size: 24px;
   line-height: 32px;
 }
+.carousel h4 {
+  font-size: 20px;
+}
 .carousel .flex-control-nav {
   bottom: 16px;
 }
@@ -174,6 +177,9 @@ table th.main {
     font-size: 46px;
     line-height: 46px;
   }
+}
+.carousel .slides li.title-content .wrapper .content {
+  padding-bottom: 48px;
 }
 .carousel .slides li.title-content .wrapper h2 {
   font-size: 80px;
@@ -437,7 +443,10 @@ table th.main {
 }
 @media screen and (max-width: 660px) {
   .logo {
-    padding-bottom: 30px;
+    padding-bottom: 14px;
+  }
+  .logo a {
+    height: 48px;
   }
   .logo a img {
     width: 60px;
@@ -519,7 +528,7 @@ table th.main {
 }
 @media screen and (max-width: 660px) {
   .main.opened nav .level-1 {
-    padding-top: 162px;
+    padding-top: 96px;
   }
   .main.opened nav .level-1 li {
     font-size: 14px;
@@ -1711,7 +1720,7 @@ footer.main .container.addresses address {
     margin-bottom: 16px;
   }
 }
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 720px) {
   footer.main .container .col {
     margin-bottom: 16px;
   }
@@ -1719,7 +1728,7 @@ footer.main .container.addresses address {
 .drop-menu {
   padding: 80px 0 80px;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 660px) {
   .drop-menu {
     padding: 24px 0 30px;
   }

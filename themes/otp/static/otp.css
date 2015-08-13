@@ -1590,6 +1590,15 @@ table tr:last-child {
 .carousel p {
   color: #ffffff;
 }
+.carousel h4 {
+  margin-bottom: 0.2em;
+  font-size: 1.250rem;
+}
+.carousel p,
+.carousel .content {
+  font-size: 18px;
+  line-height: 28px;
+}
 .carousel a:hover,
 .carousel a:focus {
   text-decoration: underline;
@@ -1743,6 +1752,13 @@ table tr:last-child {
     font-size: 2.875rem;
     line-height: 2.875rem;
   }
+}
+.carousel .slides li.title-content .wrapper {
+  text-align: center;
+}
+.carousel .slides li.title-content .wrapper .content {
+  margin: 0 auto;
+  padding-bottom: 3rem;
 }
 .carousel .slides li.title-content .wrapper h2 {
   font-size: 5rem;
@@ -2032,6 +2048,10 @@ table tr:last-child {
 }
 .smart-slide .carousel .slides li.title-content-compact .holder {
   overflow: hidden;
+}
+.smart-slide .carousel .slides li.title-content-compact .content {
+  text-align: center;
+  margin: 0 auto;
 }
 .smart-slide .carousel .slides .content {
   padding-bottom: 2rem;
@@ -2614,7 +2634,11 @@ table tr:last-child {
 @media screen and (max-width: 660px) {
   .logo {
     height: auto;
-    padding-bottom: 1.875rem;
+    padding-bottom: 0.9rem;
+  }
+  .logo a {
+    height: 3rem;
+    overflow: hidden;
   }
   .logo a img {
     width: 3.75rem;
@@ -2643,7 +2667,7 @@ table tr:last-child {
 }
 @media screen and (max-width: 660px) {
   .main nav {
-    height: 112px;
+    height: 75px;
   }
 }
 .main nav a {
@@ -2895,7 +2919,7 @@ table tr:last-child {
     display: block;
     position: relative;
     background: #0c79c3;
-    padding-top: 10.125rem;
+    padding-top: 6rem;
     padding-bottom: 0;
     clear: both;
   }
@@ -6461,6 +6485,10 @@ figure.element figcaption p {
   padding-top: 2rem;
   margin-bottom: 20px;
 }
+.activity_text.activity_text__Paragraph ul {
+  padding-left: 0;
+  padding-right: 0;
+}
 @media screen and (max-width: 620px) {
   .activity_text ul {
     padding-left: 0;
@@ -6472,6 +6500,7 @@ figure.element figcaption p {
 .activity_text li {
   list-style: none;
   padding: 1em;
+  white-space: pre;
   background: #eee;
   display: block;
   font-size: 20px;
@@ -6908,15 +6937,6 @@ figure.element figcaption p {
   top: -1.5rem;
   margin-left: -0.75rem;
 }
-.activity_individual.readonly .activity_text__SingleChoice .correctAnswer,
-.activity_individual.readonly .activity_text__MultiChoice .correctAnswer {
-  background-color: #08c04e;
-  color: #fff;
-}
-.activity_individual.readonly .activity_text__SingleChoice .correctAnswer:after,
-.activity_individual.readonly .activity_text__MultiChoice .correctAnswer:after {
-  display: block;
-}
 .activity_individual.readonly .activity_text li:hover,
 .activity_individual.readonly .activity_text li:focus {
   cursor: default;
@@ -6942,6 +6962,35 @@ figure.element figcaption p {
   cursor: default;
   background: transparent;
   color: #404041;
+}
+.activity_individual.readonly .activity_text__SingleChoice .correctAnswer,
+.activity_individual.readonly .activity_text__MultiChoice .correctAnswer,
+.activity_individual.readonly .activity_text__Paragraph .correctAnswer {
+  background-color: #08c04e;
+  color: #fff;
+}
+.activity_individual.readonly .activity_text__SingleChoice .correctAnswer:after,
+.activity_individual.readonly .activity_text__MultiChoice .correctAnswer:after,
+.activity_individual.readonly .activity_text__Paragraph .correctAnswer:after {
+  display: block;
+}
+.activity_individual.readonly .activity_text__SingleChoice .correctAnswer:hover,
+.activity_individual.readonly .activity_text__MultiChoice .correctAnswer:hover,
+.activity_individual.readonly .activity_text__Paragraph .correctAnswer:hover,
+.activity_individual.readonly .activity_text__SingleChoice .correctAnswer:focus,
+.activity_individual.readonly .activity_text__MultiChoice .correctAnswer:focus,
+.activity_individual.readonly .activity_text__Paragraph .correctAnswer:focus {
+  background-color: #08c04e;
+  color: #fff;
+}
+.activity_individual.readonly .activity_text__SingleChoice li.correctAnswer:hover,
+.activity_individual.readonly .activity_text__MultiChoice li.correctAnswer:hover,
+.activity_individual.readonly .activity_text__Paragraph li.correctAnswer:hover,
+.activity_individual.readonly .activity_text__SingleChoice li.correctAnswer:focus,
+.activity_individual.readonly .activity_text__MultiChoice li.correctAnswer:focus,
+.activity_individual.readonly .activity_text__Paragraph li.correctAnswer:focus {
+  background-color: #08c04e;
+  color: #fff;
 }
 footer.main {
   background: #0c79c3;
@@ -7089,7 +7138,7 @@ footer.main .container.addresses address.middle {
     width: 50%;
   }
 }
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 720px) {
   footer.main .container .col {
     width: 100%;
     margin-bottom: 1rem;
@@ -7117,13 +7166,14 @@ footer.main .container.addresses address.middle {
   opacity: 0.7;
   max-width: 300px;
   font-size: 14px;
+  line-height: 20px;
 }
 .drop-menu {
   background: #f7f7f6;
   padding: 5rem 0 5rem;
   display: none;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 660px) {
   .drop-menu {
     padding: 1.5rem 0 1.875rem;
   }
@@ -7161,6 +7211,11 @@ footer.main .container.addresses address.middle {
 @media screen and (max-width: 980px) {
   .drop-menu .container {
     padding: 0 1.75rem;
+  }
+}
+@media screen and (max-width: 660px) {
+  .drop-menu .container {
+    padding: 0;
   }
 }
 .drop-menu .container .left {
