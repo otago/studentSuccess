@@ -9,8 +9,6 @@ $database = (defined('SS_DATABASE_NAME')) ? SS_DATABASE_NAME : 'op3';
 
 require_once("conf/ConfigureFromEnv.php");
 
-FulltextSearchable::enable();
-
 //
 
 $arrStyles = array(
