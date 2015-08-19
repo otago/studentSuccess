@@ -32,4 +32,4 @@
 
 <script type="text/javascript" src="{$ThemeDir}/js/app/app.js"></script>
 -->
-<script type="text/javascript" src="{$ThemeDir}/static/combined.js"></script>
+<script type="text/javascript" src="{$ThemeDir}/static/combined.min.js"></script>
