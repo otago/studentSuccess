@@ -8,12 +8,11 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 		var smartItems = $('.smart-slider');
 		
 		var  initSmartSlider = function(holder){
-            var holderRef = holder;
             var top = holder.closest('.smart-slide');
             var letters = top.find('.slide-letters li');
             top.find('.slide-letters li:first-child').addClass('active');
 			
-			var slider = holder.flexslider({
+			holder.flexslider({
 				animation 	    : 'slide',
 				smoothHeight	: false,
 				prevText		: "",
@@ -66,7 +65,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 		
 		var init = function () {
 			function setEqualHeight(selector) {
-	      		var heights = new Array();
+	      		var heights = [];
 
 	       		 $(selector).each(function() {
 					$(this).css('min-height', '0');

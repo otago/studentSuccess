@@ -4,6 +4,7 @@
  * Follow README.md to get started
  */
 module.exports = function(grunt) {
+    "use strict";
 
     /**
      * Load all grunt tasks.
@@ -97,13 +98,6 @@ module.exports = function(grunt) {
             }
         },
 
-        jscs: {
-            src: [ '<%= jshint.files %>' ],
-            options: {
-                config: ".jscs.json"
-            }
-        },
-
         concat: {
             options: {
                 separator: ';',
@@ -121,7 +115,8 @@ module.exports = function(grunt) {
                     '<%= jsPath %>/thirdparty/fancybox/source/jquery.fancybox.pack.js',
                     '<%= jsPath %>/thirdparty/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6',
                     '<%= jsPath %>/thirdparty/cookie/jquery.cookie.js',
-					'<%= jsPath %>/thirdparty/picturefill.min.js'
+					'<%= jsPath %>/thirdparty/jquery.ui.touch-punch.min.js',
+                    '<%= jsPath %>/thirdparty/picturefill.min.js'
                 ],
                 dest: '<%= assetPath %>/thirdparty.js'
             },
@@ -160,8 +155,7 @@ module.exports = function(grunt) {
         watch: {
             lint: {
                 files: [
-                    '<%= assetPath %>/app/components/*.js',
-                    '<%= assetPath %>/app/app.js'
+                    '<%= jsPath %>/**/*.js',
                 ],
                 tasks: [ 'build:js', 'uglify' ]
             },
@@ -188,7 +182,6 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build:js', [
         'jshint',
-        'jscs',
         'concat',
         'uglify'
     ]);
@@ -197,6 +190,7 @@ module.exports = function(grunt) {
         'build:css',
         'build:js'
     ]);
+
     grunt.registerTask('default', [
         'build'
     ]);

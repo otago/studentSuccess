@@ -1,5 +1,4 @@
 <footer class='main'>
-
     <% with $SiteConfig %>
     <section class='container'>
 
@@ -42,9 +41,8 @@
 
         <section class="container creativecommons">
             <img src="themes/otp/images/cc.png" alt="Creative Commons" />
-            <p>Except where otherwise noted, content on this site is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license</a>.</p>
+            <p>Except where otherwise noted, content on this site is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license</a>. However, all images and Otago Polytechnic videos are copyrighted.</p>
+        </section>
     </div>
-
-    <
     <% end_with %>
 </footer>

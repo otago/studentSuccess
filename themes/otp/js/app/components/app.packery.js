@@ -37,7 +37,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
                     }
                 });
             } else {
-                if($(this).data('target') == '_blank') {
+                if($(this).data('target') === '_blank') {
                     var win = window.open($(this).attr('href'), '_blank');
                     win.focus();
                 } else {
@@ -143,7 +143,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
                 }).get().join());
             }
 
-            if(sort == 'views') {
+            if(sort === 'views') {
                 sortAscending = false;
             }
 
@@ -311,7 +311,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
                 var sort = $('body').find('select.sort-filter').val();
                 var sortAscending = true;
 
-                if(sort == 'views') {
+                if(sort === 'views') {
                     sortAscending = false;
                 }
 

@@ -1,11 +1,10 @@
 if(typeof app === 'undefined') { var app = {}; }
 
-(function($){
-
-    app.svgpng = (function(){
-
-        var can = function(){
-            return !Modernizr.svg;
+(function($) {
+    app.svgpng = (function() {
+        var can = function() {
+            var Modernizr = Modernizr || undefined;
+            return (typeof Modernizr !== "undefined" && !Modernizr.svg);
         };
 
         var init = function (){

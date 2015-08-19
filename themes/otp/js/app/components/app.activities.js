@@ -13,7 +13,7 @@ if(typeof app === 'undefined') { var app = {}; }
 
 				$(this).parents('.activity_content').fadeOut(function() {
 					$('.activity_content__answer').each(function(i, elem) {
-						if($(elem).data('answer-id') == id) {
+						if($(elem).data('answer-id') === id) {
 							$(elem).fadeIn();
 						}
 					});
@@ -40,7 +40,9 @@ if(typeof app === 'undefined') { var app = {}; }
 					text = step.find('.activity_text'),
 					nextStep = step.next('.activity_individual'),
 					options = text.find('ul:not(.labels) > li'),
-					canProgress = true;
+					canProgress = true,
+					currentProgress,
+					isValidAnswer;
 
 				if($(this).hasClass('back') && !$(this).hasClass('review')) {
 					nextStep = step.prev('.activity_individual');
@@ -50,7 +52,7 @@ if(typeof app === 'undefined') { var app = {}; }
 					// in reverse.
 					//
 					// progress the top count
-					var currentProgress = $(".activity_header .progress .current");
+					currentProgress = $(".activity_header .progress .current");
 
 					currentProgress
 						.removeClass('current').parents('li').prev('li').find('a')
@@ -183,7 +185,7 @@ if(typeof app === 'undefined') { var app = {}; }
 				// the end. If this is the last stop then we need to populate
 				// the 
 				var validationModel = activity.data('validation-method');
-				var showResults = (validationModel == "OnEachStep");
+				var showResults = (validationModel === "OnEachStep");
 
 				// validate the users current step first. Ensure that 
 				// options exist.
@@ -196,15 +198,19 @@ if(typeof app === 'undefined') { var app = {}; }
 
 				var answers = step.find('.activity_answers li');
 
-				if(!attempt) attempt = 0;
+				if(!attempt) {
+					attempt = 0;
+				}
+
 				attempt++;
 
 				step.data('attempt', attempt);
+				var selected;
 
 				if(options.length > 1) {
 					if(step.find('.activity_text__SelectAny').length > 0) {
 						// user must select at least one option.
-						var selected = options.filter('.selected');
+						selected = options.filter('.selected');
 
 						if(selected.length < 1) {
 							valid = false;
@@ -216,13 +222,13 @@ if(typeof app === 'undefined') { var app = {}; }
 						valid = true;
 					}
 					else if(step.find('.activity_text__MultiChoice').length > 0 || step.find('.activity_text__SingleChoice').length || step.find('.activity_text__Paragraph').length > 0) {
-						var selected = options.filter('.selected');
+						selected = options.filter('.selected');
 
 						selected.each(function(i,  check) {
-							var isValidAnswer = false;
+							isValidAnswer = false;
 
 							answers.each(function(x, answer) {
-								if($(answer).text() == $(check).text()) {
+								if($(answer).text() === $(check).text()) {
 									isValidAnswer = true;
 								}
 							});
@@ -251,7 +257,7 @@ if(typeof app === 'undefined') { var app = {}; }
 
 						answers.each(function(x, answer) {
 							options.each(function(o, opt) {
-								if(($(opt).text() == $(answer).text())) {
+								if(($(opt).text() === $(answer).text())) {
 									$(opt).addClass('correctAnswer');
 									
 									if(!$(opt).hasClass('selected')) {
@@ -277,7 +283,7 @@ if(typeof app === 'undefined') { var app = {}; }
 						}
 					} else if(step.find('.activity_text__Replace').length > 0) {
 						options.filter('.replaceable').each(function(i, elem) {
-							if($(answers.get(i)).text() != $(elem).text()) {
+							if($(answers.get(i)).text() !== $(elem).text()) {
 								valid = false;
 
 								if(attempt >= allowedAttempts) {
@@ -309,7 +315,7 @@ if(typeof app === 'undefined') { var app = {}; }
 						}
 					} else if(step.find('.activity_text__DragAndDrop').length > 0 || step.find('.activity_text__DragAndDropToMatch').length > 0) {
 						options.each(function(i, elem) {
-							if($(answers.get(i)).text() != $(elem).text()) {
+							if($(answers.get(i)).text() !== $(elem).text()) {
 								valid = false;
 
 								if(attempt >= allowedAttempts) {
@@ -391,7 +397,7 @@ if(typeof app === 'undefined') { var app = {}; }
 				// all valid so do the form animation
 				if(canProgress) {
 					// progress the top count
-					var currentProgress = $(".activity_header .progress .current");
+					currentProgress = $(".activity_header .progress .current");
 
 					currentProgress
 						.removeClass('current').parents('li').next('li').find('a')
@@ -409,8 +415,9 @@ if(typeof app === 'undefined') { var app = {}; }
 							nextStep.find('h3').after(existing);
 						}
 
-						var steps = activity.find('.activity_individual'),
-							right = 0,
+						steps = activity.find('.activity_individual');
+						
+						var right = 0,
 							wrong = 0;
 
 						steps.each(function(i, elem) {
@@ -442,21 +449,23 @@ if(typeof app === 'undefined') { var app = {}; }
 						btn.siblings('.back').removeClass('hidden');
 
 						var remaining = nextStep.nextAll('.activity_individual').length;
-						if(remaining < 1) {
+						if(remaining < 1 && nextStep.hasClass('activity_ResultsSlide')) {
 							activity.addClass('readonly');
 							markReadonly();
 
-							if(validationModel == "OnComplete") {
+							if(validationModel === "OnComplete") {
 								// add a button to see your results
 								btn.text('See correct answers').addClass('review');
 								btn.siblings('.back').addClass('review').addClass('hidden');
 							} else {
 								btn.addClass('hidden');
 							}
-						} else if(remaining == 1) {
+						} else if(remaining === 1) {
 							btn.html('Finish');
-						} else {
+						} else if(remaining > 0) {
 							btn.html("Next");
+						} else {
+							btn.addClass('hidden');
 						}
 
 						btn.removeClass('loading');
@@ -533,7 +542,10 @@ if(typeof app === 'undefined') { var app = {}; }
 					}
 
 					$(this).toggleClass('selected');
+					$(this).toggleClass('changed');
+
 					$(this).siblings('.selected').removeClass('selected');
+					$(this).siblings('.changed').removeClass('changed');
 
 					$(this).parents('.activity').find(".activity_navigation .next").click();
 				});

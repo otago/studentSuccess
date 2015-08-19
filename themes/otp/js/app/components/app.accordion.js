@@ -1,7 +1,8 @@
 if(typeof app === 'undefined') { var app = {}; }
 
 (function($){
-	
+	"use strict";
+
 	app.accordion = (function(){
 		
 		var items = $('.accordion-c');

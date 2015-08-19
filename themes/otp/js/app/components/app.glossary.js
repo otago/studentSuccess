@@ -2,14 +2,8 @@
 if(typeof app === 'undefined') { var app = {}; }
 
 (function($){
-
     app.glossary = (function() {
         var items = $('.glossary-item');
-
-        var searchGlossary = function(){
-		
-
-        };
 
         var can = function(){
             return items.length > 0;
@@ -21,7 +15,6 @@ if(typeof app === 'undefined') { var app = {}; }
             items.each(function(i, elem) {
                 if($(elem).find('h4')) {
                     var itemName = $(elem).find('h4').text().replace('(', ' ').replace(')', ' ');
-                    console.log(itemName);
                     list.push({
                         "id": i,
                         "name": itemName
@@ -37,7 +30,7 @@ if(typeof app === 'undefined') { var app = {}; }
                 items.each(function(i, elem) {
                     var matches = $(elem).text().toLowerCase().indexOf(input.toLowerCase());
                     
-                    if(matches != -1) {
+                    if(matches !== -1) {
                         $(elem).parents('.glossary-letter').show();
                     }
                 });

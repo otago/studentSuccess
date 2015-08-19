@@ -1,4 +1,4 @@
-
+<!--
 <script type='text/javascript' src='{$ThemeDir}/js/thirdparty/jquery.js'></script>
 <script type='text/javascript' src='{$ThemeDir}/js/thirdparty/fancybox/lib/jquery.mousewheel-3.0.6.pack.js'></script>
 <script type='text/javascript' src='{$ThemeDir}/js/thirdparty/imagesloaded.js'></script>
@@ -10,7 +10,7 @@
 <script type='text/javascript' src='{$ThemeDir}/js/thirdparty/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6'></script>
 <script type='text/javascript' src='{$ThemeDir}/js/thirdparty/cookie/jquery.cookie.js'></script>
 <script type='text/javascript' src='{$ThemeDir}/js/thirdparty/picturefill.min.js'></script>
-
+<script type='text/javascript' src='{$ThemeDir}/js/thirdparty/jquery.ui.touch-punch.min.js'></script>
 
 <script type='text/javascript' src='{$ThemeDir}/js/app/components/app.svgpng.js'></script>
 <script type='text/javascript' src='{$ThemeDir}/js/app/components/app.accordion.js'></script>
@@ -31,3 +31,5 @@
 <script type='text/javascript' src='{$ThemeDir}/js/app/components/app.activities.js'></script>
 
 <script type="text/javascript" src="{$ThemeDir}/js/app/app.js"></script>
+-->
+<script type="text/javascript" src="{$ThemeDir}/static/combined.js"></script>

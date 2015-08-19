@@ -56,7 +56,7 @@ if(typeof app === 'undefined') { var app = {}; }
 				}
 
 				$(elem).click(function(e) {
-					checkable = $(this).parents('.checkable');
+					var checkable = $(this).parents('.checkable');
 
 					if(checkable.hasClass('checked')) {
 						checkable.removeClass('checked');

@@ -48,7 +48,7 @@ if(typeof app === 'undefined') { var app = {}; }
 		var CheckALLSelected = function(item,parent) {
 			var allselected = true;
 			var selector = item.data('parent');
-			$('.'+selector+' ul li').each(function( index ){
+			$('.'+selector+' ul li').each(function(i){
 				
 				if(!$(this).hasClass('active')){
 					
@@ -155,7 +155,7 @@ if(typeof app === 'undefined') { var app = {}; }
 			
 			items.find('.desc li').each(function(i, elem) {
 				if(window.localStorage !== "undefined") {
-					if(localStorage.getItem($(elem).data('input')) == "true") {
+					if(localStorage.getItem($(elem).data('input')) === "true") {
 						toggleSecondLevels($(elem));
 					}
 				}

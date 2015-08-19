@@ -38,10 +38,10 @@ if(typeof app === 'undefined') { var app = {}; }
 				var id = $(this).data('id');
 				var cookieVal  = $.cookie('helpful'+id);
 
-				if(cookieVal == "yes") {
+				if(cookieVal === "yes") {
 					$(this).find('a.yes').addClass('active');
 				}
-				else if(cookieVal == "no") {
+				else if(cookieVal === "no") {
 					$(this).find('a.no').addClass('active');
 				}
 			});
