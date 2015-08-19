@@ -1064,13 +1064,20 @@ if(typeof app === 'undefined') { var app = {}; }
 
 (function($){
     app.glossary = (function() {
-        var items = $('.glossary-item');
+        var items = $('.glossary-item'),
+            inited = false;
 
         var can = function(){
             return items.length > 0;
         };
 
-        var init = function (){
+        var init = function () {
+            if(inited) {
+                return false;
+            }
+
+            inited = true;
+            
             var list = [];
             
             items.each(function(i, elem) {
@@ -1132,10 +1139,7 @@ if(typeof app === 'undefined') { var app = {}; }
             'init'			: init,
             'can'			: can
         };
-
     })();
-
-
 })(jQuery);;if(typeof app === 'undefined') { var app = {}; }
 
 (function($){
