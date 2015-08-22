@@ -1,4 +1,6 @@
-<!--
+<% if Top.UseProductionAssets %>
+<script type="text/javascript" src="{$ThemeDir}/static/combined.min.js"></script>
+<% else %>
 <script type='text/javascript' src='{$ThemeDir}/js/thirdparty/jquery.js'></script>
 <script type='text/javascript' src='{$ThemeDir}/js/thirdparty/fancybox/lib/jquery.mousewheel-3.0.6.pack.js'></script>
 <script type='text/javascript' src='{$ThemeDir}/js/thirdparty/imagesloaded.js'></script>
@@ -7,7 +9,7 @@
 <script type='text/javascript' src='{$ThemeDir}/js/thirdparty/chosen/chosen.jquery.min.js'></script>
 <script type='text/javascript' src='{$ThemeDir}/js/thirdparty/flexslider/jquery.flexslider-min.js'></script>
 <script type='text/javascript' src='{$ThemeDir}/js/thirdparty/fancybox/source/jquery.fancybox.pack.js'></script>
-<script type='text/javascript' src='{$ThemeDir}/js/thirdparty/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6'></script>
+<script type='text/javascript' src='{$ThemeDir}/js/thirdparty/fancybox/source/helpers/jquery.fancybox-media.js'></script>
 <script type='text/javascript' src='{$ThemeDir}/js/thirdparty/cookie/jquery.cookie.js'></script>
 <script type='text/javascript' src='{$ThemeDir}/js/thirdparty/picturefill.min.js'></script>
 <script type='text/javascript' src='{$ThemeDir}/js/thirdparty/jquery.ui.touch-punch.min.js'></script>
@@ -31,5 +33,4 @@
 <script type='text/javascript' src='{$ThemeDir}/js/app/components/app.activities.js'></script>
 
 <script type="text/javascript" src="{$ThemeDir}/js/app/app.js"></script>
--->
-<script type="text/javascript" src="{$ThemeDir}/static/combined.min.js"></script>
+<% end_if %>

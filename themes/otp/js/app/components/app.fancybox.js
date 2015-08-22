@@ -7,7 +7,6 @@ if(typeof app === 'undefined') { var app = {}; }
         var items = $('.fancybox-link');
 
         var initFancyBox = function() {
-
             items.fancybox({
                 openEffect : 'none',
                 closeEffect : 'none',
@@ -18,7 +17,7 @@ if(typeof app === 'undefined') { var app = {}; }
                 minHeight: 320,
                 arrows : false,
                 helpers : {
-                    media : {},
+                    media : true,
                     buttons : {}
                 },
                 afterShow: function() {

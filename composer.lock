@@ -182,12 +182,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dnadesign/silverstripe-elemental.git",
-                "reference": "f39551d6eefc2039d5e3ddb4e16adbc80085595f"
+                "reference": "992ba0ab6b6ff1de7e56e6e86d3c2c5d2f670f72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dnadesign/silverstripe-elemental/zipball/f39551d6eefc2039d5e3ddb4e16adbc80085595f",
-                "reference": "f39551d6eefc2039d5e3ddb4e16adbc80085595f",
+                "url": "https://api.github.com/repos/dnadesign/silverstripe-elemental/zipball/992ba0ab6b6ff1de7e56e6e86d3c2c5d2f670f72",
+                "reference": "992ba0ab6b6ff1de7e56e6e86d3c2c5d2f670f72",
                 "shasum": ""
             },
             "require": {

@@ -112,8 +112,8 @@ module.exports = function(grunt) {
                     '<%= jsPath %>/thirdparty/masonry/isotope.pkgd.min.js',
                     '<%= jsPath %>/thirdparty/chosen/chosen.jquery.min.js',
                     '<%= jsPath %>/thirdparty/flexslider/jquery.flexslider-min.js',
-                    '<%= jsPath %>/thirdparty/fancybox/source/jquery.fancybox.pack.js',
-                    '<%= jsPath %>/thirdparty/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6',
+                    '<%= jsPath %>/thirdparty/fancybox/source/jquery.fancybox.js',
+                    '<%= jsPath %>/thirdparty/fancybox/source/helpers/jquery.fancybox-media.js',
                     '<%= jsPath %>/thirdparty/cookie/jquery.cookie.js',
 					'<%= jsPath %>/thirdparty/jquery.ui.touch-punch.min.js',
                     '<%= jsPath %>/thirdparty/picturefill.min.js'
@@ -157,7 +157,7 @@ module.exports = function(grunt) {
                 files: [
                     '<%= jsPath %>/**/*.js',
                 ],
-                tasks: [ 'build:js', 'uglify' ]
+                tasks: [ 'build:js' ]
             },
             less: {
                 files: [ '<%= cssPath %>/*.less' ],
@@ -182,8 +182,8 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build:js', [
         'jshint',
-        'concat',
-        'uglify'
+        'concat'
+       // 'uglify'
     ]);
 
     grunt.registerTask('build', [
@@ -195,4 +195,7 @@ module.exports = function(grunt) {
         'build'
     ]);
 
+    grunt.registerTask('production', [
+        'uglify'
+    ]);
 };

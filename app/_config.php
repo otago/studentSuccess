@@ -46,4 +46,10 @@ Config::inst()->update('HomePage', 'allowed_elements', array(
 	'HearFromOthers'
 ));
 
+Config::inst()->remove('AccordionPage', 'allowed_elements');
+
+Config::inst()->update('AccordionPage', 'allowed_elements', array(
+	'Accordion'
+));
+
 Config::inst()->remove('FilterableChecklist', 'allowed_elements');

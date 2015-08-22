@@ -189,6 +189,12 @@ class Page extends SiteTree {
 		return $iTotal == 0 ? 'N/A' : intval(($this->HelpfulCounterYes / $iTotal) * 100) . ' %';
 	}
 
+	public function getUseProductionAssets() {
+		return false;
+		// disabled due to issue with modals.
+		// return (isset($_GET['production']) || Director::isLive());
+	}
+
 }
 
 class Page_Controller extends ContentController {

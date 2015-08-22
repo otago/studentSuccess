@@ -31,4 +31,12 @@ class Accordion extends BaseElement {
 	public function Elements() {
 		return $this->Items();
 	}
+
+	public function shouldCleanupElement($widget) {
+		if($widget->AccordionID == 0) {
+			return true;
+		}
+
+		return false;
+	}
 } 
