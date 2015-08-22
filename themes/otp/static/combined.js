@@ -14729,7 +14729,7 @@ if(typeof app === 'undefined') { var app = {}; }
             });
 
 
-            $(".keywords").tokenInput(list, {
+            $(".template_GlossaryPage .keywords").tokenInput(list, {
                 hintText: 'Search by keyword',
                 theme: 'mac',
                 tokenLimit: 1,
