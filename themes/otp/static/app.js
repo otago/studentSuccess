@@ -1786,7 +1786,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
                 }
             });
 
-            $(".keywords").tokenInput(list, {
+            $(".template_LandingSearchPage .keywords").tokenInput(list, {
                 hintText: 'Search by keyword',
                 theme: 'mac',
                 onAdd: function (item) {
