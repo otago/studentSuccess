@@ -52,7 +52,6 @@ if(typeof app === 'undefined') { var app = {}; }
                 tokenLimit: 1,
                 onAdd: function (item) {
                     // take the user to that accordion item
-
                     var heading = items.find('h4:contains('+ item.name+')');
                     var container = heading.parents('.glossary-letter');
 

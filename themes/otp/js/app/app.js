@@ -7,6 +7,7 @@
  * choose which one suits your project best!
  *
  */
+
 ;(function ($) {
   var DEFAULT_SETTINGS = {
     // Search settings
@@ -32,7 +33,7 @@
     animateDropdown: true,
     placeholder: null,
     theme: null,
-    zindex: 999,
+    zindex: 9999,
     resultsLimit: null,
 
     enableHTML: false,
@@ -248,7 +249,7 @@
       var input_val;
 
       // Create a new text input an attach keyup events
-      var input_box = $("<input type=\"text\" autocomplete=\"off\" placeholder=\"Search for keyword\" autocapitalize=\"off\"/>")
+      var input_box = $("<input placeholder=\"Search for Keyword\" type=\"text\" autocomplete=\"off\" autocapitalize=\"off\"/>")
           .css({
               outline: "none"
           })
@@ -287,7 +288,7 @@
                         next_token = input_token.next();
 
                         if((previous_token.length && previous_token.get(0) === selected_token) ||
-                           (next_token.length && next_token.get(0) === selected_token)) {
+               (next_token.length && next_token.get(0) === selected_token)) {
                             // Check if there is a previous/next token and it is selected
                             if(event.keyCode === KEY.LEFT || event.keyCode === KEY.UP) {
                                 deselect_token($(selected_token), POSITION.BEFORE);
@@ -1068,10 +1069,10 @@
       function focusWithTimeout(object) {
           setTimeout(
             function() {
-              object.focus();
+        object.focus();
             },
-            50
-          );
+      50
+      );
       }
   };
 
