@@ -11,7 +11,7 @@ class Accordion extends BaseElement {
 	);
 
 	private static $extensions = array(
-		'ElementPublishChildren'
+		'Accordion_ElementPublishChildren'
 	);
 
 	public function getCMSFields() {
@@ -40,3 +40,26 @@ class Accordion extends BaseElement {
 		return false;
 	}
 } 
+
+class Accordion_ElementPublishChildren extends ElementPublishChildren {
+
+	public function onBeforeVersionedPublish() {
+		$staged = array();
+
+		foreach($this->owner->Elements() as $widget) {
+			$staged[] = $widget->ID;
+
+			$widget->publish('Stage', 'Live');
+		}
+
+		// remove any elements that are on live but not in draft or have been
+		// unlinked from everything
+		$widgets = Versioned::get_by_stage('AccordionItem', 'Live', "AccordionID = '". $this->owner->ID ."'");
+
+		foreach($widgets as $widget) {
+			if(!in_array($widget->ID, $staged)) {
+				$widget->deleteFromStage('Live');
+			}
+		}
+	}
+}

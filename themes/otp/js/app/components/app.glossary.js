@@ -59,13 +59,19 @@ if(typeof app === 'undefined') { var app = {}; }
                     var toggle = container.find('.title-c');
 
                     if(toggle.hasClass('active')) {
-                        $(document).scrollTop(heading.offset().top);  
+                        if(heading.length > 0) {
+                            $(document).scrollTop(heading.offset().top);  
+                        }
                     } else {
                         toggle.find('a').trigger('click');
 
-                        setTimeout(function() {
-                            $(document).scrollTop(heading.offset().top);
-                        }, 500);
+                        if(heading.length > 0) {
+                            setTimeout(function() {
+                                $(document).scrollTop(heading.offset().top);
+                            }, 500);
+                        } else {
+                            
+                        }
                     }
                 },
                 onDelete: function (item) {
