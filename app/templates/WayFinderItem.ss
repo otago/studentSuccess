@@ -1,5 +1,5 @@
 <% if $Link %>
-	<a class='col {$Size} {$Background} tile' href='{$Link}' target="{$Target}" >
+	<a class='col {$Size} {$Background} tile' href='{$Link}' target="{$Target}" <% if ForceDownload %>download="$Link"<% end_if %>>
 <% else %>
 	<article class='col {$Size} {$Background} tile'>
 <% end_if %>
