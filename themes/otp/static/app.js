@@ -882,11 +882,19 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 				var span = $(this).siblings('.drop-down-span');
 				var target = $(span.data('target'));
 				
+				function scrollToPos() {
+					if($(document).width() <= 660) {
+						$('html, body').animate({
+							scrollTop: target.offset().top
+						});
+					}
+				}
+				
 				if(target.length) {
 					if(span.hasClass('active')) {
 						$(this).removeClass('open');
 
-						$('.drop-menu').slideUp();
+						$('.drop-menu').slideUp(scrollToPos);
 						$(".main nav .level-2 li span").removeClass('active');
 					}
 					else {
@@ -894,17 +902,12 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 
 						$(".main nav .level-2 li span").removeClass('active');
 						$('.drop-menu').not(target).slideUp();
-						target.slideDown();
+						target.slideDown(scrollToPos);
 						span.addClass('active');
 					}
 				}
 
-				if($(document).width() <= 660) {
 
-					$('html, body').animate({
-						scrollTop: target.offset().top
-					});
-				}
 				
 				return false;
 			});
@@ -1112,20 +1115,23 @@ if(typeof app === 'undefined') { var app = {}; }
                 tokenLimit: 1,
                 onAdd: function (item) {
                     // take the user to that accordion item
-
                     var heading = items.find('h4:contains('+ item.name+')');
                     var container = heading.parents('.glossary-letter');
 
                     var toggle = container.find('.title-c');
 
                     if(toggle.hasClass('active')) {
-                        $(document).scrollTop(heading.offset().top);  
+                        if(heading.length > 0) {
+                            $(document).scrollTop(heading.offset().top);  
+                        }
                     } else {
                         toggle.find('a').trigger('click');
 
-                        setTimeout(function() {
-                            $(document).scrollTop(heading.offset().top);
-                        }, 500);
+                        if(heading.length > 0) {
+                            setTimeout(function() {
+                                $(document).scrollTop(heading.offset().top);
+                            }, 500);
+                        }
                     }
                 },
                 onDelete: function (item) {
@@ -1546,12 +1552,14 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 		var configs = {
             'itemSelector'      : '.tile',
 			'stamp'				: '.fixed',
+            'transitionDuration': '0.2s'
 		};
 
         var isotopeconfigs = {
             'itemSelector'      : '.tile',
             'stamp'				: '.fixed',
             'layout'			: 'packery',
+            'transitionDuration': '0.2s',
             'getSortData'       : {
                 title: '[data-title]',
                 views: '[data-views]',
@@ -1749,6 +1757,12 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
             }
 
             resetColors();
+
+            $(window).on("resize", function () {
+                setTimeout(function() {
+                    item.packery();  
+                }, 300);
+            });
         };
 		
 		var can = function(){
@@ -2002,6 +2016,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
  * choose which one suits your project best!
  *
  */
+
 ;(function ($) {
   var DEFAULT_SETTINGS = {
     // Search settings
@@ -2027,7 +2042,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
     animateDropdown: true,
     placeholder: null,
     theme: null,
-    zindex: 999,
+    zindex: 9999,
     resultsLimit: null,
 
     enableHTML: false,
@@ -2243,7 +2258,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
       var input_val;
 
       // Create a new text input an attach keyup events
-      var input_box = $("<input type=\"text\" autocomplete=\"off\" placeholder=\"Search for keyword\" autocapitalize=\"off\"/>")
+      var input_box = $("<input placeholder=\"Search for Keyword\" type=\"text\" autocomplete=\"off\" autocapitalize=\"off\"/>")
           .css({
               outline: "none"
           })
@@ -2282,7 +2297,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
                         next_token = input_token.next();
 
                         if((previous_token.length && previous_token.get(0) === selected_token) ||
-                           (next_token.length && next_token.get(0) === selected_token)) {
+               (next_token.length && next_token.get(0) === selected_token)) {
                             // Check if there is a previous/next token and it is selected
                             if(event.keyCode === KEY.LEFT || event.keyCode === KEY.UP) {
                                 deselect_token($(selected_token), POSITION.BEFORE);
@@ -3063,10 +3078,10 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
       function focusWithTimeout(object) {
           setTimeout(
             function() {
-              object.focus();
+        object.focus();
             },
-            50
-          );
+      50
+      );
       }
   };
 

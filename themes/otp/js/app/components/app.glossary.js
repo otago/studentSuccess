@@ -68,8 +68,6 @@ if(typeof app === 'undefined') { var app = {}; }
                             setTimeout(function() {
                                 $(document).scrollTop(heading.offset().top);
                             }, 500);
-                        } else {
-                            
                         }
                     }
                 },

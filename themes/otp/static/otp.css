@@ -3264,6 +3264,7 @@ table tr:last-child {
   float: left;
   width: 14.2857142857%;
   padding: 1.75rem 2rem 2.625rem;
+  min-height: 300px;
 }
 .way-finder h2 {
   font-weight: 500;
@@ -3359,7 +3360,7 @@ table tr:last-child {
   overflow: hidden;
   font-size: 0;
   line-height: 0;
-  min-height: 200px;
+  min-height: 300px;
   padding: 0;
   background: #000;
 }
@@ -3367,6 +3368,7 @@ table tr:last-child {
   position: relative;
   z-index: 2;
   width: 100%;
+  min-height: 350px;
   -webkit-transition: opacity 0.2s ease-out;
   -moz-transition: opacity 0.2s ease-out;
   transition: opacity 0.2s ease-out;
