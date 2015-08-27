@@ -16,4 +16,3 @@
 <% end_if %>
 
 $ElementArea
-

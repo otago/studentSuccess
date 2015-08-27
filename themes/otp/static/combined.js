@@ -14569,8 +14569,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 
 (function($){
 
-    app.fancybox = (function(){
-
+    app.fancybox = (function() {
         var items = $('.fancybox-link');
 
         var initFancyBox = function() {
@@ -14614,6 +14613,10 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
         var init = function (){
             $(document).ready(function() {
                 initFancyBox();
+
+                if($("html.svg").length < 1) {
+                    $("#trigger_unsupported").click();
+                }
             });
         };
 
@@ -15379,12 +15382,38 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
                 item.packery(itemConfigs);
             }
 
+
+            item.packery('unbindResize');
+
             resetColors();
 
+            function debounce(func, wait, immediate) {
+                var timeout;
+                return function() {
+                    var context = this, args = arguments;
+                    var later = function() {
+                        timeout = null;
+                        if (!immediate) {
+                            func.apply(context, args);
+                        }
+                    };
+                    var callNow = immediate && !timeout;
+                    clearTimeout(timeout);
+                    timeout = setTimeout(later, wait);
+                    if (callNow) {
+                        func.apply(context, args);
+                    }
+                };
+            }
+
+            var repackIt = debounce(function() {
+                item.packery().css('opacity', 1);
+            }, 250);
+
             $(window).on("resize", function () {
-                setTimeout(function() {
-                    item.packery();  
-                }, 300);
+                item.css('opacity', 0.1);
+
+                repackIt();
             });
         };
 		

@@ -2,8 +2,7 @@ if(typeof app === 'undefined') { var app = {}; }
 
 (function($){
 
-    app.fancybox = (function(){
-
+    app.fancybox = (function() {
         var items = $('.fancybox-link');
 
         var initFancyBox = function() {
@@ -47,6 +46,10 @@ if(typeof app === 'undefined') { var app = {}; }
         var init = function (){
             $(document).ready(function() {
                 initFancyBox();
+
+                if($("html.svg").length < 1) {
+                    $("#trigger_unsupported").click();
+                }
             });
         };
 

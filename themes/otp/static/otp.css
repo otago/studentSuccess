@@ -6429,6 +6429,10 @@ figure.element figcaption p {
     display: none;
   }
 }
+#unsupported_popup {
+  padding: 0 20px;
+  font-size: 18px;
+}
 .was-this-helpful {
   margin: 0 auto 2rem;
 }
