@@ -15429,16 +15429,26 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
             $(".image-tile").click(function(e) {
                 e.preventDefault();
                 e.stopPropagation();
-
                 if($(this).hasClass('has-link')) {
                     var link = $(this).find('a').first().clone();
                     link.css({
                         'opacity': 0,
-                        'height': 0
+                        'height': 0,
+                        'display': 'block'
                     });
 
-                    link.first().trigger('click');
+                    $(link.first()).trigger('click');
                     link.get(0).click();
+
+                    if(typeof MouseEvent !== "undefined") {
+                        var clickEvent = new MouseEvent("click", {
+                            "view": window,
+                            "bubbles": true,
+                             "cancelable": false
+                        });
+
+                        link.get(0).dispatchEvent(clickEvent);
+                    }
                 }
             });
 

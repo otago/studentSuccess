@@ -3466,7 +3466,7 @@ table tr:last-child {
   .way-finder nav.col,
   .way-finder .col-3,
   .way-finder .col-2 {
-    width: 100%;
+    width: 50%;
   }
   .way-finder nav.col {
     padding: 1.625rem 1.75rem 3.125rem;
@@ -3475,6 +3475,14 @@ table tr:last-child {
     font-size: 1.25rem;
     line-height: 1.75rem;
     padding: .75rem 1rem .75rem 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .way-finder .col,
+  .way-finder nav.col,
+  .way-finder .col-3,
+  .way-finder .col-2 {
+    width: 100%;
   }
 }
 .way-finder a.light-green:hover {
@@ -3554,6 +3562,11 @@ table tr:last-child {
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+}
+.hear-from-others section .image .icon:before {
+  position: relative;
+  top: -3px;
+  left: -3px;
 }
 @media screen and (max-width: 1200px) {
   .hear-from-others section .image .icon {
