@@ -889,15 +889,16 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 						});
 					}
 				}
-				
+
 				if(target.length) {
 					if(span.hasClass('active')) {
-						$(this).removeClass('open');
+						$(".has_dropdown a.open").removeClass('open');
 
 						$('.drop-menu').slideUp(scrollToPos);
 						$(".main nav .level-2 li span").removeClass('active');
 					}
 					else {
+						$(".has_dropdown a.open").removeClass('open');
 						$(this).addClass('open');
 
 						$(".main nav .level-2 li span").removeClass('active');
