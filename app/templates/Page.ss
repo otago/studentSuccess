@@ -1,8 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
     <% base_tag %>
     <title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; $SiteConfig.Title</title>
+
+    <script src="https://use.typekit.net/jyv7peg.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
     <script type='text/javascript' src='{$ThemeDir}/js/thirdparty/modernizr.js'></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -21,12 +28,10 @@
 
     $MetaTags(false)
 
-    <script src="//use.typekit.net/jyv7peg.js"></script>
-    <script>try{Typekit.load();}catch(e){}</script>
-
     <link rel='stylesheet' type='text/css' href='{$ThemeDir}/static/otp.min.css'>
     <!--[if lte IE 8]>
-    <link rel='stylesheet' type='text/css' href='{$ThemeDir}/static/ie/otp.min.css'>
+     <link rel='stylesheet' type='text/css' href='{$ThemeDir}/static/ie/otp.min.css'>
+    <link rel='stylesheet' type='text/css' href='{$ThemeDir}/static/ie.css'>
     <![endif]-->
 </head>
 <body class="template_{$ClassName}">
@@ -43,13 +48,16 @@
         </script>
     <% end_if %>
     
+    <!--[if lte IE 8]>
+        <div class="unsupported">
+            <p>Your web browser in unsupported by Otago Polytech. <a href="http://outdatedbrowser.com/en">Please update your webbrowser</a> for the best experience.</p>
+        </div>
+    <![endif]-->
+
     <% include Header %>
     <% include DropdownContents %>
     $Layout
 
-    <div class="unsupported" style="display: none;">
-        <a id="trigger_unsupported" class="fancybox-link" data-fancybox-type="ajax" href="home/unsupported">No Support</a>
-    </div>
     <% include RelatedTopics %>
     <% include Footer %>
     <% include Scripts %>

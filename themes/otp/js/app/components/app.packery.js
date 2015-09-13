@@ -233,7 +233,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
          *
          * @param item
          */
-        var doMasonry = function(item){
+        var doMasonry = function(item) {
             var images = item.find('img');
             var itemConfigs = configs;
 

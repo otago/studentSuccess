@@ -991,10 +991,6 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
         var init = function (){
             $(document).ready(function() {
                 initFancyBox();
-
-                if($("html.svg").length < 1) {
-                    $("#trigger_unsupported").click();
-                }
             });
         };
 
@@ -1738,7 +1734,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
          *
          * @param item
          */
-        var doMasonry = function(item){
+        var doMasonry = function(item) {
             var images = item.find('img');
             var itemConfigs = configs;
 
@@ -3187,6 +3183,7 @@ app.Modules = [
 	for(key in app.Modules) {
 		var moduleKey = app.Modules[key];
 		var module = app[moduleKey]
+
 
 		if(module && typeof module.init !== 'undefined' && typeof module.can !== 'undefined'){			
 			if(module.can()) {

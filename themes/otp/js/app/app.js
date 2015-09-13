@@ -1139,6 +1139,7 @@ app.Modules = [
 		var moduleKey = app.Modules[key];
 		var module = app[moduleKey]
 
+
 		if(module && typeof module.init !== 'undefined' && typeof module.can !== 'undefined'){			
 			if(module.can()) {
 				module.init();

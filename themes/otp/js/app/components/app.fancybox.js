@@ -46,10 +46,6 @@ if(typeof app === 'undefined') { var app = {}; }
         var init = function (){
             $(document).ready(function() {
                 initFancyBox();
-
-                if($("html.svg").length < 1) {
-                    $("#trigger_unsupported").click();
-                }
             });
         };
 
