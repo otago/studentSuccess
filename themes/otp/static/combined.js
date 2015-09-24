@@ -13978,11 +13978,11 @@ if(typeof app === 'undefined') { var app = {}; }
 							if($(answers.get(i)).text() !== $(elem).text()) {
 								valid = false;
 
+								$(elem).removeClass('correct');
+								$(elem).addClass('wrong');
+
 								if(attempt >= allowedAttempts) {
 									if(showResults) {
-										$(elem).removeClass('correct');
-										$(elem).addClass('wrong');
-
 										step.addClass('readonly');
 										markReadonly(step);
 									}
@@ -13990,13 +13990,9 @@ if(typeof app === 'undefined') { var app = {}; }
 
 								$(elem).attr('data-validation', 'wrong');
 							} else {
-								if(attempt >= allowedAttempts) {
-									if(showResults) {
-										$(elem).addClass('correct');
-										$(elem).removeClass('wrong');
-									}
-								}
-
+								$(elem).addClass('correct');
+								$(elem).removeClass('wrong');
+								
 								$(elem).attr('data-validation', 'correct');
 							}
 						});
