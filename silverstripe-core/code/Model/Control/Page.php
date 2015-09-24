@@ -37,8 +37,8 @@ class Page extends SiteTree {
 		'RelatedBoxes'			=> 'RelatedPageBox'
 	);
 
-	public function updateSettingsFields() {
-		$fields = parent::updateSettingsFields();
+	public function getSettingsFields() {
+		$fields = parent::getSettingsFields();
 
 		$fields->addFieldsToTab("Root.Settings", array(
 			CheckboxField::create('ShowInTopMenu'),

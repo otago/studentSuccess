@@ -3366,7 +3366,8 @@ table tr:last-child {
 .way-finder .career-handbook img {
   position: relative;
   z-index: 2;
-  width: 100%;
+  min-width: 100%;
+  max-width: 170%;
   min-height: 350px;
   -webkit-transition: opacity 0.2s ease-out;
   -moz-transition: opacity 0.2s ease-out;
