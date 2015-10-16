@@ -1713,11 +1713,11 @@ table tr:last-child {
   padding: 0 0 4rem 0rem;
 }
 .carousel .slides li {
-  -ms-word-break: break-all;
-  word-break: break-all;
+  -ms-word-break: break-word;
   word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
+  -ms-hyphens: auto;
   hyphens: auto;
   opacity: 0;
   -webkit-transition: opacity 0.5s ease-out;
@@ -7312,23 +7312,23 @@ footer.main .container.addresses address.middle {
 }
 .highlightBlue,
 .highlightblue {
-  background: rgba(0, 116, 198, 0.3);
-  padding: 1px;
+  background: #b3d5ee;
+  padding: 0 2px;
 }
 .highlightYellow,
 .highlightyellow {
   background: #ffd100;
-  padding: 1px;
+  padding: 0 2px;
 }
 .highlightRed,
 .highlightred {
   background: #ff3d1b;
-  padding: 1px;
+  padding: 0 2px;
 }
 .highlightGreen,
 .highlightgreen {
   background: #2ABB9B;
-  padding: 1px;
+  padding: 0 2px;
 }
 @media print {
   .main nav {
