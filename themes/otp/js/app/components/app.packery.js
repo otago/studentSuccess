@@ -338,6 +338,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
             $(".template_LandingSearchPage .keywords").tokenInput(list, {
                 hintText: 'Search by keyword',
                 theme: 'mac',
+                tokenLimit: 1,
                 onAdd: function (item) {
                     $(".filter-form").trigger('submit');
                 },
