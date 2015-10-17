@@ -5036,7 +5036,7 @@ table tr:last-child {
   }
 }
 .masonry-content .tile-c {
-  width: 33.3333333%;
+  width: 33.3%;
   float: left;
   color: #ffffff;
   min-height: 270px;
@@ -5055,7 +5055,7 @@ table tr:last-child {
 }
 @media screen and (max-width: 980px) {
   .masonry-content .tile-c {
-    width: 50%;
+    width: 49.9%;
   }
 }
 .masonry-content .tile-c a {
@@ -5385,7 +5385,7 @@ table tr:last-child {
 }
 @media screen and (max-width: 980px) {
   .masonry-content .contact-tile {
-    width: 50%;
+    width: 49.9%;
     padding: 1.875rem 2rem 1.875rem 2.000rem;
   }
 }
@@ -5533,12 +5533,12 @@ table tr:last-child {
 }
 @media screen and (max-width: 1024px) {
   .masonry-content .tile-c.half {
-    width: 33.33333333%;
+    width: 33.3%;
   }
 }
 @media screen and (max-width: 980px) {
   .masonry-content .tile-c {
-    width: 50%;
+    width: 49.9%;
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -5678,7 +5678,7 @@ li.token-input-input-token-mac {
 }
 li.token-input-input-token-mac input {
   border: 0;
-  width: 100px;
+  width: 200px !important;
   padding: 3px;
   background-color: transparent;
   margin: 0;
@@ -7254,7 +7254,7 @@ footer.main .container.addresses address.middle {
   margin: 1rem 0 2rem 0;
 }
 .drop-menu .container .left .col {
-  width: 33.33333333%;
+  width: 33.33%;
   float: left;
   padding-right: 2.75rem;
 }
