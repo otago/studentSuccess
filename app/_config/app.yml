@@ -151,3 +151,8 @@ ElementInternalLink:
   title: "Featured internal link"
 ElementImage:
   title: "Inline image"
+MimeUploadValidator:
+  MimeTypes:
+    dmg:
+      - 'application/x-apple-diskimage'
+      - 'application/octet-stream'
