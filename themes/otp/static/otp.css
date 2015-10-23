@@ -6761,6 +6761,9 @@ figure.element figcaption p {
     font-size: 16px;
   }
 }
+.activity_description img {
+  max-width: 100%;
+}
 .activity_scheme__black h3 {
   background: #333;
   color: #fff;
@@ -6958,6 +6961,7 @@ figure.element figcaption p {
 .activity_text.activity_text__Replace .wrong:after {
   left: 50%;
   top: -1.5rem;
+  display: block;
   margin-left: -0.75rem;
 }
 .activity_individual.readonly .activity_text li:hover,
