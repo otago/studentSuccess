@@ -1657,6 +1657,12 @@ figure.element figcaption {
 .activity_navigation .btn .arr {
   font-size: 24px;
 }
+@media screen and (max-width: 620px) {
+  .activity_individual h3 {
+    font-size: 21px;
+    line-height: 24px;
+  }
+}
 .activity_results {
   padding: 32px 0;
 }

@@ -44,6 +44,12 @@
 
 	ul {
 		max-width: 80%;
+
+		@media screen and (max-width: 620px) {
+			ul {
+				max-width: 100%;
+			}
+		}
 	}
 
 	li {
@@ -231,6 +237,7 @@
 			overflow: hidden;
 			float: none;
 			clear: both;
+			padding-left: 20px;
 		}
 
 		.progress {
@@ -292,8 +299,7 @@
 		font-weight: bold;
 
 		@media screen and (max-width: 620px) {
-			margin-top: -8px;
-			top: 50%;
+			display: none;
 		}
 
 		svg {
@@ -437,6 +443,15 @@
 
 	@media screen and (min-width: 620px) {
 		padding-left: 70px;
+	}
+
+	@media screen and (max-width: 620px) {
+		padding: 10px;
+
+		h3 {
+			font-size: 1.3rem;
+			line-height: 1.5rem;
+		}
 	}
 }
 

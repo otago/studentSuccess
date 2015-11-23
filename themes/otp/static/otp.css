@@ -6520,6 +6520,11 @@ figure.element figcaption p {
 .activity_text ul {
   max-width: 80%;
 }
+@media screen and (max-width: 620px) {
+  .activity_text ul ul {
+    max-width: 100%;
+  }
+}
 .activity_text li {
   list-style: none;
   padding: 1em;
@@ -6675,6 +6680,7 @@ figure.element figcaption p {
     overflow: hidden;
     float: none;
     clear: both;
+    padding-left: 20px;
   }
   .activity_header .progress {
     margin-top: 3.8rem;
@@ -6729,8 +6735,7 @@ figure.element figcaption p {
 }
 @media screen and (max-width: 620px) {
   .activity_header .preicon {
-    margin-top: -8px;
-    top: 50%;
+    display: none;
   }
 }
 .activity_header .preicon svg {
@@ -6854,6 +6859,15 @@ figure.element figcaption p {
 @media screen and (min-width: 620px) {
   .activity_individual {
     padding-left: 70px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .activity_individual {
+    padding: 10px;
+  }
+  .activity_individual h3 {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
   }
 }
 .activity_results {
