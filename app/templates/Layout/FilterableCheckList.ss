@@ -7,9 +7,11 @@
         <% include PageIntro %>
 
 		<% if not CheckForm %>
-			<div class="element-content-generic left-content">
-				<p><a href="$Link(reset)" class="backaction">Reset original settings</a></p>
-			</div>
+			<% if not DisableFilters %>
+				<div class="element-content-generic left-content">
+					<p><a href="$Link(reset)" class="backaction">Reset original settings</a></p>
+				</div>
+			<% end_if %>
 		<% end_if %>
 		
         <% if CheckForm %>

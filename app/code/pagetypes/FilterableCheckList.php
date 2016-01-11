@@ -2,6 +2,10 @@
 
 class FilterableCheckList extends Page {
 
+	private static $db = array(
+		'DisableFilters' => 'Boolean'
+	);
+
 	private static $has_many = array(
 		'Blocks'			=> 'FilterableCheckListBlock'
 	);
@@ -35,6 +39,7 @@ class FilterableCheckList extends Page {
 			'Blocks'
 		));
 
+		$fields->addFieldToTab('Root.Main', new CheckboxField('DisableFilters'));
 		$fields->addFieldToTab('Root.Main', FormUtils::MakeDragAndDropGridField('Blocks', 'Blocks', $this->Blocks(), 'SortOrder', 'RecordEditor'));
 
 		return $fields;
@@ -58,6 +63,10 @@ class FilterableCheckList extends Page {
 
 
 	public function CorrectBlocks() {
+		if($this->DisableFilters) {
+			return $this->Blocks();
+		}
+
 		$settings = Cookie::get('Completed'. $this->ID);
 
 		if(!$settings) {
@@ -100,6 +109,10 @@ class FilterableCheckList_Controller extends Page_Controller {
 
 		if($cookie) {
 			return;
+		}
+
+		if($this->DisableFilters) {
+			return false;
 		}
 
 		$fields = new FieldList(
