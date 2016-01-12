@@ -570,10 +570,10 @@
 		}
 	}
 
-	.activity_text__DragAndDropToMatch,
-	.activity_text__DragAndDrop {
+	&.activity_text__DragAndDropToMatch,
+	&.activity_text__DragAndDrop {
 		.wrong:after {
-			display: block;
+			display: block !important;
 		}
 	}
 
@@ -648,6 +648,32 @@
 		li.correctAnswer:focus {
 			background-color: @activitygreen;
 			color: #fff;
+		}
+	}
+}
+
+.activity_text__MultiChoice,
+.activity_text__Paragraph {
+	.correctAnswer,
+	.changed,
+	.correct,
+	.wrong {
+		&:after {
+			background: none;
+		}
+	}
+}
+
+.readonly {
+	.activity_text__DragAndDrop,
+	.activity_text__DragAndDropToMatch {
+		li {
+			&.wrong,
+			&.wrong:hover,
+			&.wrong:focus {
+				background-color: #EF563C;
+				color: #fff;
+			}
 		}
 	}
 }

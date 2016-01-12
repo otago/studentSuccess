@@ -6965,9 +6965,9 @@ figure.element figcaption p {
   display: block;
   background: url(../images/wrong.svg) no-repeat;
 }
-.activity_text .activity_text__DragAndDropToMatch .wrong:after,
-.activity_text .activity_text__DragAndDrop .wrong:after {
-  display: block;
+.activity_text.activity_text__DragAndDropToMatch .wrong:after,
+.activity_text.activity_text__DragAndDrop .wrong:after {
+  display: block !important;
 }
 .activity_text.activity_text__Paragraph .correct:after,
 .activity_text.activity_text__Replace .correct:after,
@@ -7031,6 +7031,25 @@ figure.element figcaption p {
 .activity_individual.readonly .activity_text__MultiChoice li.correctAnswer:focus,
 .activity_individual.readonly .activity_text__Paragraph li.correctAnswer:focus {
   background-color: #08c04e;
+  color: #fff;
+}
+.activity_text__MultiChoice .correctAnswer:after,
+.activity_text__Paragraph .correctAnswer:after,
+.activity_text__MultiChoice .changed:after,
+.activity_text__Paragraph .changed:after,
+.activity_text__MultiChoice .correct:after,
+.activity_text__Paragraph .correct:after,
+.activity_text__MultiChoice .wrong:after,
+.activity_text__Paragraph .wrong:after {
+  background: none;
+}
+.readonly .activity_text__DragAndDrop li.wrong,
+.readonly .activity_text__DragAndDropToMatch li.wrong,
+.readonly .activity_text__DragAndDrop li.wrong:hover,
+.readonly .activity_text__DragAndDropToMatch li.wrong:hover,
+.readonly .activity_text__DragAndDrop li.wrong:focus,
+.readonly .activity_text__DragAndDropToMatch li.wrong:focus {
+  background-color: #EF563C;
   color: #fff;
 }
 footer.main {
