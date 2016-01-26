@@ -111,7 +111,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
         };
 
         function onArrange( event, filteredItems) {
-            var v = 0;
+            var v = 0, lowestY = 0;
 
             $.each(filteredItems, function(i, elem) {
                 var element = $(elem).get(0).element;
@@ -125,12 +125,19 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 
                 $(element).addClass('scheme_'+ scheme[v % 7]);
 
+                if(lowestY === 0 || lowestY > $(element).offset().top) {
+                    lowestY = $(element).offset().top;
+                }
+
                 v++;
             });
+
+            return lowestY;
         }
 
 
         resetColors();
+        var lastKeyword = null;
 
         var doIsotopeFilters = function(item, form) {
             var configs = isotopeconfigs;
@@ -179,7 +186,17 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
             var $pack = item.isotope(configs);
 
             // bind event listener
-            $pack.on( 'layoutComplete', onArrange );
+            $pack.on( 'layoutComplete', function(le, efi) {
+                var lowestY = onArrange(le, efi);
+                
+                if(keyword && keyword !== lastKeyword) {
+                    $('html, body').animate({
+                        'scrollTop': lowestY
+                    });
+                }
+
+                lastKeyword = keyword;
+            });
         };
 
         /**
