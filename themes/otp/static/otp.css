@@ -6588,6 +6588,14 @@ figure.element figcaption p {
   padding-right: 0em;
   background: transparent;
 }
+.activity_text.activity_text__Replace li.correct:after,
+.activity_text.activity_text__Replace li.correct:hover:after,
+.activity_text.activity_text__Replace li.correct:focus:after,
+.activity_text.activity_text__Replace li.wrong:after,
+.activity_text.activity_text__Replace li.wrong:hover:after,
+.activity_text.activity_text__Replace li.wrong:focus:after {
+  display: none;
+}
 .activity_text.activity_text__Replace li:hover,
 .activity_text.activity_text__Replace li:focus {
   color: #404041;
@@ -6611,11 +6619,21 @@ figure.element figcaption p {
   background-color: #08C04E;
   color: #fff;
 }
+.activity_text.activity_text__Replace li.replaceable.correct:after,
+.activity_text.activity_text__Replace li.replaceable.correct:hover:after,
+.activity_text.activity_text__Replace li.replaceable.correct:focus:after {
+  display: none;
+}
 .activity_text.activity_text__Replace li.replaceable.wrong,
 .activity_text.activity_text__Replace li.replaceable.wrong:hover,
 .activity_text.activity_text__Replace li.replaceable.wrong:focus {
   background-color: #EF563C;
   color: #fff;
+}
+.activity_text.activity_text__Replace li.replaceable.wrong:after,
+.activity_text.activity_text__Replace li.replaceable.wrong:hover:after,
+.activity_text.activity_text__Replace li.replaceable.wrong:focus:after {
+  display: none;
 }
 .activity_text__Paragraph li,
 .activity_text__Replace li {

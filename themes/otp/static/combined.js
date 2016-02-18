@@ -15304,7 +15304,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
             configs.sortBy = sort;
             configs.sortAscending = sortAscending;
             var $pack = item.isotope(configs);
-
+            
             // bind event listener
             $pack.on( 'layoutComplete', function(le, efi) {
                 var lowestY = onArrange(le, efi);

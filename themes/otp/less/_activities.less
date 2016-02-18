@@ -123,6 +123,19 @@
 			padding-right: 0em;
 			background: transparent;
 
+
+
+			&.correct,
+			&.correct:hover,
+			&.correct:focus,
+			&.wrong,
+			&.wrong:hover,
+			&.wrong:focus {
+				&:after {
+					display: none;
+				}
+			}
+
 			&:hover,
 			&:focus {
 				color: rgb(64, 64, 65);
