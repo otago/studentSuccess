@@ -155,3 +155,7 @@ MimeUploadValidator:
     dmg:
       - 'application/x-apple-diskimage'
       - 'application/octet-stream'
+      
+Injector:
+  ElementalArea:
+    class: ElementalAreaExtension
