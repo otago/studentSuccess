@@ -54,8 +54,7 @@ Page:
     - ElementImage
     - ElementTable
     - ElementFile
-    - ElementInternalLink
-    - ElementExternalLink
+    - ElementLink
     - LinksComponent
     - CaseStudy
     - VideoComponent

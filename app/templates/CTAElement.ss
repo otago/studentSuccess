@@ -12,6 +12,7 @@
 					{$CTAContent}
 				</p>
 			<% end_if %>
+             $Image sss
 			<% if $Link && $ButtonText %>
 			<a href='{$Link}' <% if Target =="_modal" %>class="fancybox-link" data-fancybox-type="ajax"<% else %>target={$Target}<% end_if %> <% if ForceDownload %>download="$Link"<% end_if %>>{$ButtonText}</a>
 			<% end_if %>

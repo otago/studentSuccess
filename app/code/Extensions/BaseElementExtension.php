@@ -9,8 +9,8 @@ class BaseElementExtension extends DataExtension {
 	private $allowed = array(
 		'ElementContent',
 		'ElementFile',
-		'ElementExternalLink',
-		'ElementInternalLink'
+		'ElementLink',
+		//'ElementInternalLink'
 	);
 
 	private $sidebarClasses = array(
