@@ -33,10 +33,6 @@ Director:
     'tile//$Action/$ID': 'FilterableTile_Counter'
 SSViewer:
   theme: 'otp'
-  
-Controller:
-  extensions:
-   - OPCwpControllerExtension
 
 ElementPageExtension:
   ignored_classes:
