@@ -6,11 +6,13 @@ $project = 'opt';
 
 global $database;
 $database = (defined('SS_DATABASE_NAME')) ? SS_DATABASE_NAME : 'op3';
-define('OP_CWP_IP_BYPASS_BASICAUTH', '202.49.0.2,10.50.1.180,127.0.0.1,10.111.0.10,127.0.0.1,10.50.1.184,10.50.1.188,10.110.4.32');
+
 require_once("conf/ConfigureFromEnv.php");
 
-//
 
+define('OP_CWP_IP_BYPASS_BASICAUTH', '202.49.0.2,10.50.1.180,127.0.0.1,10.111.0.10,127.0.0.1,10.50.1.184,10.50.1.188,10.110.4.32');
+// we extend this in OPCwpControllerExtension.php
+Controller::remove_extension('CwpControllerExtension');
 $arrStyles = array(
 	'Large'					=> 'large',
 	'Feature Link'			=> 'feature-link',
