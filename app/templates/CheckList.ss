@@ -1,3 +1,4 @@
+<% with $Widget %> 
 <div class='checklist $ClassName'>
     <div class='container boxed-element component-alignment'>
         <span class='icon icon-info'></span>
@@ -58,3 +59,4 @@
 
     </div>
 </div>
+<% end_with %>

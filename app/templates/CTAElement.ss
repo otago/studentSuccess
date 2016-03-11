@@ -1,3 +1,4 @@
+<% with $Widget %> 
 <section class='cta {$Color} clear-this <% if $Image %>has-image<% end_if %>'>
 	<div class="component-alignment boxed-element">
 		<div class="col left">
@@ -24,3 +25,4 @@
 		<% end_if %>
 	</div>
 </section>
+<% end_with %>

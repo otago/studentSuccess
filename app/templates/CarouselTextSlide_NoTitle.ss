@@ -1,3 +1,4 @@
+<% with $Widget %> 
 <li class='title-content'>
     <div class='wrapper'>
         <div class='holder'>
@@ -11,3 +12,4 @@
         </div>
     </div>
 </li>
+<% end_with %>

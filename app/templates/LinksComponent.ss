@@ -1,3 +1,4 @@
+<% with $Widget %> 
 <section class="links-content {$Color} <% if $Image %>has-image<% end_if %>">
 	<div class="component-alignment boxed-element">
 		<div class='links-block'>
@@ -31,3 +32,4 @@
 		</div>
 	</div>
 </section>
+<% end_with %>

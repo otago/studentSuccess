@@ -1,3 +1,4 @@
+<% with $Widget %> 
 <% if $Slides %>
 <div class='smart-slide {$Background}'>
     <div class="component-alignment boxed-element">
@@ -33,3 +34,4 @@
     </div>
 </div>
 <% end_if %>
+<% end_with %>
