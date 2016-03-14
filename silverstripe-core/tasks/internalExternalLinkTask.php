@@ -42,7 +42,7 @@ class internalExternalLinkTask extends BuildTask {
          
          
     //     DB::query('UPDATE "Player" SET "Status"=\'Active\'');
-         
+         /*
           DB::query("update widget_live
 set
 className='ElementLink'
@@ -52,6 +52,35 @@ set
 className='ElementLink'
 where classname in ('ElementInternalLink', 'ElementExternalLink')");
 
+          */
+          
+          
+          
+          
+        $update = SQLUpdate::create('"widget"')->addWhere(array('"ClassName" = ? OR "ClassName" = ?' => array('ElementInternalLink', 'ElementExternalLink')));
+
+        // Assigning a value using a pure SQL expression
+        $update->assign('ClassName', "ElementLink");
+
+        // Perform the update
+        $update->execute();
+        $update = SQLUpdate::create('"widget_live"')->addWhere(array('"ClassName" = ? OR "ClassName" = ?' => array('ElementInternalLink', 'ElementExternalLink')));
+
+        // Assigning a value using a pure SQL expression
+        $update->assign('ClassName', "ElementLink");
+
+        // Perform the update
+        $update->execute();
+          
+          
+          
+          
+         // var_dump($update);
+          
+          
+          
+          
+          return;
          //  return;
            foreach($big as $item)
             {
