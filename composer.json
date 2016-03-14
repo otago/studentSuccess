@@ -11,8 +11,7 @@
         "silverstripe-australia/addressable" : "dev-master",
         "silverstripe/widgets": "1.2.2",
         "dnadesign/silverstripe-elemental" : "dev-master",
-        "unclecheese/display-logic": "1.2.1",
-        "silverstripe/fulltextsearch": "2.1.1"
+        "unclecheese/display-logic": "1.2.1"
     },
     "require-dev": {
         "cwp/cwp-recipe-basic-dev": "1.0.2",
