@@ -55,16 +55,16 @@ where classname in ('ElementInternalLink', 'ElementExternalLink')");
           */
           
           
-          /*
           
-        $update = SQLUpdate::create('"widget"')->addWhere(array('"ClassName" = ? OR "ClassName" = ?' => array('ElementInternalLink', 'ElementExternalLink')));
+          
+        $update = SQLUpdate::create('"Widget"')->addWhere(array('"ClassName" = ? OR "ClassName" = ?' => array('ElementInternalLink', 'ElementExternalLink')));
 
         // Assigning a value using a pure SQL expression
         $update->assign('ClassName', "ElementLink");
 
         // Perform the update
         $update->execute();
-        $update = SQLUpdate::create('"widget_live"')->addWhere(array('"ClassName" = ? OR "ClassName" = ?' => array('ElementInternalLink', 'ElementExternalLink')));
+        $update = SQLUpdate::create('"Widget_Live"')->addWhere(array('"ClassName" = ? OR "ClassName" = ?' => array('ElementInternalLink', 'ElementExternalLink')));
 
         // Assigning a value using a pure SQL expression
         $update->assign('ClassName', "ElementLink");
@@ -72,7 +72,7 @@ where classname in ('ElementInternalLink', 'ElementExternalLink')");
         // Perform the update
         $update->execute();
           
-          */
+          
           
           
          // var_dump($update);
