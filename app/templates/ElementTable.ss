@@ -1,3 +1,4 @@
+<% with $Widget %> 
 <div class="element-content-generic left-content tableelement">
 	$ProcessedHTML
 
@@ -9,3 +10,4 @@
 		</div>
 	<% end_if %>
 </div>
+<% end_with %>

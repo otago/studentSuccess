@@ -1,3 +1,4 @@
+<% with $Widget %> 
 <div class="component-alignment wide-boxed-element">
 	<div class='masonry-content masonry-basic'>
 		<div class='packery'>
@@ -13,3 +14,4 @@
 		</div>
 	</div>
 </div>
+<% end_with %>

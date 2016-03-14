@@ -1,3 +1,4 @@
+<% with $Widget %> 
 <article class='testimony-content right-content'>
 	<span class="quotemark">“</span>
 	
@@ -10,3 +11,4 @@
     </p>
     <% end_if %>
 </article>
+<% end_with %>

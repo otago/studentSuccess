@@ -1,3 +1,4 @@
+<% with $Widget %> 
 <% if $HasContactableDetails %>
     <article class='sidebar-help right-content'>
         <% if $ContactBoxTitle %><h3>{$ContactBoxTitle}</h3><% end_if %>
@@ -19,3 +20,4 @@
         </article>
     <% end_with %>
 <% end_if %>
+<% end_with %>

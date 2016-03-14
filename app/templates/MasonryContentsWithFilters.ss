@@ -1,3 +1,4 @@
+<% with $Widget %> 
 <div class="component-alignment wide-boxed-element tightentop">
 	<form class='filter-form form-{$ID}'>
 		<div class='filters'>
@@ -39,3 +40,4 @@
 		</div>
 	</div>
 </div>
+<% end_with %>

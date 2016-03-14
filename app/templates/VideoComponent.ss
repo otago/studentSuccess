@@ -1,3 +1,4 @@
+<% with $Widget %> 
 <div class='hear-from-others clear-this {$Color}'>
 	<div class="component-alignment wide-boxed-element">
 		<section>
@@ -31,3 +32,4 @@
 	    </section>
 	</div>
 </div>
+<% end_with %>

@@ -1,3 +1,4 @@
+<% with $Widget %> 
 <div class="component-alignment boxed-element">
 	<section class="priority-tasks clear-this">
 		<div class="titles row">
@@ -79,3 +80,4 @@
 		</div>
 	</section>
 </div>
+<% end_with %>

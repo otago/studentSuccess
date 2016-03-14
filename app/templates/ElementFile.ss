@@ -1,3 +1,4 @@
+<% with $Widget %> 
 <div class="component-alignment boxed-element left-content external_link">
 	<div class="content-padder">
 		<p>
@@ -5,3 +6,4 @@
 		</p>
 	</div>
 </div>
+<% end_with %>
