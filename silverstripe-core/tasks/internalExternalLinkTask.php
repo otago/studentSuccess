@@ -80,7 +80,7 @@ where classname in ('ElementInternalLink', 'ElementExternalLink')");
           
           
           
-          return;
+      //    return;
          //  return;
            foreach($big as $item)
             {
