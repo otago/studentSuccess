@@ -201,7 +201,8 @@ class Page_Controller extends ContentController {
 
 	private static $allowed_actions = array(
 		'helpfulyes',
-		'helpfulno'
+		'helpfulno',
+            'SearchResults'
 	);
 
 	public function Content() {
