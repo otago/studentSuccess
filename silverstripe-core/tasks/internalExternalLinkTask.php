@@ -55,7 +55,7 @@ where classname in ('ElementInternalLink', 'ElementExternalLink')");
           */
           
           
-          
+          /*
           
         $update = SQLUpdate::create('"widget"')->addWhere(array('"ClassName" = ? OR "ClassName" = ?' => array('ElementInternalLink', 'ElementExternalLink')));
 
@@ -72,7 +72,7 @@ where classname in ('ElementInternalLink', 'ElementExternalLink')");
         // Perform the update
         $update->execute();
           
-          
+          */
           
           
          // var_dump($update);
