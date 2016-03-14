@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7642cd57cc3919d0a35ec7752d6de140",
-    "content-hash": "4c27e5097dbc61b3ebcbe8f127badb75",
+    "hash": "2d0feb413f19e3b83db4ad80447a40eb",
+    "content-hash": "6c6906f6a4e949456609f52572b97ff2",
     "packages": [
         {
             "name": "assertchris/hash-compat",
@@ -402,16 +402,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.18.0",
+            "version": "1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "e19b764b5c855580e8ffa7e615f72c10fd2f99cc"
+                "reference": "a5f2734e8c16f3aa21b3da09715d10e15b4d2d45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/e19b764b5c855580e8ffa7e615f72c10fd2f99cc",
-                "reference": "e19b764b5c855580e8ffa7e615f72c10fd2f99cc",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/a5f2734e8c16f3aa21b3da09715d10e15b4d2d45",
+                "reference": "a5f2734e8c16f3aa21b3da09715d10e15b4d2d45",
                 "shasum": ""
             },
             "require": {
@@ -476,7 +476,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2016-03-01 18:00:40"
+            "time": "2016-03-13 16:08:35"
         },
         {
             "name": "nikic/php-parser",
@@ -1082,6 +1082,39 @@
                 "sphinx"
             ],
             "time": "2016-02-04 01:08:29"
+        },
+        {
+            "name": "silverstripe/fulltextsearch-localsolr",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe-labs/silverstripe-fulltextsearch-localsolr.git",
+                "reference": "46c52e21d76bcfc304c0fec1e0222c7ab9a139c0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe-labs/silverstripe-fulltextsearch-localsolr/zipball/46c52e21d76bcfc304c0fec1e0222c7ab9a139c0",
+                "reference": "46c52e21d76bcfc304c0fec1e0222c7ab9a139c0",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1",
+                "silverstripe/fulltextsearch": "*"
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Hamish Friedlander",
+                    "email": "hamish@silverstripe.com"
+                }
+            ],
+            "description": "A pre-configured, ready to use Solr instance for local development with the SilverStripe fulltextsearch module",
+            "keywords": [
+                "silverstripe",
+                "solr"
+            ],
+            "time": "2015-02-16 04:46:46"
         },
         {
             "name": "silverstripe/html5",
@@ -2731,39 +2764,6 @@
                 "xunit"
             ],
             "time": "2013-01-13 10:24:48"
-        },
-        {
-            "name": "silverstripe/fulltextsearch-localsolr",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/silverstripe-labs/silverstripe-fulltextsearch-localsolr.git",
-                "reference": "46c52e21d76bcfc304c0fec1e0222c7ab9a139c0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe-labs/silverstripe-fulltextsearch-localsolr/zipball/46c52e21d76bcfc304c0fec1e0222c7ab9a139c0",
-                "reference": "46c52e21d76bcfc304c0fec1e0222c7ab9a139c0",
-                "shasum": ""
-            },
-            "require": {
-                "silverstripe/framework": "~3.1",
-                "silverstripe/fulltextsearch": "*"
-            },
-            "type": "silverstripe-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Hamish Friedlander",
-                    "email": "hamish@silverstripe.com"
-                }
-            ],
-            "description": "A pre-configured, ready to use Solr instance for local development with the SilverStripe fulltextsearch module",
-            "keywords": [
-                "silverstripe",
-                "solr"
-            ],
-            "time": "2015-02-16 04:46:46"
         },
         {
             "name": "symfony/yaml",

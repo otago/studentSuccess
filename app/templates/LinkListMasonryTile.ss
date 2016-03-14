@@ -1,4 +1,3 @@
-<% with $Widget %> 
 <div class='tile-c list-menu tile fixed has-padder'>
 	<div class="padder">
     	<article>
@@ -36,4 +35,3 @@
 		<% end_with %>
 	<% end_if %>
 </div>
-<% end_with %>

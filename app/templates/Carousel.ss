@@ -1,4 +1,3 @@
-<% with $Widget %> 
 <% if $Slides %>
 <div class='carousel content-slide {$Background} clear-this'>
     <div class="component-alignment carousel-items boxed-element">
@@ -10,4 +9,3 @@
     </div>
 </div>
 <% end_if %>
-<% end_with %>
