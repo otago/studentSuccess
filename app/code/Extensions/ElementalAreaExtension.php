@@ -18,7 +18,7 @@ class ElementalAreaExtension extends ElementalArea {
         $result = $this->getComponents('Widgets');
 
         if (count($result)==0)
-            return;
+            return $result;
         $list = new HasManyList('BaseElement', $result->getForeignKey());
         $list->setDataModel($this->model);
         $list->sort('Sort ASC');
