@@ -39,3 +39,21 @@ $SizedImage('Image').Pure(ALT_TEXT, CLASS, ID)
 $Image.URLWithSuffix // this adds a m get param for the file modified time to cache files 
 
 ```
+there was a composer.json file we don't know why!!!! -Al
+{
+    "name": "silverstripers/silverstripe-core",
+    "description": "Core Module for SilverStripe projects developed by SilverStripers",
+    "type": "silverstripe-module",
+    "keywords": ["silverstripe", "core"],
+    "authors": [
+    {
+        "name": "Nivanka Fonseka",
+        "email": "nivanka@silverstripers.com"
+    }],
+    "require": {
+        "silverstripe/framework": "~3.1"
+    }
+    
+}
+
+

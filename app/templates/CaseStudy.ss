@@ -1,3 +1,4 @@
+<% with $Widget %> 
 <section class='case-study-holder clear-this'>
 	<div class='case-study {$Color}'>
 		<div class="component-alignment boxed-element">
@@ -24,3 +25,4 @@
 		</div>
 	</div>
 </section>
+<% end_with %>

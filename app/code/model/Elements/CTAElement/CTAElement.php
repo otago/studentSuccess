@@ -15,10 +15,27 @@ class CTAElement extends BaseElement {
 	);
 
 	private static $has_one = array(
-		'Image'				=> 'Image'
+		'Image'				=> 'Image',
+            'jjjjj'				=> 'Image'
 	);
+       /* public function __construct() 
+        {   parent::__construct();  
+            //debug::show($this);
+            
+//           // var_dump("sss");
+        }*/
+        public function MyImage()
+        {
+           // if($this->ID==92)
+              //  Debug::show( $this);
+            return "hello world";
+            return $this->Image()->URL;
+        }
 
 	public function getCMSFields(){
+            
+           // if($this->ID==92)
+             //   Debug::show( $this);
 		$fields = parent::getCMSFields();
 
 		$fields->replaceField('Color', DropdownField::create('Color')->setSource(array(
@@ -28,7 +45,7 @@ class CTAElement extends BaseElement {
 		
 		$fields->replaceField('Icon', DropdownField::create('Icon')->setSource(Config::inst()->get('SiteConfig', 'Icons')));
 
-		$fields->dataFieldByName('CTAContent')->setTitle('Content');
+		//$fields->dataFieldByName('CTAContent')->setTitle('Content');
 
 		return $fields;
 	}

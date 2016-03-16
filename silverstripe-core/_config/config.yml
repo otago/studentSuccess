@@ -23,6 +23,7 @@ SiteConfig:
 Controller:
   extensions:
     - SS_MinifiedResponseExtension
+    - OPCwpControllerExtension
 Director:
   rules:
     'search': 'SearchPage'
