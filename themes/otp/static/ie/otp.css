@@ -513,7 +513,7 @@ table th.main {
 .main nav .level-2 li a.button {
   padding: 0 22px;
 }
-@media screen and (max-width: 685px) {
+@media screen and (max-width: 885px) {
   .main nav .level-2 li {
     margin-right: 12px;
   }

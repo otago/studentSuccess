@@ -2874,7 +2874,7 @@ table tr:last-child {
   padding: 0 1.375rem;
   background: rgba(255, 255, 255, 0.1);
 }
-@media screen and (max-width: 885px) { /* 685px */
+@media screen and (max-width: 885px) {
   .main nav .level-2 li {
     margin-right: 0.75rem;
   }
