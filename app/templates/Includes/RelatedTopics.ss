@@ -13,7 +13,7 @@
                                 <article>
                                     <ul>
                                         <% loop $RelatedPages %>
-                                            <li><a href='{$Link}' target="{$Target}">{$Title}<span class='icon icon-arrow'>&nbsp;</span></a></li>
+                                            <li><a href='{$Link}' data-title="{$Title}" target="{$Target}">{$Title}<span class='icon icon-arrow'>&nbsp;</span></a></li>
                                         <% end_loop %>
                                     </ul>
                                 </article>
@@ -28,7 +28,7 @@
                     <% if $RelatedBoxes %>
                         <% loop $RelatedBoxes %>
                             <div class='tile tile-c half '>
-                                <% if $Link %><a href='$Link' target="{$Target}" class="block-anchor"><% end_if %>
+                                <% if $Link %><a href='$Link' data-title="{$Title}" target="{$Target}" class="block-anchor relatedGTM"><% end_if %>
                                 <h3>{$Title}</h3>
                                 <% if $Link %></a><% end_if %>
                                 

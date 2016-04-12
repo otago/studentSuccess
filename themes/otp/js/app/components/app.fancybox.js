@@ -34,6 +34,12 @@ if(typeof app === 'undefined') { var app = {}; }
             });
 
             items.click(function(e) {
+                dataLayer.push({
+                    'event':'ForceClick',
+                    'eventCategory': this.className, //create a datalayer variable macro called eventCategory
+                    'eventAction': this.href, //create a datalayer variable macro called eventAction
+                    'eventLabel': '' //create a datalayer variable macro called eventLabel
+                });
                 e.preventDefault();
             });
 

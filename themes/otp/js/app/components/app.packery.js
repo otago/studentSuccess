@@ -316,16 +316,24 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 			$(window).load(packIt);
 
             $(".image-tile").click(function(e) {
-                e.preventDefault();
-                e.stopPropagation();
+                
+                //alert("sss");
+               e.preventDefault();
+               // e.stopPropagation();
                 if($(this).hasClass('has-link')) {
                     var link = $(this).find('a').first().clone();
+                    
                     link.css({
                         'opacity': 0,
                         'height': 0,
                         'display': 'block'
                     });
-
+                    dataLayer.push({
+                        'event':'ForceClick',
+                        'eventCategory': 'Outbound Link', //create a datalayer variable macro called eventCategory
+                        'eventAction': link.attr("href"), //create a datalayer variable macro called eventAction
+                        'eventLabel': '' //create a datalayer variable macro called eventLabel
+                    });
                     $(link.first()).trigger('click');
                     link.get(0).click();
 
@@ -339,6 +347,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
                         link.get(0).dispatchEvent(clickEvent);
                     }
                 }
+                
             });
 
             var list = [];

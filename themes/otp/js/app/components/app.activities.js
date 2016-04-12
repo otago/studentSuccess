@@ -29,7 +29,8 @@ if(typeof app === 'undefined') { var app = {}; }
 				}
 
 				$(this).addClass('loading');
-
+                                
+                                header='Activity ' + $(".activity_header h3").text();
 
 				// validate the current step
 				var valid = true,
@@ -203,7 +204,12 @@ if(typeof app === 'undefined') { var app = {}; }
 				}
 
 				attempt++;
-
+                                dataLayer.push({
+                                    'event':'ForceClick',
+                                    'eventCategory':  header, //create a datalayer variable macro called eventCategory
+                                    'eventAction': 'Attemp ' + attempt, //create a datalayer variable macro called eventAction
+                                    'eventLabel': '' //create a datalayer variable macro called eventLabel
+                                });
 				step.data('attempt', attempt);
 				var selected;
 
@@ -456,12 +462,32 @@ if(typeof app === 'undefined') { var app = {}; }
 							} else {
 								btn.addClass('hidden');
 							}
+                                                        dataLayer.push({
+                                                        'event':'ForceClick',
+                                                                'eventCategory':  header, //create a datalayer variable macro called eventCategory
+                                                                'eventAction': 'Finished ', //create a datalayer variable macro called eventAction
+                                                                'eventLabel': '' //create a datalayer variable macro called eventLabel
+                                                            });
 						} else if(remaining === 1) {
 							btn.html('Finish');
+                                                        dataLayer.push({
+                                                        'event':'ForceClick',
+                                                                'eventCategory':  header, //create a datalayer variable macro called eventCategory
+                                                                'eventAction': 'Finished ', //create a datalayer variable macro called eventAction
+                                                                'eventLabel': '' //create a datalayer variable macro called eventLabel
+                                                            });
 						} else if(remaining > 0) {
 							btn.html("Next");
 						} else {
 							btn.addClass('hidden');
+                                                        test=$(".activity_header h3").text();
+                                                        //alert($(".activity_header #h3").text());
+                                                        dataLayer.push({
+                                                        'event':'ForceClick',
+                                                                'eventCategory':  header, //create a datalayer variable macro called eventCategory
+                                                                'eventAction': 'Finished ', //create a datalayer variable macro called eventAction
+                                                                'eventLabel': '' //create a datalayer variable macro called eventLabel
+                                                            });
 						}
 
 						btn.removeClass('loading');

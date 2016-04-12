@@ -22,14 +22,19 @@ if(typeof app === 'undefined') { var app = {}; }
 					
 					$('.was-this-helpful a').removeClass('active');
 					SetCookieVal(button.data('id'), button.attr('class'));
-
+                                            
 					$.ajax({
 						url: button.attr('href')
 					});
-
+                                        
 					button.addClass('active');
 					button.siblings('.active').removeClass('active');
-
+                                        dataLayer.push({
+                                            'event':'ForceClick',
+                                            'eventCategory': 'Helpful', //create a datalayer variable macro called eventCategory
+                                            'eventAction': 'Was this Helpful - '+button.text(), //create a datalayer variable macro called eventAction
+                                            'eventLabel': '' //create a datalayer variable macro called eventLabel
+                                        });
 					return false;
 				});
 			});
