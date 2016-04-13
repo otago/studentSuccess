@@ -38,6 +38,11 @@ ErrorDocument 500 /assets/error-500.html
    RewriteRule silverstripe-cache(/|$) - [F,L,NC]
    RewriteRule composer\.(json|lock) - [F,L,NC]
 
+    # redirect studentsupport
+    RewriteEngine On 
+    RewriteCond %{HTTP:X-Forwarded-Host} ^studentsupport\.op\.ac\.nz$
+    RewriteRule ^(.*)$ http://studentservices.op.ac.nz%{REQUEST_URI} [R,L]
+
 
    RewriteCond %{REQUEST_URI} ^(.*)$
    RewriteCond %{REQUEST_FILENAME} !-f
