@@ -24,7 +24,18 @@ if(typeof app === 'undefined') { var app = {}; }
 					nextItem.addClass('active').show();
 
 					app.carousel.init();
+                                        $(".flex-nav-next, .slide-letters li").click(function(){
+                                          dataLayer.push({
+                                                'event':'ForceClick',
+                                                'eventCategory': "carousals", //create a datalayer variable macro called eventCategory
+                                                'eventAction': $("h2.active a").html(), //create a datalayer variable macro called eventAction
+                                                'eventLabel': window.location.href //create a datalayer variable macro called eventLabel
+                                            });
+                                            
 
+                                          });
+
+                                          
 					if(title.offset().top < $(window).scrollTop()) {
 						$('html, body').animate({
 							'scrollTop': title.offset().top

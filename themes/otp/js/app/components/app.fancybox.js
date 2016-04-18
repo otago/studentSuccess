@@ -34,9 +34,17 @@ if(typeof app === 'undefined') { var app = {}; }
             });
 
             items.click(function(e) {
+                if (this.className.indexOf("video-image") != -1)
+                {
+                    CategoryName="Featured Video Plays";
+                }else
+                {
+                    CategoryName=this.className;
+                }
+                
                 dataLayer.push({
                     'event':'ForceClick',
-                    'eventCategory': this.className, //create a datalayer variable macro called eventCategory
+                    'eventCategory': CategoryName, //create a datalayer variable macro called eventCategory
                     'eventAction': this.href, //create a datalayer variable macro called eventAction
                     'eventLabel': '' //create a datalayer variable macro called eventLabel
                 });

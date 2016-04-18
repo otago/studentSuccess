@@ -33,7 +33,7 @@ if(typeof app === 'undefined') { var app = {}; }
                                             'event':'ForceClick',
                                             'eventCategory': 'Helpful', //create a datalayer variable macro called eventCategory
                                             'eventAction': 'Was this Helpful - '+button.text(), //create a datalayer variable macro called eventAction
-                                            'eventLabel': '' //create a datalayer variable macro called eventLabel
+                                            'eventLabel': window.location.href  //create a datalayer variable macro called eventLabel
                                         });
 					return false;
 				});
