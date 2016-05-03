@@ -16,5 +16,12 @@ class ControllerExtension extends Extension {
 	public function IsDev(){
 		return Director::isDev();
 	}
-
+public function isStage()
+{
+    $retVal=false;
+    if(Controller::curr()->getRequest()->getVar('stage') == "Stage")
+        $retVal=true;
+        
+ return $retVal;
+}
 } 
