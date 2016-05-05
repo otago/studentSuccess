@@ -5,7 +5,7 @@
  */
 class internalExternalLinkTask extends BuildTask {
 
-	protected $title = "updateTable";
+	protected $title = "Silverstripe DB 3.3 update";
 	protected $description = "update Table task";
 
 	/**
