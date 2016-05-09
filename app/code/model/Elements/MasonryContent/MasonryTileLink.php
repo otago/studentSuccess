@@ -32,9 +32,9 @@ class MasonryTileLink extends DataObject {
 				->filter(array(
 					'MasonryContentID' => $this->LinkListMasonryTile()->MasonryContentID
 				))
-				->sort('Title ASC');
+				->sort('Title ASC')->map('ID', 'Title') ;
 				
-			$fields->addFieldToTab('Root.Main', new CheckboxSetField('Elements', 'Elements', $tiles));
+			$fields->addFieldToTab('Root.Main',  CheckboxSetField::create('Elements', 'Elements', $tiles));
 		}
 
 		return $fields;
