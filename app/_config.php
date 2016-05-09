@@ -86,5 +86,5 @@ Config::inst()->update('AccordionItem', 'allowed_elements', array(
 Config::inst()->update('Page', 'allowed_elements', array(
 'MasonryContent',
     'MasonryContentsWithFilters',
-    'TabbedCheckList'
+    'TabbedCheckList' 
 ));
