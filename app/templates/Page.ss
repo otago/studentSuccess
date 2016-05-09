@@ -59,8 +59,10 @@
             </script>
         <% end_if %>
     <% else %>
-            <!-- no google analtics becuase stage -->
-            
+            <!-- no google analtics becuase stage  stupid datalayer thing is there because of GTM-->
+            <script>
+        dataLayer=[];
+        </script>
     <% end_if %>
     <!--[if lte IE 8]>
         <div class="unsupported">
