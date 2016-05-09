@@ -35,7 +35,7 @@
     <![endif]-->
 </head>
 <body class="template_{$ClassName}">
-    <% if $isStage %>
+    <% if not $isStage %>
         <!-- Google Tag Manager -->
         <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KK4TJS"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
