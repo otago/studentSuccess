@@ -56,3 +56,35 @@ Config::inst()->update('AccordionPage', 'allowed_elements', array(
 ));
 
 Config::inst()->remove('FilterableChecklist', 'allowed_elements');
+
+Config::inst()->remove('AccordionItem', 'allowed_elements');
+Config::inst()->update('AccordionItem', 'allowed_elements', array(
+	'ElementTable',
+'ElementFile',
+'ElementLink',
+'ElementImage',
+'SidebarImageElement',
+'AccordionItem',
+'SidebarHelp',
+'Accordion',
+'CTAElement',
+'Carousel',
+'CarouselWithUpperLetter',
+'CaseStudy',
+'CheckList',
+'InteractiveList',
+'SingleLevelCheckList',
+'SingleLevelList',
+'HearFromOthers',
+'VideoComponent',
+'LinksComponent',
+'MatrixElement',
+'SidebarTestimony',
+'TabbedCheckList' 
+));
+
+Config::inst()->update('Page', 'allowed_elements', array(
+'MasonryContent',
+    'MasonryContentsWithFilters',
+    'TabbedCheckList'
+));
