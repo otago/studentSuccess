@@ -40,8 +40,8 @@
         </section>
 
         <section class="container creativecommons">
-            <img src="themes/otp/images/cc-by-nc-sa.png" style="width: 200px" alt="Creative Commons" />
-            <p>Except where otherwise noted, content on this site is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution 4.0 International license</a>. However, all images and Otago Polytechnic videos are copyrighted.</p>
+            {$CreativeCommonsLicenceImage}
+            <p>{$CreativeCommonsLicence}</p>
         </section>
     </div>
     <% end_with %>

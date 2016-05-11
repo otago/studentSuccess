@@ -13,9 +13,17 @@ class OTPConfigs extends DataExtension {
 		'ContactBoxTitle'				=> 'Varchar(70)',
 		'ContactBoxContent'				=> 'Varchar(100)',
 		'ContactBoxPhone'				=> 'Varchar',
-		'ContactBoxEmail'				=> 'Varchar'
+		'ContactBoxEmail'				=> 'Varchar',
+            
+            
+            
+            'CreativeCommonsLicence'                       => 'HTMLText'
+            
 	);
-
+        
+        private static $has_one = array(
+		 'CreativeCommonsLicenceImage'                       => 'Image',
+	);
 
 	public function updateCMSFields(FieldList $fields){
 
@@ -28,9 +36,21 @@ class OTPConfigs extends DataExtension {
 		));
 
 
+                $uploadField = UploadField::create('CreativeCommonsLicenceImage')
+                ->setAllowedFileCategories('image')
+                ->setAllowedMaxFileNumber(1);
+                  $caption = HTMLEditorField::create('CreativeCommonsLicence');
+                
 		$fields->addFieldsToTab('Root.Footer.Top', array(
-			FormUtils::MakeDragAndDropGridField('LinkBlocks', 'Link Blocks', FooterLinkBlock::get(), 'SortOrder')
+			FormUtils::MakeDragAndDropGridField('LinkBlocks', 'Link Blocks', FooterLinkBlock::get(), 'SortOrder'),
+                    
+                    $uploadField,
+
+                       $caption
+                    
 		));
+                
+                
 
 		$fields->addFieldsToTab('Root.Footer.Bottom', array(
 			TextField::create('TelephoneInternational'),

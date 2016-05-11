@@ -15,8 +15,7 @@ class CTAElement extends BaseElement {
 	);
 
 	private static $has_one = array(
-		'Image'				=> 'Image',
-            'jjjjj'				=> 'Image'
+		'Image'				=> 'Image'
 	);
        /* public function __construct() 
         {   parent::__construct();  
