@@ -58,8 +58,9 @@ Config::inst()->update('AccordionPage', 'allowed_elements', array(
 Config::inst()->remove('FilterableChecklist', 'allowed_elements');
 
 Config::inst()->remove('AccordionItem', 'allowed_elements');
-Config::inst()->update('AccordionItem', 'allowed_elements', array(
-	'ElementTable',
+
+$classes=array(
+'ElementTable',
 'ElementFile',
 'ElementLink',
 'ElementImage',
@@ -70,6 +71,7 @@ Config::inst()->update('AccordionItem', 'allowed_elements', array(
 'CarouselWithUpperLetter',
 'CaseStudy',
 'CheckList',
+'ElementContent',
 'InteractiveList',
 'SingleLevelCheckList',
 'SingleLevelList',
@@ -79,7 +81,11 @@ Config::inst()->update('AccordionItem', 'allowed_elements', array(
 'MatrixElement',
 'SidebarTestimony',
 'TabbedCheckList' 
-));
+);
+ foreach ($classes as $class) {
+    $list[$class] = singleton($class)->i18n_singular_name();
+}
+Config::inst()->update('AccordionItem', 'allowed_elements', $list);
 
 Config::inst()->update('Page', 'allowed_elements', array(
 'MasonryContent',
