@@ -30,7 +30,8 @@
                 <p>
                     <% if $TelephoneInternational %>International <a href='tel:{$TelephoneInternational}'>{$TelephoneInternational}</a><br><% end_if %>
                     <% if $TelephoneNewZealand %>New Zealand <a href='tet:{$TelephoneNewZealand}'>{$TelephoneNewZealand}</a><br><% end_if %>
-                    <% if $TelephoneInternational %>Email <a href='mailto:{$ContactEmail}'>{$ContactEmail}</a><% end_if %>
+                   
+                    <% if $TelephoneInternational %>Your suggestions are welcome, please email <a href='mailto:{$ContactEmail}'>{$ContactEmail}</a><% end_if %>
                 </p>
             </aside>
             <% end_if %>
