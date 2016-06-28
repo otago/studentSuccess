@@ -10,8 +10,8 @@
         "silverstripe-australia/gridfieldextensions": "1.3.0",
         "silverstripe-australia/addressable" : "dev-master",
         "silverstripe/widgets": "1.2.2",
-        "dnadesign/silverstripe-elemental" : "dev-master",
-        "unclecheese/display-logic": "1.2.1"
+        "dnadesign/silverstripe-elemental" : "1.4.0",
+        "unclecheese/display-logic": "1.3.3"
     },
     "require-dev": {
         "cwp/cwp-recipe-basic-dev": "1.0.2",

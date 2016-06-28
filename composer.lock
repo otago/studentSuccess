@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7642cd57cc3919d0a35ec7752d6de140",
-    "content-hash": "4c27e5097dbc61b3ebcbe8f127badb75",
+    "hash": "29bd215fa64902dc1166a91813520aa0",
+    "content-hash": "9f474e8193cb9c5a5f1bc22d5d2439fd",
     "packages": [
         {
             "name": "assertchris/hash-compat",
@@ -80,16 +80,16 @@
         },
         {
             "name": "composer/installers",
-            "version": "v1.0.23",
+            "version": "v1.0.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "6213d900e92647831f7a406d5c530ea1f3d4360e"
+                "reference": "36e5b5843203d7f1cf6ffb0305a97e014387bd8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/6213d900e92647831f7a406d5c530ea1f3d4360e",
-                "reference": "6213d900e92647831f7a406d5c530ea1f3d4360e",
+                "url": "https://api.github.com/repos/composer/installers/zipball/36e5b5843203d7f1cf6ffb0305a97e014387bd8e",
+                "reference": "36e5b5843203d7f1cf6ffb0305a97e014387bd8e",
                 "shasum": ""
             },
             "require": {
@@ -111,8 +111,8 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Composer\\Installers\\": "src/"
+                "psr-4": {
+                    "Composer\\Installers\\": "src/Composer/Installers"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -127,12 +127,14 @@
                 }
             ],
             "description": "A multi-framework Composer library installer",
-            "homepage": "http://composer.github.com/installers/",
+            "homepage": "https://composer.github.io/installers/",
             "keywords": [
                 "Craft",
                 "Dolibarr",
                 "Hurad",
+                "ImageCMS",
                 "MODX Evo",
+                "Mautic",
                 "OXID",
                 "SMF",
                 "Thelia",
@@ -174,7 +176,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2016-01-27 12:54:22"
+            "time": "2016-04-13 19:46:30"
         },
         {
             "name": "cwp/cwp",
@@ -272,16 +274,16 @@
         },
         {
             "name": "dnadesign/silverstripe-elemental",
-            "version": "dev-master",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dnadesign/silverstripe-elemental.git",
-                "reference": "ea5eb0772698d550813b9f25e8ad6cfc9f4fdbd5"
+                "reference": "7c2267e4ba6388b889deb7f17ffef593ce39637f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dnadesign/silverstripe-elemental/zipball/ea5eb0772698d550813b9f25e8ad6cfc9f4fdbd5",
-                "reference": "ea5eb0772698d550813b9f25e8ad6cfc9f4fdbd5",
+                "url": "https://api.github.com/repos/dnadesign/silverstripe-elemental/zipball/7c2267e4ba6388b889deb7f17ffef593ce39637f",
+                "reference": "7c2267e4ba6388b889deb7f17ffef593ce39637f",
                 "shasum": ""
             },
             "require": {
@@ -319,7 +321,7 @@
                 "silverstripe",
                 "widget"
             ],
-            "time": "2016-03-09 23:21:06"
+            "time": "2016-05-29 23:46:28"
         },
         {
             "name": "heyday/silverstripe-versioneddataobjects",
@@ -402,16 +404,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.18.1",
+            "version": "1.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "a5f2734e8c16f3aa21b3da09715d10e15b4d2d45"
+                "reference": "5f56ed5212dc509c8dc8caeba2715732abb32dbf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/a5f2734e8c16f3aa21b3da09715d10e15b4d2d45",
-                "reference": "a5f2734e8c16f3aa21b3da09715d10e15b4d2d45",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/5f56ed5212dc509c8dc8caeba2715732abb32dbf",
+                "reference": "5f56ed5212dc509c8dc8caeba2715732abb32dbf",
                 "shasum": ""
             },
             "require": {
@@ -426,13 +428,13 @@
                 "doctrine/couchdb": "~1.0@dev",
                 "graylog2/gelf-php": "~1.0",
                 "jakub-onderka/php-parallel-lint": "0.9",
+                "php-amqplib/php-amqplib": "~2.4",
                 "php-console/php-console": "^3.1.3",
                 "phpunit/phpunit": "~4.5",
                 "phpunit/phpunit-mock-objects": "2.3.0",
                 "raven/raven": "^0.13",
                 "ruflin/elastica": ">=0.90 <3.0",
-                "swiftmailer/swiftmailer": "~5.3",
-                "videlalvaro/php-amqplib": "~2.4"
+                "swiftmailer/swiftmailer": "~5.3"
             },
             "suggest": {
                 "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
@@ -441,11 +443,11 @@
                 "ext-mongo": "Allow sending log messages to a MongoDB server",
                 "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
                 "mongodb/mongodb": "Allow sending log messages to a MongoDB server via PHP Driver",
+                "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
                 "php-console/php-console": "Allow sending log messages to Google Chrome",
                 "raven/raven": "Allow sending log messages to a Sentry server",
                 "rollbar/rollbar": "Allow sending log messages to Rollbar",
-                "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
-                "videlalvaro/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib"
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
             },
             "type": "library",
             "extra": {
@@ -476,7 +478,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2016-03-13 16:08:35"
+            "time": "2016-04-12 18:29:35"
         },
         {
             "name": "nikic/php-parser",
@@ -612,12 +614,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe-australia/silverstripe-addressable.git",
-                "reference": "438137747e6b416490d83b5e4b04a20ad7ce4d43"
+                "reference": "eec4e1c4cdb690acecb455dd6a78097a283b0cc0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe-australia/silverstripe-addressable/zipball/438137747e6b416490d83b5e4b04a20ad7ce4d43",
-                "reference": "438137747e6b416490d83b5e4b04a20ad7ce4d43",
+                "url": "https://api.github.com/repos/silverstripe-australia/silverstripe-addressable/zipball/eec4e1c4cdb690acecb455dd6a78097a283b0cc0",
+                "reference": "eec4e1c4cdb690acecb455dd6a78097a283b0cc0",
                 "shasum": ""
             },
             "require": {
@@ -653,7 +655,7 @@
                 "geocoding",
                 "silverstripe"
             ],
-            "time": "2016-01-25 02:54:26"
+            "time": "2016-04-01 23:09:43"
         },
         {
             "name": "silverstripe-australia/gridfieldextensions",
@@ -713,12 +715,12 @@
             "version": "3.3.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/silverstripe-australia/advancedworkflow.git",
+                "url": "https://github.com/silverstripe-australia/silverstripe-advancedworkflow.git",
                 "reference": "27d83db6c39eedd0cb2be66461f28b6062725875"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe-australia/advancedworkflow/zipball/27d83db6c39eedd0cb2be66461f28b6062725875",
+                "url": "https://api.github.com/repos/silverstripe-australia/silverstripe-advancedworkflow/zipball/27d83db6c39eedd0cb2be66461f28b6062725875",
                 "reference": "27d83db6c39eedd0cb2be66461f28b6062725875",
                 "shasum": ""
             },
@@ -2165,12 +2167,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unclecheese/silverstripe-gridfield-betterbuttons.git",
-                "reference": "33ea89fc0c2d6f4be343ddc71a9cefe8dec99dae"
+                "reference": "5a34cdaab7145096132452cd2144370071346a73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/unclecheese/silverstripe-gridfield-betterbuttons/zipball/33ea89fc0c2d6f4be343ddc71a9cefe8dec99dae",
-                "reference": "33ea89fc0c2d6f4be343ddc71a9cefe8dec99dae",
+                "url": "https://api.github.com/repos/unclecheese/silverstripe-gridfield-betterbuttons/zipball/5a34cdaab7145096132452cd2144370071346a73",
+                "reference": "5a34cdaab7145096132452cd2144370071346a73",
                 "shasum": ""
             },
             "require": {
@@ -2193,24 +2195,24 @@
                 "gridfield",
                 "silverstripe"
             ],
-            "time": "2016-02-23 11:24:12"
+            "time": "2016-06-23 23:28:18"
         },
         {
             "name": "unclecheese/display-logic",
-            "version": "1.2.1",
+            "version": "1.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/unclecheese/silverstripe-display-logic.git",
-                "reference": "7f186c1405172958b2e8ed5e4322a04d8133ca69"
+                "reference": "7165e51f90f2de793d313bf015f4df17642bc060"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/unclecheese/silverstripe-display-logic/zipball/7f186c1405172958b2e8ed5e4322a04d8133ca69",
-                "reference": "7f186c1405172958b2e8ed5e4322a04d8133ca69",
+                "url": "https://api.github.com/repos/unclecheese/silverstripe-display-logic/zipball/7165e51f90f2de793d313bf015f4df17642bc060",
+                "reference": "7165e51f90f2de793d313bf015f4df17642bc060",
                 "shasum": ""
             },
             "require": {
-                "silverstripe/framework": "3.*"
+                "silverstripe/framework": "^3.2"
             },
             "replace": {
                 "silverstripe/display-logic": "*"
@@ -2237,14 +2239,14 @@
                 "logic",
                 "silverstripe"
             ],
-            "time": "2015-01-29 23:35:48"
+            "time": "2016-06-21 00:24:32"
         },
         {
             "name": "undefinedoffset/sortablegridfield",
             "version": "0.5.4",
             "source": {
                 "type": "git",
-                "url": "https://gitlab.cwp.govt.nz/cwp/silverstripe-sortablegridfield.git",
+                "url": "https://github.com/UndefinedOffset/SortableGridField.git",
                 "reference": "925bc7c3f723fb8f78f212e70dc3ac5e531521eb"
             },
             "require": {
@@ -2521,20 +2523,23 @@
         },
         {
             "name": "phpunit/php-timer",
-            "version": "1.0.7",
+            "version": "1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-timer.git",
-                "reference": "3e82f4e9fc92665fafd9157568e4dcb01d014e5b"
+                "reference": "38e9124049cf1a164f1e4537caf19c99bf1eb260"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/3e82f4e9fc92665fafd9157568e4dcb01d014e5b",
-                "reference": "3e82f4e9fc92665fafd9157568e4dcb01d014e5b",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/38e9124049cf1a164f1e4537caf19c99bf1eb260",
+                "reference": "38e9124049cf1a164f1e4537caf19c99bf1eb260",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4|~5"
             },
             "type": "library",
             "autoload": {
@@ -2558,7 +2563,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2015-06-21 08:01:12"
+            "time": "2016-05-12 18:03:57"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -2767,16 +2772,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.8.3",
+            "version": "v2.8.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "2a4ee40acb880c56f29fb1b8886e7ffe94f3b995"
+                "reference": "815fabf3f48c7d1df345a69d1ad1a88f59757b34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/2a4ee40acb880c56f29fb1b8886e7ffe94f3b995",
-                "reference": "2a4ee40acb880c56f29fb1b8886e7ffe94f3b995",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/815fabf3f48c7d1df345a69d1ad1a88f59757b34",
+                "reference": "815fabf3f48c7d1df345a69d1ad1a88f59757b34",
                 "shasum": ""
             },
             "require": {
@@ -2812,7 +2817,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2016-02-23 07:41:20"
+            "time": "2016-06-06 11:11:27"
         }
     ],
     "aliases": [],
@@ -2820,7 +2825,6 @@
     "stability-flags": {
         "unclecheese/betterbuttons": 20,
         "silverstripe-australia/addressable": 20,
-        "dnadesign/silverstripe-elemental": 20,
         "silverstripe/fulltextsearch-localsolr": 20
     },
     "prefer-stable": false,
