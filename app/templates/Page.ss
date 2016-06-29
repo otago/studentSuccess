@@ -33,6 +33,9 @@
      <link rel='stylesheet' type='text/css' href='{$ThemeDir}/static/ie/otp.min.css'>
     <link rel='stylesheet' type='text/css' href='{$ThemeDir}/static/ie.css'>
     <![endif]-->
+    <% with $SiteConfig %>
+    $FeedBackLite.raw  <!--  tttttttt -->
+    <% end_with %>
 </head>
 <body class="template_{$ClassName}">
     <% if not $isStage %>
