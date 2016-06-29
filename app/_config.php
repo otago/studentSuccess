@@ -29,8 +29,7 @@ foreach($arrStyles as $strKey => $strCSS){
 $strItems = substr($strItems, 0, -1);
 
 HtmlEditorConfig::get('cms')->setOption('theme_advanced_styles', $strItems);
-HtmlEditorConfig::get('cwp')->setOption('extended_valid_elements', 'script');
-HtmlEditorConfig::get('cwp')->setOption('extended_valid_elements', 'meta');
+
 Config::inst()->remove('LandingPage', 'allowed_elements');
 
 Config::inst()->update('LandingPage', 'allowed_elements', array(
