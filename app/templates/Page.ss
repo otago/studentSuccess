@@ -33,6 +33,16 @@
      <link rel='stylesheet' type='text/css' href='{$ThemeDir}/static/ie/otp.min.css'>
     <link rel='stylesheet' type='text/css' href='{$ThemeDir}/static/ie.css'>
     <![endif]-->
+    <% with $SiteConfig %>
+      <!--  tttttttt -->
+    <% if $FeedBackLiteOn %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>	
+	<script type="text/javascript">
+	$FeedBackLite.raw
+	</script>
+    <% end_if %>
+    <% end_with %>
 </head>
 <body class="template_{$ClassName}">
     <% if not $isStage %>
