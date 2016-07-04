@@ -35,20 +35,11 @@
     <![endif]-->
     <% with $SiteConfig %>
       <!--  tttttttt -->
-    <% if $FeedBackLite %>
+    <% if $FeedBackLiteOn %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>	
 	<script type="text/javascript">
-	var h = document.getElementsByTagName('head')[0];
-	(function(){
-	var fc = document.createElement('link'); fc.type = 'text/css'; fc.rel = 'stylesheet';
-	fc.href = 'https://product.feedbacklite.com/feedbacklite.css'; h.appendChild(fc);
-	})();
-	var fbl = {'campaign':{'id':1601, 'type':2, 'size':3, 'position':10, 'tab':1, 'control':1}};
-	(function(){
-	var fj = document.createElement('script'); fj.type = 'text/javascript';
-	fj.async = true; fj.src = 'https://product.feedbacklite.com/feedbacklite.js'; h.appendChild(fj);
-	})();
+	$FeedBackLite.raw
 	</script>
     <% end_if %>
     <% end_with %>

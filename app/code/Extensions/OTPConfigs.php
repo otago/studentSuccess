@@ -18,7 +18,8 @@ class OTPConfigs extends DataExtension {
             
             
 		'CreativeCommonsLicence' => 'HTMLText',
-		'FeedBackLite'	=> 'Boolean'
+		'FeedBackLiteOn'	=> 'Boolean',
+		'FeedBackLite'	=> 'text'
             
 	);
         
@@ -51,7 +52,8 @@ class OTPConfigs extends DataExtension {
                     
 		));
                 
-           $fields->addFieldToTab("Root.Main", new CheckboxField('FeedBackLite', 'FeedBackLite'));     
+           $fields->addFieldToTab("Root.Main", new CheckboxField('FeedBackLiteOn', 'FeedBackLiteOn')); 
+		   $fields->addFieldToTab("Root.Main", new TextareaField('FeedBackLite', 'FeedBackLite')); 
 
 		$fields->addFieldsToTab('Root.Footer.Bottom', array(
 			TextField::create('TelephoneInternational'),
