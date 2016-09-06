@@ -45,6 +45,7 @@ Page:
     - ElementContent
     - Carousel
     - CTAElement
+    - ContactElement
     - SidebarTestimony
     - InteractiveList
     - SingleLevelCheckList

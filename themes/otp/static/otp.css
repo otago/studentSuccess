@@ -3237,6 +3237,106 @@ table tr:last-child {
     padding: 0;
   }
 }
+.contactElement {
+  overflow: hidden;
+  margin-bottom: 0;
+  /* if backgrounds need to butt up */
+}
+.contactElement.black {
+  background: #404041;
+  color: #ffffff;
+}
+.contactElement.black h3,
+.contactElement.black p,
+.contactElement.black article h3,
+.contactElement.black article p {
+  color: #ffffff;
+}
+.contactElement .left {
+  float: left;
+  padding-top: 2.5rem;
+  padding-left: 20px;
+  padding-right: 30px;
+}
+@media screen and (max-width: 780px) {
+  .contactElement .left {
+    width: auto;
+  }
+}
+.contactElement .right {
+  padding-top: 2.5rem;
+  padding-left: 20px;
+  overflow: hidden;
+  font-size: 0.8em;
+}
+.contactElement .Circle {
+  border-radius: 50%;
+}
+.contactElement .Circle img {
+  min-height: 100%;
+  border-radius: 50%;
+}
+.contactElement .ceTitle {
+  font-size: 1.2em;
+  font-weight: 800;
+}
+.contactElement .contactElementboxed-element {
+  padding-top: 0;
+  background: #f4f3f2;
+  overflow: hidden;
+}
+.contactElement + .links-content,
+.contactElement + .cta {
+  margin-bottom: 0;
+}
+.contactElement picture {
+  display: block;
+  float: right;
+  width: 28.5714285714%;
+  position: relative;
+  overflow: hidden;
+  height: 24.125rem;
+}
+.contactElement picture img {
+  position: absolute;
+}
+.contactElement h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #404041;
+  font-weight: bold;
+  padding-bottom: 1.625rem;
+}
+.contactElement p {
+  margin: 0 0 2rem;
+}
+.contactElement a {
+  height: 3.125rem;
+  line-height: 3.125rem;
+  display: inline-block;
+}
+@media screen and (max-width: 980px) {
+  .contactElement contactElementboxed-element {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .contactElement picture {
+    width: 100%;
+    float: none;
+  }
+  .contactElement article {
+    padding-left: 0;
+    padding-right: 0;
+    width: auto;
+    float: none;
+  }
+  .contactElement article .wrapper {
+    padding: 0;
+  }
+}
+.ceSection {
+  padding-bottom: 10px;
+}
 /*---------------------------------------------------
 		LESS Elements 0.6
 	---------------------------------------------------

@@ -24,6 +24,9 @@ if(typeof app === 'undefined') { var app = {}; }
 					nextItem.addClass('active').show();
 
 					app.carousel.init();
+                                        if (typeof dataLayer !== 'undefined') {
+                                        
+                                        
                                         $(".flex-nav-next, .slide-letters li").click(function(){
                                           dataLayer.push({
                                                 'event':'ForceClick',
@@ -34,7 +37,7 @@ if(typeof app === 'undefined') { var app = {}; }
                                             
 
                                           });
-
+}
                                           
 					if(title.offset().top < $(window).scrollTop()) {
 						$('html, body').animate({

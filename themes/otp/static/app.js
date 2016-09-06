@@ -27,7 +27,21 @@ if(typeof app === 'undefined') { var app = {}; }
 					nextItem.addClass('active').show();
 
 					app.carousel.init();
+                                        if (typeof dataLayer !== 'undefined') {
+                                        
+                                        
+                                        $(".flex-nav-next, .slide-letters li").click(function(){
+                                          dataLayer.push({
+                                                'event':'ForceClick',
+                                                'eventCategory': "carousals", //create a datalayer variable macro called eventCategory
+                                                'eventAction': $("h2.active a").html(), //create a datalayer variable macro called eventAction
+                                                'eventLabel': window.location.href //create a datalayer variable macro called eventLabel
+                                            });
+                                            
 
+                                          });
+}
+                                          
 					if(title.offset().top < $(window).scrollTop()) {
 						$('html, body').animate({
 							'scrollTop': title.offset().top
@@ -98,7 +112,8 @@ if(typeof app === 'undefined') { var app = {}; }
 				}
 
 				$(this).addClass('loading');
-
+                                
+                                header='Activity ' + $(".activity_header h3").text();
 
 				// validate the current step
 				var valid = true,
@@ -272,7 +287,12 @@ if(typeof app === 'undefined') { var app = {}; }
 				}
 
 				attempt++;
-
+                                dataLayer.push({
+                                    'event':'ForceClick',
+                                    'eventCategory':  header, //create a datalayer variable macro called eventCategory
+                                    'eventAction': 'Attemp ' + attempt, //create a datalayer variable macro called eventAction
+                                    'eventLabel': '' //create a datalayer variable macro called eventLabel
+                                });
 				step.data('attempt', attempt);
 				var selected;
 
@@ -525,12 +545,32 @@ if(typeof app === 'undefined') { var app = {}; }
 							} else {
 								btn.addClass('hidden');
 							}
+                                                        dataLayer.push({
+                                                        'event':'ForceClick',
+                                                                'eventCategory':  header, //create a datalayer variable macro called eventCategory
+                                                                'eventAction': 'Finished ', //create a datalayer variable macro called eventAction
+                                                                'eventLabel': '' //create a datalayer variable macro called eventLabel
+                                                            });
 						} else if(remaining === 1) {
 							btn.html('Finish');
+                                                        dataLayer.push({
+                                                        'event':'ForceClick',
+                                                                'eventCategory':  header, //create a datalayer variable macro called eventCategory
+                                                                'eventAction': 'Finished ', //create a datalayer variable macro called eventAction
+                                                                'eventLabel': '' //create a datalayer variable macro called eventLabel
+                                                            });
 						} else if(remaining > 0) {
 							btn.html("Next");
 						} else {
 							btn.addClass('hidden');
+                                                        test=$(".activity_header h3").text();
+                                                        //alert($(".activity_header #h3").text());
+                                                        dataLayer.push({
+                                                        'event':'ForceClick',
+                                                                'eventCategory':  header, //create a datalayer variable macro called eventCategory
+                                                                'eventAction': 'Finished ', //create a datalayer variable macro called eventAction
+                                                                'eventLabel': '' //create a datalayer variable macro called eventLabel
+                                                            });
 						}
 
 						btn.removeClass('loading');
@@ -975,6 +1015,20 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
             });
 
             items.click(function(e) {
+                if (this.className.indexOf("video-image") != -1)
+                {
+                    CategoryName="Featured Video Plays";
+                }else
+                {
+                    CategoryName=this.className;
+                }
+                
+                dataLayer.push({
+                    'event':'ForceClick',
+                    'eventCategory': CategoryName, //create a datalayer variable macro called eventCategory
+                    'eventAction': this.href, //create a datalayer variable macro called eventAction
+                    'eventLabel': '' //create a datalayer variable macro called eventLabel
+                });
                 e.preventDefault();
             });
 
@@ -1201,14 +1255,19 @@ if(typeof app === 'undefined') { var app = {}; }
 					
 					$('.was-this-helpful a').removeClass('active');
 					SetCookieVal(button.data('id'), button.attr('class'));
-
+                                            
 					$.ajax({
 						url: button.attr('href')
 					});
-
+                                        
 					button.addClass('active');
 					button.siblings('.active').removeClass('active');
-
+                                        dataLayer.push({
+                                            'event':'ForceClick',
+                                            'eventCategory': 'Helpful', //create a datalayer variable macro called eventCategory
+                                            'eventAction': 'Was this Helpful - '+button.text(), //create a datalayer variable macro called eventAction
+                                            'eventLabel': window.location.href  //create a datalayer variable macro called eventLabel
+                                        });
 					return false;
 				});
 			});
@@ -1813,16 +1872,24 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 			$(window).load(packIt);
 
             $(".image-tile").click(function(e) {
-                e.preventDefault();
-                e.stopPropagation();
+                
+                //alert("sss");
+               e.preventDefault();
+               // e.stopPropagation();
                 if($(this).hasClass('has-link')) {
                     var link = $(this).find('a').first().clone();
+                    
                     link.css({
                         'opacity': 0,
                         'height': 0,
                         'display': 'block'
                     });
-
+                    dataLayer.push({
+                        'event':'ForceClick',
+                        'eventCategory': 'Outbound Link', //create a datalayer variable macro called eventCategory
+                        'eventAction': link.attr("href"), //create a datalayer variable macro called eventAction
+                        'eventLabel': '' //create a datalayer variable macro called eventLabel
+                    });
                     $(link.first()).trigger('click');
                     link.get(0).click();
 
@@ -1836,6 +1903,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
                         link.get(0).dispatchEvent(clickEvent);
                     }
                 }
+                
             });
 
             var list = [];
@@ -3232,3 +3300,12 @@ app.Modules = [
 		}
 	}
 })(jQuery);
+
+$( document ).ready(function() {
+    $(".flex-nav-next").click(function(){
+      // Holds the product ID of the clicked element
+     // var productId = $(this).attr('class').replace('addproduct ', '');
+    console.log("ssssss");
+      //addToCart(productId);
+    });
+});

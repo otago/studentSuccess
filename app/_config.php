@@ -67,6 +67,7 @@ $classes=array(
 'SidebarImageElement',
 'SidebarHelp',
 'CTAElement',
+'ContactElement',	
 'Carousel',
 'CarouselWithUpperLetter',
 'CaseStudy',
