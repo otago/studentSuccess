@@ -11,7 +11,10 @@ class ContactElement extends BaseElement {
 		'LastName'		=> 'Varchar',
 		'DescriptionText'		=> 'Text',
 		'email'		=> 'Varchar',
+		'Phone'		=> 'Varchar',
 		'imageType'		=> 'Varchar',
+		
+		'backgroundColour'		=> 'Varchar',
 	);
 
 	private static $has_one = array(
@@ -26,6 +29,10 @@ class ContactElement extends BaseElement {
 		$fields->replaceField('imageType', DropdownField::create('imageType')->setSource(array(
 			'Circle'		=> 'Circle',
 			'Square'			=> 'Square'
+		)));
+		$fields->replaceField('backgroundColour', DropdownField::create('backgroundColour')->setSource(array(
+			'bgGrey'			=> 'Grey',
+			'bgWhite'		=> 'White'
 		)));
 /*		
 		$fields->replaceField('Icon', DropdownField::create('Icon')->setSource(Config::inst()->get('SiteConfig', 'Icons')));
