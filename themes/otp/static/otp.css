@@ -3267,7 +3267,7 @@ table tr:last-child {
   padding-top: 2.5rem;
   padding-left: 20px;
   overflow: hidden;
-  font-size: 0.8em;
+  font-size: 1em;
 }
 .contactElement .Circle {
   border-radius: 50%;
