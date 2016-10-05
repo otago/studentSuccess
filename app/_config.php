@@ -74,6 +74,7 @@ $classes=array(
 'CheckList',
 'ElementContent',
 'InteractiveList',
+	'ReferencesElement',
 'SingleLevelCheckList',
 'SingleLevelList',
 'HearFromOthers',
