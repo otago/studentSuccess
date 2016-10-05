@@ -619,6 +619,26 @@ table th.main {
   line-height: 50px;
   padding: 0 24px;
 }
+.contactElement .left {
+  padding-top: 40px;
+}
+.contactElement .right {
+  padding-top: 40px;
+}
+.contactElement picture {
+  height: 386px;
+}
+.contactElement h3 {
+  font-size: 20px;
+  padding-bottom: 26px;
+}
+.contactElement p {
+  margin: 0 0 32px;
+}
+.contactElement a {
+  height: 50px;
+  line-height: 50px;
+}
 .way-finder {
   padding-bottom: 52px;
 }
