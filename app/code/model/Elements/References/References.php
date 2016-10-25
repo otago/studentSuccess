@@ -7,7 +7,9 @@ class ReferencesElement extends BaseElement {
 	private static $description = "References Element";
 
 	private static $db = array(
-		'reference'		=> 'Text',
+		'reference1'		=> 'Text',
+		'referenceItalics'		=> 'Text',
+		'reference2'		=> 'Text',
 		'link'		=> 'Text',
 
 	);
