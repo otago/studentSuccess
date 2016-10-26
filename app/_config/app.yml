@@ -56,6 +56,7 @@ Page:
     - ElementTable
     - ElementFile
     - ElementLink
+    - ReferencesElement
     - LinksComponent
     - CaseStudy
     - VideoComponent
