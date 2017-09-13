@@ -547,7 +547,7 @@ table th.main {
   }
 }
 .hero {
-  height: 568px;
+  height: 280px;
 }
 .hero.mini {
   height: 243px;
@@ -556,7 +556,7 @@ table th.main {
   height: 224px;
 }
 .hero .contents {
-  padding: 172px 102px 0;
+  padding: 12px 294px 0;
   max-width: 1400px;
 }
 .hero .contents h2 {
