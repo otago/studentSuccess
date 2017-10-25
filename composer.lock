@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3f808e4679de8c600f3b6a792ceeedf4",
+    "content-hash": "684c647cee7b7fb97bac17e444aae039",
     "packages": [
         {
             "name": "assertchris/hash-compat",
@@ -2194,16 +2194,16 @@
         },
         {
             "name": "unclecheese/betterbuttons",
-            "version": "1.3.11",
+            "version": "1.2.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/unclecheese/silverstripe-gridfield-betterbuttons.git",
-                "reference": "a703795fce8d4d50400c9ac2b82601fde1b67074"
+                "reference": "8144382cfd8e457ec62c680663b7056eb5e85491"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/unclecheese/silverstripe-gridfield-betterbuttons/zipball/a703795fce8d4d50400c9ac2b82601fde1b67074",
-                "reference": "a703795fce8d4d50400c9ac2b82601fde1b67074",
+                "url": "https://api.github.com/repos/unclecheese/silverstripe-gridfield-betterbuttons/zipball/8144382cfd8e457ec62c680663b7056eb5e85491",
+                "reference": "8144382cfd8e457ec62c680663b7056eb5e85491",
                 "shasum": ""
             },
             "require": {
@@ -2226,7 +2226,7 @@
                 "gridfield",
                 "silverstripe"
             ],
-            "time": "2016-09-16T00:03:03+00:00"
+            "time": "2015-12-18T20:44:09+00:00"
         },
         {
             "name": "unclecheese/display-logic",
@@ -2808,16 +2808,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.8.27",
+            "version": "v2.8.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "4c29dec8d489c4e37cf87ccd7166cd0b0e6a45c5"
+                "reference": "842fb6df22180244b4c65935ce1a88d324e5ff9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/4c29dec8d489c4e37cf87ccd7166cd0b0e6a45c5",
-                "reference": "4c29dec8d489c4e37cf87ccd7166cd0b0e6a45c5",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/842fb6df22180244b4c65935ce1a88d324e5ff9e",
+                "reference": "842fb6df22180244b4c65935ce1a88d324e5ff9e",
                 "shasum": ""
             },
             "require": {
@@ -2853,7 +2853,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-06-01T20:52:29+00:00"
+            "time": "2017-10-05T14:38:30+00:00"
         }
     ],
     "aliases": [],
