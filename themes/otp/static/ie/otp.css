@@ -547,7 +547,7 @@ table th.main {
   }
 }
 .hero {
-  height: 568px;
+  height: 280px;
 }
 .hero.mini {
   height: 243px;
@@ -556,7 +556,7 @@ table th.main {
   height: 224px;
 }
 .hero .contents {
-  padding: 172px 102px 0;
+  padding: 12px 262px 0;
   max-width: 1400px;
 }
 .hero .contents h2 {
@@ -575,12 +575,29 @@ table th.main {
   font-size: 18px;
   padding: 0 30px;
 }
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1035px) {
   .hero .contents {
-    padding: 140px 28px 0;
+    padding: 12px 176px 0;
   }
 }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 640px) {
+  .hero .contents {
+    padding: 0 80px 0;
+  }
+}
+@media screen and (max-width: 850px) {
+  .hero .contents h2 {
+    font-size: 54px;
+    line-height: 70px;
+    padding-bottom: 30px;
+  }
+  .hero .contents p {
+    font-size: 19px;
+    line-height: 35px;
+    margin-bottom: 62px;
+  }
+}
+@media screen and (max-width: 745px) {
   .hero .contents h2 {
     font-size: 38px;
     line-height: 38px;

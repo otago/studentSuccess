@@ -2990,7 +2990,7 @@ table tr:last-child {
   position: relative;
   top: 0;
   background: #0c79c3;
-  height: 35.5rem;
+  height: 17.5rem;
   overflow: hidden;
 }
 .hero.fixed {
@@ -3047,7 +3047,7 @@ table tr:last-child {
   left: 0;
   z-index: 2;
   color: #ffffff;
-  padding: 10.750rem 6.375rem 0;
+  padding: .750rem 16.375rem 0;
   margin: 0 auto;
   max-width: 87.50rem;
 }
@@ -3089,12 +3089,33 @@ table tr:last-child {
   color: #ef563c;
   background: #ffffff;
 }
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1035px) {
   .hero .contents {
-    padding: 8.750rem 1.75rem 0;
+    padding: 0.750rem 11rem 0;
   }
 }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 640px) {
+  .hero .contents {
+    padding: 0 5rem 0;
+  }
+}
+@media screen and (max-width: 850px) {
+  .hero .contents h2 {
+    font-weight: 300;
+    font-size: 3.375rem;
+    line-height: 4.375rem;
+    padding-bottom: 1.875rem;
+  }
+  .hero .contents p {
+    font-size: 1.2rem;
+    line-height: 2.1875rem;
+    margin-bottom: 3.875rem;
+  }
+  .hero .contents p br {
+    display: none;
+  }
+}
+@media screen and (max-width: 745px) {
   .hero .contents h2 {
     font-weight: 300;
     font-size: 2.375rem;
@@ -3110,7 +3131,7 @@ table tr:last-child {
     display: none;
   }
 }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 754px) {
   .hero {
     height: auto;
   }

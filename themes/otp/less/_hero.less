@@ -3,7 +3,7 @@
 	position: relative;
 	top: 0;
 	background: @blue;
-	height: 35.5rem;
+	height: 17.5rem;
 	overflow: hidden;
 
 	&.fixed {
@@ -63,7 +63,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', e
 		left: 0;
 		z-index: 2;
 		color: @white;
-		padding: 10.750rem 6.375rem 0;
+		padding: .750rem 16.375rem 0;
 		margin: 0 auto;
 		max-width: 87.50rem;
 		
@@ -103,11 +103,36 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', e
 			};
 		}
 		
-		@media screen and (max-width: 980px) {
-			padding: 8.750rem 1.75rem 0;
+		@media screen and (max-width: 1035px) {
+			padding: 0.750rem 11rem 0;
+		}
+                
+                
+                @media screen and (max-width: 640px)
+                {
+                    padding: 0 5rem 0;
+                }
+                
+                @media screen and (max-width: 850px) {
+                    h2 {
+				font-weight: 300;
+				font-size: 3.375rem;
+				line-height: 4.375rem;
+				padding-bottom: 1.875rem;
+			}
+                        p {
+				font-size: 1.2rem;
+                                line-height: 2.1875rem;
+                                margin-bottom: 3.875rem;
+
+				
+				br {
+					display: none;
+				}
+			}
 		}
 
-		@media screen and (max-width: 680px) {	
+		@media screen and (max-width: 745px) {	
 			h2 {
 				font-weight: 300;
 				font-size: 2.375rem;
@@ -127,7 +152,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', e
 		}
 	}
 	
-	@media screen and (max-width: 680px) {	
+	@media screen and (max-width: 754px) {	
 		height: auto;
 	}
 
