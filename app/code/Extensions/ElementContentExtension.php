@@ -6,6 +6,10 @@ class ElementContentExtension extends DataExtension {
 		'ReadMoreTitle' => 'Varchar(200)',
 		'ReadMoreContent' => 'HTMLText'
 	);
+        
+        private static $many_many = array(
+		'Reference'=> 'ReferencesElement'
+	);
 
 	private static $casting = array(
 		'ProcessedHTML' => 'HTMLText'
@@ -13,6 +17,10 @@ class ElementContentExtension extends DataExtension {
 
 	function updateCMSFields(FieldList $fields){
 		$contentField = $fields->dataFieldByName('HTML');
+                
+                $Reference = $fields->dataFieldByName('Reference');
+                $fields->addFieldToTab('Root.Main', $Reference);
+                
 
 		if($contentField) {
 			$contentField->setRightTitle('<p>

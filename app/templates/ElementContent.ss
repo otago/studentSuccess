@@ -9,9 +9,13 @@
 
 			<div class="readmore-content hide-js">
 				$ReadMoreContent
+                                <% loop $Reference %>
+                                    <% include ReferencesElement %>
+                                <% end_loop %>
 			</div>
 		<% end_if %>
 	</div>
+
 </div>
 <% end_with %>
 <% else %>
@@ -24,8 +28,17 @@
 
 			<div class="readmore-content hide-js">
 				$ReadMoreContent
+                                <% loop $Reference %>
+                                    <% include ReferencesElement %>
+                                <% end_loop %>
 			</div>
 		<% end_if %>
+                    
+    
 	</div>
+    
+    
+    
 </div>
 <% end_if %>
+
