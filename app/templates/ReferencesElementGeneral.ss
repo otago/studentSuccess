@@ -1,5 +1,5 @@
-<div class="element-content-generic left-content accordion-item-content init">
-    <div class="content-padder referenceindenting" >
+<div class="element-content-generic   init">
+    <div class="content-padd4er referenceindenting" >
         <% if $Widget %>
             <% with $Widget %> 
                 {$reference1} <i>{$referenceItalics}</i> {$reference2} <a href="$link">$link</a>

@@ -10,7 +10,7 @@
 			<div class="readmore-content hide-js">
 				$ReadMoreContent
                                 <% loop $Reference %>
-                                    <% include ReferencesElement %>
+                                    <% include ReferencesElementGeneral %>
                                 <% end_loop %>
 			</div>
 		<% end_if %>
@@ -29,7 +29,7 @@
 			<div class="readmore-content hide-js">
 				$ReadMoreContent
                                 <% loop $Reference %>
-                                    <% include ReferencesElement %>
+                                    <% include ReferencesElementGeneral %>
                                 <% end_loop %>
 			</div>
 		<% end_if %>
