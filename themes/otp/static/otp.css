@@ -3043,8 +3043,8 @@ table tr:last-child {
 }
 .hero .contents {
   position: relative;
-  top: 0;
-  left: 0;
+  top: 29px;
+  left: 17px;
   z-index: 2;
   color: #ffffff;
   padding: .750rem 16.375rem 0;
