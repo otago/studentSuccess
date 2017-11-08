@@ -17,10 +17,13 @@ class ElementContentExtension extends DataExtension {
 
 	function updateCMSFields(FieldList $fields){
 		$contentField = $fields->dataFieldByName('HTML');
+               // debug::dump($this);
+                if($this->owner->ID )
+                {
                 
-                $Reference = $fields->dataFieldByName('Reference');
-                $fields->addFieldToTab('Root.Main', $Reference);
-                
+                    $Reference = $fields->dataFieldByName('Reference');
+                    $fields->addFieldToTab('Root.Main', $Reference);
+                }
 
 		if($contentField) {
 			$contentField->setRightTitle('<p>
