@@ -4,7 +4,7 @@
 	<div class="content-padder">
 		$ProcessedHTML
 
-		<% if ReadMoreContent %>
+		<% if ReadMoreContent  ||  $Reference %>
 			<p><a href="#" class="togglereadmore hide-nojs"><% if ReadMoreTitle %>$ReadMoreTitle<% else %>Read More<% end_if %></a></p>
 
 			<div class="readmore-content hide-js">
