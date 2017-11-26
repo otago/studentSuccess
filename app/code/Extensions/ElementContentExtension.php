@@ -34,7 +34,16 @@ class ElementContentExtension extends DataExtension {
 				[/Figure]
 			</p>');
 		}
+     
 	}
+        function onAfterWrite() {
+            parent::onAfterWrite();
+            foreach ($this->owner->Reference() as $ref)
+            {
+                $ref->publish('Stage', 'Live');
+                //echo $ref->Title;
+            }
+        }
 
 	function ProcessedHTML() {
 		$strRet = $this->owner->HTML;
