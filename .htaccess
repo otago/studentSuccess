@@ -18,13 +18,13 @@
    Order allow,deny
    Deny from all
 </Files>
-
-
-  <IfModule mod_headers.c>
-    BrowserMatch MSIE ie
-    Header set X-UA-Compatible "IE=Edge,chrome=1" env=ie
-  </IfModule>
-
+##This is commented out  as azure does not have the mod_headers module installed
+#<IfModule mod_setenvif.c>
+#  <IfModule mod_headers.c>
+#    BrowserMatch MSIE ie
+#    Header set X-UA-Compatible "IE=Edge,chrome=1" env=ie
+#  </IfModule>
+#</IfModule>
 
 ErrorDocument 404 /assets/error-404.html
 ErrorDocument 500 /assets/error-500.html
