@@ -10,7 +10,7 @@
  */
 class CreateJobsTask extends BuildTask {
 
-	protected $title = "Create  Scheduled Jobs";
+	protected $title = "Create sss Scheduled Jobs";
 	protected $description = "Clear ALL jobs and add only OP jobs to queue";
 
 	/**
