@@ -1,5 +1,5 @@
 <style>
-    .OTPcontactClass{
+   .OTPLinkList  .OTPcontactClass{
           
         position: relative;
         top: 50%;
