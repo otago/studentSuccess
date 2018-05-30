@@ -9,7 +9,7 @@
     </div>
 <% else %>
     <% with $SiteConfig %>
-    <div class='tile fixed fixed-right tile-c content-tile contact-tile right $ExtraClass otpContactTile' style="height:460px; " >
+    <div class='tile fixed fixed-right tile-c content-tile contact-tile right $ExtraClass otpContactTile'  >
             <% include OTPContact %>
         </div>
     <% end_with %>

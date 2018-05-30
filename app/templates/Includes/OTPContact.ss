@@ -12,6 +12,15 @@
     .otpContactTile .OTPcontactClass{
         margin-left: -10px; 
     }
+    
+    .OTPcontactClass  p , .sidebar-help .OTPcontactClass 
+{
+        font-size: 0.9rem !important;
+    }
+    .sidebar-help .OTPcontactClass 
+    {
+        margin-left: -3px;
+    }
 </style>
 <div class="OTPcontactClass" ><% if $ContactBoxTitle %><h3 style="margin-top: -10px">{$ContactBoxTitle}</h3><% end_if %>
 $ContactBoxSubTitle
