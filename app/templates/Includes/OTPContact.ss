@@ -19,7 +19,7 @@
     }
     .sidebar-help .OTPcontactClass 
     {
-        margin-left: -3px;
+        margin-left: -10px;
     }
 </style>
 <div class="OTPcontactClass" ><% if $ContactBoxTitle %><h3 style="margin-top: -10px">{$ContactBoxTitle}</h3><% end_if %>
