@@ -13,7 +13,7 @@
         margin-left: -10px; 
     }
     
-    .OTPcontactClass  p , .sidebar-help .OTPcontactClass 
+    .otpContactTile .OTPcontactClass  p , .sidebar-help .OTPcontactClass 
 {
         font-size: 0.9rem !important;
     }
