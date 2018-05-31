@@ -35,7 +35,7 @@ ErrorDocument 500 /assets/error-500.html
    RewriteEngine On
 RewriteCond %{HTTP_HOST} ^studentservices\.op\.ac\.nz [NC]
 RewriteCond %{REQUEST_URI} Security/login(.*)$ [NC]
-RewriteRule ^(.*)$ https://op-studentsuccess.azurewebsites.net//$1 [R,L]
+RewriteRule ^(.*)$ https://studentsuccessae.azurewebsites.net//$1 [R,L]
 
 
 
