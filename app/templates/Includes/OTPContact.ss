@@ -1,15 +1,16 @@
 <style>
    .OTPLinkList  .OTPcontactClass{
-          
+        margin-top: -10px;
         position: relative;
-        top: 50%;
-        transform: perspective(1px) translateY(-48%);
+     /*   top: 50%;
+        transform: perspective(1px) translateY(-48%);*/
         
     }
     .OTPLinkList .OTPcontactClass{
         padding-left: 22px;
     }
     .otpContactTile .OTPcontactClass{
+        margin-top: -20px;
         margin-left: -10px; 
     }
     
@@ -19,10 +20,13 @@
     }
     .sidebar-help .OTPcontactClass 
     {
+
         margin-left: -10px;
+        width: 300px;
+
     }
 </style>
-<div class="OTPcontactClass" ><% if $ContactBoxTitle %><h3 style="margin-top: -10px">{$ContactBoxTitle}</h3><% end_if %>
+<div class="OTPcontactClass" ><% if $ContactBoxTitle %><h3 style="">{$ContactBoxTitle}</h3><% end_if %>
 $ContactBoxSubTitle
 <p class='lines'>
     <% if $ContactBoxLocationName %><strong>{$ContactBoxLocationName}</strong><% end_if %><br>
