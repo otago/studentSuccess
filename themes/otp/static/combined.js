@@ -16025,7 +16025,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
       var input_val;
 
       // Create a new text input an attach keyup events
-      var input_box = $("<input placeholder=\"Search for Keyword\" type=\"text\" autocomplete=\"off\" autocapitalize=\"off\"/>")
+      var input_box = $("<input placeholder=\"Filter page by keyword\" type=\"text\" autocomplete=\"off\" autocapitalize=\"off\"/>")
           .css({
               outline: "none"
           })
