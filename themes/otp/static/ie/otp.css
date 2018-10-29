@@ -547,7 +547,7 @@ table th.main {
   }
 }
 .hero {
-  height: 328px;
+  height: 456px;
 }
 .hero.mini {
   height: 243px;
@@ -1455,6 +1455,11 @@ div.token-input-dropdown-mac {
 }
 .container {
   max-width: 1000px;
+}
+.searchinput input {
+  line-height: 40px;
+  font-size: 16px;
+  padding: 0 40px 0 0;
 }
 .button-link {
   line-height: 24px;

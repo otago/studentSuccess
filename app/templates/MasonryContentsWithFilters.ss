@@ -1,6 +1,7 @@
 <% with $Widget %> 
 <div class="component-alignment wide-boxed-element tightentop">
-	<form class='filter-form form-{$ID}'>
+	<div class="massSearch"> <% include  search %> </div>
+	<%--- <form class='filter-form form-{$ID}'>
 		<div class='filters'>
 			<fieldset>
 				<div class='input'>
@@ -9,7 +10,7 @@
 
 				<div class='clear'></div>
 			</fieldset>
-			
+
 			<div class='actions'>
 				<button class='search icon-search icon'></button>
 			</div>
@@ -29,7 +30,7 @@
 
 			<div class='clear'></div>
 		</div>
-	</form>
+	</form>---%>
 
 	<div class='masonry-content masonry-filter clear-this'>
 		<div class='packery filters' data-filterform="form-{$ID}">

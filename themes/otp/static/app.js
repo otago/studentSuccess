@@ -3305,7 +3305,7 @@ $( document ).ready(function() {
     $(".flex-nav-next").click(function(){
       // Holds the product ID of the clicked element
      // var productId = $(this).attr('class').replace('addproduct ', '');
-    console.log("ssssss");
+   // console.log("ssssss");
       //addToCart(productId);
     });
 });

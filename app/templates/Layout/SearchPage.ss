@@ -6,6 +6,7 @@
 	<div class="elements-holder">
 		<section class='page-intro'>
 			<article>
+				<% include  search %>
 				<h1 class='title'>Search Results</h1>
 				
 				<p>{$SearchResults.count} results for "{$SearchText}"</p>
@@ -13,6 +14,7 @@
 		</section>
 
 		<div class="element-content-generic left-content">
+
 			<div class="content-padder">
 				<div class="result-list">
 					<% if $SearchResults %>
