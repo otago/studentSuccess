@@ -4,13 +4,8 @@
     <list default="true" id="4bbdcb7a-8093-4fc9-8399-ee66f0c7e7b6" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../silverstripe4/app/_config/saml.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/Includes/search.ss" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/Includes/search.ss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/Layout/HomePage.ss" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/Layout/HomePage.ss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/MasonryContentsWithFilters.ss" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/MasonryContentsWithFilters.ss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/otp/less/_header.less" beforeDir="false" afterPath="$PROJECT_DIR$/themes/otp/less/_header.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/otp/less/_page.less" beforeDir="false" afterPath="$PROJECT_DIR$/themes/otp/less/_page.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/otp/static/ie/otp.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/otp/static/ie/otp.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/otp/static/ie/otp.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/otp/static/ie/otp.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/otp/static/otp.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/otp/static/otp.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/otp/static/otp.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/otp/static/otp.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../silverstripe4/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../silverstripe4/.env" afterDir="false" />
@@ -104,10 +99,10 @@
           <entry key="css" value="6" />
           <entry key="js" value="4" />
           <entry key="json" value="26" />
-          <entry key="less" value="246" />
+          <entry key="less" value="252" />
           <entry key="log" value="1" />
           <entry key="php" value="282" />
-          <entry key="ss" value="509" />
+          <entry key="ss" value="531" />
           <entry key="yml" value="51" />
         </counts>
       </usages-collector>
@@ -116,10 +111,10 @@
           <entry key="CSS" value="6" />
           <entry key="JSON" value="26" />
           <entry key="JavaScript" value="4" />
-          <entry key="Less" value="246" />
+          <entry key="Less" value="252" />
           <entry key="PHP" value="282" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="SilverStripe" value="509" />
+          <entry key="SilverStripe" value="531" />
           <entry key="YAML" value="51" />
         </counts>
       </usages-collector>
@@ -159,11 +154,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/otp/less/_page.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="102">
+              <caret line="44" column="10" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -177,11 +172,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/templates/Layout/HomePage.ss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="32" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="32" />
+            <state relative-caret-position="102">
+              <caret line="6" column="62" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -323,8 +318,8 @@
         <option value="$PROJECT_DIR$/app/templates/MasonryContentsWithFilters.ss" />
         <option value="$PROJECT_DIR$/themes/otp/less/_header.less" />
         <option value="$PROJECT_DIR$/app/templates/Includes/search.ss" />
-        <option value="$PROJECT_DIR$/app/templates/Layout/HomePage.ss" />
         <option value="$PROJECT_DIR$/themes/otp/less/_page.less" />
+        <option value="$PROJECT_DIR$/app/templates/Layout/HomePage.ss" />
       </list>
     </option>
   </component>
@@ -429,12 +424,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540433390443</updated>
-      <workItem from="1540433391780" duration="27513000" />
+      <workItem from="1540433391780" duration="28216000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27513000" />
+    <option name="totallyTimeSpent" value="28216000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="11" width="1932" height="928" extended-state="0" />
@@ -803,13 +798,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/Layout/HomePage.ss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/otp/less/_header.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="809">
@@ -819,8 +807,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/otp/less/_page.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="102">
+          <caret line="44" column="10" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Layout/HomePage.ss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="62" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
         </state>
       </provider>
     </entry>

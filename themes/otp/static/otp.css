@@ -5967,10 +5967,11 @@ div.token-input-dropdown-mac ul li.token-input-selected-dropdown-item-mac.odd sp
   color: #313946;
   opacity: .2;
 }
-.searchbar {
+.homepage .searchbar {
   margin-bottom: 40px;
 }
 .massSearch {
+  padding-bottom: 25px;
   border-bottom: 1px solid #d8d5d0;
 }
 .searchformdiv {
