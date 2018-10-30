@@ -2819,10 +2819,19 @@ table tr:last-child {
   border-bottom: 1px solid transparent;
   margin-right: 0.625rem;
   opacity: 0.6;
-  width: 350px;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+}
+@media screen and (max-width: 960px) {
+  .main nav .level-1 li form input {
+    width: 150px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .main nav .level-1 li form input {
+    width: 350px;
+  }
 }
 .main nav .level-1 li form input:hover {
   opacity: 1;
@@ -5952,42 +5961,22 @@ div.token-input-dropdown-mac ul li.token-input-selected-dropdown-item-mac.odd sp
   max-width: 62.5rem;
   box-sizing: border-box;
 }
-.searchinput input {
-  /* height: 2.5rem; */
-  line-height: 2.5rem;
-  font-size: 1rem;
-  width: 94%;
-  min-width: 94%;
-  border-radius: 0;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 0;
-  -o-border-radius: 5px;
-  -moz-border-radius-topright: 0;
-  -moz-border-radius-bottomright: 0;
-  -moz-border-radius-bottomleft: 0;
-  -moz-border-radius-topleft: 0;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  display: block;
-  padding: 0 2.5rem 0 0;
-  border: 0;
-  float: left;
-  color: black;
-}
 .searchinput .icon {
   background: 0 0;
   border: 0;
-  float: right;
+  color: #313946;
+  opacity: .2;
+}
+.searchbar {
+  margin-bottom: 40px;
 }
 .massSearch {
-  padding-bottom: 15px;
   border-bottom: 1px solid #d8d5d0;
 }
 .searchformdiv {
-  width: 100%;
-  border: 1px solid #d8d5d0;
-  height: 42px;
+  color: black;
+  background: white;
+  font-weight: bold;
 }
 .searchinput .searchText {
   font-family: proxima-nova, sans-serif;

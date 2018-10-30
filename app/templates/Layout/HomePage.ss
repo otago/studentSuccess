@@ -2,7 +2,8 @@
 <section class='hero bg-image clear-this' data-top='header.main'>
 	<div class="grad">
 	    <div class='contents'>
-	        <% if $HeroTitle %><h2>{$HeroTitleHTML}</h2><% end_if %>
+			<div class="homepage">
+			<% if $HeroTitle %><h2>{$HeroTitleHTML}</h2><% end_if %></div>
 	        <% if $HeroContent %><p>{$HeroContentHTML}</p><% end_if %>
  			<% include  search %>
 	        <% if $HeroLink && $HeroLinkText %>

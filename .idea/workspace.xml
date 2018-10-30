@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4bbdcb7a-8093-4fc9-8399-ee66f0c7e7b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/templates/Includes/search.ss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../silverstripe4/app/_config/saml.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/code/Extensions/Contactable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/code/Extensions/Contactable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/code/Extensions/OTPConfigs.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/code/Extensions/OTPConfigs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/Includes/search.ss" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/Includes/search.ss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/Layout/HomePage.ss" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/Layout/HomePage.ss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/Layout/SearchPage.ss" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/Layout/SearchPage.ss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/LinkListMasonryTile.ss" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/LinkListMasonryTile.ss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/MasonryContent.ss" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/MasonryContent.ss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/MasonryContentsWithFilters.ss" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/MasonryContentsWithFilters.ss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/otp/js/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/otp/js/app/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/otp/less/_header.less" beforeDir="false" afterPath="$PROJECT_DIR$/themes/otp/less/_header.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/otp/less/_hero.less" beforeDir="false" afterPath="$PROJECT_DIR$/themes/otp/less/_hero.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/otp/less/_page.less" beforeDir="false" afterPath="$PROJECT_DIR$/themes/otp/less/_page.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/otp/static/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/otp/static/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/otp/static/ie/otp.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/otp/static/ie/otp.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/otp/static/ie/otp.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/otp/static/ie/otp.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/otp/static/otp.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/otp/static/otp.css" afterDir="false" />
@@ -84,13 +77,13 @@
         <counts>
           <entry key="css" value="1" />
           <entry key="env" value="1" />
-          <entry key="js" value="1" />
+          <entry key="js" value="2" />
           <entry key="json" value="5" />
-          <entry key="less" value="3" />
+          <entry key="less" value="5" />
           <entry key="lock" value="1" />
           <entry key="log" value="2" />
           <entry key="php" value="32" />
-          <entry key="ss" value="18" />
+          <entry key="ss" value="22" />
           <entry key="yml" value="4" />
         </counts>
       </usages-collector>
@@ -98,11 +91,11 @@
         <counts>
           <entry key="CSS" value="1" />
           <entry key="JSON" value="6" />
-          <entry key="JavaScript" value="1" />
-          <entry key="Less" value="3" />
+          <entry key="JavaScript" value="2" />
+          <entry key="Less" value="5" />
           <entry key="PHP" value="30" />
           <entry key="PLAIN_TEXT" value="5" />
-          <entry key="SilverStripe" value="18" />
+          <entry key="SilverStripe" value="22" />
           <entry key="YAML" value="4" />
         </counts>
       </usages-collector>
@@ -111,10 +104,10 @@
           <entry key="css" value="6" />
           <entry key="js" value="4" />
           <entry key="json" value="26" />
-          <entry key="less" value="159" />
+          <entry key="less" value="246" />
           <entry key="log" value="1" />
           <entry key="php" value="282" />
-          <entry key="ss" value="389" />
+          <entry key="ss" value="509" />
           <entry key="yml" value="51" />
         </counts>
       </usages-collector>
@@ -123,10 +116,10 @@
           <entry key="CSS" value="6" />
           <entry key="JSON" value="26" />
           <entry key="JavaScript" value="4" />
-          <entry key="Less" value="159" />
+          <entry key="Less" value="246" />
           <entry key="PHP" value="282" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="SilverStripe" value="389" />
+          <entry key="SilverStripe" value="509" />
           <entry key="YAML" value="51" />
         </counts>
       </usages-collector>
@@ -154,13 +147,80 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../silverstripe4/app/extensions/OPSAMLController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="100" column="37" lean-forward="true" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+            <state relative-caret-position="323">
+              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
               <folding>
                 <element signature="e#6#46#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/themes/otp/less/_page.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/Includes/Header.ss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="77" lean-forward="true" selection-start-line="17" selection-start-column="77" selection-end-line="17" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/Layout/HomePage.ss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="32" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/otp/less/_header.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="809">
+              <caret line="207" column="33" lean-forward="true" selection-start-line="207" selection-start-column="33" selection-end-line="207" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/MasonryContentsWithFilters.ss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/otp/js/app/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="412" column="17" selection-start-line="412" selection-start-column="8" selection-end-line="412" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/Includes/search.ss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="34" selection-start-column="34" selection-end-column="34" />
+              <folding>
+                <element signature="n#style#0;n#input#0;n#li#0;n#ul#0;n#div#0;n#fieldset#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tester#0;n#li#0;n#ul#0;n#div#0;n#fieldset#0;n#div#0;n#form#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -176,15 +236,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../silverstripe4/saml/src/Helpers/SAMLHelper.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../silverstripe4/composer.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="493">
@@ -193,62 +244,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../silverstripe4/app/extensions/OPSAMLConfiguration.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../silverstripe4/saml/src/Authenticators/SAMLAuthenticator.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="65" column="28" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../silverstripe4/app/_config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../silverstripe4/vendor/silverstripe/framework/src/Security/Authenticator.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../silverstripe4/app/_config/mysite.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>header</find>
-      <find>height: 20.5rem</find>
-      <find>searchinput</find>
-      <find>sear</find>
-      <find>width: 50px</find>
-      <find>contact 1</find>
-      <find>ContactBoxLocationName2</find>
       <find>contactt</find>
       <find>contact</find>
       <find>ContactBoxPhone</find>
@@ -270,6 +269,15 @@
       <find>LDAPUtil</find>
       <find>ldap</find>
       <find>index(</find>
+      <find>.searchinput</find>
+      <find>filter page</find>
+      <find>search</find>
+      <find>searchformdiv</find>
+      <find>name</find>
+      <find>filter pag</find>
+      <find>input_box</find>
+      <find>place</find>
+      <find>350</find>
     </findStrings>
     <dirStrings>
       <dir>D:\xampp\htdocs\op3\themes\otp</dir>
@@ -285,20 +293,15 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../silverstripe4" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/themes/otp/less/_hero.less" />
         <option value="$PROJECT_DIR$/themes/otp/static/otp.css" />
-        <option value="$PROJECT_DIR$/app/templates/Layout/HomePage.ss" />
         <option value="$PROJECT_DIR$/app/templates/Layout/SearchPage.ss" />
-        <option value="$PROJECT_DIR$/themes/otp/less/_header.less" />
-        <option value="$PROJECT_DIR$/app/templates/MasonryContentsWithFilters.ss" />
         <option value="$PROJECT_DIR$/app/templates/MasonryContent.ss" />
-        <option value="$PROJECT_DIR$/themes/otp/less/_page.less" />
-        <option value="$PROJECT_DIR$/app/templates/Includes/search.ss" />
         <option value="$PROJECT_DIR$/app/templates/Includes/OTPContact.ss" />
         <option value="$PROJECT_DIR$/app/templates/Includes/ContactTile.ss" />
         <option value="$PROJECT_DIR$/app/templates/Includes/MiniContactBlock.ss" />
@@ -317,6 +320,11 @@
         <option value="$PROJECT_DIR$/../silverstripe4/composer.json" />
         <option value="$PROJECT_DIR$/../silverstripe4/app/extensions/OPSAMLController.php" />
         <option value="$PROJECT_DIR$/../silverstripe4/silverstripe.log" />
+        <option value="$PROJECT_DIR$/app/templates/MasonryContentsWithFilters.ss" />
+        <option value="$PROJECT_DIR$/themes/otp/less/_header.less" />
+        <option value="$PROJECT_DIR$/app/templates/Includes/search.ss" />
+        <option value="$PROJECT_DIR$/app/templates/Layout/HomePage.ss" />
+        <option value="$PROJECT_DIR$/themes/otp/less/_page.less" />
       </list>
     </option>
   </component>
@@ -365,11 +373,11 @@
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-280" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="11" />
     <option name="width" value="1932" />
-    <option name="height" value="939" />
+    <option name="height" value="928" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -383,53 +391,7 @@
           <expand>
             <path>
               <item name="op3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="silverstripe4" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="op3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="silverstripe4" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="op3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="silverstripe4" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="_config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="op3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="silverstripe4" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="extensions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="op3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="silverstripe4" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="op3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="silverstripe4" type="462c0819:PsiDirectoryNode" />
-              <item name="saml" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="op3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="silverstripe4" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="op3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="silverstripe4" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="silverstripe" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="op3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="silverstripe4" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="silverstripe" type="462c0819:PsiDirectoryNode" />
-              <item name="ldap" type="462c0819:PsiDirectoryNode" />
+              <item name="op3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -438,7 +400,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="LDAPUtil&#9;null&#9;null&#10;acs&#9;null&#9;null&#10;SAMLAuthenticator&#9;null&#9;null&#10;unregister&#9;null&#9;null&#10;SAMLSecurityExtension&#9;null&#9;null&#10;getAuthenticators&#9;null&#9;null&#10;secu&#9;null&#9;null&#10;Security.php:204&#9;FILE&#9;file://D:/xampp/htdocs/op3/framework/security/Security.php&#10;Filesystem.php&#9;FILE&#9;file://D:/xampp/htdocs/op3/framework/filesystem/Filesystem.php&#10;search&#9;FILE&#9;file://D:/xampp/htdocs/op3/app/templates/Layout/SearchPage.ss&#10;home*.ss&#9;FILE&#9;file://D:/xampp/htdocs/op3/app/templates/Layout/HomePage.ss&#10;home&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="home&#9;FILE&#9;file://D:/xampp/htdocs/op3/app/templates/Layout/HomePage.ss&#10;header&#9;FILE&#9;file://D:/xampp/htdocs/op3/app/templates/Includes/Header.ss&#10;search&#9;FILE&#9;file://D:/xampp/htdocs/op3/app/templates/Includes/search.ss&#10;LDAPUtil&#9;null&#9;null&#10;acs&#9;null&#9;null&#10;SAMLAuthenticator&#9;null&#9;null&#10;unregister&#9;null&#9;null&#10;SAMLSecurityExtension&#9;null&#9;null&#10;getAuthenticators&#9;null&#9;null&#10;secu&#9;null&#9;null&#10;Security.php:204&#9;FILE&#9;file://D:/xampp/htdocs/op3/framework/security/Security.php&#10;Filesystem.php&#9;FILE&#9;file://D:/xampp/htdocs/op3/framework/filesystem/Filesystem.php&#10;home*.ss&#9;FILE&#9;file://D:/xampp/htdocs/op3/app/templates/Layout/HomePage.ss" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -467,20 +429,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540433390443</updated>
-      <workItem from="1540433391780" duration="23139000" />
+      <workItem from="1540433391780" duration="27513000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23139000" />
+    <option name="totallyTimeSpent" value="27513000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="-8" y="11" width="1932" height="928" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Grunt " side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25052193" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
@@ -507,11 +469,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/npm-debug.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-867" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -549,38 +506,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/Includes/Header.ss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/Layout/SearchPage.ss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/otp/less/_header.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="213" column="61" lean-forward="true" selection-start-line="213" selection-start-column="61" selection-end-line="213" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/MasonryContentsWithFilters.ss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-59">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/otp/less/_page.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -595,20 +524,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/Layout/HomePage.ss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/Includes/search.ss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="54" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -843,18 +758,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../silverstripe4/silverstripe.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/../silverstripe4/app/extensions/OPSAMLController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="100" column="37" lean-forward="true" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+        <state relative-caret-position="323">
+          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
           <folding>
             <element signature="e#6#46#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../silverstripe4/silverstripe.log">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/themes/otp/js/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="412" column="17" selection-start-line="412" selection-start-column="8" selection-end-line="412" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/MasonryContentsWithFilters.ss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Includes/search.ss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="34" selection-start-column="34" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#li#0;n#ul#0;n#div#0;n#fieldset#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tester#0;n#li#0;n#ul#0;n#div#0;n#fieldset#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Includes/Header.ss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="77" lean-forward="true" selection-start-line="17" selection-start-column="77" selection-end-line="17" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Layout/HomePage.ss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/otp/less/_header.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="809">
+          <caret line="207" column="33" lean-forward="true" selection-start-line="207" selection-start-column="33" selection-end-line="207" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/otp/less/_page.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

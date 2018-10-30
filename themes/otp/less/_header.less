@@ -214,7 +214,17 @@
 						border-bottom: 1px solid transparent;
 						margin-right: 0.625rem;
 						opacity: 0.6;
-						width: 350px;
+
+
+
+						@media screen and (max-width: 960px) {
+							width: 150px;
+						}
+
+						@media screen and (min-width: 960px) {
+							width: 350px;
+						}
+
 						.transition(0.2s);
 						
 						&:hover {
