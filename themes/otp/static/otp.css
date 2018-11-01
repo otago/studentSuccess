@@ -6537,6 +6537,9 @@ figure.element figcaption p {
 .element_image + .element-content-generic .content-padder {
   padding-top: 0;
 }
+.contact-tile {
+  width: 100%;
+}
 .sidebar-help {
   background: #f7f7f6;
   color: #404041;
