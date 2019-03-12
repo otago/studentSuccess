@@ -85,10 +85,10 @@ $classes=array(
 'SidebarTestimony',
 'TabbedCheckList' 
 );
- foreach ($classes as $class) {
-    $list[$class] = singleton($class)->i18n_singular_name();
-}
-Config::inst()->update('AccordionItem', 'allowed_elements', $list);
+// foreach ($classes as $class) {
+//    $list[$class] = singleton($class)->i18n_singular_name();
+//}
+Config::inst()->update('AccordionItem', 'allowed_elements', $classes);
 
 Config::inst()->update('Page', 'allowed_elements', array(
 'MasonryContent',
