@@ -48,8 +48,10 @@ sharedraftcontent/
 silverstripe-cache/
 siteconfig/
 sitewidecontent-report/
-
-
+silverstripe-composer-security-checker/
+silverstripe-composer-update-checker/
+silverstripe-maintenance/
+auditor/
 
 _ss_environment.php
 nbproject/private/
