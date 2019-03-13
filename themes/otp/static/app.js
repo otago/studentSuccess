@@ -2402,7 +2402,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
       var input_val;
 
       // Create a new text input an attach keyup events
-      var input_box = $("<input placeholder=\"Search for Keyword\" type=\"text\" autocomplete=\"off\" autocapitalize=\"off\"/>")
+      var input_box = $("<input placeholder=\"Filter page by keyword\" type=\"text\" autocomplete=\"off\" autocapitalize=\"off\"/>")
           .css({
               outline: "none"
           })
@@ -3305,7 +3305,7 @@ $( document ).ready(function() {
     $(".flex-nav-next").click(function(){
       // Holds the product ID of the clicked element
      // var productId = $(this).attr('class').replace('addproduct ', '');
-    console.log("ssssss");
+   // console.log("ssssss");
       //addToCart(productId);
     });
 });

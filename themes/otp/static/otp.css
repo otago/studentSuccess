@@ -2819,10 +2819,19 @@ table tr:last-child {
   border-bottom: 1px solid transparent;
   margin-right: 0.625rem;
   opacity: 0.6;
-  width: 50px;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+}
+@media screen and (max-width: 960px) {
+  .main nav .level-1 li form input {
+    width: 150px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .main nav .level-1 li form input {
+    width: 350px;
+  }
 }
 .main nav .level-1 li form input:hover {
   opacity: 1;
@@ -2990,7 +2999,7 @@ table tr:last-child {
   position: relative;
   top: 0;
   background: #0c79c3;
-  height: 20.5rem;
+  height: 28.5rem;
   overflow: hidden;
 }
 .hero.fixed {
@@ -5952,6 +5961,30 @@ div.token-input-dropdown-mac ul li.token-input-selected-dropdown-item-mac.odd sp
   max-width: 62.5rem;
   box-sizing: border-box;
 }
+.searchinput .icon {
+  background: 0 0;
+  border: 0;
+  color: #313946;
+  opacity: .2;
+}
+.homepage .searchbar {
+  margin-bottom: 40px;
+}
+.massSearch {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #d8d5d0;
+}
+.massSearch.Libraryccc {
+  display: none;
+}
+.searchformdiv {
+  color: black;
+  background: white;
+  font-weight: bold;
+}
+.searchinput .searchText {
+  font-family: proxima-nova, sans-serif;
+}
 .clear-this {
   clear: both;
 }
@@ -6506,6 +6539,9 @@ figure.element figcaption p {
 }
 .element_image + .element-content-generic .content-padder {
   padding-top: 0;
+}
+.contact-tile {
+  width: 100%;
 }
 .sidebar-help {
   background: #f7f7f6;

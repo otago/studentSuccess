@@ -1,6 +1,6 @@
 <?php
 
-class BaseElementExtension extends DataExtension {
+class OPBaseElementExtension extends DataExtension {
 
 	public static $has_open_wrapper = false;
 

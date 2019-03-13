@@ -100,10 +100,37 @@ class Page extends SiteTree {
 			FormUtils::MakeDragAndDropGridField('RelatedPages', 'RelatedPages', $this->RelatedPages(), 'SortOrder'),
 			FormUtils::MakeDragAndDropGridField('RelatedBoxes', 'RelatedBoxes', $this->RelatedBoxes(), 'SortOrder'),
 			HeaderField::create('ContactBox')->setTitle('Contact element details, if you dont wish to override these from the global settings, leave blank')->setHeadingLevel(4),
-			TextField::create('ContactBoxTitle')->setTitle('Title'),
+			/*TextField::create('ContactBoxTitle')->setTitle('Title'),
 			TextareaField::create('ContactBoxContent')->setTitle('Content'),
 			TextField::create('ContactBoxPhone')->setTitle('Phone'),
-			TextField::create('ContactBoxEmail')->setTitle('Email'),
+			TextField::create('ContactBoxEmail')->setTitle('Email'),*/
+			//*****************************
+            TextField::create('ContactBoxTitle')->setTitle('Title'),
+            TextareaField::create('ContactBoxSubTitle')->setTitle('SubTitle'),
+
+
+            //Contact 1
+            HeaderField::create('ContactBox1')->setTitle('Contact 1'),
+
+            HeaderField::create('ContactBox')->setTitle('Contact 1'),
+
+
+            TextField::create('ContactBoxLocationName')->setTitle('LocationName'),
+            TextareaField::create('ContactBoxContent')->setTitle('Location'),
+            TextField::create('ContactBoxPhone')->setTitle('Phone'),
+            TextField::create('ContactBoxEmail')->setTitle('Email'),
+
+            HeaderField::create('ContactBox2')->setTitle('Contact 2'),
+            TextField::create('ContactBoxLocationName2')->setTitle('LocationName'),
+            TextareaField::create('ContactBoxLocation2')->setTitle('Location'),
+            TextField::create('ContactBoxPhone2')->setTitle('Phone 2'),
+            TextField::create('ContactBoxEmail2')->setTitle('Email 2'),
+
+            HeaderField::create('ContactBox3')->setTitle('Contact 3'),
+            TextField::create('ContactBoxLocationName3')->setTitle('LocationName'),
+            TextareaField::create('ContactBoxLocation3')->setTitle('Location'),
+            TextField::create('ContactBoxPhone3')->setTitle('Phone 3'),
+            TextField::create('ContactBoxEmail3')->setTitle('Email 3'),
 		));
 
 		$this->extend('updateCMSFieldsForImages', $fields);
