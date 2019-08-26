@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4bbdcb7a-8093-4fc9-8399-ee66f0c7e7b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/Accordion.ss" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/Accordion.ss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/otp/js/app/components/app.accordion.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/otp/js/app/components/app.accordion.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,132 +15,67 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <executablePath>composer</executablePath>
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1343489033">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.26" value="1" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="css" value="1" />
-          <entry key="env" value="1" />
-          <entry key="jpg" value="2" />
-          <entry key="js" value="2" />
-          <entry key="json" value="6" />
-          <entry key="less" value="6" />
-          <entry key="lock" value="1" />
-          <entry key="log" value="2" />
-          <entry key="php" value="38" />
-          <entry key="ss" value="25" />
-          <entry key="yml" value="5" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CSS" value="1" />
-          <entry key="Image" value="2" />
-          <entry key="JSON" value="7" />
-          <entry key="JavaScript" value="2" />
-          <entry key="Less" value="6" />
-          <entry key="PHP" value="36" />
-          <entry key="PLAIN_TEXT" value="5" />
-          <entry key="SilverStripe" value="25" />
-          <entry key="YAML" value="5" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="css" value="6" />
-          <entry key="js" value="4" />
-          <entry key="json" value="50" />
-          <entry key="less" value="279" />
-          <entry key="log" value="1" />
-          <entry key="php" value="319" />
-          <entry key="ss" value="531" />
-          <entry key="yml" value="53" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CSS" value="6" />
-          <entry key="JSON" value="50" />
-          <entry key="JavaScript" value="4" />
-          <entry key="Less" value="279" />
-          <entry key="PHP" value="319" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="SilverStripe" value="531" />
-          <entry key="YAML" value="53" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.php.composer.actions">
-        <counts>
-          <entry key="addDependencyDialog_from_ComposerEditorNotificationPanel.ExtraActions" value="5" />
-          <entry key="install_from_ComposerEditorNotificationPanel" value="3" />
-          <entry key="require_from_AddDependencyDialog" value="4" />
-          <entry key="updateAll_from_ComposerEditorNotificationPanel" value="3" />
-          <entry key="updatePackage_from_AddDependencyDialog" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.php.new.class">
-        <counts>
-          <entry key="PHP Class.type" value="4" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.php.composer.command.options">
-        <counts>
-          <entry key="require_with_--ansi_--no-interaction_--no-progress.default" value="4" />
-          <entry key="updatePackage_with_--ansi_--no-interaction_--no-progress.default" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="-26428464">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JSHint" value="1" />
-          <entry key="JSON" value="2" />
-          <entry key="PHP" value="7" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="htaccess" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JSON" value="40" />
-          <entry key="PHP" value="21" />
-          <entry key="PLAIN_TEXT" value="5" />
-        </counts>
-      </usages-collector>
-    </session>
+    <execution>
+      <executable path="composer" />
+    </execution>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_ss_environment.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="102">
+              <caret line="6" column="31" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/auditor/_config.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/composer.lock">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="763">
+              <caret line="744" column="42" lean-forward="true" selection-start-line="744" selection-start-column="42" selection-end-line="744" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/Layout/GlossaryPage.ss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="339">
+              <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/Accordion.ss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="48" lean-forward="true" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/themes/otp/js/app/components/app.accordion.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="811">
+              <caret line="94" column="33" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+            <state relative-caret-position="153">
+              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -146,13 +84,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>SAMLController</find>
-      <find>SAMLSecurity</find>
-      <find>onBeforeSecurityLogin</find>
-      <find>Authenticator</find>
-      <find>register_authenticator</find>
-      <find>register</find>
-      <find>reg</find>
       <find>unregister</find>
       <find>sec</find>
       <find>SAMLHelper</find>
@@ -176,6 +107,13 @@
       <find>ElementTable</find>
       <find>sort</find>
       <find>off</find>
+      <find>accordion-</find>
+      <find>aud</find>
+      <find>accordion-c</find>
+      <find>&lt;a</find>
+      <find>accordion</find>
+      <find>.accordion-c</find>
+      <find>clic</find>
     </findStrings>
     <dirStrings>
       <dir>D:\xampp\htdocs\op3\themes\otp</dir>
@@ -232,68 +170,47 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/_ss_environment.php" />
         <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/app/templates/Accordion.ss" />
+        <option value="$PROJECT_DIR$/themes/otp/js/app/components/app.accordion.js" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER">
-    <gruntfile path="$PROJECT_DIR$/Gruntfile.js" />
-  </component>
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/node_modules" />
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/framework/admin/thirdparty/chosen/package.json" />
-      <path value="$PROJECT_DIR$/framework/admin/thirdparty/history-js/package.json" />
-      <path value="$PROJECT_DIR$/framework/thirdparty/javascript-loadimage/package.json" />
-      <path value="$PROJECT_DIR$/framework/thirdparty/javascript-templates/package.json" />
-      <path value="$PROJECT_DIR$/framework/thirdparty/jquery-fileupload/package.json" />
-      <path value="$PROJECT_DIR$/package.json" />
-      <path value="$PROJECT_DIR$/segment-field/package.json" />
-      <path value="$PROJECT_DIR$/sharedraftcontent/package.json" />
-    </packageJsonPaths>
-  </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/asyncphp/doorman" />
-      <path value="$PROJECT_DIR$/vendor/jeremeamia/SuperClosure" />
-      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
-      <path value="$PROJECT_DIR$/vendor/assertchris/hash-compat" />
-      <path value="$PROJECT_DIR$/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
-      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/array_column" />
+      <path value="$PROJECT_DIR$/vendor/seld/phar-utils" />
+      <path value="$PROJECT_DIR$/vendor/seld/jsonlint" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/justinrainbow/json-schema" />
+      <path value="$PROJECT_DIR$/vendor/mustangostang/spyc" />
+      <path value="$PROJECT_DIR$/vendor/sensiolabs/security-checker" />
+      <path value="$PROJECT_DIR$/vendor/assertchris/hash-compat" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/jeremeamia/SuperClosure" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/asyncphp/doorman" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
       <path value="$PROJECT_DIR$/vendor/hafriedlander/phockito" />
       <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
-      <path value="$PROJECT_DIR$/vendor/ramsey/array_column" />
-      <path value="$PROJECT_DIR$/vendor/composer" />
-      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
-      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
-      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
-      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
-      <path value="$PROJECT_DIR$/vendor/symfony/console" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
-      <path value="$PROJECT_DIR$/vendor/symfony/process" />
-      <path value="$PROJECT_DIR$/vendor/sensiolabs/security-checker" />
-      <path value="$PROJECT_DIR$/vendor/justinrainbow/json-schema" />
-      <path value="$PROJECT_DIR$/vendor/mustangostang/spyc" />
-      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
-      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
-      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
-      <path value="$PROJECT_DIR$/vendor/seld/phar-utils" />
-      <path value="$PROJECT_DIR$/vendor/seld/jsonlint" />
-      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -313,8 +230,13 @@
         <subPane>
           <expand>
             <path>
-              <item name="studentSuccess" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studentSuccess" type="462c0819:PsiDirectoryNode" />
+              <item name="op3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="op3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="op3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="op3" type="462c0819:PsiDirectoryNode" />
+              <item name="auditor" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -323,6 +245,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="ElementList.php:108&#9;FILE&#9;file://C:/xampp/htdocs/studentSuccess/elemental/code/models/ElementList.php&#10;Core.php:160&#9;FILE&#9;file://C:/xampp/htdocs/studentSuccess/framework/core/Core.php&#10;BaseElement.php:135&#9;FILE&#9;file://C:/xampp/htdocs/studentSuccess/elemental/code/models/BaseElement.php&#10;ElementList.php:55&#9;FILE&#9;file://C:/xampp/htdocs/studentSuccess/elemental/code/models/ElementList.php&#10;*.less&#9;FILE&#9;file://D:/xampp/htdocs/op3/themes/otp/less/_page.less&#10;ContactTile&#9;FILE&#9;file://D:/xampp/htdocs/op3/app/templates/Includes/ContactTile.ss&#10;contact&#9;FILE&#9;file://D:/xampp/htdocs/op3/assets/Uploads/_versions/1424/Contact-Central-SS-JoBrun-square.1.jpg&#10;related*.ss&#9;FILE&#9;file://D:/xampp/htdocs/op3/app/templates/Includes/RelatedTopics.ss&#10;contact*.php&#9;FILE&#9;file://D:/xampp/htdocs/op3/app/code/Extensions/Contactable.php&#10;contact*.p&#9;FILE&#9;file://D:/xampp/htdocs/op3/app/code/model/Elements/ContactElement/ContactElement.php&#10;home&#9;FILE&#9;file://D:/xampp/htdocs/op3/app/templates/Layout/HomePage.ss&#10;header&#9;FILE&#9;file://D:/xampp/htdocs/op3/app/templates/Includes/Header.ss&#10;search&#9;FILE&#9;file://D:/xampp/htdocs/op3/app/templates/Includes/search.ss&#10;LDAPUtil&#9;null&#9;null&#10;acs&#9;null&#9;null&#10;SAMLAuthenticator&#9;null&#9;null&#10;unregister&#9;null&#9;null&#10;SAMLSecurityExtension&#9;null&#9;null&#10;getAuthenticators&#9;null&#9;null&#10;secu&#9;null&#9;null&#10;Security.php:204&#9;FILE&#9;file://D:/xampp/htdocs/op3/framework/security/Security.php&#10;Filesystem.php&#9;FILE&#9;file://D:/xampp/htdocs/op3/framework/filesystem/Filesystem.php&#10;home*.ss&#9;FILE&#9;file://D:/xampp/htdocs/op3/app/templates/Layout/HomePage.ss" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -364,12 +287,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35844000" />
+    <option name="totallyTimeSpent" value="39850000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="73" y="-8" width="1932" height="928" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25213677" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26012793" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Grunt " order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -416,22 +340,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../silverstripe4/vendor/silverstripe/framework/src/Security/Security.php" />
-    <entry file="file://$PROJECT_DIR$/framework/security/Security.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="189" column="6" lean-forward="true" selection-start-line="189" selection-start-column="6" selection-end-line="189" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../silverstripe4/saml/_config.php" />
-    <entry file="file://$PROJECT_DIR$/../silverstripe4/app/extensions/OPSAMLSecurityExtension.php" />
-    <entry file="file://$PROJECT_DIR$/../silverstripe4/saml/composer.json" />
-    <entry file="file://$PROJECT_DIR$/../silverstripe4/vendor/silverstripe/framework/src/Forms/ConfirmedPasswordField.php" />
     <entry file="file://$PROJECT_DIR$/../silverstripe4/vendor/silverstripe/framework/src/Security/BasicAuthMiddleware.php" />
     <entry file="file://$PROJECT_DIR$/framework/security/Authenticator.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -598,13 +507,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="761">
@@ -612,10 +514,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/externallinks/code/model/BrokenExternalLink.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="42" column="41" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_ss_environment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="102">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auditor/_config.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="763">
+          <caret line="744" column="42" lean-forward="true" selection-start-line="744" selection-start-column="42" selection-end-line="744" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Layout/GlossaryPage.ss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Accordion.ss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="48" lean-forward="true" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/otp/js/app/components/app.accordion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="811">
+          <caret line="94" column="33" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
         </state>
       </provider>
     </entry>
