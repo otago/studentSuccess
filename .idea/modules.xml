@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/op3.iml" filepath="$PROJECT_DIR$/.idea/op3.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../silverstripe4/.idea/silverstripe4.iml" filepath="$PROJECT_DIR$/../silverstripe4/.idea/silverstripe4.iml" />
-    </modules>
-  </component>
-</project>
