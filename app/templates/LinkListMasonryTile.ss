@@ -32,7 +32,7 @@
 		<% end_with %>
 	<% end_if %>
 </div>
-<script>
+<script> 
 	$( document ).ready(function() {
 		var urlParams = new URLSearchParams(window.location.search);
 		$("#link"+urlParams.get('p')).click();
