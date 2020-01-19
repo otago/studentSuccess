@@ -4,7 +4,7 @@
     	    <h3>{$Title}</h3>
     	    <ul>
     	        <% loop $Links %>
-    	            <li><a <% if Elements %>href='#' data-show-items="[<% loop Elements %>$ID<% if not Last %>,<% end_if %><% end_loop %>]" class="searchf" <% else %>href='{$Link}' target="{$Target}"<% end_if %>>{$Title}<span class='icon icon-arrow'>&nbsp;</span></a></li>
+    	            <li><a <% if Elements %>href='#{$ID}' data-show-items="[<% loop Elements %>$ID<% if not Last %>,<% end_if %><% end_loop %>]" class="searchf" id="link{$ID}" <% else %>href='{$Link}' target="{$Target}"<% end_if %>>{$Title}<span class='icon icon-arrow'>&nbsp;</span></a></li>
     	        <% end_loop %>
     	    </ul>
     	</article>
@@ -32,3 +32,11 @@
 		<% end_with %>
 	<% end_if %>
 </div>
+<script>
+
+	$( document ).ready(function() {
+		var urlParams = new URLSearchParams(window.location.search);
+		$("#link"+urlParams.get('p')).click();
+	});
+
+</script>
