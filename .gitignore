@@ -57,3 +57,5 @@ _ss_environment.php
 nbproject/private/
 silverstripe.log
 .idea/
+composer.phar
+
