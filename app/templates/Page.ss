@@ -87,6 +87,7 @@
 
     <% include RelatedTopics %>
     <% include Footer %>
+    <% include TePukengaFooter %>
     <% include Scripts %>
 </body>
 </html>
