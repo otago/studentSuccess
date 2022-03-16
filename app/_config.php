@@ -1,4 +1,37 @@
 <?php
+use SilverStripe\i18n\i18n;
+use SilverStripe\Control\Controller;
+use SilverStripe\Core\Config\Config;
+use OP\studentsuccess\LandingPage;
+use OP\studentsuccess\MasonryContent;
+use OP\studentsuccess\LandingSearchPage;
+use OP\studentsuccess\MasonryContentsWithFilters;
+use OP\studentsuccess\HomePage;
+use OP\studentsuccess\WayFinder;
+use OP\studentsuccess\HearFromOthers;
+use OP\studentsuccess\AccordionPage;
+use OP\studentsuccess\Accordion;
+use OP\studentsuccess\AccordionItem;
+use OP\studentsuccess\ElementTable;
+use OP\studentsuccess\SidebarImageElement;
+use OP\studentsuccess\SidebarHelp;
+use OP\studentsuccess\CTAElement;
+use OP\studentsuccess\ContactElement;
+use OP\studentsuccess\Carousel;
+use OP\studentsuccess\CarouselWithUpperLetter;
+use OP\studentsuccess\CaseStudy;
+use OP\studentsuccess\CheckList;
+use DNADesign\Elemental\Models\ElementContent;
+use OP\studentsuccess\InteractiveList;
+use OP\studentsuccess\ReferencesElement;
+use OP\studentsuccess\SingleLevelCheckList;
+use OP\studentsuccess\SingleLevelList;
+use OP\studentsuccess\VideoComponent;
+use OP\studentsuccess\LinksComponent;
+use OP\studentsuccess\MatrixElement;
+use OP\studentsuccess\SidebarTestimony;
+use OP\studentsuccess\TabbedCheckList;
+
 
 global $project;
 $project = 'opt';
@@ -31,67 +64,67 @@ $strItems = substr($strItems, 0, -1);
 
 HtmlEditorConfig::get('cms')->setOption('theme_advanced_styles', $strItems);
 
-Config::inst()->remove('LandingPage', 'allowed_elements');
+Config::inst()->remove(LandingPage::class, 'allowed_elements');
 
-Config::inst()->update('LandingPage', 'allowed_elements', array(
-	'MasonryContent'
+Config::inst()->update(LandingPage::class, 'allowed_elements', array(
+	MasonryContent::class
 ));
 
-Config::inst()->remove('LandingSearchPage', 'allowed_elements');
+Config::inst()->remove(LandingSearchPage::class, 'allowed_elements');
 
-Config::inst()->update('LandingSearchPage', 'allowed_elements', array(
-	'MasonryContentsWithFilters'
+Config::inst()->update(LandingSearchPage::class, 'allowed_elements', array(
+	MasonryContentsWithFilters::class
 ));
 
-Config::inst()->remove('HomePage', 'allowed_elements');
+Config::inst()->remove(HomePage::class, 'allowed_elements');
 
-Config::inst()->update('HomePage', 'allowed_elements', array(
-	'WayFinder',
-	'HearFromOthers'
+Config::inst()->update(HomePage::class, 'allowed_elements', array(
+	WayFinder::class,
+	HearFromOthers::class
 ));
 
-Config::inst()->remove('AccordionPage', 'allowed_elements');
+Config::inst()->remove(AccordionPage::class, 'allowed_elements');
 
-Config::inst()->update('AccordionPage', 'allowed_elements', array(
-	'Accordion'
+Config::inst()->update(AccordionPage::class, 'allowed_elements', array(
+	Accordion::class
 ));
 
 Config::inst()->remove('FilterableChecklist', 'allowed_elements');
 
-Config::inst()->remove('AccordionItem', 'allowed_elements');
+Config::inst()->remove(AccordionItem::class, 'allowed_elements');
 
 $classes=array(
-'ElementTable',
+ElementTable::class,
 'ElementFile',
 'ElementLink',
 'ElementImage',
-'SidebarImageElement',
-'SidebarHelp',
-'CTAElement',
-'ContactElement',	
-'Carousel',
-'CarouselWithUpperLetter',
-'CaseStudy',
-'CheckList',
-'ElementContent',
-'InteractiveList',
-	'ReferencesElement',
-'SingleLevelCheckList',
-'SingleLevelList',
-'HearFromOthers',
-'VideoComponent',
-'LinksComponent',
-'MatrixElement',
-'SidebarTestimony',
-'TabbedCheckList' 
+SidebarImageElement::class,
+SidebarHelp::class,
+CTAElement::class,
+ContactElement::class,	
+Carousel::class,
+CarouselWithUpperLetter::class,
+CaseStudy::class,
+CheckList::class,
+ElementContent::class,
+InteractiveList::class,
+	ReferencesElement::class,
+SingleLevelCheckList::class,
+SingleLevelList::class,
+HearFromOthers::class,
+VideoComponent::class,
+LinksComponent::class,
+MatrixElement::class,
+SidebarTestimony::class,
+TabbedCheckList::class 
 );
 // foreach ($classes as $class) {
 //    $list[$class] = singleton($class)->i18n_singular_name();
 //}
-Config::inst()->update('AccordionItem', 'allowed_elements', $classes);
+Config::inst()->update(AccordionItem::class, 'allowed_elements', $classes);
 
 Config::inst()->update('Page', 'allowed_elements', array(
-'MasonryContent',
-    'MasonryContentsWithFilters',
-    'TabbedCheckList' 
+MasonryContent::class,
+    MasonryContentsWithFilters::class,
+    TabbedCheckList::class 
 ));

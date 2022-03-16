@@ -2,162 +2,157 @@
 Name: app
 After: 'framework/*','cms/*'
 ---
-LeftAndMain:
+SilverStripe\Admin\LeftAndMain:
   extra_requirements_css:
     - themes/otp/css/editor.css
-# YAML configuration for SilverStripe
-# See http://doc.silverstripe.org/framework/en/topics/configuration
-# Caution: Indentation through two spaces, not tabs
-SiteConfig:
-    extensions:
-      - OTPConfigs
-    Icons:
-      icon-head-arrow : 'Arrow'
-      icon-arrow-down : 'Arrow Down'
-      icon-external-link : 'External Link'
-      icon-apostrophe : 'Apostrophe'
-      icon-twitter: 'Twitter'
-      icon-facebook: 'Facebook'
-      icon-link: 'Link'
-      icon-dot: 'Dot'
-      icon-tick: 'Tick'
-      icon-mail: 'Mail'
-      icon-phone: 'Phone'
-      icon-play: 'Play Button'
-      icon-info: 'Info List'
-      icon-cta: 'File List'
-      icon-download: 'Download'
-      icon-search: 'Search'
-Director:
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - OP\studentsuccess\OTPConfigs
+  Icons:
+    icon-head-arrow: Arrow
+    icon-arrow-down: 'Arrow Down'
+    icon-external-link: 'External Link'
+    icon-apostrophe: Apostrophe
+    icon-twitter: Twitter
+    icon-facebook: Facebook
+    icon-link: Link
+    icon-dot: Dot
+    icon-tick: Tick
+    icon-mail: Mail
+    icon-phone: Phone
+    icon-play: 'Play Button'
+    icon-info: 'Info List'
+    icon-cta: 'File List'
+    icon-download: Download
+    icon-search: Search
+SilverStripe\Control\Director:
   rules:
-    'tile//$Action/$ID': 'FilterableTile_Counter'
-SSViewer:
-  theme: 'otp'
-
+    tile//$Action/$ID: OP\studentsuccess\FilterableTile_Counter
+SilverStripe\View\SSViewer:
+  theme: otp
 ElementPageExtension:
   ignored_classes:
-    - ActivityPage
-    - FilterableCheckList
+    - OP\studentsuccess\ActivityPage
+    - OP\studentsuccess\FilterableCheckList
 Page:
   extensions:
     - ElementPageExtension
   allowed_elements:
-    - ElementContent
-    - Carousel
-    - CTAElement
-    - ContactElement
-    - SidebarTestimony
-    - InteractiveList
-    - SingleLevelCheckList
-    - SingleLevelList
-    - SidebarImageElement
-    - SidebarHelp
+    - DNADesign\Elemental\Models\ElementContent
+    - OP\studentsuccess\Carousel
+    - OP\studentsuccess\CTAElement
+    - OP\studentsuccess\ContactElement
+    - OP\studentsuccess\SidebarTestimony
+    - OP\studentsuccess\InteractiveList
+    - OP\studentsuccess\SingleLevelCheckList
+    - OP\studentsuccess\SingleLevelList
+    - OP\studentsuccess\SidebarImageElement
+    - OP\studentsuccess\SidebarHelp
     - ElementImage
-    - ElementTable
+    - OP\studentsuccess\ElementTable
     - ElementFile
     - ElementLink
-    - ReferencesElement
-    - LinksComponent
-    - CaseStudy
-    - VideoComponent
-    - CheckList
-    - CarouselWithUpperLetter
-    - MatrixElement
-AccordionPage:
+    - OP\studentsuccess\ReferencesElement
+    - OP\studentsuccess\LinksComponent
+    - OP\studentsuccess\CaseStudy
+    - OP\studentsuccess\VideoComponent
+    - OP\studentsuccess\CheckList
+    - OP\studentsuccess\CarouselWithUpperLetter
+    - OP\studentsuccess\MatrixElement
+OP\studentsuccess\AccordionPage:
   allowed_elements:
-    - Accordion
-HomePage:
+    - OP\studentsuccess\Accordion
+OP\studentsuccess\HomePage:
   allowed_elements:
-    - HearFromOthers
-LandingPage:
+    - OP\studentsuccess\HearFromOthers
+OP\studentsuccess\LandingPage:
   allowed_elements:
-    - MasonryContent
-LandingSearchPage:
+    - OP\studentsuccess\MasonryContent
+OP\studentsuccess\LandingSearchPage:
   allowed_elements:
-    - MasonryContentsWithFilters
-Controller:
+    - OP\studentsuccess\MasonryContentsWithFilters
+SilverStripe\Control\Controller:
   extensions:
-    - ControllerExtension
-FooterLinkBlock:
-  extensions:
-    - Linkable
-FooterLink:
+    - OP\studentsuccess\ControllerExtension
+OP\studentsuccess\FooterLinkBlock:
   extensions:
     - Linkable
-WayFinderFilter:
+OP\studentsuccess\FooterLink:
   extensions:
     - Linkable
-WayFinderItem:
+OP\studentsuccess\WayFinderFilter:
   extensions:
     - Linkable
-CTAElement:
+OP\studentsuccess\WayFinderItem:
   extensions:
     - Linkable
-RelatedPage:
+OP\studentsuccess\CTAElement:
   extensions:
     - Linkable
-RelatedPageBox:
+OP\studentsuccess\RelatedPage:
   extensions:
     - Linkable
-MasonryTile:
+OP\studentsuccess\RelatedPageBox:
   extensions:
     - Linkable
-MasonryTileLink:
+OP\studentsuccess\MasonryTile:
   extensions:
     - Linkable
-LinkElement:
+OP\studentsuccess\MasonryTileLink:
   extensions:
     - Linkable
-LinksComponent:
+OP\studentsuccess\LinkElement:
   extensions:
     - Linkable
-FilterableMasonryTile:
+OP\studentsuccess\LinksComponent:
   extensions:
-    - FilterableTile
-FilterableMasonryImageTile:
+    - Linkable
+OP\studentsuccess\FilterableMasonryTile:
   extensions:
-    - FilterableTile
-FilterableSmallMasonryTile:
+    - OP\studentsuccess\FilterableTile
+OP\studentsuccess\FilterableMasonryImageTile:
   extensions:
-    - FilterableTile
-ElementContent:
+    - OP\studentsuccess\FilterableTile
+OP\studentsuccess\FilterableSmallMasonryTile:
   extensions:
-    - ElementContentExtension
-BaseElement:
+    - OP\studentsuccess\FilterableTile
+DNADesign\Elemental\Models\ElementContent:
   extensions:
-    - OPBaseElementExtension
-GlossaryItem:
+    - OP\studentsuccess\ElementContentExtension
+DNADesign\Elemental\Models\BaseElement:
   extensions:
-    - Contactable
-CheckListBlockItem:
+    - OP\studentsuccess\OPBaseElementExtension
+OP\studentsuccess\GlossaryItem:
   extensions:
-    - Contactable
-MasonryContent:
+    - OP\studentsuccess\Contactable
+OP\studentsuccess\CheckListBlockItem:
   extensions:
-    - Contactable
-SiteTree:
+    - OP\studentsuccess\Contactable
+OP\studentsuccess\MasonryContent:
   extensions:
-    - Contactable
+    - OP\studentsuccess\Contactable
+SilverStripe\CMS\Model\SiteTree:
+  extensions:
+    - OP\studentsuccess\Contactable
 ElementFile:
-  title: "CTA to Download File"
+  title: 'CTA to Download File'
   extensions:
-    - ElementFileExtension
+    - OP\studentsuccess\ElementFileExtension
 ElementExternalLink:
-  title: "Featured external link"
+  title: 'Featured external link'
   defaults:
     NewWindow: 1
 ElementInternalLink:
   extensions:
-    - ElementInternalLinkExtension
-  title: "Featured internal link"
+    - OP\studentsuccess\ElementInternalLinkExtension
+  title: 'Featured internal link'
 ElementImage:
-  title: "Inline image"
-MimeUploadValidator:
+  title: 'Inline image'
+SilverStripe\MimeValidator\MimeUploadValidator:
   MimeTypes:
     dmg:
-      - 'application/x-apple-diskimage'
-      - 'application/octet-stream'
-      
-Injector:
-  ElementalArea:
-    class: ElementalAreaExtension
+      - application/x-apple-diskimage
+      - application/octet-stream
+SilverStripe\Core\Injector\Injector:
+  DNADesign\Elemental\Models\ElementalArea:
+    class: OP\studentsuccess\ElementalAreaExtension
