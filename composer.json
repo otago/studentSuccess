@@ -3,15 +3,11 @@
     "description": "Student Success website",
     "type": "silverstripe-project",
     "require": {
-
-        "dnadesign/silverstripe-elemental": "4.8.*",
-
-
-        "silverstripe/cms": "4.10.*",
-        "silverstripe/framework": "4.10.*",
-        "silverstripe/userforms": "5.12.*",
-        "silverstripe/widgets": "2.2.*"
-
+        "dnadesign/silverstripe-elemental": "^4.8.1",
+        "silverstripe/userforms": "^5.12.0",
+        "silverstripe/widgets": "^2.2.0",
+        "php": ">=5.6",
+        "silverstripe/recipe-cms": "^4.10.0"
     },
     "config": {
         "process-timeout": 900,
@@ -20,5 +16,6 @@
             "composer/installers": true,
             "silverstripe/vendor-plugin": true
         }
-    }
+    },
+    "require-dev": {}
 }

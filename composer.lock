@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "59a0d885b86903e78879055821f1cd01",
+    "content-hash": "50dba76ee922b47513c84b37fa548bd8",
     "packages": [
         {
             "name": "bramus/ansi-php",
@@ -1382,20 +1382,20 @@
         },
         {
             "name": "psr/cache",
-            "version": "1.0.1",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/cache.git",
-                "reference": "d11b50ad223250cf17b86e38383413f5a6764bf8"
+                "reference": "213f9dbc5b9bfbc4f8db86d2838dc968752ce13b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/cache/zipball/d11b50ad223250cf17b86e38383413f5a6764bf8",
-                "reference": "d11b50ad223250cf17b86e38383413f5a6764bf8",
+                "url": "https://api.github.com/repos/php-fig/cache/zipball/213f9dbc5b9bfbc4f8db86d2838dc968752ce13b",
+                "reference": "213f9dbc5b9bfbc4f8db86d2838dc968752ce13b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=8.0.0"
             },
             "type": "library",
             "extra": {
@@ -1415,7 +1415,7 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
             "description": "Common interface for caching libraries",
@@ -1425,9 +1425,9 @@
                 "psr-6"
             ],
             "support": {
-                "source": "https://github.com/php-fig/cache/tree/master"
+                "source": "https://github.com/php-fig/cache/tree/2.0.0"
             },
-            "time": "2016-08-06T20:24:11+00:00"
+            "time": "2021-02-03T23:23:37+00:00"
         },
         {
             "name": "psr/container",
@@ -1801,6 +1801,60 @@
             "time": "2021-12-10T03:57:05+00:00"
         },
         {
+            "name": "silverstripe/asset-admin",
+            "version": "1.10.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-asset-admin.git",
+                "reference": "ca23ccd8534c8d8bed56f6f56049a665497b3fe4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-asset-admin/zipball/ca23ccd8534c8d8bed56f6f56049a665497b3fe4",
+                "reference": "ca23ccd8534c8d8bed56f6f56049a665497b3fe4",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3 || ^8.0",
+                "silverstripe/admin": "^1.7",
+                "silverstripe/framework": "^4.10",
+                "silverstripe/graphql": "^3.5 || ^4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5",
+                "silverstripe/campaign-admin": "^1.5",
+                "silverstripe/cms": "^4.5",
+                "squizlabs/php_codesniffer": "^3"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "expose": [
+                    "client/dist",
+                    "client/lang"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "SilverStripe\\AssetAdmin\\": [
+                        "code/",
+                        "_legacy/"
+                    ],
+                    "SilverStripe\\AssetAdmin\\Tests\\": "tests/php/",
+                    "SilverStripe\\AssetAdmin\\Tests\\Behat\\Context\\": "tests/behat/src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Asset management for the SilverStripe CMS",
+            "support": {
+                "issues": "https://github.com/silverstripe/silverstripe-asset-admin/issues",
+                "source": "https://github.com/silverstripe/silverstripe-asset-admin/tree/1.10.1"
+            },
+            "time": "2022-01-26T22:18:37+00:00"
+        },
+        {
             "name": "silverstripe/assets",
             "version": "1.10.0",
             "source": {
@@ -2052,6 +2106,64 @@
             "time": "2022-02-08T03:28:42+00:00"
         },
         {
+            "name": "silverstripe/errorpage",
+            "version": "1.10.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-errorpage.git",
+                "reference": "2954224a1de17d0cc295a1afd4503500531dd0f8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-errorpage/zipball/2954224a1de17d0cc295a1afd4503500531dd0f8",
+                "reference": "2954224a1de17d0cc295a1afd4503500531dd0f8",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3 || ^8.0",
+                "silverstripe/cms": "^4@dev",
+                "silverstripe/framework": "^4.10",
+                "silverstripe/vendor-plugin": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "^3"
+            },
+            "type": "silverstripe-vendormodule",
+            "autoload": {
+                "psr-4": {
+                    "SilverStripe\\ErrorPage\\": "src/",
+                    "SilverStripe\\ErrorPage\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "SilverStripe",
+                    "homepage": "http://silverstripe.com"
+                },
+                {
+                    "name": "The SilverStripe Community",
+                    "homepage": "http://silverstripe.org"
+                }
+            ],
+            "description": "ErrorPage component for SilverStripe CMS",
+            "homepage": "http://silverstripe.org",
+            "keywords": [
+                "error",
+                "errorpage",
+                "silverstripe"
+            ],
+            "support": {
+                "issues": "https://github.com/silverstripe/silverstripe-errorpage/issues",
+                "source": "https://github.com/silverstripe/silverstripe-errorpage/tree/1.10.1"
+            },
+            "time": "2022-02-01T20:32:07+00:00"
+        },
+        {
             "name": "silverstripe/framework",
             "version": "4.10.4",
             "source": {
@@ -2288,6 +2400,153 @@
             "time": "2021-11-01T03:55:12+00:00"
         },
         {
+            "name": "silverstripe/recipe-cms",
+            "version": "4.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/recipe-cms.git",
+                "reference": "ce66b86a767ab01ebbb9f99d3c361b569f2a1078"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/recipe-cms/zipball/ce66b86a767ab01ebbb9f99d3c361b569f2a1078",
+                "reference": "ce66b86a767ab01ebbb9f99d3c361b569f2a1078",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3 || ^8.0",
+                "silverstripe/admin": "~1.10.0@stable",
+                "silverstripe/asset-admin": "~1.10.0@stable",
+                "silverstripe/campaign-admin": "~1.10.0@stable",
+                "silverstripe/cms": "~4.10.0@stable",
+                "silverstripe/errorpage": "~1.10.0@stable",
+                "silverstripe/graphql": "~3.7.1@stable || ~4.0.0-alpha",
+                "silverstripe/recipe-core": "~4.10.0@stable",
+                "silverstripe/recipe-plugin": "^1.5",
+                "silverstripe/reports": "~4.10.0@stable",
+                "silverstripe/session-manager": "~1.2.0@stable",
+                "silverstripe/siteconfig": "~4.10.0@stable",
+                "silverstripe/versioned": "~1.10.0@stable",
+                "silverstripe/versioned-admin": "~1.10.0@stable"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "silverstripe-recipe",
+            "extra": {
+                "project-files": [
+                    "app/src/*"
+                ],
+                "resources-dir": "_resources"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "SilverStripe recipe for fully featured page and asset content editing",
+            "homepage": "http://silverstripe.org",
+            "support": {
+                "issues": "https://github.com/silverstripe/recipe-cms/issues",
+                "source": "https://github.com/silverstripe/recipe-cms/tree/4.10.0"
+            },
+            "time": "2022-01-25T01:49:12+00:00"
+        },
+        {
+            "name": "silverstripe/recipe-core",
+            "version": "4.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/recipe-core.git",
+                "reference": "e06b0b1c2bf4ebb321242a14032ca247e26eef33"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/recipe-core/zipball/e06b0b1c2bf4ebb321242a14032ca247e26eef33",
+                "reference": "e06b0b1c2bf4ebb321242a14032ca247e26eef33",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3 || ^8.0",
+                "silverstripe/assets": "~1.10.0@stable",
+                "silverstripe/config": "~1.3.0@stable",
+                "silverstripe/framework": "~4.10.0@stable",
+                "silverstripe/mimevalidator": "~2.3.0@stable",
+                "silverstripe/recipe-plugin": "^1.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "silverstripe-recipe",
+            "extra": {
+                "project-files": [
+                    "app/*"
+                ],
+                "public-files": [
+                    ".htaccess",
+                    "web.config",
+                    "index.php"
+                ],
+                "resources-dir": "_resources"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "SilverStripe framework-only core recipe",
+            "homepage": "http://silverstripe.org",
+            "support": {
+                "issues": "https://github.com/silverstripe/recipe-core/issues",
+                "source": "https://github.com/silverstripe/recipe-core/tree/4.10.0"
+            },
+            "time": "2022-01-25T01:48:09+00:00"
+        },
+        {
+            "name": "silverstripe/recipe-plugin",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/recipe-plugin.git",
+                "reference": "da7ccb0a0968b165f122d7763280f722ea2d3c5b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/recipe-plugin/zipball/da7ccb0a0968b165f122d7763280f722ea2d3c5b",
+                "reference": "da7ccb0a0968b165f122d7763280f722ea2d3c5b",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.1 || ^2"
+            },
+            "require-dev": {
+                "composer/composer": "^1.2 || 2"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "SilverStripe\\RecipePlugin\\RecipePlugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "SilverStripe\\RecipePlugin\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Damian Mooyman",
+                    "email": "damian@silverstripe.com"
+                }
+            ],
+            "description": "Helper plugin to install SilverStripe recipes",
+            "support": {
+                "issues": "https://github.com/silverstripe/recipe-plugin/issues",
+                "source": "https://github.com/silverstripe/recipe-plugin/tree/1.5.0"
+            },
+            "time": "2020-11-11T03:37:26+00:00"
+        },
+        {
             "name": "silverstripe/reports",
             "version": "4.10.0",
             "source": {
@@ -2409,6 +2668,78 @@
                 "source": "https://github.com/silverstripe/silverstripe-segment-field/tree/2.5.0"
             },
             "time": "2021-11-24T04:19:05+00:00"
+        },
+        {
+            "name": "silverstripe/session-manager",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-session-manager.git",
+                "reference": "faf127b2f62b095d19f660f640e16afe028674e3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-session-manager/zipball/faf127b2f62b095d19f660f640e16afe028674e3",
+                "reference": "faf127b2f62b095d19f660f640e16afe028674e3",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3 || ^8.0",
+                "silverstripe/admin": "^1.7",
+                "silverstripe/framework": "^4.10",
+                "ua-parser/uap-php": "^3.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "^3.0",
+                "symbiote/silverstripe-queuedjobs": "^4"
+            },
+            "suggest": {
+                "silverstripe/auditor": "^2.3",
+                "symbiote/silverstripe-queuedjobs": "^4"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "expose": [
+                    "client/dist"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "SilverStripe\\SessionManager\\": "src/",
+                    "SilverStripe\\SessionManager\\Tests\\": "tests/php/",
+                    "SilverStripe\\SessionManager\\Tests\\Behat\\Context\\": "tests/behat/src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Loz Calver",
+                    "homepage": "https://github.com/kinglozzer"
+                },
+                {
+                    "name": "Silverstripe Ltd.",
+                    "homepage": "http://silverstripe.com"
+                },
+                {
+                    "name": "The SilverStripe Community",
+                    "homepage": "http://silverstripe.org"
+                }
+            ],
+            "description": "Allow users to manage and revoke access to multiple login sessions across devices.",
+            "homepage": "https://github.com/silverstripe/silverstripe-session-manager",
+            "keywords": [
+                "session",
+                "silverstripe"
+            ],
+            "support": {
+                "issues": "https://github.com/silverstripe/silverstripe-session-manager/issues",
+                "source": "https://github.com/silverstripe/silverstripe-session-manager/tree/1.2.1"
+            },
+            "time": "2022-01-20T23:49:17+00:00"
         },
         {
             "name": "silverstripe/siteconfig",
@@ -4557,6 +4888,69 @@
             "time": "2022-01-24T20:11:01+00:00"
         },
         {
+            "name": "ua-parser/uap-php",
+            "version": "v3.9.14",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ua-parser/uap-php.git",
+                "reference": "b796c5ea5df588e65aeb4e2c6cce3811dec4fed6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ua-parser/uap-php/zipball/b796c5ea5df588e65aeb4e2c6cce3811dec4fed6",
+                "reference": "b796c5ea5df588e65aeb4e2c6cce3811dec4fed6",
+                "shasum": ""
+            },
+            "require": {
+                "composer/ca-bundle": "^1.1",
+                "php": "^7.2 || ^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12.33",
+                "phpunit/phpunit": "^8 || ^9",
+                "symfony/console": "^3.4 || ^4.2 || ^4.3 || ^5.0",
+                "symfony/filesystem": "^3.4 || ^4.2 ||  ^4.3 || ^5.0",
+                "symfony/finder": "^3.4 || ^4.2 || ^4.3 || ^5.0",
+                "symfony/yaml": "^3.4 || ^4.2 || ^4.3 || ^5.0",
+                "vimeo/psalm": "^3.12"
+            },
+            "suggest": {
+                "symfony/console": "Required for CLI usage - ^3.4 || ^4.3 || ^5.0",
+                "symfony/filesystem": "Required for CLI usage - ^3.4 || ^4.3 || ^5.0",
+                "symfony/finder": "Required for CLI usage - ^3.4 || ^4.3 || ^5.0",
+                "symfony/yaml": "Required for CLI usage - ^3.4 || ^4.3 || ^5.0"
+            },
+            "bin": [
+                "bin/uaparser"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "UAParser\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dave Olsen",
+                    "email": "dmolsen@gmail.com"
+                },
+                {
+                    "name": "Lars Strojny",
+                    "email": "lars@strojny.net"
+                }
+            ],
+            "description": "A multi-language port of Browserscope's user agent parser.",
+            "support": {
+                "issues": "https://github.com/ua-parser/uap-php/issues",
+                "source": "https://github.com/ua-parser/uap-php/tree/v3.9.14"
+            },
+            "time": "2020-10-02T23:36:20+00:00"
+        },
+        {
             "name": "webonyx/graphql-php",
             "version": "v0.12.6",
             "source": {
@@ -4610,9 +5004,11 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=5.6"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.2.0"
 }
