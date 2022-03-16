@@ -52,10 +52,10 @@ silverstripe-composer-security-checker/
 silverstripe-composer-update-checker/
 silverstripe-maintenance/
 auditor/
+resources/
+.env
 
-_ss_environment.php
-nbproject/private/
 silverstripe.log
 .idea/
 composer.phar
-
+upgrade-code.phar
