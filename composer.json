@@ -1,4 +1,7 @@
 {
+    "name": "op/studentsuccess",
+    "description": "Student Success website",
+    "type": "silverstripe-project",
     "require": {
 
         "dnadesign/silverstripe-elemental": "4.8.*",
