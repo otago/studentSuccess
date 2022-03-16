@@ -1,4 +1,5 @@
 <?php
+
 use SilverStripe\i18n\i18n;
 use SilverStripe\Control\Controller;
 use SilverStripe\Core\Config\Config;
@@ -47,82 +48,79 @@ ini_set('date.timezone', 'Pacific/Auckland');
 
 //SS_Log::add_writer(new SS_LogEmailWriter('alastairn@op.ac.nz'), SS_Log::WARN, '<=');
 $arrStyles = array(
-	'Large'					=> 'large',
-	'Feature Link'			=> 'feature-link',
-	'Feature Download'		=> 'feature-download',
-	'Feature Email'			=> 'feature-mail',
-	'Feature External Link'	=> 'feature-external-link'
+    'Large' => 'large',
+    'Feature Link' => 'feature-link',
+    'Feature Download' => 'feature-download',
+    'Feature Email' => 'feature-mail',
+    'Feature External Link' => 'feature-external-link'
 );
 
 $strItems = '';
-foreach($arrStyles as $strKey => $strCSS){
-	$strItems .= $strKey . '=' . $strCSS  . ',';
+foreach ($arrStyles as $strKey => $strCSS) {
+    $strItems .= $strKey . '=' . $strCSS . ',';
 }
 $strItems = substr($strItems, 0, -1);
 
-HtmlEditorConfig::get('cms')->setOption('theme_advanced_styles', $strItems);
+//Config::inst()->remove(LandingPage::class, 'allowed_elements');
+//
+//Config::inst()->update(LandingPage::class, 'allowed_elements', array(
+//    MasonryContent::class
+//));
+//
+//Config::inst()->remove(LandingSearchPage::class, 'allowed_elements');
+//
+//Config::inst()->update(LandingSearchPage::class, 'allowed_elements', array(
+//    MasonryContentsWithFilters::class
+//));
+//
+//Config::inst()->remove(HomePage::class, 'allowed_elements');
+//
+//Config::inst()->update(HomePage::class, 'allowed_elements', array(
+//    WayFinder::class,
+//    HearFromOthers::class
+//));
+//
+//Config::inst()->remove(AccordionPage::class, 'allowed_elements');
+//
+//Config::inst()->update(AccordionPage::class, 'allowed_elements', array(
+//    Accordion::class
+//));
+//
+//Config::inst()->remove('FilterableChecklist', 'allowed_elements');
+//
+//Config::inst()->remove(AccordionItem::class, 'allowed_elements');
 
-Config::inst()->remove(LandingPage::class, 'allowed_elements');
-
-Config::inst()->update(LandingPage::class, 'allowed_elements', array(
-	MasonryContent::class
-));
-
-Config::inst()->remove(LandingSearchPage::class, 'allowed_elements');
-
-Config::inst()->update(LandingSearchPage::class, 'allowed_elements', array(
-	MasonryContentsWithFilters::class
-));
-
-Config::inst()->remove(HomePage::class, 'allowed_elements');
-
-Config::inst()->update(HomePage::class, 'allowed_elements', array(
-	WayFinder::class,
-	HearFromOthers::class
-));
-
-Config::inst()->remove(AccordionPage::class, 'allowed_elements');
-
-Config::inst()->update(AccordionPage::class, 'allowed_elements', array(
-	Accordion::class
-));
-
-Config::inst()->remove('FilterableChecklist', 'allowed_elements');
-
-Config::inst()->remove(AccordionItem::class, 'allowed_elements');
-
-$classes=array(
-ElementTable::class,
-'ElementFile',
-'ElementLink',
-'ElementImage',
-SidebarImageElement::class,
-SidebarHelp::class,
-CTAElement::class,
-ContactElement::class,	
-Carousel::class,
-CarouselWithUpperLetter::class,
-CaseStudy::class,
-CheckList::class,
-ElementContent::class,
-InteractiveList::class,
-	ReferencesElement::class,
-SingleLevelCheckList::class,
-SingleLevelList::class,
-HearFromOthers::class,
-VideoComponent::class,
-LinksComponent::class,
-MatrixElement::class,
-SidebarTestimony::class,
-TabbedCheckList::class 
+$classes = array(
+    ElementTable::class,
+    'ElementFile',
+    'ElementLink',
+    'ElementImage',
+    SidebarImageElement::class,
+    SidebarHelp::class,
+    CTAElement::class,
+    ContactElement::class,
+    Carousel::class,
+    CarouselWithUpperLetter::class,
+    CaseStudy::class,
+    CheckList::class,
+    ElementContent::class,
+    InteractiveList::class,
+    ReferencesElement::class,
+    SingleLevelCheckList::class,
+    SingleLevelList::class,
+    HearFromOthers::class,
+    VideoComponent::class,
+    LinksComponent::class,
+    MatrixElement::class,
+    SidebarTestimony::class,
+    TabbedCheckList::class
 );
-// foreach ($classes as $class) {
-//    $list[$class] = singleton($class)->i18n_singular_name();
-//}
-Config::inst()->update(AccordionItem::class, 'allowed_elements', $classes);
 
-Config::inst()->update('Page', 'allowed_elements', array(
-MasonryContent::class,
-    MasonryContentsWithFilters::class,
-    TabbedCheckList::class 
-));
+
+//Config::inst()->update(AccordionItem::class, 'allowed_elements', $classes);
+//
+//Config::inst()->update('Page', 'allowed_elements', array(
+//    MasonryContent::class,
+//    MasonryContentsWithFilters::class,
+//    TabbedCheckList::class
+//));

@@ -1,6 +1,6 @@
 ---
 Name: app
-After: 'framework/*','cms/*'
+
 ---
 SilverStripe\Admin\LeftAndMain:
   extra_requirements_css:
@@ -153,6 +153,6 @@ SilverStripe\MimeValidator\MimeUploadValidator:
     dmg:
       - application/x-apple-diskimage
       - application/octet-stream
-SilverStripe\Core\Injector\Injector:
-  DNADesign\Elemental\Models\ElementalArea:
-    class: OP\studentsuccess\ElementalAreaExtension
+#SilverStripe\Core\Injector\Injector:
+#  DNADesign\Elemental\Models\ElementalArea:
+#    class: OP\studentsuccess\ElementalAreaExtension

@@ -1,6 +1,6 @@
 ---
 Name: core
-After: 'framework/*','cms/*'
+
 ---
 OP\studentsuccess\DateUtils:
   PublicDateTimeFormat: 'd F Y H:i'

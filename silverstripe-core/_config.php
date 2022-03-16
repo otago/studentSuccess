@@ -14,6 +14,3 @@ use HtmlEditorConfig;
 
 
 ImageExtension::ImageSizes();
-
-HtmlEditorConfig::get('cwp')->setOption('extended_valid_elements', 'script');
-HtmlEditorConfig::get('cwp')->setOption('extended_valid_elements', 'meta');
