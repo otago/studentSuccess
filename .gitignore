@@ -54,6 +54,7 @@ silverstripe-maintenance/
 auditor/
 resources/
 .env
+_ss_environment.php
 
 silverstripe.log
 .idea/
