@@ -1,4 +1,15 @@
 <?php
+
+namespace OP\studentsuccess;
+
+
+
+use SilverStripe\Core\Config\Config;
+use OP\studentsuccess\ShortCodeUtils;
+use SilverStripe\View\Parsers\ShortcodeParser;
+use SilverStripe\CMS\Model\SiteTree;
+
+
 /**
  * Created by Nivanka Fonseka (nivanka@silverstripers.com).
  * User: nivankafonseka
@@ -42,7 +53,7 @@ class ShortCodeUtils {
 
 	public static function ParseShortCodes($strText){
 
-		$codes = Config::inst()->get('ShortCodeUtils', 'codes');
+		$codes = Config::inst()->get(ShortCodeUtils::class, 'codes');
 
 		// clean all the <p> tags added around short codes
 		foreach($codes as $strCode => $oParser){
@@ -71,7 +82,7 @@ class ShortCodeUtils {
 
 
 		$parser = new ShortcodeParser();
-		$parser->register('sitetree_link', array('SiteTree', 'link_shortcode_handler'));
+		$parser->register('sitetree_link', array(SiteTree::class, 'link_shortcode_handler'));
 		return $parser->parse($strText);
 	}
 

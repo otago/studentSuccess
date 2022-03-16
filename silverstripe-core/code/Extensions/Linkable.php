@@ -1,5 +1,30 @@
 <?php
 
+namespace OP\studentsuccess;
+
+
+
+
+
+
+
+
+
+
+
+use SilverStripe\Forms\FieldList;
+use SilverStripe\View\Requirements;
+use SilverStripe\Forms\HeaderField;
+use SilverStripe\Forms\DropdownField;
+use SilverStripe\Assets\File;
+use SilverStripe\Forms\TreeDropdownField;
+use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\CheckboxField;
+use SilverStripe\ORM\DataExtension;
+
+
+
 class Linkable extends DataExtension {
 
 	private static $db = array(
@@ -30,10 +55,10 @@ class Linkable extends DataExtension {
 				'None'		=> 'None',
 				'Internal'	=> 'Internal',
 				'External'	=> 'External',
-				'File' => 'File'
+				'File' => File::class
 			)),
-			TreeDropdownField::create('InternalLinkID')->setSourceObject('SiteTree'),
-			TreeDropdownField::create('InternalFileID')->setSourceObject('File'),
+			TreeDropdownField::create('InternalLinkID')->setSourceObject(SiteTree::class),
+			TreeDropdownField::create('InternalFileID')->setSourceObject(File::class),
 			TextField::create('ExternalLink'),
 			DropdownField::create('Target')->setSource(array(
 				'_self' => 'Open in same window',
@@ -52,7 +77,7 @@ class Linkable extends DataExtension {
 			return $siteTree ? $siteTree->Link() : '';
 		} else if($this->owner->LinkType == 'External' && $this->owner->ExternalLink) {
 			return $this->owner->ExternalLink;
-		} else if($this->owner->LinkType == 'File' && $this->owner->InternalFileID) {
+		} else if($this->owner->LinkType == File::class && $this->owner->InternalFileID) {
 			$file = File::get()->byID($this->owner->InternalFileID);
 
 			return $file ? $file->Link() : '';

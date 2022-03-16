@@ -4,12 +4,14 @@ namespace OP\studentsuccess;
 
 
 
-use StringUtils;
+
 
 use OP\studentsuccess\ReferencesElement;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\View\Parsers\ShortcodeParser;
 use SilverStripe\ORM\DataExtension;
+use OP\studentsuccess\StringUtils;
+
 
 
 

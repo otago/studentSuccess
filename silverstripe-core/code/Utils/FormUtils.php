@@ -1,4 +1,21 @@
 <?php
+
+namespace OP\studentsuccess;
+
+
+
+
+use GridFieldSortableRows;
+
+
+use SilverStripe\Forms\LiteralField;
+use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldAddNewButton;
+use SilverStripe\Forms\GridField\GridFieldAddExistingAutocompleter;
+
+
 /**
  * Created by Nivanka Fonseka (nivanka@silverstripers.com).
  * User: nivankafonseka
@@ -53,7 +70,7 @@ class FormUtils {
 	 */
 	public static function MakeRelationSelector($strName, $strTitle, $dlList, $iPagination = 20){
 		$gridConfigs = new GridFieldConfig_RelationEditor($iPagination);
-		$gridConfigs->removeComponentsByType('GridFieldAddNewButton');
+		$gridConfigs->removeComponentsByType(GridFieldAddNewButton::class);
 		return new GridField($strName, $strTitle, $dlList, $gridConfigs);
 	}
 
@@ -83,17 +100,17 @@ class FormUtils {
 
     static function AddRelationReadOnlyField($strName, $strTitle, $dataList,$bSortable = true, $strOrderField = "SortOrder"){
         $configs = new GridFieldConfig_RelationEditor(50);
-        $configs->removeComponentsByType("GridFieldAddExistingAutocompleter");
-        $configs->removeComponentsByType("GridFieldAddNewButton");
+        $configs->removeComponentsByType(GridFieldAddExistingAutocompleter::class);
+        $configs->removeComponentsByType(GridFieldAddNewButton::class);
         $oGridField = new GridField($strName, $strTitle, $dataList, $configs);
         return $oGridField;
     }
 
     static function AddRelationFieldWithoutAddButton($strName, $strTitle, $dataList, $arrSearchFields = null){
         $configs = new GridFieldConfig_RelationEditor(50);
-        $configs->removeComponentsByType("GridFieldAddNewButton");
+        $configs->removeComponentsByType(GridFieldAddNewButton::class);
         if($arrSearchFields){
-            $configs->removeComponentsByType("GridFieldAddExistingAutocompleter");
+            $configs->removeComponentsByType(GridFieldAddExistingAutocompleter::class);
             $autoCompleter = new GridFieldAddExistingAutocompleter("before", $arrSearchFields);
             $configs->addComponent($autoCompleter);
         }
@@ -103,7 +120,7 @@ class FormUtils {
 
     static function AddRelationFieldWithoutSearch($strName, $strTitle, $dataList,$bSortable = true, $strOrderField = "SortOrder"){
         $configs = new GridFieldConfig_RelationEditor(50);
-        $configs->removeComponentsByType("GridFieldAddExistingAutocompleter");
+        $configs->removeComponentsByType(GridFieldAddExistingAutocompleter::class);
         if($bSortable && !empty($strOrderField)){
             $configs->addComponent(new GridFieldSortableRows($strOrderField));
         }

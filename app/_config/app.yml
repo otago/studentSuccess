@@ -76,37 +76,37 @@ SilverStripe\Control\Controller:
     - OP\studentsuccess\ControllerExtension
 OP\studentsuccess\FooterLinkBlock:
   extensions:
-    - Linkable
+    - OP\studentsuccess\Linkable
 OP\studentsuccess\FooterLink:
   extensions:
-    - Linkable
+    - OP\studentsuccess\Linkable
 OP\studentsuccess\WayFinderFilter:
   extensions:
-    - Linkable
+    - OP\studentsuccess\Linkable
 OP\studentsuccess\WayFinderItem:
   extensions:
-    - Linkable
+    - OP\studentsuccess\Linkable
 OP\studentsuccess\CTAElement:
   extensions:
-    - Linkable
+    - OP\studentsuccess\Linkable
 OP\studentsuccess\RelatedPage:
   extensions:
-    - Linkable
+    - OP\studentsuccess\Linkable
 OP\studentsuccess\RelatedPageBox:
   extensions:
-    - Linkable
+    - OP\studentsuccess\Linkable
 OP\studentsuccess\MasonryTile:
   extensions:
-    - Linkable
+    - OP\studentsuccess\Linkable
 OP\studentsuccess\MasonryTileLink:
   extensions:
-    - Linkable
+    - OP\studentsuccess\Linkable
 OP\studentsuccess\LinkElement:
   extensions:
-    - Linkable
+    - OP\studentsuccess\Linkable
 OP\studentsuccess\LinksComponent:
   extensions:
-    - Linkable
+    - OP\studentsuccess\Linkable
 OP\studentsuccess\FilterableMasonryTile:
   extensions:
     - OP\studentsuccess\FilterableTile

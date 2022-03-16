@@ -3,9 +3,11 @@
 namespace OP\studentsuccess;
 
 
-use StringUtils;
+
 use SilverStripe\Assets\Image;
 use DNADesign\Elemental\Models\BaseElement;
+use OP\studentsuccess\StringUtils;
+
 
 
 

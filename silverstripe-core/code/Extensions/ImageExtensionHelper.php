@@ -1,4 +1,24 @@
 <?php
+
+namespace OP\studentsuccess;
+
+
+
+
+
+
+
+
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Core\Config\Config;
+use OP\studentsuccess\ImageExtension;
+use SilverStripe\Assets\Image;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\ORM\ArrayList;
+use SilverStripe\View\ArrayData;
+use SilverStripe\ORM\DataExtension;
+
+
 /**
  * Created by Nivanka Fonseka (nivanka@silverstripers.com).
  * User: nivankafonseka
@@ -23,15 +43,15 @@ class ImageExtensionHelper extends DataExtension {
 	function updateCMSFieldsForImages(FieldList $fields){
 
 		$has_one = $this->owner->has_one();
-		$sizes = Config::inst()->get('ImageExtension', 'sizes');
-		$exclude_classes = Config::inst()->get('ImageExtension', 'exclude_classes');
+		$sizes = Config::inst()->get(ImageExtension::class, 'sizes');
+		$exclude_classes = Config::inst()->get(ImageExtension::class, 'exclude_classes');
 		if(is_array($exclude_classes) && in_array(get_class($this->owner), $exclude_classes)){
 			return;
 		}
 
 		if($has_one && $sizes && count($sizes)) foreach($has_one as $name => $type){
 
-			if($type == 'Image'){
+			if($type == Image::class){
 				$arrParts = explode('_', $name);
 				$strLast = count($arrParts) > 1 ? $arrParts[count($arrParts) - 1] : '';
 				if(!in_array($strLast, $sizes)){
@@ -53,7 +73,7 @@ class ImageExtensionHelper extends DataExtension {
 		$owner = $this->owner;
 		if($image = Image::get()->byID($owner->getField($strName . 'ID'))){
 			$image->Sizes = new ArrayList();
-			if($sizes = Config::inst()->get('ImageExtension', 'sizes')) foreach($sizes as $size){
+			if($sizes = Config::inst()->get(ImageExtension::class, 'sizes')) foreach($sizes as $size){
 				if($sizedImage = Image::get()->byId($owner->getField($strName . '_' . $size . 'ID')))
 					$image->Sizes->push(new ArrayData(array(
 						'Image'		=> $sizedImage,

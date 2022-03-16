@@ -79,3 +79,17 @@ mappings:
   LandingPage: OP\studentsuccess\LandingPage
   LandingSearchPage: OP\studentsuccess\LandingSearchPage
   WasThisHelpfulReport: OP\studentsuccess\WasThisHelpfulReport
+  SearchPage: OP\studentsuccess\SearchPage
+  CoreConfigs: OP\studentsuccess\CoreConfigs
+  ImageExtension: OP\studentsuccess\ImageExtension
+  ImageExtensionHelper: OP\studentsuccess\ImageExtensionHelper
+  Linkable: OP\studentsuccess\Linkable
+  OPCwpControllerExtension: OP\studentsuccess\OPCwpControllerExtension
+  DateUtils: OP\studentsuccess\DateUtils
+  FormUtils: OP\studentsuccess\FormUtils
+  ShortCodeUtils: OP\studentsuccess\ShortCodeUtils
+  SS_MinifiedResponseExtension: OP\studentsuccess\SS_MinifiedResponseExtension
+  SS_MinifiedResponse: OP\studentsuccess\SS_MinifiedResponse
+  StringUtils: OP\studentsuccess\StringUtils
+  CreateJobsTask: OP\studentsuccess\CreateJobsTask
+  internalExternalLinkTask: OP\studentsuccess\internalExternalLinkTask

@@ -1,4 +1,14 @@
 <?php
+
+namespace OP\studentsuccess;
+
+
+
+use SilverStripe\ORM\FieldType\DBDatetime;
+use SilverStripe\Core\Config\Config;
+use OP\studentsuccess\DateUtils;
+
+
 /**
  * Created by Nivanka Fonseka (nivanka@silverstripers.com).
  * User: nivankafonseka
@@ -15,12 +25,12 @@ class DateUtils {
 	 */
 	public static function SSDateTimeToPublicDateTime($dtDateTime)
 	{
-		if(is_a($dtDateTime, "SS_Datetime")){
+		if(is_a($dtDateTime, DBDatetime::class)){
 			$dtDateTime = strtotime($dtDateTime->getValue());
 		} elseif(is_string($dtDateTime)){
 			$dtDateTime = strtotime($dtDateTime);
 		}
-		return date(Config::inst()->get('DateUtils', 'PublicDateTimeFormat'), $dtDateTime);
+		return date(Config::inst()->get(DateUtils::class, 'PublicDateTimeFormat'), $dtDateTime);
 	}
 
 	/**
@@ -29,12 +39,12 @@ class DateUtils {
 	 */
 	public static function SSDateTimeToPublicDate($dtDateTime)
 	{
-		if(is_a($dtDateTime, "SS_Datetime")){
+		if(is_a($dtDateTime, DBDatetime::class)){
 			$dtDateTime = strtotime($dtDateTime->getValue());
 		} elseif(is_string($dtDateTime)){
 			$dtDateTime = strtotime($dtDateTime);
 		}
-		return date(Config::inst()->get('DateUtils', 'PublicDateFormat'), $dtDateTime);
+		return date(Config::inst()->get(DateUtils::class, 'PublicDateFormat'), $dtDateTime);
 	}
 
 	/**
@@ -43,12 +53,12 @@ class DateUtils {
 	 */
 	public static function SSDateTimeToPublicTime($dtDateTime)
 	{
-		if(is_a($dtDateTime, "SS_Datetime")){
+		if(is_a($dtDateTime, DBDatetime::class)){
 			$dtDateTime = strtotime($dtDateTime->getValue());
 		} elseif(is_string($dtDateTime)){
 			$dtDateTime = strtotime($dtDateTime);
 		}
-		return date(Config::inst()->get('DateUtils', 'PublicTimeFormat'), $dtDateTime);
+		return date(Config::inst()->get(DateUtils::class, 'PublicTimeFormat'), $dtDateTime);
 	}
 
 	/**
@@ -62,9 +72,9 @@ class DateUtils {
 		$dtEndDate = strtotime($dtEndDate);
 
 		if(date('M', $dtStarDate) == date('M', $dtEndDate)){
-			return date('d', $dtStarDate). ' - '. date(Config::inst()->get('DateUtils', 'PublicDateFormat'), $dtEndDate);
+			return date('d', $dtStarDate). ' - '. date(Config::inst()->get(DateUtils::class, 'PublicDateFormat'), $dtEndDate);
 		} else {
-			return date('d F', $dtStarDate). ' - '. date(Config::inst()->get('DateUtils', 'PublicDateFormat'), $dtEndDate);
+			return date('d F', $dtStarDate). ' - '. date(Config::inst()->get(DateUtils::class, 'PublicDateFormat'), $dtEndDate);
 		}
 	}
 
@@ -178,7 +188,7 @@ class DateUtils {
 	 * @return bool
 	 */
 	public static function IsToday($dtDate){
-		return self::DateToMidnight($dtDate) == self::DateToMidnight(strtotime(SS_Datetime::now()));
+		return self::DateToMidnight($dtDate) == self::DateToMidnight(strtotime(DBDatetime::now()));
 	}
 
 

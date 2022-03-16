@@ -44,9 +44,7 @@ require_once("conf/ConfigureFromEnv.php");
 i18n::set_locale('en_NZ');
 ini_set('date.timezone', 'Pacific/Auckland');
 
-define('OP_CWP_IP_BYPASS_BASICAUTH', '202.49.0.2,10.50.1.180,127.0.0.1,10.111.0.10,127.0.0.1,10.50.1.184,10.50.1.188,10.110.4.32,115.188.251.154');
-// we extend this in OPCwpControllerExtension.php
-Controller::remove_extension('CwpControllerExtension');
+
 //SS_Log::add_writer(new SS_LogEmailWriter('alastairn@op.ac.nz'), SS_Log::WARN, '<=');
 $arrStyles = array(
 	'Large'					=> 'large',

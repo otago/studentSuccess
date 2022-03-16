@@ -1,4 +1,11 @@
 <?php
+
+namespace OP\studentsuccess;
+
+
+use SilverStripe\SiteConfig\SiteConfig;
+
+
 /**
  * Created by Nivanka Fonseka (nivanka@silverstripers.com).
  * User: nivankafonseka

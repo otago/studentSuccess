@@ -1,4 +1,9 @@
 <?php
+
+namespace OP\studentsuccess;
+
+use HtmlEditorConfig;
+
 /**
  * Created by Nivanka Fonseka (nivanka@silverstripers.com).
  * User: nivankafonseka

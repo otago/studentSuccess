@@ -9,7 +9,7 @@ namespace OP\studentsuccess;
 
 
 
-use FormUtils;
+
 
 
 
@@ -25,6 +25,8 @@ use SilverStripe\Forms\CheckboxField;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\View\ArrayData;
 use SilverStripe\ORM\DataExtension;
+use OP\studentsuccess\FormUtils;
+
 
 
 

@@ -2,28 +2,27 @@
 Name: core
 After: 'framework/*','cms/*'
 ---
-
-DateUtils:
+OP\studentsuccess\DateUtils:
   PublicDateTimeFormat: 'd F Y H:i'
   PublicDateFormat: 'd F Y'
   PublicTimeFormat: 'H:i a'
-DateField:
+SilverStripe\Forms\DateField:
   default_config:
     showcalendar: true
-    dateformat: 'dd/MM/yyyy'
-Image:
+    dateformat: dd/MM/yyyy
+SilverStripe\Assets\Image:
   extensions:
-    - ImageExtension
-ImageExtension:
-  sizes:
-  exclude_classes:
-SiteConfig:
+    - OP\studentsuccess\ImageExtension
+OP\studentsuccess\ImageExtension:
+  sizes: null
+  exclude_classes: null
+SilverStripe\SiteConfig\SiteConfig:
   extensions:
-    - CoreConfigs
-Controller:
+    - OP\studentsuccess\CoreConfigs
+SilverStripe\Control\Controller:
   extensions:
-    - SS_MinifiedResponseExtension
-    - OPCwpControllerExtension
-Director:
+    - OP\studentsuccess\SS_MinifiedResponseExtension
+
+SilverStripe\Control\Director:
   rules:
-    'search': 'SearchPage'
+    search: OP\studentsuccess\SearchPage

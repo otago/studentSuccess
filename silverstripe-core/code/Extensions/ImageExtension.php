@@ -1,4 +1,24 @@
 <?php
+
+namespace OP\studentsuccess;
+
+
+
+
+
+
+
+use SilverStripe\SiteConfig\SiteConfig;
+use SilverStripe\Core\Config\Config;
+use OP\studentsuccess\ImageExtension;
+use SilverStripe\ORM\DataObject;
+use SilverStripe\Core\ClassInfo;
+use SilverStripe\Assets\Image;
+use SilverStripe\View\ArrayData;
+use SilverStripe\View\ViewableData;
+use SilverStripe\ORM\DataExtension;
+
+
 /**
  * Created by Nivanka Fonseka (nivanka@silverstripers.com).
  * User: nivankafonseka
@@ -36,9 +56,9 @@ class ImageExtension extends DataExtension {
 	 * image sizes.
 	 */
 	public static function ImageSizes(){
-		$sizes = Config::inst()->get('ImageExtension', 'sizes');
-		$exclude_classes = Config::inst()->get('ImageExtension', 'exclude_classes');
-		$classes = ClassInfo::subclassesFor('DataObject');
+		$sizes = Config::inst()->get(ImageExtension::class, 'sizes');
+		$exclude_classes = Config::inst()->get(ImageExtension::class, 'exclude_classes');
+		$classes = ClassInfo::subclassesFor(DataObject::class);
 		if($sizes && count($sizes)){
 			foreach($classes as $class){
 				$bAdd = true;
@@ -52,7 +72,7 @@ class ImageExtension extends DataExtension {
 				$has_one = Config::inst()->get($class, 'has_one', Config::UNINHERITED);
 				$arrImageFields = array();
 				if($has_one) foreach($has_one as $name => $type){
-					if($type == 'Image'){
+					if($type == Image::class){
 						foreach($sizes as $size)
 							$has_one[$name . '_' . $size] = $type;
 

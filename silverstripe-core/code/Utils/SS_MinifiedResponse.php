@@ -1,4 +1,16 @@
 <?php
+
+namespace OP\studentsuccess;
+
+
+
+
+use SilverStripe\CMS\Controllers\ContentController;
+use SilverStripe\Core\Extension;
+use SilverStripe\Control\Director;
+use SilverStripe\Control\HTTPResponse;
+
+
 /**
  * Created by Nivanka Fonseka (nivanka@silverstripers.com).
  * User: nivankafonseka
@@ -11,7 +23,7 @@ class SS_MinifiedResponseExtension extends Extension {
 
 
 	function onBeforeInit(){
-		if(is_a($this->owner, 'ContentController')){
+		if(is_a($this->owner, ContentController::class)){
 			$this->owner->response = new SS_MinifiedResponse();
 		}
 	}
@@ -19,7 +31,7 @@ class SS_MinifiedResponseExtension extends Extension {
 
 }
 
-class SS_MinifiedResponse extends SS_HTTPResponse {
+class SS_MinifiedResponse extends HTTPResponse {
 
 
 

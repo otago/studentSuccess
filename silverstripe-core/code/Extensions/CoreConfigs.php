@@ -1,4 +1,18 @@
 <?php
+
+namespace OP\studentsuccess;
+
+
+
+
+
+use SilverStripe\Assets\Image;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\NumericField;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\ORM\DataExtension;
+
+
 /**
  * Created by Nivanka Fonseka (nivanka@silverstripers.com).
  * User: nivankafonseka
@@ -15,7 +29,7 @@ class CoreConfigs extends DataExtension {
 	);
 
 	private static $has_one = array(
-		'ImagePlaceHolder'		=> 'Image'
+		'ImagePlaceHolder'		=> Image::class
 	);
 
 	public function updateCMSFields(FieldList $fields){

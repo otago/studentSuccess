@@ -1,4 +1,27 @@
 <?php
+use SilverStripe\Assets\Image;
+use OP\studentsuccess\RelatedPage;
+use OP\studentsuccess\RelatedPageBox;
+use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\TextareaField;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\LiteralField;
+use SilverStripe\Forms\DropdownField;
+use SilverStripe\Forms\TreeDropdownField;
+use SilverStripe\Forms\GridField\GridFieldDeleteAction;
+use OP\studentsuccess\FormUtils;
+use SilverStripe\Forms\HeaderField;
+use SilverStripe\Control\Email\Email;
+use OP\studentsuccess\SearchPage;
+use SilverStripe\ORM\ArrayList;
+use SilverStripe\CMS\Model\SiteTree;
+use OP\studentsuccess\ShortCodeUtils;
+use SilverStripe\ORM\FieldType\DBDatetime;
+use SilverStripe\Control\Cookie;
+use SilverStripe\ORM\DB;
+use SilverStripe\CMS\Controllers\ContentController;
+
 
 class Page extends SiteTree {
 
@@ -26,15 +49,15 @@ class Page extends SiteTree {
 
 
 	private static $has_one = array(
-		'DropDownImage'			=> 'Image',
+		'DropDownImage'			=> Image::class,
 		'DropDownPage'			=> 'Page',
-		'HeroImage'				=> 'Image',
+		'HeroImage'				=> Image::class,
 	);
 
 
 	private static $has_many = array(
-		'RelatedPages'			=> 'RelatedPage',
-		'RelatedBoxes'			=> 'RelatedPageBox'
+		'RelatedPages'			=> RelatedPage::class,
+		'RelatedBoxes'			=> RelatedPageBox::class
 	);
 
 	public function getSettingsFields() {
@@ -89,7 +112,7 @@ class Page extends SiteTree {
 
 		if($elementalGridField = $fields->dataFieldByName('ElementArea')){
 			$configs = $elementalGridField->getConfig();
-			$configs->removeComponentsByType('GridFieldDeleteAction');
+			$configs->removeComponentsByType(GridFieldDeleteAction::class);
 		}
 
 		$fields->removeByName('Contacts');
@@ -118,7 +141,7 @@ class Page extends SiteTree {
             TextField::create('ContactBoxLocationName')->setTitle('LocationName'),
             TextareaField::create('ContactBoxContent')->setTitle('Location'),
             TextField::create('ContactBoxPhone')->setTitle('Phone'),
-            TextField::create('ContactBoxEmail')->setTitle('Email'),
+            TextField::create('ContactBoxEmail')->setTitle(Email::class),
 
             HeaderField::create('ContactBox2')->setTitle('Contact 2'),
             TextField::create('ContactBoxLocationName2')->setTitle('LocationName'),
@@ -140,7 +163,7 @@ class Page extends SiteTree {
 
 
 	public function canView($member = null) {
-		if($this->URLSegment == 'SearchPage') {
+		if($this->URLSegment == SearchPage::class) {
 			return true;
 		}
 
@@ -149,7 +172,7 @@ class Page extends SiteTree {
 
 
 	function canViewStage($stage = 'Live', $member = null){
-		if($this->URLSegment == 'SearchPage')
+		if($this->URLSegment == SearchPage::class)
 			return true;
 
 		return parent::canViewStage($stage, $member);
@@ -220,47 +243,6 @@ class Page extends SiteTree {
 		return false;
 		// disabled due to issue with modals.
 		// return (isset($_GET['production']) || Director::isLive());
-	}
-
-}
-
-class Page_Controller extends ContentController {
-
-	private static $allowed_actions = array(
-		'helpfulyes',
-		'helpfulno',
-            'SearchResults'
-	);
-
-	public function Content() {
-		return ShortCodeUtils::ParseShortCodes($this->Content);
-	}
-
-	public function Year() {
-		return date('Y', strtotime(SS_Datetime::now()));
-	}
-
-
-	public function helpfulyes() {
-		if(!Cookie::get('VotedYes'. $this->ID)) {
-			DB::query("UPDATE Page SET HelpfulCounterYes = (HelpfulCounterYes + 1)");
-			DB::query("UPDATE Page_Live SET HelpfulCounterYes = (HelpfulCounterYes + 1)");
-
-			Cookie::set('VotedYes'. $this->ID);
-		}
-
-		return $this->redirectBack();
-	}
-
-	public function helpfulno() {
-		if(!Cookie::get('VotedNo'. $this->ID)) {
-			DB::query("UPDATE Page SET HelpfulCounterNo = (HelpfulCounterNo + 1)");
-			DB::query("UPDATE Page_Live SET HelpfulCounterNo = (HelpfulCounterNo + 1)");
-
-			Cookie::set('VotedNo'. $this->ID);
-		}
-
-		return $this->redirectBack();
 	}
 
 }
