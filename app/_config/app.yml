@@ -30,13 +30,13 @@ SilverStripe\Control\Director:
     tile//$Action/$ID: OP\studentsuccess\FilterableTile_Counter
 SilverStripe\View\SSViewer:
   theme: otp
-ElementPageExtension:
+DNADesign\Elemental\Extensions\ElementalPageExtension:
   ignored_classes:
     - OP\studentsuccess\ActivityPage
     - OP\studentsuccess\FilterableCheckList
 Page:
   extensions:
-    - ElementPageExtension
+    - DNADesign\Elemental\Extensions\ElementalPageExtension
   allowed_elements:
     - DNADesign\Elemental\Models\ElementContent
     - OP\studentsuccess\Carousel

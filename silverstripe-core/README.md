@@ -1,4 +1,9 @@
-
+"heyday/silverstripe-versioneddataobjects": "2.0.5",
+"silverstripe-australia/addressable": "1.2.0 ",
+"symbiote/silverstripe-gridfieldextensions": "2.0.2",
+"unclecheese/betterbuttons": "1.2.*",
+"unclecheese/display-logic": "1.3.3",
+"undefinedoffset/sortablegridfield": "0.6.10"
 
 # Image settings
 

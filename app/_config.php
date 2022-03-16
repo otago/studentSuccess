@@ -39,7 +39,7 @@ $project = 'opt';
 
 
 global $database;
-$database = (defined('SS_DATABASE_NAME')) ? SS_DATABASE_NAME : 'op3';
+//$database = (defined('SS_DATABASE_NAME')) ? SS_DATABASE_NAME : 'op3';
 
 require_once("conf/ConfigureFromEnv.php");
 i18n::set_locale('en_NZ');

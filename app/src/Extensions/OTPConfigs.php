@@ -63,7 +63,7 @@ class OTPConfigs extends DataExtension
 
         'CreativeCommonsLicence' => 'HTMLText',
         'FeedBackLiteOn' => 'Boolean',
-        'FeedBackLite' => 'text'
+        'FeedBackLite' => 'Text'
 
     );
 
