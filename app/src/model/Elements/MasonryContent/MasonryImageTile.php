@@ -1,9 +1,8 @@
 <?php
 
 namespace OP\studentsuccess;
+
 use SilverStripe\Assets\Image;
-
-
 
 
 /**
@@ -13,15 +12,15 @@ use SilverStripe\Assets\Image;
  * Time: 9:24 AM
  * To change this template use File | Settings | File Templates.
  */
+class MasonryImageTile extends MasonryTile
+{
+    private static $table_name = 'MasonryImageTile';
+    private static $db = [
+        'HideTitle' => 'Boolean'
+    ];
 
-class MasonryImageTile extends MasonryTile {
-
-	private static $db = array(
-		'HideTitle'		=> 'Boolean'
-	);
-
-	private static $has_one = array(
-		'Image'			=> Image::class
-	);
+    private static $has_one = [
+        'Image' => Image::class
+    ];
 
 } 

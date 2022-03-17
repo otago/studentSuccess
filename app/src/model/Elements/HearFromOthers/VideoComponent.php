@@ -6,27 +6,28 @@ namespace OP\studentsuccess;
 use SilverStripe\Forms\DropdownField;
 
 
+class VideoComponent extends HearFromOthers
+{
+    private static $table_name = 'VideoComponent';
+    private static $title = "Video";
 
-class VideoComponent extends HearFromOthers {
-	
-	private static $title = "Video";
+    private static $description = "Video Component with modal player";
 
-	private static $description = "Video Component with modal player";
-	
-	private static $db = array(
-		'Color'	=> 'Varchar',
-	);
-			
-	function getCMSFields() {
-		$fields = parent::getCMSFields();
+    private static $db = [
+        'Color' => 'Varchar',
+    ];
 
-		$fields->addFieldToTab('Root.Main', DropdownField::create('Color')->setSource(array(
-			'green'		=> 'Green',
-			'red'		=> 'Red',
-			'blue'		=> 'Blue',
-			'yellow'	=> 'Yellow'
-		)));
+    function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
 
-		return $fields;
-	}
+        $fields->addFieldToTab('Root.Main', DropdownField::create('Color')->setSource([
+            'green' => 'Green',
+            'red' => 'Red',
+            'blue' => 'Blue',
+            'yellow' => 'Yellow'
+        ]));
+
+        return $fields;
+    }
 }

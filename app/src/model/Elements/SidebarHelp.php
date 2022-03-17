@@ -7,15 +7,16 @@ use OP\studentsuccess\Contactable;
 use DNADesign\Elemental\Models\BaseElement;
 
 
+class SidebarHelp extends BaseElement
+{
+    private static $table_name = 'SidebarHelp';
 
-class SidebarHelp extends BaseElement {
-	
-	private static $title = "Sidebar Help";
-	
-	private static $description = "Sidebar Help";
+    private static $title = "Sidebar Help";
 
-	private static $extensions = array(
-		Contactable::class
-	);
+    private static $description = "Sidebar Help";
+
+    private static $extensions = [
+        Contactable::class
+    ];
 
 }

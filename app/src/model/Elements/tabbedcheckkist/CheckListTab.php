@@ -3,45 +3,44 @@
 namespace OP\studentsuccess;
 
 
-
 use OP\studentsuccess\TabbedCheckList;
 use OP\studentsuccess\CheckListBlock;
 use SilverStripe\ORM\DataObject;
 use OP\studentsuccess\FormUtils;
 
 
+class CheckListTab extends DataObject
+{
+    private static $table_name = 'CheckListTab';
+    private static $db = [
+        'Title' => 'Varchar',
+        'SortOrder' => 'Int'
+    ];
 
+    private static $has_one = [
+        'TabbedCheckList' => TabbedCheckList::class
+    ];
 
-class CheckListTab extends DataObject {
+    private static $has_many = [
+        'Blocks' => CheckListBlock::class
+    ];
 
-	private static $db = array(
-		'Title'			=> 'Varchar',
-		'SortOrder'		=> 'Int'
-	);
+    private static $default_sort = 'SortOrder';
 
-	private static $has_one = array(
-		'TabbedCheckList'	=> TabbedCheckList::class
-	);
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
 
-	private static $has_many = array(
-		'Blocks'			=> CheckListBlock::class
-	);
+        $fields->removeByName([
+            'SortOrder',
+            TabbedCheckList::class,
+            'TabbedCheckListID',
+            'Blocks'
+        ]);
 
-	private static $default_sort = 'SortOrder';
+        $fields->addFieldToTab('Root.Main', FormUtils::MakeDragAndDropGridField('Blocks', 'Blocks', $this->Blocks(), 'SortOrder', 'RecordEditor'));
 
-	public  function getCMSFields(){
-		$fields = parent::getCMSFields();
-
-		$fields->removeByName(array(
-			'SortOrder',
-			TabbedCheckList::class,
-			'TabbedCheckListID',
-			'Blocks'
-		));
-
-		$fields->addFieldToTab('Root.Main', FormUtils::MakeDragAndDropGridField('Blocks', 'Blocks', $this->Blocks(), 'SortOrder', 'RecordEditor'));
-
-		return $fields;
-	}
+        return $fields;
+    }
 
 } 

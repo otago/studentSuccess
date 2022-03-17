@@ -3,10 +3,6 @@
 namespace OP\studentsuccess;
 
 
-
-
-
-
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Control\Director;
@@ -17,20 +13,22 @@ use DNADesign\Elemental\Models\BaseElement;
 
 
 /**
+ * Stolen from "dnadesign/silverstripe-elemental": "1.9.4"
  * @package elemental
  */
 class ElementLink extends BaseElement
 {
-    private static $db = array(
+    private static $table_name = 'ElementLink';
+    private static $db = [
         'LinkText' => 'Varchar(255)',
         'LinkDescription' => 'Text',
         'LinkURL' => 'Varchar(255)',
         'NewWindow' => 'Boolean'
-    );
+    ];
 
-    private static $has_one = array(
+    private static $has_one = [
         'InternalLink' => SiteTree::class
-    );
+    ];
 
     private static $title = "Link Element";
 
@@ -44,12 +42,12 @@ class ElementLink extends BaseElement
             $fields->addFieldToTab('Root.Main', $url);
 
 
-            $fields->addFieldsToTab('Root.Main', array(
+            $fields->addFieldsToTab('Root.Main', [
                 TreeDropdownField::create('InternalLinkID', 'Link To', SiteTree::class),
                 CheckboxField::create('NewWindow', 'Open in a new window'),
                 $text = TextField::create('LinkText', 'Link Text'),
                 $desc = TextareaField::create('LinkDescription', 'Link Description')
-            ));
+            ]);
         });
 
         return parent::getCMSFields();

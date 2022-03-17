@@ -14,32 +14,33 @@ use SilverStripe\ORM\DataObject;
  * Time: 3:23 PM
  * To change this template use File | Settings | File Templates.
  */
+class CheckListBlockItem extends DataObject
+{
+    private static $table_name = 'CheckListBlockItem';
+    private static $db = [
+        'Title' => 'Varchar',
+        'ShowContacts' => 'Boolean',
+        'Content' => 'HTMLText',
+        'SortOrder' => 'Int'
+    ];
 
-class CheckListBlockItem extends DataObject {
+    private static $has_one = [
+        'CheckListBlock' => CheckListBlock::class
+    ];
 
-	private static $db = array(
-		'Title'			=> 'Varchar',
-		'ShowContacts'	=> 'Boolean',
-		'Content'		=> 'HTMLText',
-		'SortOrder'		=> 'Int'
-	);
+    private static $default_sort = 'SortOrder';
 
-	private static $has_one = array(
-		'CheckListBlock'	=> CheckListBlock::class
-	);
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
 
-	private static $default_sort = 'SortOrder';
+        $fields->removeByName([
+            CheckListBlock::class,
+            'CheckListBlockID',
+            'SortOrder'
+        ]);
 
-	public function getCMSFields(){
-		$fields = parent::getCMSFields();
-
-		$fields->removeByName(array(
-			CheckListBlock::class,
-			'CheckListBlockID',
-			'SortOrder'
-		));
-
-		return $fields;
-	}
+        return $fields;
+    }
 
 } 

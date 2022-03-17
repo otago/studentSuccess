@@ -3,9 +3,6 @@
 namespace OP\studentsuccess;
 
 
-
-
-
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\HeaderField;
 use SilverStripe\Forms\TextField;
@@ -13,45 +10,46 @@ use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\TreeDropdownField;
 
 
+class SmallMasonryTile extends MasonryTile
+{
+    private static $table_name = 'SmallMasonryTile';
+    private static $db = [
+        'LinkButton' => 'Varchar',
+        'SecondaryTarget' => 'Enum("_self,_blank,_modal")',
+        'SecondaryLinkURL' => 'Varchar(255)'
+    ];
 
-class SmallMasonryTile extends MasonryTile {
+    private static $field_labels = [
+        'LinkButton' => 'Secondary Link Title'
+    ];
 
-	private static $db = array(
-		'LinkButton'		=> 'Varchar',
-		'SecondaryTarget' => 'Enum("_self,_blank,_modal")',
-		'SecondaryLinkURL' => 'Varchar(255)'
-	);
+    private static $has_one = [
+        'SecondaryPageLink' => SiteTree::class
+    ];
 
-	private static $field_labels = array(
-		'LinkButton' => 'Secondary Link Title'
-	);
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
 
-	private static $has_one = array(
-		'SecondaryPageLink' => SiteTree::class
-	);
+        $fields->removeByName('Content');
 
-	public function getCMSFields() {
-		$fields = parent::getCMSFields();
+        $fields->removeByName('LinkButton');
+        $fields->removeByName('SecondaryPageLinkID');
+        $fields->removeByName('SecondaryTarget');
 
-		$fields->removeByName('Content');
+        $fields->addFieldsToTab('Root.Main', [
+            new HeaderField('SecondaryLinkHeading', 'Secondary Link'),
+            new TextField('LinkButton', 'Link Title'),
+            new DropdownField('SecondaryTarget', 'Target', [
+                '_self' => 'Open in same window',
+                '_blank' => 'Open in new window',
+                '_modal' => 'Modal Window'
+            ]),
+            new TreeDropdownField('SecondaryPageLinkID', 'Link Page', SiteTree::class),
+            new TextField('SecondaryLinkURL')
+        ]);
 
-		$fields->removeByName('LinkButton');
-		$fields->removeByName('SecondaryPageLinkID');
-		$fields->removeByName('SecondaryTarget');
-
-		$fields->addFieldsToTab('Root.Main', array(
-			new HeaderField('SecondaryLinkHeading', 'Secondary Link'),
-			new TextField('LinkButton', 'Link Title'),
-			new DropdownField('SecondaryTarget', 'Target', array(
-				'_self' => 'Open in same window',
-				'_blank' => 'Open in new window',
-				'_modal' => 'Modal Window'
-			)),
-			new TreeDropdownField('SecondaryPageLinkID', 'Link Page', SiteTree::class),
-			new TextField('SecondaryLinkURL')
-		));
-
-		return $fields;
-	}
+        return $fields;
+    }
 
 } 

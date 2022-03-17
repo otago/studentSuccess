@@ -3,41 +3,39 @@
 namespace OP\studentsuccess;
 
 
-
 use OP\studentsuccess\FooterLink;
 use SilverStripe\ORM\DataObject;
 use OP\studentsuccess\FormUtils;
 
 
+class FooterLinkBlock extends DataObject
+{
+    private static $table_name = 'FooterLinkBlock';
+    private static $db = [
+        'Title' => 'Varchar',
+        'SortOrder' => 'Int'
+    ];
 
+    private static $has_many = [
+        'Links' => FooterLink::class
+    ];
 
+    private static $default_sort = 'SortOrder';
 
-class FooterLinkBlock extends DataObject {
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
 
-	private static $db = array(
-		'Title'			=> 'Varchar',
-		'SortOrder'		=> 'Int'
-	);
+        $fields->removeByName([
+            'SortOrder',
+            'Links'
+        ]);
 
-	private static $has_many = array(
-		'Links'			=> FooterLink::class
-	);
+        $fields->addFieldsToTab('Root.Links', [
+            FormUtils::MakeDragAndDropGridField('Links', 'Links', $this->Links(), 'SortOrder')
+        ]);
 
-	private static $default_sort = 'SortOrder';
-
-	public function getCMSFields(){
-		$fields = parent::getCMSFields();
-
-		$fields->removeByName(array(
-			'SortOrder',
-			'Links'
-		));
-
-		$fields->addFieldsToTab('Root.Links', array(
-			FormUtils::MakeDragAndDropGridField('Links', 'Links', $this->Links(), 'SortOrder')
-		));
-
-		return $fields;
-	}
+        return $fields;
+    }
 
 } 

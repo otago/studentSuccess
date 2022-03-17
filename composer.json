@@ -19,6 +19,7 @@
             "silverstripe/recipe-plugin": true
         }
     },
+    "minimum-stability": "RC",
     "extra": {
         "project-files-installed": [
             "app/.htaccess",
@@ -33,5 +34,8 @@
             "index.php",
             "web.config"
         ]
+    },
+    "require-dev": {
+        "lekoala/silverstripe-debugbar": "2.x-dev"
     }
 }

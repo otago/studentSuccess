@@ -29,7 +29,9 @@ SilverStripe\Control\Director:
   rules:
     tile//$Action/$ID: OP\studentsuccess\FilterableTile_Counter
 SilverStripe\View\SSViewer:
-  theme: otp
+  themes:
+    - otp
+    - '$default'
 DNADesign\Elemental\Extensions\ElementalPageExtension:
   ignored_classes:
     - OP\studentsuccess\ActivityPage

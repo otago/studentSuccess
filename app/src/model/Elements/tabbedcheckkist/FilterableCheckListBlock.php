@@ -3,56 +3,56 @@
 namespace OP\studentsuccess;
 
 
-
 use OP\studentsuccess\FilterableCheckList;
 use SilverStripe\Forms\CheckboxSetField;
 use SilverStripe\Forms\CheckboxField;
 
 
+class FilterableCheckListBlock extends CheckListBlock
+{
+    private static $table_name = 'FilterableCheckListBlock';
+    private static $db = [
+        'AppliesToIam' => 'Varchar(255)',
+        'AppliesToMoving' => 'Varchar(255)',
+        'AppliesToStudy' => 'Varchar(255)',
+        'AppliesToLocations' => 'Varchar(255)',
+        'AppliesToFirstTrimester' => 'Boolean',
+        'AppliesToSecondTrimester' => 'Boolean'
+    ];
 
-class FilterableCheckListBlock extends CheckListBlock {
+    private static $has_one = [
+        'FilterableCheckList' => FilterableCheckList::class
+    ];
 
-	private static $db = array(
-		'AppliesToIam' => 'Varchar(255)',
-		'AppliesToMoving' => 'Varchar(255)',
-		'AppliesToStudy' => 'Varchar(255)',
-		'AppliesToLocations' => 'Varchar(255)',
-		'AppliesToFirstTrimester' => 'Boolean',
-		'AppliesToSecondTrimester' => 'Boolean'
-	);
+    private static $summary_fields = [
+        'Title',
+        'AppliesToIam',
+        'AppliesToMoving',
+        'AppliesToLocations',
+        'AppliesToFirstTrimester'
+    ];
 
-	private static $has_one = array(
-		'FilterableCheckList' => FilterableCheckList::class
-	);
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
 
-	private static $summary_fields = array(
-		'Title',
-		'AppliesToIam',
-		'AppliesToMoving',
-		'AppliesToLocations',
-		'AppliesToFirstTrimester'
-	);
+        $fields->removeByName([
+            'AppliesToIam',
+            'AppliesToMoving',
+            'AppliesToStudy',
+            'AppliesToLocations',
+            'AppliesToFirstTrimester',
+            'AppliesToSecondTrimester'
+        ]);
 
-	public function getCMSFields() {
-		$fields = parent::getCMSFields();
+        $fields->addFieldsToTab('Root.Main', [
+            new CheckboxSetField('AppliesToIam', 'Applies to the following selections', FilterableCheckList::$iam),
+            new CheckboxSetField('AppliesToMoving', '', FilterableCheckList::$moving),
+            new CheckboxSetField('AppliesToLocations', '', FilterableCheckList::$locations),
+            new CheckboxField('AppliesToFirstTrimester'),
+            new CheckboxField('AppliesToSecondTrimester'),
+        ]);
 
-		$fields->removeByName(array(
-			'AppliesToIam',
-			'AppliesToMoving',
-			'AppliesToStudy',
-			'AppliesToLocations',
-			'AppliesToFirstTrimester',
-			'AppliesToSecondTrimester'
-		));
-
-		$fields->addFieldsToTab('Root.Main', array(
-			new CheckboxSetField('AppliesToIam', 'Applies to the following selections', FilterableCheckList::$iam),
-			new CheckboxSetField('AppliesToMoving', '', FilterableCheckList::$moving),
-			new CheckboxSetField('AppliesToLocations', '', FilterableCheckList::$locations),
-			new CheckboxField('AppliesToFirstTrimester'),
-			new CheckboxField('AppliesToSecondTrimester'),
-		));
-
-		return $fields;
-	}
+        return $fields;
+    }
 }

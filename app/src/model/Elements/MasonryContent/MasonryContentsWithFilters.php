@@ -6,35 +6,36 @@ namespace OP\studentsuccess;
 use Symbiote\GridFieldExtensions\GridFieldAddNewMultiClass;
 
 
+class MasonryContentsWithFilters extends MasonryContent
+{
+    private static $table_name = 'MasonryContentsWithFilters';
+    private static $title = "Masonry Element With Filters";
 
-class MasonryContentsWithFilters extends MasonryContent {
+    private static $description = "Masonry elements with filters";
 
-	private static $title = "Masonry Element With Filters";
+    private static $db = [
+        'FilterByString' => 'Varchar',
+        'SearchFieldDefaultText' => 'Varchar'
+    ];
 
-	private static $description = "Masonry elements with filters";
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
 
-	private static $db = array(
-		'FilterByString'			=> 'Varchar',
-		'SearchFieldDefaultText'	=> 'Varchar'
-	);
+        if ($tilesGrid = $fields->dataFieldByName('Tiles')) {
+            $configs = $tilesGrid->getConfig();
+            $adder = new GridFieldAddNewMultiClass();
+            $configs->removeComponentsByType(GridFieldAddNewMultiClass::class);
+            $adder->setClasses([
+                'FilterableSmallMasonryTile' => 'Text Tile',
+                'LinkListMasonryTile' => 'Links List',
+                'FilterableSmallMasonryImageTile' => 'Small Image Tile'
+            ]);
 
-	public function getCMSFields(){
-		$fields = parent::getCMSFields();
-
-		if($tilesGrid = $fields->dataFieldByName('Tiles')){
-			$configs = $tilesGrid->getConfig();
-			$adder = new GridFieldAddNewMultiClass();
-			$configs->removeComponentsByType(GridFieldAddNewMultiClass::class);
-			$adder->setClasses(array(
-				'FilterableSmallMasonryTile'	=> 'Text Tile',
-				'LinkListMasonryTile'			=> 'Links List',
-				'FilterableSmallMasonryImageTile'=> 'Small Image Tile'
-			));
-
-			$configs->addComponent($adder);
-		}
+            $configs->addComponent($adder);
+        }
 
 
-		return $fields;
-	}
+        return $fields;
+    }
 } 

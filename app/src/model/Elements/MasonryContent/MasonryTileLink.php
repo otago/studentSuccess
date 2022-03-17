@@ -3,52 +3,52 @@
 namespace OP\studentsuccess;
 
 
-
 use OP\studentsuccess\LinkListMasonryTile;
 use OP\studentsuccess\FilterableSmallMasonryTile;
 use SilverStripe\Forms\CheckboxSetField;
 use SilverStripe\ORM\DataObject;
 
 
+class MasonryTileLink extends DataObject
+{
+    private static $table_name = 'MasonryTileLink';
+    private static $db = [
+        'Title' => 'Varchar',
+        'SortOrder' => 'Int'
+    ];
 
-class MasonryTileLink extends DataObject {
+    private static $has_one = [
+        'LinkListMasonryTile' => LinkListMasonryTile::class
+    ];
 
-	private static $db = array(
-		'Title'					=> 'Varchar',
-		'SortOrder'				=> 'Int'
- 	);
+    private static $many_many = [
+        'Elements' => FilterableSmallMasonryTile::class
+    ];
 
-	private static $has_one = array(
-		'LinkListMasonryTile'	=> LinkListMasonryTile::class
-	);
+    private static $default_sort = 'SortOrder';
 
-	private static $many_many = array(
-		'Elements' => FilterableSmallMasonryTile::class
-	);
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
 
-	private static $default_sort = 'SortOrder';
+        $fields->removeByName([
+            LinkListMasonryTile::class,
+            'LinkListMasonryTileID',
+            'SortOrder',
+            'Elements'
+        ]);
 
-	public function getCMSFields() {
-		$fields = parent::getCMSFields();
+        if ($this->LinkListMasonryTile()->exists()) {
+            $tiles = FilterableSmallMasonryTile::get()
+                ->filter([
+                    'MasonryContentID' => $this->LinkListMasonryTile()->MasonryContentID
+                ])
+                ->sort('Title ASC')->map('ID', 'Title');
 
-		$fields->removeByName(array(
-			LinkListMasonryTile::class,
-			'LinkListMasonryTileID',
-			'SortOrder',
-			'Elements'
-		));
+            $fields->addFieldToTab('Root.Main', CheckboxSetField::create('Elements', 'Elements', $tiles));
+        }
 
-		if($this->LinkListMasonryTile()->exists()) {
-			$tiles = FilterableSmallMasonryTile::get()
-				->filter(array(
-					'MasonryContentID' => $this->LinkListMasonryTile()->MasonryContentID
-				))
-				->sort('Title ASC')->map('ID', 'Title') ;
-				
-			$fields->addFieldToTab('Root.Main',  CheckboxSetField::create('Elements', 'Elements', $tiles));
-		}
-
-		return $fields;
-	}
+        return $fields;
+    }
 
 } 

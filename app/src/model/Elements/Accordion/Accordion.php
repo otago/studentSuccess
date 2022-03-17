@@ -3,10 +3,6 @@
 namespace OP\studentsuccess;
 
 
-
-
-
-use OP\studentsuccess\Accordion;
 use OP\studentsuccess\AccordionItem;
 
 use DNADesign\Elemental\Models\BaseElement;
@@ -14,44 +10,46 @@ use SilverStripe\Versioned\Versioned;
 use OP\studentsuccess\FormUtils;
 
 
+class Accordion extends BaseElement
+{
+    private static $table_name = 'Accordion';
+    private static $title = 'Accordion';
 
+    private static $description = 'Accordion';
 
-class Accordion extends BaseElement {
+    private static $has_many = [
+        'Items' => AccordionItem::class
+    ];
 
-	private static $title = Accordion::class;
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
 
-	private static $description = Accordion::class;
+        $fields->removeByName('Item');
 
-	private static $has_many = array(
-		'Items'			=> AccordionItem::class
-	);
+        if ($this->ID) {
+            $fields->addFieldToTab('Root.Main',
+                FormUtils::MakeDragAndDropGridField('Items', 'Items', $this->Items(), 'Sort')
+            );
+        }
 
-	public function getCMSFields() {
-		$fields = parent::getCMSFields();
+        return $fields;
+    }
 
-		$fields->removeByName('Item');
+    public function Elements()
+    {
+        return $this->Items();
+    }
 
-		if($this->ID){
-			$fields->addFieldToTab('Root.Main',
-				FormUtils::MakeDragAndDropGridField('Items', 'Items', $this->Items(), 'Sort')
-			);
-		}
+    public function shouldCleanupElement($widget)
+    {
+        if ($widget->AccordionID == 0) {
+            return true;
+        }
 
-		return $fields;
-	}
-
-	public function Elements() {
-		return $this->Items();
-	}
-
-	public function shouldCleanupElement($widget) {
-		if($widget->AccordionID == 0) {
-			return true;
-		}
-
-		return false;
-	}
-} 
+        return false;
+    }
+}
 
 /*
 class Accordion_ElementPublishChildren extends ElementPublishChildren {

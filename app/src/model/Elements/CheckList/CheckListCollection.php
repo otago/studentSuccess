@@ -7,25 +7,25 @@ use OP\studentsuccess\ListCollectionItem;
 use OP\studentsuccess\FormUtils;
 
 
+class CheckListCollection extends CheckListItem
+{
 
+    private static $has_many = [
+        'ListCollectionItems' => ListCollectionItem::class
+    ];
 
-class CheckListCollection extends CheckListItem {
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
 
-	private static $has_many = array(
-		'ListCollectionItems'		=> ListCollectionItem::class
-	);
+        $fields->removeByName('Content');
+        $fields->removeByName('ListCollectionItems');
 
-	public function getCMSFields(){
-		$fields = parent::getCMSFields();
+        $fields->addFieldsToTab('Root.Main', [
+            FormUtils::MakeDragAndDropGridField('ListCollectionItems', 'Items', $this->ListCollectionItems(), 'SortOrder')
+        ]);
 
-		$fields->removeByName('Content');
-		$fields->removeByName('ListCollectionItems');
-
-		$fields->addFieldsToTab('Root.Main', array(
-			FormUtils::MakeDragAndDropGridField('ListCollectionItems', 'Items', $this->ListCollectionItems(), 'SortOrder')
-		));
-
-		return $fields;
-	}
+        return $fields;
+    }
 
 } 

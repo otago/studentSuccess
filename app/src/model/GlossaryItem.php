@@ -7,32 +7,33 @@ use OP\studentsuccess\GlossaryType;
 use SilverStripe\ORM\DataObject;
 
 
+class GlossaryItem extends DataObject
+{
+    private static $table_name = 'GlossaryItem';
+    private static $db = [
+        'Title' => 'Varchar(255)',
+        'ShowContactInfo' => 'Boolean',
+        'Content' => 'HTMLText',
+        'SortOrder' => 'Int'
+    ];
 
-class GlossaryItem extends DataObject {
+    private static $has_one = [
+        'GlossaryType' => GlossaryType::class
+    ];
 
-	private static $db = array(
-		'Title'				=> 'Varchar(255)',
-		'ShowContactInfo'	=> 'Boolean',
-		'Content'			=> 'HTMLText',
-		'SortOrder'			=> 'Int'
-	);
+    private static $default_sort = 'SortOrder';
 
-	private static $has_one = array(
-		'GlossaryType'		=> GlossaryType::class
-	);
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
 
-	private static $default_sort = 'SortOrder';
+        $fields->removeByName([
+            'SortOrder',
+            GlossaryType::class,
+            'GlossaryTypeID'
+        ]);
 
-	public function getCMSFields(){
-		$fields = parent::getCMSFields();
-
-		$fields->removeByName(array(
-			'SortOrder',
-			GlossaryType::class,
-			'GlossaryTypeID'
-		));
-
-		return $fields;
-	}
+        return $fields;
+    }
 
 } 

@@ -14,30 +14,31 @@ use SilverStripe\ORM\DataObject;
  * Time: 10:37 AM
  * To change this template use File | Settings | File Templates.
  */
+class FooterLink extends DataObject
+{
+    private static $table_name = 'FooterLink';
+    private static $db = [
+        'Title' => 'Varchar',
+        'SortOrder' => 'Int'
+    ];
 
-class FooterLink extends DataObject {
+    private static $has_one = [
+        'FooterLinkBlock' => FooterLinkBlock::class
+    ];
 
-	private static $db = array(
-		'Title'				=> 'Varchar',
-		'SortOrder'			=> 'Int'
-	);
+    private static $default_sort = 'SortOrder';
 
-	private static $has_one = array(
-		'FooterLinkBlock'	=> FooterLinkBlock::class
-	);
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
 
-	private static $default_sort = 'SortOrder';
+        $fields->removeByName([
+            FooterLinkBlock::class,
+            'FooterLinkBlockID',
+            'SortOrder'
+        ]);
 
-	public function getCMSFields(){
-		$fields = parent::getCMSFields();
-
-		$fields->removeByName(array(
-			FooterLinkBlock::class,
-			'FooterLinkBlockID',
-			'SortOrder'
-		));
-
-		return $fields;
-	}
+        return $fields;
+    }
 
 } 

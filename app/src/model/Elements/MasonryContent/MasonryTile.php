@@ -7,44 +7,46 @@ use OP\studentsuccess\MasonryContent;
 use SilverStripe\ORM\DataObject;
 
 
+class MasonryTile extends DataObject
+{
+    private static $table_name = 'MasonryTile';
+    private static $db = [
+        'Title' => 'Varchar(255)',
+        'Content' => 'Text',
+        'SortOrder' => 'Int',
+    ];
 
-class MasonryTile extends DataObject {
+    private static $has_one = [
+        'MasonryContent' => MasonryContent::class
+    ];
 
-	private static $db = array(
-		'Title'				=> 'Varchar(255)',
-		'Content'			=> 'Text',
-		'SortOrder'			=> 'Int',
-	);
+    private static $summary_fields = [
+        'Title',
+        'ClassName'
+    ];
 
-	private static $has_one = array(
-		'MasonryContent'	=> MasonryContent::class
-	);
+    private static $field_labels = [
+        'Title' => 'Heading'
+    ];
 
-	private static $summary_fields = array(
-		'Title',
-		'ClassName'
-	);
+    private static $default_sort = 'SortOrder';
 
-	private static $field_labels = array(
-		'Title' => 'Heading'
-	);
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
 
-	private static $default_sort = 'SortOrder';
+        $fields->removeByName([
+            'SortOrder',
+            MasonryContent::class,
+            'MasonryContentID'
+        ]);
 
-	public function getCMSFields() {
-		$fields = parent::getCMSFields();
+        return $fields;
+    }
 
-		$fields->removeByName(array(
-			'SortOrder',
-			MasonryContent::class,
-			'MasonryContentID'
-		));
-
-		return $fields;
-	}
-
-	public function Render(){
-		return $this->renderWith($this->ClassName);
-	}
+    public function Render()
+    {
+        return $this->renderWith($this->ClassName);
+    }
 
 } 

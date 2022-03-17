@@ -3,8 +3,7 @@
 namespace OP\studentsuccess;
 
 
-
-
-class FilterableSmallMasonryImageTile extends FilterableMasonryImageTile {
+class FilterableSmallMasonryImageTile extends FilterableMasonryImageTile
+{
 
 }

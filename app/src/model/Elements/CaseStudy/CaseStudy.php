@@ -3,47 +3,47 @@
 namespace OP\studentsuccess;
 
 
-
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\DropdownField;
 use DNADesign\Elemental\Models\BaseElement;
 
 
+class CaseStudy extends BaseElement
+{
+    private static $table_name = 'CaseStudy';
+    private static $title = "Case Study";
 
-class CaseStudy extends BaseElement {
+    private static $description = "Case Study";
 
-	private static $title = "Case Study";
+    private static $db = [
+        'Color' => 'Varchar',
+        'Summary' => 'Text',
+        'CaseStudyContent' => 'HTMLText'
+    ];
 
-	private static $description = "Case Study";
+    private static $has_one = [
+        'Image' => Image::class
+    ];
 
-	private static $db = array(
-		'Color'				=> 'Varchar',
-		'Summary'			=> 'Text',
-		'CaseStudyContent'	=> 'HTMLText'
-	);
+    private static $field_labels = [
+        'Summary' => 'Pull quote'
+    ];
 
-	private static $has_one = array(
-		'Image'				=> Image::class
-	);
+    protected $enable_title_in_template = true;
 
-	private static $field_labels = array(
-		'Summary' => 'Pull quote'
-	);
+    function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
 
-	protected $enable_title_in_template = true;
-	
-	function getCMSFields() {
-		$fields = parent::getCMSFields();
+        $fields->removeByName('Color');
 
-		$fields->removeByName('Color');
+        $fields->addFieldToTab('Root.Main', DropdownField::create('Color')->setSource([
+            'green' => 'Green',
+            'red' => 'Red',
+            'blue' => 'Blue'
+        ]));
 
-		$fields->addFieldToTab('Root.Main', DropdownField::create('Color')->setSource(array(
-			'green'		=> 'Green',
-			'red'		=> 'Red',
-			'blue'		=> 'Blue'
-		)));
-
-		return $fields;
-	}
+        return $fields;
+    }
 
 } 

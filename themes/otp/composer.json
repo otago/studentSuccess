@@ -1,0 +1,21 @@
+{
+    "name": "otp",
+    "description": "Student Success Site theme",
+    "type": "silverstripe-theme",
+    "keywords": ["silverstripe", "theme"],
+    "license": "BSD-3-Clause",
+    "require": {
+        "composer/installers": "*",
+        "silverstripe/framework": ">=4.2"
+    },
+	"extra": {
+        "expose": [
+            "css",
+            "fonts",
+            "images",
+            "js",
+            "less",
+            "static"
+        ]
+	}
+}

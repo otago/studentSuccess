@@ -7,34 +7,36 @@ use OP\studentsuccess\Carousel;
 use SilverStripe\ORM\DataObject;
 
 
+class CarouselSlide extends DataObject
+{
+    private static $table_name = 'CarouselSlide';
+    private static $db = [
+        'Title' => 'Varchar',
+        'SortOrder' => 'Int'
+    ];
 
-class CarouselSlide extends DataObject {
+    private static $has_one = [
+        'Carousel' => Carousel::class
+    ];
 
-	private static $db = array(
-		'Title'			=> 'Varchar',
-		'SortOrder'		=> 'Int'
-	);
+    private static $default_sort = 'SortOrder';
 
-	private static $has_one = array(
-		'Carousel'			=> Carousel::class
-	);
-	
-	private static $default_sort = 'SortOrder';
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
 
-	public function getCMSFields() {
-		$fields = parent::getCMSFields();
+        $fields->removeByName([
+            'SortOrder',
+            Carousel::class,
+            'CarouselID'
+        ]);
 
-		$fields->removeByName(array(
-			'SortOrder',
-			Carousel::class,
-			'CarouselID'
-		));
+        return $fields;
+    }
 
-		return $fields;
-	}
-
-	function Render() {
-		return $this->renderWith($this->ClassName);
-	}
+    function Render()
+    {
+        return $this->renderWith($this->ClassName);
+    }
 
 } 

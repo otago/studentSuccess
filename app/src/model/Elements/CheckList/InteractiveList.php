@@ -11,4 +11,5 @@ class InteractiveList extends CheckList {
 
 	private static $description = "Interactive List";
 
+
 }

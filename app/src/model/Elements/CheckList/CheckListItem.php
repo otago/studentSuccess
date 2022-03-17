@@ -8,53 +8,55 @@ use OP\studentsuccess\CheckList;
 use SilverStripe\ORM\DataObject;
 
 
+class CheckListItem extends DataObject
+{
+    private static $table_name = 'CheckListItem';
+    private static $db = [
+        'Title' => 'Varchar(255)',
+        'Content' => 'HTMLText',
+        'UseArrow' => 'Boolean',
+        'SortOrder' => 'Int'
+    ];
 
-class CheckListItem extends DataObject {
+    private static $has_one = [
+        'CheckList' => CheckList::class
+    ];
 
-	private static $db = array(
-		'Title'			=> 'Varchar(255)',
-		'Content'		=> 'HTMLText',
-		'UseArrow'		=> 'Boolean',
-		'SortOrder'		=> 'Int'
-	);
+    private static $default_sort = 'SortOrder';
 
-	private static $has_one = array(
-		'CheckList'		=> CheckList::class
-	);
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
 
-	private static $default_sort = 'SortOrder';
+        $fields->removeByName([
+            'SortOrder',
+            CheckList::class,
+            'CheckListID',
+            'UseArrow'
+        ]);
 
-	public function getCMSFields(){
-		$fields = parent::getCMSFields();
+        $parent = $this->CheckList();
 
-		$fields->removeByName(array(
-			'SortOrder',
-			CheckList::class,
-			'CheckListID',
-			'UseArrow'
-		));
+        if ($parent->exists()) {
+            if ($parent instanceof SingleLevelChecklist || $parent instanceof SingleLevelList) {
+                $fields->removeByName('Content');
+            }
+        } else {
+            $fields->removeByName('Content');
+        }
 
-		$parent = $this->CheckList();
+        $fields->removeByName('UseArrow');
 
-		if($parent->exists()) {
-			if($parent instanceof SingleLevelChecklist || $parent instanceof SingleLevelList) {
-				$fields->removeByName('Content');
-			} 
-		} else {
-			$fields->removeByName('Content');
-		}
-
-		$fields->removeByName('UseArrow');
-
-		return $fields;
-	}
+        return $fields;
+    }
 
 
-	public function getUseArrow() {
-		if($parent = $this->CheckList()) {
-			return ($parent instanceof SingleLevelList || $parent instanceof InteractiveList);
-		}
+    public function getUseArrow()
+    {
+        if ($parent = $this->CheckList()) {
+            return ($parent instanceof SingleLevelList || $parent instanceof InteractiveList);
+        }
 
-		return false;
-	}
+        return false;
+    }
 } 

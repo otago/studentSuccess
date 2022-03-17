@@ -7,26 +7,26 @@ use OP\studentsuccess\MasonryTileLink;
 use OP\studentsuccess\FormUtils;
 
 
+class LinkListMasonryTile extends MasonryTile
+{
+    private static $table_name = 'LinkListMasonryTile';
+    private static $has_many = [
+        'Links' => MasonryTileLink::class
+    ];
 
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
 
-class LinkListMasonryTile extends MasonryTile {
+        $fields->removeByName([
+            'Content'
+        ]);
 
-	private static $has_many = array(
-		'Links'			=> MasonryTileLink::class
-	);
+        $fields->addFieldToTab('Root.Main',
+            FormUtils::MakeDragAndDropGridField('Links', 'Links', $this->Links(), 'SortOrder', 'RecordEditor')
+        );
 
-	public function getCMSFields() {
-		$fields = parent::getCMSFields();
+        return $fields;
 
-		$fields->removeByName(array(
-			'Content'
-		));
-
-		$fields->addFieldToTab('Root.Main', 
-			FormUtils::MakeDragAndDropGridField('Links', 'Links', $this->Links(), 'SortOrder', 'RecordEditor')
-		);
-
-		return $fields;
-
-	}
+    }
 } 

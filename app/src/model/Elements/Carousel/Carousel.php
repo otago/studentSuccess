@@ -3,9 +3,6 @@
 namespace OP\studentsuccess;
 
 
-
-
-
 use OP\studentsuccess\Carousel;
 use OP\studentsuccess\CarouselSlide;
 use SilverStripe\Forms\DropdownField;
@@ -15,52 +12,52 @@ use DNADesign\Elemental\Models\BaseElement;
 use OP\studentsuccess\FormUtils;
 
 
+class Carousel extends BaseElement
+{
+    private static $table_name = 'Carousel';
+    private static $title = Carousel::class;
 
+    private static $description = Carousel::class;
 
-class Carousel extends BaseElement {
+    private static $db = [
+        'Background' => 'Varchar'
+    ];
 
-	private static $title = Carousel::class;
-	
-	private static $description = Carousel::class;
+    private static $has_many = [
+        'Slides' => CarouselSlide::class
+    ];
 
-	private static $db = array(
-		'Background'	=> 'Varchar'
-	);
+    function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
 
-	private static $has_many = array(
-		'Slides'		=> CarouselSlide::class
-	);
+        $fields->removeByName('Slides');
 
-	function getCMSFields(){
-		$fields = parent::getCMSFields();
+        $fields->replaceField('Background', DropdownField::create('Background')->setSource([
+            'blue' => 'Blue (Default)',
+            'red' => 'Red',
+            'green' => 'Green',
+            'gray' => 'Gray'
+        ]));
 
-		$fields->removeByName('Slides');
+        if ($this->ID) {
+            $fields->addFieldsToTab('Root.Main', [
+                $grid = FormUtils::MakeDragAndDropGridField('Slides', 'Slides', $this->Slides(), 'SortOrder')
+            ]);
 
-		$fields->replaceField('Background', DropdownField::create('Background')->setSource(array(
-			'blue'		=> 'Blue (Default)',
-			'red'		=> 'Red',
-			'green'		=> 'Green',
-			'gray'		=> 'Gray'
-		)));
+            $configs = $grid->getConfig();
+            $adder = new GridFieldAddNewMultiClass();
+            $adder->setClasses([
+                'CarouselSlide' => 'Slide with only a title',
+                'CarouselTextSlide' => 'Slide with title and content',
+                'CarouselTextSlide_NoTitle' => 'Slide with just content',
+                'CarouselTwoColumnSlide' => 'Slide with two columns of content'
+            ]);
+            $configs->removeComponentsByType(GridFieldAddNewButton::class);
+            $configs->addComponent($adder);
+        }
 
-		if($this->ID) {
-			$fields->addFieldsToTab('Root.Main', array(
-				$grid = FormUtils::MakeDragAndDropGridField('Slides', 'Slides', $this->Slides(), 'SortOrder')
-			));
-
-			$configs = $grid->getConfig();
-			$adder = new GridFieldAddNewMultiClass();
-			$adder->setClasses(array(
-				'CarouselSlide'					=> 'Slide with only a title',
-				'CarouselTextSlide'				=> 'Slide with title and content',
-				'CarouselTextSlide_NoTitle'		=> 'Slide with just content',
-				'CarouselTwoColumnSlide'		=> 'Slide with two columns of content'
-			));
-			$configs->removeComponentsByType(GridFieldAddNewButton::class);
-			$configs->addComponent($adder);
-		}
-
-		return $fields;
-	}
+        return $fields;
+    }
 
 } 
