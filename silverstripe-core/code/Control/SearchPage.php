@@ -6,7 +6,6 @@ namespace OP\studentsuccess;
 
 
 use SilverStripe\Core\Convert;
-use OP\studentsuccess\SearchPage;
 use SilverStripe\CMS\Search\SearchForm;
 use PageController;
 

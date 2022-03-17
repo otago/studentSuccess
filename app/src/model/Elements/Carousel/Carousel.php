@@ -3,7 +3,7 @@
 namespace OP\studentsuccess;
 
 
-use OP\studentsuccess\Carousel;
+
 use OP\studentsuccess\CarouselSlide;
 use SilverStripe\Forms\DropdownField;
 use Symbiote\GridFieldExtensions\GridFieldAddNewMultiClass;

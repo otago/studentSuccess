@@ -35,9 +35,3 @@ class GlossaryPage extends Page
         return $fields;
     }
 }
-
-class GlossaryPage_Controller extends PageController
-{
-
-
-}

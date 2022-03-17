@@ -81,13 +81,3 @@ class HomePage extends Page
     }
 
 }
-
-class HomePage_Controller extends PageController
-{
-
-    private static $allowed_actions = [
-        'unsupported'
-    ];
-
-
-}
