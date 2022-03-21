@@ -1,13 +1,13 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
 
 use DNADesign\Elemental\Models\ElementContent;
-use OP\studentsuccess\SidebarTestimony;
-use OP\studentsuccess\SidebarHelp;
-use OP\studentsuccess\SidebarImageElement;
+use OP\Studentsuccess\SidebarTestimony;
+use OP\Studentsuccess\SidebarHelp;
+use OP\Studentsuccess\SidebarImageElement;
 use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\ORM\DataExtension;
 

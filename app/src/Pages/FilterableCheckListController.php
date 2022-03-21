@@ -1,12 +1,12 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 use Page;
 
 
-use OP\studentsuccess\FilterableCheckListBlock;
-use OP\studentsuccess\TabbedCheckList;
+use OP\Studentsuccess\FilterableCheckListBlock;
+use OP\Studentsuccess\TabbedCheckList;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Control\Cookie;
 use SilverStripe\Forms\DropdownField;
@@ -15,7 +15,7 @@ use SilverStripe\Forms\FormAction;
 use SilverStripe\Forms\RequiredFields;
 use SilverStripe\Forms\Form;
 use PageController;
-use OP\studentsuccess\FormUtils;
+use OP\Studentsuccess\FormUtils;
 
 
 class FilterableCheckListController extends PageController

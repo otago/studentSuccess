@@ -1,5 +1,5 @@
 <?php
-use OP\studentsuccess\ShortCodeUtils;
+use OP\Studentsuccess\ShortCodeUtils;
 use SilverStripe\ORM\FieldType\DBDatetime;
 use SilverStripe\Control\Cookie;
 use SilverStripe\ORM\DB;

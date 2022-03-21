@@ -1,6 +1,6 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
 class CarouselTextSlide extends CarouselSlide

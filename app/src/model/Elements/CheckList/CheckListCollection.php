@@ -1,10 +1,10 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
-use OP\studentsuccess\ListCollectionItem;
-use OP\studentsuccess\FormUtils;
+use OP\Studentsuccess\ListCollectionItem;
+use OP\Studentsuccess\FormUtils;
 
 
 class CheckListCollection extends CheckListItem

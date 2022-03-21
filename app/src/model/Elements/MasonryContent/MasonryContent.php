@@ -1,14 +1,14 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
-use OP\studentsuccess\MasonryTile;
+use OP\Studentsuccess\MasonryTile;
 use Symbiote\GridFieldExtensions\GridFieldAddNewMultiClass;
 use SilverStripe\Forms\GridField\GridFieldAddNewButton;
 use SilverStripe\Forms\GridField\GridFieldAddExistingAutocompleter;
 use DNADesign\Elemental\Models\BaseElement;
-use OP\studentsuccess\FormUtils;
+use OP\Studentsuccess\FormUtils;
 
 
 class MasonryContent extends BaseElement

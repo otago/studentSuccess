@@ -1,13 +1,13 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
-use OP\studentsuccess\CheckListTab;
-use OP\studentsuccess\CheckListBlockItem;
+use OP\Studentsuccess\CheckListTab;
+use OP\Studentsuccess\CheckListBlockItem;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\ORM\DataObject;
-use OP\studentsuccess\FormUtils;
+use OP\Studentsuccess\FormUtils;
 
 
 /**

@@ -1,9 +1,9 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
-use OP\studentsuccess\Carousel;
+use OP\Studentsuccess\Carousel;
 use SilverStripe\ORM\DataObject;
 
 

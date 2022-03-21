@@ -1,6 +1,6 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
 use SilverStripe\SiteConfig\SiteConfig;

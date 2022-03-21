@@ -1,9 +1,9 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
-use OP\studentsuccess\Contactable;
+use OP\Studentsuccess\Contactable;
 use DNADesign\Elemental\Models\BaseElement;
 
 

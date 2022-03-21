@@ -1,10 +1,10 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
-use OP\studentsuccess\MasonryTileLink;
-use OP\studentsuccess\FormUtils;
+use OP\Studentsuccess\MasonryTileLink;
+use OP\Studentsuccess\FormUtils;
 
 
 class LinkListMasonryTile extends MasonryTile

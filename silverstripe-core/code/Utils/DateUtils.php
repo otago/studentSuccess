@@ -1,12 +1,12 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
 
 use SilverStripe\ORM\FieldType\DBDatetime;
 use SilverStripe\Core\Config\Config;
-use OP\studentsuccess\DateUtils;
+use OP\Studentsuccess\DateUtils;
 
 
 /**

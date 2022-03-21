@@ -1,6 +1,6 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
 
@@ -10,7 +10,7 @@ namespace OP\studentsuccess;
 
 use SilverStripe\SiteConfig\SiteConfig;
 use SilverStripe\Core\Config\Config;
-use OP\studentsuccess\ImageExtension;
+use OP\Studentsuccess\ImageExtension;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Core\ClassInfo;
 use SilverStripe\Assets\Image;

@@ -1,12 +1,12 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
-use OP\studentsuccess\TabbedCheckList;
-use OP\studentsuccess\CheckListBlock;
+use OP\Studentsuccess\TabbedCheckList;
+use OP\Studentsuccess\CheckListBlock;
 use SilverStripe\ORM\DataObject;
-use OP\studentsuccess\FormUtils;
+use OP\Studentsuccess\FormUtils;
 
 
 class CheckListTab extends DataObject

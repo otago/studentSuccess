@@ -1,11 +1,11 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
-use OP\studentsuccess\FooterLink;
+use OP\Studentsuccess\FooterLink;
 use SilverStripe\ORM\DataObject;
-use OP\studentsuccess\FormUtils;
+use OP\Studentsuccess\FormUtils;
 
 
 class FooterLinkBlock extends DataObject

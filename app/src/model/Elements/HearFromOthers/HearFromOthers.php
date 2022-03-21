@@ -1,11 +1,11 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
 use SilverStripe\Assets\Image;
 use DNADesign\Elemental\Models\BaseElement;
-use OP\studentsuccess\StringUtils;
+use OP\Studentsuccess\StringUtils;
 
 
 class HearFromOthers extends BaseElement

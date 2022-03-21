@@ -1,9 +1,9 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
-use OP\studentsuccess\FooterLinkBlock;
+use OP\Studentsuccess\FooterLinkBlock;
 use SilverStripe\ORM\DataObject;
 
 

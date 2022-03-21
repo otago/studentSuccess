@@ -1,9 +1,9 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
-use OP\studentsuccess\GlossaryType;
+use OP\Studentsuccess\GlossaryType;
 use SilverStripe\ORM\DataObject;
 
 

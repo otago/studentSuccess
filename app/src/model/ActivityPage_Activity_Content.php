@@ -1,6 +1,6 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 use Page;
 
@@ -8,7 +8,7 @@ use Page;
 use DisplayLogicWrapper;
 
 
-use OP\studentsuccess\ActivityPage_Activity;
+use OP\Studentsuccess\ActivityPage_Activity;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\NumericField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;

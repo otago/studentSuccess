@@ -1,10 +1,10 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
-use OP\studentsuccess\LinkListMasonryTile;
-use OP\studentsuccess\FilterableSmallMasonryTile;
+use OP\Studentsuccess\LinkListMasonryTile;
+use OP\Studentsuccess\FilterableSmallMasonryTile;
 use SilverStripe\Forms\CheckboxSetField;
 use SilverStripe\ORM\DataObject;
 

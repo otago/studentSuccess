@@ -1,8 +1,8 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
-use OP\studentsuccess\MasonryTileLink;
+use OP\Studentsuccess\MasonryTileLink;
 
 
 class FilterableSmallMasonryTile extends SmallMasonryTile

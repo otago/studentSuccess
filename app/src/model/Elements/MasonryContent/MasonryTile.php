@@ -1,9 +1,9 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
-use OP\studentsuccess\MasonryContent;
+use OP\Studentsuccess\MasonryContent;
 use SilverStripe\ORM\DataObject;
 
 

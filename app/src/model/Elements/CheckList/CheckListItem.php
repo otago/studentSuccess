@@ -1,10 +1,10 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
 use SingleLevelChecklist;
-use OP\studentsuccess\CheckList;
+use OP\Studentsuccess\CheckList;
 use SilverStripe\ORM\DataObject;
 
 

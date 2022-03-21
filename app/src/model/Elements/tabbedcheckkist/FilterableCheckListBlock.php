@@ -1,9 +1,9 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
-use OP\studentsuccess\FilterableCheckList;
+use OP\Studentsuccess\FilterableCheckList;
 use SilverStripe\Forms\CheckboxSetField;
 use SilverStripe\Forms\CheckboxField;
 

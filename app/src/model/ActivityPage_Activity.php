@@ -1,6 +1,6 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 use Page;
 
@@ -14,7 +14,7 @@ use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 use SilverStripe\Forms\GridField\GridField;
 use PageController;
-use OP\studentsuccess\ActivityPage_Activity_Content;
+use OP\Studentsuccess\ActivityPage_Activity_Content;
 use SilverStripe\ORM\DB;
 use SilverStripe\Forms\ReadonlyField;
 use SilverStripe\ORM\ArrayList;

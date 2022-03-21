@@ -1,15 +1,15 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
 
-use OP\studentsuccess\CarouselSlide;
+use OP\Studentsuccess\CarouselSlide;
 use SilverStripe\Forms\DropdownField;
 use Symbiote\GridFieldExtensions\GridFieldAddNewMultiClass;
 use SilverStripe\Forms\GridField\GridFieldAddNewButton;
 use DNADesign\Elemental\Models\BaseElement;
-use OP\studentsuccess\FormUtils;
+use OP\Studentsuccess\FormUtils;
 
 
 class Carousel extends BaseElement

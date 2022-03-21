@@ -1,11 +1,11 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
 
 use SilverStripe\Core\Config\Config;
-use OP\studentsuccess\ShortCodeUtils;
+use OP\Studentsuccess\ShortCodeUtils;
 use SilverStripe\View\Parsers\ShortcodeParser;
 use SilverStripe\CMS\Model\SiteTree;
 

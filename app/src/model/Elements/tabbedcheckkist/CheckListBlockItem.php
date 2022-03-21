@@ -1,9 +1,9 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
-use OP\studentsuccess\CheckListBlock;
+use OP\Studentsuccess\CheckListBlock;
 use SilverStripe\ORM\DataObject;
 
 

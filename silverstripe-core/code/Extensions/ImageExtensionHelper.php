@@ -1,6 +1,6 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
 
@@ -11,7 +11,7 @@ namespace OP\studentsuccess;
 
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Core\Config\Config;
-use OP\studentsuccess\ImageExtension;
+use OP\Studentsuccess\ImageExtension;
 use SilverStripe\Assets\Image;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\ORM\ArrayList;

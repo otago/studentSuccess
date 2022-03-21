@@ -2,7 +2,7 @@
 Name: core
 
 ---
-OP\studentsuccess\DateUtils:
+OP\Studentsuccess\DateUtils:
   PublicDateTimeFormat: 'd F Y H:i'
   PublicDateFormat: 'd F Y'
   PublicTimeFormat: 'H:i a'
@@ -12,17 +12,17 @@ SilverStripe\Forms\DateField:
     dateformat: dd/MM/yyyy
 SilverStripe\Assets\Image:
   extensions:
-    - OP\studentsuccess\ImageExtension
-OP\studentsuccess\ImageExtension:
+    - OP\Studentsuccess\ImageExtension
+OP\Studentsuccess\ImageExtension:
   sizes: null
   exclude_classes: null
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
-    - OP\studentsuccess\CoreConfigs
+    - OP\Studentsuccess\CoreConfigs
 SilverStripe\Control\Controller:
   extensions:
-    - OP\studentsuccess\SS_MinifiedResponseExtension
+    - OP\Studentsuccess\SS_MinifiedResponseExtension
 
 SilverStripe\Control\Director:
   rules:
-    search: OP\studentsuccess\SearchPage
+    search: OP\Studentsuccess\SearchPage

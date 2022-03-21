@@ -1,16 +1,16 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
 
 
 
-use OP\studentsuccess\ReferencesElement;
+use OP\Studentsuccess\ReferencesElement;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\View\Parsers\ShortcodeParser;
 use SilverStripe\ORM\DataExtension;
-use OP\studentsuccess\StringUtils;
+use OP\Studentsuccess\StringUtils;
 
 
 

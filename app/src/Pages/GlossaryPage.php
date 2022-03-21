@@ -1,13 +1,13 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 use Page;
 
 
-use OP\studentsuccess\GlossaryType;
+use OP\Studentsuccess\GlossaryType;
 use PageController;
-use OP\studentsuccess\FormUtils;
+use OP\Studentsuccess\FormUtils;
 
 
 class GlossaryPage extends Page

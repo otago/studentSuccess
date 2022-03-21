@@ -1,7 +1,7 @@
 <?php
 use SilverStripe\Assets\Image;
-use OP\studentsuccess\RelatedPage;
-use OP\studentsuccess\RelatedPageBox;
+use OP\Studentsuccess\RelatedPage;
+use OP\Studentsuccess\RelatedPageBox;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\TextareaField;
@@ -10,13 +10,13 @@ use SilverStripe\Forms\LiteralField;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\TreeDropdownField;
 use SilverStripe\Forms\GridField\GridFieldDeleteAction;
-use OP\studentsuccess\FormUtils;
+use OP\Studentsuccess\FormUtils;
 use SilverStripe\Forms\HeaderField;
 use SilverStripe\Control\Email\Email;
-use OP\studentsuccess\SearchPage;
+use OP\Studentsuccess\SearchPage;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\CMS\Model\SiteTree;
-use OP\studentsuccess\ShortCodeUtils;
+use OP\Studentsuccess\ShortCodeUtils;
 use SilverStripe\ORM\FieldType\DBDatetime;
 use SilverStripe\Control\Cookie;
 use SilverStripe\ORM\DB;

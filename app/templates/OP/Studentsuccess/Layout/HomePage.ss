@@ -16,3 +16,15 @@
 <% end_if %>
 
 $ElementArea
+$Content
+
+<!DOCTYPE html>
+
+<head>
+
+</head>
+<body class="template_{$ClassName}">
+
+
+</body>
+</html>

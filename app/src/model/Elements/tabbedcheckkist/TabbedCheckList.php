@@ -1,12 +1,12 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
 
-use OP\studentsuccess\CheckListTab;
+use OP\Studentsuccess\CheckListTab;
 use DNADesign\Elemental\Models\BaseElement;
-use OP\studentsuccess\FormUtils;
+use OP\Studentsuccess\FormUtils;
 
 
 

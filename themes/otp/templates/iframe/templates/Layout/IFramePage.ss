@@ -7,6 +7,7 @@
 		<% include PageIntro %>
 
 		$ElementArea
+		$Content
 	</div>
 
 

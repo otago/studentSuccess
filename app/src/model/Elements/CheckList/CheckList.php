@@ -1,14 +1,14 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
-use OP\studentsuccess\CheckListItem;
+use OP\Studentsuccess\CheckListItem;
 use Symbiote\GridFieldExtensions\GridFieldAddNewMultiClass;
-use OP\studentsuccess\CheckListCollection;
+use OP\Studentsuccess\CheckListCollection;
 use SilverStripe\Forms\GridField\GridFieldAddNewButton;
 use DNADesign\Elemental\Models\BaseElement;
-use OP\studentsuccess\FormUtils;
+use OP\Studentsuccess\FormUtils;
 
 
 class CheckList extends BaseElement

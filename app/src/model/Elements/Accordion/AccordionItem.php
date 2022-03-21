@@ -1,9 +1,9 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
-use OP\studentsuccess\Accordion;
+use OP\Studentsuccess\Accordion;
 use DNADesign\ElementalList\Model\ElementList;
 
 

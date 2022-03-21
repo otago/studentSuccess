@@ -1,13 +1,13 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
-use OP\studentsuccess\AccordionItem;
+use OP\Studentsuccess\AccordionItem;
 
 use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\Versioned\Versioned;
-use OP\studentsuccess\FormUtils;
+use OP\Studentsuccess\FormUtils;
 
 
 class Accordion extends BaseElement

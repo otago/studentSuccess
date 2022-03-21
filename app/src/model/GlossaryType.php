@@ -1,15 +1,15 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
-use OP\studentsuccess\GlossaryPage;
-use OP\studentsuccess\GlossaryItem;
+use OP\Studentsuccess\GlossaryPage;
+use OP\Studentsuccess\GlossaryItem;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\ORM\DB;
 use SilverStripe\View\ArrayData;
 use SilverStripe\ORM\DataObject;
-use OP\studentsuccess\FormUtils;
+use OP\Studentsuccess\FormUtils;
 
 
 class GlossaryType extends DataObject

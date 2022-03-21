@@ -1,16 +1,16 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
 
 
-use OP\studentsuccess\WayFinderFilter;
-use OP\studentsuccess\WayFinderItem;
+use OP\Studentsuccess\WayFinderFilter;
+use OP\Studentsuccess\WayFinderItem;
 use Symbiote\GridFieldExtensions\GridFieldAddNewMultiClass;
 use SilverStripe\Forms\GridField\GridFieldAddNewButton;
 use DNADesign\Elemental\Models\BaseElement;
-use OP\studentsuccess\FormUtils;
+use OP\Studentsuccess\FormUtils;
 
 
 

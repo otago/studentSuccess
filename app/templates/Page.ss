@@ -15,15 +15,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    
+
     <meta name='twitter:title' content='Student Services - Otago Polytechnic' />
     <meta name='twitter:url' content='$BaseHref' />
     <meta name='twitter:image' content='https://www.op.ac.nz/assets/heromedia/Study.jpg' />
     <meta name='twitter:site' content='@OtagoPolytech' />
     <link rel="icon" type="image/svg+xml" href="{$ThemeDir}/images/logo.svg"/>
     <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="apple-touch-icon" href="themes/otp/images/apple-touch-icon-iphone.png" /> 
-    <link rel="apple-touch-icon" sizes="72x72" href="themes/otp/images/apple-touch-icon-ipad.png" /> 
+    <link rel="apple-touch-icon" href="themes/otp/images/apple-touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="themes/otp/images/apple-touch-icon-ipad.png" />
     <link rel="apple-touch-icon" sizes="114x114" href="themes/otp/images/apple-touch-icon-iphone4.png" />
     <link rel="apple-touch-icon" sizes="144x144" href="themes/otp/images/apple-touch-icon-ipad3.png" />
 
@@ -38,7 +38,7 @@
       <!--  tttttttt -->
     <% if $FeedBackLiteOn %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script type="text/javascript">
 	$FeedBackLite.raw
 	</script>

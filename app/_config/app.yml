@@ -7,7 +7,7 @@ SilverStripe\Admin\LeftAndMain:
     - themes/otp/css/editor.css
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
-    - OP\studentsuccess\OTPConfigs
+    - OP\Studentsuccess\OTPConfigs
   Icons:
     icon-head-arrow: Arrow
     icon-arrow-down: 'Arrow Down'
@@ -27,126 +27,126 @@ SilverStripe\SiteConfig\SiteConfig:
     icon-search: Search
 SilverStripe\Control\Director:
   rules:
-    tile//$Action/$ID: OP\studentsuccess\FilterableTile_Counter
+    tile//$Action/$ID: OP\Studentsuccess\FilterableTile_Counter
 SilverStripe\View\SSViewer:
   themes:
     - otp
     - '$default'
 DNADesign\Elemental\Extensions\ElementalPageExtension:
   ignored_classes:
-    - OP\studentsuccess\ActivityPage
-    - OP\studentsuccess\FilterableCheckList
+    - OP\Studentsuccess\ActivityPage
+    - OP\Studentsuccess\FilterableCheckList
 Page:
   extensions:
     - DNADesign\Elemental\Extensions\ElementalPageExtension
   allowed_elements:
     - DNADesign\Elemental\Models\ElementContent
-    - OP\studentsuccess\Carousel
-    - OP\studentsuccess\CTAElement
-    - OP\studentsuccess\ContactElement
-    - OP\studentsuccess\SidebarTestimony
-    - OP\studentsuccess\InteractiveList
-    - OP\studentsuccess\SingleLevelCheckList
-    - OP\studentsuccess\SingleLevelList
-    - OP\studentsuccess\SidebarImageElement
-    - OP\studentsuccess\SidebarHelp
+    - OP\Studentsuccess\Carousel
+    - OP\Studentsuccess\CTAElement
+    - OP\Studentsuccess\ContactElement
+    - OP\Studentsuccess\SidebarTestimony
+    - OP\Studentsuccess\InteractiveList
+    - OP\Studentsuccess\SingleLevelCheckList
+    - OP\Studentsuccess\SingleLevelList
+    - OP\Studentsuccess\SidebarImageElement
+    - OP\Studentsuccess\SidebarHelp
     - ElementImage
-    - OP\studentsuccess\ElementTable
+    - OP\Studentsuccess\ElementTable
     - ElementFile
     - ElementLink
-    - OP\studentsuccess\ReferencesElement
-    - OP\studentsuccess\LinksComponent
-    - OP\studentsuccess\CaseStudy
-    - OP\studentsuccess\VideoComponent
-    - OP\studentsuccess\CheckList
-    - OP\studentsuccess\CarouselWithUpperLetter
-    - OP\studentsuccess\MatrixElement
-OP\studentsuccess\AccordionPage:
+    - OP\Studentsuccess\ReferencesElement
+    - OP\Studentsuccess\LinksComponent
+    - OP\Studentsuccess\CaseStudy
+    - OP\Studentsuccess\VideoComponent
+    - OP\Studentsuccess\CheckList
+    - OP\Studentsuccess\CarouselWithUpperLetter
+    - OP\Studentsuccess\MatrixElement
+OP\Studentsuccess\AccordionPage:
   allowed_elements:
-    - OP\studentsuccess\Accordion
-OP\studentsuccess\HomePage:
+    - OP\Studentsuccess\Accordion
+OP\Studentsuccess\HomePage:
   allowed_elements:
-    - OP\studentsuccess\HearFromOthers
-OP\studentsuccess\LandingPage:
+    - OP\Studentsuccess\HearFromOthers
+OP\Studentsuccess\LandingPage:
   allowed_elements:
-    - OP\studentsuccess\MasonryContent
-OP\studentsuccess\LandingSearchPage:
+    - OP\Studentsuccess\MasonryContent
+OP\Studentsuccess\LandingSearchPage:
   allowed_elements:
-    - OP\studentsuccess\MasonryContentsWithFilters
+    - OP\Studentsuccess\MasonryContentsWithFilters
 SilverStripe\Control\Controller:
   extensions:
-    - OP\studentsuccess\ControllerExtension
-OP\studentsuccess\FooterLinkBlock:
+    - OP\Studentsuccess\ControllerExtension
+OP\Studentsuccess\FooterLinkBlock:
   extensions:
-    - OP\studentsuccess\Linkable
-OP\studentsuccess\FooterLink:
+    - OP\Studentsuccess\Linkable
+OP\Studentsuccess\FooterLink:
   extensions:
-    - OP\studentsuccess\Linkable
-OP\studentsuccess\WayFinderFilter:
+    - OP\Studentsuccess\Linkable
+OP\Studentsuccess\WayFinderFilter:
   extensions:
-    - OP\studentsuccess\Linkable
-OP\studentsuccess\WayFinderItem:
+    - OP\Studentsuccess\Linkable
+OP\Studentsuccess\WayFinderItem:
   extensions:
-    - OP\studentsuccess\Linkable
-OP\studentsuccess\CTAElement:
+    - OP\Studentsuccess\Linkable
+OP\Studentsuccess\CTAElement:
   extensions:
-    - OP\studentsuccess\Linkable
-OP\studentsuccess\RelatedPage:
+    - OP\Studentsuccess\Linkable
+OP\Studentsuccess\RelatedPage:
   extensions:
-    - OP\studentsuccess\Linkable
-OP\studentsuccess\RelatedPageBox:
+    - OP\Studentsuccess\Linkable
+OP\Studentsuccess\RelatedPageBox:
   extensions:
-    - OP\studentsuccess\Linkable
-OP\studentsuccess\MasonryTile:
+    - OP\Studentsuccess\Linkable
+OP\Studentsuccess\MasonryTile:
   extensions:
-    - OP\studentsuccess\Linkable
-OP\studentsuccess\MasonryTileLink:
+    - OP\Studentsuccess\Linkable
+OP\Studentsuccess\MasonryTileLink:
   extensions:
-    - OP\studentsuccess\Linkable
-OP\studentsuccess\LinkElement:
+    - OP\Studentsuccess\Linkable
+OP\Studentsuccess\LinkElement:
   extensions:
-    - OP\studentsuccess\Linkable
-OP\studentsuccess\LinksComponent:
+    - OP\Studentsuccess\Linkable
+OP\Studentsuccess\LinksComponent:
   extensions:
-    - OP\studentsuccess\Linkable
-OP\studentsuccess\FilterableMasonryTile:
+    - OP\Studentsuccess\Linkable
+OP\Studentsuccess\FilterableMasonryTile:
   extensions:
-    - OP\studentsuccess\FilterableTile
-OP\studentsuccess\FilterableMasonryImageTile:
+    - OP\Studentsuccess\FilterableTile
+OP\Studentsuccess\FilterableMasonryImageTile:
   extensions:
-    - OP\studentsuccess\FilterableTile
-OP\studentsuccess\FilterableSmallMasonryTile:
+    - OP\Studentsuccess\FilterableTile
+OP\Studentsuccess\FilterableSmallMasonryTile:
   extensions:
-    - OP\studentsuccess\FilterableTile
+    - OP\Studentsuccess\FilterableTile
 DNADesign\Elemental\Models\ElementContent:
   extensions:
-    - OP\studentsuccess\ElementContentExtension
+    - OP\Studentsuccess\ElementContentExtension
 DNADesign\Elemental\Models\BaseElement:
   extensions:
-    - OP\studentsuccess\OPBaseElementExtension
-OP\studentsuccess\GlossaryItem:
+    - OP\Studentsuccess\OPBaseElementExtension
+OP\Studentsuccess\GlossaryItem:
   extensions:
-    - OP\studentsuccess\Contactable
-OP\studentsuccess\CheckListBlockItem:
+    - OP\Studentsuccess\Contactable
+OP\Studentsuccess\CheckListBlockItem:
   extensions:
-    - OP\studentsuccess\Contactable
-OP\studentsuccess\MasonryContent:
+    - OP\Studentsuccess\Contactable
+OP\Studentsuccess\MasonryContent:
   extensions:
-    - OP\studentsuccess\Contactable
+    - OP\Studentsuccess\Contactable
 SilverStripe\CMS\Model\SiteTree:
   extensions:
-    - OP\studentsuccess\Contactable
+    - OP\Studentsuccess\Contactable
 ElementFile:
   title: 'CTA to Download File'
   extensions:
-    - OP\studentsuccess\ElementFileExtension
+    - OP\Studentsuccess\ElementFileExtension
 ElementExternalLink:
   title: 'Featured external link'
   defaults:
     NewWindow: 1
 ElementInternalLink:
   extensions:
-    - OP\studentsuccess\ElementInternalLinkExtension
+    - OP\Studentsuccess\ElementInternalLinkExtension
   title: 'Featured internal link'
 ElementImage:
   title: 'Inline image'
@@ -157,4 +157,4 @@ SilverStripe\MimeValidator\MimeUploadValidator:
       - application/octet-stream
 #SilverStripe\Core\Injector\Injector:
 #  DNADesign\Elemental\Models\ElementalArea:
-#    class: OP\studentsuccess\ElementalAreaExtension
+#    class: OP\Studentsuccess\ElementalAreaExtension

@@ -1,13 +1,13 @@
 <?php
 
-namespace OP\studentsuccess;
+namespace OP\Studentsuccess;
 
 
 use SilverStripe\Assets\Image;
-use OP\studentsuccess\LinkElement;
+use OP\Studentsuccess\LinkElement;
 use SilverStripe\Forms\DropdownField;
 use DNADesign\Elemental\Models\BaseElement;
-use OP\studentsuccess\FormUtils;
+use OP\Studentsuccess\FormUtils;
 
 
 class LinksComponent extends BaseElement
