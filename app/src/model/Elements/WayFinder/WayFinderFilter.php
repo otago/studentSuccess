@@ -13,11 +13,11 @@ use SilverStripe\ORM\DataObject;
  * Time: 11:15 AM
  * To change this template use File | Settings | File Templates.
  */
-
-class WayFinderFilter extends DataObject {
-
-	private static $db = array(
-		'Title'			=> 'Varchar'
-	);
+class WayFinderFilter extends DataObject
+{
+    private static $table_name = 'WayFinderFilter';
+    private static $db = [
+        'Title' => 'Varchar'
+    ];
 
 } 
