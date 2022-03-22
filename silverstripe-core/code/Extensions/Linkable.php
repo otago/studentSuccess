@@ -57,8 +57,8 @@ class Linkable extends DataExtension {
 				'External'	=> 'External',
 				'File' => File::class
 			)),
-			TreeDropdownField::create('InternalLinkID')->setSourceObject(SiteTree::class),
-			TreeDropdownField::create('InternalFileID')->setSourceObject(File::class),
+//			TreeDropdownField::create('InternalLinkID')->setSourceObject(SiteTree::class),
+//			TreeDropdownField::create('InternalFileID')->setSourceObject(File::class),
 			TextField::create('ExternalLink'),
 			DropdownField::create('Target')->setSource(array(
 				'_self' => 'Open in same window',

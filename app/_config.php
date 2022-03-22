@@ -1,5 +1,8 @@
 <?php
 
+use OP\Studentsuccess\ElementFile;
+use OP\Studentsuccess\ElementImage;
+use OP\Studentsuccess\ElementLink;
 use SilverStripe\i18n\i18n;
 use SilverStripe\Control\Controller;
 use SilverStripe\Core\Config\Config;
@@ -92,9 +95,9 @@ $strItems = substr($strItems, 0, -1);
 
 $classes = array(
     ElementTable::class,
-    'ElementFile',
-    'ElementLink',
-    'ElementImage',
+    ElementFile::class,
+    ElementLink::class,
+    ElementImage::class,
     SidebarImageElement::class,
     SidebarHelp::class,
     CTAElement::class,

@@ -51,16 +51,16 @@ class FormUtils {
 	 *
 	 * make and return a grid field with the components for drag and drop reordering
 	 */
-	public static function MakeDragAndDropGridField($strName, $strTitle, $dlList, $strSortColumn, $strType = 'RelationEditor', $iPagination = 20){
-
-		if($strType == 'RecordEditor'){
-			$gridConfigs = new GridFieldConfig_RecordEditor($iPagination);
-		}else{
-			$gridConfigs = new GridFieldConfig_RelationEditor($iPagination);
-		}
-		$gridConfigs->addComponent(new GridFieldSortableRows($strSortColumn));
-		return new GridField($strName, $strTitle, $dlList, $gridConfigs);
-	}
+//	public static function MakeDragAndDropGridField($strName, $strTitle, $dlList, $strSortColumn, $strType = 'RelationEditor', $iPagination = 20){
+//
+//		if($strType == 'RecordEditor'){
+//			$gridConfigs = new GridFieldConfig_RecordEditor($iPagination);
+//		}else{
+//			$gridConfigs = new GridFieldConfig_RelationEditor($iPagination);
+//		}
+//		$gridConfigs->addComponent(new GridFieldSortableRows($strSortColumn));
+//		return new GridField($strName, $strTitle, $dlList, $gridConfigs);
+//	}
 
 	/**
 	 * @param $strName

@@ -50,10 +50,10 @@ Page:
     - OP\Studentsuccess\SingleLevelList
     - OP\Studentsuccess\SidebarImageElement
     - OP\Studentsuccess\SidebarHelp
-    - ElementImage
+    - OP\Studentsuccess\ElementImage
     - OP\Studentsuccess\ElementTable
-    - ElementFile
-    - ElementLink
+    - OP\Studentsuccess\ElementFile
+    - OP\Studentsuccess\ElementLink
     - OP\Studentsuccess\ReferencesElement
     - OP\Studentsuccess\LinksComponent
     - OP\Studentsuccess\CaseStudy
@@ -136,7 +136,7 @@ OP\Studentsuccess\MasonryContent:
 SilverStripe\CMS\Model\SiteTree:
   extensions:
     - OP\Studentsuccess\Contactable
-ElementFile:
+OP\Studentsuccess\ElementFile:
   title: 'CTA to Download File'
   extensions:
     - OP\Studentsuccess\ElementFileExtension
@@ -148,7 +148,7 @@ ElementInternalLink:
   extensions:
     - OP\Studentsuccess\ElementInternalLinkExtension
   title: 'Featured internal link'
-ElementImage:
+OP\Studentsuccess\ElementImage:
   title: 'Inline image'
 SilverStripe\MimeValidator\MimeUploadValidator:
   MimeTypes:

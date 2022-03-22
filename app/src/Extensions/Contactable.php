@@ -3,10 +3,6 @@
 namespace OP\Studentsuccess;
 
 
-
-
-
-
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\HeaderField;
 use SilverStripe\Forms\TextField;
@@ -15,18 +11,18 @@ use SilverStripe\Control\Email\Email;
 use SilverStripe\ORM\DataExtension;
 
 
+class Contactable extends DataExtension
+{
 
-class Contactable extends DataExtension {
-
-	private static $db = array(
+    private static $db = [
 
         'ContactBoxTitle' => 'Varchar(70)',
         'ContactBoxSubTitle' => 'Varchar(70)',
 
         'ContactBoxLocationName' => 'Varchar(70)',
-        'ContactBoxContent'				=> 'Varchar(100)',
-        'ContactBoxPhone'				=> 'Varchar',
-		'ContactBoxEmail'				=> 'Varchar',
+        'ContactBoxContent' => 'Varchar(100)',
+        'ContactBoxPhone' => 'Varchar',
+        'ContactBoxEmail' => 'Varchar',
 
         'ContactBoxLocationName2' => 'Varchar(70)',
         'ContactBoxLocation2' => 'Varchar(100)',
@@ -40,17 +36,18 @@ class Contactable extends DataExtension {
         'ContactBoxEmail3' => 'Varchar',
 
 
-	);
+    ];
 
 
-	public function updateCMSFields(FieldList $fields){
+    public function updateCMSFields(FieldList $fields)
+    {
 
-		$fields->addFieldsToTab('Root.Contacts', array(
-			HeaderField::create('ContactBox')->setTitle('Contact element details, if you dont wish to override these from the global settings, leave blank')->setHeadingLevel(4),
-			//TextField::create('ContactBoxTitle')->setTitle('Title'),
+        $fields->addFieldsToTab('Root.Contacts', [
+            HeaderField::create('ContactBox')->setTitle('Contact element details, if you dont wish to override these from the global settings, leave blank')->setHeadingLevel(4),
+            //TextField::create('ContactBoxTitle')->setTitle('Title'),
 
-		//	TextField::create('ContactBoxPhone')->setTitle('Phone'),
-		//	TextField::create('ContactBoxEmail')->setTitle('Email'),
+            //	TextField::create('ContactBoxPhone')->setTitle('Phone'),
+            //	TextField::create('ContactBoxEmail')->setTitle('Email'),
 
 
             TextField::create('ContactBoxTitle')->setTitle('Title'),
@@ -80,22 +77,22 @@ class Contactable extends DataExtension {
             TextField::create('ContactBoxPhone3')->setTitle('Phone 3'),
             TextField::create('ContactBoxEmail3')->setTitle('Email 3'),
 
-		));
+        ]);
 
 
+    }
 
-
-	}
-	public function ContactBoxLocation()
+    public function ContactBoxLocation()
     {
         return $this->owner->ContactBoxContent;
     }
 
-	public function HasContactableDetails(){
-		return !empty($this->owner->ContactBoxTitle)
-			|| !empty($this->owner->ContactBoxContent)
-			|| !empty($this->owner->ContactBoxPhone)
-			|| !empty($this->owner->ContactBoxEmail);
-	}
+    public function HasContactableDetails()
+    {
+        return !empty($this->owner->ContactBoxTitle)
+            || !empty($this->owner->ContactBoxContent)
+            || !empty($this->owner->ContactBoxPhone)
+            || !empty($this->owner->ContactBoxEmail);
+    }
 
 }

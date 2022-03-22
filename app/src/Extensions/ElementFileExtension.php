@@ -6,10 +6,10 @@ namespace OP\Studentsuccess;
 use SilverStripe\ORM\DataExtension;
 
 
+class ElementFileExtension extends DataExtension
+{
 
-class ElementFileExtension extends DataExtension {
-	
-	private static $db = array(
-		'ForceDownload' => 'Boolean'
-	);	
+    private static $db = [
+        'ForceDownload' => 'Boolean'
+    ];
 }

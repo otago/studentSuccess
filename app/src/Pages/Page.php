@@ -5,6 +5,9 @@ namespace {
     use OP\Studentsuccess\RelatedPage;
     use OP\Studentsuccess\RelatedPageBox;
     use SilverStripe\Forms\CheckboxField;
+    use SilverStripe\Forms\GridField\GridField;
+    use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
+    use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
     use SilverStripe\Forms\TextField;
     use SilverStripe\Forms\TextareaField;
     use SilverStripe\AssetAdmin\Forms\UploadField;
@@ -18,7 +21,7 @@ namespace {
     use OP\Studentsuccess\SearchPage;
     use SilverStripe\ORM\ArrayList;
     use SilverStripe\CMS\Model\SiteTree;
-
+    use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 
     class Page extends SiteTree
@@ -116,11 +119,18 @@ namespace {
 
             $fields->removeByName('Contacts');
 
+            $heroconf = GridFieldConfig_RelationEditor::create();
+            $heroconf->addComponent(new GridFieldOrderableRows('SortOrder'));
+            $herogridfield = GridField::create('RelatedPages', 'RelatedBoxes', $this->RelatedBoxes(), $heroconf);
+
             $fields->addFieldsToTab('Root.RelatedTopics', [
                 TextField::create('RelatedTopicsTitle'),
                 CheckboxField::create('ShowRelatedTopicsContacts')->setTitle('Show contacts'),
-                FormUtils::MakeDragAndDropGridField('RelatedPages', 'RelatedPages', $this->RelatedPages(), 'SortOrder'),
-                FormUtils::MakeDragAndDropGridField('RelatedBoxes', 'RelatedBoxes', $this->RelatedBoxes(), 'SortOrder'),
+                GridField::create('RelatedPages', 'RelatedPages', $this->RelatedPages(), $heroconf),
+                GridField::create('RelatedPages', 'RelatedPages', $this->RelatedBoxes(), $heroconf),
+
+
+
                 HeaderField::create('ContactBox')->setTitle('Contact element details, if you dont wish to override these from the global settings, leave blank')->setHeadingLevel(4),
                 /*TextField::create('ContactBoxTitle')->setTitle('Title'),
                 TextareaField::create('ContactBoxContent')->setTitle('Content'),

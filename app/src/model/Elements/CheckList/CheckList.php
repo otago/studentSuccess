@@ -4,11 +4,14 @@ namespace OP\Studentsuccess;
 
 
 use OP\Studentsuccess\CheckListItem;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use Symbiote\GridFieldExtensions\GridFieldAddNewMultiClass;
 use OP\Studentsuccess\CheckListCollection;
 use SilverStripe\Forms\GridField\GridFieldAddNewButton;
 use DNADesign\Elemental\Models\BaseElement;
 use OP\Studentsuccess\FormUtils;
+use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 
 class CheckList extends BaseElement
@@ -40,13 +43,16 @@ class CheckList extends BaseElement
             'Items',
             'Settings'
         ]);
+        $Itemsconf = GridFieldConfig_RelationEditor::create();
+        $Itemsconf->removeComponentsByType(new GridFieldOrderableRows());
+        $Itemsconf->addComponent(new GridFieldOrderableRows('SortOrder'));
 
         $fields->addFieldsToTab('Root.Items', [
-            $gridField = FormUtils::MakeDragAndDropGridField('Items', 'Items', $this->Items(), 'SortOrder')
+            GridField::create('Items', 'Items', $this->Items(), $Itemsconf)
         ]);
 
-        $configs = $gridField->getConfig();
-        $adder = new GridFieldAddNewMultiClass();
+       // $configs = $gridField->getConfig();
+       // $adder = new GridFieldAddNewMultiClass();
 
         $classes = [
             'CheckListCollection' => 'List of items',
@@ -57,10 +63,10 @@ class CheckList extends BaseElement
             unset($classes[CheckListCollection::class]);
         }
 
-        $adder->setClasses($classes);
+      //  $adder->setClasses($classes);
 
-        $configs->removeComponentsByType(GridFieldAddNewButton::class);
-        $configs->addComponent($adder);
+       // $configs->removeComponentsByType(GridFieldAddNewButton::class);
+       // $configs->addComponent($adder);
 
 
         return $fields;

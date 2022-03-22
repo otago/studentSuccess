@@ -15,6 +15,8 @@ namespace OP\Studentsuccess;
 
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\HeaderField;
@@ -107,8 +109,11 @@ class OTPConfigs extends DataExtension
             ->setAllowedMaxFileNumber(1);
         $caption = HTMLEditorField::create('CreativeCommonsLicence');
 
+
+
+        $LinkBlocksGrid = GridField::create('LinkBlocks', 'Link Blocks', FooterLinkBlock::get(), GridFieldConfig_RelationEditor::create());
         $fields->addFieldsToTab('Root.Footer.Top', array(
-            FormUtils::MakeDragAndDropGridField('LinkBlocks', 'Link Blocks', FooterLinkBlock::get(), 'SortOrder'),
+            $LinkBlocksGrid,
 
             $uploadField,
 

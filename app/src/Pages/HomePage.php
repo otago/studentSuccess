@@ -46,7 +46,7 @@ class HomePage extends Page
                 'Internal' => 'Internal',
                 'External' => 'External'
             ]),
-            TreeDropdownField::create('HeroInternalLinkID')->setSourceObject(SiteTree::class),
+            TreeDropdownField::create("HeroInternalLinkID", "Page", SiteTree::class),
             TextField::create('HeroExternalLink'),
             DropdownField::create('HeroLinkTarget')->setSource([
                 '_self' => '_self',

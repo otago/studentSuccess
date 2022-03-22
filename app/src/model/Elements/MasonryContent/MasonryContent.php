@@ -4,11 +4,14 @@ namespace OP\Studentsuccess;
 
 
 use OP\Studentsuccess\MasonryTile;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use Symbiote\GridFieldExtensions\GridFieldAddNewMultiClass;
 use SilverStripe\Forms\GridField\GridFieldAddNewButton;
 use SilverStripe\Forms\GridField\GridFieldAddExistingAutocompleter;
 use DNADesign\Elemental\Models\BaseElement;
 use OP\Studentsuccess\FormUtils;
+use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 
 class MasonryContent extends BaseElement
@@ -34,8 +37,13 @@ class MasonryContent extends BaseElement
 
         $fields->removeByName('Tiles');
 
+        $heroconf = GridFieldConfig_RelationEditor::create();
+        $heroconf->addComponent(new GridFieldOrderableRows('SortOrder'));
+
+
+
         $fields->addFieldsToTab('Root.Main', [
-            $grid = FormUtils::MakeDragAndDropGridField('Tiles', 'Tiles', $this->Tiles(), 'SortOrder', 'RecordEditor')
+            $grid = GridField::create('Tiles', 'Tiles', $this->Tiles(), $heroconf)
         ]);
 
         $configs = $grid->getConfig();
