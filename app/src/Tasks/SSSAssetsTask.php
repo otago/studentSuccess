@@ -1,7 +1,9 @@
 <?php
 namespace OP\Studentsuccess;
+use OP\OPMigrateFileTask;
 use SilverStripe\Dev\BuildTask;
 use SilverStripe\ORM\DB;
+use SilverStripe\SiteConfig\SiteConfig;
 
 /**
  *
@@ -15,11 +17,17 @@ class SSSAssetsTask extends BuildTask {
 
 	/**
 	 *
-	 * @param type $request
+	 * @param \SilverStripe\Control\HTTPRequest $request
 	 */
 	public function run($request) {
 
-//		$count = DB::query('UPDATE sss2.File SET Filename =  REPLACE(filename, \'assets/Uploads/\', \'Uploads/\') WHERE ID > 0;');
+        foreach (SiteConfig::get() as $sc) {
+            $sc->FeedBackLiteOn =false;
+            $sc->write();
+        }
+        $MigrateFileTask = OPMigrateFileTask::create();
+        $MigrateFileTask->run($request);
+
 
 		echo 'Done! easy ;)';
 

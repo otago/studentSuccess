@@ -11,3 +11,4 @@ silverstripe.log
 composer.phar
 upgrade-code.phar
 node_modules/
+AlTestData/
