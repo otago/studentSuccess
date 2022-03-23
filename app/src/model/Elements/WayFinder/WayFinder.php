@@ -16,6 +16,9 @@ class WayFinder extends BaseElement
     private static $table_name = 'WayFinder';
     private static $title = "Way Finder";
 
+    private static $singular_name = 'WayFinder';
+    private static $plural_name = 'WayFinder';
+
     private static $description = "Way finder element section";
 
     protected $enable_title_in_template = true;
@@ -40,6 +43,11 @@ class WayFinder extends BaseElement
         ]
     ];
 
+
+    public function getType()
+    {
+        return 'WayFinder';
+    }
 
     public function OrderedFilters()
     {

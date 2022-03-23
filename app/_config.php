@@ -77,12 +77,12 @@ $strItems = substr($strItems, 0, -1);
 //    MasonryContentsWithFilters::class
 //));
 //
-//Config::inst()->remove(HomePage::class, 'allowed_elements');
+Config::inst()->remove(HomePage::class, 'allowed_elements');
 //
-//Config::inst()->update(HomePage::class, 'allowed_elements', array(
-//    WayFinder::class,
-//    HearFromOthers::class
-//));
+Config::inst()->update(HomePage::class, 'allowed_elements', array(
+    WayFinder::class,
+    HearFromOthers::class
+));
 //
 //Config::inst()->remove(AccordionPage::class, 'allowed_elements');
 //
@@ -121,10 +121,10 @@ $classes = array(
 );
 
 
-//Config::inst()->update(AccordionItem::class, 'allowed_elements', $classes);
-//
-//Config::inst()->update('Page', 'allowed_elements', array(
-//    MasonryContent::class,
-//    MasonryContentsWithFilters::class,
-//    TabbedCheckList::class
-//));
+Config::inst()->update(AccordionItem::class, 'allowed_elements', $classes);
+
+Config::inst()->update('Page', 'allowed_elements', array(
+    MasonryContent::class,
+    MasonryContentsWithFilters::class,
+    TabbedCheckList::class
+));

@@ -35,7 +35,12 @@ class HearFromOthers extends BaseElement
         'YoutubeVideo' => 'Youtube Video ID (e.g DgVmXfcVGxI)'
     ];
 
-    function VideoURL()
+    public function getType()
+    {
+        return 'Hear From Others';
+    }
+
+    public function VideoURL()
     {
         if ($this->ExternalURL) {
             return $this->ExternalURL;
