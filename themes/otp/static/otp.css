@@ -3015,7 +3015,6 @@ table tr:last-child {
   background: rgba(0, 0, 0, 0.3);
   top: 0;
   left: 0;
-  z-index: 3;
   content: " ";
 }
 .hero.no-hero {
@@ -4864,6 +4863,9 @@ table tr:last-child {
 }
 .page-intro.no-intro {
   padding-bottom: 0;
+}
+.searchpagepage-intro {
+  background: white;
 }
 .template_LandingPage .page-intro,
 .template_GlossaryPage .page-intro,

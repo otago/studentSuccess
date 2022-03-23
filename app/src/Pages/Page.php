@@ -49,6 +49,10 @@ namespace {
             'ShowRelatedTopicsContacts' => 'Boolean'
         ];
 
+        private static $casting = [
+            'FeedBackLite' => 'HTMLFragment'
+        ];
+
 
         private static $has_one = [
             'DropDownImage' => Image::class,

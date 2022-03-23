@@ -4,7 +4,7 @@
 	<% include Breadcrumbs %>
 	
 	<div class="elements-holder">
-		<section class='page-intro'>
+		<section class='page-intro searchpagepage-intro'>
 			<article>
 				<% include  search %>
 				<h1 class='title'>Search Results</h1>

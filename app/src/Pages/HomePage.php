@@ -58,16 +58,6 @@ class HomePage extends Page
         return $fields;
     }
 
-    function HeroTitleHTML()
-    {
-        return nl2br($this->HeroTitle);
-    }
-
-    function HeroContentHTML()
-    {
-        return nl2br($this->HeroContent);
-    }
-
 
     function HeroLink()
     {

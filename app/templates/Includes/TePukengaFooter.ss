@@ -6,7 +6,7 @@
     <div class="tp-footer__section">
         <div class="tp-footer__logo--type-tepukenga">
             <a href="https://xn--tepkenga-szb.ac.nz/" target="_blank">
-                <img src="themes/otp/images/tepukenga.png" />
+                <img src="/resources/themes/otp/images/tepukenga.png" />
             </a>
         </div>
         <div class="tp-footer__tagline">
@@ -34,7 +34,7 @@
         <div class="tp-footer__section tp-footer__section--type-stack tp-footer__section--type-end">
             <div class="tp-footer__logo--type-nzgovernment">
                 <a href="https://www.govt.nz/" target="_blank">
-                    <img src="themes/otp/images/nz_government.png" />
+                    <img src="/resources/themes/otp/images/nz_government.png" />
                 </a>
             </div>
             <div>Copyright © $Now.Format('y') $SiteConfig.Title</div>

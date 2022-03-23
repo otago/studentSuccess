@@ -35,19 +35,20 @@ use OP\Studentsuccess\LinksComponent;
 use OP\Studentsuccess\MatrixElement;
 use OP\Studentsuccess\SidebarTestimony;
 use OP\Studentsuccess\TabbedCheckList;
+use SilverStripe\ORM\Search\FulltextSearchable;
 
 
 global $project;
 $project = 'opt';
 
 
-global $database;
+//global $database;
 //$database = (defined('SS_DATABASE_NAME')) ? SS_DATABASE_NAME : 'op3';
 
-require_once("conf/ConfigureFromEnv.php");
+//require_once("conf/ConfigureFromEnv.php");
 i18n::set_locale('en_NZ');
 ini_set('date.timezone', 'Pacific/Auckland');
-
+FulltextSearchable::enable();
 
 //SS_Log::add_writer(new SS_LogEmailWriter('alastairn@op.ac.nz'), SS_Log::WARN, '<=');
 $arrStyles = array(

@@ -10,3 +10,4 @@ silverstripe.log
 .idea/
 composer.phar
 upgrade-code.phar
+node_modules/

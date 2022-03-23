@@ -6,6 +6,7 @@
         "php": ">=5.6",
         "dnadesign/silverstripe-elemental": "^4.8.1",
         "dnadesign/silverstripe-elemental-list": "^1.2",
+        "silverstripe/fulltextsearch": "3.9.*",
         "silverstripe/recipe-cms": "^4.10.0",
         "silverstripe/userforms": "^5.12.0",
         "silverstripe/widgets": "^2.2.0",
