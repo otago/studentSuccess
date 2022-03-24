@@ -10,7 +10,6 @@ namespace OP\Studentsuccess;
 
 use SilverStripe\SiteConfig\SiteConfig;
 use SilverStripe\Core\Config\Config;
-use OP\Studentsuccess\ImageExtension;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Core\ClassInfo;
 use SilverStripe\Assets\Image;
@@ -189,4 +188,4 @@ class ImageExtension extends DataExtension {
 		return $strRet;
 	}
 
-} 
+}

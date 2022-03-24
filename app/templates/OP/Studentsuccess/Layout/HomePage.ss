@@ -16,6 +16,7 @@
 <% end_if %>
 
 $ElementArea
+$ElementalArea
 $Content
 
 <!DOCTYPE html>

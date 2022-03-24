@@ -15,6 +15,14 @@ private function stripAssetsDir($path, $base = '')
     }
 ```
 
+
+```php
+    $heroconf = GridFieldConfig_RelationEditor::create();
+    
+    $heroconf->addComponent(new GridFieldOrderableRows('SortOrder'));
+    $herogridfield = GridField::create('StaffProfiledItem', 'Dunedin campus hero', $this->StaffProfiledItem(), $heroconf);
+```
+
 then run ` php -d memory_limit=6000M vendor/silverstripe/framework/cli-script.php dev/tasks/MigrateFileTask`
 
 ******************************

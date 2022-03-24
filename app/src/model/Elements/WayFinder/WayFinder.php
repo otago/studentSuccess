@@ -5,10 +5,13 @@ namespace OP\Studentsuccess;
 
 use OP\Studentsuccess\WayFinderFilter;
 use OP\Studentsuccess\WayFinderItem;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use Symbiote\GridFieldExtensions\GridFieldAddNewMultiClass;
 use SilverStripe\Forms\GridField\GridFieldAddNewButton;
 use DNADesign\Elemental\Models\BaseElement;
 use OP\Studentsuccess\FormUtils;
+use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 
 class WayFinder extends BaseElement
@@ -42,7 +45,7 @@ class WayFinder extends BaseElement
             'Background' => 'Varchar'
         ]
     ];
-
+    private static $inline_editable = false;
 
     public function getType()
     {
@@ -69,15 +72,19 @@ class WayFinder extends BaseElement
             'Filters',
             'Items'
         ]);
+        $heroconf = GridFieldConfig_RelationEditor::create();
+
+        $heroconf->addComponent(new GridFieldOrderableRows('SortOrder'));
 
         if ($this->ID) {
-            $fields->addFieldsToTab('Root.Filters', [
-                FormUtils::MakeDragAndDropGridField('Filters', 'Filters', $this->OrderedFilters(), 'SortOrder')
+            $fields->addFieldsToTab('Root.Main', [
+                GridField::create('Filters', 'Filters', $this->OrderedFilters(), $heroconf)
             ]);
 
 
-            $fields->addFieldsToTab('Root.Items', [
-                $items = FormUtils::MakeDragAndDropGridField('Items', 'Items', $this->OrderedItems(), 'SortOrder', 'RelationEditor', 20)
+            $fields->addFieldsToTab('Root.Main', [
+                $items = GridField::create('Items', 'Items', $this->OrderedItems(), $heroconf)
+
             ]);
 
 

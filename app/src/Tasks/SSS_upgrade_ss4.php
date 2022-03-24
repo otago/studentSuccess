@@ -10,7 +10,7 @@ use SilverStripe\SiteConfig\SiteConfig;
  * @package cms
  * @subpackage assets
  */
-class SSSAssetsTask extends BuildTask {
+class SSS_upgrade_ss4 extends BuildTask {
 
 	protected $title = "SSSAssetsTask";
 	protected $description = "SSSAssetsTask";
@@ -27,6 +27,8 @@ class SSSAssetsTask extends BuildTask {
         }
         $MigrateFileTask = OPMigrateFileTask::create();
         $MigrateFileTask->run($request);
+
+
 
 
 		echo 'Done! easy ;)';

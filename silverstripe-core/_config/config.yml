@@ -10,12 +10,12 @@ SilverStripe\Forms\DateField:
   default_config:
     showcalendar: true
     dateformat: dd/MM/yyyy
-SilverStripe\Assets\Image:
-  extensions:
-    - OP\Studentsuccess\ImageExtension
-OP\Studentsuccess\ImageExtension:
-  sizes: null
-  exclude_classes: null
+#SilverStripe\Assets\Image:
+#  extensions:
+#    - OP\Studentsuccess\ImageExtension
+#OP\Studentsuccess\ImageExtension:
+#  sizes: null
+#  exclude_classes: null
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
     - OP\Studentsuccess\CoreConfigs
