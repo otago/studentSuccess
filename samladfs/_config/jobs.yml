@@ -1,0 +1,16 @@
+---
+Name: DownloadIDPSigningCertsJob
+---
+SilverStripe\Core\Injector\Injector:
+  Symbiote\QueuedJobs\Services\QueuedJobService:
+    properties:
+      defaultJobs:
+        DownloadIDPSigningCertsJob:
+          type: 'OP\DownloadIDPSigningCertsJob'
+          filter:
+            Implementation: 'OP\DownloadIDPSigningCertsJob'
+          recreate: 1
+          startDateFormat: Y-m-d H:i:00
+          startTimeString: 'tomorrow 3:15am'
+          construct:
+            recreate: true

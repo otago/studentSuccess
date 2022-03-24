@@ -1,0 +1,80 @@
+---
+Name: opsamlsettings
+After:
+  - '#coresecurity'
+  - "#samlsettings"
+---
+
+SilverStripe\SAML\Services\SAMLConfiguration:
+  strict: false
+  debug: true
+  disable_authn_contexts: true
+  nameIdEncrypted: false
+
+
+OP\SAMLHelperFunctions:
+  filepath: "/_filestore/"
+  dev:
+    privateKey: "certs/local.key"
+    x509cert: "certs/local.cer"
+    idpEndpoint: "devIdP"
+  uat:
+    entityId: "https://op-uat.cwp.govt.nz"
+    privateKey: "../../certs/saml.pem"
+    x509cert: "../../certs/saml.crt"
+    logoutURL: "https://op-uat.cwp.govt.nz/saml/sls"
+    idpEndpoint: "devIdP"
+  test1:
+    entityId: "https://op-test1.cwp.govt.nz"
+    privateKey: "../../certs/saml.pem"
+    x509cert: "../../certs/saml.crt"
+    logoutURL: "https://op-test1.cwp.govt.nz/saml/sls"
+    idpEndpoint: "devIdP"
+  prod:
+    entityId: "https://www.op.ac.nz"
+    privateKey: "../../certs/saml.pem"
+    x509cert: "../../certs/saml.crt"
+    logoutURL: "https://www.op.ac.nz/saml/sls"
+    idpEndpoint: "IdP"
+  IdP:
+    entityId: "https://idp.op.ac.nz/adfs/services/trust"
+    x509cert: "certs/idp.pem"
+    singleSignOnService: "https://idp.op.ac.nz/adfs/ls/"
+    singleLogoutService: "https://idp.op.ac.nz/adfs/ls/"
+    metadata: "https://idp.op.ac.nz/FederationMetadata/2007-06/FederationMetadata.xml"
+  devIdP:
+    entityId: "https://devidp.op.ac.nz/adfs/services/trust"
+    x509cert: "public/assets/_filestore/devidpmetadata.xml"
+    singleSignOnService: "https://devidp.op.ac.nz/adfs/ls/"
+    singleLogoutService: "https://devidp.op.ac.nz/adfs/ls/"
+    metadata: "https://devidp.op.ac.nz/FederationMetadata/2007-06/FederationMetadata.xml"
+
+SilverStripe\Core\Injector\Injector:
+  SilverStripe\Security\Security:
+    properties:
+      Authenticators:
+        default: '%$SilverStripe\SAML\Authenticators\SAMLAuthenticator'
+        basic: '%$SilverStripe\Security\MemberAuthenticator\MemberAuthenticator'
+  SilverStripe\SAML\Services\SAMLConfiguration:
+    class: OP\SAMLConfigurationExtension
+    
+  SilverStripe\Security\AuthenticationHandler:
+    class: OP\RequestAuthenticationHandler
+    properties:
+      Handlers:
+        session: '%$SilverStripe\Security\MemberAuthenticator\SessionAuthenticationHandler'
+        alc: '%$SilverStripe\Security\MemberAuthenticator\CookieAuthenticationHandler'
+
+SilverStripe\Security\Authenticator:
+  default_authenticator: SilverStripe\SAML\Authenticators\SAMLAuthenticator
+  authenticators:
+    - SilverStripe\SAML\Authenticators\SAMLAuthenticator
+
+SilverStripe\Control\Director:
+  rules:
+    'saml': OP\SAMLControllerExtension
+    'Security/logout': OP\SAMLControllerExtension
+
+SilverStripe\Security\Security:
+  extensions:
+    - OP\SAMLSecurityExtension

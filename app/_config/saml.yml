@@ -1,0 +1,25 @@
+#---
+#Name: mysamlsettings
+#After: '#samlsettings'
+#---
+#SilverStripe\SAML\Services\SAMLConfiguration:
+#  strict: true
+#  debug: false
+#  SP:
+#    entityId: "https://<your-site-domain>"
+#    privateKey: "<path-to-silverstripe-private-key>.pem"
+#    x509cert: "<path-to-silverstripe-cert>.crt"
+#  IdP:
+#    entityId: "https://idp.op.ac.nz/adfs/services/trust"
+#    x509cert: "certs/idp.pem"
+#    singleSignOnService: "https://idp.op.ac.nz/adfs/ls/"
+#    singleLogoutService: "https://idp.op.ac.nz/adfs/ls/"
+#    metadata: "https://idp.op.ac.nz/FederationMetadata/2007-06/FederationMetadata.xml"
+#  devIdP:
+#    entityId: "https://devidp.op.ac.nz/adfs/services/trust"
+#    x509cert: "certs/devidp.pem"
+#    singleSignOnService: "https://devidp.op.ac.nz/adfs/ls/"
+#    singleLogoutService: "https://devidp.op.ac.nz/adfs/ls/"
+#    metadata: "https://devidp.op.ac.nz/FederationMetadata/2007-06/FederationMetadata.xml"
+#  Security:
+#    signatureAlgorithm: "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"

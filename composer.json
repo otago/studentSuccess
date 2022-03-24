@@ -11,7 +11,8 @@
         "silverstripe/saml": "2.0.0",
         "silverstripe/userforms": "^5.12.0",
         "silverstripe/widgets": "^2.2.0",
-        "symbiote/silverstripe-gridfieldextensions": "3.3.0"
+        "symbiote/silverstripe-gridfieldextensions": "3.3.0",
+        "symbiote/silverstripe-queuedjobs": "^4.9"
     },
     "config": {
         "process-timeout": 900,
@@ -37,5 +38,9 @@
             "index.php",
             "web.config"
         ]
+    },
+    "require-dev": {
+        "jdorn/sql-formatter": "1.3.x-dev",
+        "lekoala/silverstripe-debugbar": "^2.0"
     }
 }

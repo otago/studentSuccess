@@ -8,6 +8,7 @@
 
         $ElementArea
         $Content
+        $Form
     </div>
 
     <% if ClassName == "LandingPage" %>
