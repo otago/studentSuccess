@@ -22,7 +22,17 @@ class OPBaseElementExtension extends DataExtension
         ElementContent::class,
         ElementFile::class,
         ElementLink::class,
-        //'ElementInternalLink'
+        //'ElementInternalLink',
+
+
+        Accordion::class,
+        Carousel::class,
+        CaseStudy::class,
+        CheckList::class,
+        ContactElement::class,
+        CTAElement::class,
+        HearFromOthers::class,
+        WayFinder::class
     ];
 
     private $sidebarClasses = [

@@ -6,8 +6,8 @@
     <div class="elements-holder modal-content">
         <% include PageIntro %>
 
-        $ElementArea
-        $Content
+        $ElementalArea
+
     </div>
 
     <% if ClassName == "LandingPage" %>

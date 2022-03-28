@@ -6,7 +6,10 @@ namespace OP\Studentsuccess;
 use OP\Studentsuccess\WayFinderFilter;
 use OP\Studentsuccess\WayFinderItem;
 use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridField_ActionMenu;
+use SilverStripe\Forms\GridField\GridFieldButtonRow;
 use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
+use SilverStripe\Forms\GridField\GridFieldToolbarHeader;
 use Symbiote\GridFieldExtensions\GridFieldAddNewMultiClass;
 use SilverStripe\Forms\GridField\GridFieldAddNewButton;
 use DNADesign\Elemental\Models\BaseElement;
@@ -73,32 +76,31 @@ class WayFinder extends BaseElement
             'Items'
         ]);
         $heroconf = GridFieldConfig_RelationEditor::create();
+        $heroconf->addComponent(new GridFieldOrderableRows('SortOrder'), new GridFieldButtonRow());
 
-        $heroconf->addComponent(new GridFieldOrderableRows('SortOrder'));
+        $heroconf2 = GridFieldConfig_RelationEditor::create();
+        $heroconf2->addComponent(new GridFieldOrderableRows('SortOrder'), new GridFieldButtonRow());
 
         if ($this->ID) {
-            $fields->addFieldsToTab('Root.Main', [
-                GridField::create('Filters', 'Filters', $this->OrderedFilters(), $heroconf)
-            ]);
-
 
             $fields->addFieldsToTab('Root.Main', [
-                $items = GridField::create('Items', 'Items', $this->OrderedItems(), $heroconf)
-
+                GridField::create('Filters', 'Filters', $this->Filters(), $heroconf)
             ]);
 
+            $fields->addFieldsToTab('Root.Main', [
+                $items = GridField::create('Items', 'Items', $this->Items(), $heroconf)
+
+            ]);
 
             $configs = $items->getConfig();
             $adder = new GridFieldAddNewMultiClass();
             $adder->setClasses([
-                'WayFinderItem' => 'Text Link',
-                'WayFinderImageItem' => 'Image Link'
+                WayFinderItem::class => 'Text Link',
+                WayFinderImageItem::class => 'Image Link'
             ]);
             $configs->removeComponentsByType(GridFieldAddNewButton::class);
             $configs->addComponent($adder);
-
         }
-
         return $fields;
     }
 

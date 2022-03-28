@@ -13,10 +13,18 @@ class MasonryContentsWithFilters extends MasonryContent
 
     private static $description = "Masonry elements with filters";
 
+    private static $inline_editable = false;
+
     private static $db = [
         'FilterByString' => 'Varchar',
         'SearchFieldDefaultText' => 'Varchar'
     ];
+    public function ddd()
+    {
+
+
+        return $this->Tiles();
+    }
 
     public function getCMSFields()
     {

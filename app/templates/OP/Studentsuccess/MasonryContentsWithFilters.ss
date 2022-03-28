@@ -1,4 +1,3 @@
-<% with $Widget %> 
 <div class="component-alignment wide-boxed-element tightentop">
     <div class="massSearch"> <% include  search %> </div>
 
@@ -11,4 +10,3 @@
 		</div>
 	</div>
 </div>
-<% end_with %>

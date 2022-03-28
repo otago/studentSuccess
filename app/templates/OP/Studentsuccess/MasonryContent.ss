@@ -1,4 +1,4 @@
-<% with $Widget %> 
+<% with $Widget %>
 <div class="component-alignment wide-boxed-element">
     <div class="massSearch $ExtraClass" > <% include  search %> </div>
 	<div class='masonry-content masonry-basic'>

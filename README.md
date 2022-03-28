@@ -38,3 +38,19 @@ then run ` php -d memory_limit=6000M vendor/silverstripe/framework/cli-script.ph
 ******************************
 ******************************
 
+
+```php
+Accordion::class,
+Carousel::class,
+CaseStudy::class,
+CheckList::class,
+ContactElement::class,
+CTAElement::class,
+HearFromOthers::class,
+WayFinder::class,
+```
+
+
+
+composer require --dev jdorn/sql-formatter 1.3.x-dev
+composer require --dev lekoala/silverstripe-debugbar 2.0

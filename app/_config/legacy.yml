@@ -8,30 +8,30 @@ SilverStripe\ORM\DatabaseAdmin:
     ElementFileExtension: OP\Studentsuccess\ElementFileExtension
     ElementInternalLinkExtension: OP\Studentsuccess\ElementInternalLinkExtension
     OTPConfigs: OP\Studentsuccess\OTPConfigs
-    Accordion: OP\Studentsuccess\Accordion
+    #    Accordion: OP\Studentsuccess\Accordion
     Accordion_ElementPublishChildren: OP\Studentsuccess\Accordion_ElementPublishChildren
-    AccordionItem: OP\Studentsuccess\AccordionItem
-    Carousel: OP\Studentsuccess\Carousel
+#    AccordionItem: OP\Studentsuccess\AccordionItem
+    #    Carousel: OP\Studentsuccess\Carousel
     CarouselSlide: OP\Studentsuccess\CarouselSlide
     CarouselSlideWithUpperLetter: OP\Studentsuccess\CarouselSlideWithUpperLetter
     CarouselTextSlide: OP\Studentsuccess\CarouselTextSlide
     CarouselTextSlide_NoTitle: OP\Studentsuccess\CarouselTextSlide_NoTitle
     CarouselTwoColumnSlide: OP\Studentsuccess\CarouselTwoColumnSlide
-    CarouselWithUpperLetter: OP\Studentsuccess\CarouselWithUpperLetter
-    CaseStudy: OP\Studentsuccess\CaseStudy
-    CheckList: OP\Studentsuccess\CheckList
+#    CarouselWithUpperLetter: OP\Studentsuccess\CarouselWithUpperLetter
+    #    CaseStudy: OP\Studentsuccess\CaseStudy
+    #    CheckList: OP\Studentsuccess\CheckList
     CheckListCollection: OP\Studentsuccess\CheckListCollection
     CheckListItem: OP\Studentsuccess\CheckListItem
-    InteractiveList: OP\Studentsuccess\InteractiveList
+#    InteractiveList: OP\Studentsuccess\InteractiveList
     ListCollectionItem: OP\Studentsuccess\ListCollectionItem
-    SingleLevelCheckList: OP\Studentsuccess\SingleLevelCheckList
-    SingleLevelList: OP\Studentsuccess\SingleLevelList
-    ContactElement: OP\Studentsuccess\ContactElement
-    CTAElement: OP\Studentsuccess\CTAElement
-    ElementTable: OP\Studentsuccess\ElementTable
-    HearFromOthers: OP\Studentsuccess\HearFromOthers
-    VideoComponent: OP\Studentsuccess\VideoComponent
-    LinksComponent: OP\Studentsuccess\LinksComponent
+#    SingleLevelCheckList: OP\Studentsuccess\SingleLevelCheckList
+#    SingleLevelList: OP\Studentsuccess\SingleLevelList
+    #    ContactElement: OP\Studentsuccess\ContactElement
+    #    CTAElement: OP\Studentsuccess\CTAElement
+#    ElementTable: OP\Studentsuccess\ElementTable
+    #    HearFromOthers: OP\Studentsuccess\HearFromOthers
+#    VideoComponent: OPv\Studentsuccess\VideoComponent
+#    LinksComponent: OP\Studentsuccess\LinksComponent
     FilterableMasonryImageTile: OP\Studentsuccess\FilterableMasonryImageTile
     FilterableMasonryTile: OP\Studentsuccess\FilterableMasonryTile
     FilterableSmallMasonryImageTile: OP\Studentsuccess\FilterableSmallMasonryImageTile
@@ -39,23 +39,23 @@ SilverStripe\ORM\DatabaseAdmin:
     FilterableTile: OP\Studentsuccess\FilterableTile
     FilterableTile_Counter: OP\Studentsuccess\FilterableTile_Counter
     LinkListMasonryTile: OP\Studentsuccess\LinkListMasonryTile
-    MasonryContent: OP\Studentsuccess\MasonryContent
-    MasonryContentsWithFilters: OP\Studentsuccess\MasonryContentsWithFilters
+#    MasonryContent: OP\Studentsuccess\MasonryContent
+#    MasonryContentsWithFilters: OP\Studentsuccess\MasonryContentsWithFilters
     MasonryImageTile: OP\Studentsuccess\MasonryImageTile
     MasonryTile: OP\Studentsuccess\MasonryTile
     MasonryTileLink: OP\Studentsuccess\MasonryTileLink
     SmallMasonryTile: OP\Studentsuccess\SmallMasonryTile
-    MatrixElement: OP\Studentsuccess\MatrixElement
-    ReferencesElement: OP\Studentsuccess\ReferencesElement
-    SidebarImageElement: OP\Studentsuccess\SidebarImageElement
-    SidebarTestimony: OP\Studentsuccess\SidebarTestimony
-    SidebarHelp: OP\Studentsuccess\SidebarHelp
+#    MatrixElement: OP\Studentsuccess\MatrixElement
+#    ReferencesElement: OP\Studentsuccess\ReferencesElement
+#    SidebarImageElement: OP\Studentsuccess\SidebarImageElement
+#    SidebarTestimony: OP\Studentsuccess\SidebarTestimony
+#    SidebarHelp: OP\Studentsuccess\SidebarHelp
     CheckListBlock: OP\Studentsuccess\CheckListBlock
     CheckListBlockItem: OP\Studentsuccess\CheckListBlockItem
     CheckListTab: OP\Studentsuccess\CheckListTab
     FilterableCheckListBlock: OP\Studentsuccess\FilterableCheckListBlock
     TabbedCheckList: OP\Studentsuccess\TabbedCheckList
-    WayFinder: OP\Studentsuccess\WayFinder
+    #    WayFinder: OP\Studentsuccess\WayFinder
     WayFinderFilter: OP\Studentsuccess\WayFinderFilter
     WayFinderImageItem: OP\Studentsuccess\WayFinderImageItem
     WayFinderItem: OP\Studentsuccess\WayFinderItem

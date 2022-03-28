@@ -107,16 +107,16 @@ class ImageExtension extends DataExtension {
 		if(!$iHeight) $iHeight = ImageExtension::DefaultHeight();
 
 		$image = null;
-		if($this->owner->ID && file_exists($this->owner->getFullPath())){
+		if($this->owner->ID){
 			$image = $this->owner;
 		}
 		else if(SiteConfig::current_site_config()->ImagePlaceHolderID){
 			$image = SiteConfig::current_site_config()->ImagePlaceHolder();
 		}
 
-		if($image && file_exists($image->getFullPath())){
+		if($image){
 
-			$cachedImage = $image->CroppedImage($iWidth, $iHeight);
+			$cachedImage = $image->FitMax($iWidth, $iHeight);
 			if($cachedImage){
 				$arrRet = array(
 					'URLWithSuffix'	=> $cachedImage->getURLWithSuffix(),
@@ -181,10 +181,10 @@ class ImageExtension extends DataExtension {
 	 */
 	public function getURLWithSuffix(){
 		$strRet = $this->owner->getURL();
-		if(file_exists($this->owner->getFullPath())){
-			if($time = filemtime($this->owner->getFullPath()))
-				$strRet .= '?m=' . $time;
-		}
+//		if(file_exists($this->owner->getFullPath())){
+//			if($time = filemtime($this->owner->getFullPath()))
+//				$strRet .= '?m=' . $time;
+//		}
 		return $strRet;
 	}
 

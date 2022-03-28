@@ -5,6 +5,10 @@ namespace OP\Studentsuccess;
 
 use OP\Studentsuccess\MasonryTileLink;
 use OP\Studentsuccess\FormUtils;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldButtonRow;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
+use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 
 class LinkListMasonryTile extends MasonryTile
@@ -21,9 +25,11 @@ class LinkListMasonryTile extends MasonryTile
         $fields->removeByName([
             'Content'
         ]);
+        $heroconf = GridFieldConfig_RelationEditor::create();
+        $heroconf->addComponent(new GridFieldOrderableRows('SortOrder'), new GridFieldButtonRow());
 
         $fields->addFieldToTab('Root.Main',
-            FormUtils::MakeDragAndDropGridField('Links', 'Links', $this->Links(), 'SortOrder', 'RecordEditor')
+            GridField::create('Links', 'Links', $this->Links(), $heroconf)
         );
 
         return $fields;
