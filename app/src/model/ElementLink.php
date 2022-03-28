@@ -34,6 +34,11 @@ class ElementLink extends BaseElement
 
     private static $description = "";
 
+    public function getType()
+    {
+        return 'Link Element';
+    }
+
     public function getCMSFields()
     {
         $this->beforeUpdateCMSFields(function ($fields) {

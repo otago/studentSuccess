@@ -26,7 +26,10 @@ class ElementImage extends ElementLink
     ];
 
     private static $title = "Image Element";
-
+    public function getType()
+    {
+        return 'Image Element';
+    }
     public function getCMSFields()
     {
         $this->beforeUpdateCMSFields(function ($fields) {

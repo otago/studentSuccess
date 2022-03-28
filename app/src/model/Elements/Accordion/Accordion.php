@@ -6,8 +6,12 @@ namespace OP\Studentsuccess;
 use OP\Studentsuccess\AccordionItem;
 
 use DNADesign\Elemental\Models\BaseElement;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldButtonRow;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use SilverStripe\Versioned\Versioned;
 use OP\Studentsuccess\FormUtils;
+use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 
 class Accordion extends BaseElement
@@ -17,6 +21,8 @@ class Accordion extends BaseElement
 
     private static $description = 'Accordion';
 
+    private static $inline_editable = false;
+
     private static $has_many = [
         'Items' => AccordionItem::class
     ];
@@ -25,11 +31,13 @@ class Accordion extends BaseElement
     {
         $fields = parent::getCMSFields();
 
-        $fields->removeByName('Item');
+        $fields->removeByName('Items');
+        $heroconf = GridFieldConfig_RelationEditor::create();
+        $heroconf->addComponent(new GridFieldOrderableRows('Sort'), new GridFieldButtonRow());
 
         if ($this->ID) {
             $fields->addFieldToTab('Root.Main',
-                FormUtils::MakeDragAndDropGridField('Items', 'Items', $this->Items(), 'Sort')
+                 GridField::create('Items', 'Items', $this->Items(), $heroconf)
             );
         }
 
@@ -51,26 +59,3 @@ class Accordion extends BaseElement
     }
 }
 
-/*
-class Accordion_ElementPublishChildren extends ElementPublishChildren {
-
-	public function onBeforeVersionedPublish() {
-		$staged = array();
-
-		foreach($this->owner->Elements() as $widget) {
-			$staged[] = $widget->ID;
-
-			$widget->publish('Stage', 'Live');
-		}
-
-		// remove any elements that are on live but not in draft or have been
-		// unlinked from everything
-		$widgets = Versioned::get_by_stage(AccordionItem::class, 'Live', "AccordionID = '". $this->owner->ID ."'");
-
-		foreach($widgets as $widget) {
-			if(!in_array($widget->ID, $staged)) {
-				$widget->deleteFromStage('Live');
-			}
-		}
-	}
-}*/

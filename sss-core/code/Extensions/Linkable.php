@@ -38,7 +38,7 @@ class Linkable extends DataExtension {
 
 	public function updateCMSFields(FieldList $fields){
 
-		Requirements::javascript('silverstripe-core/javascript/Linkable.js');
+		Requirements::javascript('sss-core/javascript/compoLinkable.js');
 
 		$fields->removeByName(array(
 			'LinkType',

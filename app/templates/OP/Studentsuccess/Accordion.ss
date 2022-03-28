@@ -1,5 +1,5 @@
 <div class='accordion-c'>
-	<% loop $Widget.Elements %>
+
 		<h2 class='title-c title-color-{$AscentColour}'><a id="a$ID" href="#a$ID">{$Title}</a></h2>
 
 		<div class='accordion-item'>
@@ -19,5 +19,5 @@
 				<% end_loop %>
 			<% end_if %>
 		</div>
-	<% end_loop %>
-</div
+
+</div>

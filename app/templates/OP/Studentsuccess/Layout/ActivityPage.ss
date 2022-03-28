@@ -10,7 +10,7 @@
 	</div>
 
     $ElementalArea
-    $Content
+
 </div>
 
 <div class="component-alignment">
