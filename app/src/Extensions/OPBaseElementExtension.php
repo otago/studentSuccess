@@ -51,7 +51,7 @@ class OPBaseElementExtension extends DataExtension
             'ParentID' => $this->owner->ParentID,
             'ID:not' => $this->owner->ID,
             'Sort:GreaterThan' => $this->owner->Sort,
-            'ListID' => $this->owner->ListID,
+           // 'ListID' => $this->owner->ListID,
         ])->sort('Sort', 'ASC')->first();
 
         if (($after && in_array($after->ClassName, $arrSidebarClasses))) {
