@@ -39,7 +39,6 @@ class SSS_upgrade_ss4 extends BuildTask
 //        $this->doTheFiles($request);
 
 
-
         $this->dothewidgets();
 
 
@@ -53,7 +52,7 @@ class SSS_upgrade_ss4 extends BuildTask
 
         $claases = [
             'Accordion',
-//            'Carousel',
+            'Carousel',
 //            'CaseStudy',
 //            'CheckList',
             'ContactElement',
@@ -66,23 +65,23 @@ class SSS_upgrade_ss4 extends BuildTask
             'AccordionItem',
 //            'CarouselWithUpperLetter',
 //            'ElementTable',
-//            'InteractiveList',
-//            'LinksComponent',
+            'InteractiveList',
+            'LinksComponent',
 //            'MasonryContent',
             'MasonryContentsWithFilters',
 //            'MatrixElement',
 //            'ReferencesElement',
 //            'SidebarHelp',
-//            'SidebarImageElement',
-//            'SidebarTestimony',
+            'SidebarImageElement',
+            'SidebarTestimony',
 //            'SingleLevelCheckList',
 //            'SingleLevelList',
-//            'VideoComponent',
+            'VideoComponent',
+            'ElementImage',
 
-        //Silverstripe
-                'ElementContent'
+            //Silverstripe
+            'ElementContent'
         ];
-
 
 
         $widgets = Widget::get()->filter(["ClassName" => $claases])->sort([
@@ -111,7 +110,11 @@ class SSS_upgrade_ss4 extends BuildTask
                 $this->log("skipped: " . $widget->RecordClassName);
                 continue;
             }
-
+            switch ($widget->RecordClassName) {
+                case 'SidebarImageElement':
+                    $element->Caption = DB::query("SELECT Caption FROM ElementImage where id = $widget->ID")->value();
+                    break;
+            }
 
             $element->Title = $widget->Title;
             $element->Sort = $widget->Sort;
@@ -156,7 +159,7 @@ class SSS_upgrade_ss4 extends BuildTask
                     $this->log(" NO Page:  widget $widget->ID $widget->Title parentid:$widget->ParentID");
                 }
             } else {
-                $elelemtn = BaseElement::get_by_id( $element->ID);
+                $elelemtn = BaseElement::get_by_id($element->ID);
 
                 $Elist = DB::query("SELECT el.ElementsID FROM baseelement be join ElementList el on be.ListID=el.id where be.id = $widget->ID")->value();
 
@@ -184,15 +187,15 @@ class SSS_upgrade_ss4 extends BuildTask
             }
 
 
-
-
             //                        $update1 = SQLUpdate::create('"WayFinder_Items"')->addWhere(['WayFinderID' => $element->ID]);
             //                        $update1->assign('"WayFinderID"', $element->ID * -1);
             //                        $update1->execute();
 //            $elelemtn = BaseElement::get_by_id( $element->ID);
 //            $elelemtn->Parent()->publishRecursive();
 
-
+            if ($widget->RecordClassName == "ElementImage") {
+                die("7777777777");
+            }
             $this->log("\t\t\t  Delete Element $widget->ID");
             $widget->delete();
         }

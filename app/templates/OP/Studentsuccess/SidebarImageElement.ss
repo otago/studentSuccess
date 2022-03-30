@@ -18,6 +18,7 @@
 </figure>
 <% end_with %>
 <% else %>
+
 <figure class="right-content element">
 	<% if InternalLink %>
 		<a class="internal_link" href="$InternalLink.Link" <% if NewWindow %>target="_blank"<% end_if %>>

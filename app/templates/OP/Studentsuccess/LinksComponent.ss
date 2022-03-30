@@ -55,8 +55,8 @@
 						<% end_loop %>
 					</ul>
 				<% end_if %>
-				<% if $Link %>
-					<a class="button-link" href='{$Link}' target="{$Target}" >{$Title}</a>
+				<% if $hasLink %>
+					<a class="button-link" href='{$hasLink}' target="{$Target}" >{$Title}</a>
 				<% end_if %>
 			</div>
 

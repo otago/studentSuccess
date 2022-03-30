@@ -148,8 +148,7 @@ ElementInternalLink:
   extensions:
     - OP\Studentsuccess\ElementInternalLinkExtension
   title: 'Featured internal link'
-OP\Studentsuccess\ElementImage:
-  title: 'Inline image'
+
 SilverStripe\MimeValidator\MimeUploadValidator:
   MimeTypes:
     dmg:

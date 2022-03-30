@@ -40,9 +40,9 @@
 		<section>
 			<div class='image'>
 				<% if $VideoURL %>
-					<a href="{$VideoURL}" <% if ExternalURL %>target="_blank"<% end_if %> class="video-image <% if not ExternalURL %>fancybox-link<% end_if %>"><span class="icon icon-play"></span>$Image</a>
+					<a href="{$VideoURL}" <% if ExternalURL %>target="_blank"<% end_if %> class="video-image <% if not ExternalURL %>fancybox-link<% end_if %>"><span class="icon icon-play"></span>$Image.Pure</a>
 				<% else %>
-					$Image
+					$Image.Pure
 				<% end_if %>
 			</div>
 		

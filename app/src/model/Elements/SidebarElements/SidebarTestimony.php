@@ -19,4 +19,8 @@ class SidebarTestimony extends BaseElement
         'TestimonyName' => 'Varchar(255)'
     ];
 
+    public function getType()
+    {
+        return 'Sidebar quote';
+    }
 } 

@@ -35,6 +35,13 @@ class CheckList extends BaseElement
         'Summary' => 'Intro'
     ];
 
+
+    public function getType()
+    {
+        return 'Interactive Checklist';
+    }
+    private static $inline_editable = false;
+
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
@@ -47,7 +54,7 @@ class CheckList extends BaseElement
         $Itemsconf->removeComponentsByType(new GridFieldOrderableRows());
         $Itemsconf->addComponent(new GridFieldOrderableRows('SortOrder'));
 
-        $fields->addFieldsToTab('Root.Items', [
+        $fields->addFieldsToTab('Root.Main', [
             GridField::create('Items', 'Items', $this->Items(), $Itemsconf)
         ]);
 

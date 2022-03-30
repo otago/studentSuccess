@@ -6,10 +6,14 @@ namespace OP\Studentsuccess;
 
 use OP\Studentsuccess\CarouselSlide;
 use SilverStripe\Forms\DropdownField;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldButtonRow;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use Symbiote\GridFieldExtensions\GridFieldAddNewMultiClass;
 use SilverStripe\Forms\GridField\GridFieldAddNewButton;
 use DNADesign\Elemental\Models\BaseElement;
 use OP\Studentsuccess\FormUtils;
+use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 
 class Carousel extends BaseElement
@@ -26,6 +30,16 @@ class Carousel extends BaseElement
     private static $has_many = [
         'Slides' => CarouselSlide::class
     ];
+    public function getType()
+    {
+        return 'Carousel';
+    }
+
+    private static $owns = [
+        'Slides'
+    ];
+
+    private static $inline_editable = false;
 
     function getCMSFields()
     {
@@ -41,8 +55,11 @@ class Carousel extends BaseElement
         ]));
 
         if ($this->ID) {
+            $heroconf = GridFieldConfig_RelationEditor::create();
+            $heroconf->addComponent(new GridFieldOrderableRows('SortOrder'), new GridFieldButtonRow());
+
             $fields->addFieldsToTab('Root.Main', [
-                $grid = FormUtils::MakeDragAndDropGridField('Slides', 'Slides', $this->Slides(), 'SortOrder')
+                   $grid = GridField::create('Slides', 'Slides', $this->Slides(), $heroconf)
             ]);
 
             $configs = $grid->getConfig();

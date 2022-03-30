@@ -25,20 +25,19 @@ class ElementImage extends ElementLink
         'Image' => Image::class
     ];
 
-    private static $title = "Image Element";
+    private static $title = "Inline image";
+
+    private static $owns = [
+        'Image'
+    ];
+
     public function getType()
     {
-        return 'Image Element';
+        return 'Inline image';
     }
     public function getCMSFields()
     {
         $this->beforeUpdateCMSFields(function ($fields) {
-            $uploadField = UploadField::create(Image::class, Image::class)
-                ->setAllowedFileCategories('image')
-                ->setAllowedMaxFileNumber(1)
-                ->setFolderName('Uploads/images');
-            $fields->addFieldToTab('Root.Main', $uploadField);
-
             $caption = HTMLEditorField::create('Caption', 'Caption');
             $caption->setRightTitle('Optional');
 

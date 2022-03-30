@@ -8,6 +8,10 @@ use OP\Studentsuccess\LinkElement;
 use SilverStripe\Forms\DropdownField;
 use DNADesign\Elemental\Models\BaseElement;
 use OP\Studentsuccess\FormUtils;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldButtonRow;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
+use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 
 class LinksComponent extends BaseElement
@@ -36,11 +40,17 @@ class LinksComponent extends BaseElement
         ]
     ];
 
+    private static $owns = [
+        'Links',
+        'Image',
+    ];
+
     public function getType()
     {
         return 'Group of links';
     }
 
+    private static $inline_editable = false;
     protected $enable_title_in_template = true;
 
     public function getCMSFields()
@@ -55,7 +65,11 @@ class LinksComponent extends BaseElement
         ]));
 
         if ($this->ID) {
-            $fields->addFieldToTab('Root.Main', FormUtils::MakeDragAndDropGridField('Links', 'Links', $this->OrderedLinks(), 'SortOrder', 'RecordEditor'));
+            $heroconf = GridFieldConfig_RelationEditor::create();
+            $heroconf->addComponent(new GridFieldOrderableRows('SortOrder'), new GridFieldButtonRow());
+
+            $fields->addFieldToTab('Root.Main', GridField::create('Links', 'Links', $this->OrderedLinks(), $heroconf));
+
         }
 
         return $fields;
