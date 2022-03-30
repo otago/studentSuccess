@@ -27,6 +27,10 @@ class Accordion extends BaseElement
         'Items' => AccordionItem::class
     ];
 
+    private static $owns = [
+        'Items'
+    ];
+
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();

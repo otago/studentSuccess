@@ -36,6 +36,11 @@ class LinksComponent extends BaseElement
         ]
     ];
 
+    public function getType()
+    {
+        return 'Group of links';
+    }
+
     protected $enable_title_in_template = true;
 
     public function getCMSFields()

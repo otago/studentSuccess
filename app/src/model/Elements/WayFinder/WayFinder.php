@@ -37,6 +37,11 @@ class WayFinder extends BaseElement
         'Items' => WayFinderItem::class
     ];
 
+    private static $owns = [
+        'Filters',
+        'Items',
+    ];
+
     private static $many_many_extraFields = [
         'Filters' => [
             'SortOrder' => 'Int'

@@ -21,6 +21,15 @@ class AccordionItem extends ElementList
         'Accordion' => Accordion::class
     ];
 
+    private static $owns = [
+        'Accordion'
+    ];
+
     private static $title = 'Accordion Item';
+
+//    public function Elements()
+//    {
+//        return $this->Accordion();
+//    }
 
 } 

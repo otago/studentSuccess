@@ -1,10 +1,10 @@
 <% if $Widget %>
-    <% with $Widget %> 
+    <% with $Widget %>
     <section class='left-content contactElement ceSection clear-this <% if $Image %>has-image<% end_if %>'>
             <div class=" contactElementboxed-element {$backgroundColour}">
                 <% if $Image %>
                             <div class="col left $imageType hide_on_mobile">
-                                    $Image.CroppedImage(125, 125)
+                                    $Image.Fill(125, 125)
                                     
                             </div>
            
@@ -38,7 +38,7 @@
             <div class=" contactElementboxed-element {$backgroundColour}">
                 <% if $Image %>
                             <div class="col left $imageType hide_on_mobile">
-                                    $Image.CroppedImage(125, 125)
+                                    $Image.Fill(125, 125)
                                     
                             </div>
            

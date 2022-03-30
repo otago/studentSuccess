@@ -19,6 +19,7 @@
 </div>
 <% end_with %>
 <% else %>
+
 <div class="element-content-generic left-content">
 	<div class="content-padder">
 		$ProcessedHTML

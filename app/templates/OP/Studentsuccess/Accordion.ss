@@ -1,5 +1,5 @@
 <div class='accordion-c'>
-
+	<% loop $Items %>
 		<h2 class='title-c title-color-{$AscentColour}'><a id="a$ID" href="#a$ID">{$Title}</a></h2>
 
 		<div class='accordion-item'>
@@ -11,13 +11,12 @@
 				</div>
 			<% end_if %>
 
-			<% if $Elements %>
-				<% loop $Elements %>
-					<% if ShouldHaveWrapper %><div class="left-content-wrapper"><% end_if %>
-						$Content
-					<% if ShouldCloseWrapper %></div><% end_if %>
-				<% end_loop %>
-			<% end_if %>
-		</div>
 
+        <% if ShouldHaveWrapper %><div class="left-content-wrapper"><% end_if %>
+            $Me
+        <% if ShouldCloseWrapper %></div><% end_if %>
+
+
+		</div>
+	<% end_loop %>
 </div>
