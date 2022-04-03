@@ -34,7 +34,9 @@ class CheckList extends BaseElement
     private static $field_labels = [
         'Summary' => 'Intro'
     ];
-
+    private static $owns = [
+        'Items'
+    ];
 
     public function getType()
     {
@@ -55,25 +57,25 @@ class CheckList extends BaseElement
         $Itemsconf->addComponent(new GridFieldOrderableRows('SortOrder'));
 
         $fields->addFieldsToTab('Root.Main', [
-            GridField::create('Items', 'Items', $this->Items(), $Itemsconf)
+            $gridField = GridField::create('Items', 'Items', $this->Items(), $Itemsconf)
         ]);
 
-       // $configs = $gridField->getConfig();
-       // $adder = new GridFieldAddNewMultiClass();
+        $configs = $gridField->getConfig();
+        $adder = new GridFieldAddNewMultiClass();
 
         $classes = [
-            'CheckListCollection' => 'List of items',
-            'CheckListItem' => 'Content Item'
+            CheckListCollection::class => 'List of items',
+            CheckListItem::class => 'Content Item'
         ];
 
         if ($this instanceof SingleLevelList || $this instanceof SingleLevelCheckList) {
             unset($classes[CheckListCollection::class]);
         }
 
-      //  $adder->setClasses($classes);
+        $adder->setClasses($classes);
 
-       // $configs->removeComponentsByType(GridFieldAddNewButton::class);
-       // $configs->addComponent($adder);
+        $configs->removeComponentsByType(GridFieldAddNewButton::class);
+        $configs->addComponent($adder);
 
 
         return $fields;

@@ -1,4 +1,3 @@
-<% with $Widget %> 
 <section class='case-study-holder clear-this'>
 	<div class='case-study {$Color}'>
 		<div class="component-alignment boxed-element">
@@ -7,9 +6,9 @@
 					{$Image.Pure}
 				<% end_if %>
 				<span class="quotemark">“</span>
-				<% if $Summary %>
+				<% if $SummaryQuote %>
 				<p>
-					{$Summary}
+					{$SummaryQuote}
 				</p>
 				<% end_if %>
 			</div>
@@ -25,4 +24,3 @@
 		</div>
 	</div>
 </section>
-<% end_with %>

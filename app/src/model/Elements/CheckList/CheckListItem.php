@@ -3,8 +3,9 @@
 namespace OP\Studentsuccess;
 
 
-use SingleLevelChecklist;
+use GraphQL\Error\Debug;
 use OP\Studentsuccess\CheckList;
+use OP\Studentsuccess\SingleLevelCheckList;
 use SilverStripe\ORM\DataObject;
 
 
@@ -36,7 +37,7 @@ class CheckListItem extends DataObject
         ]);
 
         $parent = $this->CheckList();
-
+;
         if ($parent->exists()) {
             if ($parent instanceof SingleLevelChecklist || $parent instanceof SingleLevelList) {
                 $fields->removeByName('Content');

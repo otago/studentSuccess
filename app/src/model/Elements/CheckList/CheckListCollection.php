@@ -5,6 +5,10 @@ namespace OP\Studentsuccess;
 
 use OP\Studentsuccess\ListCollectionItem;
 use OP\Studentsuccess\FormUtils;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldButtonRow;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
+use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 
 class CheckListCollection extends CheckListItem
@@ -21,8 +25,12 @@ class CheckListCollection extends CheckListItem
         $fields->removeByName('Content');
         $fields->removeByName('ListCollectionItems');
 
+        $heroconf = GridFieldConfig_RelationEditor::create();
+        $heroconf->addComponent(new GridFieldOrderableRows('SortOrder'), new GridFieldButtonRow());
+
+
         $fields->addFieldsToTab('Root.Main', [
-            FormUtils::MakeDragAndDropGridField('ListCollectionItems', 'Items', $this->ListCollectionItems(), 'SortOrder')
+            GridField::create('ListCollectionItems', 'Items', $this->ListCollectionItems(), $heroconf)
         ]);
 
         return $fields;

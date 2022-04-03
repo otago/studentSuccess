@@ -49,50 +49,63 @@ class SSS_upgrade_ss4 extends BuildTask
 
     private function dothewidgets()
     {
+        //Accordion stuff has to go first
+        $this->moveWidgetsToElement(['Accordion'] );
+        $this->moveWidgetsToElement(['AccordionItem'] );
 
         $claases = [
-            'Accordion',
+            'CheckList',
             'Carousel',
-//            'CaseStudy',
-//            'CheckList',
+            'CaseStudy',
+
             'ContactElement',
-//            'CTAElement',
+
             'HearFromOthers',
             'WayFinder',
             'ElementLink',
-
-
-            'AccordionItem',
-//            'CarouselWithUpperLetter',
-//            'ElementTable',
             'InteractiveList',
             'LinksComponent',
-//            'MasonryContent',
             'MasonryContentsWithFilters',
+            'SidebarImageElement',
+            'SidebarTestimony',
+
+            //Silverstripe
+            'ElementContent',
+
+
+
+        //************************************************************
+//            'CTAElement',
+
+//            'CarouselWithUpperLetter',
+//            'ElementTable',
+
+//            'MasonryContent',
+
 //            'MatrixElement',
 //            'ReferencesElement',
 //            'SidebarHelp',
-            'SidebarImageElement',
-            'SidebarTestimony',
+
 //            'SingleLevelCheckList',
 //            'SingleLevelList',
-            'VideoComponent',
-            'ElementImage',
 
-            //Silverstripe
-            'ElementContent'
+
         ];
+        $dieOn = "CheckList";
+        $this->moveWidgetsToElement($claases , $dieOn);
+
+    }
 
 
+    private function moveWidgetsToElement($claases  ,$dieOn = "")
+    {
         $widgets = Widget::get()->filter(["ClassName" => $claases])->sort([
             'ParentID' => 'Desc',
             'ID' => 'ASC'
         ]);
         foreach ($widgets as $widget) {
             $count = "" . $widgets->count();
-//        if ($widget->ID != 4386) {
-//            continue;
-//        }
+
 
             if (in_array($widget->RecordClassName, $claases)) {
 
@@ -100,7 +113,6 @@ class SSS_upgrade_ss4 extends BuildTask
                     case 'ElementContent':
                         $element = Injector::inst()->create(ElementContent::class);
                         $element->HTML = DB::query("SELECT HTML FROM ElementContent where id = $widget->ID")->value();
-
                         break;
                     default:
                         $element = Injector::inst()->create("OP\\Studentsuccess\\" . $widget->RecordClassName);
@@ -110,9 +122,21 @@ class SSS_upgrade_ss4 extends BuildTask
                 $this->log("skipped: " . $widget->RecordClassName);
                 continue;
             }
+
             switch ($widget->RecordClassName) {
                 case 'SidebarImageElement':
                     $element->Caption = DB::query("SELECT Caption FROM ElementImage where id = $widget->ID")->value();
+                    break;
+                case 'AccordionItem':
+                    $element->ListDescription = DB::query("SELECT el.ListDescription FROM ElementList el  WHERE el.ID = $widget->ID")->value();
+                    break;
+                case 'CaseStudy':
+                    $element->CaseStudyContent = DB::query("SELECT CaseStudyContent FROM CaseStudy  WHERE ID = $widget->ID")->value();
+                    $element->SummaryQuote = DB::query("SELECT Summary FROM CaseStudy  WHERE ID = $widget->ID")->value();
+                    break;
+                case 'CheckList':
+                   // $element->Content = DB::query("SELECT Content FROM ListCollectionItem  WHERE ID = $widget->ID")->value();
+
                     break;
             }
 
@@ -122,23 +146,27 @@ class SSS_upgrade_ss4 extends BuildTask
             $element->ID = $widget->ID;
 
             $element->write();
-//            $element->publishRecursive();
-//            $element->publishSingle();
             $pageid = [];
 
-            switch ($widget->RecordClassName) {
-                case 'AccordionItem':
-                    DB::query("
-                             UPDATE AccordionItem
-                                SET
-                                ListDescription = (SELECT el.ListDescription FROM ElementList el  WHERE el.ID = AccordionItem.ID)
-                                WHERE `ID` = $widget->ID;
-                        ");
-                    break;
-//                    default:
-//                        echo "skipped: ". $widget->RecordClassName ."\n";
-//                        continue 2;
-            }
+            //Post workd
+//            switch ($widget->RecordClassName) {
+//                case 'CheckList':
+//                   $cl = CheckList::get_by_id($widget->ID);
+//
+//                    foreach ($cl->Items() as $clitems) {
+//
+//                        if ($clitems->Content == null) {
+//                            $this->log("\t\t\t\t CheckList items: ".$clitems->ID);
+////                            $clitems->Content = $element->Content = DB::query("SELECT Content FROM ListCollectionItem  WHERE ID = $clitems->ID")->value();
+////                            $clitems->write();
+//                           // die("ssss");
+//                        }
+//
+//                    }
+//                    // $element->Content = DB::query("SELECT Content FROM ListCollectionItem  WHERE ID = $widget->ID")->value();
+//
+//                    break;
+//            }
 
 
             $update1 = SQLUpdate::create('"Element"')->addWhere(['ID' => $element->ID]);
@@ -174,30 +202,18 @@ class SSS_upgrade_ss4 extends BuildTask
                             ");
                     $this->log("\t\t\t  UPDATE Element");
                 }
-//                if($widget->ID == 4386) {
-//                    $this->log("element id: $element->ID");
-//                    $this->log("element id: $elelemtn->ParentID");
-//                    $this->log("widget id: $widget->ID");
-//                    $this->log("Elist $Elist");
-//
-//
-//                    die("DDDDDDDDDDDDDDDDDDD");
-//                }
 
             }
 
-
-            //                        $update1 = SQLUpdate::create('"WayFinder_Items"')->addWhere(['WayFinderID' => $element->ID]);
-            //                        $update1->assign('"WayFinderID"', $element->ID * -1);
-            //                        $update1->execute();
-//            $elelemtn = BaseElement::get_by_id( $element->ID);
-//            $elelemtn->Parent()->publishRecursive();
-
-            if ($widget->RecordClassName == "ElementImage") {
-                die("7777777777");
+            if (
+                $widget->ID == 1595
+                //$widget->RecordClassName == $dieOn
+            ) {
+               // die("7777777777");
+            }else {
+                $this->log("\t\t\t  Delete Element $widget->ID");
+                $widget->delete();
             }
-            $this->log("\t\t\t  Delete Element $widget->ID");
-            $widget->delete();
         }
     }
 

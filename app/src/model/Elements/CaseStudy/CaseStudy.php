@@ -17,7 +17,7 @@ class CaseStudy extends BaseElement
 
     private static $db = [
         'Color' => 'Varchar',
-        'Summary' => 'Text',
+        'SummaryQuote' => 'Text',
         'CaseStudyContent' => 'HTMLText'
     ];
 
@@ -25,8 +25,17 @@ class CaseStudy extends BaseElement
         'Image' => Image::class
     ];
 
-    private static $field_labels = [
-        'Summary' => 'Pull quote'
+//    private static $field_labels = [
+//        'Summary' => 'Pull quote'
+//    ];
+
+    public function getType()
+    {
+        return 'Case Study';
+    }
+
+    private static $owns = [
+        'Image'
     ];
 
     protected $enable_title_in_template = true;

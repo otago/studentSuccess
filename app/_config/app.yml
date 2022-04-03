@@ -121,9 +121,7 @@ OP\Studentsuccess\FilterableSmallMasonryTile:
 DNADesign\Elemental\Models\ElementContent:
   extensions:
     - OP\Studentsuccess\ElementContentExtension
-DNADesign\Elemental\Models\BaseElement:
-  extensions:
-    - OP\Studentsuccess\OPBaseElementExtension
+
 OP\Studentsuccess\GlossaryItem:
   extensions:
     - OP\Studentsuccess\Contactable
@@ -154,6 +152,13 @@ SilverStripe\MimeValidator\MimeUploadValidator:
     dmg:
       - application/x-apple-diskimage
       - application/octet-stream
-#SilverStripe\Core\Injector\Injector:
-#  DNADesign\Elemental\Models\ElementalArea:
-#    class: OP\Studentsuccess\ElementalAreaExtension
+
+
+DNADesign\Elemental\Models\BaseElement:
+  extensions:
+    - OP\Studentsuccess\OPBaseElementExtension
+
+
+SilverStripe\Core\Injector\Injector:
+  DNADesign\ElementalList\Extension\BaseElementCMSEditLinkExtension:
+    class: OP\Studentsuccess\OPBaseElementCMSEditLinkExtension
