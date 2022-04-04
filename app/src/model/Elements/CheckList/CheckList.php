@@ -22,7 +22,7 @@ class CheckList extends BaseElement
     private static $description = "Interactive Checklist";
 
     private static $db = [
-        'Summary' => 'Text'
+        'Intro' => 'Text'
     ];
 
     private static $has_many = [

@@ -12,6 +12,9 @@ class MatrixElement extends BaseElement
     private static $title = "Matrix of Four blocks";
 
     private static $description = "Matrix of Four blocks";
+    private static $casting = [
+        'OverlayHTML' => 'HTMLFragment'
+    ];
 
     private static $db = [
         'LabelLeftTop' => 'Varchar',

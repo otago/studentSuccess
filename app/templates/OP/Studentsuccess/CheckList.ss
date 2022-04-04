@@ -1,4 +1,4 @@
-<div class='checklist $ClassName'>
+<div class='checklist $ClassName.ShortName'>
     <div class='container boxed-element component-alignment'>
         <span class='icon icon-info'></span>
         
@@ -7,7 +7,7 @@
                 <h3>{$Title}</h3>
             <% end_if %>
 
-            <% if $Summary %><p>{$Summary}</p><% end_if %>
+            <% if $Intro %><p>{$Intro}</p><% end_if %>
         </article>
 
         <% if $Items %>
@@ -16,12 +16,12 @@
                 <ul>
                     <% loop $Items %>
                         <li class='main' data-for='desc-{$ID}'>
-                            <span class="total"><span class='icon <% if UseArrow %>arrow<% end_if %>' data-for='$ID-{$Up.ID}'></span> {$Title}</span>
+                            <span class="total"><span class='icon <% if ShouldUseArrow %>arrow<% end_if %>' data-for='$ID-{$Up.ID}'></span> {$Title}</span>
                         </li>
 
                         <div class="accord desc  desc-{$ID}" data-parent='desc-{$ID}'>
-                           $ClassName
-                            <% if $ClassName == 'CheckListCollection' %>        
+
+                            <% if $ClassName == 'OP\Studentsuccess\CheckListCollection' %>
                                 <ul>
                                     <% loop $ListCollectionItems %>
                                         <li data-input = 'input-{$ID}-{$Up.ID}' ><span class='icon icon-dot'></span>{$Content}</li>

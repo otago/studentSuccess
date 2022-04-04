@@ -64,6 +64,7 @@ class Linkable extends DataExtension
 
     public function Link()
     {
+
         if ($this->owner->LinkType == 'Internal' && $this->owner->InternalLinkID) {
             $siteTree = SiteTree::get()->byID($this->owner->InternalLinkID);
 

@@ -52,7 +52,7 @@ class CheckListItem extends DataObject
     }
 
 
-    public function getUseArrow()
+    public function ShouldUseArrow()
     {
         if ($parent = $this->CheckList()) {
             return ($parent instanceof SingleLevelList || $parent instanceof InteractiveList);

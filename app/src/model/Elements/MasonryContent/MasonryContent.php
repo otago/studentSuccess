@@ -30,7 +30,7 @@ class MasonryContent extends BaseElement
     private static $has_many = [
         'Tiles' => MasonryTile::class
     ];
-
+    private static $inline_editable = false;
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();

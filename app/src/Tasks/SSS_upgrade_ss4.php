@@ -75,23 +75,23 @@ class SSS_upgrade_ss4 extends BuildTask
 
 
         //************************************************************
-//            'CTAElement',
+            'CTAElement',
 
-//            'CarouselWithUpperLetter',
-//            'ElementTable',
+            'CarouselWithUpperLetter',
+            'ElementTable',
 
-//            'MasonryContent',
+            'MasonryContent',
 
-//            'MatrixElement',
-//            'ReferencesElement',
-//            'SidebarHelp',
+            'MatrixElement',
+            'ReferencesElement',
+            'SidebarHelp',
 
-//            'SingleLevelCheckList',
-//            'SingleLevelList',
+            'SingleLevelCheckList',
+            'SingleLevelList',
 
 
         ];
-        $dieOn = "CheckList";
+        $dieOn = "SingleLevelList";
         $this->moveWidgetsToElement($claases , $dieOn);
 
     }
@@ -113,6 +113,7 @@ class SSS_upgrade_ss4 extends BuildTask
                     case 'ElementContent':
                         $element = Injector::inst()->create(ElementContent::class);
                         $element->HTML = DB::query("SELECT HTML FROM ElementContent where id = $widget->ID")->value();
+                        $element->ReadMoreContent = DB::query("SELECT ReadMoreContent FROM ElementContent where id = $widget->ID")->value();
                         break;
                     default:
                         $element = Injector::inst()->create("OP\\Studentsuccess\\" . $widget->RecordClassName);
@@ -134,10 +135,17 @@ class SSS_upgrade_ss4 extends BuildTask
                     $element->CaseStudyContent = DB::query("SELECT CaseStudyContent FROM CaseStudy  WHERE ID = $widget->ID")->value();
                     $element->SummaryQuote = DB::query("SELECT Summary FROM CaseStudy  WHERE ID = $widget->ID")->value();
                     break;
-                case 'CheckList':
-                   // $element->Content = DB::query("SELECT Content FROM ListCollectionItem  WHERE ID = $widget->ID")->value();
-
+                case 'ElementTable':
+                    $element->HTML = DB::query("SELECT HTML FROM ElementContent where id = $widget->ID")->value();
                     break;
+                case 'ReferencesElement':
+                    $element->reflink = DB::query("SELECT link FROM ReferencesElement where id = $widget->ID")->value();
+                    break;
+                case 'CheckList':
+                case 'SingleLevelCheckList':
+                    $element->Intro = DB::query("SELECT Summary FROM CheckList where id = $widget->ID")->value();
+                    break;
+
             }
 
             $element->Title = $widget->Title;
@@ -206,14 +214,19 @@ class SSS_upgrade_ss4 extends BuildTask
             }
 
             if (
-                $widget->ID == 1595
-                //$widget->RecordClassName == $dieOn
+               // $widget->ID == 1595
+                $widget->RecordClassName == $dieOn
+               // and $widget->ID != 300
             ) {
-               // die("7777777777");
+                die("$dieOn .... 7777777777");
+
             }else {
                 $this->log("\t\t\t  Delete Element $widget->ID");
                 $widget->delete();
             }
+
+
+
         }
     }
 

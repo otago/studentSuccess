@@ -17,7 +17,7 @@ class ReferencesElement extends BaseElement
         'reference1' => 'Text',
         'referenceItalics' => 'Text',
         'reference2' => 'Text',
-        'link' => 'Text',
+        'reflink' => 'Text',
 
     ];
 
