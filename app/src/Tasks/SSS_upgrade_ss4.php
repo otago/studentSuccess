@@ -68,13 +68,6 @@ class SSS_upgrade_ss4 extends BuildTask
             'MasonryContentsWithFilters',
             'SidebarImageElement',
             'SidebarTestimony',
-
-            //Silverstripe
-            'ElementContent',
-
-
-
-        //************************************************************
             'CTAElement',
 
             'CarouselWithUpperLetter',
@@ -90,8 +83,24 @@ class SSS_upgrade_ss4 extends BuildTask
             'SingleLevelList',
 
 
+            //Silverstripe
+            'ElementContent',
+
+         //   'ElementImage',
+//            'ElementFile',
+
+
+//            'VideoComponent',
+
+
+
+        //************************************************************
+
+
+
+
         ];
-        $dieOn = "SingleLevelList";
+        $dieOn = "ElementFile";
         $this->moveWidgetsToElement($claases , $dieOn);
 
     }
