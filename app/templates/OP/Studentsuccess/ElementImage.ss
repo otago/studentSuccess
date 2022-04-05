@@ -1,4 +1,3 @@
-**********************
 <div class="left-content init element_image">
 	<div class="element-content-generic">
 		<div class="content-padder">

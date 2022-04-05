@@ -57,9 +57,7 @@ class SSS_upgrade_ss4 extends BuildTask
             'CheckList',
             'Carousel',
             'CaseStudy',
-
             'ContactElement',
-
             'HearFromOthers',
             'WayFinder',
             'ElementLink',
@@ -69,16 +67,12 @@ class SSS_upgrade_ss4 extends BuildTask
             'SidebarImageElement',
             'SidebarTestimony',
             'CTAElement',
-
             'CarouselWithUpperLetter',
             'ElementTable',
-
             'MasonryContent',
-
             'MatrixElement',
             'ReferencesElement',
             'SidebarHelp',
-
             'SingleLevelCheckList',
             'SingleLevelList',
 
@@ -86,21 +80,15 @@ class SSS_upgrade_ss4 extends BuildTask
             //Silverstripe
             'ElementContent',
 
-         //   'ElementImage',
-//            'ElementFile',
+            'ElementImage',
+            'ElementFile',
 
 
-//            'VideoComponent',
-
-
-
-        //************************************************************
-
-
+            'VideoComponent',
 
 
         ];
-        $dieOn = "ElementFile";
+        $dieOn = "VideoCompo6nent";
         $this->moveWidgetsToElement($claases , $dieOn);
 
     }
@@ -112,8 +100,10 @@ class SSS_upgrade_ss4 extends BuildTask
             'ParentID' => 'Desc',
             'ID' => 'ASC'
         ]);
+        $count = 0;
         foreach ($widgets as $widget) {
-            $count = "" . $widgets->count();
+            $count++;
+            $this->log( "$count/" . $widgets->count());
 
 
             if (in_array($widget->RecordClassName, $claases)) {
