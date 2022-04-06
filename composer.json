@@ -3,7 +3,7 @@
     "description": "Student Success website",
     "type": "silverstripe-project",
     "require": {
-        "php": ">=8.0",
+        "php": ">=7.4",
         "dnadesign/silverstripe-elemental": "^4.8.1",
         "dnadesign/silverstripe-elemental-list": "^1.2",
         "silverstripe/fulltextsearch": "3.9.6",
