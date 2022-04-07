@@ -27,6 +27,7 @@ class SAMLConfigurationExtension
      */
     public function asArray()
     {
+        $idpMetaData =  SAMLHelperFunctions::IDPMetaData();
         $SAMLConfiguration = new SAMLConfiguration();
         $sp = $SAMLConfiguration->config()->get('SP');
         $confarray = $SAMLConfiguration->asArray();
@@ -34,7 +35,7 @@ class SAMLConfigurationExtension
         // don't encrypt the name - this module only supports SHA-1
         $confarray['security']['nameIdEncrypted'] = false;
 
-        $idpMetaData =  SAMLHelperFunctions::IDPMetaData();
+
         $signing["idp"]['x509certMulti']['signing'] = $idpMetaData["idp"]['x509certMulti']['signing'];
 
         // add the URL Location where the <Response> from the IdP will be returned
