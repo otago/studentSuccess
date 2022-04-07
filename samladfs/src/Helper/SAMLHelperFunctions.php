@@ -53,8 +53,9 @@ class SAMLHelperFunctions
             if (!array_key_exists('idpEndpoint',$samlconfig)) {
                 var_dump($samlconfig);
                 $samlconfig =$samlconfig[$env];
-
+                var_dump($samlconfig);
             }
+
 
             $samlconfig["entityId"] = 'https://' . $serverName;
             $samlconfig["logoutURL"] = 'https://' . $serverName . '/saml/sls';

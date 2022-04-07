@@ -15,19 +15,19 @@ SilverStripe\SAML\Services\SAMLConfiguration:
 OP\SAMLHelperFunctions:
   filepath: "/_filestore/"
   dev:
-    privateKey: "/public/assets/_filestore/devidpmetadata.xml"
-    x509cert: "/public/assets/_filestore/devidpmetadata.xml"
+    privateKey: "certs/local.key"
+    x509cert: "certs/local.cer"
     idpEndpoint: "devIdP"
   uat:
     entityId: "https://students-uat.sites.silverstripe.com"
-    privateKey: "../../certs/devidp.pem"
-    x509cert: "../../certs/devidp.pem"
+    privateKey: "certs/devidp.pem"
+    x509cert: "certs/devidp.pem"
     logoutURL: "https://students-uat.sites.silverstripe.com/saml/sls"
     idpEndpoint: "devIdP"
   test:
     entityId: "https://students-uat.sites.silverstripe.com"
-    privateKey: "/public/assets/_filestore/testidpmetadata.xml"
-    x509cert: "/public/assets/_filestore/testidpmetadata.xml"
+    privateKey: "public/assets/_filestore/testidpmetadata.xml"
+    x509cert: "public/assets/_filestore/testidpmetadata.xml"
     logoutURL: "https://students-uat.sites.silverstripe.com/saml/sls"
     idpEndpoint: "devIdP"
   prod:
