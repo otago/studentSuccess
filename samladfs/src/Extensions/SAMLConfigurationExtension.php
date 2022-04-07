@@ -85,9 +85,7 @@ class SAMLConfigurationExtension
             $sp['nameIdFormat'] : Constants::NAMEID_TRANSIENT;
 echo "ssssssssssss";
         echo $spCertPath;
-        if(!director::is_cli()) {
-            die();
-        }
+       
         $conf['sp']['x509cert'] = file_get_contents($spCertPath);
         $conf['sp']['privateKey'] = file_get_contents($spKeyPath);
 
