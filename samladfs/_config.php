@@ -9,5 +9,5 @@ use SilverStripe\Core\Config\Config;
 use SilverStripe\SAML\Services\SAMLConfiguration;
 
 
-Config::modify()->set(SAMLConfiguration::class, 'sp', SAMLHelperFunctions::SamlConfig());
+Config::modify()->set(SAMLConfiguration::class, 'SP', SAMLHelperFunctions::SamlConfig());
 Config::modify()->set(SAMLConfiguration::class, 'IdP', SAMLHelperFunctions::IDPConfig());
