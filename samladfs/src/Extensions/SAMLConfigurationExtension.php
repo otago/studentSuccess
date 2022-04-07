@@ -26,34 +26,34 @@ class SAMLConfigurationExtension
     /**
      * @return array
      */
-    public function asArray()
-    {
-        $SAMLConfiguration = new SAMLConfiguration();
-        $sp = $SAMLConfiguration->config()->get('SP');
-        $confarray = $SAMLConfiguration->asArray();
-
-        // don't encrypt the name - this module only supports SHA-1
-        $confarray['security']['nameIdEncrypted'] = false;
-
-        $idpMetaData =  SAMLHelperFunctions::IDPMetaData();
-        $signing["idp"]['x509certMulti']['signing'] = $idpMetaData["idp"]['x509certMulti']['signing'];
-
-        // add the URL Location where the <Response> from the IdP will be returned
-        $confarray = array_merge_recursive(
-            $confarray,
-            [
-                'sp' => [
-                    'singleLogoutService' => [
-                    "Binding" => Constants::BINDING_HTTP_REDIRECT,
-                    "url" => $sp['logoutURL']
-                    ]
-                ]
-            ],
-            $signing
-        );
-
-        return $confarray;
-    }
+//    public function asArray()
+//    {
+//        $SAMLConfiguration = new SAMLConfiguration();
+//        $sp = $SAMLConfiguration->config()->get('SP');
+//        $confarray = $SAMLConfiguration->asArray();
+//
+//        // don't encrypt the name - this module only supports SHA-1
+//        $confarray['security']['nameIdEncrypted'] = false;
+//
+//        $idpMetaData =  SAMLHelperFunctions::IDPMetaData();
+//        $signing["idp"]['x509certMulti']['signing'] = $idpMetaData["idp"]['x509certMulti']['signing'];
+//
+//        // add the URL Location where the <Response> from the IdP will be returned
+//        $confarray = array_merge_recursive(
+//            $confarray,
+//            [
+//                'sp' => [
+//                    'singleLogoutService' => [
+//                    "Binding" => Constants::BINDING_HTTP_REDIRECT,
+//                    "url" => $sp['logoutURL']
+//                    ]
+//                ]
+//            ],
+//            $signing
+//        );
+//
+//        return $confarray;
+//    }
 
     public function asArray()
     {
@@ -67,8 +67,8 @@ class SAMLConfigurationExtension
         $conf['strict'] = $this->config()->get('strict');
         $conf['debug'] = $this->config()->get('debug');
 
-        // SERVICE PROVIDER SECTION
-        $sp = $this->config()->get('SP');
+//        // SERVICE PROVIDER SECTION
+//        $sp = $this->config()->get('SP');
 
         $spCertPath = Director::is_absolute($sp['x509cert'])
             ? $sp['x509cert']
