@@ -53,6 +53,9 @@ class SAMLHelperFunctions
             $samlconfig["entityId"] = 'https://' . $serverName;
             $samlconfig["logoutURL"] = 'https://' . $serverName . '/saml/sls';
         }
+        var_dump($env);
+var_dump($samlconfig);
+        die();
         return $samlconfig;
     }
 
