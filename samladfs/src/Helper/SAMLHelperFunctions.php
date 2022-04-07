@@ -73,7 +73,9 @@ class SAMLHelperFunctions
     public static function IDPConfig()
     {
         $samlconfig = SAMLHelperFunctions::SamlConfig();
-        return SAMLHelperFunctions::config()->get($samlconfig['idpEndpoint']);
+        $IDPConfig = SAMLHelperFunctions::config()->get($samlconfig['idpEndpoint']);
+        $IDPConfig['x509cert'] = SAMLHelperFunctions::MetadataFilePath();
+        return $IDPConfig;
     }
 
     /**
