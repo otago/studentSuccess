@@ -26,7 +26,7 @@ class SAMLHelperFunctions
      */
     public static function SamlConfig()
     {
-        $env = Environment::getEnv('CWP_ENVIRONMENT');
+        $env = Environment::getEnv('SS_ENVIRONMENT_TYPE');
 
         // Configure SAML certificates for the CWP Production environment
         if ($env == 'prod') {
