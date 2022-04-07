@@ -53,12 +53,6 @@ class SAMLHelperFunctions
             $samlconfig["entityId"] = 'https://' . $serverName;
             $samlconfig["logoutURL"] = 'https://' . $serverName . '/saml/sls';
         }
-
-        $idpMetaData =  SAMLHelperFunctions::MetaDataFilePath();
-         $bob = Director::is_absolute($idpMetaData)
-            ? $idpMetaData
-            : sprintf('%s/%s', BASE_PATH, $idpMetaData);
-         var_dump($bob);
         return $samlconfig;
     }
 
