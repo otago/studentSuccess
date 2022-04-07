@@ -49,7 +49,13 @@ class SAMLHelperFunctions
                 $env = 'dev';
             }
 
-            $samlconfig = SAMLHelperFunctions::config()->get($env);
+            $samlconfig= SAMLHelperFunctions::config()->get($env);
+            if (!array_key_exists('idpEndpoint',$samlconfig)) {
+                var_dump($samlconfig);
+                $samlconfig =$samlconfig[$env];
+
+            }
+
             $samlconfig["entityId"] = 'https://' . $serverName;
             $samlconfig["logoutURL"] = 'https://' . $serverName . '/saml/sls';
         }
@@ -63,7 +69,6 @@ class SAMLHelperFunctions
     public static function IDPConfig()
     {
         $samlconfig = SAMLHelperFunctions::SamlConfig();
-        var_dump($samlconfig);
         return SAMLHelperFunctions::config()->get($samlconfig['idpEndpoint']);
     }
 
