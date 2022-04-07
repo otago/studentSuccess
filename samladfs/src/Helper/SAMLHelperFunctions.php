@@ -63,6 +63,7 @@ class SAMLHelperFunctions
     public static function IDPConfig()
     {
         $samlconfig = SAMLHelperFunctions::SamlConfig();
+        var_dump($samlconfig);
         return SAMLHelperFunctions::config()->get($samlconfig['idpEndpoint']);
     }
 
