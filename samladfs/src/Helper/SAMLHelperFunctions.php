@@ -55,7 +55,7 @@ class SAMLHelperFunctions
         }
         var_dump($env);
 var_dump($samlconfig);
-        die();
+//        die();
         return $samlconfig;
     }
 
