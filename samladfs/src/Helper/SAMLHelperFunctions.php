@@ -56,6 +56,10 @@ class SAMLHelperFunctions
         var_dump(ASSETS_DIR.SAMLHelperFunctions::config()->get('filepath'));
         var_dump($env);
 var_dump($samlconfig);
+
+        if (file_exists(SAMLHelperFunctions::MetadataFilePath())) {
+            var_dump(file_get_contents(SAMLHelperFunctions::MetadataFilePath()));
+        }
 //        die();
         return $samlconfig;
     }

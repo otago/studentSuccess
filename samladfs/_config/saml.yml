@@ -15,8 +15,8 @@ SilverStripe\SAML\Services\SAMLConfiguration:
 OP\SAMLHelperFunctions:
   filepath: "/_filestore/"
   dev:
-    privateKey: "/public/filestore/devidpmetadata.xml"
-    x509cert: "/public/filestore/devidpmetadata.xml"
+    privateKey: "/public/assets/_filestore/devidpmetadata.xml"
+    x509cert: "/public/assets/_filestore/devidpmetadata.xml"
     idpEndpoint: "devIdP"
   uat:
     entityId: "https://students-uat.sites.silverstripe.com"
