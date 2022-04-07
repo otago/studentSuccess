@@ -12,5 +12,5 @@ composer.phar
 upgrade-code.phar
 node_modules/
 
-certs/
+certs/local.*
 local.yml
