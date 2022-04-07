@@ -15,6 +15,7 @@ use SilverStripe\Assets\Folder;
 use SilverStripe\Control\Director;
 use SilverStripe\Core\Config\Configurable;
 use SilverStripe\Core\Environment;
+use SilverStripe\SAML\Services\SAMLConfiguration;
 
 
 class SAMLHelperFunctions
@@ -53,14 +54,21 @@ class SAMLHelperFunctions
             $samlconfig["entityId"] = 'https://' . $serverName;
             $samlconfig["logoutURL"] = 'https://' . $serverName . '/saml/sls';
         }
-        var_dump(ASSETS_DIR.SAMLHelperFunctions::config()->get('filepath'));
-        var_dump($env);
-var_dump($samlconfig);
+//        var_dump(ASSETS_DIR.SAMLHelperFunctions::config()->get('filepath'));
+//        var_dump($env);
+//var_dump($samlconfig);
 
-        if (file_exists(SAMLHelperFunctions::MetadataFilePath())) {
-            echo SAMLHelperFunctions::MetadataFilePath();
-            var_dump(file_get_contents(SAMLHelperFunctions::MetadataFilePath()));
-        }
+
+        $SAMLConfiguration = new SAMLConfiguration();
+        $sp = $SAMLConfiguration->config()->get('SP');
+
+
+        $spCertPath = Director::is_absolute($sp['x509cert'])
+            ? $sp['x509cert']
+            : sprintf('%s/%s', BASE_PATH, $sp['x509cert']);
+
+        var_dump($spCertPath);
+
 //        die();
         return $samlconfig;
     }
