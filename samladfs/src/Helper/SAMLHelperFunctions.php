@@ -58,6 +58,7 @@ class SAMLHelperFunctions
 var_dump($samlconfig);
 
         if (file_exists(SAMLHelperFunctions::MetadataFilePath())) {
+            echo SAMLHelperFunctions::MetadataFilePath();
             var_dump(file_get_contents(SAMLHelperFunctions::MetadataFilePath()));
         }
 //        die();
