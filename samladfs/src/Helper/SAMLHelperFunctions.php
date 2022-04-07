@@ -51,6 +51,7 @@ class SAMLHelperFunctions
 
             $samlconfig= SAMLHelperFunctions::config()->get($env);
             if (!array_key_exists('idpEndpoint',$samlconfig)) {
+                echo "NO EXISTSSSS!!!!**********";
                 var_dump($samlconfig);
                 $samlconfig =$samlconfig[$env];
 
