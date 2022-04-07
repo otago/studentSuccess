@@ -27,11 +27,8 @@ class SAMLConfigurationExtension
      */
     public function asArray()
     {
-//        if (file_exists(SAMLHelperFunctions::MetadataFilePath())) {
-//          //  $OrginalFile = file_get_contents($FilePath);
-//            echo "sssssssss";
-//        }
-//        die();
+        $idpMetaData =  SAMLHelperFunctions::IDPMetaData();
+
         $SAMLConfiguration = new SAMLConfiguration();
         $sp = $SAMLConfiguration->config()->get('SP');
         $confarray = $SAMLConfiguration->asArray();
