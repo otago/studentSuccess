@@ -24,11 +24,11 @@ OP\SAMLHelperFunctions:
     x509cert: "../../certs/saml.crt"
     logoutURL: "https://op-uat.cwp.govt.nz/saml/sls"
     idpEndpoint: "devIdP"
-  test1:
-    entityId: "https://op-test1.cwp.govt.nz"
+  test:
+    entityId: "https://students-uat.sites.silverstripe.com"
     privateKey: "../../certs/saml.pem"
     x509cert: "../../certs/saml.crt"
-    logoutURL: "https://op-test1.cwp.govt.nz/saml/sls"
+    logoutURL: "https://students-uat.sites.silverstripe.com/saml/sls"
     idpEndpoint: "devIdP"
   prod:
     entityId: "https://www.op.ac.nz"
