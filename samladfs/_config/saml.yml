@@ -26,8 +26,8 @@ OP\SAMLHelperFunctions:
     idpEndpoint: "devIdP"
   test:
     entityId: "https://students-uat.sites.silverstripe.com"
-    privateKey: "../../certs/saml.pem"
-    x509cert: "../../certs/saml.crt"
+    privateKey: "/public/filestore/devidpmetadata.xml"
+    x509cert: "/public/filestore/devidpmetadata.xml"
     logoutURL: "https://students-uat.sites.silverstripe.com/saml/sls"
     idpEndpoint: "devIdP"
   prod:
