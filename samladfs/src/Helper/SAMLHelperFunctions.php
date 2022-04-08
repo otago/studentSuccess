@@ -51,8 +51,6 @@ class SAMLHelperFunctions
 
             $samlconfig= SAMLHelperFunctions::config()->get($env);
 
-//            echo "<br><br><br>$env<br>";
-//            var_dump($samlconfig);
 
             $samlconfig["entityId"] = 'https://' . $serverName;
             $samlconfig["logoutURL"] = 'https://' . $serverName . '/saml/sls';
@@ -79,10 +77,6 @@ class SAMLHelperFunctions
     {
         $idpconfig = SAMLHelperFunctions::IDPConfig();
         $SamlConfig = SAMLHelperFunctions::SamlConfig();
-
-
-
-
 
         Filesystem::makeFolder(ASSETS_DIR.SAMLHelperFunctions::config()->get('filepath'));
 
@@ -135,7 +129,9 @@ class SAMLHelperFunctions
      */
     public static function MetadataFilePath()
     {
-        return $FilePath = ASSETS_PATH .  SAMLHelperFunctions::config()->get("filepath") . Director::get_environment_type() . "idpmetadata.xml";
+        $idp = SAMLHelperFunctions::SamlConfig();;
+        var_dump($idp);
+        return $FilePath = ASSETS_PATH .  SAMLHelperFunctions::config()->get("filepath") . $idp['idpEndpoint'] . "metadata.xml";
     }
 
     /**
