@@ -50,15 +50,9 @@ class SAMLHelperFunctions
             }
 
             $samlconfig= SAMLHelperFunctions::config()->get($env);
-            if (!array_key_exists('idpEndpoint',$samlconfig)) {
-                echo "NO EXISTSSSS!!!!**********";
-                var_dump($samlconfig);
-                $samlconfig =$samlconfig[$env];
 
-
-            }
-            echo "<br><br><br>$env<br>";
-            var_dump($samlconfig);
+//            echo "<br><br><br>$env<br>";
+//            var_dump($samlconfig);
 
             $samlconfig["entityId"] = 'https://' . $serverName;
             $samlconfig["logoutURL"] = 'https://' . $serverName . '/saml/sls';
@@ -73,9 +67,7 @@ class SAMLHelperFunctions
     public static function IDPConfig()
     {
         $samlconfig = SAMLHelperFunctions::SamlConfig();
-        $IDPConfig = SAMLHelperFunctions::config()->get($samlconfig['idpEndpoint']);
-        $IDPConfig['x509cert'] = SAMLHelperFunctions::MetadataFilePath();
-        return $IDPConfig;
+        return SAMLHelperFunctions::config()->get($samlconfig['idpEndpoint']);
     }
 
     /**
