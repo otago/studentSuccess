@@ -44,7 +44,7 @@ OP\SAMLHelperFunctions:
     metadata: "https://idp.op.ac.nz/FederationMetadata/2007-06/FederationMetadata.xml"
   devIdP:
     entityId: "https://devidp.op.ac.nz/adfs/services/trust"
-    x509cert: "public/assets/_filestore/devIdPmetadata.xml"
+    x509cert: "certs/devidp.pem"
     singleSignOnService: "https://devidp.op.ac.nz/adfs/ls/"
     singleLogoutService: "https://devidp.op.ac.nz/adfs/ls/"
     metadata: "https://devidp.op.ac.nz/FederationMetadata/2007-06/FederationMetadata.xml"
