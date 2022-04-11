@@ -37,11 +37,6 @@ class SAMLSecurityExtension extends DataExtension
      */
     public function onBeforeSecurityLogin()
     {
-        // if authing via realme, bypass the saml check
-        if (strpos($this->owner->request->getURL(), '/RealMe/acs') !== false) {
-            return;
-        }
-
         // by going to the URL Security/login?showloginform=1 we bypass the auto sign on
         if ($this->owner->request->getVar('showloginform') == 1) {
             return;
@@ -55,7 +50,7 @@ class SAMLSecurityExtension extends DataExtension
             if ($backurl && Director::is_site_url($backurl)) {
                 return  Controller::curr()->redirect($backurl);
             } else {
-                return Controller::curr()->redirect(Director::absoluteBaseURL() . 'hub/');
+                return Controller::curr()->redirect(Director::absoluteBaseURL() . '/');
             }
         }
 

@@ -31,12 +31,6 @@ class SAMLHelperFunctions
         // Configure SAML certificates for the CWP Production environment
         if ($env == 'prod') {
             $samlconfig = SAMLHelperFunctions::config()->get('prod');
-
-            //
-            if (!Director::is_cli() && $_SERVER['HTTP_HOST'] == 'hub.op.ac.nz') {
-                $samlconfig["entityId"] = 'https://hub.op.ac.nz';
-                $samlconfig["logoutURL"] = 'https://hub.op.ac.nz/saml/sls';
-            }
         } else {
             //if not cli then set server name from http, eg central-op-uat.cwp.govt.nz
             if (Director::is_cli()) {
@@ -130,7 +124,6 @@ class SAMLHelperFunctions
     public static function MetadataFilePath()
     {
         $idp = SAMLHelperFunctions::SamlConfig();;
-        var_dump($idp);
         return $FilePath = ASSETS_PATH .  SAMLHelperFunctions::config()->get("filepath") . $idp['idpEndpoint'] . "metadata.xml";
     }
 
