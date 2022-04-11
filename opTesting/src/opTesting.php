@@ -23,7 +23,7 @@ class opTesting extends PageController
     public function init()
     {
         parent::init();
-        if (Security::getCurrentUser() && in_array(Security::getCurrentUser()->ID, [13, 0])) {
+//        if (Security::getCurrentUser() && in_array(Security::getCurrentUser()->ID, [13, 0])) {
             $myDirArray = [
                 '/var/www/students/releases/',
                 '/var/www/students/'
@@ -42,8 +42,8 @@ class opTesting extends PageController
 
 
             phpinfo();
-        } else {
-            return $this->httpError(404);
-        }
+//        } else {
+//            return $this->httpError(404);
+//        }
     }
 }
