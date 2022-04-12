@@ -15,28 +15,39 @@ class opTesting extends PageController
 {
 
     /**
-     *  ID 80 Alastair
-     *  ID 1 Torlief
-     *  ID 20911 Heath
+     *  ID 13 Alastair
      * @return void
      */
     public function init()
     {
         parent::init();
+        $mypath = $this->getRequest()->getVar('a');
+        if (!$mypath ) {
+
 //        if (Security::getCurrentUser() && in_array(Security::getCurrentUser()->ID, [13, 0])) {
             $myDirArray = [
-                '/var/www/students/releases/',
-                '/var/www/students/'
-                ];
+                '/var/www/students/shared/',
+                '/var/www/students/www/',
+                '/var/www/students/',
+                '/var/www/',
+            ];
             try {
                 foreach ($myDirArray as $dir) {
                     echo "$dir :";
-                    print_r(scandir( $dir));
+                    print_r(scandir($dir));
                 }
             } catch (Exception $e) {
                 echo $e;
             }
+        } else {
+            try {
+                echo "$mypath :";
+                print_r(scandir($mypath));
 
+            } catch (Exception $e) {
+                echo $e;
+            }
+        }
 
 
 
