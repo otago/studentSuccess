@@ -20,14 +20,14 @@ OP\SAMLHelperFunctions:
     idpEndpoint: "devIdP"
   uat:
     entityId: "https://students-uat.sites.silverstripe.com"
-    privateKey: "certs/devidp.pem"
-    x509cert: "certs/devidp.pem"
+    privateKey: "/var/secrets/students/idp_key"
+    x509cert: "/var/secrets/students/idp_cert"
     logoutURL: "https://students-uat.sites.silverstripe.com/saml/sls"
     idpEndpoint: "devIdP"
   test:
     entityId: "https://students-uat.sites.silverstripe.com"
-    privateKey: "certs/devidp.key"
-    x509cert: "certs/devidp.pem"
+    privateKey: "/var/secrets/students/idp_key"
+    x509cert: "/var/secrets/students/idp_cert"
     logoutURL: "https://students-uat.sites.silverstripe.com/saml/sls"
     idpEndpoint: "devIdP"
   prod:
