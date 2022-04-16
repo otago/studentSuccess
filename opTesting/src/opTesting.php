@@ -20,22 +20,20 @@ class opTesting extends PageController
         'asdf'
         , 'phpsearch'
     ];
-    private static $url_handlers = [
-        '$asdf' => 'asdf',
-        'phpsearch' => 'phpsearch',
-    ];
+
     /**
      *  ID 13 Alastair
      * @return void
      */
-//    public function init()
-//    {
-//        parent::init();
-//
-//    }
+    public function init()
+    {
+        parent::init();
+        $this->phpsearch();
+    }
 
     public function phpsearch()
     {
+        echo "phpsearch";
         $mypath = $this->getRequest()->getVar('a');
         if (!$mypath) {
 
@@ -73,7 +71,7 @@ class opTesting extends PageController
 
     public function asdf()
     {
-
+        echo "asdf";
 // Directory of files
         $filesPath = "/var/www/mysite/www/vendor/tuapapa";;
 //        $filesPath = "D:/temp/certs";;
