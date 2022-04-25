@@ -223,15 +223,7 @@ class SAMLControllerExtension extends SAMLController
         $persistent = Security::config()->get('autologin_enabled');
         $identityStore->logIn($member, $persistent, $this->getRequest());
 
-        //redriect to backurl
-        if ($request->getSession()->get('BackURL')
-            && Director::is_site_url($request->getSession()->get('BackURL')) //is a url
-            && $request->getSession()->get('BackURL') != 'Security/login' //back url is not Security/login, prevent loop
-        ) {
-            return $this->getRedirect();
-        }
-        // redirect to the hub
-        return $this->redirect(Director::absoluteBaseURL() );
+        return $this->getRedirect();
     }
 
 
