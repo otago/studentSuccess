@@ -8,6 +8,7 @@
         "dnadesign/silverstripe-elemental-list": "^1.2",
         "silverstripe/crontask": "^2.4",
         "silverstripe/dynamodb": "^4.0",
+        "silverstripe/externallinks": "^2.2",
         "silverstripe/fulltextsearch": "3.9.6",
         "silverstripe/recipe-cms": "^4.10.0",
         "silverstripe/saml": "2.0.0",

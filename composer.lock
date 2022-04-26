@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9e46ea286e2cc278c1277aaa5aa66e4f",
+    "content-hash": "d64c8fed63091de5fc64b39b29bfe589",
     "packages": [
         {
             "name": "asyncphp/doorman",
@@ -3788,6 +3788,68 @@
                 "source": "https://github.com/silverstripe/silverstripe-errorpage/tree/1.10.1"
             },
             "time": "2022-02-01T20:32:07+00:00"
+        },
+        {
+            "name": "silverstripe/externallinks",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-externallinks.git",
+                "reference": "b4ccd0302504131c7cfad05def1235ef7a79f0d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-externallinks/zipball/b4ccd0302504131c7cfad05def1235ef7a79f0d8",
+                "reference": "b4ccd0302504131c7cfad05def1235ef7a79f0d8",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3 || ^8.0",
+                "silverstripe/cms": "^4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "^3.0"
+            },
+            "suggest": {
+                "ssymbiote/silverstripe-queuedjobs": "Provides a more efficient method of generating/updating the report"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "expose": [
+                    "css",
+                    "javascript"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "SilverStripe\\ExternalLinks\\": "src/",
+                    "SilverStripe\\ExternalLinks\\Tests\\": "tests/",
+                    "SilverStripe\\ExternalLinks\\Tests\\Behat\\Context\\": "tests/behat/src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kirk Mayo",
+                    "email": "kirk@silverstripe.com"
+                }
+            ],
+            "description": "Adds tracking of broken external links to the SilverStripe CMS",
+            "keywords": [
+                "broken",
+                "href",
+                "links",
+                "silverstripe"
+            ],
+            "support": {
+                "issues": "https://github.com/silverstripe/silverstripe-externallinks/issues",
+                "source": "https://github.com/silverstripe/silverstripe-externallinks/tree/2.2.0"
+            },
+            "time": "2021-11-30T00:55:20+00:00"
         },
         {
             "name": "silverstripe/framework",
