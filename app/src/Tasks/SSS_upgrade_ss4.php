@@ -36,10 +36,10 @@ class SSS_upgrade_ss4 extends BuildTask
     public function run($request)
     {
         echo "\n\n";
-//        $this->doTheFiles($request);
+        $this->doTheFiles($request);
 
 
-        $this->dothewidgets();
+//        $this->dothewidgets();
 
 
         echo "\n\nDone! easy ;)";
@@ -101,6 +101,7 @@ class SSS_upgrade_ss4 extends BuildTask
             'ID' => 'ASC'
         ]);
         $count = 0;
+        $pageids = [];
         foreach ($widgets as $widget) {
             $count++;
             $this->log( "$count/" . $widgets->count());
@@ -153,27 +154,9 @@ class SSS_upgrade_ss4 extends BuildTask
             $element->ID = $widget->ID;
 
             $element->write();
-            $pageid = [];
 
-            //Post workd
-//            switch ($widget->RecordClassName) {
-//                case 'CheckList':
-//                   $cl = CheckList::get_by_id($widget->ID);
-//
-//                    foreach ($cl->Items() as $clitems) {
-//
-//                        if ($clitems->Content == null) {
-//                            $this->log("\t\t\t\t CheckList items: ".$clitems->ID);
-////                            $clitems->Content = $element->Content = DB::query("SELECT Content FROM ListCollectionItem  WHERE ID = $clitems->ID")->value();
-////                            $clitems->write();
-//                           // die("ssss");
-//                        }
-//
-//                    }
-//                    // $element->Content = DB::query("SELECT Content FROM ListCollectionItem  WHERE ID = $widget->ID")->value();
-//
-//                    break;
-//            }
+
+
 
 
             $update1 = SQLUpdate::create('"Element"')->addWhere(['ID' => $element->ID]);
@@ -189,7 +172,7 @@ class SSS_upgrade_ss4 extends BuildTask
                     $area = $page->ElementalArea;
                     $area->Elements()->add($element);
                     $page->publishRecursive();
-                    $pageid[] = $page->ID;
+                    $pageids[] = $page->ID;
                 } else {
                     $this->log(" NO Page:  widget $widget->ID $widget->Title parentid:$widget->ParentID");
                 }
@@ -226,6 +209,13 @@ class SSS_upgrade_ss4 extends BuildTask
 
 
 
+        }
+
+
+        foreach ($pageids as $pageid) {
+            $myPAge = Page::get_by_id($pageid);
+            $this->log("Publish page ". $myPAge->ID . " " . $myPAge->Title );
+            $myPAge->publishRecursive();
         }
     }
 

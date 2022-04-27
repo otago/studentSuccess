@@ -3,16 +3,6 @@
 namespace OP\Studentsuccess;
 
 
-
-
-
-
-
-
-
-
-
-
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\GridField\GridField;
@@ -30,18 +20,16 @@ use SilverStripe\ORM\DataExtension;
 use OP\Studentsuccess\FormUtils;
 
 
-
-
 class OTPConfigs extends DataExtension
 {
 
-    private static $db = array(
+    private static $db = [
         'TelephoneInternational' => 'Varchar',
         'TelephoneNewZealand' => 'Varchar',
         'ContactEmail' => 'Varchar',
-        'AddressCol1' => 'Text',
-        'AddressCol2' => 'Text',
-        'AddressCol3' => 'Text',
+        'AddressCol1' => 'HTMLFragment',
+        'AddressCol2' => 'HTMLFragment',
+        'AddressCol3' => 'HTMLFragment',
 
 
         'ContactBoxTitle' => 'Varchar(70)',
@@ -67,16 +55,16 @@ class OTPConfigs extends DataExtension
         'FeedBackLiteOn' => 'Boolean',
         'FeedBackLite' => 'HTMLFragment'
 
-    );
+    ];
 
-    private static $has_one = array(
+    private static $has_one = [
         'CreativeCommonsLicenceImage' => Image::class,
-    );
+    ];
 
     public function updateCMSFields(FieldList $fields)
     {
 
-        $fields->addFieldsToTab('Root.Contacts', array(
+        $fields->addFieldsToTab('Root.Contacts', [
 
 
             TextField::create('ContactBoxTitle')->setTitle('Title'),
@@ -101,7 +89,7 @@ class OTPConfigs extends DataExtension
             TextareaField::create('ContactBoxLocation3')->setTitle('Location'),
             TextField::create('ContactBoxPhone3')->setTitle('Phone 3'),
             TextField::create('ContactBoxEmail3')->setTitle('Email 3'),
-        ));
+        ]);
 
 
         $uploadField = UploadField::create('CreativeCommonsLicenceImage')
@@ -110,44 +98,25 @@ class OTPConfigs extends DataExtension
         $caption = HTMLEditorField::create('CreativeCommonsLicence');
 
 
-
         $LinkBlocksGrid = GridField::create('LinkBlocks', 'Link Blocks', FooterLinkBlock::get(), GridFieldConfig_RelationEditor::create());
-        $fields->addFieldsToTab('Root.Footer.Top', array(
+        $fields->addFieldsToTab('Root.Footer.Top', [
             $LinkBlocksGrid,
-
             $uploadField,
-
             $caption
 
-        ));
+        ]);
 
         $fields->addFieldToTab("Root.Main", new CheckboxField('FeedBackLiteOn', 'FeedBackLiteOn'));
         $fields->addFieldToTab("Root.Main", new TextareaField('FeedBackLite', 'FeedBackLite'));
 
-        $fields->addFieldsToTab('Root.Footer.Bottom', array(
+        $fields->addFieldsToTab('Root.Footer.Bottom', [
             TextField::create('TelephoneInternational'),
             TextField::create('TelephoneNewZealand'),
             TextField::create('ContactEmail'),
             TextareaField::create('AddressCol1'),
             TextareaField::create('AddressCol2'),
             TextareaField::create('AddressCol3')
-        ));
-    }
-
-
-    function AddressCol1HTML()
-    {
-        return nl2br($this->owner->AddressCol1);
-    }
-
-    function AddressCol2HTML()
-    {
-        return nl2br($this->owner->AddressCol2);
-    }
-
-    function AddressCol3HTML()
-    {
-        return nl2br($this->owner->AddressCol3);
+        ]);
     }
 
 
@@ -165,9 +134,9 @@ class OTPConfigs extends DataExtension
         foreach (FooterLinkBlock::get() as $block) {
 
             if ((!$col || $iCounter >= $iPerCol) && $alRet->count() != 3) {
-                $col = new ArrayData(array(
+                $col = new ArrayData([
                     'Blocks' => new ArrayList()
-                ));
+                ]);
                 $alRet->push($col);
                 $iCounter = 0;
             }

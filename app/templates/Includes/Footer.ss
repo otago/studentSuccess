@@ -35,14 +35,14 @@
                 </p>
             </aside>
             <% end_if %>
-            <% if $AddressCol1 %><address class="col">{$AddressCol1HTML}</address><% end_if %>
-            <% if $AddressCol2 %><address class="col middle">{$AddressCol2HTML}</address><% end_if %>
-            <% if $AddressCol3 %><address class="col">{$AddressCol3HTML}</address><% end_if %>
+            <% if $AddressCol1 %><address class="col">{$AddressCol1}</address><% end_if %>
+            <% if $AddressCol2 %><address class="col middle">{$AddressCol2}</address><% end_if %>
+            <% if $AddressCol3 %><address class="col">{$AddressCol3}</address><% end_if %>
         </section>
 
         <section class="container creativecommons">
             {$CreativeCommonsLicenceImage}
-            <p>{$CreativeCommonsLicence}</p>
+            {$CreativeCommonsLicence}
         </section>
     </div>
     <% end_with %>
