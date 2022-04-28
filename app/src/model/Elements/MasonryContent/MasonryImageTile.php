@@ -23,4 +23,8 @@ class MasonryImageTile extends MasonryTile
         'Image' => Image::class
     ];
 
+    private static $owns = [
+        'Image'
+    ];
+
 } 

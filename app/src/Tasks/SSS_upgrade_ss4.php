@@ -96,10 +96,6 @@ class SSS_upgrade_ss4 extends BuildTask
 
     private function moveWidgetsToElement($claases, $dieOn = "")
     {
-
-        //$this->publishThings(Accordion::get());
-        $this->publishThings(ReferencesElement::get());
-        die();
         $widgets = Widget::get()->filter(["ClassName" => $claases])->sort([
             'ParentID' => 'Desc',
             'ID' => 'ASC'
@@ -147,6 +143,7 @@ class SSS_upgrade_ss4 extends BuildTask
                     break;
                 case 'CheckList':
                 case 'SingleLevelCheckList':
+                case 'InteractiveList':
                     $element->Intro = DB::query("SELECT Summary FROM CheckList where id = $widget->ID")->value();
                     break;
 
@@ -212,6 +209,11 @@ class SSS_upgrade_ss4 extends BuildTask
             }
         }//foreach
 
+
+        //specifc publishing
+        $this->publishThings(Accordion::get());
+        $this->publishThings(ReferencesElement::get());
+
         //page publish
         $count = 0;
         foreach ($pageids as $pageid) {
@@ -221,14 +223,6 @@ class SSS_upgrade_ss4 extends BuildTask
             $myPAge->publishRecursive();
         }
 
-        //Accordion publish
-
-        $this->publishThings(Accordion::get());
-        $this->publishThings(ReferencesElement::get());
-
-
-
-
     }
 
     public function publishThings($accodins)
@@ -236,7 +230,7 @@ class SSS_upgrade_ss4 extends BuildTask
         $count = 0;
         foreach ($accodins as $accord) {
             $count++;
-            $this->log("$count/" . $accodins->Count() . " " . $accodins->ClassName ."  Publish " . $accord->ID . " " . $accord->Title);
+            $this->log("$count/" . $accodins->Count() . " " . $accodins->ClassName ."  publishThings() " . $accord->ID . " " . $accord->Title);
             $accord->publishRecursive();
         }
     }
