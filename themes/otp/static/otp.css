@@ -3015,6 +3015,7 @@ table tr:last-child {
   background: rgba(0, 0, 0, 0.3);
   top: 0;
   left: 0;
+  z-index: 3;
   content: " ";
 }
 .hero.no-hero {
@@ -7416,6 +7417,10 @@ footer.main .container.addresses address.middle {
   opacity: 0.7;
   font-size: 14px;
   line-height: 20px;
+}
+.creativecommons .creativecommonsimg {
+  float: left;
+  padding-right: 10px;
 }
 .drop-menu {
   background: #f7f7f6;

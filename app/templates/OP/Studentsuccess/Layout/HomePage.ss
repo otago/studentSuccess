@@ -24,7 +24,7 @@ $ElementalArea
 <head>
 
 </head>
-<body class="template_{$ClassName}">
+<body class="template_{$ClassName.ShortName}">
 
 
 </body>

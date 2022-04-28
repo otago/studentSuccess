@@ -36,10 +36,10 @@ class SSS_upgrade_ss4 extends BuildTask
     public function run($request)
     {
         echo "\n\n";
-        $this->doTheFiles($request);
+//        $this->doTheFiles($request);
 
 
-//        $this->dothewidgets();
+        $this->dothewidgets();
 
 
         echo "\n\nDone! easy ;)";
@@ -50,8 +50,8 @@ class SSS_upgrade_ss4 extends BuildTask
     private function dothewidgets()
     {
         //Accordion stuff has to go first
-        $this->moveWidgetsToElement(['Accordion'] );
-        $this->moveWidgetsToElement(['AccordionItem'] );
+        $this->moveWidgetsToElement(['Accordion']);
+        $this->moveWidgetsToElement(['AccordionItem']);
 
         $claases = [
             'CheckList',
@@ -89,13 +89,17 @@ class SSS_upgrade_ss4 extends BuildTask
 
         ];
         $dieOn = "VideoCompo6nent";
-        $this->moveWidgetsToElement($claases , $dieOn);
+        $this->moveWidgetsToElement($claases, $dieOn);
 
     }
 
 
-    private function moveWidgetsToElement($claases  ,$dieOn = "")
+    private function moveWidgetsToElement($claases, $dieOn = "")
     {
+
+        //$this->publishThings(Accordion::get());
+        $this->publishThings(ReferencesElement::get());
+        die();
         $widgets = Widget::get()->filter(["ClassName" => $claases])->sort([
             'ParentID' => 'Desc',
             'ID' => 'ASC'
@@ -104,7 +108,7 @@ class SSS_upgrade_ss4 extends BuildTask
         $pageids = [];
         foreach ($widgets as $widget) {
             $count++;
-            $this->log( "$count/" . $widgets->count());
+            $this->log("$count/" . $widgets->count());
 
 
             if (in_array($widget->RecordClassName, $claases)) {
@@ -156,9 +160,6 @@ class SSS_upgrade_ss4 extends BuildTask
             $element->write();
 
 
-
-
-
             $update1 = SQLUpdate::create('"Element"')->addWhere(['ID' => $element->ID]);
             $update1->assign('"Classname"', $element->ClassName);
             $update1->execute();
@@ -172,7 +173,10 @@ class SSS_upgrade_ss4 extends BuildTask
                     $area = $page->ElementalArea;
                     $area->Elements()->add($element);
                     $page->publishRecursive();
-                    $pageids[] = $page->ID;
+                    if (in_array($page->ID, $pageids) === false) {
+                        $pageids[] = $page->ID;
+                    }
+
                 } else {
                     $this->log(" NO Page:  widget $widget->ID $widget->Title parentid:$widget->ParentID");
                 }
@@ -196,26 +200,44 @@ class SSS_upgrade_ss4 extends BuildTask
             }
 
             if (
-               // $widget->ID == 1595
+                // $widget->ID == 1595
                 $widget->RecordClassName == $dieOn
-               // and $widget->ID != 300
+                // and $widget->ID != 300
             ) {
                 die("$dieOn .... 7777777777");
 
-            }else {
+            } else {
                 $this->log("\t\t\t  Delete Element $widget->ID");
                 $widget->delete();
             }
+        }//foreach
 
-
-
+        //page publish
+        $count = 0;
+        foreach ($pageids as $pageid) {
+            $count++;
+            $myPAge = Page::get_by_id($pageid);
+            $this->log("$count/" . count($pageids) . " Publish page " . $myPAge->ID . " " . $myPAge->Title);
+            $myPAge->publishRecursive();
         }
 
+        //Accordion publish
 
-        foreach ($pageids as $pageid) {
-            $myPAge = Page::get_by_id($pageid);
-            $this->log("Publish page ". $myPAge->ID . " " . $myPAge->Title );
-            $myPAge->publishRecursive();
+        $this->publishThings(Accordion::get());
+        $this->publishThings(ReferencesElement::get());
+
+
+
+
+    }
+
+    public function publishThings($accodins)
+    {
+        $count = 0;
+        foreach ($accodins as $accord) {
+            $count++;
+            $this->log("$count/" . $accodins->Count() . " " . $accodins->ClassName ."  Publish " . $accord->ID . " " . $accord->Title);
+            $accord->publishRecursive();
         }
     }
 

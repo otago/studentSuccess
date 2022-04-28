@@ -45,7 +45,7 @@
     <% end_if %>
     <% end_with %>
 </head>
-<body class="template_{$ClassName}">
+<body class="template_{$ClassName.ShortName}">
     <% if not $isStage %>
         <!-- Google Tag Manager -->
         <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KK4TJS"

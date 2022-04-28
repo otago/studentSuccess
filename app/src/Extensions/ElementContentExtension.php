@@ -26,6 +26,8 @@ class ElementContentExtension extends DataExtension
         'ProcessedHTML' => 'HTMLText'
     ];
 
+    private static $inline_editable = false;
+
     function updateCMSFields(FieldList $fields)
     {
         $contentField = $fields->dataFieldByName('HTML');

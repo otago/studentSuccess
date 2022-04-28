@@ -61,5 +61,16 @@ class Accordion extends BaseElement
 
         return false;
     }
+
+//    public function onAfterWrite()
+//    {
+//        parent::onAfterWrite();
+//        foreach ($this->Items() as $Item) {
+//            if (!$Item->isPublished()) {
+////                $Item->publishSingle();
+//                $Item->publishRecursive();
+//            }
+//        }
+//    }
 }
 

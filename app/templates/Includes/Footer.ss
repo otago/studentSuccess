@@ -41,8 +41,7 @@
         </section>
 
         <section class="container creativecommons">
-            {$CreativeCommonsLicenceImage}
-            {$CreativeCommonsLicence}
+            <span class="creativecommonsimg">{$CreativeCommonsLicenceImage}</span><span>{$CreativeCommonsLicence}</span>
         </section>
     </div>
     <% end_with %>

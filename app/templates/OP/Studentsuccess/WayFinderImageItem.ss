@@ -3,7 +3,7 @@
 <% else %>
 	<section class='{$Size} col career-handbook tile'>
 <% end_if %>
-    {$Image}
+    {$Image.Pure}
     <% if $Icon %><span class='icon {$Icon}'></span><% end_if %>
     <article>
         <h3>{$Title}</h3>
