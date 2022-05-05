@@ -2,7 +2,7 @@
 	<div class="element-content-generic">
 		<div class="content-padder">
 			<figure class="full-width element">
-        		{$Image}  9999999999
+        		{$Image}
         		<% if $Caption %>
         		    <figcaption>
             		    {$Caption}

@@ -4763,6 +4763,9 @@ table tr:last-child {
 .template_FilterableCheckList .checkable:last-child {
   border-bottom: 1px solid #ddd;
 }
+.SearchResultsSummary br {
+  display: none;
+}
 .glossary .page-intro.main.glossary h1 {
   color: #004f8f;
 }

@@ -22,7 +22,7 @@
 							<h2><a href="{$Link}">{$Title}</a></h2>
 							<p><small>$Breadcrumbs</small></p>
 
-							<p>$Content.Summary</p>
+							<p class="SearchResultsSummary">$Content.Summary</p>
 							
 							<hr />
 						<% end_loop %>
