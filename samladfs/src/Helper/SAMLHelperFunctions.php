@@ -29,7 +29,7 @@ class SAMLHelperFunctions
         $env = Environment::getEnv('SS_ENVIRONMENT_TYPE');
 
         // Configure SAML certificates for the CWP Production environment
-        if ($env == 'prod') {
+        if ($env == 'live') {
             $samlconfig = SAMLHelperFunctions::config()->get('prod');
         } else {
             //if not cli then set server name from http, eg central-op-uat.cwp.govt.nz
