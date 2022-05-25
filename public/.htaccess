@@ -13,6 +13,9 @@
   </IfModule>
 </IfModule>
 
+RewriteCond %{HTTP_HOST} ^studentservices\.op\.ac\.nz [NC]
+RewriteRule ^(.*)$ https://studentsupport.op.ac.nz/$1 [R,L]
+
 ### SILVERSTRIPE START ###
 
 # Deny access to templates (but allow from localhost)
