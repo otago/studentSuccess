@@ -1,7 +1,7 @@
 mappings:
   OPBaseElementExtension: OP\Studentsuccess\OPBaseElementExtension
   Contactable: OP\Studentsuccess\Contactable
-  ControllerExtension: OP\Studentsuccess\ControllerExtension
+  ControllerExtension: OP\Studentsuccess\ControllerExtension 
   ElementalAreaExtension: OP\Studentsuccess\ElementalAreaExtension
   ElementContentExtension: OP\Studentsuccess\ElementContentExtension
   ElementFileExtension: OP\Studentsuccess\ElementFileExtension
