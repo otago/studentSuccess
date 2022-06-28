@@ -38,6 +38,10 @@ class MatrixElement extends BaseElement
         'OverlayBottomRight' => 'Text'
     ];
 
+    public function getType()
+    {
+        return 'Matrix of Four blocks';
+    }
 
     function OverlayHTML($strField)
     {

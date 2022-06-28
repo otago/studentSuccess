@@ -31,6 +31,12 @@ class MasonryContent extends BaseElement
         'Tiles' => MasonryTile::class
     ];
     private static $inline_editable = false;
+
+    public function getType()
+    {
+        return 'Masonry Element';
+    }
+
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();

@@ -21,6 +21,10 @@ class ReferencesElement extends BaseElement
 
     ];
 
+    public function getType()
+    {
+        return 'References Element';
+    }
 
     public function getCMSFields()
     {

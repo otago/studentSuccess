@@ -13,6 +13,7 @@ use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\ORM\DataExtension;
+use UncleCheese\DisplayLogic\Forms\Wrapper;
 
 
 class Linkable extends DataExtension
@@ -47,11 +48,12 @@ class Linkable extends DataExtension
                 'None' => 'None',
                 'Internal' => 'Internal',
                 'External' => 'External',
-                'File' => File::class
+                'File' => 'File'
             ]),
-//			TreeDropdownField::create('InternalLinkID')->setSourceObject(SiteTree::class),
-//			TreeDropdownField::create('InternalFileID')->setSourceObject(File::class),
-            TextField::create('ExternalLink'),
+
+			$internal = Wrapper::create(TreeDropdownField::create('InternalLinkID', 'Internal Link', SiteTree::class)),
+			$file = Wrapper::create(TreeDropdownField::create('InternalFileID','Internal File', File::class)),
+            $external = TextField::create('External Link'),
             DropdownField::create('Target')->setSource([
                 '_self' => 'Open in same window',
                 '_blank' => 'Open in a new window',
@@ -59,6 +61,22 @@ class Linkable extends DataExtension
             ]),
             CheckboxField::create('ForceDownload')
         ]);
+        $file
+            ->displayIf('LinkType')
+            ->isEqualTo('File')
+            ->end();
+
+        $internal
+            ->displayIf('LinkType')
+            ->isEqualTo('Internal')
+            ->end();
+        $external
+            ->displayIf('LinkType')
+            ->isEqualTo('External')
+            ->end();
+
+
+
 
     }
 

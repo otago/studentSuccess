@@ -30,6 +30,10 @@ class ContactElement extends BaseElement
         'Image' => Image::class
     ];
 
+    public function getType()
+    {
+        return 'Contact Element';
+    }
 
     public function getCMSFields()
     {

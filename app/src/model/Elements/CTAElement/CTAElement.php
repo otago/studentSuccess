@@ -29,6 +29,11 @@ class CTAElement extends BaseElement
         'Image' => Image::class
     ];
 
+    public function getType()
+    {
+        return 'Call To Action';
+    }
+
     public function MyImage()
     {
 
