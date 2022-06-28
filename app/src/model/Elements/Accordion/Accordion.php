@@ -31,6 +31,11 @@ class Accordion extends BaseElement
         'Items'
     ];
 
+    public function getType()
+    {
+        return 'Accordion';
+    }
+
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();

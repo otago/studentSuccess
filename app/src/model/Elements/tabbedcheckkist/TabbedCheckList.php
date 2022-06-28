@@ -22,6 +22,10 @@ class TabbedCheckList extends BaseElement
         'Tabs' => CheckListTab::class
     ];
 
+    public function getType()
+    {
+        return 'Tabbed Check List Element';
+    }
 
     public function getCMSFields()
     {

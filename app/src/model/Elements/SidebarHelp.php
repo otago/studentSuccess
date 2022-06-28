@@ -19,4 +19,8 @@ class SidebarHelp extends BaseElement
         Contactable::class
     ];
 
+    public function getType()
+    {
+        return 'Sidebar Help';
+    }
 }
