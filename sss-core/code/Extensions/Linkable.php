@@ -80,19 +80,7 @@ class Linkable extends DataExtension
 
     public function Link()
     {
-
-        if ($this->owner->LinkType == 'Internal' && $this->owner->InternalLinkID) {
-            $siteTree = SiteTree::get()->byID($this->owner->InternalLinkID);
-
-            return $siteTree ? $siteTree->Link() : '';
-        } else if ($this->owner->LinkType == 'External' && $this->owner->ExternalLink) {
-            return $this->owner->ExternalLink;
-        } else if ($this->owner->LinkType == 'File' && $this->owner->InternalFileID) {
-            $file = File::get()->byID($this->owner->InternalFileID);
-
-            return $file ? $file->Link() : '';
-        }
-
+        return $this->hasLink();
     }
 
     public function hasLink()
