@@ -51,8 +51,8 @@ class Linkable extends DataExtension
                 'File' => 'File'
             ]),
 
-			$internal = Wrapper::create(TreeDropdownField::create('InternalLinkID', 'Internal Link', SiteTree::class)),
-			$file = Wrapper::create(TreeDropdownField::create('InternalFileID','Internal File', File::class)),
+            $internal = Wrapper::create(TreeDropdownField::create('InternalLinkID', 'Internal Link', SiteTree::class)),
+            $file = Wrapper::create(TreeDropdownField::create('InternalFileID', 'Internal File', File::class)),
             $external = TextField::create('External Link'),
             DropdownField::create('Target')->setSource([
                 '_self' => 'Open in same window',
@@ -76,8 +76,6 @@ class Linkable extends DataExtension
             ->end();
 
 
-
-
     }
 
     public function Link()
@@ -89,7 +87,7 @@ class Linkable extends DataExtension
             return $siteTree ? $siteTree->Link() : '';
         } else if ($this->owner->LinkType == 'External' && $this->owner->ExternalLink) {
             return $this->owner->ExternalLink;
-        } else if ($this->owner->LinkType == File::class && $this->owner->InternalFileID) {
+        } else if ($this->owner->LinkType == 'File' && $this->owner->InternalFileID) {
             $file = File::get()->byID($this->owner->InternalFileID);
 
             return $file ? $file->Link() : '';
@@ -106,7 +104,7 @@ class Linkable extends DataExtension
             return $siteTree ? $siteTree->Link() : '';
         } else if ($this->owner->LinkType == 'External' && $this->owner->ExternalLink) {
             return $this->owner->ExternalLink;
-        } else if ($this->owner->LinkType == File::class && $this->owner->InternalFileID) {
+        } else if ($this->owner->LinkType == 'File' && $this->owner->InternalFileID) {
             $file = File::get()->byID($this->owner->InternalFileID);
 
             return $file ? $file->Link() : '';
