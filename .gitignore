@@ -2,6 +2,8 @@ public/assets/
 /vendor/
 silverstripe-cache/
 resources/
+.graphql-generated/
+public/_graphql/
 
 .env
 _ss_environment.php

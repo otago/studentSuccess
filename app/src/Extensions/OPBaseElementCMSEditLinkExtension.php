@@ -74,4 +74,10 @@ class OPBaseElementCMSEditLinkExtension extends BaseElementCMSEditLinkExtension
             'edit'
         );
     }
+
+    public function updatePreviewLink(&$action)
+    {
+        $action = null;
+        return null;
+    }
 }
