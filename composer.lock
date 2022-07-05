@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "da7ba847b5f30c8c7f007f3c8c96de12",
+    "content-hash": "d5deb9de164b4658e75ea1b40c3254eb",
     "packages": [
         {
             "name": "asyncphp/doorman",
@@ -101,16 +101,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.228.5",
+            "version": "3.229.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "8b6e626e02c42310c3ce8615acc7b2c992e48c97"
+                "reference": "142a872fd7172bf5d067f4e30e4f89593296fc8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/8b6e626e02c42310c3ce8615acc7b2c992e48c97",
-                "reference": "8b6e626e02c42310c3ce8615acc7b2c992e48c97",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/142a872fd7172bf5d067f4e30e4f89593296fc8f",
+                "reference": "142a872fd7172bf5d067f4e30e4f89593296fc8f",
                 "shasum": ""
             },
             "require": {
@@ -186,9 +186,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.228.5"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.229.2"
             },
-            "time": "2022-06-28T18:13:37+00:00"
+            "time": "2022-07-01T18:16:42+00:00"
         },
         {
             "name": "bramus/ansi-php",
@@ -3064,48 +3064,6 @@
             "time": "2017-10-23T01:57:42+00:00"
         },
         {
-            "name": "ptcinc/solr-php-client",
-            "version": "v1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/PTCInc/solr-php-client.git",
-                "reference": "59feef58fcac79b0e8d4ac59944fa66bc484af52"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/PTCInc/solr-php-client/zipball/59feef58fcac79b0e8d4ac59944fa66bc484af52",
-                "reference": "59feef58fcac79b0e8d4ac59944fa66bc484af52",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Apache_Solr_": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Donovan Jimenez",
-                    "homepage": "https://github.com/djimenez"
-                }
-            ],
-            "description": "A purely PHP library for indexing and searching documents against an Apache Solr installation",
-            "keywords": [
-                "client",
-                "php",
-                "solr"
-            ],
-            "support": {
-                "issues": "https://github.com/PTCInc/solr-php-client/issues",
-                "source": "https://github.com/PTCInc/solr-php-client/tree/master"
-            },
-            "time": "2016-11-16T00:26:09+00:00"
-        },
-        {
             "name": "ralouphie/getallheaders",
             "version": "3.0.3",
             "source": {
@@ -3543,16 +3501,16 @@
         },
         {
             "name": "silverstripe/asset-admin",
-            "version": "1.11.0",
+            "version": "1.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-asset-admin.git",
-                "reference": "3f6965a663a4f392aedbe481e2525122b47e44e2"
+                "reference": "f89a3b242b175073d80b51ce98498c051e45d8ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-asset-admin/zipball/3f6965a663a4f392aedbe481e2525122b47e44e2",
-                "reference": "3f6965a663a4f392aedbe481e2525122b47e44e2",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-asset-admin/zipball/f89a3b242b175073d80b51ce98498c051e45d8ae",
+                "reference": "f89a3b242b175073d80b51ce98498c051e45d8ae",
                 "shasum": ""
             },
             "require": {
@@ -3592,9 +3550,9 @@
             "description": "Asset management for the SilverStripe CMS",
             "support": {
                 "issues": "https://github.com/silverstripe/silverstripe-asset-admin/issues",
-                "source": "https://github.com/silverstripe/silverstripe-asset-admin/tree/1.11.0"
+                "source": "https://github.com/silverstripe/silverstripe-asset-admin/tree/1.11.1"
             },
-            "time": "2022-05-04T01:29:41+00:00"
+            "time": "2022-06-09T06:11:44+00:00"
         },
         {
             "name": "silverstripe/assets",
@@ -3665,7 +3623,7 @@
         },
         {
             "name": "silverstripe/campaign-admin",
-            "version": "1.11.0-rc1",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-campaign-admin.git",
@@ -3728,7 +3686,7 @@
             ],
             "support": {
                 "issues": "https://github.com/silverstripe/silverstripe-campaign-admin/issues",
-                "source": "https://github.com/silverstripe/silverstripe-campaign-admin/tree/1.11.0-rc1"
+                "source": "https://github.com/silverstripe/silverstripe-campaign-admin/tree/1.11.0"
             },
             "time": "2022-05-04T01:29:41+00:00"
         },
@@ -4199,16 +4157,16 @@
         },
         {
             "name": "silverstripe/framework",
-            "version": "4.11.1",
+            "version": "4.11.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-framework.git",
-                "reference": "01c27e69de04e3da23751954a581b223daf9d08e"
+                "reference": "ad83b78a10ac0d0cc3e1a464f50c02a8b38f41eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/01c27e69de04e3da23751954a581b223daf9d08e",
-                "reference": "01c27e69de04e3da23751954a581b223daf9d08e",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/ad83b78a10ac0d0cc3e1a464f50c02a8b38f41eb",
+                "reference": "ad83b78a10ac0d0cc3e1a464f50c02a8b38f41eb",
                 "shasum": ""
             },
             "require": {
@@ -4323,32 +4281,32 @@
             ],
             "support": {
                 "issues": "https://github.com/silverstripe/silverstripe-framework/issues",
-                "source": "https://github.com/silverstripe/silverstripe-framework/tree/4.11.1"
+                "source": "https://github.com/silverstripe/silverstripe-framework/tree/4.11.3"
             },
-            "time": "2022-06-28T22:01:12+00:00"
+            "time": "2022-07-04T01:17:51+00:00"
         },
         {
             "name": "silverstripe/fulltextsearch",
-            "version": "3.9.6",
+            "version": "3.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-fulltextsearch.git",
-                "reference": "f9ace692f41b4e626302dad889fd9e1fa4a1c0af"
+                "reference": "66956c682f13709b7a9c7efcc73609998b44988a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-fulltextsearch/zipball/f9ace692f41b4e626302dad889fd9e1fa4a1c0af",
-                "reference": "f9ace692f41b4e626302dad889fd9e1fa4a1c0af",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-fulltextsearch/zipball/66956c682f13709b7a9c7efcc73609998b44988a",
+                "reference": "66956c682f13709b7a9c7efcc73609998b44988a",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
                 "monolog/monolog": "~1.15",
-                "php": "^7.3 || ^8.0",
-                "ptcinc/solr-php-client": "^1.0",
+                "php": "^7.4 || ^8.0",
                 "silverstripe/framework": "^4.10",
+                "silverstripe/solr-php-client": "^1.0",
                 "symfony/process": "^3.4 || ^4",
-                "tractorcow/silverstripe-proxy-db": "~0.1"
+                "tractorcow/silverstripe-proxy-db": "^1"
             },
             "require-dev": {
                 "phpunit/phpunit": "^9.5",
@@ -4393,9 +4351,9 @@
             ],
             "support": {
                 "issues": "https://github.com/silverstripe/silverstripe-fulltextsearch/issues",
-                "source": "https://github.com/silverstripe/silverstripe-fulltextsearch/tree/3.9.6"
+                "source": "https://github.com/silverstripe/silverstripe-fulltextsearch/tree/3.11.1"
             },
-            "time": "2022-03-23T04:22:25+00:00"
+            "time": "2022-05-30T04:18:38+00:00"
         },
         {
             "name": "silverstripe/graphql",
@@ -4970,17 +4928,64 @@
             "time": "2022-02-18T09:08:25+00:00"
         },
         {
-            "name": "silverstripe/userforms",
-            "version": "5.13.0",
+            "name": "silverstripe/solr-php-client",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/silverstripe/silverstripe-userforms.git",
-                "reference": "0f12e1ecfc7773961a368e6bafa478db6d2cc27f"
+                "url": "https://github.com/silverstripe/solr-php-client.git",
+                "reference": "d6fdeed4dd5b145b54055ccd904267042c88683a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/0f12e1ecfc7773961a368e6bafa478db6d2cc27f",
-                "reference": "0f12e1ecfc7773961a368e6bafa478db6d2cc27f",
+                "url": "https://api.github.com/repos/silverstripe/solr-php-client/zipball/d6fdeed4dd5b145b54055ccd904267042c88683a",
+                "reference": "d6fdeed4dd5b145b54055ccd904267042c88683a",
+                "shasum": ""
+            },
+            "replace": {
+                "ptcinc/solr-php-client": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Apache_Solr_": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Donovan Jimenez",
+                    "homepage": "https://github.com/djimenez"
+                }
+            ],
+            "description": "A purely PHP library for indexing and searching documents against an Apache Solr installation",
+            "keywords": [
+                "client",
+                "php",
+                "solr"
+            ],
+            "support": {
+                "source": "https://github.com/silverstripe/solr-php-client/tree/v1.0.2"
+            },
+            "time": "2022-05-10T03:19:59+00:00"
+        },
+        {
+            "name": "silverstripe/userforms",
+            "version": "5.13.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-userforms.git",
+                "reference": "5e226f00dd594c71fc86f9f02b00a27597063373"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/5e226f00dd594c71fc86f9f02b00a27597063373",
+                "reference": "5e226f00dd594c71fc86f9f02b00a27597063373",
                 "shasum": ""
             },
             "require": {
@@ -4988,7 +4993,7 @@
                 "silverstripe/cms": "^4.6",
                 "silverstripe/framework": "^4.10",
                 "silverstripe/mimevalidator": "^2.0",
-                "silverstripe/segment-field": "^2.0",
+                "silverstripe/segment-field": "^2.2",
                 "silverstripe/versioned": "^1.0",
                 "symbiote/silverstripe-gridfieldextensions": "^3.1"
             },
@@ -5049,9 +5054,9 @@
             ],
             "support": {
                 "issues": "https://github.com/silverstripe/silverstripe-userforms/issues",
-                "source": "https://github.com/silverstripe/silverstripe-userforms/tree/5.13.0"
+                "source": "https://github.com/silverstripe/silverstripe-userforms/tree/5.13.1"
             },
-            "time": "2022-05-04T01:29:41+00:00"
+            "time": "2022-06-01T22:43:42+00:00"
         },
         {
             "name": "silverstripe/vendor-plugin",
@@ -5416,21 +5421,21 @@
         },
         {
             "name": "symbiote/silverstripe-gridfieldextensions",
-            "version": "3.3.0",
+            "version": "3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symbiote/silverstripe-gridfieldextensions.git",
-                "reference": "baa6a8d147dff39de860e85519f66c3dbd8bfe24"
+                "reference": "0405d919fc54d56f921470944d37eb1aab275cdc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symbiote/silverstripe-gridfieldextensions/zipball/baa6a8d147dff39de860e85519f66c3dbd8bfe24",
-                "reference": "baa6a8d147dff39de860e85519f66c3dbd8bfe24",
+                "url": "https://api.github.com/repos/symbiote/silverstripe-gridfieldextensions/zipball/0405d919fc54d56f921470944d37eb1aab275cdc",
+                "reference": "0405d919fc54d56f921470944d37eb1aab275cdc",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.3 || ^8.0",
-                "silverstripe/framework": "^4.10",
+                "php": "^7.4 || ^8.0",
+                "silverstripe/framework": "^4.11",
                 "silverstripe/vendor-plugin": "^1.0"
             },
             "replace": {
@@ -5484,9 +5489,9 @@
             ],
             "support": {
                 "issues": "http://github.com/symbiote/silverstripe-gridfieldextensions/issues",
-                "source": "https://github.com/symbiote/silverstripe-gridfieldextensions/tree/3.3.0"
+                "source": "https://github.com/symbiote/silverstripe-gridfieldextensions/tree/3.4.1"
             },
-            "time": "2021-11-09T00:14:44+00:00"
+            "time": "2022-06-16T01:35:24+00:00"
         },
         {
             "name": "symbiote/silverstripe-queuedjobs",
@@ -7358,16 +7363,16 @@
         },
         {
             "name": "tractorcow/classproxy",
-            "version": "0.1.2",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tractorcow/classproxy.git",
-                "reference": "95e988a37917a3d44805ab907f79778f24e6bf8e"
+                "reference": "3c05e96ec9545f774010199edacca78c5878ddab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tractorcow/classproxy/zipball/95e988a37917a3d44805ab907f79778f24e6bf8e",
-                "reference": "95e988a37917a3d44805ab907f79778f24e6bf8e",
+                "url": "https://api.github.com/repos/tractorcow/classproxy/zipball/3c05e96ec9545f774010199edacca78c5878ddab",
+                "reference": "3c05e96ec9545f774010199edacca78c5878ddab",
                 "shasum": ""
             },
             "require": {
@@ -7395,28 +7400,28 @@
             ],
             "support": {
                 "issues": "https://github.com/tractorcow/classproxy/issues",
-                "source": "https://github.com/tractorcow/classproxy/tree/master"
+                "source": "https://github.com/tractorcow/classproxy/tree/1.0.0"
             },
-            "time": "2018-03-20T01:57:54+00:00"
+            "time": "2022-04-25T23:46:33+00:00"
         },
         {
             "name": "tractorcow/silverstripe-proxy-db",
-            "version": "0.1.0",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tractorcow/silverstripe-proxy-db.git",
-                "reference": "9850a12fbf229c7ee576064be89b875aa65bdcbc"
+                "reference": "2ee0c6b46a67e24df3f4132bc831284f6b39089d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tractorcow/silverstripe-proxy-db/zipball/9850a12fbf229c7ee576064be89b875aa65bdcbc",
-                "reference": "9850a12fbf229c7ee576064be89b875aa65bdcbc",
+                "url": "https://api.github.com/repos/tractorcow/silverstripe-proxy-db/zipball/2ee0c6b46a67e24df3f4132bc831284f6b39089d",
+                "reference": "2ee0c6b46a67e24df3f4132bc831284f6b39089d",
                 "shasum": ""
             },
             "require": {
                 "silverstripe/framework": "^4@dev",
                 "silverstripe/vendor-plugin": "^1.0",
-                "tractorcow/classproxy": "^0.1.1"
+                "tractorcow/classproxy": "^1"
             },
             "type": "silverstripe-vendormodule",
             "autoload": {
@@ -7441,9 +7446,9 @@
             ],
             "support": {
                 "issues": "https://github.com/tractorcow/silverstripe-proxy-db/issues",
-                "source": "https://github.com/tractorcow/silverstripe-proxy-db/tree/master"
+                "source": "https://github.com/tractorcow/silverstripe-proxy-db/tree/1.0.0"
             },
-            "time": "2018-02-16T01:16:44+00:00"
+            "time": "2022-05-02T09:07:05+00:00"
         },
         {
             "name": "ua-parser/uap-php",
