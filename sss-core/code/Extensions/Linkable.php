@@ -53,7 +53,7 @@ class Linkable extends DataExtension
 
             $internal = Wrapper::create(TreeDropdownField::create('InternalLinkID', 'Internal Link', SiteTree::class)),
             $file = Wrapper::create(TreeDropdownField::create('InternalFileID', 'Internal File', File::class)),
-            $external = TextField::create('External Link'),
+            $external = TextField::create('ExternalLink','External Link'),
             DropdownField::create('Target')->setSource([
                 '_self' => 'Open in same window',
                 '_blank' => 'Open in a new window',
