@@ -6,8 +6,11 @@ namespace OP\Studentsuccess;
 use OP\Studentsuccess\CheckListTab;
 use OP\Studentsuccess\CheckListBlockItem;
 use SilverStripe\Forms\DropdownField;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use SilverStripe\ORM\DataObject;
 use OP\Studentsuccess\FormUtils;
+use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 
 /**
@@ -46,7 +49,9 @@ class CheckListBlock extends DataObject
             'CheckListTabID'
         ]);
 
-        $fields->addFieldToTab('Root.Main', FormUtils::MakeDragAndDropGridField('Items', 'Items', $this->Items(), 'SortOrder', 'RecordEditor'));
+        $fields->addFieldsToTab('Root.Main', [
+            GridField::create('Items', 'Items', $this->Items(), GridFieldConfig_RelationEditor::create()->addComponent(new GridFieldOrderableRows('SortOrder'))),
+        ]);
         $fields->replaceField('Color', DropdownField::create('Color')->setSource([
             'red' => 'Red (Default)',
             'blue' => 'Blue',

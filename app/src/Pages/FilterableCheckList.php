@@ -12,10 +12,13 @@ use SilverStripe\Control\Cookie;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\FormAction;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use SilverStripe\Forms\RequiredFields;
 use SilverStripe\Forms\Form;
 use PageController;
 use OP\Studentsuccess\FormUtils;
+use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 
 class FilterableCheckList extends Page
@@ -61,8 +64,11 @@ class FilterableCheckList extends Page
             'Blocks'
         ]);
 
-        $fields->addFieldToTab('Root.Main', new CheckboxField('DisableFilters'));
-        $fields->addFieldToTab('Root.Main', FormUtils::MakeDragAndDropGridField('Blocks', 'Blocks', $this->Blocks(), 'SortOrder', 'RecordEditor'));
+        $fields->addFieldsToTab('Root.Main', [
+            new CheckboxField('DisableFilters'),
+            GridField::create('Blocks', 'Blocks', $this->Blocks(), GridFieldConfig_RelationEditor::create()->addComponent(new GridFieldOrderableRows('SortOrder'))),
+        ]);
+
 
         return $fields;
     }

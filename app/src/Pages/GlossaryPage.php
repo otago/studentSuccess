@@ -8,6 +8,9 @@ use Page;
 use OP\Studentsuccess\GlossaryType;
 use PageController;
 use OP\Studentsuccess\FormUtils;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
+use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 
 class GlossaryPage extends Page
@@ -28,9 +31,9 @@ class GlossaryPage extends Page
             'ElementArea'
         ]);
 
-        $fields->addFieldToTab('Root.Glossary',
-            FormUtils::MakeDragAndDropGridField('GlossaryTypes', 'GlossaryTypes', $this->GlossaryTypes(), 'SortOrder', 'RecordEditor')
-        );
+        $fields->addFieldsToTab('Root.Glossary', [
+            GridField::create('GlossaryTypes', 'GlossaryTypes', $this->GlossaryTypes(), GridFieldConfig_RelationEditor::create()->addComponent(new GridFieldOrderableRows('SortOrder'))),
+        ]);
 
         return $fields;
     }
