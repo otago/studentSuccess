@@ -5,11 +5,14 @@ namespace OP\Studentsuccess;
 
 use OP\Studentsuccess\GlossaryPage;
 use OP\Studentsuccess\GlossaryItem;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\ORM\DB;
 use SilverStripe\View\ArrayData;
 use SilverStripe\ORM\DataObject;
 use OP\Studentsuccess\FormUtils;
+use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 
 class GlossaryType extends DataObject
@@ -42,7 +45,7 @@ class GlossaryType extends DataObject
         ]);
 
         $fields->addFieldToTab('Root.Main',
-            FormUtils::MakeDragAndDropGridField('Items', 'Items', $this->Items(), 'SortOrder', 'RecordEditor', 200)
+            GridField::create('Items', 'Items', $this->Items(), GridFieldConfig_RelationEditor::create()->addComponent(new GridFieldOrderableRows('SortOrder'))),
         );
 
         return $fields;

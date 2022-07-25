@@ -4,8 +4,11 @@ namespace OP\Studentsuccess;
 
 
 use OP\Studentsuccess\FooterLink;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use SilverStripe\ORM\DataObject;
 use OP\Studentsuccess\FormUtils;
+use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 
 class FooterLinkBlock extends DataObject
@@ -32,7 +35,7 @@ class FooterLinkBlock extends DataObject
         ]);
 
         $fields->addFieldsToTab('Root.Links', [
-            FormUtils::MakeDragAndDropGridField('Links', 'Links', $this->Links(), 'SortOrder')
+            GridField::create('Links', 'Links', $this->Links(), GridFieldConfig_RelationEditor::create()->addComponent(new GridFieldOrderableRows('SortOrder'))),
         ]);
 
         return $fields;

@@ -47,7 +47,6 @@ class MasonryContent extends BaseElement
         $heroconf->addComponent(new GridFieldOrderableRows('SortOrder'));
 
 
-
         $fields->addFieldsToTab('Root.Main', [
             $grid = GridField::create('Tiles', 'Tiles', $this->Tiles(), $heroconf)
         ]);
@@ -55,10 +54,10 @@ class MasonryContent extends BaseElement
         $configs = $grid->getConfig();
         $adder = new GridFieldAddNewMultiClass();
         $adder->setClasses([
-            'MasonryTile' => 'Tile',
-            'MasonryImageTile' => 'Image Tile',
-            'LinkListMasonryTile' => 'Links List',
-            'SmallMasonryTile' => 'Small text only title'
+            MasonryTile::class => 'Tile',
+            MasonryImageTile::class => 'Image Tile',
+            LinkListMasonryTile::class => 'Links List',
+            SmallMasonryTile::class => 'Small text only title'
         ]);
         $configs->removeComponentsByType(GridFieldAddNewButton::class);
         $configs->removeComponentsByType(GridFieldAddExistingAutocompleter::class);

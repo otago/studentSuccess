@@ -22,7 +22,7 @@ class CarouselWithUpperLetter extends Carousel
                 $adder = new GridFieldAddNewMultiClass();
                 $configs->removeComponentsByType(GridFieldAddNewMultiClass::class);
                 $adder->setClasses([
-                    'CarouselSlideWithUpperLetter' => 'Slides with upper letter title and content'
+                    CarouselSlideWithUpperLetter::class => 'Slides with upper letter title and content'
                 ]);
                 $configs->addComponent($adder);
             }

@@ -35,9 +35,9 @@ class MasonryContentsWithFilters extends MasonryContent
             $adder = new GridFieldAddNewMultiClass();
             $configs->removeComponentsByType(GridFieldAddNewMultiClass::class);
             $adder->setClasses([
-                'FilterableSmallMasonryTile' => 'Text Tile',
-                'LinkListMasonryTile' => 'Links List',
-                'FilterableSmallMasonryImageTile' => 'Small Image Tile'
+                FilterableSmallMasonryTile::class => 'Text Tile',
+                LinkListMasonryTile::class => 'Links List',
+                FilterableSmallMasonryImageTile::class => 'Small Image Tile'
             ]);
 
             $configs->addComponent($adder);
