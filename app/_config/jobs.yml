@@ -1,0 +1,16 @@
+SilverStripe\Core\Injector\Injector:
+  Symbiote\QueuedJobs\Services\QueuedJobService:
+    properties:
+      defaultJobs:
+        CheckExternalLinksJob:
+          type: 'SilverStripe\ExternalLinks\Jobs\CheckExternalLinksJob'
+          filter:
+            Implementation: 'SilverStripe\ExternalLinks\Jobs\CheckExternalLinksJob'
+          recreate: 1
+          startDateFormat: Y-m-d H:i:00
+          startTimeString: "next sunday 3:00am"
+          construct:
+            recreate: true
+
+Symbiote\QueuedJobs\Jobs\CleanupJob:
+  is_enabled: true
