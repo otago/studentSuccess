@@ -47,7 +47,6 @@ class MasonryContent extends BaseElement
         $heroconf->addComponent(new GridFieldOrderableRows('SortOrder'));
 
 
-
         $fields->addFieldsToTab('Root.Main', [
             $grid = GridField::create('Tiles', 'Tiles', $this->Tiles(), $heroconf)
         ]);
