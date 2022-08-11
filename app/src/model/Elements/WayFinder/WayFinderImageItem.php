@@ -12,4 +12,8 @@ class WayFinderImageItem extends WayFinderItem
         'Image' => Image::class
     ];
 
+    private static $owns = [
+        'Image'
+    ];
+
 } 

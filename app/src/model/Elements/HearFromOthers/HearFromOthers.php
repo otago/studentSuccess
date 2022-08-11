@@ -28,6 +28,10 @@ class HearFromOthers extends BaseElement
         'Image' => Image::class
     ];
 
+    private static $owns = [
+        'Image'
+    ];
+
     private static $field_labels = [
         'DisplayTitle' => 'Heading',
         'TestimonyContent' => 'Testimonial Content',

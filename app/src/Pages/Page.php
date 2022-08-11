@@ -60,6 +60,10 @@ namespace {
             'HeroImage' => Image::class,
         ];
 
+        private static $owns = [
+            'DropDownImage',
+            'HeroImage',
+        ];
 
         private static $has_many = [
             'RelatedPages' => RelatedPage::class,

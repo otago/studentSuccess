@@ -30,6 +30,10 @@ class ContactElement extends BaseElement
         'Image' => Image::class
     ];
 
+    private static $owns = [
+        'Image'
+    ];
+
     public function getType()
     {
         return 'Contact Element';
