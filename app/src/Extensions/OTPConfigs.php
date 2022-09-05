@@ -61,6 +61,10 @@ class OTPConfigs extends DataExtension
         'CreativeCommonsLicenceImage' => Image::class,
     ];
 
+    private static $owns = [
+        'CreativeCommonsLicenceImage'
+    ];
+
     public function updateCMSFields(FieldList $fields)
     {
 

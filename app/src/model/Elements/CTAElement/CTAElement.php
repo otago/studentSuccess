@@ -28,6 +28,10 @@ class CTAElement extends BaseElement
     private static $has_one = [
         'Image' => Image::class
     ];
+    
+    private static $owns = [
+        'Image'
+    ];
 
     public function getType()
     {
