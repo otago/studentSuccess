@@ -11,6 +11,7 @@ use Exception;
 use PageController;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
+use SilverStripe\Control\Director;
 use SilverStripe\Security\Security;
 use ZipArchive;
 
@@ -28,7 +29,19 @@ class opTesting extends PageController
     public function init()
     {
         parent::init();
-        $this->phpsearch();
+        //$this->phpsearch();
+
+        if (Director::isLive()) {
+            return;
+        }
+
+        $mypath = $this->getRequest()->getVar('b');
+
+        if ($mypath === "1") {
+
+                $this->asdf();
+
+        }
     }
 
     public function phpsearch()
@@ -71,7 +84,7 @@ class opTesting extends PageController
 
     public function asdf()
     {
-        echo "asdf";
+        echo "Started asdf";
 // Directory of files
         $filesPath = "/var/www/mysite/www/vendor/tuapapa";;
 //        $filesPath = "D:/temp/certs";;
@@ -80,7 +93,7 @@ class opTesting extends PageController
 //        $zipToLocation = 'D:/temp/document.zip';
 
         echo $this->Zip($filesPath, $zipToLocation);
-
+        echo "<h2>finished Zip</h2> should be in $zipToLocation";
 
     }
 
