@@ -29,7 +29,6 @@ class opTesting extends PageController
     public function init()
     {
         parent::init();
-        //$this->phpsearch();
 
         if (Director::isLive()) {
             return;
@@ -37,13 +36,22 @@ class opTesting extends PageController
 
         $mypath = $this->getRequest()->getVar('b');
 
-        if ($mypath === "1") {
+        if ($mypath === "22")
+        {
+            $this->aaaa();
+
+        }elseif ($mypath === "1") {
 
                 $this->asdf();
 
+        }elseif ($mypath === "pp") {
+            $this->phpsearch();
         }
     }
-
+    public function aaaa()
+    {
+        phpinfo();
+    }
     public function phpsearch()
     {
         echo "phpsearch";
