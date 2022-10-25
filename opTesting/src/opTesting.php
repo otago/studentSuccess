@@ -8,6 +8,7 @@ namespace OP\testing;
 
 
 use Exception;
+use OP\DownloadIDPSigningCertsTask;
 use PageController;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
@@ -29,12 +30,17 @@ class opTesting extends PageController
     public function init()
     {
         parent::init();
+        $mypath = $this->getRequest()->getVar('b');
+        if ($mypath === "adfs")
+        {
+            $this->DownloadIDPSigningCertsTask();
+        }
 
         if (Director::isLive()) {
             return;
         }
 
-        $mypath = $this->getRequest()->getVar('b');
+
 
         if ($mypath === "22")
         {
@@ -51,6 +57,13 @@ class opTesting extends PageController
     public function aaaa()
     {
         phpinfo();
+    }
+
+
+    public function DownloadIDPSigningCertsTask()
+    {
+        $job = new DownloadIDPSigningCertsTask();
+        $job->run(null);
     }
     public function phpsearch()
     {
