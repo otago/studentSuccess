@@ -72,7 +72,10 @@ class SAMLHelperFunctions
         $idpconfig = SAMLHelperFunctions::IDPConfig();
         $SamlConfig = SAMLHelperFunctions::SamlConfig();
 
-        Filesystem::makeFolder(ASSETS_DIR.SAMLHelperFunctions::config()->get('filepath'));
+        $filepath = ASSETS_DIR.SAMLHelperFunctions::config()->get('filepath');
+        if (!file_exists(dirname($filepath))) {
+            Filesystem::makeFolder($filepath);
+        }
 
         $retval = [];
         $FilePath = SAMLHelperFunctions::MetadataFilePath();
