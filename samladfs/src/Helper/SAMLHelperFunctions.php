@@ -71,13 +71,14 @@ class SAMLHelperFunctions
     {
         $idpconfig = SAMLHelperFunctions::IDPConfig();
         $SamlConfig = SAMLHelperFunctions::SamlConfig();
-
+        echo "0";
         $filepath = ASSETS_DIR.SAMLHelperFunctions::config()->get('filepath');
         if (!file_exists(dirname($filepath))) {
             Filesystem::makeFolder($filepath);
         }
-
+        die();
         echo "1";
+        die();
         $retval = [];
         $FilePath = SAMLHelperFunctions::MetadataFilePath();
         echo "2";
