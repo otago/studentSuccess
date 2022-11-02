@@ -77,26 +77,30 @@ class SAMLHelperFunctions
             Filesystem::makeFolder($filepath);
         }
 
+        echo "1";
         $retval = [];
         $FilePath = SAMLHelperFunctions::MetadataFilePath();
-
+        echo "2";
         $MetadatafileLocation = $idpconfig["metadata"];
         $retval[] = $MetadatafileLocation;
         $retval[] = $FilePath;
         $MetaDataXML = SAMLHelperFunctions::fetchData($MetadatafileLocation);
 
         $MetaData = IdPMetadataParser::parseXML($MetaDataXML);
-
+        echo "3";
         $OrginalFile = null;
         if (file_exists($FilePath)) {
+            echo "3aa";
             $OrginalFile = file_get_contents($FilePath);
+            echo "3bb";
         }
         $MetaDataFailure = false;
-
+        echo "4";
         if (isset($MetaData["idp"]['x509certMulti']['signing'])) {
             $retval[] = "Create Files";
+            echo "4aa";
             file_put_contents($FilePath, $MetaDataXML);
-
+            echo "4bb";
             $MetaData = IdPMetadataParser::parseFileXML($FilePath);
 
             //check
@@ -104,7 +108,9 @@ class SAMLHelperFunctions
                 $retval[] =  "File is correct";
             } elseif ($OrginalFile != null) {
                 //if unsuccessful put the orginal file back
+                echo "4cc";
                 file_put_contents($FilePath, $OrginalFile);
+                echo "4dd";
                 $retval[] =  "File is NOT correct, REVERTING TO  orginalfile";
                 $MetaDataFailure = true;
             }
