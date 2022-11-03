@@ -77,6 +77,7 @@ class SAMLHelperFunctions
         $filepath = ASSETS_PATH . SAMLHelperFunctions::config()->get('filepath');
 
         if (!file_exists(dirname($filepath))) {
+            $retval[] = "Create folder" . $filepath;
             Filesystem::makeFolder($filepath);
         }
 
