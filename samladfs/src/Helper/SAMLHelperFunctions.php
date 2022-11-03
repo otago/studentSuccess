@@ -82,12 +82,15 @@ class SAMLHelperFunctions
         $retval[] = file_exists(dirname($filepath));
 
         var_dump($retval);
-        return $retval;
+
 
         if (!file_exists(dirname($filepath))) {
+            $retval[] = "ggggggggggggg";
             Filesystem::makeFolder($filepath);
         }
 
+        $retval[] = "sssssssssssssssssss";
+        return $retval;
         echo "1";
 
         $FilePath = SAMLHelperFunctions::MetadataFilePath();
