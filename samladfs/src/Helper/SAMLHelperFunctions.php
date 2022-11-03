@@ -79,7 +79,6 @@ class SAMLHelperFunctions
         $retval[] = "asets: " . ASSETS_DIR ;
         $retval[] = "conf:  " . SAMLHelperFunctions::config()->get('filepath') ;
         $retval[] = "filepath:  " . $filepath ;
-        $retval[] = file_exists(dirname($filepath)) ;
 
 
         var_dump($retval);
