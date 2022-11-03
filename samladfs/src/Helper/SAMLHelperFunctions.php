@@ -74,12 +74,12 @@ class SAMLHelperFunctions
 
         $retval = [];
         echo "0";
-        $filepath = ASSETS_DIR . SAMLHelperFunctions::config()->get('filepath')
+        $filepath = ASSETS_DIR . SAMLHelperFunctions::config()->get('filepath');
         $retval[] = "Whole: " . ASSETS_DIR . SAMLHelperFunctions::config()->get('filepath');
         $retval[] = "asets: " . ASSETS_DIR ;
         $retval[] = "conf:  " . SAMLHelperFunctions::config()->get('filepath') ;
         $retval[] = "filepath:  " . $filepath ;
-
+        $retval[] = file_exists(dirname($filepath));
 
         var_dump($retval);
         return $retval;
