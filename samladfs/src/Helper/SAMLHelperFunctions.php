@@ -74,9 +74,9 @@ class SAMLHelperFunctions
 
         $retval = [];
 
-        $filepath = ASSETS_DIR . SAMLHelperFunctions::config()->get('filepath');
+        $filepath = ASSETS_PATH . SAMLHelperFunctions::config()->get('filepath');
 
-        if (!Director::is_cli() && !file_exists(dirname($filepath))) {
+        if (!file_exists(dirname($filepath))) {
             Filesystem::makeFolder($filepath);
         }
 
