@@ -72,28 +72,31 @@ class SAMLHelperFunctions
         $idpconfig = SAMLHelperFunctions::IDPConfig();
         $SamlConfig = SAMLHelperFunctions::SamlConfig();
 
-        Filesystem::makeFolder(ASSETS_DIR.SAMLHelperFunctions::config()->get('filepath'));
-
         $retval = [];
-        $FilePath = SAMLHelperFunctions::MetadataFilePath();
 
+        $filepath = ASSETS_PATH . SAMLHelperFunctions::config()->get('filepath');
+
+        if (!file_exists(dirname($filepath))) {
+            $retval[] = "Create folder" . $filepath;
+            Filesystem::makeFolder($filepath);
+        }
+
+
+        $FilePath = SAMLHelperFunctions::MetadataFilePath();
         $MetadatafileLocation = $idpconfig["metadata"];
         $retval[] = $MetadatafileLocation;
         $retval[] = $FilePath;
         $MetaDataXML = SAMLHelperFunctions::fetchData($MetadatafileLocation);
 
         $MetaData = IdPMetadataParser::parseXML($MetaDataXML);
-
         $OrginalFile = null;
         if (file_exists($FilePath)) {
             $OrginalFile = file_get_contents($FilePath);
         }
         $MetaDataFailure = false;
-
         if (isset($MetaData["idp"]['x509certMulti']['signing'])) {
             $retval[] = "Create Files";
             file_put_contents($FilePath, $MetaDataXML);
-
             $MetaData = IdPMetadataParser::parseFileXML($FilePath);
 
             //check
