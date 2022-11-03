@@ -10,11 +10,13 @@
 namespace OP;
 use Exception;
 use OneLogin\Saml2\IdPMetadataParser;
+use Psr\Log\LoggerInterface;
 use SilverStripe\Assets\Filesystem;
 use SilverStripe\Assets\Folder;
 use SilverStripe\Control\Director;
 use SilverStripe\Core\Config\Configurable;
 use SilverStripe\Core\Environment;
+use SilverStripe\Core\Injector\Injector;
 
 
 class SAMLHelperFunctions
@@ -85,36 +87,37 @@ class SAMLHelperFunctions
 
 
         if (!file_exists(dirname($filepath))) {
-            $retval[] = "ggggggggggggg";
+            SAMLHelperFunctions::log( "ddddddddddddddddddddddd:".$filepath);
             Filesystem::makeFolder($filepath);
         }
 
-        $retval[] = "sssssssssssssssssss";
+
+        SAMLHelperFunctions::log( "sssssssssssssssssss");
         return $retval;
-        echo "1";
+        SAMLHelperFunctions::log( "1");
 
         $FilePath = SAMLHelperFunctions::MetadataFilePath();
-        echo "2";
+        SAMLHelperFunctions::log( "2");
         $MetadatafileLocation = $idpconfig["metadata"];
         $retval[] = $MetadatafileLocation;
         $retval[] = $FilePath;
         $MetaDataXML = SAMLHelperFunctions::fetchData($MetadatafileLocation);
 
         $MetaData = IdPMetadataParser::parseXML($MetaDataXML);
-        echo "3";
+        SAMLHelperFunctions::log( "3");
         $OrginalFile = null;
         if (file_exists($FilePath)) {
-            echo "3aa";
+            SAMLHelperFunctions::log( "3aa");
             $OrginalFile = file_get_contents($FilePath);
-            echo "3bb";
+            SAMLHelperFunctions::log( "3bb");
         }
         $MetaDataFailure = false;
-        echo "4";
+        SAMLHelperFunctions::log( "4");
         if (isset($MetaData["idp"]['x509certMulti']['signing'])) {
             $retval[] = "Create Files";
-            echo "4aa";
+            SAMLHelperFunctions::log( "4aa");
             file_put_contents($FilePath, $MetaDataXML);
-            echo "4bb";
+            SAMLHelperFunctions::log( "4bb");
             $MetaData = IdPMetadataParser::parseFileXML($FilePath);
 
             //check
@@ -122,9 +125,9 @@ class SAMLHelperFunctions
                 $retval[] =  "File is correct";
             } elseif ($OrginalFile != null) {
                 //if unsuccessful put the orginal file back
-                echo "4cc";
+                SAMLHelperFunctions::log( "4cc");
                 file_put_contents($FilePath, $OrginalFile);
-                echo "4dd";
+                SAMLHelperFunctions::log( "4dd");
                 $retval[] =  "File is NOT correct, REVERTING TO  orginalfile";
                 $MetaDataFailure = true;
             }
@@ -163,6 +166,15 @@ class SAMLHelperFunctions
         }
 
         return IdPMetadataParser::parseFileXML($FilePath);
+    }
+
+    public static function log($str, $htmltag = null)
+    {
+        $datestamp = '[' . date('Y-m-d H:i:s') . ']';
+
+        echo "$datestamp $str\n";
+
+        Injector::inst()->get(LoggerInterface::class)->info(get_class() . ': ' . $str);
     }
 
     /**
