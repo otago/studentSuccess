@@ -24,6 +24,8 @@ class OTPConfigs extends DataExtension
 {
 
     private static $db = [
+        'GACode' => 'Varchar(16)',
+
         'TelephoneInternational' => 'Varchar',
         'TelephoneNewZealand' => 'Varchar',
         'ContactEmail' => 'Varchar',
@@ -110,6 +112,9 @@ class OTPConfigs extends DataExtension
 
         ]);
 
+        $fields->addFieldToTab("Root.Main", new TextField('GACode', 'GACode'));
+
+
         $fields->addFieldToTab("Root.Main", new CheckboxField('FeedBackLiteOn', 'FeedBackLiteOn'));
         $fields->addFieldToTab("Root.Main", new TextareaField('FeedBackLite', 'FeedBackLite'));
 
@@ -153,4 +158,4 @@ class OTPConfigs extends DataExtension
         return $alRet;
     }
 
-} 
+}
