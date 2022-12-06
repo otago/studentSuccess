@@ -20,6 +20,7 @@ use SilverStripe\Forms\ReadonlyField;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\View\ArrayData;
 use SilverStripe\ORM\DataObject;
+use UncleCheese\DisplayLogic\Forms\Wrapper;
 
 /**
  *
@@ -161,14 +162,12 @@ class ActivityPage_Activity extends DataObject
         $contentItems = $fields->dataFieldByName('ContentItems');
 
         if (!$contentItems) {
-            $fields->addFieldToTab('Root.Main', $contentItems = new DisplayLogicWrapper(
-                new ReadonlyField('ContentItems', 'You can add content options once you save.')
-            ));
+            $fields->addFieldToTab('Root.Main', $contentItems = Wrapper::create(ReadonlyField::create('ContentItems', 'You can add content options once you save.')));
 
             $contentItems->displayIf('Presentation')->isEqualTo('ShowContent');
         } else {
             $fields->removeByName('ContentItems');
-            $fields->addFieldToTab('Root.Main', $group = new DisplayLogicWrapper(
+            $fields->addFieldToTab('Root.Main', $group = Wrapper::create(
                 $contentItems
             ));
 
