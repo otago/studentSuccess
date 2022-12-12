@@ -384,6 +384,10 @@ a {
   text-decoration: none;
   color: #216e31;
 }
+a:hover {
+  color: white;
+  background: #216e31;
+}
 h1 {
   font-weight: 100;
   font-size: 3.75rem;
@@ -2883,6 +2887,7 @@ table tr:last-child {
 }
 .main nav .level-2 li a:hover,
 .main nav .level-2 li a.active {
+  background: #183121;
   border-bottom: 1px solid #9aca3c;
 }
 .main nav .level-2 li a.open,
