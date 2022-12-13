@@ -382,11 +382,7 @@ body {
 }
 a {
   text-decoration: none;
-  color: #216e31;
-}
-a:hover {
-  color: white;
-  background: #216e31;
+  color: #0083ca;
 }
 h1 {
   font-weight: 100;
