@@ -5604,7 +5604,7 @@ table tr:last-child {
   left: 0;
 }
 .masonry-content .contact-tile p.lines a:hover {
-  color: #216e31;
+  color: #1e398d;
 }
 .masonry-content .image-tile {
   font-size: 0;
@@ -6285,7 +6285,7 @@ h5 a {
 .feature-download a:hover,
 .feature-mail a:hover,
 .feature-external-link a:hover {
-  color: #216e31;
+  color: #1e398d;
 }
 .feature-link strong,
 .feature-download strong,
@@ -6297,7 +6297,7 @@ h5 a {
 .feature-download:hover,
 .feature-mail:hover,
 .feature-external-link:hover {
-  color: #216e31;
+  color: #1e398d;
 }
 .feature-linka,
 .feature-downloada,
@@ -6309,7 +6309,7 @@ h5 a {
 .feature-downloada:hover,
 .feature-maila:hover,
 .feature-external-linka:hover {
-  color: #216e31;
+  color: #1e398d;
 }
 .feature-link:before,
 .feature-download:before,
@@ -6343,7 +6343,7 @@ h5 a {
 .feature-download:before:hover,
 .feature-mail:before:hover,
 .feature-external-link:before:hover {
-  color: #216e31;
+  color: #1e398d;
 }
 .internal_link a,
 .external_link a {
