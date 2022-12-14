@@ -3483,7 +3483,7 @@ table tr:last-child {
   color: #183121;
 }
 .way-finder nav.col ul li a:hover {
-  color: #216e31;
+  color: #1e398d;
 }
 .way-finder nav.col ul li span {
   display: block;
@@ -6343,7 +6343,7 @@ h5 a {
 .feature-download:before:hover,
 .feature-mail:before:hover,
 .feature-external-link:before:hover {
-  color: #1e398d;
+  color: #1e398d r;
 }
 .internal_link a,
 .external_link a {
