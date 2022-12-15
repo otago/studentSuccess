@@ -74,9 +74,13 @@
 					padding: 1rem 1rem 1rem 0;
 					font-size: 1.875rem;
 					color: @tpdark-green;
-
+					//filter: invert(73%) sepia(27%) saturate(2324%) hue-rotate(3deg) brightness(107%) contrast(109%);
+					.goto {
+						filter: brightness(0) saturate(100%) invert(11%) sepia(10%) saturate(3162%) hue-rotate(89deg) brightness(96%) contrast(84%);
+					}
 					&:hover {
 						color: @tpblue;
+						filter: brightness(0) saturate(100%) invert(17%) sepia(39%) saturate(3867%) hue-rotate(216deg) brightness(93%) contrast(95%);
 					};
 				}
 
@@ -87,13 +91,14 @@
 					position: absolute;
 					right: 0;
 					top: 0;
+					//filter: invert(73%) sepia(27%) saturate(2324%) hue-rotate(3deg) brightness(107%) contrast(109%);
 					background: url('../images/icons/goto.svg') center no-repeat;
 					.transition;
 				}
 
 				&:hover {
 					span {
-						opacity: 0.6;
+
 					}
 				}
 

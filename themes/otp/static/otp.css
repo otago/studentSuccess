@@ -3482,8 +3482,12 @@ table tr:last-child {
   font-size: 1.875rem;
   color: #183121;
 }
+.way-finder nav.col ul li a .goto {
+  filter: brightness(0) saturate(100%) invert(11%) sepia(10%) saturate(3162%) hue-rotate(89deg) brightness(96%) contrast(84%);
+}
 .way-finder nav.col ul li a:hover {
   color: #1e398d;
+  filter: brightness(0) saturate(100%) invert(17%) sepia(39%) saturate(3867%) hue-rotate(216deg) brightness(93%) contrast(95%);
 }
 .way-finder nav.col ul li span {
   display: block;
@@ -3500,9 +3504,6 @@ table tr:last-child {
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-}
-.way-finder nav.col ul li:hover span {
-  opacity: 0.6;
 }
 .way-finder .career-handbook {
   position: relative;
