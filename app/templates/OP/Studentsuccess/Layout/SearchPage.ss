@@ -1,10 +1,14 @@
-<% include MiniHero %>
+
+<section class='hero bg-image mini <% if not $HeroImage %> no-hero<% end_if %>'>
+    <img src='{$ThemeDir}/images/search-hero.png'/>
+</section>
+
 
 <div class='page-contents clear-this'>
-	<% include Breadcrumbs %>
+    <div class="breadcrumbs component-alignment boxed-element clear-this"></div>
 	
 	<div class="elements-holder">
-		<section class='page-intro searchpagepage-intro'>
+		<section class='page-intro '>
 			<article>
 				<% include  search %>
 				<h1 class='title'>Search Results</h1>
