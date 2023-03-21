@@ -25,19 +25,44 @@
                 </div>
             </div>
             <div class="tp-footer__section">
+
                 <div class="tp-footer__links">
                     <a href="https://xn--tepkenga-szb.ac.nz/about-us/" target="_blank">About Te Pūkenga</a>
                     <a href="https://www.op.ac.nz/about-us/governance-and-management/policy-library/disclosing-personal-information-about-learners-and-staff-policy/" target="_blank">Privacy Policy</a>
                 </div>
+                <% with $SiteConfig %>
+                    <div class='container addresses'>
+
+                        <% if $TelephoneInternational || $TelephoneNewZealand || $ContactEmail %>
+                        <div class='large-col col'>
+                            <p>
+                                <% if $TelephoneInternational %>International <a href='tel:{$TelephoneInternational}'>{$TelephoneInternational}</a><br><% end_if %>
+                                <% if $TelephoneNewZealand %>New Zealand <a href='tet:{$TelephoneNewZealand}'>{$TelephoneNewZealand}</a><br><% end_if %>
+
+                                <% if $TelephoneInternational %>Your suggestions are welcome, please email <a href='mailto:{$ContactEmail}'>{$ContactEmail}</a><% end_if %>
+                            </p>
+                        </div>
+                        <% end_if %>
+
+                    </div>
+                <% end_with %>
             </div>
         </div>
+
         <div class="tp-footer__section tp-footer__section--type-stack tp-footer__section--type-end">
             <div class="tp-footer__logo--type-nzgovernment">
                 <a href="https://www.govt.nz/" target="_blank">
                     <img src="/resources/themes/otp/images/nz_government.png" />
                 </a>
             </div>
-            <div>Copyright © $Now.Format('y') $SiteConfig.Title</div>
+            <div></div>
         </div>
+
+
     </div>
+    <% with $SiteConfig %>
+        <div class="creativecommons">
+            <span class="creativecommonsimg">{$CreativeCommonsLicenceImage}</span><span>{$CreativeCommonsLicence}</span>
+        </div>
+    <% end_with %>
 </div>

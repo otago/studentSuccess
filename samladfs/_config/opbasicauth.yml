@@ -1,0 +1,11 @@
+---
+Name: opSec
+After: '#coresecurity'
+
+Except:
+  environment: live
+---
+
+SilverStripe\Core\Injector\Injector:
+  SilverStripe\Security\BasicAuthMiddleware:
+    class: 'OP\OPBasicAuthMiddleware'

@@ -5,7 +5,7 @@
 	clear: both;
 	margin-top: 2rem;
 	margin-bottom: 3.5rem;
-	
+
 
 	.title {
 		margin: 1.875rem 0 2rem;
@@ -26,7 +26,7 @@
 
 .tab-index {
 	text-align: right;
-	
+
 	ul {
 		margin: 0;
 		padding: 0;
@@ -36,7 +36,7 @@
 			padding: 0 1.75rem;
 
 		}
-		
+
 		li {
 			display: inline-block;
 			padding: 0 0.5rem;
@@ -47,10 +47,10 @@
 			color: @index-grey;
 			border-bottom: 0.125rem solid @white;
 			cursor: pointer;
-			
+
 			&.active {
-				color: @blue;
-				border-bottom: 0.125rem solid @blue;
+				color: @tplightgreen;
+				border-bottom: 0.125rem solid @tplightgreen;
 			}
 		}
 	}
@@ -58,17 +58,17 @@
 
 .tab-section {
 	display: none;
-	
+
 	&.active { display: block; }
-	
+
 	.content-block {
 
 		background: @red;
-		
+
 		&.blue {
 			background: @lighter-blue;
 		}
-		
+
 		&.yellow {
 			background: @yellow;
 		}
@@ -76,7 +76,7 @@
 		&.green {
 			background: @light-green;
 		}
-		
+
 		.itemList {
 			margin: 0;
 			padding: 0;
@@ -84,7 +84,7 @@
 			margin-top: 0;
 			background: @white;
 			border-top: 0.063rem solid @border-grey;
-			
+
 			.glossary-letter {
 				border-bottom: 1px solid @border-grey;
 
@@ -116,12 +116,12 @@
 					line-height: 1.875rem;
 					border-left-width: 4px;
 				}
-				
+
 				&.active {
 					background: @white;
 				}
-				
-				a { 
+
+				a {
 					max-width: 62.5rem;
 					width: 90%;
 					font-weight: 500;
@@ -129,8 +129,8 @@
 					position: relative;
 					left: -5px;
 					padding: 1.5rem 0 1.5rem;
-					background: none; 
-					
+					background: none;
+
 					&:after {
 						right: 0;
 					}
@@ -147,14 +147,14 @@
 						line-height: 1.875rem;
 						text-align: center;
 						color: @white;
-						
+
 						&:before {
 							content:"";
 						}
 					}
 				}
 			}
-			
+
 			.checked {
 				span.icon-tick {
 					background: @light-green;
@@ -165,17 +165,17 @@
 					content: "\e613";
 				}
 			}
-			
+
 			.accordion-item {
 				margin: 0 auto;
 				padding: 0 0 2rem;
 				border: none;
 				overflow: hidden;
-				
+
 				p {
 					line-height: 1.75rem;
 				}
-				
+
 				p.small-text {
 					font-size: 0.875rem;
 					line-height: 1.25rem;
@@ -184,14 +184,14 @@
 						display: block;
 					}
 				}
-				
+
 				h4 {
 					font-size: 1.375rem;
 					line-height: 1.625rem;
 					font-weight: 500;
 					margin: 1.6rem 0 0.2rem;
-				} 
-				
+				}
+
 				span.icon-phone,
 				span.icon-mail {
 					display: inline-block;
@@ -200,13 +200,13 @@
 					top: 2px;
 					margin: 0 10px 14px 0;
 				}
-				
+
 				a.email {
 					color: @dark-grey;
-					
-					&:hover { color: @blue; }
+
+					&:hover { color: @tplightgreen; }
 				}
-		
+
 				.active {
 					border: none;
 				}
@@ -215,7 +215,7 @@
 					margin-top: 1rem;
 
 					h4 {
-						color: @blue;
+						color: @tplightgreen;
 					}
 
 					a {
@@ -229,38 +229,38 @@
 			}
 		}
 
-		.itemList h2 { 
-			border-left: 0.813rem solid @red; 
+		.itemList h2 {
+			border-left: 0.813rem solid @red;
 
 			@media screen and (max-width: 660px) {
 				border-left-width: 4px;
-			}	
+			}
 		}
 
-		&.blue .itemList li h2 { 
-			border-left: 0.813rem solid @lighter-blue; 
+		&.blue .itemList li h2 {
+			border-left: 0.813rem solid @lighter-blue;
 		}
 
-		&.yellow .itemList li h2 { 
-			border-left: 0.813rem solid @yellow; 
+		&.yellow .itemList li h2 {
+			border-left: 0.813rem solid @yellow;
 		}
-		
-		&.green .itemList li h2 { 
-			border-left: 0.813rem solid @light-green; 
+
+		&.green .itemList li h2 {
+			border-left: 0.813rem solid @light-green;
 		}
 	}
 }
 
-@media screen and (max-width: 1200px) { 
+@media screen and (max-width: 1200px) {
 	.tabbed-content .tab-section .content-block .itemList li h2 a:after {
 		right: 2rem;
 	}
 }
 
-@media screen and (max-width: 640px) { 
+@media screen and (max-width: 640px) {
 	.tabbed-content .tab-index ul {
 		overflow: hidden;
-		
+
 		 li {
 			display: block;
 			float: left;
@@ -323,10 +323,10 @@
 	.chosen-container-single .chosen-single {
 		border: none;
 		padding: 0;
-		color: @blue;
+		color: @tplightgreen;
 		font-weight: 300;
 		font-size: 24px;
-		border-bottom: 1px dotted @blue;
+		border-bottom: 1px dotted @tplightgreen;
 		height: auto;
 		line-height: 1.2;
 
@@ -373,14 +373,14 @@
 .template_FilterableCheckList {
 	.tab-section .content-block .itemList .accordion-item .right-content {
 		padding-top: 0;
-		margin-top: 0;	
+		margin-top: 0;
 
 		a {
 			color: rgb(64, 64, 65);
 		}
 		h4 {
 			margin-top: 0;
-			color: @blue;
+			color: @tplightgreen;
 		}
 	}
 

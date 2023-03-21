@@ -1,15 +1,15 @@
 .hero {
-	
+
 	position: relative;
 	top: 0;
-	background: @blue;
+	background: @tplightgreen;
 	height: 28.5rem;
 	overflow: hidden;
 
 	&.fixed {
 		position: fixed;
 	}
-	
+
 	&.mini {
 		height: 15.188rem;
 	}
@@ -26,22 +26,22 @@
 			content: " ";
 		}
 	}
- 
-	
+
+
 	&.no-hero {
-		background: #0c79c3;
+		background: #216E31;
 		height: 14rem;
 
-		&:after { 
+		&:after {
 			display: none;
 		}
 	}
-	
+
 	img {
 		position: absolute;
 		z-index: 1;
 	}
-	
+
 	.grad {
 		position: relative;
 		z-index: 2;
@@ -66,26 +66,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', e
 		padding: .750rem 16.375rem 0;
 		margin: 0 auto;
 		max-width: 87.50rem;
-		
+
 		h2, p {
 			margin: 0;
 			max-width: 500px;
 			text-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
 		}
-		
+
 		h2 {
 			font-weight: 300;
 			font-size: 4.375rem;
 			line-height: 4.3750rem;
 			padding-bottom: 1.875rem;
 		}
-		
+
 		p {
 			font-size: 1.5rem;
 			line-height: 2.1875rem;
 			margin-bottom: 3.875rem;
 		}
-		
+
 		a {
 			color: @white;
 			text-decoration: none;
@@ -96,23 +96,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', e
 			font-size: 1.125rem;
 			padding: 0 1.875rem;
 			.transition;
-			
+
 			&:hover {
 				color: @red;
 				background: @white;
 			};
 		}
-		
+
 		@media screen and (max-width: 1035px) {
 			padding: 0.750rem 11rem 0;
 		}
-                
-                
+
+
                 @media screen and (max-width: 640px)
                 {
                     padding: 0 5rem 0;
                 }
-                
+
                 @media screen and (max-width: 850px) {
                     h2 {
 				font-weight: 300;
@@ -125,14 +125,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', e
                                 line-height: 2.1875rem;
                                 margin-bottom: 3.875rem;
 
-				
+
 				br {
 					display: none;
 				}
 			}
 		}
 
-		@media screen and (max-width: 745px) {	
+		@media screen and (max-width: 745px) {
 			h2 {
 				font-weight: 300;
 				font-size: 2.375rem;
@@ -144,21 +144,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', e
 				font-size: 1.2rem;
 				line-height: 1.5rem;
 				margin-bottom: 3.875rem;
-				
+
 				br {
 					display: none;
 				}
 			}
 		}
 	}
-	
-	@media screen and (max-width: 754px) {	
+
+	@media screen and (max-width: 754px) {
 		height: auto;
 	}
 
 	@media screen and (max-width: 480px) {
 		&.mini {
-			background: #0c79c3;
+			background: #216E31;
 			height: 14rem;
 
 			img {

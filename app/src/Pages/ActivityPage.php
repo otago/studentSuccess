@@ -4,10 +4,6 @@ namespace OP\Studentsuccess;
 
 use Page;
 
-
-use DisplayLogicWrapper;
-
-
 use OP\Studentsuccess\ActivityPage_Activity;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\NumericField;

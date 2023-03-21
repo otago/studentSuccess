@@ -1,7 +1,7 @@
 .accordion-c {
     clear: both;
-	
-	.title-c { 
+
+	.title-c {
 		border-top: 1px solid transparent;
 		margin-bottom: 0;
         margin-top: 0;
@@ -34,7 +34,7 @@
 
 		&.title-color-Blue {
 			&:before {
-				background-color: @blue;
+				background-color: @tplightgreen;
 			}
 		}
 
@@ -49,7 +49,7 @@
 				background-color: @red;
 			}
 		}
-		
+
 		a {
 			display: block;
 			padding: 1.5rem 0;
@@ -60,7 +60,7 @@
 			cursor: pointer;
 			font-weight: 600;
 			margin: 0 auto;
-			
+
 			&:after {
 				.icon-font;
 				content: "\e606";
@@ -70,7 +70,7 @@
 				line-height: 36px;
 				color: #8C8E90;
 				opacity: 0.4;
-				
+
 				@media screen and (max-width: 980px) {
 					right: 1rem;
 				}
@@ -84,7 +84,7 @@
 			opacity: 0.8;
 			color: darken(#8C8E90, 10%);
 		}
-		
+
 		&.active {
 			background-color: rgba(255, 255, 255, 0.3);
 			color: darken(#8C8E90, 10%);
@@ -92,7 +92,7 @@
 
 			a {
 				color: @dark-grey;
-				
+
 				&:after {
 					content: "\e602";
 				}
@@ -107,7 +107,7 @@
 		@media screen and (max-width: 620px) {
 			font-size: 1.2rem;
 			line-height: 1.6rem;
-			
+
 			&:before {
 				width: 5px;
 			}
@@ -118,11 +118,11 @@
 			}
 		}
 	}
-	
+
 	.accordion-item {
 		border-bottom: 1px solid @light-brown;
 		padding: 0;
-		
+
 		.accordion-item-content {
 			max-width: 62.5rem;
 			width: 90%;
@@ -131,7 +131,7 @@
 
 		&.active {
 			background: @white;
-			border-bottom: none;	
+			border-bottom: none;
 
 
 			> .left-content-wrapper:first-child .content-padder,
@@ -157,7 +157,7 @@
 }
 
 .page-contents .content .article {
-	.accordion-c { 
+	.accordion-c {
 		.title-c {
 			margin-bottom: 0;
 		}

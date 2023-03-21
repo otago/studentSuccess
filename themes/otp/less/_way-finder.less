@@ -1,19 +1,19 @@
 @import "elements.less";
 
-.way-finder {	
+.way-finder {
 	position: relative;
 	overflow: hidden;
 	z-index: 50;
 	padding-bottom: 3.25rem;
 	margin: 0 auto;
-	
+
 	.col {
 		float: left;
 		width: 14.2857142857%;
 		padding: 1.75rem 2rem 2.625rem;
 		min-height: 300px;
 	}
-	
+
 	h2 {
 		font-weight: 500;
 	}
@@ -27,59 +27,63 @@
 		width: 35.7142857143%;
 		background: #F7F7F6;
 	}
-	
+
 	.col-2 {
 		width: 28.5714285714%;
 	}
-	
+
 	.light-green {
 		color: @white;
 		background: @light-green;
 		.transition;
 	}
-	
+
 	.lighter-blue {
 		color: @white;
 		background: @lighter-blue;
 		.transition;
 	}
-	
+
 	nav.col {
 		padding: 3.625rem 6.375rem 5.125rem;
-		color: @dark-blue;
-		
+		color: @tpdark-green;
+
 		h3 {
 			font-size: 1.125rem;
 			font-weight: 600;
-			color: #004f8f;
+			color: #183121;
 		}
-		
+
 		ul {
 			.list-reset;
-			
+
 			li {
-				
+
 				border-bottom: 1px solid rgba(0, 79, 143, 0.3);
 				overflow: hidden;
 				position: relative;
-				
+
 				&:last-child {
 					border-bottom: 0;
 				};
-				
+
 				a {
 					display: block;
 					//min-height: 4rem;
 					line-height: 2rem;
 					padding: 1rem 1rem 1rem 0;
 					font-size: 1.875rem;
-					color: @dark-blue;
-					
+					color: @tpdark-green;
+					//filter: invert(73%) sepia(27%) saturate(2324%) hue-rotate(3deg) brightness(107%) contrast(109%);
+					.goto {
+						filter: brightness(0) saturate(100%) invert(11%) sepia(10%) saturate(3162%) hue-rotate(89deg) brightness(96%) contrast(84%);
+					}
 					&:hover {
-						color: @blue;
+						color: @tpblue;
+						filter: brightness(0) saturate(100%) invert(17%) sepia(39%) saturate(3867%) hue-rotate(216deg) brightness(93%) contrast(95%);
 					};
 				}
-				
+
 				span {
 					display: block;
 					height: 4rem;
@@ -87,21 +91,22 @@
 					position: absolute;
 					right: 0;
 					top: 0;
+					//filter: invert(73%) sepia(27%) saturate(2324%) hue-rotate(3deg) brightness(107%) contrast(109%);
 					background: url('../images/icons/goto.svg') center no-repeat;
 					.transition;
 				}
-				
+
 				&:hover {
 					span {
-						opacity: 0.6;
+
 					}
 				}
-				
+
 			}
 		}
 	}
-	
-	
+
+
 	.career-handbook {
 		position: relative;
 		overflow: hidden;
@@ -110,7 +115,7 @@
 		min-height: 300px;
 		padding: 0;
 		background: #000;
-		
+
 		img {
 			position: relative;
 			z-index: 2;
@@ -119,7 +124,7 @@
 			min-height: 350px;
 			.transition-property(opacity, 0.2s);
 		}
-		
+
 		.icon {
 			font-size: 2.375rem;
 			display: block;
@@ -128,12 +133,12 @@
 			z-index: 5;
 			position: absolute;
 			color: @white;
-			
+
 			@media screen and (max-width: 1200px) {
 				font-size: 1.5rem;
 			}
 		}
-		
+
 		article {
 			position: absolute;
 			bottom: 0;
@@ -144,7 +149,7 @@
 			color: @white;
 			padding: 2.25rem;
 			.transition;
-			
+
 			h3, p {
 				margin: 0;
 				font-size: 1rem;
@@ -152,13 +157,13 @@
 				max-width: 19.5rem;
 				color: #fff;
 			}
-			
+
 			h3 {
 				font-size: 1.875rem;
 				line-height: 2rem;
 				margin-bottom: 1.5rem;
 			}
-			
+
 		}
 
 		&:hover {
@@ -167,38 +172,38 @@
 			}
 		}
 	}
-	
+
 	.getting-started {
-		
+
 		background: @yellow;
 		padding: 1.625rem 1.75rem 3.125rem;
 		color: @dark-grey;
 		.transition;
-		
+
 		.icon {
 			font-size: 2.375rem;
 			display: block;
 			margin-bottom: 4.625rem;
-			
+
 			@media screen and (max-width: 1200px){
 				font-size: 1.5rem;
 			}
 		}
-		
+
 		p, h2 {
 			margin: 0;
 		}
-		
+
 		h2 {
 			margin-bottom: 1.875rem;
 			line-height: 2rem;
 		}
-	
+
 		&:hover {
 			background: darken(@yellow, 5%);
 		}
 	}
-	
+
 	@media screen and (max-width: 1200px){
 		.col {
 			width: 25%;
@@ -209,14 +214,14 @@
 	}
 
 	@media screen and (max-width: 980px) {
-		
+
 		.col, nav.col, .col-3, .col-2 {
 			width: 50%;
 		}
-		
+
 		nav.col {
 			padding: 1.625rem 1.75rem 3.125rem;
-			
+
 			ul li a {
 				font-size: 1.25rem;
 			  	line-height: 1.75rem;
@@ -224,15 +229,15 @@
 			}
 		}
 	}
-	
+
 	@media screen and (max-width: 480px){
-		
+
 		.col, nav.col, .col-3, .col-2 {
 			width: 100%;
 		}
 	}
-	
-	
+
+
 }
 
 .way-finder a.light-green:hover {
