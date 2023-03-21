@@ -38,7 +38,7 @@
                             <p>
                                 <% if $TelephoneInternational %>International <a href='tel:{$TelephoneInternational}'>{$TelephoneInternational}</a><br><% end_if %>
                                 <% if $TelephoneNewZealand %>New Zealand <a href='tet:{$TelephoneNewZealand}'>{$TelephoneNewZealand}</a><br><% end_if %>
-
+                                <a href="https://www.op.ac.nz/about/important-information/in-an-emergency/">In an emergency 4177</a><br>
                                 <% if $TelephoneInternational %>Your suggestions are welcome, please email <a href='mailto:{$ContactEmail}'>{$ContactEmail}</a><% end_if %>
                             </p>
                         </div>
