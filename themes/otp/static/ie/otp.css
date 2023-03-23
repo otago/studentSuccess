@@ -434,16 +434,27 @@ table th.main {
   padding: 13px 54px 0 0;
 }
 .logo img {
-  width: 160px;
-  max-width: 160px;
+  width: 272px;
+  max-width: 272px;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1520px) {
   .logo {
     padding-right: 28px;
   }
   .logo a img {
-    width: 160px;
-    max-width: 160px;
+    width: 272px;
+    max-width: 272px;
+  }
+}
+@media screen and (max-width: 1483px) {
+  .logo {
+    padding-bottom: 14px;
+  }
+  .logo a {
+    height: 48px;
+  }
+  .logo a img {
+    width: 176px;
   }
 }
 @media screen and (max-width: 660px) {
@@ -454,7 +465,7 @@ table th.main {
     height: 48px;
   }
   .logo a img {
-    width: 96px;
+    width: 144px;
   }
 }
 .main .container {

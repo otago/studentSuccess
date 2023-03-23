@@ -20,7 +20,7 @@
     <meta name='twitter:url' content='$BaseHref' />
     <meta name='twitter:image' content='https://www.op.ac.nz/assets/heromedia/Study.jpg' />
     <meta name='twitter:site' content='@OtagoPolytech' />
-    <link rel="icon" type="image/svg+xml" href="{$ThemeDir}/images/logo.svg"/>
+    <link rel="icon" type="image/svg+xml" href="{$ThemeDir}/images/1logo-stacked.svg"/>
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="apple-touch-icon" href="themes/otp/images/apple-touch-icon-iphone.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="themes/otp/images/apple-touch-icon-ipad.png" />
