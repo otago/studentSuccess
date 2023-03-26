@@ -2648,7 +2648,7 @@ table tr:last-child {
   }
   .logo a img {
     width: 11rem;
-    margin-left: -31px;
+    margin-left: -20px;
     margin-top: 6px;
   }
 }
@@ -2662,7 +2662,7 @@ table tr:last-child {
   }
   .logo a img {
     width: 9rem;
-    margin-left: -10px;
+    margin-left: -4px;
     margin-top: -12px;
   }
 }
@@ -3131,7 +3131,7 @@ table tr:last-child {
 }
 @media screen and (max-width: 640px) {
   .hero .contents {
-    padding: 0 5rem 0;
+    padding: 0 0rem 0;
   }
 }
 @media screen and (max-width: 850px) {
@@ -6002,6 +6002,11 @@ div.token-input-dropdown-mac ul li.token-input-selected-dropdown-item-mac.odd sp
 }
 .homepage .searchbar {
   margin-bottom: 40px;
+}
+@media screen and (max-width: 660px) {
+  .homepage .searchbar {
+    padding-right: 24px;
+  }
 }
 .massSearch {
   padding-bottom: 25px;
