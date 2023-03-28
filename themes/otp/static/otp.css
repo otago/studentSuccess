@@ -3079,10 +3079,11 @@ table tr:last-child {
 .hero .contents {
   position: relative;
   top: 29px;
+  left: 17px;
   z-index: 2;
   color: #ffffff;
   padding: .750rem 16.375rem 0;
-  margin: 0 auto 0 17px;
+  margin: 0 auto;
   max-width: 87.50rem;
 }
 .hero .contents h2,
@@ -3131,6 +3132,8 @@ table tr:last-child {
 @media screen and (max-width: 640px) {
   .hero .contents {
     padding: 0 0rem 0;
+    left: auto;
+    margin: 0 auto 0 17px;
   }
 }
 @media screen and (max-width: 850px) {
