@@ -1,7 +1,7 @@
 <header class='main'>
     <div class='container'>
         <h1 class='logo'><a href='{$BaseHref}'>
-            <img src='{$ThemeDir}/images/logo.svg' title="{$SiteConfig.Title}">
+            <img src='{$ThemeDir}/images/1logo-stacked.svg' title="{$SiteConfig.Title}">
         </a></h1>
 
         <nav>

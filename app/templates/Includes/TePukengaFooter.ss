@@ -29,6 +29,7 @@
                 <div class="tp-footer__links">
                     <a href="https://xn--tepkenga-szb.ac.nz/about-us/" target="_blank">About Te Pūkenga</a>
                     <a href="https://www.op.ac.nz/about-us/governance-and-management/policy-library/disclosing-personal-information-about-learners-and-staff-policy/" target="_blank">Privacy Policy</a>
+
                 </div>
                 <% with $SiteConfig %>
                     <div class='container addresses'>
@@ -36,9 +37,10 @@
                         <% if $TelephoneInternational || $TelephoneNewZealand || $ContactEmail %>
                         <div class='large-col col'>
                             <p>
+                                <strong>Contact Otago Polytechnic</strong><br>
                                 <% if $TelephoneInternational %>International <a href='tel:{$TelephoneInternational}'>{$TelephoneInternational}</a><br><% end_if %>
                                 <% if $TelephoneNewZealand %>New Zealand <a href='tet:{$TelephoneNewZealand}'>{$TelephoneNewZealand}</a><br><% end_if %>
-
+                                <a href="https://www.op.ac.nz/about/important-information/in-an-emergency/">In an emergency 4177</a><br>
                                 <% if $TelephoneInternational %>Your suggestions are welcome, please email <a href='mailto:{$ContactEmail}'>{$ContactEmail}</a><% end_if %>
                             </p>
                         </div>
