@@ -8,7 +8,13 @@ use OP\Studentsuccess\SidebarTestimony;
 use OP\Studentsuccess\SidebarHelp;
 use OP\Studentsuccess\SidebarImageElement;
 use DNADesign\Elemental\Models\BaseElement;
+use SilverStripe\Core\ClassInfo;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\LiteralField;
+use SilverStripe\Forms\ReadonlyField;
+use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataExtension;
+use SilverStripe\ORM\FieldType\DBField;
 
 
 class OPBaseElementExtension extends DataExtension
@@ -22,9 +28,6 @@ class OPBaseElementExtension extends DataExtension
         ElementContent::class,
         ElementFile::class,
         ElementLink::class,
-        //'ElementInternalLink',
-
-
         Accordion::class,
         Carousel::class,
         CaseStudy::class,
@@ -51,7 +54,6 @@ class OPBaseElementExtension extends DataExtension
             'ParentID' => $this->owner->ParentID,
             'ID:not' => $this->owner->ID,
             'Sort:GreaterThan' => $this->owner->Sort,
-           // 'ListID' => $this->owner->ListID,
         ])->sort('Sort', 'ASC')->first();
 
         if (($after && in_array($after->ClassName, $arrSidebarClasses))) {
@@ -71,7 +73,6 @@ class OPBaseElementExtension extends DataExtension
             'ParentID' => $this->owner->ParentID,
             'ID:not' => $this->owner->ID,
             'Sort:GreaterThan' => $this->owner->Sort,
-         //   'ListID' => $this->owner->ListID
         ])->sort('Sort', 'ASC')->first();
 
         if (($after && in_array($after->ClassName, $arrSidebarClasses))) {
@@ -131,5 +132,14 @@ class OPBaseElementExtension extends DataExtension
         return false;
     }
 
+    public function updateCMSFields(FieldList $fields)
+    {
+        $bob = TextField::create("asdf","Element Type:")
+            ->setReadonly(true)
+            ->setValue($this->owner->i18n_singular_name());
 
-} 
+        $fields->addFieldToTab('Root.Main', $bob, "Title");
+
+    }
+
+}

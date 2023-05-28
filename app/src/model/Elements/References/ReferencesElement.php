@@ -9,7 +9,7 @@ use DNADesign\Elemental\Models\BaseElement;
 class ReferencesElement extends BaseElement
 {
     private static $table_name = 'ReferencesElement';
-    private static $title = "References Element";
+    private static $singular_name = "References Element";
 
     private static $description = "References Element";
 
@@ -23,7 +23,7 @@ class ReferencesElement extends BaseElement
 
     public function getType()
     {
-        return 'References Element';
+        return self::$singular_name;
     }
 
     public function getCMSFields()
@@ -33,4 +33,4 @@ class ReferencesElement extends BaseElement
 
         return $fields;
     }
-} 
+}

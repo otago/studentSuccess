@@ -9,13 +9,18 @@ use SilverStripe\Forms\DropdownField;
 class VideoComponent extends HearFromOthers
 {
     private static $table_name = 'VideoComponent';
-    private static $title = "Video";
+    private static $singular_name = "Video";
 
     private static $description = "Video Component with modal player";
 
     private static $db = [
         'Color' => 'Varchar',
     ];
+
+    public function getType()
+    {
+        return self::$singular_name;
+    }
 
     function getCMSFields()
     {

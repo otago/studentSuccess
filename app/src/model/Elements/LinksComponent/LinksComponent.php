@@ -17,7 +17,7 @@ use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 class LinksComponent extends BaseElement
 {
     private static $table_name = 'LinksComponent';
-    private static $title = "Group of links";
+    private static $singular_name = "Group of links";
 
     private static $description = "Shows a list of links";
 
@@ -47,7 +47,7 @@ class LinksComponent extends BaseElement
 
     public function getType()
     {
-        return 'Group of links';
+        return self::$singular_name;
     }
 
     private static $inline_editable = false;

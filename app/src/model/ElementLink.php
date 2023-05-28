@@ -30,13 +30,13 @@ class ElementLink extends BaseElement
         'InternalLink' => SiteTree::class
     ];
 
-    private static $title = "Link Element";
+    private static $singular_name = "Link Element";
 
     private static $description = "";
 
     public function getType()
     {
-        return 'Link Element';
+        return self::$singular_name;
     }
 
     public function getCMSFields()

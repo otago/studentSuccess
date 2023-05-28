@@ -31,7 +31,8 @@ class ElementContentExtension extends DataExtension
     function updateCMSFields(FieldList $fields)
     {
         $contentField = $fields->dataFieldByName('HTML');
-        // debug::dump($this);
+        $fields->insertAfter($fields->dataFieldByName('HTML'),"Title");
+
         if ($this->owner->ID) {
 
             $Reference = $fields->dataFieldByName('Reference');

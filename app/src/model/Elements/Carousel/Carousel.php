@@ -19,9 +19,9 @@ use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 class Carousel extends BaseElement
 {
     private static $table_name = 'Carousel';
-    private static $title = Carousel::class;
+    private static $singular_name = "Carousel";
 
-    private static $description = Carousel::class;
+    private static $description = "Carousel";
 
     private static $db = [
         'Background' => 'Varchar'
@@ -32,7 +32,7 @@ class Carousel extends BaseElement
     ];
     public function getType()
     {
-        return 'Carousel';
+        return self::$singular_name;
     }
 
     private static $owns = [
@@ -79,4 +79,4 @@ class Carousel extends BaseElement
 
 
 
-} 
+}

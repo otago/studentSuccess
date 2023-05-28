@@ -9,7 +9,7 @@ use Symbiote\GridFieldExtensions\GridFieldAddNewMultiClass;
 class MasonryContentsWithFilters extends MasonryContent
 {
     private static $table_name = 'MasonryContentsWithFilters';
-    private static $title = "Masonry Element With Filters";
+    private static $singular_name = "Masonry Element With Filters";
 
     private static $description = "Masonry elements with filters";
 
@@ -19,11 +19,11 @@ class MasonryContentsWithFilters extends MasonryContent
         'FilterByString' => 'Varchar',
         'SearchFieldDefaultText' => 'Varchar'
     ];
-    public function ddd()
+
+
+    public function getType()
     {
-
-
-        return $this->Tiles();
+        return self::$singular_name;
     }
 
     public function getCMSFields()
@@ -46,4 +46,4 @@ class MasonryContentsWithFilters extends MasonryContent
 
         return $fields;
     }
-} 
+}

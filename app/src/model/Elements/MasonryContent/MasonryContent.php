@@ -17,7 +17,7 @@ use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 class MasonryContent extends BaseElement
 {
     private static $table_name = 'MasonryContent';
-    private static $title = "Masonry Element";
+    private static $singular_name = "Masonry Element";
 
     private static $description = "Masonry elements";
 
@@ -34,7 +34,7 @@ class MasonryContent extends BaseElement
 
     public function getType()
     {
-        return 'Masonry Element';
+        return self::$singular_name;
     }
 
     public function getCMSFields()
@@ -66,4 +66,4 @@ class MasonryContent extends BaseElement
         return $fields;
     }
 
-} 
+}

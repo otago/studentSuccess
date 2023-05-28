@@ -1,4 +1,5 @@
 <div class="element-content-generic left-content tableelement">
+	<div class="content-padder">
 	$HTML
 
 	<% if ReadMoreContent %>
@@ -8,4 +9,5 @@
 			$ReadMoreContent
 		</div>
 	<% end_if %>
+	</div>
 </div>

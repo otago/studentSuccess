@@ -20,9 +20,8 @@ use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 class WayFinder extends BaseElement
 {
     private static $table_name = 'WayFinder';
-    private static $title = "Way Finder";
+    private static $singular_name = "Way Finder";
 
-    private static $singular_name = 'WayFinder';
     private static $plural_name = 'WayFinder';
 
     private static $description = "Way finder element section";
@@ -57,7 +56,7 @@ class WayFinder extends BaseElement
 
     public function getType()
     {
-        return 'WayFinder';
+        return self::$singular_name;
     }
 
     public function OrderedFilters()
@@ -110,4 +109,4 @@ class WayFinder extends BaseElement
     }
 
 
-} 
+}

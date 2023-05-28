@@ -11,7 +11,7 @@ use DNADesign\Elemental\Models\BaseElement;
 class ContactElement extends BaseElement
 {
     private static $table_name = 'ContactElement';
-    private static $title = "Contact Element";
+    private static $singular_name = "Contact Element";
 
     private static $description = "Contact Element";
 
@@ -36,7 +36,7 @@ class ContactElement extends BaseElement
 
     public function getType()
     {
-        return 'Contact Element';
+        return self::$singular_name;
     }
 
     public function getCMSFields()
@@ -57,4 +57,4 @@ class ContactElement extends BaseElement
         */
         return $fields;
     }
-} 
+}

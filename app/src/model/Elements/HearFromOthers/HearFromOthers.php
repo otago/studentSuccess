@@ -11,7 +11,7 @@ use OP\Studentsuccess\StringUtils;
 class HearFromOthers extends BaseElement
 {
     private static $table_name = 'HearFromOthers';
-    private static $title = "Hear From Others";
+    private static $singular_name = "Hear From Others";
 
     private static $description = "Hear from others section";
 
@@ -41,7 +41,7 @@ class HearFromOthers extends BaseElement
 
     public function getType()
     {
-        return 'Hear From Others';
+        return self::$singular_name;
     }
 
     public function VideoURL()
@@ -54,4 +54,4 @@ class HearFromOthers extends BaseElement
     }
 
 
-} 
+}

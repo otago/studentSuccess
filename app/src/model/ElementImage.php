@@ -25,7 +25,7 @@ class ElementImage extends ElementLink
         'Image' => Image::class
     ];
 
-    private static $title = "Inline image";
+    private static $singular_name = "Inline image";
 
     private static $owns = [
         'Image'
@@ -33,7 +33,7 @@ class ElementImage extends ElementLink
 
     public function getType()
     {
-        return 'Inline image';
+        return self::$singular_name;
     }
     public function getCMSFields()
     {

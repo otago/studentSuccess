@@ -17,7 +17,7 @@ use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 class CheckList extends BaseElement
 {
     private static $table_name = 'CheckList';
-    private static $title = "Interactive Checklist";
+    private static $singular_name = "Interactive Checklist";
 
     private static $description = "Interactive Checklist";
 
@@ -38,11 +38,13 @@ class CheckList extends BaseElement
         'Items'
     ];
 
+    private static $inline_editable = false;
+
+
     public function getType()
     {
-        return 'Interactive Checklist';
+        return self::$singular_name;
     }
-    private static $inline_editable = false;
 
     public function getCMSFields()
     {
@@ -85,4 +87,4 @@ class CheckList extends BaseElement
     {
         return ($this instanceof SingleLevelCheckList || $this instanceof SingleLevelList);
     }
-} 
+}

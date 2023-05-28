@@ -14,7 +14,7 @@ use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 class TabbedCheckList extends BaseElement
 {
 
-    private static $title = "Tabbed Check List Element";
+    private static $singular_name = "Tabbed Check List Element";
 
     private static $description = "Tabbed Check List Element";
 
@@ -24,7 +24,7 @@ class TabbedCheckList extends BaseElement
 
     public function getType()
     {
-        return 'Tabbed Check List Element';
+        return self::$singular_name;
     }
 
     public function getCMSFields()

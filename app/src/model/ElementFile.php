@@ -20,13 +20,14 @@ class ElementFile extends BaseElement
         'File' => File::class
     );
 
-    private static $title = "File Element";
+    private static $singular_name = "File Element";
 
     private static $enable_title_in_template = true;
 
+
     public function getType()
     {
-        return 'Element File';
+        return self::$singular_name;
     }
     public function getCMSFields()
     {

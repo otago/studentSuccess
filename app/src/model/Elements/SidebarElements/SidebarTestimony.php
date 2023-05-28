@@ -10,7 +10,7 @@ class SidebarTestimony extends BaseElement
 {
     private static $table_name = 'SidebarTestimony';
 
-    private static $title = "Sidebar quote";
+    private static $singular_name = "Sidebar quote";
 
     private static $description = "Sidebar quote";
 
@@ -21,6 +21,6 @@ class SidebarTestimony extends BaseElement
 
     public function getType()
     {
-        return 'Sidebar quote';
+        return self::$singular_name;
     }
-} 
+}
