@@ -13,7 +13,7 @@ SilverStripe\SAML\Services\SAMLConfiguration:
 
 
 OP\SAMLHelperFunctions:
-  filepath: "/_filestore2/"
+  filepath: "/_filestore/"
   dev:
     privateKey: "certs/local.key"
     x509cert: "certs/local.cer"
