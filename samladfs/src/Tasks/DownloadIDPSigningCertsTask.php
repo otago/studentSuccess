@@ -8,6 +8,7 @@
  */
 namespace OP;
 
+use SilverStripe\Control\Director;
 use SilverStripe\Dev\BuildTask;
 
 
@@ -33,7 +34,12 @@ class DownloadIDPSigningCertsTask extends BuildTask
     {
         echo"Started DownloadIDPSigningCertsTask";
 
-        echo implode(" \n", SAMLHelperFunctions::DownloadMetaDataFromIDP());
+        if (Director::is_cli()) {
+            $seperatingChar = " \n";
+        }else {
+            $seperatingChar = " <br>";
+        }
+        echo implode($seperatingChar, SAMLHelperFunctions::DownloadMetaDataFromIDP());
 
         echo "Finished DownloadIDPSigningCertsTask";
     }

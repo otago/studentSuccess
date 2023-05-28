@@ -53,6 +53,8 @@ class opTesting extends PageController
         }elseif ($mypath === "pp") {
             $this->phpsearch();
         }
+
+        die();
     }
     public function aaaa()
     {
