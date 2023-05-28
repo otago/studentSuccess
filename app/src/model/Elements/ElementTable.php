@@ -9,9 +9,9 @@ use DNADesign\Elemental\Models\ElementContent;
 class ElementTable extends ElementContent
 {
 
-    private static $singular_name = "Full width Table";
+    private static $singular_name = "Content - Full width";
 
-    private static $description = "Full width Table";
+    private static $description = "Content - Full width";
 
     public function getType()
     {
