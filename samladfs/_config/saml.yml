@@ -13,7 +13,7 @@ SilverStripe\SAML\Services\SAMLConfiguration:
 
 
 OP\SAMLHelperFunctions:
-  filepath: "/_filestore/"
+  filepath: "/_filestore2/"
   dev:
     privateKey: "certs/local.key"
     x509cert: "certs/local.cer"
@@ -57,7 +57,7 @@ SilverStripe\Core\Injector\Injector:
         basic: '%$SilverStripe\Security\MemberAuthenticator\MemberAuthenticator'
   SilverStripe\SAML\Services\SAMLConfiguration:
     class: OP\SAMLConfigurationExtension
-    
+
   SilverStripe\Security\AuthenticationHandler:
     class: OP\RequestAuthenticationHandler
     properties:
