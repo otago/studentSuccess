@@ -6539,7 +6539,7 @@ figure.element figcaption p {
 .right-content.init {
   opacity: 1;
 }
-.tableelement .content-padder {
+.full-width .content-padder {
   padding-right: inherit;
 }
 .content-padder {
