@@ -13,7 +13,7 @@ use DNADesign\Elemental\Models\BaseElement;
 class CTAElement extends BaseElement
 {
     private static $table_name = 'CTAElement';
-    private static $title = "Call To Action";
+    private static $singular_name = "Call To Action";
 
     private static $description = "Call To Action";
 
@@ -28,14 +28,14 @@ class CTAElement extends BaseElement
     private static $has_one = [
         'Image' => Image::class
     ];
-    
+
     private static $owns = [
         'Image'
     ];
 
     public function getType()
     {
-        return 'Call To Action';
+        return self::$singular_name;
     }
 
     public function MyImage()
@@ -59,4 +59,4 @@ class CTAElement extends BaseElement
 
         return $fields;
     }
-} 
+}

@@ -17,7 +17,7 @@ use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 class Accordion extends BaseElement
 {
     private static $table_name = 'Accordion';
-    private static $title = 'Accordion';
+    private static $singular_name = 'Accordion';
 
     private static $description = 'Accordion';
 
@@ -33,7 +33,7 @@ class Accordion extends BaseElement
 
     public function getType()
     {
-        return 'Accordion';
+        return self::$singular_name;
     }
 
     public function getCMSFields()

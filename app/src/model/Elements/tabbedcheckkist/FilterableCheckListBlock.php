@@ -32,6 +32,12 @@ class FilterableCheckListBlock extends CheckListBlock
         'AppliesToFirstTrimester'
     ];
 
+
+    public function getType()
+    {
+        return self::$singular_name;
+    }
+
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();

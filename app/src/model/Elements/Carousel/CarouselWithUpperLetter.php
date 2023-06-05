@@ -9,9 +9,15 @@ use Symbiote\GridFieldExtensions\GridFieldAddNewMultiClass;
 class CarouselWithUpperLetter extends Carousel
 {
     //private static $table_name = 'CarouselWithUpperLetter';
-    private static $title = "Acronym Carousel";
+    private static $singular_name = "Acronym Carousel";
 
     private static $description = "Carousel Element with upper letter to cycle";
+
+
+    public function getType()
+    {
+        return self::$singular_name;
+    }
 
     function getCMSFields()
     {

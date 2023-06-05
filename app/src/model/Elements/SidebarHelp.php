@@ -11,7 +11,7 @@ class SidebarHelp extends BaseElement
 {
     private static $table_name = 'SidebarHelp';
 
-    private static $title = "Sidebar Help";
+    private static $singular_name = "Sidebar Help";
 
     private static $description = "Sidebar Help";
 
@@ -21,6 +21,6 @@ class SidebarHelp extends BaseElement
 
     public function getType()
     {
-        return 'Sidebar Help';
+        return self::$singular_name;
     }
 }

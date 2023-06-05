@@ -13,15 +13,16 @@ use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 class InteractiveList extends CheckList {
 
-	private static $title = "Interactive List";
+	private static $singular_name = "Interactive List";
 
 	private static $description = "Interactive List";
 
+    private static $inline_editable = false;
+
     public function getType()
     {
-        return 'Interactive List';
+        return self::$singular_name;
     }
-    private static $inline_editable = false;
 
 
 

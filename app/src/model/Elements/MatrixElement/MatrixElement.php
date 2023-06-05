@@ -9,7 +9,7 @@ use DNADesign\Elemental\Models\BaseElement;
 class MatrixElement extends BaseElement
 {
     private static $table_name = 'MatrixElement';
-    private static $title = "Matrix of Four blocks";
+    private static $singular_name = "Matrix of Four blocks";
 
     private static $description = "Matrix of Four blocks";
     private static $casting = [
@@ -40,7 +40,7 @@ class MatrixElement extends BaseElement
 
     public function getType()
     {
-        return 'Matrix of Four blocks';
+        return self::$singular_name;
     }
 
     function OverlayHTML($strField)
@@ -52,4 +52,4 @@ class MatrixElement extends BaseElement
         }
     }
 
-} 
+}

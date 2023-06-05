@@ -74,13 +74,11 @@ class SAMLHelperFunctions
 
         $retval = [];
 
-        $filepath = ASSETS_PATH . SAMLHelperFunctions::config()->get('filepath');
-
-        if (!file_exists(dirname($filepath))) {
-            $retval[] = "Create folder" . $filepath;
-            Filesystem::makeFolder($filepath);
+        $dirpath = SAMLHelperFunctions::MetadatDirectoryPath();
+        if (!file_exists($dirpath)) {
+            $retval[] = "Create folder" . $dirpath;
+            Filesystem::makeFolder($dirpath);
         }
-
 
         $FilePath = SAMLHelperFunctions::MetadataFilePath();
         $MetadatafileLocation = $idpconfig["metadata"];
@@ -127,7 +125,12 @@ class SAMLHelperFunctions
     public static function MetadataFilePath()
     {
         $idp = SAMLHelperFunctions::SamlConfig();;
-        return $FilePath = ASSETS_PATH .  SAMLHelperFunctions::config()->get("filepath") . $idp['idpEndpoint'] . "metadata.xml";
+        return $FilePath = SAMLHelperFunctions::MetadatDirectoryPath() . $idp['idpEndpoint'] . "metadata.xml";
+    }
+
+    public static function MetadatDirectoryPath()
+    {
+        return ASSETS_PATH . SAMLHelperFunctions::config()->get("filepath");
     }
 
     /**
@@ -159,6 +162,10 @@ class SAMLHelperFunctions
         // follow 3** requests
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 
+        if (Director::isDev()) {
+            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, '2');
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, '0');
+        }
         //CWP proxy stuff
         if (Environment::getEnv('SS_OUTBOUND_PROXY') && Environment::getEnv('SS_OUTBOUND_PROXY_PORT')) {
             curl_setopt($ch, CURLOPT_PROXY, Environment::getEnv('SS_OUTBOUND_PROXY'));

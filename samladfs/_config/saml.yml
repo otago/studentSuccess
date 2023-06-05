@@ -57,7 +57,7 @@ SilverStripe\Core\Injector\Injector:
         basic: '%$SilverStripe\Security\MemberAuthenticator\MemberAuthenticator'
   SilverStripe\SAML\Services\SAMLConfiguration:
     class: OP\SAMLConfigurationExtension
-    
+
   SilverStripe\Security\AuthenticationHandler:
     class: OP\RequestAuthenticationHandler
     properties:

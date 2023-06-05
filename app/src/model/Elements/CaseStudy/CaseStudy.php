@@ -11,7 +11,7 @@ use DNADesign\Elemental\Models\BaseElement;
 class CaseStudy extends BaseElement
 {
     private static $table_name = 'CaseStudy';
-    private static $title = "Case Study";
+    private static $singular_name = "Case Study";
 
     private static $description = "Case Study";
 
@@ -25,13 +25,9 @@ class CaseStudy extends BaseElement
         'Image' => Image::class
     ];
 
-//    private static $field_labels = [
-//        'Summary' => 'Pull quote'
-//    ];
-
     public function getType()
     {
-        return 'Case Study';
+        return self::$singular_name;
     }
 
     private static $owns = [
@@ -55,4 +51,4 @@ class CaseStudy extends BaseElement
         return $fields;
     }
 
-} 
+}

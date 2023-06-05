@@ -5,6 +5,8 @@ namespace OP\Studentsuccess;
 
 use OP\Studentsuccess\ReferencesElement;
 use SilverStripe\Forms\FieldList;
+use SilverStripe\ORM\DB;
+use SilverStripe\ORM\Queries\SQLUpdate;
 use SilverStripe\View\Parsers\ShortcodeParser;
 use SilverStripe\ORM\DataExtension;
 use OP\Studentsuccess\StringUtils;
@@ -14,6 +16,7 @@ class ElementContentExtension extends DataExtension
 {
 
     private static $db = [
+        'FullWidth' => 'Boolean',
         'ReadMoreTitle' => 'Varchar(200)',
         'ReadMoreContent' => 'HTMLText'
     ];
@@ -31,7 +34,8 @@ class ElementContentExtension extends DataExtension
     function updateCMSFields(FieldList $fields)
     {
         $contentField = $fields->dataFieldByName('HTML');
-        // debug::dump($this);
+        $fields->insertAfter($fields->dataFieldByName('HTML'),"Title");
+
         if ($this->owner->ID) {
 
             $Reference = $fields->dataFieldByName('Reference');
