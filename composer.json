@@ -11,7 +11,7 @@
         "silverstripe/dynamodb": "^4.0",
         "silverstripe/externallinks": "^2.3",
         "silverstripe/fulltextsearch": "^3.11",
-        "silverstripe/recipe-cms": "^4.11.0",
+        "silverstripe/recipe-cms": "4.13.0",
         "silverstripe/saml": "2.0.0",
         "silverstripe/userforms": "^5.13",
         "silverstripe/widgets": "^2.3",
