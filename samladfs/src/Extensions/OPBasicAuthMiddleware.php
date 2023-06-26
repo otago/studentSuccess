@@ -79,9 +79,16 @@ class OPBasicAuthMiddleware extends BasicAuthMiddleware
         }
 
         $remoteip = $_SERVER['REMOTE_ADDR'];
-        //if at op return false
-        if (preg_match("/^202\.49\.0\.*/", $remoteip)) {
-            return false;
+        $ipAddArray =[
+            "/^202\.49\.0\.*/",
+            '/^127\.0\.0\.1/',
+            "/^::1/"
+        ];
+
+        foreach ($ipAddArray as $ip) {
+            if (preg_match($ip, $remoteip)) {
+                return false;
+            }
         }
         return true;
     }
