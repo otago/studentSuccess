@@ -80,7 +80,7 @@ class OPBasicAuthMiddleware extends BasicAuthMiddleware
 
         $remoteip = $_SERVER['REMOTE_ADDR'];
         //if at op return false
-        if (preg_match("/^202\.49\.0\.*/", $remoteip)) {
+        if (preg_match("/^202\.49\.0\.*/", $remoteip) || Director::isDev()) {
             return false;
         }
         return true;
