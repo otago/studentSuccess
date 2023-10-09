@@ -376,7 +376,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-size: 1rem;
   line-height: 1.75rem;
-  font-family: "proxima-nova", sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: #404041;
 }
@@ -6023,7 +6023,7 @@ div.token-input-dropdown-mac ul li.token-input-selected-dropdown-item-mac.odd sp
   font-weight: bold;
 }
 .searchinput .searchText {
-  font-family: proxima-nova, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 .clear-this {
   clear: both;
