@@ -84,10 +84,10 @@ class StringUtils {
 	 * @param $str
 	 * @param $strStart
 	 * @param $strEnd
-	 * @param null $iOffset
+	 * @param int $iOffset
 	 * @return array|null
 	 */
-	public static function GetBeforeBetweenAndAfter($str, $strStart, $strEnd, $iOffset = null) {
+	public static function GetBeforeBetweenAndAfter($str, $strStart, $strEnd, int $iOffset = 0) {
 		$iStart = strpos($str, $strStart, $iOffset);
 		$iEnd = strpos($str, $strEnd, $iOffset);
 		if ($iStart !== false  && $iEnd !== false) {
@@ -161,4 +161,4 @@ class StringUtils {
 
 
 
-} 
+}

@@ -8,7 +8,7 @@
 
 		<div class="block-row row top-row">
 			<div class="titles labeltopleft">
-				<span>$LabelTopLeft</span>
+				<span>$LabelLeftTop</span>
 			</div>
 
 			<div class="block col left">
