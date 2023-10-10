@@ -3772,11 +3772,11 @@ table tr:last-child {
   margin: 65px 0 0 0;
 }
 .hear-from-others.red section {
-  background: #216e31;
+  background: #3bad5f;
 }
 .hear-from-others.red section a.icon:hover {
-  color: #216e31;
-  border-color: #216e31;
+  color: #3bad5f;
+  border-color: #3bad5f;
 }
 .hear-from-others.green section {
   background: #216e31;
@@ -6266,7 +6266,7 @@ h5 a {
   margin: 0 0 0.5rem 0;
 }
 .left-content li p {
-  color: #3bad5f;
+  color: #404041;
   margin: 0;
 }
 .left-content li ul {
