@@ -14,7 +14,7 @@
 }
 
 .highlightGreen {
-	background: #2ABB9B;
+	background: @tpmediumgreen;
 	padding: 1px;
 }
 

@@ -5301,18 +5301,18 @@ table tr:last-child {
   background-color: #1b5a28;
 }
 .masonry-content .tile-c.scheme_mint {
-  background-color: #2ABB9B;
+  background-color: #216e31;
 }
 .masonry-content .tile-c.scheme_mint:hover,
 .masonry-content .tile-c.scheme_mint:focus {
-  background-color: #219178;
+  background-color: #154720;
 }
 .masonry-content .tile-c.scheme_blue {
-  background-color: #183121;
+  background-color: #9e0045;
 }
 .masonry-content .tile-c.scheme_blue:hover,
 .masonry-content .tile-c.scheme_blue:focus {
-  background-color: #070f0a;
+  background-color: #6b002f;
 }
 .masonry-content .tile-c.scheme_yellow {
   background-color: #e4e0cf;
@@ -5336,11 +5336,11 @@ table tr:last-child {
   background-color: #dbd5bf;
 }
 .masonry-content .tile-c.scheme_red {
-  background-color: #216e31;
+  background-color: #9e0045;
 }
 .masonry-content .tile-c.scheme_red:hover,
 .masonry-content .tile-c.scheme_red:focus {
-  background-color: #154720;
+  background-color: #6b002f;
 }
 .masonry-content .tile-c.scheme_black {
   background-color: #3bad5f;
@@ -5367,11 +5367,11 @@ table tr:last-child {
   background-color: #f4f7e0;
 }
 .masonry-content .tile-c.scheme_mint {
-  background-color: #2ABB9B;
+  background-color: #216e31;
 }
 .masonry-content .tile-c.scheme_mint:hover,
 .masonry-content .tile-c.scheme_mint:focus {
-  background-color: #219178;
+  background-color: #154720;
 }
 .masonry-content .tile-c.scheme_mint h3,
 .masonry-content .tile-c.scheme_mint p {
@@ -7601,7 +7601,7 @@ footer.main .container.addresses address.middle {
 }
 .highlightGreen,
 .highlightgreen {
-  background: #2ABB9B;
+  background: #216e31;
   padding: 0 2px;
 }
 @media print {
