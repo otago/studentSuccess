@@ -2,7 +2,7 @@
 	margin: 0 auto;
 	clear: both; /* should always be on it's own */
 	overflow: hidden; /* crop image */
-	background: @lighter-blue;
+	background: @tpdark-green;
 
 	&.has-image {
 		min-height: 300px;
@@ -37,23 +37,23 @@
 		padding-top: 0;
 		padding-bottom: 0;
 	}
-	
+
 	.links-block {
 		overflow: hidden;
 		width: 100%;
 		margin-bottom: 0;
 		color: @white;
-		
+
 		span.icon-external-link {
 			font-size: 2rem;
 			display: block;
 		}
-		
+
 		.left {
 			float: left;
 			width: 50%;
 			padding: 2.5rem 2.25rem 2.5rem 0;
-			
+
 			h3 {
 				font-size: 1.25rem;
 				line-height: 1.5rem;
@@ -64,7 +64,7 @@
 				margin-top: 0;
 				margin-bottom: 1rem;
 			}
-			
+
 			ul {
 				margin: 0;
 				padding: 0;
@@ -72,7 +72,7 @@
 
 				li {
 					padding: 0.625rem 0;
-					border-bottom: @white; 
+					border-bottom: @white;
 					border-bottom: 1px solid rgba(255,255,255,.2);
 				}
 
@@ -100,7 +100,7 @@
 				}
 			}
 		}
-		
+
 		.image {
 			position: absolute;
 			left: 70%;
@@ -108,7 +108,7 @@
 			font-size: 0;
 			line-height: 0;
 			height: 100%;
-			
+
 			img {
 				width: 100%;
 				min-height: 100%;
@@ -121,7 +121,7 @@
 		margin-top: 3rem;
 		margin-bottom: 1rem;
 	}
-	
+
 	@media screen and (max-width: 780px) {
 		max-height: auto;
 
@@ -129,7 +129,7 @@
             padding-left: 0;
             padding-right: 0;
         }
-		
+
 		.links-block {
 			.left {
 				float: none;
@@ -140,6 +140,6 @@
 
 		&.has-image {
 			min-height: 0;
-		}	
+		}
 	}
 }

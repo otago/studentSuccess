@@ -1568,7 +1568,7 @@ table tr:last-child {
   line-height: 2rem;
 }
 .carousel {
-  background: #00bad6;
+  background: #183121;
   color: #ffffff;
   position: relative;
   clear: both;
@@ -2030,13 +2030,13 @@ table tr:last-child {
 }
 .smart-slide .slide-letters li.active {
   position: relative;
-  color: #00bad6;
+  color: #183121;
 }
 .smart-slide .slide-letters li.active:after {
   content: " ";
   display: block;
   height: 12px;
-  background: #00bad6;
+  background: #183121;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -2475,7 +2475,7 @@ table tr:last-child {
   /* should always be on it's own */
   overflow: hidden;
   /* crop image */
-  background: #00bad6;
+  background: #183121;
 }
 .links-content.has-image {
   min-height: 300px;
@@ -2737,7 +2737,7 @@ table tr:last-child {
   }
   .main nav .hamburger:hover,
   .main nav .close:hover {
-    color: #00bad6;
+    color: #183121;
   }
 }
 .main nav .level-1 {
@@ -3458,7 +3458,7 @@ table tr:last-child {
 }
 .way-finder .lighter-blue {
   color: #ffffff;
-  background: #00bad6;
+  background: #183121;
   transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -3655,7 +3655,7 @@ table tr:last-child {
   background: #58bbaa;
 }
 .way-finder a.lighter-blue:hover {
-  background: #00a4bd;
+  background: #102015;
 }
 .hear-from-others {
   width: 100%;
@@ -3677,7 +3677,7 @@ table tr:last-child {
   margin: 0;
 }
 .hear-from-others section {
-  background: #00bad6;
+  background: #183121;
   color: #ffffff;
   position: relative;
   overflow: hidden;
@@ -4521,7 +4521,7 @@ table tr:last-child {
   background: #ef563c;
 }
 .tab-section .content-block.blue {
-  background: #00bad6;
+  background: #183121;
 }
 .tab-section .content-block.yellow {
   background: #ffcd00;
@@ -4667,7 +4667,7 @@ table tr:last-child {
   }
 }
 .tab-section .content-block.blue .itemList li h2 {
-  border-left: 0.813rem solid #00bad6;
+  border-left: 0.813rem solid #183121;
 }
 .tab-section .content-block.yellow .itemList li h2 {
   border-left: 0.813rem solid #ffcd00;
@@ -5308,11 +5308,11 @@ table tr:last-child {
   background-color: #219178;
 }
 .masonry-content .tile-c.scheme_blue {
-  background-color: #00bad6;
+  background-color: #183121;
 }
 .masonry-content .tile-c.scheme_blue:hover,
 .masonry-content .tile-c.scheme_blue:focus {
-  background-color: #008ea3;
+  background-color: #070f0a;
 }
 .masonry-content .tile-c.scheme_yellow {
   background-color: #ffcd00;
@@ -5431,7 +5431,7 @@ table tr:last-child {
   opacity: 0.8;
 }
 .masonry-content .list-menu {
-  background: #00bad6;
+  background: #183121;
   position: absolute;
   top: 0;
   left: 0;
@@ -5450,7 +5450,7 @@ table tr:last-child {
 .masonry-content .list-menu:focus,
 .masonry-content .list-menu:nth-child(6n+2):hover,
 .masonry-content .list-menu:nth-child(6n+2):focus {
-  background: #00bad6;
+  background: #183121;
   cursor: normal;
 }
 .masonry-content .list-menu h3 {

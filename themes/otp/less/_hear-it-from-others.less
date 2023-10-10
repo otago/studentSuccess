@@ -10,7 +10,7 @@
 	.component-alignment.wide-boxed-element {
 		max-width: 62.5rem;
 	}
-	
+
 	h2 {
 		color: @red;
 		text-align: center;
@@ -19,13 +19,13 @@
 		font-weight: 100;
 		margin: 0;
 	}
-	
+
 	section {
-		background: @lighter-blue;
+		background: @tpdark-green;
 		color: @white;
 		position: relative;
 		overflow: hidden;
-		
+
 		.image {
 			font-size: 0;
 			line-height: 0;
@@ -70,8 +70,8 @@
 				    top: -3px;
     				left: -3px;
 				}
-								
-				@media screen and (max-width: 1200px) { 
+
+				@media screen and (max-width: 1200px) {
 					font-size: 5.375rem;
 					width: 5.375rem;
 					height: 5.375rem;
@@ -79,8 +79,8 @@
 					margin-top: -2.688rem;
 					margin-left: -2.688rem;
 				}
-				
-				@media screen and (max-width: 900px) { 
+
+				@media screen and (max-width: 900px) {
 					font-size: 4rem;
 					width: 4rem;
 					height: 4rem;
@@ -90,19 +90,19 @@
 				}
 			}
 		}
-		
+
 		article {
 			float: left;
 			width: 33.3333333333%;
 			min-height: 380px;
 			padding: 2.5rem 2.125rem 2.5rem 1.75rem;
-			
+
 			span.icon {
 				font-size: 0;
 				line-height: 0;
 				display: block;
 			}
-			
+
 			.text {
 				font-size: 2.25rem;
 				line-height: 2.375rem;
@@ -110,10 +110,10 @@
 				margin: 65px 0 0 0;
 			}
 		}
-		
-		
+
+
 	}
-	
+
 	&.red {
 		section {
 			background: @red;
@@ -128,8 +128,8 @@
 			}
 		}
 	}
-	
-	
+
+
 	&.green {
 		section {
 			background: @light-green;
@@ -145,8 +145,8 @@
 			}
 		}
 	}
-	
-	
+
+
 	&.yellow {
 		section {
 			background: @yellow;
@@ -161,19 +161,19 @@
 			}
 		}
 	}
-	
+
 	@media screen and (max-width: 980px) {
-		
+
 		section {
 			.image {
 				left: 50%;
 				width: 50%;
 			}
-			
+
 			article {
 				width: 50%;
 			}
-			
+
 		}
 
 		h2  {
@@ -187,7 +187,7 @@
 
 	@media screen and (max-width: 720px) {
 		padding: 0;
-			
+
 		section {
 			.image {
 				position: relative;
@@ -211,5 +211,5 @@
 			}
 		}
 	}
-		
+
 }
