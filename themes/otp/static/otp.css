@@ -4125,7 +4125,7 @@ table tr:last-child {
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
-  color: #333337;
+  color: #3bad5f;
 }
 .priority-tasks .titles.left-titles.row span.col {
   padding: 1.438rem 0;
@@ -4161,7 +4161,7 @@ table tr:last-child {
   font-size: 1rem;
   line-height: 1rem;
   height: 30%;
-  background: #333337;
+  background: #3bad5f;
   color: #ffffff;
   cursor: pointer;
   position: absolute;
@@ -4194,7 +4194,7 @@ table tr:last-child {
   height: 83%;
   /* magic number, fixed layout */
   z-index: 1000;
-  background: #333337;
+  background: #3bad5f;
   display: none;
 }
 .priority-tasks .block .overlay > * {
@@ -4381,7 +4381,7 @@ table tr:last-child {
   margin-left: 0.313rem;
 }
 .assignment-info .assingment-summery {
-  background: url('../images/green-bg-arrow.png') 15% 0 no-repeat #333337;
+  background: url('../images/green-bg-arrow.png') 15% 0 no-repeat #3bad5f;
 }
 .assignment-info .assingment-summery ul {
   margin: 1.313rem 0 1rem 0;
@@ -5343,11 +5343,11 @@ table tr:last-child {
   background-color: #154720;
 }
 .masonry-content .tile-c.scheme_black {
-  background-color: #333337;
+  background-color: #3bad5f;
 }
 .masonry-content .tile-c.scheme_black:hover,
 .masonry-content .tile-c.scheme_black:focus {
-  background-color: #27272a;
+  background-color: #359a55;
 }
 .masonry-content .tile-c.scheme_white {
   background-color: #fbfcf4;
@@ -6266,7 +6266,7 @@ h5 a {
   margin: 0 0 0.5rem 0;
 }
 .left-content li p {
-  color: #333337;
+  color: #3bad5f;
   margin: 0;
 }
 .left-content li ul {
