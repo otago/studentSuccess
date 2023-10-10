@@ -3089,7 +3089,7 @@ table tr:last-child {
 .hero .contents h2,
 .hero .contents p {
   margin: 0;
-  max-width: 500px;
+  max-width: 550px;
   text-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
 }
 .hero .contents h2 {
