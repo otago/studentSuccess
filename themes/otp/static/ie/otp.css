@@ -1112,10 +1112,10 @@ table th.main {
   border-left: 13px solid #183121;
 }
 .tab-section .content-block.yellow .itemList li h2 {
-  border-left: 13px solid #ffcd00;
+  border-left: 13px solid #e4e0cf;
 }
 .tab-section .content-block.green .itemList li h2 {
-  border-left: 13px solid #79c8bb;
+  border-left: 13px solid #216e31;
 }
 @media screen and (max-width: 1200px) {
   .tabbed-content .tab-section .content-block .itemList li h2 a:after {

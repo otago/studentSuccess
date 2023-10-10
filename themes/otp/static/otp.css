@@ -1350,7 +1350,7 @@ table tr:last-child {
   border-top: 1px solid #ddd;
 }
 .accordion-c .title-c.title-color-Yellow:before {
-  background-color: #ffcd00;
+  background-color: #e4e0cf;
 }
 .accordion-c .title-c.title-color-Blue:before {
   background-color: #216e31;
@@ -1471,7 +1471,7 @@ table tr:last-child {
 }
 .case-study {
   margin-top: 3rem;
-  background: #79c8bb;
+  background: #216e31;
   color: #ffffff;
   padding-bottom: 1.5rem;
 }
@@ -1547,7 +1547,7 @@ table tr:last-child {
   }
 }
 .page-contents .content .article .case-study {
-  background: #79c8bb;
+  background: #216e31;
   color: #ffffff;
 }
 .page-contents .content .article .case-study.red {
@@ -1613,7 +1613,7 @@ table tr:last-child {
   background: #216e31;
 }
 .carousel.green {
-  background: #79c8bb;
+  background: #216e31;
 }
 .carousel.gray {
   background: #fbfcf4;
@@ -2481,7 +2481,7 @@ table tr:last-child {
   min-height: 300px;
 }
 .links-content.green {
-  background: #79c8bb;
+  background: #216e31;
 }
 .links-content.green h3,
 .links-content.green article h3 {
@@ -3188,7 +3188,7 @@ table tr:last-child {
 .cta {
   overflow: hidden;
   margin-bottom: 0;
-  background: #ffcd00;
+  background: #e4e0cf;
   /* if backgrounds need to butt up */
 }
 .cta.has-image {
@@ -3447,7 +3447,7 @@ table tr:last-child {
 }
 .way-finder .light-green {
   color: #ffffff;
-  background: #79c8bb;
+  background: #216e31;
   transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -3587,7 +3587,7 @@ table tr:last-child {
   opacity: 0.6;
 }
 .way-finder .getting-started {
-  background: #ffcd00;
+  background: #e4e0cf;
   padding: 1.625rem 1.75rem 3.125rem;
   color: #404041;
   transition: all 0.5s ease-in-out;
@@ -3617,7 +3617,7 @@ table tr:last-child {
   line-height: 2rem;
 }
 .way-finder .getting-started:hover {
-  background: #e6b900;
+  background: #dbd5bf;
 }
 @media screen and (max-width: 1200px) {
   .way-finder .col {
@@ -3652,7 +3652,7 @@ table tr:last-child {
   }
 }
 .way-finder a.light-green:hover {
-  background: #58bbaa;
+  background: #164b21;
 }
 .way-finder a.lighter-blue:hover {
   background: #102015;
@@ -3779,18 +3779,18 @@ table tr:last-child {
   border-color: #216e31;
 }
 .hear-from-others.green section {
-  background: #79c8bb;
+  background: #216e31;
 }
 .hear-from-others.green section a.icon:hover {
-  color: #79c8bb;
-  border-color: #79c8bb;
+  color: #216e31;
+  border-color: #216e31;
 }
 .hear-from-others.yellow section {
-  background: #ffcd00;
+  background: #e4e0cf;
 }
 .hear-from-others.yellow section a.icon:hover {
-  color: #ffcd00;
-  border-color: #ffcd00;
+  color: #e4e0cf;
+  border-color: #e4e0cf;
 }
 @media screen and (max-width: 980px) {
   .hear-from-others section .image {
@@ -3917,7 +3917,7 @@ table tr:last-child {
   position: absolute;
   margin-top: -4px;
   margin-left: -4px;
-  background: #79c8bb;
+  background: #216e31;
 }
 .checklist .index li.active {
   background: #404041;
@@ -3937,7 +3937,7 @@ table tr:last-child {
 }
 .checklist .index .ticked .icon {
   color: #fff;
-  background: #79c8bb;
+  background: #216e31;
 }
 .checklist.SingleLevelCheckList .items,
 .checklist.SingleLevelList .items {
@@ -4034,7 +4034,7 @@ table tr:last-child {
 }
 .checklist .desc ul li span.icon.icon-tick {
   border: 1px solid #ffffff;
-  background: #79c8bb;
+  background: #216e31;
   border-radius: 1.250rem;
   color: #ffffff;
 }
@@ -4120,7 +4120,7 @@ table tr:last-child {
   border-right: 0.125rem solid #ffffff;
 }
 .priority-tasks .titles span {
-  background: #ffcd00;
+  background: #e4e0cf;
   font-size: 1rem;
   font-weight: 400;
   text-align: center;
@@ -4304,7 +4304,7 @@ table tr:last-child {
   line-height: 1.75rem;
 }
 .assignment-info .assingment-calculator {
-  background: #79c8bb;
+  background: #216e31;
 }
 .assignment-info fieldset {
   border: none;
@@ -4413,7 +4413,7 @@ table tr:last-child {
 .assignment-info .assingment-summery ul li time {
   display: block;
   margin-bottom: 1.375rem;
-  color: #79c8bb;
+  color: #216e31;
 }
 .assignment-info .assingment-summery ul li .attachments {
   overflow: hidden;
@@ -4443,7 +4443,7 @@ table tr:last-child {
   text-decoration: none;
 }
 .assignment-info .assingment-summery ul li .attachments a:hover {
-  color: #79c8bb;
+  color: #216e31;
 }
 @media screen and (max-width: 980px) {
   .assignment-info fieldset div.field {
@@ -4524,10 +4524,10 @@ table tr:last-child {
   background: #183121;
 }
 .tab-section .content-block.yellow {
-  background: #ffcd00;
+  background: #e4e0cf;
 }
 .tab-section .content-block.green {
-  background: #79c8bb;
+  background: #216e31;
 }
 .tab-section .content-block .itemList {
   margin: 0;
@@ -4601,7 +4601,7 @@ table tr:last-child {
   content: "";
 }
 .tab-section .content-block .itemList .checked span.icon-tick {
-  background: #79c8bb;
+  background: #216e31;
   border: 0.063rem solid #ffffff;
 }
 .tab-section .content-block .itemList .checked span.icon-tick:before {
@@ -4670,10 +4670,10 @@ table tr:last-child {
   border-left: 0.813rem solid #183121;
 }
 .tab-section .content-block.yellow .itemList li h2 {
-  border-left: 0.813rem solid #ffcd00;
+  border-left: 0.813rem solid #e4e0cf;
 }
 .tab-section .content-block.green .itemList li h2 {
-  border-left: 0.813rem solid #79c8bb;
+  border-left: 0.813rem solid #216e31;
 }
 @media screen and (max-width: 1200px) {
   .tabbed-content .tab-section .content-block .itemList li h2 a:after {
@@ -5294,11 +5294,11 @@ table tr:last-child {
   color: #fff;
 }
 .masonry-content .tile-c.scheme_green {
-  background-color: #79c8bb;
+  background-color: #216e31;
 }
 .masonry-content .tile-c.scheme_green:hover,
 .masonry-content .tile-c.scheme_green:focus {
-  background-color: #67c1b2;
+  background-color: #1b5a28;
 }
 .masonry-content .tile-c.scheme_mint {
   background-color: #2ABB9B;
@@ -5315,7 +5315,7 @@ table tr:last-child {
   background-color: #070f0a;
 }
 .masonry-content .tile-c.scheme_yellow {
-  background-color: #ffcd00;
+  background-color: #e4e0cf;
 }
 .masonry-content .tile-c.scheme_yellow h3,
 .masonry-content .tile-c.scheme_yellow p {
@@ -5333,7 +5333,7 @@ table tr:last-child {
 }
 .masonry-content .tile-c.scheme_yellow:hover,
 .masonry-content .tile-c.scheme_yellow:focus {
-  background-color: #e6b900;
+  background-color: #dbd5bf;
 }
 .masonry-content .tile-c.scheme_red {
   background-color: #216e31;
@@ -6663,8 +6663,8 @@ figure.element figcaption p {
   margin: 0 auto 2rem;
 }
 .was-this-helpful .widget {
-  border-top: 1px solid #79c8bb;
-  border-bottom: 1px solid #79c8bb;
+  border-top: 1px solid #216e31;
+  border-bottom: 1px solid #216e31;
   font-weight: 600;
   line-height: 3.125rem;
 }
@@ -6760,7 +6760,7 @@ figure.element figcaption p {
 .activity_text li:hover,
 .activity_text li:focus,
 .activity_text li:active {
-  background: #ffcd00;
+  background: #e4e0cf;
   color: #000;
 }
 .activity_text li.selected,
@@ -6822,7 +6822,7 @@ figure.element figcaption p {
 .activity_text.activity_text__Replace li.replaceable:focus,
 .activity_text.activity_text__Replace li.replaceable:active,
 .activity_text.activity_text__Replace li.replaceable:hover {
-  background: #ffcd00;
+  background: #e4e0cf;
   color: #000;
   cursor: pointer;
 }
