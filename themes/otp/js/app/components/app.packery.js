@@ -2,7 +2,7 @@ if(typeof app === 'undefined') { var app = {}; }
 if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 
 (function($){
-	
+
 	app.packery = (function() {
 
         $(".separator-link").click(function(e) {
@@ -47,7 +47,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
         });
 
 		var items = $('.packery');
-		
+
 		var configs = {
             'itemSelector'      : '.tile',
 			'stamp'				: '.fixed',
@@ -86,8 +86,8 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
             'green',
             'yellow',
             'white',
-            'blue',
-            'mint'
+            // 'blue',
+            // 'mint'
         ];
 
         var resetColors = function() {
@@ -100,10 +100,10 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
 
                 $(elem)
                     .removeClass('scheme_red scheme_black scheme_blue scheme_green scheme_yellow scheme_white scheme_mint');
-                
+
                 if($(elem).is(":visible")) {
                     $(elem).attr('data-v', v);
-                    $(elem).addClass('scheme_'+ scheme[v % 7]);
+                    $(elem).addClass('scheme_'+ scheme[v % 5]);
 
                     v++;
                 }
@@ -123,7 +123,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
                 $(element)
                     .removeClass('scheme_red scheme_black scheme_blue scheme_green scheme_yellow scheme_white scheme_mint');
 
-                $(element).addClass('scheme_'+ scheme[v % 7]);
+                $(element).addClass('scheme_'+ scheme[v % 5]);
 
                 if(lowestY === 0 || lowestY > $(element).offset().top) {
                     lowestY = $(element).offset().top;
@@ -170,7 +170,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
                     if(title && title.toLowerCase().indexOf(keyword.toLowerCase()) >= 0) {
                         return true;
                     }
-                    
+
                     var html = tile.text();
 
                     if(html && html.indexOf(keyword.toLowerCase()) >= 0) {
@@ -184,11 +184,11 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
             configs.sortBy = sort;
             configs.sortAscending = sortAscending;
             var $pack = item.isotope(configs);
-            
+
             // bind event listener
             $pack.on( 'layoutComplete', function(le, efi) {
                 var lowestY = onArrange(le, efi);
-                
+
                 if(keyword && keyword !== lastKeyword) {
                     $('html, body').animate({
                         'scrollTop': lowestY
@@ -215,7 +215,7 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
             form.find('select.sort-filter').change(function(){
                 doIsotopeFilters(item, form);
             });
-			
+
 			form.find('input.keywords').keyup(function(){
 				if(!$(this).val()) {
 					doIsotopeFilters(item, form);
@@ -306,23 +306,23 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
                 repackIt();
             });
         };
-		
+
 		var can = function(){
 			return items.length > 0;
 		};
-		
+
 		var init = function (){
 			packIt();
 			$(window).load(packIt);
 
             $(".image-tile").click(function(e) {
-                
+
                 //alert("sss");
                e.preventDefault();
                // e.stopPropagation();
                 if($(this).hasClass('has-link')) {
                     var link = $(this).find('a').first().clone();
-                    
+
                     link.css({
                         'opacity': 0,
                         'height': 0,
@@ -347,11 +347,11 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
                         link.get(0).dispatchEvent(clickEvent);
                     }
                 }
-                
+
             });
 
             var list = [];
-            
+
             $(".tile").each(function(i, elem) {
                 if($(elem).data('title')) {
                     list.push({
@@ -405,13 +405,13 @@ if(typeof imagesLoaded === 'undefined') { var imagesLoaded = function(){}; }
                 $pack.on( 'layoutComplete', onArrange );
             });
 		};
-		
+
 		return {
 			'init'			: init,
 			'can'			: can
 		};
-		
+
 	})();
-	
-	
-})(jQuery); 
+
+
+})(jQuery);
