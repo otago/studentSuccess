@@ -360,7 +360,7 @@ table {
   border-spacing: 0;
   margin: 1rem 0 2rem 0;
   width: 100%;
-  background: #f4f4f4;
+  background: #fbfcf4;
 }
 td,
 th {
@@ -1479,11 +1479,11 @@ table tr:last-child {
   padding: 0 0 7.5rem;
 }
 .case-study.red {
-  background: #216e31;
+  background: #9e0045;
   color: #ffffff;
 }
 .case-study.blue {
-  background: #216e31;
+  background: #e4e0cf;
   color: #ffffff;
 }
 .case-study .left {
@@ -3917,10 +3917,10 @@ table tr:last-child {
   position: absolute;
   margin-top: -4px;
   margin-left: -4px;
-  background: #216e31;
+  background: #3bad5f;
 }
 .checklist .index li.active {
-  background: #404041;
+  background: #183121;
   color: #ffffff;
 }
 .checklist .index li.active .icon.icon-dot {
@@ -3957,7 +3957,7 @@ table tr:last-child {
 }
 .checklist.SingleLevelCheckList li.active,
 .checklist.SingleLevelList li.active {
-  color: #404041;
+  color: #183121;
   background: transparent;
   cursor: default;
 }
@@ -6663,8 +6663,8 @@ figure.element figcaption p {
   margin: 0 auto 2rem;
 }
 .was-this-helpful .widget {
-  border-top: 1px solid #216e31;
-  border-bottom: 1px solid #216e31;
+  border-top: 1px solid #3bad5f;
+  border-bottom: 1px solid #3bad5f;
   font-weight: 600;
   line-height: 3.125rem;
 }
@@ -6688,7 +6688,7 @@ figure.element figcaption p {
 }
 .was-this-helpful .widget a.yes:hover,
 .was-this-helpful .widget a.yes.active {
-  background: #9aca3c;
+  background: #216e31;
 }
 .was-this-helpful .widget a.no {
   color: #ffffff;
@@ -6697,7 +6697,7 @@ figure.element figcaption p {
 }
 .was-this-helpful .widget a.no:hover,
 .was-this-helpful .widget a.no.active {
-  background: #216e31;
+  background: #9e0045;
 }
 .activity {
   margin-bottom: 30px;
