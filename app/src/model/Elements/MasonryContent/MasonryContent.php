@@ -43,7 +43,7 @@ class MasonryContent extends BaseElement
 
         $fields->removeByName('Tiles');
 
-        $heroconf = GridFieldConfig_RelationEditor::create();
+        $heroconf = GridFieldConfig_RelationEditor::create(80);
         $heroconf->addComponent(new GridFieldOrderableRows('SortOrder'));
 
 
