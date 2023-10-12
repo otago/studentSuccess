@@ -378,7 +378,7 @@ body {
   line-height: 1.75rem;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  color: #404041;
+  color: #231f20;
 }
 a {
   text-decoration: none;
@@ -1356,7 +1356,7 @@ table tr:last-child {
   background-color: #216e31;
 }
 .accordion-c .title-c.title-color-Black:before {
-  background-color: #404041;
+  background-color: #231f20;
 }
 .accordion-c .title-c.title-color-Red:before {
   background-color: #216e31;
@@ -1409,7 +1409,7 @@ table tr:last-child {
   border-bottom: none;
 }
 .accordion-c .title-c.active a {
-  color: #404041;
+  color: #231f20;
 }
 .accordion-c .title-c.active a:after {
   content: "\e602";
@@ -1617,27 +1617,27 @@ table tr:last-child {
 }
 .carousel.gray {
   background: #fbfcf4;
-  color: #404041;
+  color: #231f20;
 }
 .carousel.gray h2,
 .carousel.gray h3,
 .carousel.gray h4,
 .carousel.gray h5,
 .carousel.gray p {
-  color: #404041;
+  color: #231f20;
 }
 .carousel.gray a {
-  color: #404041;
+  color: #231f20;
 }
 .carousel.gray .flex-direction-nav .flex-next,
 .carousel.gray .flex-direction-nav .flex-prev {
-  color: #c0c0c0;
+  color: #a69b9e;
 }
 .carousel.gray .flex-control-nav li a {
-  border-color: #59595b;
+  border-color: #3e3739;
 }
 .carousel.gray .flex-control-nav li a.flex-active {
-  background: #59595b;
+  background: #3e3739;
 }
 .carousel.gray .slides li.title-content-compact .right {
   background-color: #eee;
@@ -2016,7 +2016,7 @@ table tr:last-child {
   font-size: 6.25rem;
   line-height: 1.5;
   font-weight: 600;
-  color: #404041;
+  color: #231f20;
   text-align: center;
   margin: 0;
   cursor: pointer;
@@ -3195,7 +3195,7 @@ table tr:last-child {
   min-height: 300px;
 }
 .cta.black {
-  background: #404041;
+  background: #231f20;
   color: #ffffff;
 }
 .cta.black h3,
@@ -3251,7 +3251,7 @@ table tr:last-child {
 .cta h3 {
   margin: 0;
   font-size: 1.25rem;
-  color: #404041;
+  color: #231f20;
   font-weight: bold;
   padding-bottom: 1.625rem;
 }
@@ -3301,7 +3301,7 @@ table tr:last-child {
   /* if backgrounds need to butt up */
 }
 .contactElement.black {
-  background: #404041;
+  background: #231f20;
   color: #ffffff;
 }
 .contactElement.black h3,
@@ -3368,7 +3368,7 @@ table tr:last-child {
 .contactElement h3 {
   margin: 0;
   font-size: 1.25rem;
-  color: #404041;
+  color: #231f20;
   font-weight: bold;
   padding-bottom: 1.625rem;
 }
@@ -3589,7 +3589,7 @@ table tr:last-child {
 .way-finder .getting-started {
   background: #e4e0cf;
   padding: 1.625rem 1.75rem 3.125rem;
-  color: #404041;
+  color: #231f20;
   transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -3787,6 +3787,7 @@ table tr:last-child {
 }
 .hear-from-others.yellow section {
   background: #e4e0cf;
+  color: black;
 }
 .hear-from-others.yellow section a.icon:hover {
   color: #e4e0cf;
@@ -3849,7 +3850,7 @@ table tr:last-child {
 .checklist .intro h3 {
   margin: 0 0 1rem;
   font-weight: bold;
-  color: #404041;
+  color: #231f20;
   font-size: 1.250rem;
 }
 .checklist .intro p {
@@ -4066,14 +4067,14 @@ table tr:last-child {
     padding: 1rem 1rem 0;
   }
   .checklist .items .active + .accord li {
-    color: #404041;
+    color: #231f20;
     height: auto;
     background: transparent;
     line-height: 1.5;
     font-size: 1rem;
   }
   .checklist .items .active + .accord p {
-    color: #404041;
+    color: #231f20;
     line-height: 1.5;
   }
 }
@@ -4324,26 +4325,26 @@ table tr:last-child {
   background: url('../images/calender.png') right center no-repeat #ffffff;
   width: 15.5rem;
   padding: 0.688rem 2.376rem 0.688rem 0.688rem;
-  color: #404041;
+  color: #231f20;
   border: none;
 }
 .assignment-info fieldset ::-webkit-input-placeholder {
   /* WebKit browsers */
-  color: #404041;
+  color: #231f20;
 }
 .assignment-info fieldset :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
-  color: #404041;
+  color: #231f20;
   opacity: 1;
 }
 .assignment-info fieldset ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
-  color: #404041;
+  color: #231f20;
   opacity: 1;
 }
 .assignment-info fieldset :-ms-input-placeholder {
   /* Internet Explorer 10+ */
-  color: #404041;
+  color: #231f20;
 }
 .assignment-info .Actions {
   padding: 0.5rem 0 0 18.75rem;
@@ -4370,7 +4371,7 @@ table tr:last-child {
 }
 .assignment-info input.action:hover,
 .assignment-info .buttonLink:hover {
-  background: #404041;
+  background: #231f20;
 }
 .assignment-info div.links {
   padding-top: 0.563rem;
@@ -4638,7 +4639,7 @@ table tr:last-child {
   margin: 0 10px 14px 0;
 }
 .tab-section .content-block .itemList .accordion-item a.email {
-  color: #404041;
+  color: #231f20;
 }
 .tab-section .content-block .itemList .accordion-item a.email:hover {
   color: #216e31;
@@ -5005,21 +5006,21 @@ table tr:last-child {
 }
 .filter-form .input ::-webkit-input-placeholder {
   /* WebKit browsers */
-  color: #404041;
+  color: #231f20;
 }
 .filter-form .input :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
-  color: #404041;
+  color: #231f20;
   opacity: 1;
 }
 .filter-form .input ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
-  color: #404041;
+  color: #231f20;
   opacity: 1;
 }
 .filter-form .input :-ms-input-placeholder {
   /* Internet Explorer 10+ */
-  color: #404041;
+  color: #231f20;
 }
 @media screen and (max-width: 720px) {
   .filter-form .input {
@@ -5117,7 +5118,7 @@ table tr:last-child {
   height: 3rem;
   display: block;
   color: #ffffff;
-  background: #404041;
+  background: #231f20;
   text-align: center;
   line-height: 3rem;
   margin: 0;
@@ -5538,7 +5539,7 @@ table tr:last-child {
 }
 .masonry-content .contact-tile {
   background: #fbfcf4;
-  color: #404041;
+  color: #231f20;
   font-size: 1.125rem;
   line-height: 1.5rem;
   padding: 2rem 2.875rem 2.75rem 2rem;
@@ -5589,7 +5590,7 @@ table tr:last-child {
   }
 }
 .masonry-content .contact-tile a {
-  color: #404041;
+  color: #231f20;
 }
 .masonry-content .contact-tile p {
   font-size: 1.125rem;
@@ -5938,7 +5939,7 @@ div.token-input-dropdown-mac ul li.token-input-selected-dropdown-item-mac.odd sp
   height: 2.5rem;
   line-height: 2.5rem;
   font-size: 1.250rem;
-  color: #404041;
+  color: #231f20;
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -6049,7 +6050,7 @@ div.token-input-dropdown-mac ul li.token-input-selected-dropdown-item-mac.odd sp
   background: #216e31;
 }
 .red .button-link {
-  background: #404041;
+  background: #231f20;
 }
 .red .button-link:hover {
   background: #216e31;
@@ -6266,7 +6267,7 @@ h5 a {
   margin: 0 0 0.5rem 0;
 }
 .left-content li p {
-  color: #404041;
+  color: #231f20;
   margin: 0;
 }
 .left-content li ul {
@@ -6282,7 +6283,7 @@ h5 a {
 .feature-mail,
 .feature-external-link {
   text-decoration: none;
-  color: #404041;
+  color: #231f20;
   padding-left: 3.5rem;
   position: relative;
   display: block;
@@ -6291,7 +6292,7 @@ h5 a {
 .feature-download a,
 .feature-mail a,
 .feature-external-link a {
-  color: #404041;
+  color: #231f20;
   text-decoration: none;
   font-weight: normal;
   transition: all 0.5s ease-in-out;
@@ -6588,7 +6589,7 @@ figure.element figcaption p {
 }
 .sidebar-help {
   background: #fbfcf4;
-  color: #404041;
+  color: #231f20;
   font-size: 1.125rem;
   line-height: 1.5rem;
   padding: 1.875rem 2.875rem 2.75rem 2.875rem;
@@ -6611,7 +6612,7 @@ figure.element figcaption p {
   }
 }
 .sidebar-help a {
-  color: #404041;
+  color: #231f20;
 }
 .sidebar-help p.contact {
   margin-top: 2.375rem;
@@ -6794,7 +6795,7 @@ figure.element figcaption p {
 }
 .activity_text.activity_text__Replace li.correct,
 .activity_text.activity_text__Replace li.changed.wrong {
-  color: #404041;
+  color: #231f20;
 }
 .activity_text.activity_text__Replace li {
   padding-left: 0em;
