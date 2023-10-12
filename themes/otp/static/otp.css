@@ -3431,7 +3431,7 @@ table tr:last-child {
   min-height: 300px;
 }
 .way-finder h2 {
-  font-weight: 500;
+  font-weight: 400;
 }
 .way-finder p {
   font-size: 1rem;
@@ -5397,12 +5397,12 @@ table tr:last-child {
 }
 @media screen and (min-width: 1160px) {
   .masonry-content .tile-c.half h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .masonry-content .tile-c.half h3 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 }
 .masonry-content .tile-c.half .height {
