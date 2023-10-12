@@ -4126,7 +4126,7 @@ table tr:last-child {
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
-  color: #3bad5f;
+  color: #216e31;
 }
 .priority-tasks .titles.left-titles.row span.col {
   padding: 1.438rem 0;
@@ -5398,12 +5398,12 @@ table tr:last-child {
 }
 @media screen and (min-width: 1160px) {
   .masonry-content .tile-c.half h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .masonry-content .tile-c.half h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
 .masonry-content .tile-c.half .height {

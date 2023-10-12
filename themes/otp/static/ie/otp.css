@@ -1313,12 +1313,12 @@ table th.main {
 }
 @media screen and (min-width: 1160px) {
   .masonry-content .tile-c.half h3 {
-    font-size: 22px;
+    font-size: 21px;
   }
 }
 @media screen and (min-width: 1280px) {
   .masonry-content .tile-c.half h3 {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 .masonry-content .tile-c.half .height {
