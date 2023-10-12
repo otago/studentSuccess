@@ -5,14 +5,13 @@
 				<% if $Image %>
 					{$Image.Pure}
 				<% end_if %>
-				<span class="quotemark">“</span>
 				<% if $SummaryQuote %>
 				<p>
 					{$SummaryQuote}
 				</p>
 				<% end_if %>
 			</div>
-			<div class='right'>			
+			<div class='right'>
 				<% if not HideTitle %>
 					<h2>$Title</h2>
 				<% end_if %>

@@ -8,16 +8,15 @@
 					$Image.Pure
 				<% end_if %>
 			</div>
-		
+
 			<article>
-				<span class="quotemark">“</span>
 
 				<% if $TestimonyContent %>
 					<p class='text'>
 						{$TestimonyContent}
 					</p>
 				<% end_if %>
-				
+
 				<% if $Testimony %>
 					<p class='testimony'>
 						{$Testimony}
