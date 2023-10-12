@@ -3274,7 +3274,7 @@ table tr:last-child {
   transition: all 0.2s ease-out;
 }
 .cta a:hover {
-  background: #154720;
+  background: #6b002f;
 }
 @media screen and (max-width: 980px) {
   .cta .component-alignment.boxed-element {
@@ -5350,7 +5350,7 @@ table tr:last-child {
   background-color: #359a55;
 }
 .masonry-content .tile-c.scheme_white {
-  background-color: #fbfcf4;
+  background-color: #ffe9c0;
 }
 .masonry-content .tile-c.scheme_white h3,
 .masonry-content .tile-c.scheme_white p {
@@ -5364,7 +5364,7 @@ table tr:last-child {
 }
 .masonry-content .tile-c.scheme_white:hover,
 .masonry-content .tile-c.scheme_white:focus {
-  background-color: #f4f7e0;
+  background-color: #ffe0a6;
 }
 .masonry-content .tile-c.scheme_mint {
   background-color: #216e31;
