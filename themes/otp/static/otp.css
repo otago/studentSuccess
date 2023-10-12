@@ -1484,7 +1484,7 @@ table tr:last-child {
 }
 .case-study.blue {
   background: #e4e0cf;
-  color: #ffffff;
+  color: black;
 }
 .case-study .left {
   float: left;
