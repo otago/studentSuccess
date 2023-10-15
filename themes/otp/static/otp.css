@@ -5240,7 +5240,6 @@ table tr:last-child {
   font-size: 1.4rem;
   line-height: 0.9;
   margin: 0;
-  font-weight: 500;
   height: 21.25rem;
   position: relative;
 }
@@ -5927,6 +5926,7 @@ div.token-input-dropdown-mac ul li.token-input-selected-dropdown-item-mac.odd sp
 .related-topics .masonry-content .tile-c.half h3 {
   font-size: 1.175rem;
   line-height: 1.8rem;
+  word-wrap: normal;
 }
 .related-topics .masonry-content .contact-tile {
   height: 400px;
