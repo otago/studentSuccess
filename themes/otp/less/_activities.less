@@ -71,18 +71,18 @@
 		&:hover,
 		&:focus,
 		&:active {
-			background: @yellow;
+			background: @tpstone;
 			color: #000;
 		}
 
 		&.selected,
 		&.changed {
-			background: #FFCD00;
+			background: @tpstone;
 
 			&:hover,
 			&:active,
 			&:focus {
-				background: lighten(#FFCD00, 10%);
+				background: lighten(@tpstone, 10%);
 			}
 		}
 
@@ -115,7 +115,7 @@
 	&.activity_text__Replace {
 		li.correct,
 		li.changed.wrong {
-			color: #404041;
+			color: @tpblack;
 		}
 
 		li {
@@ -150,7 +150,7 @@
 				&:focus,
 				&:active,
 				&:hover {
-					background: @yellow;
+					background: @tpstone;
 					color: #000;
 					cursor: pointer;
 				}
@@ -483,7 +483,7 @@
 
 	span {
 		font-size: 8rem;
-		color: @tplightgreen;
+		color: @tpmediumgreen;
 		font-weight: bold;
 		position: relative;
 		padding-right: 6.5rem;

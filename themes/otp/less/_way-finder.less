@@ -15,7 +15,7 @@
 	}
 
 	h2 {
-		font-weight: 500;
+		font-weight: 400;
 	}
 
 	p {
@@ -34,13 +34,13 @@
 
 	.light-green {
 		color: @white;
-		background: @light-green;
+		background: @tpmediumgreen;
 		.transition;
 	}
 
 	.lighter-blue {
 		color: @white;
-		background: @lighter-blue;
+		background: @tpdark-green;
 		.transition;
 	}
 
@@ -175,9 +175,9 @@
 
 	.getting-started {
 
-		background: @yellow;
+		background: @tpstone;
 		padding: 1.625rem 1.75rem 3.125rem;
-		color: @dark-grey;
+		color: @tpblack;
 		.transition;
 
 		.icon {
@@ -200,7 +200,7 @@
 		}
 
 		&:hover {
-			background: darken(@yellow, 5%);
+			background: darken(@tpstone, 5%);
 		}
 	}
 
@@ -241,9 +241,9 @@
 }
 
 .way-finder a.light-green:hover {
-	background: darken(@light-green, 9%);
+	background: darken(@tpmediumgreen, 9%);
 }
 
 .way-finder a.lighter-blue:hover {
-	background: darken(@lighter-blue, 5%);
+	background: darken(@tpdark-green, 5%);
 }

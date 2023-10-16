@@ -10,22 +10,22 @@
 	.component-alignment.wide-boxed-element {
 		max-width: 62.5rem;
 	}
-	
+
 	h2 {
-		color: @red;
+		color: @tpmediumgreen;
 		text-align: center;
 		font-size: 3.125rem;
 		line-height: 3.125rem;
 		font-weight: 100;
 		margin: 0;
 	}
-	
+
 	section {
-		background: @lighter-blue;
+		background: @tpdark-green;
 		color: @white;
 		position: relative;
 		overflow: hidden;
-		
+
 		.image {
 			font-size: 0;
 			line-height: 0;
@@ -43,6 +43,8 @@
 			.video-image {
 				font-size: 0;
 				line-height: 0;
+				opacity: 0.8;
+
 				.transition;
 
 				&:hover {
@@ -70,8 +72,8 @@
 				    top: -3px;
     				left: -3px;
 				}
-								
-				@media screen and (max-width: 1200px) { 
+
+				@media screen and (max-width: 1200px) {
 					font-size: 5.375rem;
 					width: 5.375rem;
 					height: 5.375rem;
@@ -79,8 +81,8 @@
 					margin-top: -2.688rem;
 					margin-left: -2.688rem;
 				}
-				
-				@media screen and (max-width: 900px) { 
+
+				@media screen and (max-width: 900px) {
 					font-size: 4rem;
 					width: 4rem;
 					height: 4rem;
@@ -90,90 +92,104 @@
 				}
 			}
 		}
-		
+
 		article {
 			float: left;
 			width: 33.3333333333%;
 			min-height: 380px;
 			padding: 2.5rem 2.125rem 2.5rem 1.75rem;
-			
+
+			.icon {
+				position: relative;
+				font-size: 3.5rem;
+				width: 4rem;
+				height: 4rem;
+				display: block;
+				border: 4px solid @white;
+				border-radius: 9.375rem;
+				color: @white;
+				@media screen and (max-width: 900px) {
+					display: none;
+				}
+			}
+
 			span.icon {
 				font-size: 0;
 				line-height: 0;
 				display: block;
 			}
-			
+
 			.text {
 				font-size: 2.25rem;
 				line-height: 2.375rem;
 				font-weight: 300;
-				margin: 65px 0 0 0;
+				margin: 50px 0 0 0;
 			}
 		}
-		
-		
+
+
 	}
-	
+
 	&.red {
 		section {
-			background: @red;
+			background: @tplightgreen;
 
 			a.icon {
 
 				&:hover {
-					color: @red;
-					border-color: @red;
+					color: @tplightgreen;
+					border-color: @tplightgreen;
 				};
 
 			}
 		}
 	}
-	
-	
+
+
 	&.green {
 		section {
-			background: @light-green;
+			background: @tpmediumgreen;
 
 
 			a.icon {
 
 				&:hover {
-					color: @light-green;
-					border-color: @light-green;
+					color: @tpmediumgreen;
+					border-color: @tpmediumgreen;
 				};
 
 			}
 		}
 	}
-	
-	
+
+
 	&.yellow {
 		section {
-			background: @yellow;
-
+			background: @tpstone;
+			color: black;
 			a.icon {
 
 				&:hover {
-					color: @yellow;
-					border-color: @yellow;
+					color: @tpstone;
+					border-color: @tpstone;
 				};
 
 			}
 		}
 	}
-	
+
 	@media screen and (max-width: 980px) {
-		
+
 		section {
 			.image {
 				left: 50%;
 				width: 50%;
 			}
-			
+
 			article {
 				width: 50%;
 			}
-			
+
 		}
 
 		h2  {
@@ -187,7 +203,7 @@
 
 	@media screen and (max-width: 720px) {
 		padding: 0;
-			
+
 		section {
 			.image {
 				position: relative;
@@ -211,5 +227,5 @@
 			}
 		}
 	}
-		
+
 }

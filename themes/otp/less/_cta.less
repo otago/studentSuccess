@@ -1,14 +1,14 @@
 .cta {
 	overflow: hidden;
 	margin-bottom: 0;
-	background: @yellow;
-	
+	background: @tpstone;
+
 	&.has-image {
 		min-height: 300px;
 	}
-	
+
 	&.black {
-		background: @dark-grey;
+		background: @tpblack;
 		color: @white;
 
 		h3,
@@ -24,7 +24,7 @@
 		float: left;
 		width: 65%;
 		padding: 2.5rem 0;
-		
+
 		@media screen and (max-width: 780px) {
 			width: auto;
 		}
@@ -48,12 +48,12 @@
 	}
 
 	/* if backgrounds need to butt up */
-	
+
 	+ .links-content,
 	+ .cta {
 		margin-bottom: 0;
 	}
-	
+
 	picture {
 		display: block;
 		float: right;
@@ -61,34 +61,34 @@
 		position: relative;
 		overflow: hidden;
 		height: 24.125rem;
-		
+
 		img {
 			position: absolute;
 		}
 	}
-	
+
 
 	.icon {
 		font-size: 2rem;
 		display: block;
 		margin-bottom: 1.625rem;
 	}
-	
+
 
 	h3 {
 		margin: 0;
 		font-size: 1.25rem;
-		color: @dark-grey;
+		color: @tpblack;
 		font-weight: bold;
 		padding-bottom: 1.625rem;
 	}
-	
+
 	p {
 		margin: 0 0 2rem;
 	}
-	
+
 	a {
-		background: @red;
+		background: @tpmaroon;
 		color: @white;
 		height: 3.125rem;
 		line-height: 3.125rem;
@@ -97,11 +97,11 @@
         .transition;
 
         &:hover {
-            background: darken(@red, 10%);
+            background: darken(@tpmaroon, 10%);
         }
 	}
 
-	
+
 	@media screen and (max-width: 980px) {
         .component-alignment.boxed-element {
             padding-left: 0;
@@ -112,13 +112,13 @@
 			width: 100%;
 			float: none;
 		}
-		
+
 		article {
             padding-left: 0;
             padding-right: 0;
 			width: auto;
 			float: none;
-		
+
 			.wrapper {
 				padding: 0;
 			}

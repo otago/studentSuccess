@@ -787,6 +787,12 @@ table th.main {
 .hear-from-others section article {
   padding: 40px 34px 40px 28px;
 }
+.hear-from-others section article .icon {
+  font-size: 56px;
+  width: 64px;
+  height: 64px;
+  border-radius: 150px;
+}
 .hear-from-others section article .text {
   font-size: 36px;
   line-height: 38px;
@@ -885,7 +891,6 @@ table th.main {
 .priority-tasks {
   width: 662px;
   padding-left: 74px;
-  margin: 20px auto;
 }
 .priority-tasks .row.left-titles {
   left: -261px;
@@ -1060,7 +1065,7 @@ table th.main {
   padding-left: 48px;
 }
 .tab-section .content-block .itemList h2 {
-  border-left: 13px solid #ef563c;
+  border-left: 13px solid #216e31;
   font-size: 27px;
   line-height: 32px;
 }
@@ -1107,16 +1112,16 @@ table th.main {
   padding: 10px 0 0 48px;
 }
 .tab-section .content-block .itemList h2 {
-  border-left: 13px solid #ef563c;
+  border-left: 13px solid #216e31;
 }
 .tab-section .content-block.blue .itemList li h2 {
-  border-left: 13px solid #00bad6;
+  border-left: 13px solid #183121;
 }
 .tab-section .content-block.yellow .itemList li h2 {
-  border-left: 13px solid #ffcd00;
+  border-left: 13px solid #e4e0cf;
 }
 .tab-section .content-block.green .itemList li h2 {
-  border-left: 13px solid #79c8bb;
+  border-left: 13px solid #216e31;
 }
 @media screen and (max-width: 1200px) {
   .tabbed-content .tab-section .content-block .itemList li h2 a:after {
@@ -1314,12 +1319,12 @@ table th.main {
 }
 @media screen and (min-width: 1160px) {
   .masonry-content .tile-c.half h3 {
-    font-size: 24px;
+    font-size: 21px;
   }
 }
 @media screen and (min-width: 1280px) {
   .masonry-content .tile-c.half h3 {
-    font-size: 26px;
+    font-size: 22px;
   }
 }
 .masonry-content .tile-c.half .height {

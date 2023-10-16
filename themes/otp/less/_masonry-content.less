@@ -11,7 +11,7 @@
 			font-size: 1.875rem;
 			line-height: 1.1;
 			padding-top: 2rem;
-			font-weight: 500;
+			//font-weight: 500;
 
 			span {
 				top: 2.2rem;
@@ -36,7 +36,7 @@
 				line-height: 1.15;
 				font-weight: 100;
 				height: auto;
-				color: @red;
+				color: @tpmediumgreen;
 
             	@media screen and (max-width: 980px) {
             	    font-size: 1.875rem;
@@ -84,7 +84,7 @@
 			font-size: 1.4rem;
 			line-height: 0.9;
 			margin: 0;
-			font-weight: 500;
+			//font-weight: 500;
 			height: 21.25rem;
 			position: relative;
 
@@ -150,34 +150,34 @@
 		}
 
         &.scheme_green {
-            background-color: @light-green;
+            background-color: @tpmediumgreen;
 
             &:hover,
             &:focus {
-                background-color: darken(@light-green, 5%);
+                background-color: darken(@tpmediumgreen, 5%);
             }
         }
 
         &.scheme_mint {
-            background-color: #2ABB9B;
+            background-color: @tpmediumgreen;
 
             &:hover,
             &:focus {
-                background-color: darken(#2ABB9B, 10%);
+                background-color: darken(@tpmediumgreen, 10%);
             }
         }
 
 		&.scheme_blue {
-			background-color: @lighter-blue;
+			background-color: @tpmaroon;
 
 			&:hover,
 			&:focus {
-				background-color: darken(@lighter-blue, 10%);
+				background-color: darken(@tpmaroon, 10%);
 			}
 		}
 
 		&.scheme_yellow {
-			background-color: @yellow;
+			background-color: @tpstone;
 
 			h3, p {
 				color: #444449;
@@ -199,30 +199,30 @@
 
             &:hover,
             &:focus {
-                background-color: darken(@yellow, 5%);
+                background-color: darken(@tpstone, 5%);
             }
 		}
 
 		&.scheme_red {
-			background-color: @red;
+			background-color: @tpmaroon;
 
             &:hover,
             &:focus {
-                background-color: darken(@red, 10%);
+                background-color: darken(@tpmaroon, 10%);
             }
 		}
 
 		&.scheme_black {
-			background-color: @darker-grey;
+			background-color: @tplightgreen;
 
             &:hover,
             &:focus {
-                 background-color: darken(@darker-grey, 5%);
+                 background-color: darken(@tplightgreen, 5%);
             }
 		}
 
 		&.scheme_white {
-			background-color: @ash;
+			background-color: @tpsand;
 
 			h3, p {
 				color: #444449;
@@ -241,16 +241,16 @@
 
             &:hover,
             &:focus {
-                 background-color: darken(@ash, 5%);
+                 background-color: darken(@tpsand, 5%);
             }
 		}
 
 		&.scheme_mint {
-			background-color: #2ABB9B;
+			background-color: @tpmediumgreen;
 
             &:hover,
             &:focus {
-                 background-color: darken(#2ABB9B, 10%);
+                 background-color: darken(@tpmediumgreen, 10%);
             }
 
 			h3, p {
@@ -286,11 +286,11 @@
 				height: 10.1rem;
 
 				@media screen and (min-width: 1160px) {
-					font-size: 1.5rem;
+					font-size: 1.3rem;
 				}
 
 				@media screen and (min-width: 1280px) {
-					font-size: 1.6rem;
+					font-size: 1.4rem;
 				}
 			}
 
@@ -320,7 +320,7 @@
 	}
 
 	.list-menu {
-		background: @lighter-blue;
+		background: @tpdark-green;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -343,7 +343,7 @@
 		&:focus,
 		&:nth-child(6n+2):hover,
 		&:nth-child(6n+2):focus {
-			background: @lighter-blue;
+			background: @tpdark-green;
 			cursor: normal;
 		}
 
@@ -434,8 +434,8 @@
 	}
 
 	.contact-tile {
-		background: @ash;
-		color: @dark-grey;
+		background: @tpoffwhite;
+		color: @tpblack;
 		font-size: 1.125rem;
 		line-height: 1.5rem;
 		padding: 2rem 2.875rem 2.75rem 2rem;
@@ -451,7 +451,7 @@
 
 		&:hover,
 		&:focus {
-			background: @ash;
+			background: @tpoffwhite;
 		}
 
         @media screen and (max-width: 980px) {
@@ -479,7 +479,7 @@
 			line-height: 1.15;
 			font-weight: 100;
 			height: auto;
-			color: @red;
+			color: @tpmediumgreen;
 
             @media screen and (max-width: 980px) {
                 font-size: 1.875rem;
@@ -488,7 +488,7 @@
 		}
 
 		a {
-			color: @dark-grey;
+			color: @tpblack;
 		}
 
 		p {
@@ -874,7 +874,7 @@ div.token-input-dropdown-mac ul li strong {
 
 div.token-input-dropdown-mac ul li.token-input-selected-dropdown-item-mac,
 div.token-input-dropdown-mac ul li.token-input-selected-dropdown-item-mac.odd {
-    background-color: @tplightgreen;
+    background-color: @tpmediumgreen;
     color: #fff;
 }
 
@@ -889,6 +889,7 @@ div.token-input-dropdown-mac ul li.token-input-selected-dropdown-item-mac.odd sp
 	&.half h3 {
   		font-size: 1.175rem;
   		line-height: 1.8rem;
+		word-wrap: normal;
   	}
 }
 

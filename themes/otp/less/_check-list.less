@@ -1,7 +1,7 @@
 .checklist {
-	
-	background: @ash;
-	
+
+	background: @tpoffwhite;
+
 	.container {
 		padding-top: 2.25rem;
 		padding-bottom: 3.5rem;
@@ -13,15 +13,15 @@
 		font-size: 2rem;
 		margin-bottom: 2rem;
 	}
-	
+
 	.intro {
 		width: 70%;
 		font-size: 1.125rem;
-		
+
 		h3 {
 			margin: 0 0 1rem;
 			font-weight: bold;
-			color: @dark-grey;
+			color: @tpblack;
 			font-size: 1.250rem;
 		}
 
@@ -30,23 +30,23 @@
 			margin-top: 0;
 		}
 	}
-	
-	
+
+
 	.items {
 		padding-top: 0.5rem;
 		overflow: hidden;
 		font-size: 1.1250rem;
-		
+
 		ul {
 			.list-reset;
 		}
 	}
-		
+
 	.index {
 		width: 37.5%;
 		float: left;
 		margin-right: 5%;
-		
+
 		.main {
 			line-height: 1.2;
 			overflow: hidden;
@@ -54,7 +54,7 @@
 			padding: 10px 10px 10px 3.225rem;
 			cursor: pointer;
 			position: relative;
-			
+
 			.icon {
 				margin-top: 0.5rem;
 				position: absolute;
@@ -71,7 +71,7 @@
 				font-size: 0.75rem;
 				cursor: pointer;
 				top: 0;
-				
+
 				&.icon-dot {
 					border: 0;
 					background: transparent;
@@ -93,18 +93,18 @@
 						position: absolute;
 						margin-top: -4px;
 						margin-left: -4px;
-						background: @light-green;
+						background: @tplightgreen;
 					}
 				}
 			}
 		}
 
 		li.active {
-			background: @dark-grey;
+			background: @tpdark-green;
 			color: @white;
-			
+
 			.icon {
-				
+
 				&.icon-dot {
 					border: 0;
 					background: transparent;
@@ -127,7 +127,7 @@
 		.ticked {
 			.icon {
 				color: #fff;
-				background: @light-green;
+				background: @tpmediumgreen;
 			}
 		}
 	}
@@ -137,7 +137,7 @@
 		.items {
 			padding-top: 0;
 		}
-		
+
 		.index {
 			width: 100%;
 		}
@@ -151,7 +151,7 @@
 		}
 
 		li.active {
-			color: #404041;
+			color: @tpdark-green;
 			background: transparent;
 			cursor: default;
 
@@ -199,7 +199,7 @@
 		}
 	}
 
-	
+
 	.accord {
 		display: none;
 	}
@@ -208,7 +208,7 @@
 		float: left;
 		width: 50%;
 		display: none;
-		
+
 		&.mainlist.active {
 			display: block;
 		}
@@ -217,18 +217,18 @@
 			margin-top: 0.6rem;
 			margin-bottom: 1rem;
 		}
-		
+
 		ul {
 			margin-top: 0.6rem;
 			margin-bottom: 1rem;
 
 			li {
-				
+
 				position: relative;
 				padding-left: 1.625rem;
 				padding-bottom: 1.5rem;
 				cursor: pointer;
-				
+
 				span.icon {
 					left: 0;
 					position: absolute;
@@ -239,16 +239,16 @@
 					text-align: center;
 					font-size: 0.438rem;
 					top: 2px;
-					
+
 					&.icon-dot {
 						font-size: 0.438rem;
 						line-height: 1.625rem;
 						height: 1.625rem;
 					}
-					
+
 					&.icon-tick {
 						border: 1px solid @white;
-						background: @light-green;
+						background: @tpmediumgreen;
 						border-radius: 1.250rem;
 						color: @white;
 					}
@@ -256,8 +256,8 @@
 			}
 		}
 	}
-	
-	
+
+
 	@media screen and (max-width: 820px) {
 		.intro {
 			width: 100%;
@@ -279,7 +279,7 @@
 				float: none;
 				width: 100%;
 			}
-			
+
 			.index ul .main.active {
 				height: auto;
 			}
@@ -293,15 +293,15 @@
 				padding: 1rem 1rem 0;
 
 				li {
-					color: @dark-grey;
+					color: @tpblack;
 					height: auto;
 					background: transparent;
 					line-height: 1.5;
 					font-size: 1rem;
 				}
-				
+
 				p {
-					color: @dark-grey;
+					color: @tpblack;
 					line-height: 1.5;
 				}
 			}
