@@ -10,9 +10,10 @@
 			</div>
 
 			<article>
-
+				<div class="icon icon-play"></div>
 				<% if $TestimonyContent %>
 					<p class='text'>
+
 						{$TestimonyContent}
 					</p>
 				<% end_if %>

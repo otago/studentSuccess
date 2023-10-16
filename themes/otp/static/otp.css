@@ -3698,6 +3698,7 @@ table tr:last-child {
 .hear-from-others section .image .video-image {
   font-size: 0;
   line-height: 0;
+  opacity: 0.8;
   transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -3760,6 +3761,22 @@ table tr:last-child {
   min-height: 380px;
   padding: 2.5rem 2.125rem 2.5rem 1.75rem;
 }
+.hear-from-others section article .icon {
+  position: relative;
+  left: 20%;
+  font-size: 9.375rem;
+  width: 9.375rem;
+  height: 9.375rem;
+  display: block;
+  border: 4px solid #ffffff;
+  border-radius: 9.375rem;
+  color: #ffffff;
+}
+@media screen and (max-width: 900px) {
+  .hear-from-others section article .icon {
+    display: none;
+  }
+}
 .hear-from-others section article span.icon {
   font-size: 0;
   line-height: 0;
@@ -3769,7 +3786,7 @@ table tr:last-child {
   font-size: 2.25rem;
   line-height: 2.375rem;
   font-weight: 300;
-  margin: 65px 0 0 0;
+  margin: 50px 0 0 0;
 }
 .hear-from-others.red section {
   background: #3bad5f;

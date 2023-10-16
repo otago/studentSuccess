@@ -787,6 +787,12 @@ table th.main {
 .hear-from-others section article {
   padding: 40px 34px 40px 28px;
 }
+.hear-from-others section article .icon {
+  font-size: 150px;
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+}
 .hear-from-others section article .text {
   font-size: 36px;
   line-height: 38px;
