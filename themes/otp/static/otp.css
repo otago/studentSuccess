@@ -2480,22 +2480,46 @@ table tr:last-child {
 .links-content.has-image {
   min-height: 300px;
 }
-.links-content.green {
+.links-content.green,
+.links-content.tpmediumgreen {
   background: #216e31;
 }
 .links-content.green h3,
-.links-content.green article h3 {
+.links-content.tpmediumgreen h3,
+.links-content.green article h3,
+.links-content.tpmediumgreen article h3 {
   color: #fff;
 }
-.links-content.red {
-  background: #216e31;
+.links-content.red,
+.links-content.tpstone {
+  background: #e4e0cf;
+}
+.links-content.red .links-block,
+.links-content.tpstone .links-block {
+  color: #000000;
+}
+.links-content.red .links-block .left ul,
+.links-content.tpstone .links-block .left ul {
+  color: #000000;
+}
+.links-content.red .links-block .left ul a,
+.links-content.tpstone .links-block .left ul a {
+  color: #000000;
 }
 .links-content.red h3,
-.links-content.red article h3 {
-  color: #fff;
+.links-content.tpstone h3,
+.links-content.red article h3,
+.links-content.tpstone article h3 {
+  color: #000000;
+}
+.links-content.blue,
+.links-content.tpmaroon {
+  background: #9e0045;
 }
 .links-content.blue h3,
-.links-content.blue article h3 {
+.links-content.tpmaroon h3,
+.links-content.blue article h3,
+.links-content.tpmaroon article h3 {
   color: #fff;
 }
 .links-content .component-alignment.boxed-element {

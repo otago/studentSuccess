@@ -59,9 +59,9 @@ class LinksComponent extends BaseElement
         $fields->removeByName('Links');
 
         $fields->replaceField('Color', DropdownField::create('Color')->setSource([
-            'blue' => 'Blue (Default)',
-            'red' => 'Red',
-            'green' => 'Green'
+            'tpmaroon' => 'Maroon (Default)',
+            'tpstone' => 'Stone',
+            'tpmediumgreen' => 'Medium Green'
         ]));
 
         if ($this->ID) {
