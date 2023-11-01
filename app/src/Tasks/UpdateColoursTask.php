@@ -53,7 +53,11 @@ class UpdateColoursTask extends BuildTask
         $this->updateDB("CaseStudy", "Color", "red", "tpmaroon", true);
         $this->updateDB("CaseStudy", "Color", "blue", "tpstone", true);
 
-
+        echo "<h2>CheckListBlock</h2>";
+        $this->updateDB("CheckListBlock", "Color", "green", "tpmediumgreen",);
+        $this->updateDB("CheckListBlock", "Color", "red", "tpmaroon",);
+        $this->updateDB("CheckListBlock", "Color", "blue", "tpdark-green");
+        $this->updateDB("CheckListBlock", "Color", "yellow", "tpstone");
     }
 
     private  function updateDB($table,$field,$beforeColour, $afterColour, $hasLive = false){

@@ -4583,14 +4583,24 @@ table tr:last-child {
 .tab-section .content-block {
   background: #216e31;
 }
-.tab-section .content-block.blue {
+.tab-section .content-block.blue,
+.tab-section .content-block.tpdark-green {
   background: #183121;
 }
-.tab-section .content-block.yellow {
+.tab-section .content-block.yellow,
+.tab-section .content-block.tpstone {
   background: #e4e0cf;
 }
-.tab-section .content-block.green {
+.tab-section .content-block.yellow h4,
+.tab-section .content-block.tpstone h4 {
+  color: black;
+}
+.tab-section .content-block.green,
+.tab-section .content-block.tpmediumgreen {
   background: #216e31;
+}
+.tab-section .content-block.tpmaroon {
+  background: #9e0045;
 }
 .tab-section .content-block .itemList {
   margin: 0;
