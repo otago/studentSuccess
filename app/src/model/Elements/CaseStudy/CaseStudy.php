@@ -13,6 +13,8 @@ class CaseStudy extends BaseElement
     private static $table_name = 'CaseStudy';
     private static $singular_name = "Case Study";
 
+    private static string $icon = 'font-icon-address-card';
+
     private static $description = "Case Study";
 
     private static $db = [

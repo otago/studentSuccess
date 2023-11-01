@@ -14,7 +14,7 @@ class CTAElement extends BaseElement
 {
     private static $table_name = 'CTAElement';
     private static $singular_name = "Call To Action";
-
+    private static string $icon = 'font-icon-block-bell';
     private static $description = "Call To Action";
 
     private static $db = [

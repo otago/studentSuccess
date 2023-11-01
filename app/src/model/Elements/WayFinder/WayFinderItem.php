@@ -34,7 +34,7 @@ class WayFinderItem extends DataObject
         )->setEmptyString('None'));
 
 
-        $fields->addFieldsToTab('Root.Settings', [
+        $fields->addFieldsToTab('Root.Main', [
             //CheckboxSetField::create('ManyMany[Filters]')->setTitle('Filters')
             //	->setSource(WayFinderFilter::get()->map()->toArray()),
             DropdownField::create('ManyMany[Size]')->setSource([
@@ -57,4 +57,4 @@ class WayFinderItem extends DataObject
         return $this->renderWith($this->ClassName);
     }
 
-} 
+}
