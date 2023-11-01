@@ -7,9 +7,11 @@
 namespace OP\Studentsuccess\Task;
 
 use OP\Studentsuccess\CaseStudy;
+use OP\Studentsuccess\CTAElement;
 use OP\Studentsuccess\LinksComponent;
 use OP\Studentsuccess\VideoComponent;
 use SilverStripe\Dev\BuildTask;
+use SilverStripe\ORM\Queries\SQLUpdate;
 
 
 class UpdateColoursTask extends BuildTask
@@ -22,97 +24,50 @@ class UpdateColoursTask extends BuildTask
      */
     public function run($request)
     {
-
+        $colour = "";
         echo "<h2>LinksComponent</h2>";
-        foreach (LinksComponent::get() as $linkCom) {
-            switch (strtolower($linkCom->Color)) {
-                case "blue":
-                    $colour = "tpmaroon";
-                    break;
-                case "red":
-                    $colour = "tpstone";
-                    break;
-                case "green":
-                    $colour = "tpmediumgreen";
-                    break;
-            }
 
-            echo "$linkCom->title Updated from $linkCom->Color to $colour<br>";
+        $this->updateDB("LinksComponent", "Color", "blue", "tpmaroon", true);
+        $this->updateDB("LinksComponent", "Color", "red", "tpstone", true);
+        $this->updateDB("LinksComponent", "Color", "green", "tpmediumgreen", true);
 
-            $linkCom->Color = $colour;
-            $linkCom->write();
-        }
-
+//
 //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-
         echo "<h2>VideoComponent</h2>";
-        foreach (VideoComponent::get() as $videoCom) {
-            switch (strtolower($videoCom->Color)) {
-                case "green":
-                    $colour = "tpmediumgreen";
-                    break;
-                case "red":
-                    $colour = "tplightgreen";
-                    break;
-                case "blue":
-                    $colour = "tpmaroon";
-                    break;
-                case "yellow":
-                    $colour = "tpstone";
-                    break;
-            }
+        $this->updateDB("VideoComponent", "Color", "green", "tpmediumgreen", true);
+        $this->updateDB("VideoComponent", "Color", "red", "tplightgreen", true);
+        $this->updateDB("VideoComponent", "Color", "blue", "tpmaroon", true);
+        $this->updateDB("VideoComponent", "Color", "yellow", "tpstone", true);
 
-            echo "$videoCom->title Updated from $videoCom->Color to $colour<br>";
-
-
-            $videoCom->Color = $colour;
-            $videoCom->write();
-        }
 
 //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
         echo "<h2>CTAElement</h2>";
-        foreach (CTAElement::get() as $CTA) {
-            switch (strtolower($CTA->Color)) {
-                case "orange":
-                    $colour = "tpstone";
-                    break;
-                case "gdddd":
-                    $colour = "tplightgreen";
-                    break;
-            }
-
-            echo "$CTA->title Updated from $CTA->Color to $colour<br>";
-
-
-            $CTA->Color = $colour;
-            $CTA->write();
-        }
+        $this->updateDB("CTAElement", "Color", "orange", "tpstone", true);
 
 //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
         echo "<h2>CaseStudy</h2>";
-        foreach (CaseStudy::get() as $CaseStudy) {
-            switch (strtolower($CaseStudy->Color)) {
-                case "green":
-                    $colour = "tpmediumgreen";
-                    break;
-                case "red":
-                    $colour = "tpmaroon";
-                    break;
-                case "blue":
-                    $colour = "tpstone";
-                    break;
-            }
-
-            echo "$CaseStudy->title Updated from $CaseStudy->Color to $colour<br>";
+        $this->updateDB("CaseStudy", "Color", "green", "tpmediumgreen", true);
+        $this->updateDB("CaseStudy", "Color", "red", "tpmaroon", true);
+        $this->updateDB("CaseStudy", "Color", "blue", "tpstone", true);
 
 
-            $CaseStudy->Color = $colour;
-            $CaseStudy->write();
+    }
+
+    private  function updateDB($table,$field,$beforeColour, $afterColour, $hasLive = false){
+
+        $update = SQLUpdate::create($table)
+            ->addWhere([$field => $beforeColour])
+            ->assign($field,$afterColour);
+        $update->execute();
+
+        if ($hasLive == true) {
+            $update = SQLUpdate::create($table."_Live")
+                ->addWhere([$field => $beforeColour])
+                ->assign($field,$afterColour);
+            $update->execute();
         }
-
-
     }
 }
