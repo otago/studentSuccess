@@ -1520,7 +1520,7 @@ table tr:last-child {
 .case-study .left p {
   font-size: 2.5rem;
   line-height: 3rem;
-  margin-top: 5.5rem;
+  margin-top: 0rem;
   font-weight: 100;
 }
 .case-study .right {
@@ -3854,6 +3854,11 @@ table tr:last-child {
 .hear-from-others.tpstone section a.icon:hover {
   color: #e4e0cf;
   border-color: #e4e0cf;
+}
+.hear-from-others.yellow section article .icon,
+.hear-from-others.tpstone section article .icon {
+  color: black;
+  border: 4px solid black;
 }
 @media screen and (max-width: 980px) {
   .hear-from-others section .image {
