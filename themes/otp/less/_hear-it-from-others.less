@@ -130,7 +130,7 @@
 
 	}
 
-	&.red {
+	&.red, &.tplightgreen {
 		section {
 			background: @tplightgreen;
 
@@ -144,9 +144,23 @@
 			}
 		}
 	}
+	&.tpmaroon {
+		section {
+			background: @tpmaroon;
 
 
-	&.green {
+			a.icon {
+
+				&:hover {
+					color: @tpmaroon;
+					border-color: @tpmaroon;
+				};
+
+			}
+		}
+	}
+
+	&.green, &.tpmediumgreen {
 		section {
 			background: @tpmediumgreen;
 
@@ -163,7 +177,7 @@
 	}
 
 
-	&.yellow {
+	&.yellow, &.tpstone {
 		section {
 			background: @tpstone;
 			color: black;

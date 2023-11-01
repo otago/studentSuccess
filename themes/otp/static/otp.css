@@ -3811,25 +3811,38 @@ table tr:last-child {
   font-weight: 300;
   margin: 50px 0 0 0;
 }
-.hear-from-others.red section {
+.hear-from-others.red section,
+.hear-from-others.tplightgreen section {
   background: #3bad5f;
 }
-.hear-from-others.red section a.icon:hover {
+.hear-from-others.red section a.icon:hover,
+.hear-from-others.tplightgreen section a.icon:hover {
   color: #3bad5f;
   border-color: #3bad5f;
 }
-.hear-from-others.green section {
+.hear-from-others.tpmaroon section {
+  background: #9e0045;
+}
+.hear-from-others.tpmaroon section a.icon:hover {
+  color: #9e0045;
+  border-color: #9e0045;
+}
+.hear-from-others.green section,
+.hear-from-others.tpmediumgreen section {
   background: #216e31;
 }
-.hear-from-others.green section a.icon:hover {
+.hear-from-others.green section a.icon:hover,
+.hear-from-others.tpmediumgreen section a.icon:hover {
   color: #216e31;
   border-color: #216e31;
 }
-.hear-from-others.yellow section {
+.hear-from-others.yellow section,
+.hear-from-others.tpstone section {
   background: #e4e0cf;
   color: black;
 }
-.hear-from-others.yellow section a.icon:hover {
+.hear-from-others.yellow section a.icon:hover,
+.hear-from-others.tpstone section a.icon:hover {
   color: #e4e0cf;
   border-color: #e4e0cf;
 }

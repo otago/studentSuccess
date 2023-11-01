@@ -29,10 +29,10 @@ class VideoComponent extends HearFromOthers
         $fields = parent::getCMSFields();
 
         $fields->addFieldToTab('Root.Main', DropdownField::create('Color')->setSource([
-            'green' => 'Green',
-            'red' => 'Red',
-            'blue' => 'Blue',
-            'yellow' => 'Yellow'
+            'tpmediumgreen' => 'Medium Green',
+            'tplightgreen' => 'Light Green',
+            'tpmaroon' => 'Maroon',
+            'tpstone' => 'Stone'
         ]));
 
         return $fields;
