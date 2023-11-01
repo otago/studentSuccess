@@ -5506,6 +5506,14 @@ table tr:last-child {
 .masonry-content .tile-c.half a:focus {
   opacity: 0.8;
 }
+.masonry-content .tile-c .marginPencilIcon {
+  float: left;
+}
+.masonry-content .tile-c .linkbuttonText {
+  padding-left: 6px;
+  float: left;
+  width: 85%;
+}
 .masonry-content .list-menu {
   background: #183121;
   position: absolute;
