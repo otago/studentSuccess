@@ -122,8 +122,8 @@ class StringUtils {
 	 * @param $strURL
 	 * @return mixed
 	 */
-	public static function YouTubeVideoIDFromURL($strURL){
-		parse_str( parse_url( $strURL, PHP_URL_QUERY ), $arrVars );
+	public static function YouTubeVideoIDFromURL($strURL=''){
+		parse_str( parse_url( $strURL ?: '', PHP_URL_QUERY ) ?: 'W', $arrVars );
 		return isset($arrVars['v']) ? $arrVars['v'] : null;
 	}
 

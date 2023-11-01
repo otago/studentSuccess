@@ -19,6 +19,8 @@ class MasonryContent extends BaseElement
     private static $table_name = 'MasonryContent';
     private static $singular_name = "Masonry Element";
 
+    private static string $icon = 'font-icon-thumbnails';
+
     private static $description = "Masonry elements";
 
     private static $db = [

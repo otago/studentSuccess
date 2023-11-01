@@ -14,7 +14,7 @@ class MasonryContentsWithFilters extends MasonryContent
     private static $description = "Masonry elements with filters";
 
     private static $inline_editable = false;
-
+    private static string $icon = 'font-icon-thumbnails';
     private static $db = [
         'FilterByString' => 'Varchar',
         'SearchFieldDefaultText' => 'Varchar'

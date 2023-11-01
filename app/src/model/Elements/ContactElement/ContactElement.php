@@ -14,6 +14,7 @@ class ContactElement extends BaseElement
     private static $singular_name = "Contact Element";
 
     private static $description = "Contact Element";
+    private static string $icon = 'font-icon-torso';
 
     private static $db = [
         'FirstName' => 'Varchar',

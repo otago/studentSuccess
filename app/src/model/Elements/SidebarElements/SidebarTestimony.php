@@ -11,7 +11,7 @@ class SidebarTestimony extends BaseElement
     private static $table_name = 'SidebarTestimony';
 
     private static $singular_name = "Sidebar quote";
-
+    private static string $icon = 'font-icon-block-quote';
     private static $description = "Sidebar quote";
 
     private static $db = [

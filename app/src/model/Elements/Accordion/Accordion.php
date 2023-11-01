@@ -21,6 +21,7 @@ class Accordion extends BaseElement
 
     private static $description = 'Accordion';
 
+    private static $icon = 'font-icon-block-accordion';
     private static $inline_editable = false;
 
     private static $has_many = [

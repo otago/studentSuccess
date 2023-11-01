@@ -18,6 +18,7 @@ class LinksComponent extends BaseElement
 {
     private static $table_name = 'LinksComponent';
     private static $singular_name = "Group of links";
+    private static string $icon = 'font-icon-link';
 
     private static $description = "Shows a list of links";
 

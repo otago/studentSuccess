@@ -11,6 +11,7 @@ class MatrixElement extends BaseElement
     private static $table_name = 'MatrixElement';
     private static $singular_name = "Matrix of Four blocks";
 
+    private static string $icon = 'font-icon-block-layout-2';
     private static $description = "Matrix of Four blocks";
     private static $casting = [
         'OverlayHTML' => 'HTMLFragment'

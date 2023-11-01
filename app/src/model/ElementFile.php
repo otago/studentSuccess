@@ -24,6 +24,7 @@ class ElementFile extends BaseElement
 
     private static $enable_title_in_template = true;
 
+    private static string $icon = 'font-icon-block-file';
 
     public function getType()
     {

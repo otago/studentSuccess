@@ -12,7 +12,7 @@ class HearFromOthers extends BaseElement
 {
     private static $table_name = 'HearFromOthers';
     private static $singular_name = "Hear From Others";
-
+    private static string $icon = 'font-icon-happy';
     private static $description = "Hear from others section";
 
     private static $db = [

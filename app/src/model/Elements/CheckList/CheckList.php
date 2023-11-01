@@ -18,7 +18,7 @@ class CheckList extends BaseElement
 {
     private static $table_name = 'CheckList';
     private static $singular_name = "Interactive Checklist";
-
+    private static string $icon = 'font-icon-checklist';
     private static $description = "Interactive Checklist";
 
     private static $db = [

@@ -10,7 +10,7 @@ class ReferencesElement extends BaseElement
 {
     private static $table_name = 'ReferencesElement';
     private static $singular_name = "References Element";
-
+    private static string $icon = 'font-icon-eye';
     private static $description = "References Element";
 
     private static $db = [

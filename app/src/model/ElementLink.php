@@ -31,7 +31,7 @@ class ElementLink extends BaseElement
     ];
 
     private static $singular_name = "Link Element";
-
+    private static string $icon = 'font-icon-external-link';
     private static $description = "";
 
     public function getType()

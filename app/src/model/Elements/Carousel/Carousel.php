@@ -20,6 +20,7 @@ class Carousel extends BaseElement
 {
     private static $table_name = 'Carousel';
     private static $singular_name = "Carousel";
+    private static string $icon = 'font-icon-block-carousel';
 
     private static $description = "Carousel";
 

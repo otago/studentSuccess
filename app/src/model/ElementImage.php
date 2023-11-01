@@ -16,6 +16,8 @@ use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
  */
 class ElementImage extends ElementLink
 {
+    private static string $icon = 'font-icon-p-news-item';
+
     private static $table_name = 'ElementImage';
     private static $db = [
         'Caption' => 'HTMLText'

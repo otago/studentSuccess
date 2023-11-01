@@ -15,7 +15,7 @@ class TabbedCheckList extends BaseElement
 {
 
     private static $singular_name = "Tabbed Check List Element";
-
+    private static string $icon = 'font-icon-checklist';
     private static $description = "Tabbed Check List Element";
 
     private static $has_many = [
