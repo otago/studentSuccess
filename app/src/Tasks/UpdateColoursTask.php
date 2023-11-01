@@ -69,6 +69,26 @@ class UpdateColoursTask extends BuildTask
             $videoCom->write();
         }
 
+        //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+        echo "<h2>CTAElement</h2>";
+        foreach (CTAElement::get() as $CTA) {
+            switch (strtolower($CTA->Color)) {
+                case "orange":
+                    $colour = "tpstone";
+                    break;
+                case "gdddd":
+                    $colour = "tplightgreen";
+                    break;
+            }
+
+            echo "$CTA->title Updated from $linkCom->Color to $colour<br>";
+
+
+            $CTA->Color = $colour;
+            $CTA->write();
+        }
+
 
     }
 }

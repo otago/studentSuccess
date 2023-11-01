@@ -3218,6 +3218,9 @@ table tr:last-child {
 .cta.has-image {
   min-height: 300px;
 }
+.cta.tpstone {
+  background: #e4e0cf;
+}
 .cta.black {
   background: #231f20;
   color: #ffffff;

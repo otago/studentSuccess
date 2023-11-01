@@ -51,7 +51,7 @@ class CTAElement extends BaseElement
         $fields = parent::getCMSFields();
 
         $fields->replaceField('Color', DropdownField::create('Color')->setSource([
-            'orange' => 'Orange (Default)',
+            'tpstone' => 'Stone (Default)',
             'black' => 'Black'
         ]));
 
