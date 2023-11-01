@@ -1478,11 +1478,17 @@ table tr:last-child {
 .case-study .component-alignment {
   padding: 0 0 7.5rem;
 }
-.case-study.red {
+.case-study.tpmediumgreen {
   background: #9e0045;
   color: #ffffff;
 }
-.case-study.blue {
+.case-study.red,
+.case-study.tpmaroon {
+  background: #9e0045;
+  color: #ffffff;
+}
+.case-study.blue,
+.case-study.tpstone {
   background: #e4e0cf;
   color: black;
 }

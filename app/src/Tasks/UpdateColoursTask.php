@@ -6,6 +6,7 @@
 
 namespace OP\Studentsuccess\Task;
 
+use OP\Studentsuccess\CaseStudy;
 use OP\Studentsuccess\LinksComponent;
 use OP\Studentsuccess\VideoComponent;
 use SilverStripe\Dev\BuildTask;
@@ -62,14 +63,14 @@ class UpdateColoursTask extends BuildTask
                     break;
             }
 
-            echo "$videoCom->title Updated from $linkCom->Color to $colour<br>";
+            echo "$videoCom->title Updated from $videoCom->Color to $colour<br>";
 
 
             $videoCom->Color = $colour;
             $videoCom->write();
         }
 
-        //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
         echo "<h2>CTAElement</h2>";
         foreach (CTAElement::get() as $CTA) {
@@ -82,11 +83,34 @@ class UpdateColoursTask extends BuildTask
                     break;
             }
 
-            echo "$CTA->title Updated from $linkCom->Color to $colour<br>";
+            echo "$CTA->title Updated from $CTA->Color to $colour<br>";
 
 
             $CTA->Color = $colour;
             $CTA->write();
+        }
+
+//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+        echo "<h2>CaseStudy</h2>";
+        foreach (CaseStudy::get() as $CaseStudy) {
+            switch (strtolower($CaseStudy->Color)) {
+                case "green":
+                    $colour = "tpmediumgreen";
+                    break;
+                case "red":
+                    $colour = "tpmaroon";
+                    break;
+                case "blue":
+                    $colour = "tpstone";
+                    break;
+            }
+
+            echo "$CaseStudy->title Updated from $CaseStudy->Color to $colour<br>";
+
+
+            $CaseStudy->Color = $colour;
+            $CaseStudy->write();
         }
 
 
