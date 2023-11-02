@@ -27,4 +27,8 @@ class MasonryImageTile extends MasonryTile
         'Image'
     ];
 
-} 
+    public function Thumbnail(){
+        return $this->Image()->ScaleHeight(100);
+    }
+
+}

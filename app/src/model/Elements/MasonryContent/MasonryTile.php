@@ -22,7 +22,8 @@ class MasonryTile extends DataObject
 
     private static $summary_fields = [
         'Title',
-        'ClassName',
+        'Thumbnail',
+        'singular_name',
         'SortOrder'
     ];
 
@@ -48,6 +49,10 @@ class MasonryTile extends DataObject
     public function Render()
     {
         return $this->renderWith($this->ClassName);
+    }
+    public function Thumbnail(){
+
+        return;
     }
 
 }
