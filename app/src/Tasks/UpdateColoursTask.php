@@ -67,8 +67,9 @@ class UpdateColoursTask extends BuildTask
         echo "<h2>Carousel</h2>";
         $this->updateDB("Carousel", "Background", "red", "tpmediumgreen", true);
         $this->updateDB("Carousel", "Background", "green", "tpmediumgreen", true);
-        $this->updateDB("Carousel", "Background", "gray", "tpoffwhite", true);
-        $this->updateDB("Carousel", "Background", "blue", "tpoffwhite", true);
+        $this->updateDB("Carousel", "Background", "gray", "tpstone", true);
+        $this->updateDB("Carousel", "Background", "blue", "tpstone", true);
+        $this->updateDB("Carousel", "Background", "tpoffwhite", "tpstone", true);
     }
 
     private  function updateDB($table,$field,$beforeColour, $afterColour, $hasLive = false){

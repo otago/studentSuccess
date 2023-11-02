@@ -53,8 +53,7 @@ class Carousel extends BaseElement
             'tpmediumgreen' => 'Medium Green',
             'tplightgreen' => 'Light Green',
             'tpstone' => 'Stone',
-            'tpmaroon' => 'Maroon',
-            'tpoffwhite' => 'Off White'
+            'tpmaroon' => 'Maroon'
         ]));
 
         if ($this->ID) {
