@@ -2,8 +2,8 @@
 Name: app
 
 ---
-SilverStripe\Admin\LeftAndMain:
-  extra_requirements_css:
+SilverStripe\Forms\HTMLEditor\TinyMCEConfig:
+  editor_css:
     - themes/otp/css/editor.css
 SilverStripe\SiteConfig\SiteConfig:
   extensions:

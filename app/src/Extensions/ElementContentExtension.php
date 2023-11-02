@@ -68,7 +68,7 @@ class ElementContentExtension extends DataExtension
         $strRet = $this->owner->HTML;
 
         // update tables
-        $strRet = str_replace('<table', '<div class="table"><table', $strRet);
+        $strRet = str_replace('<table', '<div class="table"><table', $strRet?:'');
         $strRet = str_replace('</table>', '</table></div>', $strRet);
 
         while ($arrParts = StringUtils::GetBeforeBetweenAndAfter($strRet, '[Figure]', '[/Figure]')) {

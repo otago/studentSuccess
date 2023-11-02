@@ -1,20 +1,20 @@
 .highlightBlue {
-	background: rgba(0, 116, 198, 0.3);
+	background: #27aae1;
 	padding: 1px;
 }
 
 .highlightYellow {
-	background: #ffd100;
+	background: #ffe9c0;
 	padding: 1px;
 }
 
 .highlightRed {
-	background: #ff3d1b;
+	background: #fbae42;
 	padding: 1px;
 }
 
 .highlightGreen {
-	background: @tpmediumgreen;
+	background: #3bad5f;
 	padding: 1px;
 }
 
