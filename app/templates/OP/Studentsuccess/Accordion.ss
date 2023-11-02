@@ -1,6 +1,6 @@
 <div class='accordion-c'>
 	<% loop $Items %>
-		<h2 class='title-c title-color-{$AscentColour}'><a id="a$ID" href="#a$ID">{$Title}</a></h2>
+		<h2 class='title-c title-color-Blue'><a id="a$ID" href="#a$ID">{$Title}</a></h2>
 
 		<div class='accordion-item'>
 			<% if ListDescription %>

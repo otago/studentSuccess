@@ -3,14 +3,10 @@
 namespace OP\Studentsuccess;
 
 
-use OP\Studentsuccess\AccordionItem;
-
 use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldButtonRow;
 use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
-use SilverStripe\Versioned\Versioned;
-use OP\Studentsuccess\FormUtils;
 use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 
@@ -47,7 +43,7 @@ class Accordion extends BaseElement
 
         if ($this->ID) {
             $fields->addFieldToTab('Root.Main',
-                 GridField::create('Items', 'Items', $this->Items(), $heroconf)
+                GridField::create('Items', 'Items', $this->Items(), $heroconf)
             );
         }
 
@@ -68,15 +64,26 @@ class Accordion extends BaseElement
         return false;
     }
 
-//    public function onAfterWrite()
-//    {
-//        parent::onAfterWrite();
-//        foreach ($this->Items() as $Item) {
-//            if (!$Item->isPublished()) {
-////                $Item->publishSingle();
-//                $Item->publishRecursive();
-//            }
-//        }
-//    }
+
+    protected function provideBlockSchema()
+    {
+        $myType = "[" . $this->getType() . "] ";
+//        $myType =  "<h1>$myType</h1>";
+//        $myType =  DBField::create_field('HTMLText', $myType)->RAWURLATT();
+
+        foreach ($this->Items() as $item) {
+            $myType .= "$item->title, ";
+        }
+        $myType = rtrim($myType, ', ');
+
+        $blockSchema = parent::provideBlockSchema();
+        $blockSchema['content'] = $myType;
+
+
+//        $blockSchema['type'] = $this->getType();
+
+        return $blockSchema;
+    }
+
 }
 
