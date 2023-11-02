@@ -1615,37 +1615,82 @@ table tr:last-child {
   padding-top: 0;
   padding-bottom: 0;
 }
+.carousel.tpdark-green {
+  background: #183121;
+}
+.carousel.tpmediumgreen,
+.carousel.green,
 .carousel.red {
   background: #216e31;
 }
-.carousel.green {
-  background: #216e31;
+.carousel.tplightgreen {
+  background: #3bad5f;
 }
-.carousel.gray {
+.carousel.tpstone {
+  background: #e4e0cf;
+}
+.carousel.tpmaroon {
+  background: #9e0045;
+}
+.carousel.gray,
+.carousel.tpoffwhite {
   background: #fbfcf4;
   color: #231f20;
 }
 .carousel.gray h2,
+.carousel.tpoffwhite h2,
+.carousel.tpstone h2,
+.carousel.tplightgreen h2,
 .carousel.gray h3,
+.carousel.tpoffwhite h3,
+.carousel.tpstone h3,
+.carousel.tplightgreen h3,
 .carousel.gray h4,
+.carousel.tpoffwhite h4,
+.carousel.tpstone h4,
+.carousel.tplightgreen h4,
 .carousel.gray h5,
-.carousel.gray p {
+.carousel.tpoffwhite h5,
+.carousel.tpstone h5,
+.carousel.tplightgreen h5,
+.carousel.gray p,
+.carousel.tpoffwhite p,
+.carousel.tpstone p,
+.carousel.tplightgreen p {
   color: #231f20;
 }
-.carousel.gray a {
+.carousel.gray a,
+.carousel.tpoffwhite a,
+.carousel.tpstone a,
+.carousel.tplightgreen a {
   color: #231f20;
 }
 .carousel.gray .flex-direction-nav .flex-next,
-.carousel.gray .flex-direction-nav .flex-prev {
+.carousel.tpoffwhite .flex-direction-nav .flex-next,
+.carousel.tpstone .flex-direction-nav .flex-next,
+.carousel.tplightgreen .flex-direction-nav .flex-next,
+.carousel.gray .flex-direction-nav .flex-prev,
+.carousel.tpoffwhite .flex-direction-nav .flex-prev,
+.carousel.tpstone .flex-direction-nav .flex-prev,
+.carousel.tplightgreen .flex-direction-nav .flex-prev {
   color: #a69b9e;
 }
-.carousel.gray .flex-control-nav li a {
+.carousel.gray .flex-control-nav li a,
+.carousel.tpoffwhite .flex-control-nav li a,
+.carousel.tpstone .flex-control-nav li a,
+.carousel.tplightgreen .flex-control-nav li a {
   border-color: #3e3739;
 }
-.carousel.gray .flex-control-nav li a.flex-active {
+.carousel.gray .flex-control-nav li a.flex-active,
+.carousel.tpoffwhite .flex-control-nav li a.flex-active,
+.carousel.tpstone .flex-control-nav li a.flex-active,
+.carousel.tplightgreen .flex-control-nav li a.flex-active {
   background: #3e3739;
 }
-.carousel.gray .slides li.title-content-compact .right {
+.carousel.gray .slides li.title-content-compact .right,
+.carousel.tpoffwhite .slides li.title-content-compact .right,
+.carousel.tpstone .slides li.title-content-compact .right,
+.carousel.tplightgreen .slides li.title-content-compact .right {
   background-color: #eee;
 }
 .carousel .flex-control-nav {

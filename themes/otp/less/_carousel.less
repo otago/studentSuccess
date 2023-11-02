@@ -34,19 +34,31 @@
 		padding-top: 0;
 		padding-bottom: 0;
 	}
+	&.tpdark-green {
+		background: @tpdark-green;
+	}
 
-	&.red {
+	&.tpmediumgreen, &.green, &.red {
 		background: @tpmediumgreen;
 	}
 
-	&.green {
-		background: @tpmediumgreen;
+	&.tplightgreen{
+		background: @tplightgreen;
 	}
 
-	&.gray {
+
+	&.tpstone {
+		background: @tpstone;
+	}
+	&.tpmaroon{
+		background: @tpmaroon;
+	}
+
+	&.gray, &.tpoffwhite {
 		background: @tpoffwhite;
 		color: @tpblack;
-
+	}
+	&.gray, &.tpoffwhite, &.tpstone,&.tplightgreen {
 		h2, h3, h4, h5, p {
 			color: @tpblack;
 		}

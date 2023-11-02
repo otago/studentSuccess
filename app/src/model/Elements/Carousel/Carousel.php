@@ -49,10 +49,12 @@ class Carousel extends BaseElement
         $fields->removeByName('Slides');
 
         $fields->replaceField('Background', DropdownField::create('Background')->setSource([
-            'blue' => 'Blue (Default)',
-            'red' => 'Red',
-            'green' => 'Green',
-            'gray' => 'Gray'
+            'tpdark-green' => 'Dark Green',
+            'tpmediumgreen' => 'Medium Green',
+            'tplightgreen' => 'Light Green',
+            'tpstone' => 'Stone',
+            'tpmaroon' => 'Maroon',
+            'tpoffwhite' => 'Off White'
         ]));
 
         if ($this->ID) {
