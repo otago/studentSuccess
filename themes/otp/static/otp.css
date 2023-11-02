@@ -5376,6 +5376,9 @@ table tr:last-child {
 .masonry-content .tile-c.scheme_green:focus {
   background-color: #1b5a28;
 }
+.masonry-content .tile-c.scheme_green .separator-link svg {
+  fill: white;
+}
 .masonry-content .tile-c.scheme_mint {
   background-color: #216e31;
 }
@@ -5383,12 +5386,18 @@ table tr:last-child {
 .masonry-content .tile-c.scheme_mint:focus {
   background-color: #154720;
 }
+.masonry-content .tile-c.scheme_mint .separator-link svg {
+  fill: white;
+}
 .masonry-content .tile-c.scheme_blue {
   background-color: #9e0045;
 }
 .masonry-content .tile-c.scheme_blue:hover,
 .masonry-content .tile-c.scheme_blue:focus {
   background-color: #6b002f;
+}
+.masonry-content .tile-c.scheme_blue .separator-link svg {
+  fill: white;
 }
 .masonry-content .tile-c.scheme_yellow {
   background-color: #e4e0cf;
@@ -5400,6 +5409,9 @@ table tr:last-child {
 .masonry-content .tile-c.scheme_yellow .separator-link {
   border-color: rgba(0, 0, 0, 0.1);
   color: #444449;
+}
+.masonry-content .tile-c.scheme_yellow .separator-link svg {
+  fill: black;
 }
 .masonry-content .tile-c.scheme_yellow .separator-link svg line,
 .masonry-content .tile-c.scheme_yellow .separator-link svg polyline,
@@ -5418,6 +5430,9 @@ table tr:last-child {
 .masonry-content .tile-c.scheme_red:focus {
   background-color: #6b002f;
 }
+.masonry-content .tile-c.scheme_red .separator-link svg {
+  fill: white;
+}
 .masonry-content .tile-c.scheme_black {
   background-color: #3bad5f;
 }
@@ -5425,12 +5440,24 @@ table tr:last-child {
 .masonry-content .tile-c.scheme_black:focus {
   background-color: #359a55;
 }
+.masonry-content .tile-c.scheme_black .separator-link svg {
+  fill: white;
+}
 .masonry-content .tile-c.scheme_white {
   background-color: #ffe9c0;
+}
+.masonry-content .tile-c.scheme_white .separator-link {
+  color: black;
 }
 .masonry-content .tile-c.scheme_white h3,
 .masonry-content .tile-c.scheme_white p {
   color: #444449;
+}
+.masonry-content .tile-c.scheme_white .separator-link {
+  border-top: 1px solid rgba(121, 114, 114, 0.4);
+}
+.masonry-content .tile-c.scheme_white .separator-link svg {
+  fill: black;
 }
 .masonry-content .tile-c.scheme_white .separator-link svg line,
 .masonry-content .tile-c.scheme_white .separator-link svg polyline,
