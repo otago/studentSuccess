@@ -1478,9 +1478,17 @@ table tr:last-child {
 .case-study .component-alignment {
   padding: 0 0 7.5rem;
 }
-.case-study.tpmediumgreen {
-  background: #9e0045;
+.case-study.tpdark-green {
   color: #ffffff;
+  background: #183121;
+}
+.case-study.tpmediumgreen {
+  background: #216e31;
+  color: #ffffff;
+}
+.case-study.tplightgreen {
+  background: #3bad5f;
+  color: #231f20;
 }
 .case-study.red,
 .case-study.tpmaroon {

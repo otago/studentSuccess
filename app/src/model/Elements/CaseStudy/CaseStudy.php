@@ -45,7 +45,9 @@ class CaseStudy extends BaseElement
         $fields->removeByName('Color');
 
         $fields->addFieldToTab('Root.Main', DropdownField::create('Color')->setSource([
+            'tpdark-green' => 'Dark Green',
             'tpmediumgreen' => 'Medium Green',
+            'tplightgreen' => 'Light Green',
             'tpmaroon' => 'Maroon',
             'tpstone' => 'Stone'
         ]));
