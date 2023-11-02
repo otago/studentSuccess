@@ -7,19 +7,57 @@
 		min-height: 300px;
 	}
 
+	&.tpdark-green {
+		color: @white;
+		background: @tpdark-green;
+
+		h3,	p, article h3,	article p {
+			color: @white;
+		}
+	}
+
+	&.tpmediumgreen {
+		color: @white;
+		background: @tpmediumgreen;
+
+		h3,	p, article h3,	article p {
+			color: @white;
+		}
+	}
+
+
+	&.tplightgreen{
+		background: @tplightgreen;
+		color: @tpblack;
+	}
+
 	&.tpstone {
 		background: @tpstone;
+	}
+	&.tpmaroon{
+		background: @tpmaroon;
+		color: @white;
 
+		h3,	p, article h3,	article p {
+			color: @white;
+		}
+		a {
+			background: @tpdark-green;
+			color: @white;
+
+			.transition;
+
+			&:hover {
+				background: darken(@tpdark-green, 10%);
+			}
+		}
 	}
 
 	&.black {
 		background: @tpblack;
 		color: @white;
 
-		h3,
-		p,
-		article h3,
-		article p {
+		h3,	p, article h3,	article p {
 			color: @white;
 		}
 	}

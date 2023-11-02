@@ -3283,8 +3283,56 @@ table tr:last-child {
 .cta.has-image {
   min-height: 300px;
 }
+.cta.tpdark-green {
+  color: #ffffff;
+  background: #183121;
+}
+.cta.tpdark-green h3,
+.cta.tpdark-green p,
+.cta.tpdark-green article h3,
+.cta.tpdark-green article p {
+  color: #ffffff;
+}
+.cta.tpmediumgreen {
+  color: #ffffff;
+  background: #216e31;
+}
+.cta.tpmediumgreen h3,
+.cta.tpmediumgreen p,
+.cta.tpmediumgreen article h3,
+.cta.tpmediumgreen article p {
+  color: #ffffff;
+}
+.cta.tplightgreen {
+  background: #3bad5f;
+  color: #231f20;
+}
 .cta.tpstone {
   background: #e4e0cf;
+}
+.cta.tpmaroon {
+  background: #9e0045;
+  color: #ffffff;
+}
+.cta.tpmaroon h3,
+.cta.tpmaroon p,
+.cta.tpmaroon article h3,
+.cta.tpmaroon article p {
+  color: #ffffff;
+}
+.cta.tpmaroon a {
+  background: #183121;
+  color: #ffffff;
+  transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.cta.tpmaroon a:hover {
+  background: #070f0a;
 }
 .cta.black {
   background: #231f20;
