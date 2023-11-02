@@ -48,4 +48,16 @@ class ElementImage extends ElementLink
 
         return parent::getCMSFields();
     }
+
+    protected function provideBlockSchema()
+    {
+        $myType = "[" . $this->getType() . "] ";
+        $blockSchema = parent::provideBlockSchema();
+        if ($this->Image()) {
+            $blockSchema['fileURL'] = $this->Image()->CMSThumbnail()->getURL();
+        }
+        $blockSchema['content'] = $myType;
+
+        return $blockSchema;
+    }
 }

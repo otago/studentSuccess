@@ -3,14 +3,11 @@
 namespace OP\Studentsuccess;
 
 
-use OP\Studentsuccess\CheckListItem;
+use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldAddNewButton;
 use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use Symbiote\GridFieldExtensions\GridFieldAddNewMultiClass;
-use OP\Studentsuccess\CheckListCollection;
-use SilverStripe\Forms\GridField\GridFieldAddNewButton;
-use DNADesign\Elemental\Models\BaseElement;
-use OP\Studentsuccess\FormUtils;
 use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 
@@ -86,5 +83,21 @@ class CheckList extends BaseElement
     public function getFullWidth()
     {
         return ($this instanceof SingleLevelCheckList || $this instanceof SingleLevelList);
+    }
+
+    protected function provideBlockSchema()
+    {
+        $myType = "[" . $this->getType() . "] ";
+
+        foreach ($this->Items()->limit(5) as $item) {
+            $myType .= "$item->title, ";
+        }
+        $myType = rtrim($myType, ', ');
+
+        $blockSchema = parent::provideBlockSchema();
+
+        $blockSchema['content'] = $myType;
+
+        return $blockSchema;
     }
 }

@@ -16,4 +16,7 @@ class WayFinderImageItem extends WayFinderItem
         'Image'
     ];
 
-} 
+    public function Thumbnail(){
+        return $this->Image()->ScaleHeight(100);
+    }
+}

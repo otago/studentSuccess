@@ -161,3 +161,5 @@ DNADesign\Elemental\Models\BaseElement:
 SilverStripe\Core\Injector\Injector:
   DNADesign\ElementalList\Extension\BaseElementCMSEditLinkExtension:
     class: OP\Studentsuccess\OPBaseElementCMSEditLinkExtension
+  DNADesign\Elemental\Models\ElementContent:
+    class: OP\Studentsuccess\OPElementContentInjector

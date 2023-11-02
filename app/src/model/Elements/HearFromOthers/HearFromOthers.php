@@ -6,6 +6,7 @@ namespace OP\Studentsuccess;
 use SilverStripe\Assets\Image;
 use DNADesign\Elemental\Models\BaseElement;
 use OP\Studentsuccess\StringUtils;
+use SilverStripe\ORM\FieldType\DBField;
 
 
 class HearFromOthers extends BaseElement
@@ -51,6 +52,22 @@ class HearFromOthers extends BaseElement
         } else {
             return 'http://www.youtube.com/watch?v=' . StringUtils::YouTubeVideoIDFromURL($this->YoutubeVideo);
         }
+    }
+
+
+    protected function provideBlockSchema()
+    {
+        $myType = "[" . $this->getType() . "] ";
+        $myType .= $this->TestimonyContent . " ";
+        $myType .= DBField::create_field('HTMLText', $this->Testimony)->Summary(20);
+
+        $blockSchema = parent::provideBlockSchema();
+
+        $blockSchema['content'] = $myType;
+        if ($this->Image() && $this->Image()->exists()) {
+            $blockSchema['fileURL'] = $this->Image()->CMSThumbnail()->getURL();
+        }
+        return $blockSchema;
     }
 
 

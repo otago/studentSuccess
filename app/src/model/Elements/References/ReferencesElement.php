@@ -33,4 +33,19 @@ class ReferencesElement extends BaseElement
 
         return $fields;
     }
+
+    protected function provideBlockSchema()
+    {
+        $myType = "[" . $this->getType() . "] ";
+        $myType .= $this->reference1 . " ";
+        $myType .= $this->referenceItalics . " ";
+        $myType .= $this->reference2 . " ";
+        $myType .= $this->reflink . " ";
+
+        $blockSchema = parent::provideBlockSchema();
+
+        $blockSchema['content'] = $myType;
+
+        return $blockSchema;
+    }
 }

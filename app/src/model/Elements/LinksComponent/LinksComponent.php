@@ -83,5 +83,23 @@ class LinksComponent extends BaseElement
         return $this->Links()->sort('SortOrder');
     }
 
+    protected function provideBlockSchema()
+    {
+        $myType = "[" . $this->getType() . "] ";
+
+        foreach ($this->Links()->limit(5) as $item) {
+            $myType .= "$item->title, ";
+        }
+        $myType = rtrim($myType, ', ');
+
+        $blockSchema = parent::provideBlockSchema();
+
+        $blockSchema['content'] = $myType;
+        if ($this->Image() && $this->Image()->exists()) {
+           $blockSchema['fileURL'] = $this->Image()->CMSThumbnail()->getURL();
+        }
+        return $blockSchema;
+    }
+
 
 }

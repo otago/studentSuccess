@@ -46,4 +46,15 @@ class MasonryContentsWithFilters extends MasonryContent
 
         return $fields;
     }
+
+    protected function provideBlockSchema()
+    {
+        $myType = "[" . $this->getType() . "] ";
+
+        $blockSchema = parent::provideBlockSchema();
+
+        $blockSchema['content'] = $myType;
+
+        return $blockSchema;
+    }
 }

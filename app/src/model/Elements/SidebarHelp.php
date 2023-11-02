@@ -23,4 +23,15 @@ class SidebarHelp extends BaseElement
     {
         return self::$singular_name;
     }
+
+    protected function provideBlockSchema()
+    {
+        $myType = "[" . $this->getType() . "] ";
+
+        $blockSchema = parent::provideBlockSchema();
+
+        $blockSchema['content'] = $myType;
+
+        return $blockSchema;
+    }
 }

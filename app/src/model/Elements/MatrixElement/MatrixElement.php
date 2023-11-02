@@ -53,4 +53,22 @@ class MatrixElement extends BaseElement
         }
     }
 
+
+    protected function provideBlockSchema()
+    {
+        $myType = "[" . $this->getType() . "] ";
+        $myType .= $this->LabelLeftTop . ", ";
+        $myType .= $this->LabelLeftBottom . ", ";
+        $myType .= $this->LabelTopLeft . ", ";
+        $myType .= $this->LabelTopRight . "";
+
+
+
+        $blockSchema = parent::provideBlockSchema();
+
+        $blockSchema['content'] = $myType;
+
+        return $blockSchema;
+    }
+
 }

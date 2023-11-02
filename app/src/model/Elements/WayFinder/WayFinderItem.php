@@ -21,7 +21,8 @@ class WayFinderItem extends DataObject
     private static $summary_fields = [
         'Icon',
         'Title',
-        'Description'
+        'Description',
+        'Thumbnail'
     ];
 
     public function getCMSFields()
@@ -57,6 +58,10 @@ class WayFinderItem extends DataObject
     function Render()
     {
         return $this->renderWith($this->ClassName);
+    }
+
+    public function Thumbnail(){
+        return ;
     }
 
 }

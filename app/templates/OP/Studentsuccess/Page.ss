@@ -2,7 +2,7 @@
 
 <div class='page-contents clear-this'>
     <% include Breadcrumbs %>
-    
+
     <div class="elements-holder modal-content">
         <% include PageIntro %>
 

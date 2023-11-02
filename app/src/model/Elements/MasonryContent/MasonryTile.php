@@ -23,7 +23,7 @@ class MasonryTile extends DataObject
     private static $summary_fields = [
         'Title',
         'Thumbnail',
-        'singular_name',
+        'singular_name'=>"Type",
         'SortOrder'
     ];
 

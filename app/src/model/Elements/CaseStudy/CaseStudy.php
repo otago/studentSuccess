@@ -6,6 +6,7 @@ namespace OP\Studentsuccess;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\DropdownField;
 use DNADesign\Elemental\Models\BaseElement;
+use SilverStripe\ORM\FieldType\DBField;
 
 
 class CaseStudy extends BaseElement
@@ -53,6 +54,21 @@ class CaseStudy extends BaseElement
         ]));
 
         return $fields;
+    }
+
+    protected function provideBlockSchema()
+    {
+        $myType = "[" . $this->getType() . "] ";
+        $myType .= DBField::create_field('HTMLText', $this->CaseStudyContent)->Summary(20) . " ";
+
+
+        $blockSchema = parent::provideBlockSchema();
+
+        $blockSchema['content'] = $myType;
+        if ($this->Image() && $this->Image()->exists()) {
+            $blockSchema['fileURL'] = $this->Image()->CMSThumbnail()->getURL();
+        }
+        return $blockSchema;
     }
 
 }

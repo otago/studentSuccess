@@ -38,13 +38,6 @@ class CTAElement extends BaseElement
         return self::$singular_name;
     }
 
-    public function MyImage()
-    {
-
-        return "hello world";
-        return $this->Image()->URL;
-    }
-
     public function getCMSFields()
     {
 
@@ -62,5 +55,19 @@ class CTAElement extends BaseElement
         $fields->replaceField('Icon', DropdownField::create('Icon')->setSource(Config::inst()->get(SiteConfig::class, 'Icons')));
 
         return $fields;
+    }
+
+    protected function provideBlockSchema()
+    {
+        $myType = "[" . $this->getType() . "] ";
+        $myType .= $this->CTAContent . " ";
+
+        $blockSchema = parent::provideBlockSchema();
+
+        $blockSchema['content'] = $myType;
+        if ($this->Image() && $this->Image()->exists()) {
+            $blockSchema['fileURL'] = $this->Image()->CMSThumbnail()->getURL();
+        }
+        return $blockSchema;
     }
 }

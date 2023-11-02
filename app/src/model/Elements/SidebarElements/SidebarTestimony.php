@@ -23,4 +23,17 @@ class SidebarTestimony extends BaseElement
     {
         return self::$singular_name;
     }
+
+    protected function provideBlockSchema()
+    {
+        $myType = "[" . $this->getType() . "] ";
+        $myType .= $this->TestimonyContent . " ";
+        $myType .= $this->TestimonyName;
+
+        $blockSchema = parent::provideBlockSchema();
+
+        $blockSchema['content'] = $myType;
+
+        return $blockSchema;
+    }
 }

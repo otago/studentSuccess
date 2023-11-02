@@ -85,6 +85,8 @@
     <% include DropdownContents %>
     $Layout
 
+    <% if canEdit() %><a href='/admin/pages/edit/show/$ID' target='_blank' class='btn__staff-edit btn'>Edit this page <span class='arrow icon-Pencil' aria-hidden='true'></span></a><% end_if %>
+
     <% include RelatedTopics %>
     <% include Footer %>
     <% include TePukengaFooter %>
