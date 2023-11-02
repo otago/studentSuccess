@@ -2531,6 +2531,13 @@ table tr:last-child {
 .links-content.has-image {
   min-height: 300px;
 }
+.links-content.tpdark-green {
+  background: #183121;
+}
+.links-content.tpdark-green h3,
+.links-content.tpdark-green article h3 {
+  color: #ffffff;
+}
 .links-content.green,
 .links-content.tpmediumgreen {
   background: #216e31;
@@ -2540,6 +2547,13 @@ table tr:last-child {
 .links-content.green article h3,
 .links-content.tpmediumgreen article h3 {
   color: #fff;
+}
+.links-content.tplightgreen {
+  background: #3bad5f;
+}
+.links-content.tplightgreen h3,
+.links-content.tplightgreen article h3 {
+  color: #ffffff;
 }
 .links-content.red,
 .links-content.tpstone {
