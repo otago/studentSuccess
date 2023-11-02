@@ -3478,7 +3478,8 @@ table tr:last-child {
 .way-finder .col-2 {
   width: 28.5714285714%;
 }
-.way-finder .light-green {
+.way-finder .light-green,
+.way-finder .tpmediumgreen {
   color: #ffffff;
   background: #216e31;
   transition: all 0.5s ease-in-out;
@@ -3489,9 +3490,43 @@ table tr:last-child {
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-.way-finder .lighter-blue {
+.way-finder .lighter-blue,
+.way-finder .tpdark-green {
   color: #ffffff;
   background: #183121;
+  transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.way-finder .tpstone {
+  background: #e4e0cf;
+  color: #231f20;
+  transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.way-finder .tpmaroon {
+  background: #9e0045;
+  color: #ffffff;
+  transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.way-finder .tplightgreen {
+  background: #3bad5f;
+  color: #231f20;
   transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
