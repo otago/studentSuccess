@@ -6191,6 +6191,7 @@ h5 a {
 .page-contents .breadcrumbs a {
   color: #ffffff;
   font-size: 0.8rem;
+  line-height: 1.2rem;
   -webkit-transition: opacity 0.2s ease-out;
   -moz-transition: opacity 0.2s ease-out;
   transition: opacity 0.2s ease-out;

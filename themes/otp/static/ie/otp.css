@@ -1493,6 +1493,7 @@ hr {
 }
 .page-contents .breadcrumbs a {
   font-size: 13px;
+  line-height: 19px;
 }
 .page-contents .breadcrumbs a span {
   font-size: 9px;
