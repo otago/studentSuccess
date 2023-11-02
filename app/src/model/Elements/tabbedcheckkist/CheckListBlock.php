@@ -53,10 +53,11 @@ class CheckListBlock extends DataObject
             GridField::create('Items', 'Items', $this->Items(), GridFieldConfig_RelationEditor::create()->addComponent(new GridFieldOrderableRows('SortOrder'))),
         ]);
         $fields->replaceField('Color', DropdownField::create('Color')->setSource([
-            'tpmediumgreen' => 'Medium Green',
-            'tpmaroon' => 'Maroon',
             'tpdark-green' => 'Dark Green',
-            'tpstone' => 'Stone'
+            'tpmediumgreen' => 'Medium Green',
+            'tplightgreen' => 'Light Green',
+            'tpstone' => 'Stone',
+            'tpmaroon' => 'Maroon',
         ]));
 
         return $fields;

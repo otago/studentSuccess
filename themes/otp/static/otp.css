@@ -4751,6 +4751,12 @@ table tr:last-child {
 .tab-section .content-block.tpdark-green {
   background: #183121;
 }
+.tab-section .content-block.tplightgreen {
+  background: #3bad5f;
+}
+.tab-section .content-block.tplightgreen h4 {
+  color: black;
+}
 .tab-section .content-block.yellow,
 .tab-section .content-block.tpstone {
   background: #e4e0cf;
