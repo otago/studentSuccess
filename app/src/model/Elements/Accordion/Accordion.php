@@ -68,10 +68,8 @@ class Accordion extends BaseElement
     protected function provideBlockSchema()
     {
         $myType = "[" . $this->getType() . "] ";
-//        $myType =  "<h1>$myType</h1>";
-//        $myType =  DBField::create_field('HTMLText', $myType)->RAWURLATT();
 
-        foreach ($this->Items() as $item) {
+        foreach ($this->Items()->limit(5) as $item) {
             $myType .= "$item->title, ";
         }
         $myType = rtrim($myType, ', ');
@@ -80,7 +78,6 @@ class Accordion extends BaseElement
         $blockSchema['content'] = $myType;
 
 
-//        $blockSchema['type'] = $this->getType();
 
         return $blockSchema;
     }
