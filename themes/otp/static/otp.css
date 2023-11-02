@@ -3939,6 +3939,15 @@ table tr:last-child {
   color: #216e31;
   border-color: #216e31;
 }
+.hear-from-others.green section,
+.hear-from-others.tpdark-green section {
+  background: #183121;
+}
+.hear-from-others.green section a.icon:hover,
+.hear-from-others.tpdark-green section a.icon:hover {
+  color: #183121;
+  border-color: #183121;
+}
 .hear-from-others.yellow section,
 .hear-from-others.tpstone section {
   background: #e4e0cf;
