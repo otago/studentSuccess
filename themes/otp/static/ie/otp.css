@@ -164,7 +164,7 @@ table th.main {
   padding: 0 0 64px 0px;
 }
 .carousel .slides li.title .wrapper h2 {
-  font-size: 80px;
+  font-size: 72px;
   line-height: 96px;
 }
 @media screen and (max-width: 1140px) {
@@ -183,7 +183,7 @@ table th.main {
   padding-bottom: 48px;
 }
 .carousel .slides li.title-content .wrapper h2 {
-  font-size: 80px;
+  font-size: 64px;
   line-height: 80px;
 }
 @media screen and (max-width: 980px) {

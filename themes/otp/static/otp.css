@@ -1796,7 +1796,7 @@ table tr:last-child {
   opacity: 1;
 }
 .carousel .slides li.title .wrapper h2 {
-  font-size: 5rem;
+  font-size: 4.5rem;
   line-height: 6rem;
   font-weight: 100;
   margin: 0;
@@ -1822,11 +1822,13 @@ table tr:last-child {
   padding-bottom: 3rem;
 }
 .carousel .slides li.title-content .wrapper h2 {
-  font-size: 5rem;
+  font-size: 4rem;
   line-height: 5rem;
   font-weight: 100;
   margin-top: 1em;
   margin-bottom: 0.25em;
+  -moz-hyphens: manual;
+  hyphens: manual;
 }
 @media screen and (max-width: 980px) {
   .carousel .slides li.title-content .wrapper h2 {
@@ -7863,22 +7865,22 @@ footer.main .container.addresses address.middle {
 }
 .highlightBlue,
 .highlightblue {
-  background: #b3d5ee;
+  background: #27aae1;
   padding: 0 2px;
 }
 .highlightYellow,
 .highlightyellow {
-  background: #ffd100;
+  background: #ffe9c0;
   padding: 0 2px;
 }
 .highlightRed,
 .highlightred {
-  background: #ff3d1b;
+  background: #fbae42;
   padding: 0 2px;
 }
 .highlightGreen,
 .highlightgreen {
-  background: #216e31;
+  background: #3bad5f;
   padding: 0 2px;
 }
 @media print {
