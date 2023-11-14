@@ -106,7 +106,7 @@ table th.main {
   margin-bottom: 32px;
 }
 .case-study .left p {
-  font-size: 40px;
+  font-size: 34px;
   line-height: 48px;
   margin-top: 0px;
 }
@@ -794,7 +794,7 @@ table th.main {
   border-radius: 150px;
 }
 .hear-from-others section article .text {
-  font-size: 36px;
+  font-size: 32px;
   line-height: 38px;
 }
 @media screen and (max-width: 980px) {
@@ -1639,7 +1639,7 @@ hr {
   font-size: 60px;
 }
 .testimony-content.right-content .text {
-  font-size: 36px;
+  font-size: 29px;
   line-height: 40px;
   margin: 16px 0;
 }
