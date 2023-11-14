@@ -3,6 +3,7 @@
 use OP\Studentsuccess\ElementFile;
 use OP\Studentsuccess\ElementImage;
 use OP\Studentsuccess\ElementLink;
+use SilverStripe\Forms\HTMLEditor\TinyMCEConfig;
 use SilverStripe\i18n\i18n;
 use SilverStripe\Core\Config\Config;
 use OP\Studentsuccess\MasonryContent;
@@ -95,3 +96,9 @@ Config::inst()->update('Page', 'allowed_elements', [
     MasonryContentsWithFilters::class,
     TabbedCheckList::class
 ]);
+
+
+TinyMCEConfig::get('cms')
+    ->enablePlugins('charmap')
+    ->addButtonsToLine(1, 'styleselect','charmap')
+    ->setOption('importcss_append', true);

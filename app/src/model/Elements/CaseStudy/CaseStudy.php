@@ -6,12 +6,15 @@ namespace OP\Studentsuccess;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\DropdownField;
 use DNADesign\Elemental\Models\BaseElement;
+use SilverStripe\ORM\FieldType\DBField;
 
 
 class CaseStudy extends BaseElement
 {
     private static $table_name = 'CaseStudy';
     private static $singular_name = "Case Study";
+
+    private static string $icon = 'font-icon-address-card';
 
     private static $description = "Case Study";
 
@@ -43,12 +46,29 @@ class CaseStudy extends BaseElement
         $fields->removeByName('Color');
 
         $fields->addFieldToTab('Root.Main', DropdownField::create('Color')->setSource([
-            'green' => 'Green',
-            'red' => 'Red',
-            'blue' => 'Blue'
+            'tpdark-green' => 'Dark Green',
+            'tpmediumgreen' => 'Medium Green',
+            'tplightgreen' => 'Light Green',
+            'tpmaroon' => 'Maroon',
+            'tpstone' => 'Stone'
         ]));
 
         return $fields;
+    }
+
+    protected function provideBlockSchema()
+    {
+        $myType = "[" . $this->getType() . "] ";
+        $myType .= DBField::create_field('HTMLText', $this->CaseStudyContent)->Summary(20) . " ";
+
+
+        $blockSchema = parent::provideBlockSchema();
+
+        $blockSchema['content'] = $myType;
+        if ($this->Image() && $this->Image()->exists()) {
+            $blockSchema['fileURL'] = $this->Image()->CMSThumbnail()->getURL();
+        }
+        return $blockSchema;
     }
 
 }

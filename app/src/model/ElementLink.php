@@ -3,13 +3,13 @@
 namespace OP\Studentsuccess;
 
 
+use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\CMS\Model\SiteTree;
-use SilverStripe\Forms\TextField;
 use SilverStripe\Control\Director;
-use SilverStripe\Forms\TreeDropdownField;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\TextareaField;
-use DNADesign\Elemental\Models\BaseElement;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\TreeDropdownField;
 
 
 /**
@@ -31,7 +31,7 @@ class ElementLink extends BaseElement
     ];
 
     private static $singular_name = "Link Element";
-
+    private static string $icon = 'font-icon-external-link';
     private static $description = "";
 
     public function getType()
@@ -56,5 +56,22 @@ class ElementLink extends BaseElement
         });
 
         return parent::getCMSFields();
+    }
+
+    protected function provideBlockSchema()
+    {
+        $myType = "[" . $this->getType() . "] " . $this->LinkText." > ";
+
+        if ($this->InternalLink()->getAbsoluteLiveLink()) {
+            $myType .= $this->InternalLink()->getAbsoluteLiveLink(false);
+        } else {
+            $myType .= $this->LinkURL;
+        }
+
+        $blockSchema = parent::provideBlockSchema();
+
+        $blockSchema['content'] = $myType;
+
+        return $blockSchema;
     }
 }

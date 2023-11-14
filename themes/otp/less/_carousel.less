@@ -34,19 +34,31 @@
 		padding-top: 0;
 		padding-bottom: 0;
 	}
+	&.tpdark-green {
+		background: @tpdark-green;
+	}
 
-	&.red {
+	&.tpmediumgreen, &.green, &.red {
 		background: @tpmediumgreen;
 	}
 
-	&.green {
-		background: @tpmediumgreen;
+	&.tplightgreen{
+		background: @tplightgreen;
 	}
 
-	&.gray {
+
+	&.tpstone {
+		background: @tpstone;
+	}
+	&.tpmaroon{
+		background: @tpmaroon;
+	}
+
+	&.gray, &.tpoffwhite {
 		background: @tpoffwhite;
 		color: @tpblack;
-
+	}
+	&.gray, &.tpoffwhite, &.tpstone,&.tplightgreen {
 		h2, h3, h4, h5, p {
 			color: @tpblack;
 		}
@@ -181,7 +193,7 @@
 			&.title {
 				.wrapper {
 					h2 {
-						font-size: 6.5rem;
+						font-size: 3rem;
 						line-height: 6rem;
 						font-weight: 100;
 						margin: 0;
@@ -210,11 +222,13 @@
 					}
 
 					h2 {
-						font-size: 5rem;
+						font-size: 3rem;
 						line-height: 5rem;
 						font-weight: 100;
 						margin-top: 1em;
 						margin-bottom: 0.25em;
+						-moz-hyphens: manual;
+						hyphens: manual;
 
 						@media screen and (max-width: 980px) {
 							font-size: 1.875rem;
@@ -274,7 +288,7 @@
 
 					h2 {
 						margin: 0;
-						font-size: 3.75rem;
+						font-size: 3rem;
 						line-height: 3.75rem;
 						font-weight: 100;
 						padding-bottom: 2rem;

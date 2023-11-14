@@ -11,6 +11,7 @@ class MatrixElement extends BaseElement
     private static $table_name = 'MatrixElement';
     private static $singular_name = "Matrix of Four blocks";
 
+    private static string $icon = 'font-icon-block-layout-2';
     private static $description = "Matrix of Four blocks";
     private static $casting = [
         'OverlayHTML' => 'HTMLFragment'
@@ -50,6 +51,24 @@ class MatrixElement extends BaseElement
             $arrLines = explode("\n", $strContents);
             return "<ul><li>" . implode("</li><li>", $arrLines) . "</li></ul>";
         }
+    }
+
+
+    protected function provideBlockSchema()
+    {
+        $myType = "[" . $this->getType() . "] ";
+        $myType .= $this->LabelLeftTop . ", ";
+        $myType .= $this->LabelLeftBottom . ", ";
+        $myType .= $this->LabelTopLeft . ", ";
+        $myType .= $this->LabelTopRight . "";
+
+
+
+        $blockSchema = parent::provideBlockSchema();
+
+        $blockSchema['content'] = $myType;
+
+        return $blockSchema;
     }
 
 }

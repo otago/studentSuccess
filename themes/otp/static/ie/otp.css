@@ -106,9 +106,9 @@ table th.main {
   margin-bottom: 32px;
 }
 .case-study .left p {
-  font-size: 40px;
+  font-size: 34px;
   line-height: 48px;
-  margin-top: 88px;
+  margin-top: 0px;
 }
 .case-study .right {
   padding-top: 24px;
@@ -164,7 +164,7 @@ table th.main {
   padding: 0 0 64px 0px;
 }
 .carousel .slides li.title .wrapper h2 {
-  font-size: 104px;
+  font-size: 48px;
   line-height: 96px;
 }
 @media screen and (max-width: 1140px) {
@@ -183,7 +183,7 @@ table th.main {
   padding-bottom: 48px;
 }
 .carousel .slides li.title-content .wrapper h2 {
-  font-size: 80px;
+  font-size: 48px;
   line-height: 80px;
 }
 @media screen and (max-width: 980px) {
@@ -203,7 +203,7 @@ table th.main {
   margin-bottom: 40px;
 }
 .carousel .slides li.title-content-compact .left h2 {
-  font-size: 60px;
+  font-size: 48px;
   line-height: 60px;
   padding-bottom: 32px;
 }
@@ -794,7 +794,7 @@ table th.main {
   border-radius: 150px;
 }
 .hear-from-others section article .text {
-  font-size: 36px;
+  font-size: 32px;
   line-height: 38px;
 }
 @media screen and (max-width: 980px) {
@@ -1493,6 +1493,7 @@ hr {
 }
 .page-contents .breadcrumbs a {
   font-size: 13px;
+  line-height: 19px;
 }
 .page-contents .breadcrumbs a span {
   font-size: 9px;
@@ -1638,10 +1639,9 @@ hr {
   font-size: 60px;
 }
 .testimony-content.right-content .text {
-  font-size: 36px;
+  font-size: 29px;
   line-height: 40px;
   margin: 16px 0;
-  padding-top: 56px;
 }
 figure.element picture {
   margin-bottom: 16px;

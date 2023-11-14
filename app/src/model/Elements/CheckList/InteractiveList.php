@@ -16,7 +16,7 @@ class InteractiveList extends CheckList {
 	private static $singular_name = "Interactive List";
 
 	private static $description = "Interactive List";
-
+    private static string $icon = 'font-icon-list';
     private static $inline_editable = false;
 
     public function getType()

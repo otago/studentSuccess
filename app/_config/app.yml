@@ -2,8 +2,8 @@
 Name: app
 
 ---
-SilverStripe\Admin\LeftAndMain:
-  extra_requirements_css:
+SilverStripe\Forms\HTMLEditor\TinyMCEConfig:
+  editor_css:
     - themes/otp/css/editor.css
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
@@ -161,3 +161,5 @@ DNADesign\Elemental\Models\BaseElement:
 SilverStripe\Core\Injector\Injector:
   DNADesign\ElementalList\Extension\BaseElementCMSEditLinkExtension:
     class: OP\Studentsuccess\OPBaseElementCMSEditLinkExtension
+  DNADesign\Elemental\Models\ElementContent:
+    class: OP\Studentsuccess\OPElementContentInjector

@@ -24,6 +24,7 @@ class WayFinder extends BaseElement
 
     private static $plural_name = 'WayFinder';
 
+    private static string $icon = 'font-icon-icon-enlarge';
     private static $description = "Way finder element section";
 
     protected $enable_title_in_template = true;
@@ -107,6 +108,15 @@ class WayFinder extends BaseElement
         }
         return $fields;
     }
+    protected function provideBlockSchema()
+    {
+        $myType = "[" . $this->getType() . "] ";
 
+        $blockSchema = parent::provideBlockSchema();
+
+        $blockSchema['content'] = $myType;
+
+        return $blockSchema;
+    }
 
 }

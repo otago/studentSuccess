@@ -65,17 +65,32 @@
 
 		background: @tpmediumgreen;
 
-		&.blue {
+		&.blue, &.tpdark-green {
 			background: @tpdark-green;
 		}
 
-		&.yellow {
-			background: @tpstone;
+		&.tplightgreen {
+			background: @tplightgreen;
+			h4 {
+				color: black;
+			}
 		}
 
-		&.green {
+		&.yellow, &.tpstone {
+			background: @tpstone;
+			h4 {
+				color: black;
+			}
+		}
+
+		&.green, &.tpmediumgreen {
 			background: @tpmediumgreen;
 		}
+
+		&.tpmaroon {
+			background: @tpmaroon;
+		}
+
 
 		.itemList {
 			margin: 0;

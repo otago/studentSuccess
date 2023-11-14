@@ -12,7 +12,7 @@ class CarouselWithUpperLetter extends Carousel
     private static $singular_name = "Acronym Carousel";
 
     private static $description = "Carousel Element with upper letter to cycle";
-
+    private static string $icon = 'font-icon-p-a';
 
     public function getType()
     {

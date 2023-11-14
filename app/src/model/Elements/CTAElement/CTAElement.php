@@ -14,7 +14,7 @@ class CTAElement extends BaseElement
 {
     private static $table_name = 'CTAElement';
     private static $singular_name = "Call To Action";
-
+    private static string $icon = 'font-icon-block-bell';
     private static $description = "Call To Action";
 
     private static $db = [
@@ -38,25 +38,36 @@ class CTAElement extends BaseElement
         return self::$singular_name;
     }
 
-    public function MyImage()
-    {
-
-        return "hello world";
-        return $this->Image()->URL;
-    }
-
     public function getCMSFields()
     {
 
         $fields = parent::getCMSFields();
 
         $fields->replaceField('Color', DropdownField::create('Color')->setSource([
-            'orange' => 'Orange (Default)',
+            'tpdark-green' => 'Dark Green',
+            'tpmediumgreen' => 'Medium Green',
+            'tplightgreen' => 'Light Green',
+            'tpstone' => 'Stone',
+            'tpmaroon' => 'Maroon',
             'black' => 'Black'
         ]));
 
         $fields->replaceField('Icon', DropdownField::create('Icon')->setSource(Config::inst()->get(SiteConfig::class, 'Icons')));
 
         return $fields;
+    }
+
+    protected function provideBlockSchema()
+    {
+        $myType = "[" . $this->getType() . "] ";
+        $myType .= $this->CTAContent . " ";
+
+        $blockSchema = parent::provideBlockSchema();
+
+        $blockSchema['content'] = $myType;
+        if ($this->Image() && $this->Image()->exists()) {
+            $blockSchema['fileURL'] = $this->Image()->CMSThumbnail()->getURL();
+        }
+        return $blockSchema;
     }
 }

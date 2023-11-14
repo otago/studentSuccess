@@ -10,7 +10,7 @@ class ReferencesElement extends BaseElement
 {
     private static $table_name = 'ReferencesElement';
     private static $singular_name = "References Element";
-
+    private static string $icon = 'font-icon-eye';
     private static $description = "References Element";
 
     private static $db = [
@@ -32,5 +32,20 @@ class ReferencesElement extends BaseElement
         $fields = parent::getCMSFields();
 
         return $fields;
+    }
+
+    protected function provideBlockSchema()
+    {
+        $myType = "[" . $this->getType() . "] ";
+        $myType .= $this->reference1 . " ";
+        $myType .= $this->referenceItalics . " ";
+        $myType .= $this->reference2 . " ";
+        $myType .= $this->reflink . " ";
+
+        $blockSchema = parent::provideBlockSchema();
+
+        $blockSchema['content'] = $myType;
+
+        return $blockSchema;
     }
 }

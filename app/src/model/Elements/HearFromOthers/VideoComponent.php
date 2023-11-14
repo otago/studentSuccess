@@ -4,6 +4,7 @@ namespace OP\Studentsuccess;
 
 
 use SilverStripe\Forms\DropdownField;
+use SilverStripe\ORM\FieldType\DBField;
 
 
 class VideoComponent extends HearFromOthers
@@ -11,6 +12,7 @@ class VideoComponent extends HearFromOthers
     private static $table_name = 'VideoComponent';
     private static $singular_name = "Video";
 
+    private static string $icon = 'font-icon-block-video';
     private static $description = "Video Component with modal player";
 
     private static $db = [
@@ -27,12 +29,18 @@ class VideoComponent extends HearFromOthers
         $fields = parent::getCMSFields();
 
         $fields->addFieldToTab('Root.Main', DropdownField::create('Color')->setSource([
-            'green' => 'Green',
-            'red' => 'Red',
-            'blue' => 'Blue',
-            'yellow' => 'Yellow'
+            'tpdark-green' => 'Dark Green',
+            'tpmediumgreen' => 'Medium Green',
+            'tplightgreen' => 'Light Green',
+            'tpmaroon' => 'Maroon',
+            'tpstone' => 'Stone'
         ]));
 
         return $fields;
+    }
+
+    public function getSummary()
+    {
+        return DBField::create_field('HTMLText', '['.self::$singular_name.']')->Summary(20);
     }
 }

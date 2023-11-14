@@ -3,9 +3,9 @@
 namespace OP\Studentsuccess;
 
 
+use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\DropdownField;
-use DNADesign\Elemental\Models\BaseElement;
 
 
 class ContactElement extends BaseElement
@@ -14,6 +14,7 @@ class ContactElement extends BaseElement
     private static $singular_name = "Contact Element";
 
     private static $description = "Contact Element";
+    private static string $icon = 'font-icon-torso';
 
     private static $db = [
         'FirstName' => 'Varchar',
@@ -41,7 +42,6 @@ class ContactElement extends BaseElement
 
     public function getCMSFields()
     {
-
         $fields = parent::getCMSFields();
 
         $fields->replaceField('imageType', DropdownField::create('imageType')->setSource([
@@ -52,9 +52,20 @@ class ContactElement extends BaseElement
             'bgGrey' => 'Grey',
             'bgWhite' => 'White'
         ]));
-        /*
-                $fields->replaceField('Icon', DropdownField::create('Icon')->setSource(Config::inst()->get('SiteConfig', 'Icons')));
-        */
         return $fields;
+    }
+
+    protected function provideBlockSchema()
+    {
+        $myType = "[" . $this->getType() . "] ";
+        $myType .= $this->DescriptionText . " ";
+
+        $blockSchema = parent::provideBlockSchema();
+
+        $blockSchema['content'] = $myType;
+        if ($this->Image() && $this->Image()->exists()) {
+            $blockSchema['fileURL'] = $this->Image()->CMSThumbnail()->getURL();
+        }
+        return $blockSchema;
     }
 }

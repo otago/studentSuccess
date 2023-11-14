@@ -18,6 +18,7 @@ class LinksComponent extends BaseElement
 {
     private static $table_name = 'LinksComponent';
     private static $singular_name = "Group of links";
+    private static string $icon = 'font-icon-link';
 
     private static $description = "Shows a list of links";
 
@@ -59,9 +60,11 @@ class LinksComponent extends BaseElement
         $fields->removeByName('Links');
 
         $fields->replaceField('Color', DropdownField::create('Color')->setSource([
-            'blue' => 'Blue (Default)',
-            'red' => 'Red',
-            'green' => 'Green'
+            'tpdark-green' => 'Dark Green',
+            'tpmediumgreen' => 'Medium Green',
+            'tplightgreen' => 'Light Green',
+            'tpstone' => 'Stone',
+            'tpmaroon' => 'Maroon'
         ]));
 
         if ($this->ID) {
@@ -78,6 +81,24 @@ class LinksComponent extends BaseElement
     public function OrderedLinks()
     {
         return $this->Links()->sort('SortOrder');
+    }
+
+    protected function provideBlockSchema()
+    {
+        $myType = "[" . $this->getType() . "] ";
+
+        foreach ($this->Links()->limit(5) as $item) {
+            $myType .= "$item->title, ";
+        }
+        $myType = rtrim($myType, ', ');
+
+        $blockSchema = parent::provideBlockSchema();
+
+        $blockSchema['content'] = $myType;
+        if ($this->Image() && $this->Image()->exists()) {
+           $blockSchema['fileURL'] = $this->Image()->CMSThumbnail()->getURL();
+        }
+        return $blockSchema;
     }
 
 

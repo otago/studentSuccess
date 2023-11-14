@@ -8,25 +8,49 @@
 		min-height: 300px;
 	}
 
-	&.green {
-		background: @tpmediumgreen;
+	&.tpdark-green {
+		background: @tpdark-green;
+		h3, article h3 {
+			color: @white;
+		}
+	}
 
-		h3,
-		article h3 {
+
+	&.green, &.tpmediumgreen {
+		background: @tpmediumgreen;
+		h3, article h3 {
 			color: #fff;
 		}
 	}
 
-	&.red {
-		background: @tpmediumgreen;
-
-		h3,
-		article h3 {
-			color: #fff;
+	&.tplightgreen{
+		background: @tplightgreen;
+		h3, article h3 {
+			color: @white;
 		}
 	}
 
-	&.blue {
+	&.red, &.tpstone {
+		background: @tpstone;
+		.links-block {
+			color: #000000;
+
+			.left ul {
+				a {
+					color: #000000;
+				}
+				color: #000000;
+			}
+		}
+		h3,
+		article h3 {
+			color: #000000;
+		}
+	}
+
+	&.blue, &.tpmaroon {
+		background: @tpmaroon;
+
 		h3,
 		article h3 {
 			color: #fff;

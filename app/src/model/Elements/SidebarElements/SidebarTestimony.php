@@ -11,7 +11,7 @@ class SidebarTestimony extends BaseElement
     private static $table_name = 'SidebarTestimony';
 
     private static $singular_name = "Sidebar quote";
-
+    private static string $icon = 'font-icon-block-quote';
     private static $description = "Sidebar quote";
 
     private static $db = [
@@ -22,5 +22,18 @@ class SidebarTestimony extends BaseElement
     public function getType()
     {
         return self::$singular_name;
+    }
+
+    protected function provideBlockSchema()
+    {
+        $myType = "[" . $this->getType() . "] ";
+        $myType .= $this->TestimonyContent . " ";
+        $myType .= $this->TestimonyName;
+
+        $blockSchema = parent::provideBlockSchema();
+
+        $blockSchema['content'] = $myType;
+
+        return $blockSchema;
     }
 }

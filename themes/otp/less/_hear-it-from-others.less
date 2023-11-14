@@ -120,7 +120,7 @@
 			}
 
 			.text {
-				font-size: 2.25rem;
+				font-size: 2rem;
 				line-height: 2.375rem;
 				font-weight: 300;
 				margin: 50px 0 0 0;
@@ -130,7 +130,7 @@
 
 	}
 
-	&.red {
+	&.red, &.tplightgreen {
 		section {
 			background: @tplightgreen;
 
@@ -144,36 +144,62 @@
 			}
 		}
 	}
-
-
-	&.green {
+	&.tpmaroon {
 		section {
-			background: @tpmediumgreen;
+			background: @tpmaroon;
 
 
 			a.icon {
 
 				&:hover {
-					color: @tpmediumgreen;
-					border-color: @tpmediumgreen;
+					color: @tpmaroon;
+					border-color: @tpmaroon;
 				};
 
 			}
 		}
 	}
 
+	&.green, &.tpmediumgreen {
+		section {
+			background: @tpmediumgreen;
 
-	&.yellow {
+			a.icon {
+				&:hover {
+					color: @tpmediumgreen;
+					border-color: @tpmediumgreen;
+				};
+			}
+		}
+	}
+
+	&.green, &.tpdark-green {
+		section {
+			background: @tpdark-green;
+
+			a.icon {
+				&:hover {
+					color: @tpdark-green;
+					border-color: @tpdark-green;
+				};
+			}
+		}
+	}
+
+
+	&.yellow, &.tpstone {
 		section {
 			background: @tpstone;
 			color: black;
 			a.icon {
-
 				&:hover {
 					color: @tpstone;
 					border-color: @tpstone;
 				};
-
+			}
+			article .icon {
+					color: black;
+					border: 4px solid black;
 			}
 		}
 	}

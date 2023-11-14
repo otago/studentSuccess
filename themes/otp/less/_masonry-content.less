@@ -156,6 +156,9 @@
             &:focus {
                 background-color: darken(@tpmediumgreen, 5%);
             }
+			.separator-link  svg {
+				fill: white;
+			}
         }
 
         &.scheme_mint {
@@ -165,6 +168,9 @@
             &:focus {
                 background-color: darken(@tpmediumgreen, 10%);
             }
+			.separator-link  svg {
+				fill: white;
+			}
         }
 
 		&.scheme_blue {
@@ -173,6 +179,9 @@
 			&:hover,
 			&:focus {
 				background-color: darken(@tpmaroon, 10%);
+			}
+			.separator-link  svg {
+				fill: white;
 			}
 		}
 
@@ -194,6 +203,7 @@
 					rect {
 						stroke: #444449;
 					}
+					fill: black;
 				}
 			}
 
@@ -210,6 +220,9 @@
             &:focus {
                 background-color: darken(@tpmaroon, 10%);
             }
+			.separator-link  svg {
+				fill: white;
+			}
 		}
 
 		&.scheme_black {
@@ -219,16 +232,23 @@
             &:focus {
                  background-color: darken(@tplightgreen, 5%);
             }
+
+			.separator-link  svg {
+				fill: white;
+			}
 		}
 
 		&.scheme_white {
 			background-color: @tpsand;
-
+			.separator-link{
+				color: black;
+			}
 			h3, p {
 				color: #444449;
 			}
 
 			.separator-link {
+				border-top: 1px solid rgba(121, 114, 114, 0.4);
 				svg {
 					line,
 					polyline,
@@ -236,6 +256,7 @@
 					rect {
 						stroke: #444449;
 					}
+					fill: black;
 				}
 			}
 
@@ -317,6 +338,16 @@
 				}
 			}
 		}
+		.marginPencilIcon{
+			float: left;
+		}
+		.linkbuttonText{
+			padding-left: 6px;
+			float: left;
+			width: 85%;
+		}
+
+
 	}
 
 	.list-menu {

@@ -12,7 +12,7 @@ class SidebarHelp extends BaseElement
     private static $table_name = 'SidebarHelp';
 
     private static $singular_name = "Sidebar Help";
-
+    private static string $icon = 'font-icon-block-phone';
     private static $description = "Sidebar Help";
 
     private static $extensions = [
@@ -22,5 +22,16 @@ class SidebarHelp extends BaseElement
     public function getType()
     {
         return self::$singular_name;
+    }
+
+    protected function provideBlockSchema()
+    {
+        $myType = "[" . $this->getType() . "] ";
+
+        $blockSchema = parent::provideBlockSchema();
+
+        $blockSchema['content'] = $myType;
+
+        return $blockSchema;
     }
 }
