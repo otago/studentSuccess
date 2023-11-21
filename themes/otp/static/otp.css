@@ -5429,6 +5429,7 @@ table tr:last-child {
 }
 .masonry-content.masonry-basic .tile-c.overflow-content h3 {
   padding-top: 0;
+  font-size: 1.25rem;
 }
 .masonry-content.masonry-basic .tile-c.overflow-content h3 span {
   top: 3px;

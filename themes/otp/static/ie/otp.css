@@ -1271,6 +1271,9 @@ table th.main {
 .masonry-content.masonry-basic .tile-c h3 span {
   top: 35px;
 }
+.masonry-content.masonry-basic .tile-c.overflow-content h3 {
+  font-size: 20px;
+}
 .masonry-content.masonry-basic .tile-c.contact-tile h3 {
   font-size: 40px;
 }
