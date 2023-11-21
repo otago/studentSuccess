@@ -1265,11 +1265,14 @@ table th.main {
   padding: 0 0 32px;
 }
 .masonry-content.masonry-basic .tile-c h3 {
-  font-size: 30px;
+  font-size: 24px;
   padding-top: 32px;
 }
 .masonry-content.masonry-basic .tile-c h3 span {
   top: 35px;
+}
+.masonry-content.masonry-basic .tile-c.overflow-content h3 {
+  font-size: 20px;
 }
 .masonry-content.masonry-basic .tile-c.contact-tile h3 {
   font-size: 40px;
@@ -1405,7 +1408,7 @@ table th.main {
 .masonry-content .overflow-content article {
   margin-top: 192px;
   height: 208px;
-  padding: 30px 35px 30px 32px;
+  padding: 24px 26px 24px 26px;
 }
 .masonry-content .overflow-content article h3 {
   font-size: 20px;

@@ -5420,7 +5420,7 @@ table tr:last-child {
   min-height: 400px;
 }
 .masonry-content.masonry-basic .tile-c h3 {
-  font-size: 1.875rem;
+  font-size: 1.5rem;
   line-height: 1.1;
   padding-top: 2rem;
 }
@@ -5429,6 +5429,7 @@ table tr:last-child {
 }
 .masonry-content.masonry-basic .tile-c.overflow-content h3 {
   padding-top: 0;
+  font-size: 1.25rem;
 }
 .masonry-content.masonry-basic .tile-c.overflow-content h3 span {
   top: 3px;
@@ -5736,7 +5737,7 @@ table tr:last-child {
   line-height: 1.25rem;
   margin: 1rem 0 1.5rem;
   height: auto;
-  font-weight: 600;
+  font-weight: 100;
   color: #fff;
 }
 .masonry-content .list-menu a {
@@ -5919,7 +5920,7 @@ table tr:last-child {
 .masonry-content .image-tile p {
   color: #fff !important;
   margin-top: 0.5rem;
-  line-height: 1.375;
+  line-height: 1.2;
 }
 .masonry-content .image-tile.has-link {
   cursor: pointer;
@@ -5957,12 +5958,11 @@ table tr:last-child {
   -webkit-transition: background 0.4s ease-out;
   -moz-transition: background 0.4s ease-out;
   transition: background 0.4s ease-out;
-  padding: 1.875rem 2.2rem 1.875rem 2.000rem;
+  padding: 1.5rem 1.6rem 1.5rem 1.6rem;
 }
 .masonry-content .overflow-content article h3 {
   font-size: 1.25rem;
   height: auto;
-  font-weight: 600;
   line-height: 2rem;
 }
 .masonry-content .overflow-content article h3 a {
