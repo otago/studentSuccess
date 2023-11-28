@@ -53,7 +53,8 @@ class ElementImage extends ElementLink
     {
         $myType = "[" . $this->getType() . "] ";
         $blockSchema = parent::provideBlockSchema();
-        if ($this->Image()) {
+
+        if ($this->Image() && $this->Image()->exists()) {
             $blockSchema['fileURL'] = $this->Image()->CMSThumbnail()->getURL();
         }
         $blockSchema['content'] = $myType;
