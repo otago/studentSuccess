@@ -1,4 +1,4 @@
-<script src="/themes/otp/js/thirdparty/jquery.js" type="text/javascript"></script>
+<script src="/resources/themes/otp/js/thirdparty/jquery.js" type="text/javascript"></script>
 <div class='tile-c list-menu tile fixed has-padder'>
 	<div class="padder">
     	<article>
@@ -34,21 +34,8 @@
 	<% end_if %>
 </div>
 <script>
-	(function($){
-
-
-
-		$( document ).ready(function() {
-			var urlParams = new URLSearchParams(window.location.search);
-			$("#link"+urlParams.get('p')).click();
-		});
-
-
-	})(jQuery);
-
 	$( document ).ready(function() {
 		var urlParams = new URLSearchParams(window.location.search);
 		$("#link"+urlParams.get('p')).click();
 	});
-
 </script>
