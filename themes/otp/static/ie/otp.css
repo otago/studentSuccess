@@ -429,13 +429,12 @@ table th.main {
   }
 }
 .logo {
-  width: 142px;
+  width: 510px;
   height: 190px;
   padding: 13px 54px 0 0;
 }
 .logo img {
-  width: 272px;
-  max-width: 272px;
+  height: 208px;
 }
 @media screen and (max-width: 1520px) {
   .logo {
