@@ -1,25 +1,25 @@
 .logo {
-	width: 31.875rem;
+	width: 8.875rem;
 	height: 11.875rem;
 	padding: 0.8rem 3.375rem 0 0;
 	background: @tpdark-green;
 	display: block;
 	position: absolute;
-	text-align: center;
+	text-align: right;
 	margin: 0;
 	z-index: 100;
 
-	//&:after {
-	//	position: absolute;
-	//	right: 100%;
-	//	content: " ";
-	//	display: block;
-	//	top: 0;
-	//	width: 500%;
-	//	background: @tpdark-green;
-	//	height: 100%;
-	//	z-index: -5000;
-	//}
+	&:before {
+		position: absolute;
+		right: 100%;
+		content: " ";
+		display: block;
+		top: 0;
+		width: 500%;
+		background: @tpdark-green;
+		height: 100%;
+		z-index: -5000;
+	}
 
 	a {
 		display: block;
@@ -28,7 +28,7 @@
 	img {
 		//width: 17rem;
 		//max-width: 17rem;
-		margin-left: 1px;
+		margin-left: -12px;
 		//margin-top: 12px;
 		margin-top: -21px;
 		height: 13rem;

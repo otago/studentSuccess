@@ -43,6 +43,11 @@ class OPBasicAuthMiddleware extends BasicAuthMiddleware
             return $delegate($request);
         }
 
+        // chececk if disabled forced auth req for uat
+        $siteconf = SiteConfig::current_site_config();
+        if ($siteconf->DisableForcedUATAuth) {
+            return $delegate($request);
+        }
 
         // Check if url matches any patterns
         $match = $this->checkMatchingURL($request);

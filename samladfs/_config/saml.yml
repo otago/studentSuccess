@@ -5,6 +5,10 @@ After:
   - "#samlsettings"
 ---
 
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - OP\SAMLSiteConfig
+
 SilverStripe\SAML\Services\SAMLConfiguration:
   strict: false
   debug: true

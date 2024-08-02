@@ -2691,21 +2691,32 @@ table tr:last-child {
   }
 }
 .logo {
-  width: 31.875rem;
+  width: 8.875rem;
   height: 11.875rem;
   padding: 0.8rem 3.375rem 0 0;
   background: #183121;
   display: block;
   position: absolute;
-  text-align: center;
+  text-align: right;
   margin: 0;
   z-index: 100;
+}
+.logo:before {
+  position: absolute;
+  right: 100%;
+  content: " ";
+  display: block;
+  top: 0;
+  width: 500%;
+  background: #183121;
+  height: 100%;
+  z-index: -5000;
 }
 .logo a {
   display: block;
 }
 .logo img {
-  margin-left: 1px;
+  margin-left: -12px;
   margin-top: -21px;
   height: 13rem;
 }

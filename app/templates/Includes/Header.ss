@@ -1,9 +1,8 @@
 <header class='main'>
-    <h1 class='logo'><a href='{$BaseHref}'>
-        <img src='{$ThemeDir}/images/otago-polytechnic-vertical-white.svg' title="{$SiteConfig.Title}">
-    </a></h1>
     <div class='container'>
-
+        <h1 class='logo'><a href='{$BaseHref}'>
+            <img src='{$ThemeDir}/images/otago-polytechnic-vertical-white.svg' title="{$SiteConfig.Title}">
+        </a></h1>
 
         <nav>
 
