@@ -453,7 +453,7 @@ table th.main {
     height: 48px;
   }
   .logo a img {
-    width: 176px;
+    height: 144px;
   }
 }
 @media screen and (max-width: 660px) {
@@ -464,7 +464,7 @@ table th.main {
     height: 48px;
   }
   .logo a img {
-    width: 144px;
+    height: 80px;
   }
 }
 .main .container {

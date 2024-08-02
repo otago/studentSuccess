@@ -2745,9 +2745,9 @@ table tr:last-child {
     height: 3rem;
   }
   .logo a img {
-    width: 11rem;
     margin-left: -20px;
-    margin-top: 6px;
+    margin-top: -20px;
+    height: 9rem;
   }
 }
 @media screen and (max-width: 660px) {
@@ -2759,9 +2759,9 @@ table tr:last-child {
     height: 3rem;
   }
   .logo a img {
-    width: 9rem;
+    height: 5rem;
     margin-left: -4px;
-    margin-top: -12px;
+    margin-top: -14px;
   }
 }
 .main {
