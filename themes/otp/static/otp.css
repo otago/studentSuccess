@@ -2722,7 +2722,6 @@ table tr:last-child {
 }
 @media screen and (max-width: 1520px) {
   .logo {
-    width: auto;
     padding-right: 1.75rem;
   }
   .logo a {
@@ -2754,13 +2753,14 @@ table tr:last-child {
   .logo {
     height: auto;
     padding-bottom: 0.9rem;
+    text-align: left;
   }
   .logo a {
     height: 3rem;
   }
   .logo a img {
     height: 5rem;
-    margin-left: -4px;
+    margin-left: -122px;
     margin-top: -14px;
   }
 }
