@@ -2717,8 +2717,8 @@ table tr:last-child {
 }
 .logo img {
   margin-left: -12px;
-  margin-top: -21px;
-  height: 13rem;
+  margin-top: -7px;
+  height: 11rem;
 }
 @media screen and (max-width: 1483px) {
   .logo {
