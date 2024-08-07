@@ -11,34 +11,34 @@
     <script src="https://use.typekit.net/jyv7peg.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
-    <script type='text/javascript' src='{$ThemeDir}/js/thirdparty/modernizr.js'></script>
+    <script type='text/javascript' src="$resourceURL('themes/otp/js/thirdparty/modernizr.js')"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
     <meta name='twitter:title' content='Student Services - Otago Polytechnic' />
     <meta name='twitter:url' content='$BaseHref' />
-    <meta name='twitter:image' content='https://www.op.ac.nz/assets/heromedia/Study.jpg' />
+    <meta name='twitter:image' content='https://online.op.ac.nz/assets/heromedia/Study.jpg' />
     <meta name='twitter:site' content='@OtagoPolytech' />
-    <link rel="icon" type="image/svg+xml" href="{$ThemeDir}/images/otago-polytechnic-black-swirl.svg"/>
+    <link rel="icon" type="image/svg+xml" href="$resourceURL('themes/otp/images/otago-polytechnic-black-swirl.svg')"/>
     <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="apple-touch-icon" href="themes/otp/images/apple-touch-icon-iphone.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="themes/otp/images/apple-touch-icon-ipad.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="themes/otp/images/apple-touch-icon-iphone4.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="themes/otp/images/apple-touch-icon-ipad3.png" />
+    <link rel="apple-touch-icon" href="$resourceURL('themes/otp/images/apple-touch-icon-iphone.png')" />
+    <link rel="apple-touch-icon" sizes="72x72" href="$resourceURL('themes/otp/images/apple-touch-icon-ipad.png')" />
+    <link rel="apple-touch-icon" sizes="114x114" href="$resourceURL('themes/otp/images/apple-touch-icon-iphone4.png')" />
+    <link rel="apple-touch-icon" sizes="144x144" href="$resourceURL('themes/otp/images/apple-touch-icon-ipad3.png')" />
 
     $MetaTags(false)
 
-    <link rel='stylesheet' type='text/css' href='{$ThemeDir}/static/otp.min.css'>
+    <link rel='stylesheet' type='text/css' href='$resourceURL('themes/otp/static/otp.min.css')'>
     <!--[if lte IE 8]>
-     <link rel='stylesheet' type='text/css' href='{$ThemeDir}/static/ie/otp.min.css'>
-    <link rel='stylesheet' type='text/css' href='{$ThemeDir}/static/ie.css'>
+     <link rel='stylesheet' type='text/css' href='$resourceURL('themes/otp/static/ie/otp.min.css')'>
+    <link rel='stylesheet' type='text/css' href='$resourceURL('themes/otp/static/ie.css')'>
     <![endif]-->
     <% with $SiteConfig %>
       <!--  tttttttt -->
     <% if $FeedBackLiteOn %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://ajax.googleFapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script type="text/javascript">
 	$FeedBackLite
 	</script>
