@@ -25,9 +25,10 @@ class SAMLSiteConfig extends DataExtension
     {
         parent::requireDefaultRecords();
         foreach (SiteConfig::get() as $mysiteconfig) {
+            //if auth is disabled, then re-enable it
             if ($mysiteconfig->DisableForcedUATAuth == true) {
-               // $mysiteconfig->DisableForcedUATAuth = false;
-                //$mysiteconfig->write();
+                $mysiteconfig->DisableForcedUATAuth = false;
+                $mysiteconfig->write();
                 DB::alteration_message($mysiteconfig->title . " " . $mysiteconfig->ID . ": Set DisableTestingAuth to false", "changed");
             }
         }
