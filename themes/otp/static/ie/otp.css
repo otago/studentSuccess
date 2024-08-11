@@ -434,17 +434,7 @@ table th.main {
   padding: 13px 54px 0 0;
 }
 .logo img {
-  width: 272px;
-  max-width: 272px;
-}
-@media screen and (max-width: 1520px) {
-  .logo {
-    padding-right: 28px;
-  }
-  .logo a img {
-    width: 272px;
-    max-width: 272px;
-  }
+  height: 176px;
 }
 @media screen and (max-width: 1483px) {
   .logo {
@@ -454,7 +444,7 @@ table th.main {
     height: 48px;
   }
   .logo a img {
-    width: 176px;
+    height: 136px;
   }
 }
 @media screen and (max-width: 660px) {
@@ -465,7 +455,7 @@ table th.main {
     height: 48px;
   }
   .logo a img {
-    width: 144px;
+    height: 80px;
   }
 }
 .main .container {

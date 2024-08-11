@@ -1,18 +1,18 @@
 
 <section class='hero bg-image mini <% if not $HeroImage %> no-hero<% end_if %>'>
-    <img src='{$ThemeDir}/images/search-hero.png'/>
+    <img src='$resourceURL('themes/otp/images/search-hero.png')'/>
 </section>
 
 
 <div class='page-contents clear-this'>
     <div class="breadcrumbs component-alignment boxed-element clear-this"></div>
-	
+
 	<div class="elements-holder">
 		<section class='page-intro '>
 			<article>
 				<% include  search %>
 				<h1 class='title'>Search Results</h1>
-				
+
 				<p>{$SearchResults.count} results for "{$SearchText}"</p>
 			</article>
 		</section>
@@ -27,7 +27,7 @@
 							<p><small>$Breadcrumbs</small></p>
 
 							<p class="SearchResultsSummary">$Content.Summary</p>
-							
+
 							<hr />
 						<% end_loop %>
 					<% end_if %>

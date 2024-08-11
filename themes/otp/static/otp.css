@@ -2716,26 +2716,9 @@ table tr:last-child {
   display: block;
 }
 .logo img {
-  width: 17rem;
-  max-width: 17rem;
-  margin-left: -150px;
-  margin-top: 12px;
-}
-@media screen and (max-width: 1520px) {
-  .logo {
-    width: auto;
-    padding-right: 1.75rem;
-  }
-  .logo a {
-    width: 100%;
-    height: auto;
-    line-height: 0;
-  }
-  .logo a img {
-    width: 17rem;
-    max-width: 17rem;
-    margin-left: -132px;
-  }
+  margin-left: -12px;
+  margin-top: -7px;
+  height: 11rem;
 }
 @media screen and (max-width: 1483px) {
   .logo {
@@ -2746,23 +2729,23 @@ table tr:last-child {
     height: 3rem;
   }
   .logo a img {
-    width: 11rem;
     margin-left: -20px;
-    margin-top: 6px;
+    margin-top: -17px;
+    height: 8.5rem;
   }
 }
 @media screen and (max-width: 660px) {
   .logo {
     height: auto;
     padding-bottom: 0.9rem;
+    text-align: left;
   }
   .logo a {
     height: 3rem;
   }
   .logo a img {
-    width: 9rem;
-    margin-left: -4px;
-    margin-top: -12px;
+    height: 5rem;
+    margin-top: -14px;
   }
 }
 .main {
@@ -2947,7 +2930,7 @@ table tr:last-child {
     width: 150px;
   }
 }
-@media screen and (min-width: 1136px) {
+@media screen and (min-width: 1211px) {
   .main nav .level-1 li form input {
     width: 350px;
   }
@@ -2970,7 +2953,7 @@ table tr:last-child {
     display: none;
   }
 }
-@media screen and (max-width: 938px) {
+@media screen and (max-width: 1003px) {
   .main nav .level-2 {
     margin-top: -23px;
   }
